@@ -1,0 +1,5 @@
+/Users/waps12b/AndroidStudioProjects/SmartSilver/app/build/intermediates/classes/debug
+/Users/waps12b/AndroidStudioProjects/SmartSilver/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-c9999684dd9a3e04bb2c60e8581390ef0daa1b06.jar
+/Users/waps12b/AndroidStudioProjects/SmartSilver/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-66d9bd9b08b8120becf4195c242dcb700a613f64.jar
+/Users/waps12b/AndroidStudioProjects/SmartSilver/app/build/intermediates/pre-dexed/debug/classes-9e43adc3613954d44733c5f87e3d75c10ee2f52a.jar
+/Users/waps12b/AndroidStudioProjects/SmartSilver/app/build/intermediates/pre-dexed/debug/classes-02eccbcf997354e5438771e4603365baf6201856.jar
