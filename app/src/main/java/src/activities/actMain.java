@@ -17,17 +17,20 @@ public class actMain extends FrameActivity{
         setContentView(R.layout.act_main);
 
     }
-<<<<<<< HEAD
+
 //i am acka
 //test comment
     //123123
-=======
+
     //test1
 //i am acka
    //test2
 //test comment
     //test3
->>>>>>> 6f7364875095b7d7fdc66de8c1263f3e11fb4908
+
+
+    //2015-03-13 git-hub test in ictk - dy.kim
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
