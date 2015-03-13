@@ -28,7 +28,7 @@ public class ActMain extends FrameActivity{
 //test comment
     //test3
 
-
+//branch test
     //2015-03-13 git-hub test in ictk - dy.kim
 
     @Override
