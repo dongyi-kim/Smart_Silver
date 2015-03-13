@@ -19,6 +19,10 @@ gen/
 # Ignore gradle files
 .gradle/
 build/
+/*/build/
+
+# Signing files
+.signing/
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -29,15 +33,27 @@ proguard/
 # Eclipse Metadata
 .metadata/
 
-# Mac OS X clutter
-*.DS_Store
-
-# Windows clutter
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
 Thumbs.db
 
 # Intellij IDEA (see https://intellij-support.jetbrains.com/entries/23393067)
+.idea/libraries/
 .idea/workspace.xml
 .idea/tasks.xml
-.idea/datasources.xml
-.idea/dataSources.ids
-.idea/libraries
+.idea/.name
+.idea/compiler.xml
+.idea/copyright/profiles_settings.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+.idea/vcs.xml
+*.iml
+
