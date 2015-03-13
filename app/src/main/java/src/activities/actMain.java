@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import cdmst.smartsilver.R;
 
 
-public class actMain extends FrameActivity{
+public class ActMain extends FrameActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

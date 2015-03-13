@@ -18,6 +18,32 @@
             android:layout_marginTop="20dp"
             android:src="@drawable/main_title"/>
 
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:text="Stage 1"
+            android:background="@android:color/holo_green_light"
+            android:layout_marginTop="30dp"
+            android:id="@+id/btn_stage01"
+            />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:text="Stage 2"
+            android:background="@android:color/holo_green_light"
+            android:layout_marginTop="30dp"
+            android:id="@+id/btn_stage02"
+            />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:text="Stage 3"
+            android:background="@android:color/holo_green_light"
+            android:layout_marginTop="30dp"
+            android:id="@+id/btn_stage03"
+            />
+
 
 
     </LinearLayout>
