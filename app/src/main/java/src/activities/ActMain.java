@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import cdmst.smart_silver.R;
+import cdmst.smartsilver.R;
 
 
 public class ActMain extends FrameActivity{
