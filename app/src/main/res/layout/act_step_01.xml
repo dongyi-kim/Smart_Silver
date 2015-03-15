@@ -97,4 +97,35 @@
 
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="아래의 숫자를 따라서\n입력하세요"
+        android:id="@+id/text_discription"
+        android:textSize="32dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="123456789"
+        android:id="@+id/text_answer_number"
+        android:textSize="48dp"
+        android:layout_below="@+id/text_discription"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_input_number"
+        android:textSize="48dp"
+        android:layout_below="@+id/text_answer_number"
+        android:layout_alignLeft="@+id/text_answer_number"
+        android:layout_alignStart="@+id/text_answer_number"
+        android:gravity="center"
+        android:text="123______" />
+
 </RelativeLayout>
