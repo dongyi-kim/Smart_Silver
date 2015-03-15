@@ -13,38 +13,38 @@ import cdmst.smartsilver.R;
 
 public class ActMain extends FrameActivity{
 
-    Button btnStage01;
-    Button btnStage02;
-    Button btnStage03;
+    Button btnStep01;
+    Button btnStep02;
+    Button btnStep03;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_main);
 
-        btnStage01 = (Button)findViewById(R.id.btn_stage01);
-        btnStage02 = (Button)findViewById(R.id.btn_stage02);
-        btnStage03 = (Button)findViewById(R.id.btn_stage03);
+        btnStep01 = (Button)findViewById(R.id.btn_step01);
+        btnStep02 = (Button)findViewById(R.id.btn_step02);
+        btnStep03 = (Button)findViewById(R.id.btn_step03);
         //Listner : 이벤트
-        btnStage01.setOnClickListener(clickBtnStage);
-        btnStage02.setOnClickListener(clickBtnStage);
-        btnStage03.setOnClickListener(clickBtnStage);
+        btnStep01.setOnClickListener(clickBtnStep);
+        btnStep02.setOnClickListener(clickBtnStep);
+        btnStep03.setOnClickListener(clickBtnStep);
 
     }
 
-    View.OnClickListener clickBtnStage = new View.OnClickListener()
+    View.OnClickListener clickBtnStep = new View.OnClickListener()
     {
         public void onClick(View v)
         {
-            if(v == btnStage01)
+            if(v == btnStep01)
             {
                 ((Button)v).setText("1 click");
 
-            }else if(v == btnStage02)
+            }else if(v == btnStep02)
             {
                 ((Button)v).setText("2 click");
 
-            }else if(v== btnStage03)
+            }else if(v== btnStep03)
             {
                 ((Button)v).setText("3 click");
 

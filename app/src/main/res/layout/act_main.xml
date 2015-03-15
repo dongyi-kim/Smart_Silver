@@ -22,27 +22,28 @@
         <Button
             android:layout_width="100dp"
             android:layout_height="20dp"
-            android:text="Stage 1"
+            android:text="Step 1"
             android:background="@android:color/holo_green_light"
             android:layout_marginTop="30dp"
-            android:id="@+id/btn_stage01"
+            android:id="@+id/btn_step01"
             />
 
         <Button
             android:layout_width="100dp"
             android:layout_height="20dp"
-            android:text="Stage 2"
+            android:text="Step 2"
             android:background="@android:color/holo_green_light"
             android:layout_marginTop="30dp"
-            android:id="@+id/btn_stage02"
+            android:id="@+id/btn_step02"
             />
+
         <Button
             android:layout_width="100dp"
             android:layout_height="20dp"
-            android:text="Stage 3"
+            android:text="Step 3"
             android:background="@android:color/holo_green_light"
             android:layout_marginTop="30dp"
-            android:id="@+id/btn_stage03"
+            android:id="@+id/btn_step03"
             />
 
 
