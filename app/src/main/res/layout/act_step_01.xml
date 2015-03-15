@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_alignParentBottom="true"
-        />
+        android:id="@+id/include" />
 
     <TextView
         android:layout_width="match_parent"
@@ -18,13 +18,13 @@
         android:layout_marginTop="20dp" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="123456789\n111111111"
+        android:text="123456789\n111      "
         android:id="@+id/text_answer_number"
         android:layout_below="@+id/text_discription"
         android:textSize="48dp"
-        android:gravity="center"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp" />
 
 </RelativeLayout>
