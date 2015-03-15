@@ -13,7 +13,7 @@ public class ActStep01 extends FrameActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
- //23
+        setContentView(R.layout.act_step_01);
 
     }
 
