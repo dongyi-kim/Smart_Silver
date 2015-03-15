@@ -1,6 +1,7 @@
 package src.activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -36,9 +37,11 @@ public class ActMain extends FrameActivity{
     {
         public void onClick(View v)
         {
+
             if(v == btnStep01)
             {
-                ((Button)v).setText("1 click");
+                Intent intent = new Intent(v.getContext(), ActStep01.class);
+                startActivity(intent);
 
             }else if(v == btnStep02)
             {
@@ -51,5 +54,7 @@ public class ActMain extends FrameActivity{
             }
         }
     };
+
+
 
 }
