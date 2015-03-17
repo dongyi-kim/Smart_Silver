@@ -45,7 +45,8 @@ public class ActMain extends FrameActivity{
 
             }else if(v == btnStep02)
             {
-                ((Button)v).setText("2 click");
+                Intent intent = new Intent(v.getContext(), ActStep0103.class);
+                startActivity(intent);
 
             }else if(v== btnStep03)
             {
