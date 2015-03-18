@@ -80,12 +80,9 @@ public class ActStep01 extends FrameActivity {
         DlgResultMark dlg = new DlgResultMark(this, isAnswer);
         dlg.show();
 
-        if(isAnswer)
-        {
-            iStage++;
-            vNumberPad.shuffleNumber();
-            setRandomQuestion();
-        }
+        iStage++;
+        vNumberPad.shuffleNumber();
+        setRandomQuestion();
     }
 
     public void modifyAnswer()
