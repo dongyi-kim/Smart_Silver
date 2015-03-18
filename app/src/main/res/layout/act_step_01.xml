@@ -14,8 +14,10 @@
         android:text="아래의 숫자를 따라서\n입력하세요"
         android:id="@+id/text_discription"
         android:textSize="32dp"
+
         android:gravity="center"
         android:layout_marginTop="20dp" />
+
 
     <TextView
         android:layout_width="wrap_content"
