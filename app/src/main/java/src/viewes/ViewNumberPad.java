@@ -7,7 +7,6 @@ import android.widget.Button;
 import java.util.Random;
 
 import cdmst.smartsilver.R;
-import src.Utility;
 import src.activities.FrameActivity;
 
 /**
@@ -18,12 +17,12 @@ public class ViewNumberPad extends FrameView
     public static final int CODE_MODIFY = -123456;
     public static final int CODE_OKAY = -2390284;
 
+    public static final String KEY_NORMAL_SET = "0123456789";
+
 
     public final Button btnModify;
     public final Button btnOkay;
     public final Button[] arrBtnNum;
-
-    public String strBuffer;
 
     public ViewNumberPad(Context context)
     {
@@ -51,29 +50,30 @@ public class ViewNumberPad extends FrameView
         for(int i=0; i<10; i++)
             arrBtnNum[i].setOnClickListener(listenNumberTouch);
 
+        setNumbers(KEY_NORMAL_SET);
     }
 
-    public void setNumbers(int[] arrNum)
+    public void setNumbers(String strNumPad)
     {
         for(int i=0; i<10; i++)
-            arrBtnNum[i].setText(Integer.toString(arrNum[i]));
+            arrBtnNum[i].setText(Character.toString(strNumPad.charAt(i)));
     }
 
     public void shuffleNumber()
     {
-        int[] arrNum = {0,1,2,3,4,5,6,7,8,9};
+        char[] arrNum = {'0','1','2','3','4','5','6','7','8','9'};
 
         Random rnd = new Random();
         for(int i=0; i<100; i++)
         {
             int a = rnd.nextInt(10);
             int b = rnd.nextInt(10);
-            int t  = arrNum[a];
+            char t  = arrNum[a];
 
             arrNum[a] = arrNum[b];
             arrNum[b] = t;
         }
-        setNumbers(arrNum);
+        setNumbers(new String(arrNum));
     }
 
     public void numberClicked(int iCode)

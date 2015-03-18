@@ -13,10 +13,7 @@ public class FrameView extends LinearLayout{
         super(context);
         setLayout(layoutID);
     }
-    //234;o23423;4lk23;4lk23;l4 i love kisum!
-    //Set Layout into
-    //1212
-    //d2
+
     protected void setLayout(int layoutID){
         String infService = Context.LAYOUT_INFLATER_SERVICE;
         LayoutInflater inflat;

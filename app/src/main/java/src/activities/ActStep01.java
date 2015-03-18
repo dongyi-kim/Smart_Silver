@@ -5,9 +5,11 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import java.util.Random;
+
 import cdmst.smartsilver.R;
 import src.Utility;
-import src.viewes.FrameView;
+import src.dialogs.DlgResultMark;
 import src.viewes.ViewNumberPad;
 
 
@@ -50,7 +52,6 @@ public class ActStep01 extends FrameActivity {
     }
 
 
-
     public void setQuestion(String strQuest)
     {
         if(! Utility.isNumber(strQuest))
@@ -61,10 +62,30 @@ public class ActStep01 extends FrameActivity {
         buffAnswer = new StringBuffer("");
     }
 
+    public void setRandomQuestion()
+    {
+        Random rnd = new Random();
+        char[] arrStr = new char[9];
+
+        for(int i=0; i<9; i++)
+        {
+            arrStr[i] = Integer.toString(rnd.nextInt(10)).charAt(0);
+        }
+        setQuestion(new String(arrStr));
+    }
+
     public void checkAnswer()
     {
+        boolean isAnswer = txtAnswer.getText().equals(txtQuestion.getText());
+        DlgResultMark dlg = new DlgResultMark(this, isAnswer);
+        dlg.show();
 
-
+        if(isAnswer)
+        {
+            iStage++;
+            vNumberPad.shuffleNumber();
+            setRandomQuestion();
+        }
     }
 
     public void modifyAnswer()

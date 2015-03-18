@@ -23,5 +23,4 @@ public class Utility {
         b = t;
     }
 
-
 }
