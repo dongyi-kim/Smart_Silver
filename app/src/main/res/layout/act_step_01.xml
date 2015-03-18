@@ -2,31 +2,58 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <include layout="@layout/view_number_pad"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_alignParentBottom="true"
-        android:id="@+id/include" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="아래의 숫자를 따라서\n입력하세요"
-        android:id="@+id/text_discription"
-        android:textSize="32dp"
-
-        android:gravity="center"
-        android:layout_marginTop="20dp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="123456789\n111      "
-        android:id="@+id/text_answer_number"
-        android:layout_below="@+id/text_discription"
-        android:textSize="48dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp" />
+        <TextView
+            android:layout_weight=".15"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="아래의 숫자를 따라서\n입력하세요"
+            android:id="@+id/txt_description"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:layout_marginTop="20sp" />
 
+        <LinearLayout
+            android:layout_weight=".25"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="48sp"
+                android:text="123456789"
+                android:layout_gravity="left"
+                android:id="@+id/txt_question"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="111"
+                android:layout_gravity="left"
+                android:id="@+id/txt_answer"
+                android:textSize="48sp"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_weight=".5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/frame_view_number_pad"
+            >
+            <include layout="@layout/view_number_pad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/do_not_find_view_by_id_this" />
+            </FrameLayout>
+
+    </LinearLayout>
 </RelativeLayout>

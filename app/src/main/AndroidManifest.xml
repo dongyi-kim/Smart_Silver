@@ -16,10 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="src.activities.ActStep01">
 
+        <activity android:name="src.activities.ActStep01">
         </activity>
 
+        <activity android:name="src.activities.ActStep0103">
+        </activity>
 
     </application>
 

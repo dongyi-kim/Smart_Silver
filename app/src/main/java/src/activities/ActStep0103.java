@@ -1,27 +1,21 @@
 package src.activities;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
 
 import cdmst.smartsilver.R;
 
 /**
- * Created by waps12b on 15. 3. 1..
+ * Created by waps12b on 15. 3. 15..
  */
-public class FrameActivity extends Activity{
+public class ActStep0103 extends FrameActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.act_step_01_3);
 
     }
 
-
-
-    public void onGetEvent(View vSender, Object obj)
-    {
-
-    }
 
 }
