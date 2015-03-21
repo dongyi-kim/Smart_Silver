@@ -1,6 +1,7 @@
 package src.activities;
 
 import android.app.ActionBar;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.Layout;
 import android.view.View;
@@ -41,6 +42,7 @@ public class ActStep0104 extends FrameActivity {
     public int iCorrectCount = 0;
     private int iStageCount = 0;
     private int iRetryCount = 0;
+    public boolean isRight = false;
 
     private Random rand = new Random();
 
@@ -89,10 +91,14 @@ public class ActStep0104 extends FrameActivity {
                             ibtnNumber[r][c].setVisibility(View.INVISIBLE);
                             txtNumber[r][c].setVisibility(View.INVISIBLE);
 
-                            if(iCorrectCount == iAnswerCount) endFunction(true);
+                            if(iCorrectCount == iAnswerCount){
+                                isRight = true;
+                                endFunction();
+                            }
                         }
                         else{
-                            endFunction(false);
+                            isRight = false;
+                            endFunction();
                         }
                     }
                 });
@@ -105,7 +111,7 @@ public class ActStep0104 extends FrameActivity {
 
     private void setNewScreen(){
         iAnswerCount = iCorrectCount = iRetryCount = 0;
-        iNumCount = rand.nextInt(8) + 1;
+        iNumCount = rand.nextInt(6) + 2;
         setDiscription();
         getNumbers(iNumCount);
         setNumberView();
@@ -138,6 +144,8 @@ public class ActStep0104 extends FrameActivity {
             if(x % 2 == (isOdd? 1 : 0)) iAnswerCount++;
             cnt++;
         }
+
+        if(iAnswerCount == 0) getNumbers(iNumCount);
     }
 
     private void setNumberView(){
@@ -155,19 +163,24 @@ public class ActStep0104 extends FrameActivity {
         }
     }
 
-    public void endFunction(boolean isRight){
+    public void endFunction(){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
 
-        if(isRight || iRetryCount > 1){
-            setNewScreen();
-            iStageCount++;
-        }
-        else{
-            iCorrectCount = 0;
-            iRetryCount++;
-            setNumberView();
-        }
+        dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialog) {
+                if(isRight || iRetryCount > 1){
+                    setNewScreen();
+                    iStageCount++;
+                }
+                else{
+                    iCorrectCount = 0;
+                    iRetryCount++;
+                    setNumberView();
+                }
+            }
+        });
     }
 
 }
