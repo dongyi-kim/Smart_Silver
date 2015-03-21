@@ -2,6 +2,7 @@ package src.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 
 import cdmst.smartsilver.R;
 
@@ -17,5 +18,10 @@ public class FrameActivity extends Activity{
     }
 
 
+
+    public void onGetEvent(View vSender, Object obj)
+    {
+
+    }
 
 }

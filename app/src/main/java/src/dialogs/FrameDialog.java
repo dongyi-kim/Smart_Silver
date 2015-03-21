@@ -15,8 +15,14 @@ public class FrameDialog extends Dialog{
 
     protected final int iLayoytID;
 
-    protected FrameDialog(int iLayoutID, Context context){
+    protected FrameDialog(Context context, int iLayoutID){
         super(context);
+        this.iLayoytID = iLayoutID;
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         WindowManager.LayoutParams WindowParams = new WindowManager.LayoutParams();
         WindowParams.flags = WindowManager.LayoutParams.FLAG_DIM_BEHIND;
@@ -24,13 +30,6 @@ public class FrameDialog extends Dialog{
         getWindow().setAttributes(WindowParams);
         getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         setCancelable(true);
-
-        this.iLayoytID = iLayoutID;
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         setContentView(iLayoytID);
     }
 

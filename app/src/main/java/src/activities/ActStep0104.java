@@ -39,7 +39,7 @@ public class ActStep0104 extends FrameActivity {
         iNumCount = rand.nextInt(20);
 
         if(bIsOdd) imgDiscription.setImageResource(R.drawable.discription_01_04_odd);
-/////////////////////////////////////
+/*
         for(int i = 0; i < iNumCount; i++) {
             iNumSet[i] = rand.nextInt(10);
             ibtnNumber[i].setBackgroundResource(R.drawable.round_number_1);
@@ -55,6 +55,6 @@ public class ActStep0104 extends FrameActivity {
 
                 }});
         }
-/////////////////////////////////////
+*/
     }
 }

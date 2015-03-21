@@ -8,12 +8,13 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
+
         <TextView
             android:layout_weight=".15"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:text="아래의 숫자를 따라서\n입력하세요"
-            android:id="@+id/text_discription"
+            android:id="@+id/txt_description"
             android:textSize="28sp"
             android:gravity="center"
             android:layout_marginTop="20sp" />
@@ -31,22 +32,28 @@
                 android:textSize="48sp"
                 android:text="123456789"
                 android:layout_gravity="left"
-                android:id="@+id/text_answer_number"/>
+                android:id="@+id/txt_question"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="111"
                 android:layout_gravity="left"
-                android:id="@+id/text_input_number"
+                android:id="@+id/txt_answer"
                 android:textSize="48sp"/>
 
         </LinearLayout>
 
-        <include layout="@layout/view_number_pad"
+        <FrameLayout
             android:layout_weight=".5"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:id="@+id/include" />
+            android:id="@+id/frame_view_number_pad"
+            >
+            <include layout="@layout/view_number_pad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/do_not_find_view_by_id_this" />
+            </FrameLayout>
 
     </LinearLayout>
 </RelativeLayout>

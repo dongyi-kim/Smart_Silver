@@ -22,12 +22,14 @@
                     android:textSize="30dp"
                     android:text="1"
                     android:id="@+id/btn_pad_r1_c1"/>
+
                 <Button
                     android:layout_width="match_parent"
                     android:layout_weight="1"
                     android:layout_height="match_parent"
                     android:textSize="30dp"
                     android:text="2"
+
                     android:id="@+id/btn_pad_r1_c2"/>
                 <Button
                     android:layout_width="match_parent"
