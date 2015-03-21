@@ -46,17 +46,17 @@ public class ActStep0104 extends FrameActivity {
         linearDrawfieldRow[3] = (LinearLayout)findViewById(R.id.drawfield_row_4);
         linearDrawfieldRow[4] = (LinearLayout)findViewById(R.id.drawfield_row_5);
         for(int i = 0; i < 5; i++){
-            ibtnNumber[i][0] = (ImageButton)(linearDrawfieldRow[0].findViewById(R.id.btn_col_1));
-            ibtnNumber[i][1] = (ImageButton)(linearDrawfieldRow[0].findViewById(R.id.btn_col_2));
-            ibtnNumber[i][2] = (ImageButton)(linearDrawfieldRow[0].findViewById(R.id.btn_col_3));
-            ibtnNumber[i][3] = (ImageButton)(linearDrawfieldRow[0].findViewById(R.id.btn_col_4));
-            ibtnNumber[i][4] = (ImageButton)(linearDrawfieldRow[0].findViewById(R.id.btn_col_5));
+            ibtnNumber[i][0] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.btn_col_1));
+            ibtnNumber[i][1] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.btn_col_2));
+            ibtnNumber[i][2] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.btn_col_3));
+            ibtnNumber[i][3] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.btn_col_4));
+            ibtnNumber[i][4] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.btn_col_5));
 
-            txtNumber[i][0] = (TextView)(linearDrawfieldRow[0].findViewById(R.id.txt_col_1));
-            txtNumber[i][1] = (TextView)(linearDrawfieldRow[0].findViewById(R.id.txt_col_2));
-            txtNumber[i][2] = (TextView)(linearDrawfieldRow[0].findViewById(R.id.txt_col_3));
-            txtNumber[i][3] = (TextView)(linearDrawfieldRow[0].findViewById(R.id.txt_col_4));
-            txtNumber[i][4] = (TextView)(linearDrawfieldRow[4].findViewById(R.id.txt_col_5));
+            txtNumber[i][0] = (TextView)(linearDrawfieldRow[i].findViewById(R.id.txt_col_1));
+            txtNumber[i][1] = (TextView)(linearDrawfieldRow[i].findViewById(R.id.txt_col_2));
+            txtNumber[i][2] = (TextView)(linearDrawfieldRow[i].findViewById(R.id.txt_col_3));
+            txtNumber[i][3] = (TextView)(linearDrawfieldRow[i].findViewById(R.id.txt_col_4));
+            txtNumber[i][4] = (TextView)(linearDrawfieldRow[i].findViewById(R.id.txt_col_5));
         }
         imgDiscription = (ImageView)findViewById(R.id.text_discription);
         Random rand = new Random();
