@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="font size lv 1"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_size_lv1"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="font size lv 2"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_size_lv2"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="font size lv 3"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_size_lv3"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="font size lv 4"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_size_lv4"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="font size lv 5"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_size_lv5"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="font size lv 6"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_size_lv6"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="font size lv 7"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_size_lv7"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="font size lv 8"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_size_lv8"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="font size lv 9"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_size_lv9"
+        />
+
+
+</LinearLayout>

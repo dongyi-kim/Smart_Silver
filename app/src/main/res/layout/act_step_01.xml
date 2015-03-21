@@ -13,11 +13,13 @@
             android:layout_weight=".15"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:text="아래의 숫자를 따라서\n입력하세요"
-            android:id="@+id/txt_description"
-            android:textSize="28sp"
+
             android:gravity="center"
-            android:layout_marginTop="20sp" />
+            android:layout_marginTop="20sp"
+            android:text="아래의 숫자를 따라서 입력하세요"
+            android:textSize="@dimen/font_size_lv6"
+            android:id="@+id/txt_description"
+            />
 
         <LinearLayout
             android:layout_weight=".25"
@@ -29,17 +31,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="48sp"
-                android:text="123456789"
                 android:layout_gravity="left"
-                android:id="@+id/txt_question"/>
+                android:textSize="@dimen/font_size_lv6"
+                android:text="123456789"
+                android:id="@+id/txt_question"
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="111"
                 android:layout_gravity="left"
+                android:textSize="@dimen/font_size_lv6"
+                android:text="123456___"
                 android:id="@+id/txt_answer"
-                android:textSize="48sp"/>
+                />
 
         </LinearLayout>
 
