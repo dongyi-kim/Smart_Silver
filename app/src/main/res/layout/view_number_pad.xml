@@ -138,7 +138,7 @@
                 android:layout_width="match_parent"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:textSize="@dimen/font_size_lv8"
+                android:textSize="@dimen/font_size_lv6"
                 android:text="정정"
                 android:id="@+id/btn_pad_r4_c1_back"/>
             <Button
@@ -153,7 +153,7 @@
                 android:layout_width="match_parent"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:textSize="@dimen/font_size_lv8"
+                android:textSize="@dimen/font_size_lv6"
                 android:text="확인"
                 android:id="@+id/btn_pad_r4_c3_success"/>
 

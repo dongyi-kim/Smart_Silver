@@ -52,7 +52,6 @@ public class DlgResultMark extends FrameDialog {
 
 
         setIsOkay(isOkay);
-        this.setOnShowListener(eventShowDialog);
     }
 
     public void show(boolean isOkay)
@@ -67,21 +66,6 @@ public class DlgResultMark extends FrameDialog {
         public void onClick(View v) {
 
         dismiss();
-        }
-    };
-
-    //when show this dialog
-    OnShowListener eventShowDialog = new OnShowListener() {
-        @Override
-        public void onShow(DialogInterface dialog) {
-
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
-            dialog.dismiss();
         }
     };
 
