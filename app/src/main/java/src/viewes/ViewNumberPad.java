@@ -3,6 +3,7 @@ package src.viewes;
 import android.content.Context;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import java.util.Random;
 
@@ -20,14 +21,12 @@ public class ViewNumberPad extends FrameView
     public static final String KEY_NORMAL_SET = "0123456789";
 
 
-    public final Button btnModify;
-    public final Button btnOkay;
-    public final Button[] arrBtnNum;
+    public Button btnModify;
+    public Button btnOkay;
+    public Button[] arrBtnNum;
 
-    public ViewNumberPad(Context context)
-    {
-        super(context, R.layout.view_number_pad);
-
+    public void initCommon()
+    {//becaus this view has a number of constructor
         arrBtnNum = new Button[10];
         arrBtnNum[0] = (Button)findViewById(R.id.btn_pad_r4_c2);
         arrBtnNum[1] = (Button)findViewById(R.id.btn_pad_r1_c1);
@@ -52,6 +51,13 @@ public class ViewNumberPad extends FrameView
 
         setNumbers(KEY_NORMAL_SET);
     }
+    public ViewNumberPad(Context context)
+    {
+        super(context, R.layout.view_number_pad);
+        initCommon();
+    }
+
+
 
     public void setNumbers(String strNumPad)
     {

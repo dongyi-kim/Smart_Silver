@@ -3,6 +3,7 @@ package src.activities;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -18,7 +19,7 @@ import src.viewes.ViewNumberPad;
  */
 public class ActStep01 extends FrameActivity {
 
-    public static final int NUM_OF_STAGE = 10;
+    public static final int NUM_OF_STAGE = 5;
 
     private TextView txtDescrib;
     private TextView txtQuestion;
@@ -40,12 +41,13 @@ public class ActStep01 extends FrameActivity {
         txtAnswer = (TextView)findViewById(R.id.txt_answer);
         //vNumberPad = (ViewNumberPad)findViewById(R.id.view_number_pad);
 
+
+
         vNumberPad = new ViewNumberPad(this);
 
         frameNumberPad = (FrameLayout)findViewById(R.id.frame_view_number_pad);
         frameNumberPad.removeAllViews();
         frameNumberPad.addView(vNumberPad);
-
         iStage = 1;
 
         setQuestion("123456789");
@@ -81,8 +83,15 @@ public class ActStep01 extends FrameActivity {
         dlg.show();
 
         iStage++;
-        vNumberPad.shuffleNumber();
-        setRandomQuestion();
+        if(iStage >= NUM_OF_STAGE)
+        {   // go next stage
+
+        }else
+        {   //go next level
+            vNumberPad.shuffleNumber();
+            setRandomQuestion();
+        }
+
     }
 
     public void modifyAnswer()

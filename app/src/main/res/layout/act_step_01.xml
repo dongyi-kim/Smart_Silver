@@ -17,7 +17,8 @@
             android:gravity="center"
             android:layout_marginTop="20sp"
             android:text="아래의 숫자를 따라서 입력하세요"
-            android:textSize="@dimen/font_size_lv6"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_size_lv4"
             android:id="@+id/txt_description"
             />
 
@@ -33,6 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:textSize="@dimen/font_size_lv6"
+                android:textStyle="bold"
                 android:text="123456789"
                 android:id="@+id/txt_question"
                 />
