@@ -1,0 +1,42 @@
+Signature-Version: 1.0
+SHA1-Digest-Manifest-Main-Attributes: NtCGSgDDd19oTjy++2/YTTqdbfA=
+Created-By: 1.6.0_32 (Sun Microsystems Inc.)
+SHA1-Digest-Manifest: o+cFB7vtL8gEAy5X/rC4YJKcN8c=
+
+Name: target/jars/scala-actor-src.jar
+SHA1-Digest: huw1icXiY+yBZ0glQqUgVoSHWq8=
+
+Name: META-INF/maven/org.scala-ide/org.scala-ide.scala210.jars/pom.pro
+ perties
+SHA1-Digest: DIdXxZGTw1Oqq5Fh0Jmvia966RM=
+
+Name: META-INF/maven/org.scala-ide/org.scala-ide.scala210.jars/pom.xml
+SHA1-Digest: 77HdsKMIZbhiHDq9nJptLIuefqI=
+
+Name: target/jars/scala-library-src.jar
+SHA1-Digest: dhuSqds65fxAmbnx9+cBnb2bn9E=
+
+Name: target/jars/scala-actor.jar
+SHA1-Digest: 50n+Kc30Ofpw5GK7OXMNFCkBlZw=
+
+Name: target/jars/scala-swing-src.jar
+SHA1-Digest: QF2LWQkaWpke362pEXoRR8TPkZ0=
+
+Name: target/jars/scala-reflect-src.jar
+SHA1-Digest: Fon0FgSyJpor/V71xnv2rHq0sE0=
+
+Name: target/jars/scala-library.jar
+SHA1-Digest: A1dXHEZpjd2ref3CQNpuE3s7dxw=
+
+Name: target/jars/scala-reflect.jar
+SHA1-Digest: G9ZsQgpMcP0Jx4spBMOdseZO9tY=
+
+Name: target/jars/scala-swing.jar
+SHA1-Digest: FWU5Lq4CtghpHK0AHuu7TqTv5Yw=
+
+Name: target/jars/scala-compiler-src.jar
+SHA1-Digest: 5f1hLdGnBwHQ60c6pPfYCL4PYLc=
+
+Name: target/jars/scala-compiler.jar
+SHA1-Digest: fSo5mQ/SJGJpiz0T+mC/mbLm+pc=
+

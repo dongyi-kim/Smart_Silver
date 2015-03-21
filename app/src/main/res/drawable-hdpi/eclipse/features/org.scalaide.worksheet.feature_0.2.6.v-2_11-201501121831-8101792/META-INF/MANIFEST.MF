@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Build-Jdk: 1.6.0_32
+Built-By: luc
+Created-By: Apache Maven
+Archiver-Version: Plexus Archiver
+
+Name: META-INF/maven/org.scalaide/org.scalaide.worksheet.feature/pom.x
+ ml
+SHA1-Digest: VSfajj/LsP/WRFjvTgYzLf3o3cY=
+
+Name: META-INF/maven/org.scalaide/org.scalaide.worksheet.feature/pom.p
+ roperties
+SHA1-Digest: +patBrtOIQgPR2eFa+fr7xfzcpw=
+
+Name: feature.xml
+SHA1-Digest: id7FNbb+IZf16fiIPSETJl2CLOs=
+

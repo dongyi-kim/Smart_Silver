@@ -50,8 +50,8 @@ public class ActMain extends FrameActivity{
 
             }else if(v== btnStep03)
             {
-                ((Button)v).setText("3 click");
-
+                Intent intent = new Intent(v.getContext(), ActStep0104.class);
+                startActivity(intent);
             }
         }
     };

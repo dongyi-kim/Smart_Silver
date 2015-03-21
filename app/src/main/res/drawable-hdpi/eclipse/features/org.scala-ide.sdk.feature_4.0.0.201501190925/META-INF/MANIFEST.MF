@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Build-Jdk: 1.6.0_32
+Built-By: luc
+Created-By: Apache Maven 3.0.4
+Archiver-Version: Plexus Archiver
+
+Name: META-INF/maven/org.scala-ide/org.scala-ide.sdk.feature/pom.prope
+ rties
+SHA1-Digest: xlExrgnkD5AjiV/rhyaT3uugJ7Q=
+
+Name: feature.xml
+SHA1-Digest: RlBUvkVWOJ1fhzCGy8vKTesCtQM=
+
+Name: META-INF/maven/org.scala-ide/org.scala-ide.sdk.feature/pom.xml
+SHA1-Digest: 9JLg1ivulkVnY3x1ZVtTrudVC78=
+
