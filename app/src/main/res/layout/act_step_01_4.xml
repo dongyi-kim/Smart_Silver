@@ -7,18 +7,20 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
-        <ImageView
+        <TextView
             android:layout_weight=".15"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:id="@+id/text_discription"
-            android:src="@drawable/discription_01_04_even"
+            android:id="@+id/txt_discription"
+            android:text="다음 중 짝수를 찾아 누르세요."
+            android:gravity="center"
+            android:textSize="@dimen/font_size_lv4"
             android:layout_marginTop="20sp" />
 
 
         <LinearLayout
             android:layout_weight=".85"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:orientation="vertical"
             android:id="@+id/drawfield"

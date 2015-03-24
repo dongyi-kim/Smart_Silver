@@ -32,7 +32,7 @@ public class ActStep0104 extends FrameActivity {
     private LinearLayout linearDrawfieldRow[] = new LinearLayout[ROW_COUNT];
     public final ImageButton ibtnNumber[][] = new ImageButton[ROW_COUNT][COLUMN_COUNT];
     public final TextView txtNumber[][] = new TextView[ROW_COUNT][COLUMN_COUNT];
-    private ImageView imgDiscription;
+    private TextView txtDiscription;
 
     private boolean isSelected[][] = new boolean[ROW_COUNT][COLUMN_COUNT];
     public final int iBtnValue[][] = new int[ROW_COUNT][COLUMN_COUNT];
@@ -70,7 +70,7 @@ public class ActStep0104 extends FrameActivity {
             txtNumber[i][3] = (TextView)(linearDrawfieldRow[i].findViewById(R.id.txt_col_4));
             txtNumber[i][4] = (TextView)(linearDrawfieldRow[i].findViewById(R.id.txt_col_5));
         }
-        imgDiscription = (ImageView)findViewById(R.id.text_discription);
+        txtDiscription = (TextView)findViewById(R.id.txt_discription);
 
 
         //button listener
@@ -120,8 +120,8 @@ public class ActStep0104 extends FrameActivity {
 
     private void setDiscription(){
         isOdd = rand.nextBoolean();
-        if(isOdd) imgDiscription.setImageResource(R.drawable.discription_01_04_odd);
-        else imgDiscription.setImageResource(R.drawable.discription_01_04_even);
+        if(isOdd) txtDiscription.setText("다음 중 홀수를 찾아 누르세요.");
+        else txtDiscription.setText("다음 중 짝수를 찾아 누르세요.");
     }
 
     private void getNumbers(int iNumCount){
