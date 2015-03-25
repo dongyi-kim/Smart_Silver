@@ -1,16 +1,14 @@
-package src.activities;
+package src.activities.Step01;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Random;
 
 import cdmst.smartsilver.R;
 import src.Utility;
+import src.activities.FrameActivity;
 import src.dialogs.DlgResultMark;
 import src.viewes.ViewNumberPad;
 

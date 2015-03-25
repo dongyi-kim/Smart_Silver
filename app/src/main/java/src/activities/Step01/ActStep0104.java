@@ -1,33 +1,29 @@
-package src.activities;
+package src.activities.Step01;
 
-import android.app.ActionBar;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.GridLayout;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.util.Log;
+
 import java.util.Random;
 
 import cdmst.smartsilver.R;
+import src.activities.FrameActivity;
 import src.dialogs.DlgResultMark;
 
 /**
  * Created by Acka on 2015-03-18.
  */
 
-public class ActStep0105 extends FrameActivity {
+public class ActStep0104 extends FrameActivity {
 
     public static final int ROW_COUNT = 5;
     public static final int COLUMN_COUNT = 5;
     public static final int NUM_OF_STAGE = 5;
-    public static final int MAX_NUMBER_COUNT[] = {2, 4, 7};
+    public static final int MAX_NUMBER_COUNT[] = {3, 7, 12};
     public static final int MAX_NUMBER_RANGE[] = {9, 99, 999};
 
     private LinearLayout linearDrawfield;
@@ -40,13 +36,11 @@ public class ActStep0105 extends FrameActivity {
     public final int iBtnValue[][] = new int[ROW_COUNT][COLUMN_COUNT];
     private int iLevel = 0;
     public int iAnswerCount = 0;
-    public boolean isBig = true;
+    public boolean isOdd = true;
     public int iNumCount = 0;
     public int iCorrectCount = 0;
     private int iStageCount = 0;
     private int iRetryCount = 0;
-    public int iMaxNumber = 999999999;
-    public int iMinNumber = -1;
     public boolean isRight = false;
 
     private Random rand = new Random();
@@ -54,7 +48,7 @@ public class ActStep0105 extends FrameActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_step_01_5);
+        setContentView(R.layout.act_step_01_4);
 
         linearDrawfield = (LinearLayout)findViewById(R.id.drawfield);
         linearDrawfieldRow[0] = (LinearLayout)findViewById(R.id.drawfield_row_1);
@@ -91,9 +85,15 @@ public class ActStep0105 extends FrameActivity {
                                     r = ii; c = jj; break;
                                 }
 
-                        if(iBtnValue[r][c] == (isBig? iMaxNumber : iMinNumber)){
-                            isRight = true;
-                            endFunction();;
+                        if(iBtnValue[r][c] % 2 == (isOdd? 1 : 0)){
+                            iCorrectCount++;
+                            ibtnNumber[r][c].setVisibility(View.INVISIBLE);
+                            txtNumber[r][c].setVisibility(View.INVISIBLE);
+
+                            if(iCorrectCount == iAnswerCount){
+                                isRight = true;
+                                endFunction();
+                            }
                         }
                         else{
                             isRight = false;
@@ -118,13 +118,13 @@ public class ActStep0105 extends FrameActivity {
 
 
     private void setDiscription(){
-        isBig = rand.nextBoolean();
-        if(isBig) txtDiscription.setText("다음 가장 큰 수를 찾아 누르세요.");
-        else txtDiscription.setText("다음 가장 작은 수를 찾아 누르세요.");
+        isOdd = rand.nextBoolean();
+        if(isOdd) txtDiscription.setText("다음 중 홀수를 찾아 누르세요.");
+        else txtDiscription.setText("다음 중 짝수를 찾아 누르세요.");
     }
 
     private void getNumbers(int iNumCount){
-        int cnt = 0, max = -1, min = 99999999;
+        int cnt = 0;
 
         for(int i = 0; i < ROW_COUNT; i++)
             for(int j = 0; j < COLUMN_COUNT; j++){
@@ -140,12 +140,11 @@ public class ActStep0105 extends FrameActivity {
             isSelected[i][j] = true;
             iBtnValue[i][j] = x;
             txtNumber[i][j].setText(Integer.toString(x));
-            if(x > max) max = x;
-            if(x < min) min = x;
+            if(x % 2 == (isOdd? 1 : 0)) iAnswerCount++;
             cnt++;
         }
 
-        iMaxNumber = max; iMinNumber = min;
+        if(iAnswerCount == 0) getNumbers(iNumCount);
     }
 
     private void setNumberView(){
@@ -171,10 +170,18 @@ public class ActStep0105 extends FrameActivity {
             @Override
             public void onDismiss(DialogInterface dialog) {
                 if(isRight || iRetryCount > 1){
-                    setNewScreen(++iLevel);
-                    iStageCount++;
+                    if(iLevel > 3){
+                        // go next stage
+                        Intent intent = new Intent(  ((DlgResultMark)dialog).getContext(), ActStep0105.class);
+                        startActivity(intent);
+                    }
+                    else {
+                        setNewScreen(++iLevel);
+                        iStageCount++;
+                    }
                 }
                 else{
+                    iCorrectCount = 0;
                     iRetryCount++;
                     setNumberView();
                 }
