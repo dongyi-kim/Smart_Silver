@@ -58,7 +58,7 @@
             <include layout="@layout/view_number_pad"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/do_not_find_view_by_id_this" />
+                android:id="@+id/view_number_pad" />
             </FrameLayout>
 
     </LinearLayout>
