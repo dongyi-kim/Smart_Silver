@@ -14,9 +14,12 @@ import android.view.WindowManager;
 public class FrameDialog extends Dialog{
 
     protected final int iLayoytID;
+    protected Context context;
+
 
     protected FrameDialog(Context context, int iLayoutID){
         super(context);
+        this.context = context;
         this.iLayoytID = iLayoutID;
     }
 

@@ -1,6 +1,7 @@
 package src.activities;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,7 +23,7 @@ public class ActStep0103 extends FrameActivity {
     private static final int ROW_COUNT = 4;
     private static final int COLUMN_COUNT = 5;
     private static final int NUM_OF_STAGE = 3;
-    private static final int SHAPE_COUNT[] = {5, 10, 20};
+    private static final int SHAPE_COUNT[] = {5, 10, 20, 20, 20};
 
     private LinearLayout linearDrawfield;
     private LinearLayout linearDrawfieldRow[] = new LinearLayout[ROW_COUNT];
@@ -141,7 +142,14 @@ public class ActStep0103 extends FrameActivity {
             public void onDismiss(DialogInterface dialog) {
                 if(isRight || iRetryCount > 1){
                     iAnswerCount++;
-                    setNewLevel(++iLevel);
+                    if(iLevel < NUM_OF_STAGE)
+                    {
+                        setNewLevel(++iLevel);
+                    }else
+                    {  // go next stage
+                        Intent intent = new Intent(  ((DlgResultMark)dialog).getContext(), ActStep0104.class);
+                        startActivity(intent);
+                    }
                 }
                 else{
                     iRetryCount++;

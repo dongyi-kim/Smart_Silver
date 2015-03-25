@@ -26,7 +26,7 @@ public class ActStep0104 extends FrameActivity {
 
     public static final int ROW_COUNT = 5;
     public static final int COLUMN_COUNT = 5;
-    public static final int NUM_OF_STAGE = 3;
+    public static final int NUM_OF_STAGE = 5;
 
     private LinearLayout linearDrawfield;
     private LinearLayout linearDrawfieldRow[] = new LinearLayout[ROW_COUNT];

@@ -1,5 +1,6 @@
 package src.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -85,6 +86,8 @@ public class ActStep01 extends FrameActivity {
         iStage++;
         if(iStage >= NUM_OF_STAGE)
         {   // go next stage
+            Intent intent = new Intent(this, ActStep0103.class);
+            startActivity(intent);
 
         }else
         {   //go next level
