@@ -104,9 +104,7 @@ public class ActStep0103 extends FrameActivity {
 
     private void setNewLevel(int iLevel){
         iShapeCount = rand.nextInt(SHAPE_COUNT[iLevel]) + 1;
-        Log.i("tag", "" + iShapeCount);
         int iFirstAnsNumber = iShapeCount - rand.nextInt(3);
-        Log.i("tag", "" + iFirstAnsNumber);
         if(iFirstAnsNumber <= 0) iFirstAnsNumber = 1;
         for(int i = 0; i < 3; i++){
             iAnswerValue[i] = iFirstAnsNumber++;
