@@ -85,11 +85,11 @@ public class ActStep0104 extends StageActivity {
                 });
             } // end of button listener
 
-        setQuestion();
+        setQuestion(false, null);
     }
 
 
-    public void setQuestion(){
+    public void setQuestion(boolean isRetry, Object object){
         int iRandomSeed = 2 * iLevel + rand.nextInt(2);
         numberSet.setData(iRandomSeed);
 
@@ -117,7 +117,8 @@ public class ActStep0104 extends StageActivity {
         }
     }
 
-    public void checkAnswer(){
+
+    public void checkAnswer(Object object){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
 
@@ -129,7 +130,7 @@ public class ActStep0104 extends StageActivity {
                     else {
                         iRetryCount = 0;
                         iLevel++;
-                        setQuestion();
+                        setQuestion(false, null);
                     }
                 }
                 else{
@@ -139,7 +140,8 @@ public class ActStep0104 extends StageActivity {
         });
     }
 
-    public void goNext(){
+
+    public void goNext(Object object){
         Intent intent = new Intent(this, ActStep0105.class);
         startActivity(intent);
     }
