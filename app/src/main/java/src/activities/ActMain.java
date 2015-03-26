@@ -3,7 +3,9 @@ package src.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
 import android.widget.Button;
+
 
 import cdmst.smartsilver.R;
 import src.activities.Step01.ActStep01;
@@ -36,7 +38,6 @@ public class ActMain extends FrameActivity{
         btnStep01.setOnClickListener(clickBtnStep);
         btnStep02.setOnClickListener(clickBtnStep);
         btnStep03.setOnClickListener(clickBtnStep);
-
     }
 
     View.OnClickListener clickBtnStep = new View.OnClickListener()
