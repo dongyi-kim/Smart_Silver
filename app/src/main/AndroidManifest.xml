@@ -17,10 +17,19 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="src.activities.ActStep01">
+        <activity android:name="src.activities.Step01.ActStep01"
+            android:screenOrientation="portrait"
+            >
+
         </activity>
 
-        <activity android:name="src.activities.ActStep0103">
+        <activity android:name="src.activities.Step01.ActStep0103">
+        </activity>
+
+        <activity android:name="src.activities.Step01.ActStep0104">
+        </activity>
+
+        <activity android:name="src.activities.Step01.ActStep0105">
         </activity>
 
     </application>

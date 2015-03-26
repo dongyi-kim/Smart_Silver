@@ -3,6 +3,7 @@ package src.viewes;
 import android.content.Context;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import java.util.Random;
 
@@ -12,36 +13,43 @@ import src.activities.FrameActivity;
 /**
  * Created by waps12b on 15. 3. 18..
  */
-public class ViewNumberPad extends FrameView
+public class ViewNumberPad
 {
+    /*
+        It is not custom view
+
+     */
     public static final int CODE_MODIFY = -123456;
     public static final int CODE_OKAY = -2390284;
 
     public static final String KEY_NORMAL_SET = "0123456789";
 
+    private final View view;
+    public final Context context;
 
-    public final Button btnModify;
-    public final Button btnOkay;
-    public final Button[] arrBtnNum;
+    public Button btnModify;
+    public Button btnOkay;
+    public Button[] arrBtnNum;
 
-    public ViewNumberPad(Context context)
-    {
-        super(context, R.layout.view_number_pad);
+    public ViewNumberPad(View viewNumberPad)
+    {//becaus this view has a number of constructor
+        this.view = viewNumberPad;
+        context = view.getContext();
 
         arrBtnNum = new Button[10];
-        arrBtnNum[0] = (Button)findViewById(R.id.btn_pad_r4_c2);
-        arrBtnNum[1] = (Button)findViewById(R.id.btn_pad_r1_c1);
-        arrBtnNum[2] = (Button)findViewById(R.id.btn_pad_r1_c2);
-        arrBtnNum[3] = (Button)findViewById(R.id.btn_pad_r1_c3);
-        arrBtnNum[4] = (Button)findViewById(R.id.btn_pad_r2_c1);
-        arrBtnNum[5] = (Button)findViewById(R.id.btn_pad_r2_c2);
-        arrBtnNum[6] = (Button)findViewById(R.id.btn_pad_r2_c3);
-        arrBtnNum[7] = (Button)findViewById(R.id.btn_pad_r3_c1);
-        arrBtnNum[8] = (Button)findViewById(R.id.btn_pad_r3_c2);
-        arrBtnNum[9] = (Button)findViewById(R.id.btn_pad_r3_c3);
+        arrBtnNum[0] = (Button)view.findViewById(R.id.btn_pad_r4_c2);
+        arrBtnNum[1] = (Button)view.findViewById(R.id.btn_pad_r1_c1);
+        arrBtnNum[2] = (Button)view.findViewById(R.id.btn_pad_r1_c2);
+        arrBtnNum[3] = (Button)view.findViewById(R.id.btn_pad_r1_c3);
+        arrBtnNum[4] = (Button)view.findViewById(R.id.btn_pad_r2_c1);
+        arrBtnNum[5] = (Button)view.findViewById(R.id.btn_pad_r2_c2);
+        arrBtnNum[6] = (Button)view.findViewById(R.id.btn_pad_r2_c3);
+        arrBtnNum[7] = (Button)view.findViewById(R.id.btn_pad_r3_c1);
+        arrBtnNum[8] = (Button)view.findViewById(R.id.btn_pad_r3_c2);
+        arrBtnNum[9] = (Button)view.findViewById(R.id.btn_pad_r3_c3);
 
-        btnModify = (Button)findViewById(R.id.btn_pad_r4_c1_back);
-        btnOkay = (Button)findViewById(R.id.btn_pad_r4_c3_success);
+        btnModify = (Button)view.findViewById(R.id.btn_pad_r4_c1_back);
+        btnOkay = (Button)view.findViewById(R.id.btn_pad_r4_c3_success);
 
         btnModify.setOnClickListener(listenNumberTouch);
         btnOkay.setOnClickListener(listenNumberTouch);
@@ -52,6 +60,7 @@ public class ViewNumberPad extends FrameView
 
         setNumbers(KEY_NORMAL_SET);
     }
+
 
     public void setNumbers(String strNumPad)
     {
@@ -78,10 +87,10 @@ public class ViewNumberPad extends FrameView
 
     public void numberClicked(int iCode)
     {
-        ((FrameActivity)getContext()).onGetEvent(this, iCode);
+        ((FrameActivity)context).onGetEvent(view, iCode);
     }
 
-    View.OnClickListener listenNumberTouch = new OnClickListener()
+    View.OnClickListener listenNumberTouch = new View.OnClickListener()
     {
         @Override
         public void onClick(View v)
@@ -91,7 +100,7 @@ public class ViewNumberPad extends FrameView
             else if( v == btnOkay)
                 numberClicked(CODE_OKAY);
             else
-                numberClicked(Integer.parseInt(((Button) v).getText().toString()));
+                numberClicked(Integer.parseInt(((Button)v).getText().toString()));
         }
     };
 

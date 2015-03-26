@@ -1,0 +1,24 @@
+<resources>
+    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
+    <!-- Screen Margin -->
+    <dimen name="activity_horizontal_margin">72dp</dimen>   <!-- 1/10 swdp -->
+    <dimen name="activity_vertical_margin">72dp</dimen>     <!-- 1/10 swdp -->
+
+    <!-- Relative Font Size -->
+    <dimen name="font_size_lv0">36dp</dimen>    <!-- 5/100 swdp -->
+    <dimen name="font_size_lv1">43dp</dimen>    <!-- 6/100 swdp -->
+    <dimen name="font_size_lv2">50dp</dimen>    <!-- 7/100 swdp -->
+    <dimen name="font_size_lv3">58dp</dimen>    <!-- 8/100 swdp -->
+    <dimen name="font_size_lv4">65dp</dimen>    <!-- 9/100 swdp -->
+    <dimen name="font_size_lv5">79dp</dimen>    <!-- 11/100 swdp -->
+    <dimen name="font_size_lv6">86dp</dimen>    <!-- 12/100 swdp -->
+    <dimen name="font_size_lv7">101dp</dimen>    <!-- 14/100 swdp -->
+    <dimen name="font_size_lv8">122dp</dimen>    <!-- 17/100 swdp -->
+    <dimen name="font_size_lv9">144dp</dimen>    <!-- 20/100 swdp -->
+
+    <!-- Relative Font Size -->
+    <dimen name="button_padding">36dp</dimen> <!-- 1/20 swdp -->
+
+</resources>

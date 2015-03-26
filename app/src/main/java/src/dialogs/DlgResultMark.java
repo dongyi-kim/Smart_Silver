@@ -23,6 +23,7 @@ public class DlgResultMark extends FrameDialog {
     {
         super(context, R.layout.dlg_result_mark);
         this.isOkay = isOkay;
+
     }
 
     public void setIsOkay(boolean isOkay)
@@ -50,17 +51,6 @@ public class DlgResultMark extends FrameDialog {
         ibtnOkay.setOnClickListener(eventOnClickButton);
         ibtnFail.setOnClickListener(eventOnClickButton);
 
-//        this.setOnShowListener(new OnShowListener() {
-//            @Override
-//            public void onShow(DialogInterface dialog) {
-//                try {
-//                    Thread.sleep(2000);
-//                } catch (Exception ex) {
-//
-//                }
-//                dialog.dismiss();
-//            }
-//        });
 
         setIsOkay(isOkay);
     }
@@ -71,13 +61,13 @@ public class DlgResultMark extends FrameDialog {
         super.show();
     }
 
+    //when click this dialog
     View.OnClickListener eventOnClickButton = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
 
-            dismiss();
+        dismiss();
         }
     };
-
 
 }

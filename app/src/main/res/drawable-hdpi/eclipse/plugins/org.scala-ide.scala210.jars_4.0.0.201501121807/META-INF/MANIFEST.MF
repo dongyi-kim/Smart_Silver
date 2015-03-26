@@ -1,0 +1,52 @@
+Manifest-Version: 1.0
+Bundle-ActivationPolicy: lazy
+Built-By: luc
+Bundle-Name: Scala 2.10 jars
+Bundle-Localization: plugin
+Created-By: Apache Maven 3.0.4
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: scala-ide.org
+Build-Jdk: 1.6.0_32
+Bundle-Version: 4.0.0.201501121807
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.scala-ide.scala210.jars;singleton:=true
+Archiver-Version: Plexus Archiver
+Eclipse-ExtensibleAPI: true
+
+Name: target/jars/scala-actor-src.jar
+SHA1-Digest: ApbfM9W2rdT2isCocifR6DdOXIs=
+
+Name: META-INF/maven/org.scala-ide/org.scala-ide.scala210.jars/pom.pro
+ perties
+SHA1-Digest: k2i5ci3zOqBK5cQ2HqiLYhrnFDw=
+
+Name: META-INF/maven/org.scala-ide/org.scala-ide.scala210.jars/pom.xml
+SHA1-Digest: kqdRepWmsm6RQexxy7tvnYCLAdU=
+
+Name: target/jars/scala-library-src.jar
+SHA1-Digest: WZCKuTl4wfVG09teBbQplLY61RU=
+
+Name: target/jars/scala-actor.jar
+SHA1-Digest: TxDbIyY2GSmkq/t77EQ/t8E6tYs=
+
+Name: target/jars/scala-swing-src.jar
+SHA1-Digest: aP/mrWnxcrOVgWErn0ttN7yYLDI=
+
+Name: target/jars/scala-reflect-src.jar
+SHA1-Digest: oh6rMvmgrHW6XrUoVFvX+SMkBaM=
+
+Name: target/jars/scala-library.jar
+SHA1-Digest: mq5MsYAlN9YE4DaIyrdE/0ezGn0=
+
+Name: target/jars/scala-reflect.jar
+SHA1-Digest: 2tGUnovdxPl6dwJeZ9bwuypQcb4=
+
+Name: target/jars/scala-compiler.jar
+SHA1-Digest: nmVAaCIpnQgsqueGmbtLZAETQO8=
+
+Name: target/jars/scala-compiler-src.jar
+SHA1-Digest: +n41bXmeUzllii2vRFmMQAZ8HE8=
+
+Name: target/jars/scala-swing.jar
+SHA1-Digest: zQwrh99uGINz4RYi76Nt/iEXXsc=
+
