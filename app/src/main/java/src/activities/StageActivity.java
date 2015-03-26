@@ -39,7 +39,6 @@ public abstract class StageActivity extends FrameActivity {
      * - isRetry가 true면 문제와 보기를 새롭게 설정
      * - 새로운 보기 설정 시 Listener를 통해 checkAnswer()를 호출
      */
-
     public abstract void setQuestion( boolean isRetry, Object object);
     public void setQuestion(boolean isRetry) { setQuestion(isRetry, null); }
 

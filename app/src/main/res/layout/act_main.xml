@@ -24,7 +24,7 @@
 
             />
 
-        <src.materialdesign.views.ButtonRectangle
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/font_size_lv2"
@@ -34,7 +34,7 @@
 
             />
 
-        <src.materialdesign.views.ButtonFlat
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/font_size_lv2"
@@ -42,7 +42,7 @@
             android:text="2 단계"
             />
 
-        <src.materialdesign.views.ButtonFlat
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/font_size_lv2"
