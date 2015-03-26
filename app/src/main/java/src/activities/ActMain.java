@@ -1,22 +1,27 @@
 package src.activities;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
 import cdmst.smartsilver.R;
+import src.activities.Step01.ActStep01;
+import src.activities.Step01.ActStep0104;
+import src.activities.Step01.ActStep0105;
+import src.materialdesign.views.Button;
 
 
 public class ActMain extends FrameActivity{
 
+
     Button btnStep01;
     Button btnStep02;
     Button btnStep03;
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +31,7 @@ public class ActMain extends FrameActivity{
         btnStep01 = (Button)findViewById(R.id.btn_step01);
         btnStep02 = (Button)findViewById(R.id.btn_step02);
         btnStep03 = (Button)findViewById(R.id.btn_step03);
-        //Listner : 이벤트
+
         btnStep01.setOnClickListener(clickBtnStep);
         btnStep02.setOnClickListener(clickBtnStep);
         btnStep03.setOnClickListener(clickBtnStep);

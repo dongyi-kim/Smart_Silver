@@ -11,6 +11,8 @@ import android.widget.LinearLayout;
 public class FrameView extends LinearLayout
 {
 
+    
+
     protected FrameView(Context context)
     { // when create custom-view from include view
         super(context);

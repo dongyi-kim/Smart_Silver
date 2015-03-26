@@ -19,7 +19,7 @@ public class FrameActivity extends Activity{
 
 
 
-    public void onGetEvent(View vSender, Object obj)
+    public void onGetEvent(Object vSender, Object obj)
     {
 
     }

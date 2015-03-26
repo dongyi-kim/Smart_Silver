@@ -1,16 +1,14 @@
-package src.activities;
+package src.activities.Step01;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Random;
 
 import cdmst.smartsilver.R;
 import src.Utility;
+import src.activities.FrameActivity;
 import src.dialogs.DlgResultMark;
 import src.viewes.ViewNumberPad;
 
@@ -25,7 +23,6 @@ public class ActStep01 extends FrameActivity {
     private TextView txtDescrib;
     private TextView txtQuestion;
     private TextView txtAnswer;
-    private FrameLayout frameNumberPad;
     private ViewNumberPad vNumberPad;
 
     private StringBuffer buffAnswer;
@@ -40,15 +37,9 @@ public class ActStep01 extends FrameActivity {
         txtDescrib = (TextView)findViewById(R.id.txt_description);
         txtQuestion = (TextView)findViewById(R.id.txt_question);
         txtAnswer = (TextView)findViewById(R.id.txt_answer);
-        //vNumberPad = (ViewNumberPad)findViewById(R.id.view_number_pad);
 
+        vNumberPad = new ViewNumberPad( findViewById(R.id.view_number_pad));
 
-
-        vNumberPad = new ViewNumberPad(this);
-
-        frameNumberPad = (FrameLayout)findViewById(R.id.frame_view_number_pad);
-        frameNumberPad.removeAllViews();
-        frameNumberPad.addView(vNumberPad);
         iStage = 1;
 
         setQuestion("123456789");
@@ -116,7 +107,7 @@ public class ActStep01 extends FrameActivity {
     }
 
     @Override
-    public void onGetEvent(View vSender, Object obj)
+    public void onGetEvent(Object vSender, Object obj)
     {
         if(vSender == vNumberPad)
         {

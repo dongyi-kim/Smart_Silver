@@ -21,30 +21,30 @@
             android:layout_marginBottom="@dimen/activity_horizontal_margin"
             android:text="스마트 실버"
 
+
             />
 
-        <Button
+        <src.materialdesign.views.ButtonRectangle
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/button_padding"
             android:textSize="@dimen/font_size_lv2"
             android:id="@+id/btn_step01"
             android:text="1 단계"
+
+
             />
 
-        <Button
+        <src.materialdesign.views.ButtonFlat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/button_padding"
             android:textSize="@dimen/font_size_lv2"
             android:id="@+id/btn_step02"
             android:text="2 단계"
             />
 
-        <Button
+        <src.materialdesign.views.ButtonFlat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/button_padding"
             android:textSize="@dimen/font_size_lv2"
             android:id="@+id/btn_step03"
             android:text="3 단계"

@@ -23,6 +23,7 @@ public class DlgResultMark extends FrameDialog {
     {
         super(context, R.layout.dlg_result_mark);
         this.isOkay = isOkay;
+
     }
 
     public void setIsOkay(boolean isOkay)
