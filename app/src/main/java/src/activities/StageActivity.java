@@ -30,10 +30,10 @@ public abstract class StageActivity extends FrameActivity {
         arrResult[iStage].Stop(bResult);
     }
 
-    abstract void setQuestion();
+    public abstract void setQuestion();
 
-    abstract void checkAnswer();
+    public abstract void checkAnswer();
 
-    abstract void goNext();
+    public abstract void goNext();
 
 }
