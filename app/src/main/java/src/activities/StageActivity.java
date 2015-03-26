@@ -30,12 +30,19 @@ public abstract class StageActivity extends FrameActivity {
         arrResult[iStage].Stop(bResult);
     }
 
+    //문제에 대한 초기화
+    //완료 후 requireAnswer()를 호출
     abstract void setQuestion();
 
+    //답변 요구
+    //입력창이 있는 문제의 경우 답변칸 초기화
     abstract void requireAnswer();
 
+    //정답 확인
+    //정답이면 goNext()호출
     abstract void checkAnswer();
 
+    //다음 레벨, 혹은 다음 스탭 호출
     abstract void goNext();
 
 }
