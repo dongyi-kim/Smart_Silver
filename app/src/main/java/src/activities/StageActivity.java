@@ -30,19 +30,27 @@ public abstract class StageActivity extends FrameActivity {
         arrResult[iStage].Stop(bResult);
     }
 
-    //문제에 대한 초기화
-    //완료 후 requireAnswer()를 호출
-    abstract void setQuestion();
 
-    //답변 요구
-    //입력창이 있는 문제의 경우 답변칸 초기화
-    abstract void requireAnswer();
+    /* void setQustion()
+     * - 각 Stage의 문제에 대한 초기화를 진행
+     * - 문제와 보기를 초기화
+     * - isRetry가 false면 답 입력창을 초기화한 후 return,
+     * - isRetry가 true면 문제와 보기를 새롭게 설정
+     * - 새로운 보기 설정 시 Listener를 통해 checkAnswer()를 호출
+     */
+    public abstract void setQuestion(boolean isRetry);
 
-    //정답 확인
-    //정답이면 goNext()호출
-    abstract void checkAnswer();
+    /* void checkAnswer()
+     * - iStage를 1 증가시켜줌, 이 때 iStage > NUM_OF_STAGE면 goNext();
+     * - DlgResultMark로 결과 통보
+     * - 정답이면 setQuestion()을 호출하여 새로운 문제 준비
+     */
+    public abstract void checkAnswer();
 
-    //다음 레벨, 혹은 다음 스탭 호출
-    abstract void goNext();
+    /* void goNext()
+     * - iStage > NUM_OF_STAGE 가 될 시 checkAnswer()에 의해 호출 됨.
+     * - 다음 Level혹은 Step을 호출
+     */
+    public abstract void goNext();
 
 }
