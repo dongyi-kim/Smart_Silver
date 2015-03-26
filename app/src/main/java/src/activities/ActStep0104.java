@@ -28,8 +28,8 @@ public class ActStep0104 extends FrameActivity {
     public static final int ROW_COUNT = 5;
     public static final int COLUMN_COUNT = 5;
     public static final int NUM_OF_STAGE = 5;
-    public static final int MAX_NUMBER_COUNT[] = {3, 7, 12};
-    public static final int MAX_NUMBER_RANGE[] = {9, 99, 999};
+    public static final int MAX_NUMBER_COUNT[] = {3, 3, 4, 4};
+    public static final int MAX_NUMBER_RANGE[] = {9, 99, 999, 999};
 
     private LinearLayout linearDrawfield;
     private LinearLayout linearDrawfieldRow[] = new LinearLayout[ROW_COUNT];
@@ -109,13 +109,12 @@ public class ActStep0104 extends FrameActivity {
             } // end of button listener
 
         setNewScreen(iLevel);
-
-
     }
 
     private void setNewScreen(int iLevel){
+        if(iLevel > 2) endFunction();
         iAnswerCount = iCorrectCount = iRetryCount = 0;
-        iNumCount = rand.nextInt(MAX_NUMBER_COUNT[iLevel]) + 1;
+        iNumCount = MAX_NUMBER_COUNT[iLevel];
         setDiscription();
         getNumbers(iNumCount);
         setNumberView();
@@ -175,7 +174,7 @@ public class ActStep0104 extends FrameActivity {
             @Override
             public void onDismiss(DialogInterface dialog) {
                 if(isRight || iRetryCount > 1){
-                    if(iLevel > 3){
+                    if(iLevel > 2){
                         // go next stage
                         Intent intent = new Intent(  ((DlgResultMark)dialog).getContext(), ActStep0105.class);
                         startActivity(intent);

@@ -27,7 +27,7 @@ public class ActStep0105 extends FrameActivity {
     public static final int ROW_COUNT = 5;
     public static final int COLUMN_COUNT = 5;
     public static final int NUM_OF_STAGE = 5;
-    public static final int MAX_NUMBER_COUNT[] = {2, 4, 7};
+    public static final int MAX_NUMBER_COUNT[] = {2, 3, 4};
     public static final int MAX_NUMBER_RANGE[] = {9, 99, 999};
 
     private LinearLayout linearDrawfield;
@@ -110,7 +110,7 @@ public class ActStep0105 extends FrameActivity {
 
     private void setNewScreen(int iLevel){
         iAnswerCount = iCorrectCount = iRetryCount = 0;
-        iNumCount = rand.nextInt(MAX_NUMBER_COUNT[iLevel]) + 1;
+        iNumCount = MAX_NUMBER_COUNT[iLevel];
         setDiscription();
         getNumbers(iNumCount);
         setNumberView();
