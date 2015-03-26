@@ -49,7 +49,7 @@ public class ActStep0104 extends StageActivity {
 
         linearDrawfield = (LinearLayout)findViewById(R.id.drawfield);
         linearDrawfieldRow[0] = (LinearLayout)findViewById(R.id.drawfield_row_1);
-        linearDrawfieldRow[1] = (LinearLayout)findViewById(R.id.drawfield_row_3);
+        linearDrawfieldRow[1] = (LinearLayout)findViewById(R.id.drawfield_row_2);
         ibtnNumber[0][0] = (ImageButton)findViewById(R.id.btn_grid_1_1);
         ibtnNumber[0][1] = (ImageButton)findViewById(R.id.btn_grid_1_2);
         ibtnNumber[1][0] = (ImageButton)findViewById(R.id.btn_grid_2_1);
