@@ -47,6 +47,7 @@ public class ActStep0104 extends StageActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_01_4);
 
+        Log.i("tag", "Start");
         linearDrawfield = (LinearLayout)findViewById(R.id.drawfield);
         linearDrawfieldRow[0] = (LinearLayout)findViewById(R.id.drawfield_row_1);
         linearDrawfieldRow[1] = (LinearLayout)findViewById(R.id.drawfield_row_2);
@@ -60,6 +61,7 @@ public class ActStep0104 extends StageActivity {
         txtNumber[1][1] = (TextView)findViewById(R.id.txt_grid_2_2);
         txtDiscription = (TextView)findViewById(R.id.txt_discription);
 
+        Log.i("tag", "listner");
         //button listener
         for(int i = 0; i < MAX_ROW_NUMBER; i++)
             for(int j = 0; j < MAX_COLUMN_NUMBER; j++){
@@ -85,7 +87,9 @@ public class ActStep0104 extends StageActivity {
                 });
             } // end of button listener
 
-        setQuestion(false, null);
+        Log.i("tag", "to setQuestion");
+        setQuestion(false);
+        Log.i("tag", "Q end");
     }
 
 
@@ -93,19 +97,24 @@ public class ActStep0104 extends StageActivity {
         int iRandomSeed = 2 * iLevel + rand.nextInt(2);
         numberSet.setData(iRandomSeed);
 
+        Log.i("tag", "discription");
         txtDiscription.setText(numberSet.isOdd? "다음 중 홀수를 찾아 누르세요." : "다음 중 짝수를 찾아 누르세요.");
+        Log.i("tag", "discription complete");
 
         //delete all
         for(int i = 0; i < MAX_ROW_NUMBER; i++)
             for(int j = 0; j < MAX_COLUMN_NUMBER; j++){
+                Log.i("tag", "delete " + i + " " + j);
                 ibtnNumber[i][j].setVisibility(View.INVISIBLE);
                 txtNumber[i][j].setVisibility(View.INVISIBLE);
+                isSelected[i][j] = false;
             }
 
         // draw buttons
         int iSelectCount = 0, iNumCount = numberSet.iNumCount;
         while(iSelectCount < iNumCount){
-            int r = rand.nextInt(1), c = rand.nextInt(1);
+            int r = rand.nextInt(2), c = rand.nextInt(2);
+            Log.i("tag", "select " + iSelectCount + " " + iNumCount + " " + r + " " + c);
             if(isSelected[r][c]) continue;
 
             isSelected[r][c] = true;
@@ -115,6 +124,7 @@ public class ActStep0104 extends StageActivity {
             ibtnNumber[r][c].setVisibility(View.VISIBLE);
             txtNumber[r][c].setVisibility(View.VISIBLE);
         }
+        Log.i("tag", "end");
     }
 
 
@@ -130,7 +140,7 @@ public class ActStep0104 extends StageActivity {
                     else {
                         iRetryCount = 0;
                         iLevel++;
-                        setQuestion(false, null);
+                        setQuestion(false);
                     }
                 }
                 else{
