@@ -8,10 +8,8 @@ import android.widget.Button;
 
 
 import cdmst.smartsilver.R;
-import src.activities.Step01.ActStep01;
-import src.activities.Step01.ActStep0104;
-import src.activities.Step01.ActStep0105;
-
+import src.activities.Step01.*;
+import src.activities.Step03.*;
 
 
 public class ActMain extends FrameActivity{
@@ -57,7 +55,7 @@ public class ActMain extends FrameActivity{
 
             }else if(v== btnStep03)
             {
-                Intent intent = new Intent(v.getContext(), ActStep0105.class);
+                Intent intent = new Intent(v.getContext(), ActStep0301.class);
                 startActivity(intent);
             }
         }
