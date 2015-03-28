@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -25,8 +26,7 @@ public class ActStep0104 extends StageActivity {
     public static final int MAX_ROW_NUMBER = 2;
     public static final int MAX_COLUMN_NUMBER = 2;
 
-    private LinearLayout linearDrawfield;
-    private LinearLayout linearDrawfieldRow[] = new LinearLayout[2];
+    private FrameLayout frameGrid[][] = new FrameLayout[2][2];
     public ImageButton ibtnNumber[][] = new ImageButton[MAX_ROW_NUMBER][MAX_COLUMN_NUMBER];
     private TextView txtNumber[][] = new TextView[MAX_ROW_NUMBER][MAX_COLUMN_NUMBER];
     private TextView txtDiscription;
@@ -47,10 +47,10 @@ public class ActStep0104 extends StageActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_01_4);
 
-        Log.i("tag", "Start");
-        linearDrawfield = (LinearLayout)findViewById(R.id.drawfield);
-        linearDrawfieldRow[0] = (LinearLayout)findViewById(R.id.drawfield_row_1);
-        linearDrawfieldRow[1] = (LinearLayout)findViewById(R.id.drawfield_row_2);
+        frameGrid[0][0] = (FrameLayout)findViewById(R.id.frame_grid_1_1);
+        frameGrid[0][1] = (FrameLayout)findViewById(R.id.frame_grid_1_2);
+        frameGrid[1][0] = (FrameLayout)findViewById(R.id.frame_grid_2_1);
+        frameGrid[1][1] = (FrameLayout)findViewById(R.id.frame_grid_2_2);
         ibtnNumber[0][0] = (ImageButton)findViewById(R.id.btn_grid_1_1);
         ibtnNumber[0][1] = (ImageButton)findViewById(R.id.btn_grid_1_2);
         ibtnNumber[1][0] = (ImageButton)findViewById(R.id.btn_grid_2_1);
@@ -61,7 +61,6 @@ public class ActStep0104 extends StageActivity {
         txtNumber[1][1] = (TextView)findViewById(R.id.txt_grid_2_2);
         txtDiscription = (TextView)findViewById(R.id.txt_discription);
 
-        Log.i("tag", "listner");
         //button listener
         for(int i = 0; i < MAX_ROW_NUMBER; i++)
             for(int j = 0; j < MAX_COLUMN_NUMBER; j++){
@@ -87,9 +86,7 @@ public class ActStep0104 extends StageActivity {
                 });
             } // end of button listener
 
-        Log.i("tag", "to setQuestion");
         setQuestion(false);
-        Log.i("tag", "Q end");
     }
 
 
@@ -97,24 +94,37 @@ public class ActStep0104 extends StageActivity {
         int iRandomSeed = 2 * iLevel + rand.nextInt(2);
         numberSet.setData(iRandomSeed);
 
-        Log.i("tag", "discription");
         txtDiscription.setText(numberSet.isOdd? "다음 중 홀수를 찾아 누르세요." : "다음 중 짝수를 찾아 누르세요.");
-        Log.i("tag", "discription complete");
 
         //delete all
         for(int i = 0; i < MAX_ROW_NUMBER; i++)
             for(int j = 0; j < MAX_COLUMN_NUMBER; j++){
-                Log.i("tag", "delete " + i + " " + j);
                 ibtnNumber[i][j].setVisibility(View.INVISIBLE);
                 txtNumber[i][j].setVisibility(View.INVISIBLE);
                 isSelected[i][j] = false;
+            }
+
+        //set button's position
+        int iHeightMarginSum = 100;
+        int iWidthMarginSum = 100;
+
+        for(int i = 0; i < MAX_ROW_NUMBER; i++)
+            for(int j = 0; j < MAX_COLUMN_NUMBER; j++){
+                int t = rand.nextInt(iHeightMarginSum) + 1;
+                int b = iHeightMarginSum - t;
+                int l = rand.nextInt(iWidthMarginSum) + 1;
+                int r = iHeightMarginSum - l;
+
+                LinearLayout.LayoutParams gridParams = new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                gridParams.setMargins(l, t, r, b);
+                frameGrid[i][j].setLayoutParams(gridParams);
             }
 
         // draw buttons
         int iSelectCount = 0, iNumCount = numberSet.iNumCount;
         while(iSelectCount < iNumCount){
             int r = rand.nextInt(2), c = rand.nextInt(2);
-            Log.i("tag", "select " + iSelectCount + " " + iNumCount + " " + r + " " + c);
             if(isSelected[r][c]) continue;
 
             isSelected[r][c] = true;
@@ -124,7 +134,6 @@ public class ActStep0104 extends StageActivity {
             ibtnNumber[r][c].setVisibility(View.VISIBLE);
             txtNumber[r][c].setVisibility(View.VISIBLE);
         }
-        Log.i("tag", "end");
     }
 
 
