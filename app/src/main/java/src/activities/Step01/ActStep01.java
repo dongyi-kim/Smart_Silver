@@ -19,8 +19,6 @@ import src.viewes.ViewNumberPad;
  */
 public class ActStep01 extends StageActivity {
 
-    public static final int NUM_OF_STAGE = 5;
-
     private TextView txtDescrib;
     private TextView txtQuestion;
     private TextView txtAnswer;
