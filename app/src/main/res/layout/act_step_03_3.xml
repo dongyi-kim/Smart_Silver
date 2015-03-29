@@ -74,6 +74,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:id="@+id/img_grandma_food_space"
                             android:src="@drawable/empty_space_the_number_food"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -97,6 +98,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:id="@+id/img_grandfa_food_space"
                             android:src="@drawable/empty_space_the_number_food"/>
                         <TextView
                             android:layout_width="wrap_content"

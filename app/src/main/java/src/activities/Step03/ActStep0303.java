@@ -25,6 +25,8 @@ public class ActStep0303 extends StageActivity{
     private TextView txtDiscription;
     private ImageView imgGrandma;
     private ImageView imgGrandfa;
+    private ImageView imgGrandmaFoodSpace;
+    private ImageView imgGrandfaFoodSpace;
     private TextView txtGrandmaFood;
     private TextView txtGrandfaFood;
     private Button btnAnswer[] = new Button[3];
@@ -44,6 +46,8 @@ public class ActStep0303 extends StageActivity{
         txtDiscription = (TextView)findViewById(R.id.text_discription);
         imgGrandma = (ImageView)findViewById(R.id.imgGrandma);
         imgGrandfa = (ImageView)findViewById(R.id.imgGrandfa);
+        imgGrandmaFoodSpace = (ImageView)findViewById(R.id.img_grandma_food_space);
+        imgGrandfaFoodSpace = (ImageView)findViewById(R.id.img_grandfa_food_space);
         txtGrandmaFood = (TextView)findViewById(R.id.txt_grandma_food);
         txtGrandfaFood = (TextView)findViewById(R.id.txt_grandfa_food);
         btnAnswer[0] = (Button)findViewById(R.id.btn_answer_1);
@@ -76,6 +80,10 @@ public class ActStep0303 extends StageActivity{
         txtDiscription.setText(dataSet.sDiscription);
         imgGrandma.setImageResource(dataSet.iGrandmaImage);
         imgGrandfa.setImageResource(dataSet.iGrandfaImage);
+        if(iStage >= 5){
+            imgGrandmaFoodSpace.setImageResource(R.drawable.empty_space_the_number_food_extend);
+            imgGrandfaFoodSpace.setImageResource(R.drawable.empty_space_the_number_food_extend);
+        }
         txtGrandmaFood.setText(dataSet.sGrandmaFood);
         txtGrandfaFood.setText(dataSet.sGrandfaFood);
 

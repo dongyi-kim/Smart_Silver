@@ -13,8 +13,8 @@ public class Step0303DataSet {
             " 할머니와 할아버지가 추석에 사용할 밤을 까려고 합니다. 모두 몇 개의 밤을 까야 할까요? 아래 숫자를 누르세요!",
             " 할머니와 할아버지가 제사준비를 하고 있습니다. 할머니와 할아버지가 전을 부칩니다. 얼만큼의 전을 부쳐야 할까요? 아래 숫자를 누르세요!"};
     private static final int iFoodType[] = {0, 1, 2, 0, 3};
-    private static final int iGrandmaImageList[] = {R.drawable.grandma_with_songpyoen, R.drawable.grandma_with_hongshi, R.drawable.grandma_with_bam, R.drawable.grandma_with_bam};
-    private static final int iGrandfaImageList[] = {R.drawable.grandfa_with_songpyoen, R.drawable.grandfa_with_hongshi, R.drawable.grandfa_with_bam, R.drawable.grandfa_with_bam};
+    private static final int iGrandmaImageList[] = {R.drawable.grandma_with_songpyoen, R.drawable.grandma_with_hongshi, R.drawable.grandma_with_bam, R.drawable.grandma_with_jeon};
+    private static final int iGrandfaImageList[] = {R.drawable.grandfa_with_songpyoen, R.drawable.grandfa_with_hongshi, R.drawable.grandfa_with_bam, R.drawable.grandfa_with_jeon};
     private static final String sGrandmaFoodList[] = {"깨송편5+콩송편10", "홍시 5개", "밤 24개", "깨송편5+콩송편10", "녹두전 20장\n호박전 40개\n동태전 30개"};
     private static final String sGrandfaFoodList[] = {"깨송편5+콩손편10", "홍시 7개", "밤 30개", "깨송편5+콩송편10", "녹두전 2장\n호박전 3개\n동태전 5개"};
     private static final int iAnswerList[] = {30, 12, 54, 30, 100};
