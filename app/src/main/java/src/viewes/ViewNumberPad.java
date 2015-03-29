@@ -1,6 +1,7 @@
 package src.viewes;
 
 import android.content.Context;
+import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -13,7 +14,7 @@ import src.activities.FrameActivity;
 /**
  * Created by waps12b on 15. 3. 18..
  */
-public class ViewNumberPad
+public class ViewNumberPad extends FrameView
 {
     /*
         It is not custom view
@@ -24,32 +25,46 @@ public class ViewNumberPad
 
     public static final String KEY_NORMAL_SET = "0123456789";
 
-    private final View view;
-    public final Context context;
-
     public Button btnModify;
     public Button btnOkay;
     public Button[] arrBtnNum;
 
-    public ViewNumberPad(View viewNumberPad)
-    {//becaus this view has a number of constructor
-        this.view = viewNumberPad;
-        context = view.getContext();
+    protected ViewNumberPad(Context context)
+    { // when create custom-view from include view
+        super(context);
+        init();
+    }
+
+    public ViewNumberPad( Context context, AttributeSet attrs )
+    {
+        super(context, attrs);
+        init();
+    }
+
+    public ViewNumberPad( Context context, AttributeSet attrs, int defStyle )
+    {
+        super(context, attrs, defStyle);
+        init();
+    }
+
+    public void init()
+    {
+        setLayout(R.layout.view_number_pad);
 
         arrBtnNum = new Button[10];
-        arrBtnNum[0] = (Button)view.findViewById(R.id.btn_pad_r4_c2);
-        arrBtnNum[1] = (Button)view.findViewById(R.id.btn_pad_r1_c1);
-        arrBtnNum[2] = (Button)view.findViewById(R.id.btn_pad_r1_c2);
-        arrBtnNum[3] = (Button)view.findViewById(R.id.btn_pad_r1_c3);
-        arrBtnNum[4] = (Button)view.findViewById(R.id.btn_pad_r2_c1);
-        arrBtnNum[5] = (Button)view.findViewById(R.id.btn_pad_r2_c2);
-        arrBtnNum[6] = (Button)view.findViewById(R.id.btn_pad_r2_c3);
-        arrBtnNum[7] = (Button)view.findViewById(R.id.btn_pad_r3_c1);
-        arrBtnNum[8] = (Button)view.findViewById(R.id.btn_pad_r3_c2);
-        arrBtnNum[9] = (Button)view.findViewById(R.id.btn_pad_r3_c3);
+        arrBtnNum[0] = (Button)findViewById(R.id.btn_pad_r4_c2);
+        arrBtnNum[1] = (Button)findViewById(R.id.btn_pad_r1_c1);
+        arrBtnNum[2] = (Button)findViewById(R.id.btn_pad_r1_c2);
+        arrBtnNum[3] = (Button)findViewById(R.id.btn_pad_r1_c3);
+        arrBtnNum[4] = (Button)findViewById(R.id.btn_pad_r2_c1);
+        arrBtnNum[5] = (Button)findViewById(R.id.btn_pad_r2_c2);
+        arrBtnNum[6] = (Button)findViewById(R.id.btn_pad_r2_c3);
+        arrBtnNum[7] = (Button)findViewById(R.id.btn_pad_r3_c1);
+        arrBtnNum[8] = (Button)findViewById(R.id.btn_pad_r3_c2);
+        arrBtnNum[9] = (Button)findViewById(R.id.btn_pad_r3_c3);
 
-        btnModify = (Button)view.findViewById(R.id.btn_pad_r4_c1_back);
-        btnOkay = (Button)view.findViewById(R.id.btn_pad_r4_c3_success);
+        btnModify = (Button)findViewById(R.id.btn_pad_r4_c1_back);
+        btnOkay = (Button)findViewById(R.id.btn_pad_r4_c3_success);
 
         btnModify.setOnClickListener(listenNumberTouch);
         btnOkay.setOnClickListener(listenNumberTouch);
@@ -60,7 +75,6 @@ public class ViewNumberPad
 
         setNumbers(KEY_NORMAL_SET);
     }
-
 
     public void setNumbers(String strNumPad)
     {
@@ -87,7 +101,7 @@ public class ViewNumberPad
 
     public void numberClicked(int iCode)
     {
-        ((FrameActivity)context).onGetEvent(view, iCode);
+        ((FrameActivity)context).onGetEvent(this, iCode);
     }
 
     View.OnClickListener listenNumberTouch = new View.OnClickListener()
