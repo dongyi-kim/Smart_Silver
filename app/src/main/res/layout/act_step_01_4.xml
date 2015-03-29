@@ -17,7 +17,6 @@
             android:textSize="@dimen/font_size_lv4"
             android:layout_marginTop="20sp" />
 
-
         <LinearLayout
             android:layout_weight=".85"
             android:layout_width="match_parent"
@@ -27,45 +26,256 @@
             android:background="@drawable/drawfield_01_04"
             android:layout_marginLeft="10sp"
             android:layout_marginRight="10sp"
-            android:layout_marginBottom="20sp">
+            android:layout_marginBottom="20sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1">
 
-
-            <include layout="@layout/view_round_button_layout"
+            <LinearLayout
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight=".35"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
+                android:orientation="horizontal"
                 android:id="@+id/drawfield_row_1"
-                android:layout_marginLeft="20sp"
-                android:layout_marginTop="5sp"/>
+                android:weightSum="1">
 
-            <include layout="@layout/view_round_button_layout"
+                <FrameLayout
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4">
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/round_button"
+                        android:background="@null"
+                        android:scaleType="fitCenter"
+                        android:layout_gravity="center"
+                        android:id="@+id/btn_grid_1_1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:textSize="@dimen/font_size_lv3"
+                        android:text="(1,1)"
+                        android:id="@+id/txt_grid_1_1">
+                    </TextView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4">
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/round_button"
+                        android:background="@null"
+                        android:scaleType="fitCenter"
+                        android:layout_gravity="center"
+                        android:id="@+id/btn_grid_1_2"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:textSize="@dimen/font_size_lv3"
+                        android:text="(1,2)"
+                        android:id="@+id/txt_grid_1_2">
+                    </TextView>
+                </FrameLayout>
+            </LinearLayout>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_weight=".1"/>
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight=".35"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
                 android:id="@+id/drawfield_row_2"
-                android:layout_marginRight="20sp"/>
+                android:weightSum="1">
 
-            <include layout="@layout/view_round_button_layout"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:id="@+id/drawfield_row_3"
-                android:layout_marginLeft="20sp"/>
+                <FrameLayout
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4">
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/round_button"
+                        android:background="@null"
+                        android:scaleType="fitCenter"
+                        android:layout_gravity="center"
+                        android:id="@+id/btn_grid_2_1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:textSize="@dimen/font_size_lv3"
+                        android:text="(2,1)"
+                        android:id="@+id/txt_grid_2_1">
+                    </TextView>
+                </FrameLayout>
 
-            <include layout="@layout/view_round_button_layout"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:id="@+id/drawfield_row_4"
-                android:layout_marginRight="20sp"/>
+                <FrameLayout
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".4">
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/round_button"
+                        android:background="@null"
+                        android:scaleType="fitCenter"
+                        android:layout_gravity="center"
+                        android:id="@+id/btn_grid_2_2"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:textSize="@dimen/font_size_lv3"
+                        android:text="(2,2)"
+                        android:id="@+id/txt_grid_2_2">
+                    </TextView>
+                </FrameLayout>
+            </LinearLayout>
 
-            <include layout="@layout/view_round_button_layout"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:id="@+id/drawfield_row_5"
-                android:layout_marginLeft="20sp"
-                android:layout_marginBottom="5sp"/>
         </LinearLayout>
+
+        <!--
+        <GridLayout
+            android:layout_weight=".85"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:id="@+id/drawfield"
+            android:background="@drawable/drawfield_01_04"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="20sp"
+            android:rowCount="2"
+            android:columnCount="2">
+
+            <FrameLayout
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight=".5"
+                android:layout_columnWeight=".5">
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/round_button"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"
+                    android:id="@+id/btn_grid_1_1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:textSize="32sp"
+                    android:text="(1,1)"
+                    android:id="@+id/txt_grid_1_1">
+                </TextView>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight=".5"
+                android:layout_columnWeight=".5"
+                android:layout_marginRight="1sp"
+                android:layout_marginLeft="1sp">
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/round_button"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"
+                    android:id="@+id/btn_grid_2_1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:textSize="32sp"
+                    android:text="(2,1)"
+                    android:id="@+id/txt_grid_2_1">
+                </TextView>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight=".5"
+                android:layout_columnWeight=".5"
+                android:layout_marginRight="1sp"
+                android:layout_marginLeft="1sp">
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/round_button"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"
+                    android:id="@+id/btn_grid_1_2"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:textSize="32sp"
+                    android:text="(1,2)"
+                    android:id="@+id/txt_grid_1_2">
+                </TextView>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight=".5"
+                android:layout_columnWeight=".5"
+                android:layout_marginRight="1sp"
+                android:layout_marginLeft="1sp">
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/round_button"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"
+                    android:id="@+id/btn_grid_2_2"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:textSize="32sp"
+                    android:text="(2,2)"
+                    android:id="@+id/txt_grid_2_2">
+                </TextView>
+            </FrameLayout>
+        </GridLayout>
+        -->
     </LinearLayout>
 </RelativeLayout>
