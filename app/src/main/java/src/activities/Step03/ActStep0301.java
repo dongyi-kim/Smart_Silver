@@ -72,16 +72,30 @@ public class ActStep0301 extends StageActivity {
     }
 
     public void setQuestion(boolean isRetry, Object object){
-        int iRandomSeed = 2 * iStage + rand.nextInt(2);
-        processSet.setData(iRandomSeed);
+        if(!isRetry) {
+            int iRandomSeed = 2 * iStage + rand.nextInt(2);
+            processSet.setData(iRandomSeed);
+        }
 
         //delete last process
         for(int i = 0; i < 4; i++)
             txtAnswer[i].setText("");
 
+        //set process
         String sSign = iStage < 4? "+" : "";
         for(int i = 0; i < 3; i++)
             txtProcess[i].setText(sSign + processSet.arrProcess[i]);
+
+        //set button
+        int iChangeCount = 0, iButtonValue = processSet.startNumber;
+        boolean isChanged[] = new boolean[3];
+        while(iChangeCount < 3){
+            int index = rand.nextInt(3);
+            if(isChanged[index]) continue;
+            iButtonValue += processSet.arrProcess[iChangeCount++];
+            btnAnswer[index].setText("" + iButtonValue);
+            isChanged[index] = true;
+        }
 
         iProcess = 0;
         iNextResult = processSet.startNumber;
@@ -91,44 +105,52 @@ public class ActStep0301 extends StageActivity {
     public void setNextProcess(){
         txtAnswer[iProcess].setText("" + iNextResult);
         iCurrentResult = iNextResult;
-        iNextResult = iCurrentResult + processSet.arrProcess[iProcess++];
 
-        int iChangeCount = 0, iAddValue = iNextResult - iCurrentResult;
-        boolean isChanged[] = new boolean[3];
-        while(iChangeCount < 3){
-            int index = rand.nextInt(3);
-            if(isChanged[index]) continue;
-
-            btnAnswer[index].setText("" + (iNextResult + iAddValue * iChangeCount));
-            isChanged[index] = true;
-            iChangeCount++;
-        }
+        if(iProcess < 3)
+            iNextResult = iCurrentResult + processSet.arrProcess[iProcess];
     }
 
     public void checkAnswer(Object object){
-        DlgResultMark dlg = new DlgResultMark(this, isRight);
-        dlg.show();
+        if(isRight){
+            iProcess++;
+            setNextProcess();
 
-        dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
-            @Override
-            public void onDismiss(DialogInterface dialog) {
-                if(isRight || iRetryCount > 1){
-                    if(iProcess >= 3){
+            if(iProcess > 2){
+                txtAnswer[iProcess].setText("" + iNextResult);
+                DlgResultMark dlg = new DlgResultMark(this, isRight);
+                dlg.show();
+
+                dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                    @Override
+                    public void onDismiss(DialogInterface dialog) {
                         if(iStage >= 7) goNext();
                         iRetryCount = 0;
                         iStage++;
                         setQuestion(false);
                     }
-                    else {
+                });
+            }
+        }//isRight
+
+        else{
+            DlgResultMark dlg = new DlgResultMark(this, isRight);
+            dlg.show();
+
+            dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                @Override
+                public void onDismiss(DialogInterface dialog) {
+                    if(iRetryCount > 1){
                         iRetryCount = 0;
-                        setNextProcess();
+                        iStage++;
+                        setQuestion(false);
+                    }
+                    else{
+                        iRetryCount++;
+                        setQuestion(true);
                     }
                 }
-                else{
-                    iRetryCount++;
-                }
-            }
-        });
+            });
+        }// !isRight
     }
 
     public void goNext(Object object){
