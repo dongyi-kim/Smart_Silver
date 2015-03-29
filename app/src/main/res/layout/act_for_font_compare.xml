@@ -68,5 +68,12 @@
         android:textSize="@dimen/font_size_lv9"
         />
 
+    <customv.CButton
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:text="동해"
+        android:textSize="@dimen/font_size_lv9"
+        />
+
 
 </LinearLayout>

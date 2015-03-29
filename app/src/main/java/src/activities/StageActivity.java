@@ -30,6 +30,12 @@ public abstract class StageActivity extends FrameActivity {
         arrResult[iStage].Stop(bResult);
     }
 
+    //copy & paste
+    // public void setQuestion( boolean isRetry, Object object);
+    // public void checkAnswer(Object object);
+    // public void goNext(Object object);
+
+
     /* void setQustion(boolean isRetry, Object object)
      * - object는 옵션사항. 필요할 시 사용
      * - 각 Stage의 문제에 대한 초기화를 진행

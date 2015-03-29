@@ -46,6 +46,7 @@ public class ButtonFlat extends Button {
 			textButton.setText(text.toUpperCase());
 			textButton.setTextColor(backgroundColor);
 			textButton.setTypeface(null, Typeface.BOLD);
+            textButton.setTextSize(R.dimen.font_size_lv6);
 			RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
 			params.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
 			textButton.setLayoutParams(params);
@@ -61,6 +62,7 @@ public class ButtonFlat extends Button {
 			if (background != -1)
 				setBackgroundColor(background);
 		}
+
 	}
 	
 	

@@ -19,11 +19,6 @@ public class ActMain extends FrameActivity{
     Button btnStep02;
     Button btnStep03;
 
-
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
