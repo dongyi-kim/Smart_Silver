@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_weight=".15"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="다음 네모 안에 알맞은 수를 찾아 누르세요."
+            android:id="@+id/text_discription"
+            android:textSize="@dimen/font_size_lv4"
+            android:gravity="center"
+            android:layout_marginTop="20sp" />
+
+        <LinearLayout
+            android:layout_weight=".7"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:id="@+id/drawfield"
+            android:background="@drawable/drawfield_01_04"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="20sp">
+
+
+            <include layout="@layout/view_round_button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/drawfield_row_1"
+                android:layout_marginTop="5sp"/>
+
+            <include layout="@layout/view_round_button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/drawfield_row_2"/>
+
+            <include layout="@layout/view_round_button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/drawfield_row_3"/>
+
+            <include layout="@layout/view_round_button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/drawfield_row_4"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight=".15"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10sp">
+
+            <Button
+                android:layout_weight="1"
+                android:textSize="32sp"
+                android:layout_margin="10sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="1"
+                android:id="@+id/btn_answer_1"/>
+
+            <Button
+                android:layout_weight="1"
+                android:textSize="32sp"
+                android:layout_margin="10sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="2"
+                android:id="@+id/btn_answer_2" />
+
+            <Button
+                android:layout_weight="1"
+                android:textSize="32sp"
+                android:layout_margin="10sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="3"
+                android:id="@+id/btn_answer_3" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

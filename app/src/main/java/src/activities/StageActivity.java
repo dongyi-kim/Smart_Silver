@@ -58,6 +58,4 @@ public abstract class StageActivity extends FrameActivity {
      */
     public abstract void goNext(Object object);
     public final void goNext() { goNext(null); };
-
-
 }

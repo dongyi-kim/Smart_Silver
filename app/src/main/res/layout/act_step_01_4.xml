@@ -34,7 +34,7 @@
             <LinearLayout
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:layout_weight=".35"
+                android:layout_weight=".5"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:orientation="horizontal"
@@ -45,7 +45,8 @@
                     android:layout_gravity="center"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight=".4">
+                    android:layout_weight=".4"
+                    android:id="@+id/frame_grid_1_1">
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -69,7 +70,8 @@
                     android:layout_gravity="center"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight=".4">
+                    android:layout_weight=".4"
+                    android:id="@+id/frame_grid_1_2">
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -90,15 +92,10 @@
                 </FrameLayout>
             </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight=".1"/>
-
             <LinearLayout
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:layout_weight=".35"
+                android:layout_weight=".5"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:orientation="horizontal"
@@ -109,7 +106,8 @@
                     android:layout_gravity="center"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight=".4">
+                    android:layout_weight=".4"
+                    android:id="@+id/frame_grid_2_1">
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -133,7 +131,8 @@
                     android:layout_gravity="center"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight=".4">
+                    android:layout_weight=".4"
+                    android:id="@+id/frame_grid_2_2">
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

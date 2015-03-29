@@ -25,6 +25,8 @@ import src.dialogs.DlgResultMark;
 
 public class ActStep0105 extends FrameActivity {
 
+
+    /*
     public static final int ROW_COUNT = 5;
     public static final int COLUMN_COUNT = 5;
     public static final int NUM_OF_STAGE = 5;
@@ -182,5 +184,6 @@ public class ActStep0105 extends FrameActivity {
             }
         });
     }
+    */
 
 }
