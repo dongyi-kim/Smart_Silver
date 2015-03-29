@@ -24,12 +24,13 @@
 
             />
 
-        <src.materialdesign.views.ButtonRectangle
+        <src.materialdesign.views.ButtonFlat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/font_size_lv2"
             android:id="@+id/btn_step01"
             android:text="1 단계"
+
 
 
             />
