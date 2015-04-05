@@ -49,7 +49,10 @@
             android:text="3 단계"
             />
 
-
+        <include layout="@layout/view_custom_button"
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            />
 
     </LinearLayout>
 
