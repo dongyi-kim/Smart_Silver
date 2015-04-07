@@ -2,4 +2,7 @@
 <resources>
     <color name="green">#00FF00</color>
     <color name="thumbColor">#66aaaaaa</color>
+    <color name="primary">#4db6ac</color>
+    <color name="primary_dark">#009688</color>
+    <color name="accent">#00bcd4</color>
 </resources>
