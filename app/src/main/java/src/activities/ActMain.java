@@ -1,5 +1,6 @@
 package src.activities;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -31,6 +32,9 @@ public class ActMain extends FrameActivity{
         btnStep01.setOnClickListener(clickBtnStep);
         btnStep02.setOnClickListener(clickBtnStep);
         btnStep03.setOnClickListener(clickBtnStep);
+
+        Dialog dlg = new Dialog(this);
+        dlg.show();
     }
 
     View.OnClickListener clickBtnStep = new View.OnClickListener()

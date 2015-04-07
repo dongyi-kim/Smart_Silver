@@ -2,7 +2,6 @@ package src.activities.Step03;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,9 +16,9 @@ import src.activities.StageActivity;
 import src.dialogs.DlgResultMark;
 
 /**
- * Created by Acka on 2015-03-29.
+ * Created by Acka on 2015-04-05.
  */
-public class ActStep0303 extends StageActivity{
+public class ActStep0304 extends StageActivity {
     private static final int MAX_STAGE_NUMBER = 5;
 
     private TextView txtDiscription;
@@ -35,7 +34,7 @@ public class ActStep0303 extends StageActivity{
     private int iRetryCount = 0;
     public boolean isRight = false;
 
-    public Step0303DataSet dataSet = new Step0303DataSet();
+    public Step0304DataSet dataSet = new Step0304DataSet();
     private Random rand = new Random();
 
     @Override
@@ -117,11 +116,11 @@ public class ActStep0303 extends StageActivity{
     }
 
     public void goNext(Object object){
-        Intent intent = new Intent(this, ActStep0304.class);
+        Intent intent = new Intent(this, ActStep0301.class);
         startActivity(intent);
     }
 
-    public class Step0303DataSet {
+    public class Step0304DataSet {
         private final String sDiscriptionList[] = {" 할머니와 할아버지가 손주들에게 받은 송편의 합은 모두 몇 개인가요? 아래 숫자를 누르세요!",
                 " 할머니 할아버지가 홍시 선물을 받았습니다. 모두 몇 개인지 아래 수를 누르세요!",
                 " 할머니와 할아버지가 추석에 사용할 밤을 까려고 합니다. 모두 몇 개의 밤을 까야 할까요? 아래 숫자를 누르세요!",
