@@ -64,7 +64,6 @@ public class CButton extends Button {
     public void onMeasure( int widthMeasureSpec, int heightMeasureSpec )
     {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-
     }
 
     public void setFontStyle(int TypeFaceStyle)

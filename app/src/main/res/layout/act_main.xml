@@ -19,13 +19,27 @@
             android:textStyle="bold"
             android:textSize="@dimen/font_size_lv8"
             android:layout_marginBottom="@dimen/activity_horizontal_margin"
-            android:text="스마트 실버"
+            android:text="스마트 시니어"
 
 
             />
+        <ui.views.FlatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
+            android:textSize="@dimen/font_size_lv8"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:text="스마트 시니어" />
 
-        <Button
+        <ui.views.FlatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_size_lv8"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:text="스마트 실버"
+            />
+        <customv.CButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/font_size_lv2"
