@@ -38,6 +38,9 @@
         <activity android:name="src.activities.Step03.ActStep0303">
         </activity>
 
+        <activity android:name="src.activities.Step03.ActStep0304">
+        </activity>
+
     </application>
 
 </manifest>
