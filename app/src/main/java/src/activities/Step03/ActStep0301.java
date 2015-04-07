@@ -71,6 +71,7 @@ public class ActStep0301 extends StageActivity {
         setQuestion(false);
     }
 
+
     public void setQuestion(boolean isRetry, Object object){
         if(!isRetry) {
             int iRandomSeed = 2 * iStage + rand.nextInt(2);
@@ -110,6 +111,7 @@ public class ActStep0301 extends StageActivity {
             iNextResult = iCurrentResult + processSet.arrProcess[iProcess];
     }
 
+
     public void checkAnswer(Object object){
         if(isRight){
             iProcess++;
@@ -124,9 +126,11 @@ public class ActStep0301 extends StageActivity {
                     @Override
                     public void onDismiss(DialogInterface dialog) {
                         if(iStage >= 7) goNext();
-                        iRetryCount = 0;
-                        iStage++;
-                        setQuestion(false);
+                        else {
+                            iRetryCount = 0;
+                            iStage++;
+                            setQuestion(false);
+                        }
                     }
                 });
             }
@@ -154,7 +158,7 @@ public class ActStep0301 extends StageActivity {
     }
 
     public void goNext(Object object){
-        Intent intent = new Intent(this, ActStep0301.class);
+        Intent intent = new Intent(this, ActStep0303.class);
         startActivity(intent);
     }
 }
