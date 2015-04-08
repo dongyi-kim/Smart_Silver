@@ -34,7 +34,7 @@
             <LinearLayout
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:layout_weight=".5"
+                android:layout_weight=".4"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:orientation="horizontal"
@@ -45,7 +45,7 @@
                     android:layout_gravity="center"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight=".4"
+                    android:layout_weight=".3"
                     android:id="@+id/frame_grid_1_1">
                     <ImageButton
                         android:layout_width="match_parent"
@@ -65,12 +65,15 @@
                         android:id="@+id/txt_grid_1_1">
                     </TextView>
                 </FrameLayout>
-
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"/>
                 <FrameLayout
                     android:layout_gravity="center"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight=".4"
+                    android:layout_weight=".3"
                     android:id="@+id/frame_grid_1_2">
                     <ImageButton
                         android:layout_width="match_parent"
@@ -95,7 +98,7 @@
             <LinearLayout
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:layout_weight=".5"
+                android:layout_weight=".4"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:orientation="horizontal"
@@ -106,7 +109,7 @@
                     android:layout_gravity="center"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight=".4"
+                    android:layout_weight=".3"
                     android:id="@+id/frame_grid_2_1">
                     <ImageButton
                         android:layout_width="match_parent"
@@ -126,12 +129,15 @@
                         android:id="@+id/txt_grid_2_1">
                     </TextView>
                 </FrameLayout>
-
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1"/>
                 <FrameLayout
                     android:layout_gravity="center"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight=".4"
+                    android:layout_weight=".3"
                     android:id="@+id/frame_grid_2_2">
                     <ImageButton
                         android:layout_width="match_parent"
