@@ -6,10 +6,12 @@ import java.io.Serializable;
  * Created by waps12b on 15. 3. 25..
  */
 public class ResultData implements Serializable {
+
     private boolean isRecording;
     private boolean isSuccess; //test result
     private long lTime;
     private long startTime ;
+
 
     public ResultData()
     {

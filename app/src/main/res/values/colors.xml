@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="green">#00FF00</color>
-    <color name="thumbColor">#66aaaaaa</color>
-    <color name="primary">#4db6ac</color>
-    <color name="primary_dark">#009688</color>
-    <color name="accent">#00bcd4</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="rippelColor">#FFFFFF</color>
+
 </resources>
