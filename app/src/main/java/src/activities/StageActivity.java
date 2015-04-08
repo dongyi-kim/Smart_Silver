@@ -1,6 +1,8 @@
 package src.activities;
 
 import android.os.Bundle;
+import android.view.Gravity;
+import android.widget.Toast;
 
 import src.ResultData;
 
@@ -21,13 +23,30 @@ public abstract class StageActivity extends FrameActivity {
 
     public void StartRecording()
     {
-        arrResult[iStage] = new ResultData();
-        arrResult[iStage].Start();
+        arrResult[iStage-1] = new ResultData();
+        arrResult[iStage-1].Start();
     }
 
     public void StopRecording(boolean bResult)
     {
-        arrResult[iStage].Stop(bResult);
+
+        arrResult[iStage-1].Stop(bResult);
+
+        //toast text
+        StringBuffer strbuff = new StringBuffer("");
+
+        //result
+        if(bResult)
+            strbuff.append("[Accepted] ");
+        else
+            strbuff.append("[Wrong] ");
+
+        //time stamp;
+        strbuff.append((arrResult[iStage-1].getMilliTime()/1000) + "seconds");
+        Toast toast = Toast.makeText(getApplicationContext(),
+                "토스트창에 출력될 문자", Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
     }
 
     //copy & paste

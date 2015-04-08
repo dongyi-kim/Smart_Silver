@@ -6,16 +6,24 @@ import java.io.Serializable;
  * Created by waps12b on 15. 3. 25..
  */
 public class ResultData implements Serializable {
-    boolean isRecording;
-    boolean isSuccess; //test result
-    long lTime;
 
-    long startTime ;
+    private boolean isRecording;
+    private boolean isSuccess; //test result
+    private long lTime;
+    private long startTime ;
+
+
     public ResultData()
     {
         isRecording = false;
         lTime = 0;
     }
+
+    public long getMilliTime()
+    {
+        return lTime;
+    }
+
     public void Start()
     {
         isRecording = true;

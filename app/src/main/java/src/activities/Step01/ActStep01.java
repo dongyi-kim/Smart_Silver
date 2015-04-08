@@ -68,6 +68,7 @@ public class ActStep01 extends StageActivity {
         txtQuestion.setText(strQuest);
         txtAnswer.setText("");
         buffAnswer = new StringBuffer("");
+        super.StartRecording();
     }
 
     public void checkAnswer(Object object)
@@ -77,10 +78,11 @@ public class ActStep01 extends StageActivity {
         dlg.show();
 
         if( ++ iStage > NUM_OF_STAGE)
-        {   // go next level
+        {   // next level
             goNext();
         }else
-        {   //go next level
+        {   //go next stage
+            super.StopRecording(isAnswer);
             setQuestion(!isAnswer);
         }
     }

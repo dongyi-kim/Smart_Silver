@@ -1,5 +1,6 @@
 package src.activities;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import cdmst.smartsilver.R;
 import src.activities.Step01.*;
 import src.activities.Step03.*;
+import ui.CButton;
 
 
 public class ActMain extends FrameActivity{
@@ -25,12 +27,14 @@ public class ActMain extends FrameActivity{
         setContentView(R.layout.act_main);
 
         btnStep01 = (Button)findViewById(R.id.btn_step01);
+
         btnStep02 = (Button)findViewById(R.id.btn_step02);
         btnStep03 = (Button)findViewById(R.id.btn_step03);
 
         btnStep01.setOnClickListener(clickBtnStep);
         btnStep02.setOnClickListener(clickBtnStep);
         btnStep03.setOnClickListener(clickBtnStep);
+
     }
 
     View.OnClickListener clickBtnStep = new View.OnClickListener()

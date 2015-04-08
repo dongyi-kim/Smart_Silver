@@ -4,16 +4,28 @@
     <dimen name="activity_vertical_margin">30dp</dimen>     <!-- 1/10 swdp -->
 
     <!-- Relative Font Size -->
-    <dimen name="font_size_lv0">15dp</dimen>    <!-- 5/100 swdp -->
-    <dimen name="font_size_lv1">18dp</dimen>    <!-- 6/100 swdp -->
-    <dimen name="font_size_lv2">21dp</dimen>    <!-- 7/100 swdp -->
-    <dimen name="font_size_lv3">24dp</dimen>    <!-- 8/100 swdp -->
-    <dimen name="font_size_lv4">27dp</dimen>    <!-- 9/100 swdp -->
-    <dimen name="font_size_lv5">33dp</dimen>    <!-- 11/100 swdp -->
-    <dimen name="font_size_lv6">36dp</dimen>    <!-- 12/100 swdp -->
-    <dimen name="font_size_lv7">42dp</dimen>    <!-- 14/100 swdp -->
-    <dimen name="font_size_lv8">51dp</dimen>    <!-- 17/100 swdp -->
-    <dimen name="font_size_lv9">60dp</dimen>    <!-- 20/100 swdp -->
+    <dimen name="font_size_lv0">15sp</dimen>    <!-- 5/100 swdp -->
+    <dimen name="font_size_lv1">18sp</dimen>    <!-- 6/100 swdp -->
+    <dimen name="font_size_lv2">21sp</dimen>    <!-- 7/100 swdp -->
+    <dimen name="font_size_lv3">24sp</dimen>    <!-- 8/100 swdp -->
+    <dimen name="font_size_lv4">27sp</dimen>    <!-- 9/100 swdp -->
+    <dimen name="font_size_lv5">33sp</dimen>    <!-- 11/100 swdp -->
+    <dimen name="font_size_lv6">36sp</dimen>    <!-- 12/100 swdp -->
+    <dimen name="font_size_lv7">42sp</dimen>    <!-- 14/100 swdp -->
+    <dimen name="font_size_lv8">51sp</dimen>    <!-- 17/100 swdp -->
+    <dimen name="font_size_lv9">60sp</dimen>    <!-- 20/100 swdp -->
+
+    <!-- Size Unit -->
+    <dimen name="unit_1">30dp</dimen>    <!-- 1/10 swdp -->
+    <dimen name="unit_2">60dp</dimen>    <!-- 2/10 swdp -->
+    <dimen name="unit_3">90dp</dimen>    <!-- 3/10 swdp -->
+    <dimen name="unit_4">120dp</dimen>    <!-- 4/10 swdp -->
+    <dimen name="unit_5">150dp</dimen>    <!-- 5/10 swdp -->
+    <dimen name="unit_6">180dp</dimen>    <!-- 6/10 swdp -->
+    <dimen name="unit_7">210dp</dimen>    <!-- 7/10 swdp -->
+    <dimen name="unit_8">240dp</dimen>    <!-- 8/10 swdp -->
+    <dimen name="unit_9">270dp</dimen>    <!-- 9/10 swdp -->
+    <dimen name="unit_10">300dp</dimen>    <!-- 10/10 swdp -->
 
     <!-- Relative Font Size -->
     <dimen name="button_padding">15dp</dimen> <!-- 5/100 swdp -->

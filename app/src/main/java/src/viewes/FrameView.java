@@ -5,34 +5,31 @@ import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 /**
  * Created by waps12b on 15. 3. 1..
  */
-public abstract class FrameView extends LinearLayout
+public abstract class FrameView extends FrameLayout
 {
 
     public final Context context;
 
-    protected FrameView(Context context)
-    { // when create custom-view from include view
-        super(context);
-        this.context = context;
+    public FrameView(Context context) {
+        this(context, null);
     }
 
-    public FrameView( Context context, AttributeSet attrs )
-    {
-        super(context, attrs);
-        this.context = context;
+    public FrameView(Context context, AttributeSet attrs) {
+        this(context, attrs, 0);
     }
 
-    public FrameView( Context context, AttributeSet attrs, int defStyle )
-    {
+    public FrameView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         this.context = context;
+        init();
+        // real work here
     }
-
     protected abstract void init();
 
     protected void setLayout(int layoutID){
