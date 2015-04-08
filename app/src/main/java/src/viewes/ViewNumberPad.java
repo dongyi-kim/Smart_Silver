@@ -22,8 +22,9 @@ public class ViewNumberPad extends FrameView
      */
     public static final int CODE_MODIFY = -123456;
     public static final int CODE_OKAY = -2390284;
-
     public static final String KEY_NORMAL_SET = "0123456789";
+
+    private View.OnClickListener listenNumberTouch;
 
     public Button btnModify;
     public Button btnOkay;
@@ -31,14 +32,12 @@ public class ViewNumberPad extends FrameView
 
     protected ViewNumberPad(Context context)
     { // when create custom-view from include view
-        super(context);
-        init();
+        this(context,null);
     }
 
     public ViewNumberPad( Context context, AttributeSet attrs )
     {
-        super(context, attrs);
-        init();
+        this(context, attrs, 0);
     }
 
     public ViewNumberPad( Context context, AttributeSet attrs, int defStyle )
@@ -65,6 +64,12 @@ public class ViewNumberPad extends FrameView
 
         btnModify = (Button)findViewById(R.id.btn_pad_r4_c1_back);
         btnOkay = (Button)findViewById(R.id.btn_pad_r4_c3_success);
+
+        listenNumberTouch = new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {onClickButton(v); }
+        };
 
         btnModify.setOnClickListener(listenNumberTouch);
         btnOkay.setOnClickListener(listenNumberTouch);
@@ -103,19 +108,14 @@ public class ViewNumberPad extends FrameView
     {
         ((FrameActivity)context).onGetEvent(this, iCode);
     }
+    public void onClickButton(View v){
+        if( v == btnModify )
+            numberClicked(CODE_MODIFY);
+        else if( v == btnOkay)
+            numberClicked(CODE_OKAY);
+        else
+            numberClicked(Integer.parseInt(((Button)v).getText().toString()));
+    }
 
-    View.OnClickListener listenNumberTouch = new View.OnClickListener()
-    {
-        @Override
-        public void onClick(View v)
-        {
-            if( v == btnModify )
-                numberClicked(CODE_MODIFY);
-            else if( v == btnOkay)
-                numberClicked(CODE_OKAY);
-            else
-                numberClicked(Integer.parseInt(((Button)v).getText().toString()));
-        }
-    };
 
 }

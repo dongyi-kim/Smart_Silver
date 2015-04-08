@@ -11,6 +11,7 @@ import android.widget.Button;
 import cdmst.smartsilver.R;
 import src.activities.Step01.*;
 import src.activities.Step03.*;
+import src.viewes.ViewNumberPad;
 import ui.CButton;
 
 
@@ -20,6 +21,7 @@ public class ActMain extends FrameActivity{
     Button btnStep01;
     Button btnStep02;
     Button btnStep03;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

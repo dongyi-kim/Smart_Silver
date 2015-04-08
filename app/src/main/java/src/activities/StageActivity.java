@@ -43,8 +43,9 @@ public abstract class StageActivity extends FrameActivity {
 
         //time stamp;
         strbuff.append((arrResult[iStage-1].getMilliTime()/1000) + "seconds");
-        Toast toast = Toast.makeText(getApplicationContext(),
-                "토스트창에 출력될 문자", Toast.LENGTH_LONG);
+
+        Toast toast = new Toast(this);
+        toast.setText(strbuff.toString());
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
     }
