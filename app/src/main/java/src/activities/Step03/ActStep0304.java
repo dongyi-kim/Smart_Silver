@@ -15,6 +15,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 import cdmst.smartsilver.R;
+import src.activities.ActMain;
 import src.activities.StageActivity;
 import src.dialogs.DlgResultMark;
 
@@ -154,7 +155,7 @@ public class ActStep0304 extends StageActivity {
     }
 
     public void goNext(Object object){
-        Intent intent = new Intent(this, ActStep0301.class);
+        Intent intent = new Intent(this, ActMain.class);
         startActivity(intent);
     }
 

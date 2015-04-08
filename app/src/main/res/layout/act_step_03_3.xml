@@ -15,7 +15,7 @@
             android:layout_height="0dp"
             android:text=" 할머니와 할아버지가 손주들에게 받은 송편의 합은\n모두 몇 개인가요? 아래 숫자를 누르세요!"
             android:id="@+id/text_discription"
-            android:textSize="@dimen/font_size_lv4"
+            android:textSize="@dimen/font_size_lv3"
             android:gravity="center"/>
 
         <LinearLayout
