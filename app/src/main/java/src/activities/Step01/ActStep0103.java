@@ -27,6 +27,7 @@ public class ActStep0103 extends StageActivity {
 
     private LinearLayout linearDrawfield;
     private LinearLayout linearDrawfieldRow[] = new LinearLayout[ROW_COUNT];
+    public final FrameLayout frameGrid[][] = new FrameLayout[ROW_COUNT][COLUMN_COUNT];
     public final ImageButton ibtnShape[][] = new ImageButton[ROW_COUNT][COLUMN_COUNT];
     public final TextView txtShape[][] = new TextView[ROW_COUNT][COLUMN_COUNT];
     public final Button btnAnswer[] = new Button[3];
@@ -51,6 +52,14 @@ public class ActStep0103 extends StageActivity {
         linearDrawfieldRow[2] = (LinearLayout)findViewById(R.id.drawfield_row_3);
         linearDrawfieldRow[3] = (LinearLayout)findViewById(R.id.drawfield_row_4);
         for(int i = 0; i < ROW_COUNT; i++){
+            frameGrid[i][0] = (FrameLayout)(linearDrawfieldRow[i].findViewById(R.id.frame_col_1));
+            frameGrid[i][1] = (FrameLayout)(linearDrawfieldRow[i].findViewById(R.id.frame_col_2));
+            frameGrid[i][2] = (FrameLayout)(linearDrawfieldRow[i].findViewById(R.id.frame_col_3));
+            frameGrid[i][3] = (FrameLayout)(linearDrawfieldRow[i].findViewById(R.id.frame_col_4));
+            frameGrid[i][4] = (FrameLayout)(linearDrawfieldRow[i].findViewById(R.id.frame_col_5));
+            frameGrid[i][5] = (FrameLayout)(linearDrawfieldRow[i].findViewById(R.id.frame_col_6));
+            frameGrid[i][6] = (FrameLayout)(linearDrawfieldRow[i].findViewById(R.id.frame_col_7));
+
             ibtnShape[i][0] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.btn_col_1));
             ibtnShape[i][1] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.btn_col_2));
             ibtnShape[i][2] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.btn_col_3));
@@ -111,22 +120,37 @@ public class ActStep0103 extends StageActivity {
         }
 
         for(int i = 0; i < ROW_COUNT; i++){
-            if(dataSet.arrLineDrawCount[i][0] == 0 && dataSet.arrLineDrawCount[i][1] == 0 && dataSet.arrLineDrawCount[i][2] == 0){
+            linearDrawfieldRow[i].setVisibility(View.VISIBLE);
+            LinearLayout.LayoutParams param = (LinearLayout.LayoutParams)linearDrawfieldRow[i].getLayoutParams();
+            param.weight = 1;
+            linearDrawfieldRow[i].setLayoutParams(param);
+            for(int j = 0; j < COLUMN_COUNT; j++)
+                frameGrid[i][j].setVisibility(View.VISIBLE);
+        }
+
+
+        for(int i = 0; i < ROW_COUNT; i++){
+            int sum = dataSet.arrLineDrawCount[i][0] + dataSet.arrLineDrawCount[i][1] + dataSet.arrLineDrawCount[i][2];
+            if(sum == 0){
                 linearDrawfieldRow[i].setVisibility(View.GONE);
+                LinearLayout.LayoutParams param = (LinearLayout.LayoutParams)linearDrawfieldRow[i].getLayoutParams();
+                param.weight = 0.2f;
+                linearDrawfieldRow[i].setLayoutParams(param);
                 continue;
             }
-            int j = 0;
-            for(; j < dataSet.arrLineDrawCount[i][0]; j++)
-                ibtnShape[i][j].setVisibility(View.INVISIBLE);
 
-            for(; j < dataSet.arrLineDrawCount[i][1]; j++)
-                ibtnShape[i][j].setVisibility(View.VISIBLE);
+            int cnt = 0;
+            for(int j = 0; j < dataSet.arrLineDrawCount[i][0]; j++)
+                frameGrid[i][cnt++].setVisibility(View.INVISIBLE);
 
-            for(; j < dataSet.arrLineDrawCount[i][2]; j++)
-                ibtnShape[i][j].setVisibility(View.INVISIBLE);
+            for(int j = 0; j < dataSet.arrLineDrawCount[i][1]; j++)
+                frameGrid[i][cnt++].setVisibility(View.VISIBLE);
 
-            for(; j < COLUMN_COUNT; j++)
-                ibtnShape[i][j].setVisibility(View.GONE);
+            for(int j = 0; j < dataSet.arrLineDrawCount[i][2]; j++)
+                frameGrid[i][cnt++].setVisibility(View.INVISIBLE);
+
+            for(int j = sum; j < COLUMN_COUNT; j++)
+                frameGrid[i][cnt++].setVisibility(View.GONE);
         }
 
         for(int i = 0; i < 3; i++){

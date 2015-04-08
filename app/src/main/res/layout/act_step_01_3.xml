@@ -37,23 +37,31 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:id="@+id/drawfield_row_1"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:layout_marginTop="5sp"/>
 
             <include layout="@layout/view_round_button_layout"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:id="@+id/drawfield_row_2"/>
 
             <include layout="@layout/view_round_button_layout"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:layout_weight="1"
                 android:id="@+id/drawfield_row_3"/>
 
             <include layout="@layout/view_round_button_layout"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:layout_weight="1"
                 android:id="@+id/drawfield_row_4"/>
 
