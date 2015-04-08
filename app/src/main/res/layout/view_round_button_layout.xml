@@ -131,5 +131,53 @@
             </TextView>
         </FrameLayout>
 
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="1sp"
+            android:layout_marginLeft="1sp">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/round_button"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:id="@+id/btn_col_6"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:textSize="32sp"
+                android:text="6"
+                android:id="@+id/txt_col_6">
+            </TextView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="1sp"
+            android:layout_marginLeft="1sp">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/round_button"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:id="@+id/btn_col_7"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:textSize="32sp"
+                android:text="7"
+                android:id="@+id/txt_col_7">
+            </TextView>
+        </FrameLayout>
+
     </LinearLayout>
 </LinearLayout>

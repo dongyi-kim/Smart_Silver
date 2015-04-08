@@ -27,7 +27,9 @@
             android:background="@drawable/drawfield_01_04"
             android:layout_marginLeft="10sp"
             android:layout_marginRight="10sp"
-            android:layout_marginBottom="20sp">
+            android:layout_marginBottom="20sp"
+            android:layout_gravity="center"
+            android:gravity="center">
 
 
             <include layout="@layout/view_round_button_layout"

@@ -2,11 +2,14 @@ package src.activities.Step03;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -22,12 +25,17 @@ public class ActStep0304 extends StageActivity {
     private static final int MAX_STAGE_NUMBER = 5;
 
     private TextView txtDiscription;
-    private ImageView imgGrandma;
-    private ImageView imgGrandfa;
-    private ImageView imgGrandmaFoodSpace;
-    private ImageView imgGrandfaFoodSpace;
-    private TextView txtGrandmaFood;
-    private TextView txtGrandfaFood;
+    private TextView txtEmptyUpper1;
+    private TextView txtEmptyUpper2;
+    private TextView txtUnder[] = new TextView[3];
+    private TextView txtEmptyUnder1;
+    private ImageView imgUpper[] = new ImageView[3];
+    private ImageView imgTextSpace[] = new ImageView[3];
+    private ImageView imgFoodSign1;
+    private ImageView imgFoodSign2;
+    private ImageView imgSignBetween;
+    private LinearLayout linearUnder2;
+    private FrameLayout frameUnder1;
     private Button btnAnswer[] = new Button[3];
 
     private int iStage = 1;
@@ -40,15 +48,26 @@ public class ActStep0304 extends StageActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_step_03_3);
+        setContentView(R.layout.act_step_03_4);
 
         txtDiscription = (TextView)findViewById(R.id.text_discription);
-        imgGrandma = (ImageView)findViewById(R.id.imgGrandma);
-        imgGrandfa = (ImageView)findViewById(R.id.imgGrandfa);
-        imgGrandmaFoodSpace = (ImageView)findViewById(R.id.img_grandma_food_space);
-        imgGrandfaFoodSpace = (ImageView)findViewById(R.id.img_grandfa_food_space);
-        txtGrandmaFood = (TextView)findViewById(R.id.txt_grandma_food);
-        txtGrandfaFood = (TextView)findViewById(R.id.txt_grandfa_food);
+        txtEmptyUpper1 = (TextView)findViewById(R.id.txt_empty_upper_1);
+        txtEmptyUpper2 = (TextView)findViewById(R.id.txt_empty_upper_2);
+        txtUnder[0] = (TextView)findViewById(R.id.txt_under_1);
+        txtEmptyUnder1 = (TextView)findViewById(R.id.txt_under_1);
+        txtUnder[1] = (TextView)findViewById(R.id.txt_food_1);
+        txtUnder[2] = (TextView)findViewById(R.id.txt_food_2);
+        imgUpper[0] = (ImageView)findViewById(R.id.img_upper_1);
+        imgUpper[1] = (ImageView)findViewById(R.id.img_upper_2);
+        imgUpper[2] = (ImageView)findViewById(R.id.img_upper_3);
+        imgTextSpace[0] = (ImageView)findViewById(R.id.img_text_space_1);
+        imgTextSpace[1] = (ImageView)findViewById(R.id.img_food_space_1);
+        imgTextSpace[2] = (ImageView)findViewById(R.id.img_food_space_2);
+        imgFoodSign1 = (ImageView)findViewById(R.id.img_food_sign_1);
+        imgFoodSign2 = (ImageView)findViewById(R.id.img_food_sign_2);
+        imgSignBetween = (ImageView)findViewById(R.id.img_sign_between);
+        linearUnder2 = (LinearLayout)findViewById(R.id.linear_under_2);
+        frameUnder1 = (FrameLayout)findViewById(R.id.frame_under_1);
         btnAnswer[0] = (Button)findViewById(R.id.btn_answer_1);
         btnAnswer[1] = (Button)findViewById(R.id.btn_answer_2);
         btnAnswer[2] = (Button)findViewById(R.id.btn_answer_3);
@@ -77,18 +96,38 @@ public class ActStep0304 extends StageActivity {
 
         //set problem
         txtDiscription.setText(dataSet.sDiscription);
-        imgGrandma.setImageResource(dataSet.iGrandmaImage);
-        imgGrandfa.setImageResource(dataSet.iGrandfaImage);
-        if(iStage >= 5){
-            imgGrandmaFoodSpace.setImageResource(R.drawable.empty_space_the_number_food_extend);
-            imgGrandfaFoodSpace.setImageResource(R.drawable.empty_space_the_number_food_extend);
+        if(iStage >= 4){
+            imgTextSpace[1].setImageResource(R.drawable.empty_space_the_number_food_extend);
+            imgTextSpace[2].setImageResource(R.drawable.empty_space_the_number_food_extend);
         }
-        txtGrandmaFood.setText(dataSet.sGrandmaFood);
-        txtGrandfaFood.setText(dataSet.sGrandfaFood);
+
+        if(iStage > 2){
+            imgUpper[0].setVisibility(View.GONE);
+            txtEmptyUpper1.setVisibility(View.GONE);
+            frameUnder1.setVisibility(View.GONE);
+            imgFoodSign1.setVisibility(View.GONE);
+            imgFoodSign2.setVisibility(View.GONE);
+            txtEmptyUnder1.setVisibility(View.GONE);
+
+            LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams)txtEmptyUpper2.getLayoutParams();
+            layoutParams.weight = 0.1f;
+            txtEmptyUpper2.setLayoutParams(layoutParams);
+
+            layoutParams = (LinearLayout.LayoutParams)linearUnder2.getLayoutParams();
+            layoutParams.weight = 0.15f;
+            linearUnder2.setLayoutParams(layoutParams);
+
+            layoutParams = (LinearLayout.LayoutParams)imgSignBetween.getLayoutParams();
+            layoutParams.weight = 0.5f;
+            imgSignBetween.setLayoutParams(layoutParams);
+        }
 
         //set button
-        for(int i = 0; i < 3; i++)
+        for(int i = 0; i < 3; i++) {
+            txtUnder[i].setText("" + dataSet.sTextList[i]);
+            imgUpper[i].setImageResource(dataSet.iImageList[i]);
             btnAnswer[i].setText("" + dataSet.iBtnList[i]);
+        }
     }
 
 
@@ -100,7 +139,6 @@ public class ActStep0304 extends StageActivity {
             @Override
             public void onDismiss(DialogInterface dialog) {
                 if(isRight || iRetryCount > 1){
-                    Log.i("tag", "" + iStage);
                     if(iStage >= MAX_STAGE_NUMBER) goNext();
                     else {
                         iRetryCount = 0;
@@ -121,40 +159,43 @@ public class ActStep0304 extends StageActivity {
     }
 
     public class Step0304DataSet {
-        private final String sDiscriptionList[] = {" 할머니와 할아버지가 손주들에게 받은 송편의 합은 모두 몇 개인가요? 아래 숫자를 누르세요!",
-                " 할머니 할아버지가 홍시 선물을 받았습니다. 모두 몇 개인지 아래 수를 누르세요!",
-                " 할머니와 할아버지가 추석에 사용할 밤을 까려고 합니다. 모두 몇 개의 밤을 까야 할까요? 아래 숫자를 누르세요!",
-                " 할머니와 할아버지가 제사준비를 하고 있습니다. 할머니와 할아버지가 전을 부칩니다. 얼만큼의 전을 부쳐야 할까요? 아래 숫자를 누르세요!"};
-        private final int iFoodType[] = {0, 1, 2, 0, 3};
-        private final int iGrandmaImageList[] = {R.drawable.grandma_with_songpyoen, R.drawable.grandma_with_hongshi, R.drawable.grandma_with_bam, R.drawable.grandma_with_jeon};
-        private final int iGrandfaImageList[] = {R.drawable.grandfa_with_songpyoen, R.drawable.grandfa_with_hongshi, R.drawable.grandfa_with_bam, R.drawable.grandfa_with_jeon};
-        private final String sGrandmaFoodList[] = {"깨송편5+콩송편10", "홍시 5개", "밤 24개", "깨송편5+콩송편10", "녹두전 20장\n호박전 40개\n동태전 30개"};
-        private final String sGrandfaFoodList[] = {"깨송편5+콩손편10", "홍시 7개", "밤 30개", "깨송편5+콩송편10", "녹두전 2장\n호박전 3개\n동태전 5개"};
-        private final int iAnswerList[] = {30, 12, 54, 30, 100};
-        private final int iBtnListSet[][] = {{10, 20, 30},
-                {10, 12, 15},
-                {54, 44, 64},
-                {10, 20, 30},
-                {90, 100, 110}};
+        private final String sDiscriptionList[] = {" 할머니와 할아버지가 손주들에게 받은 송편을 먹었습니다. 송편은 모두 몇 개가 남았을까요? 아래 숫자를 누르세요!",
+                " 할머니가 홍시 선물을 받았습니다. 할아버지와 함께 홍시를 나누어 먹었습니다. 홍시는 몇 개 남았을까요? 아래 숫자를 누르세요!",
+                " 할머니와 할아버지가 추석에 사용할 밤을 까놓았습니다. 그런데, 손주들이 밤을 계속 가져갑니다. 밤은 몇 개 남았을까요? 아래 숫자를 누르세요!",
+                " 할머니와 할아버지가 추석에 사용할 약과와 송편을 만들었습니다. 손님이 오셔서 약과와 송편을 대접하였습니다. 모두 몇 개가 남았을까요? 아래 숫자를 누르세요!",
+                " 할머니와 할아버지가 제사준비를 하고 있습니다. 할머니가 전을 부치는데, 할아버지는 옆에서 먹기만 합니다. 남은 전은 모두 몇 개인지 아래 숫자를 누르세요!"};
+        private final int iImageListSet[][] = {{R.drawable.img_songpyeon, R.drawable.img_grandma_only, R.drawable.img_grandfa_only},
+                {R.drawable.img_hongshi, R.drawable.img_grandma_only, R.drawable.img_grandfa_only},
+                {R.drawable.img_grandma_grandfa_with_bam, R.drawable.img_grandma_grandfa_with_bam, R.drawable.img_grandson},
+                {R.drawable.img_grandma_grandfa_in_chuseock, R.drawable.img_grandma_grandfa_in_chuseock, R.drawable.img_table_for_guest},
+                {R.drawable.grandma_with_jeon, R.drawable.grandma_with_jeon, R.drawable.grandfa_with_jeon}};
+        private final String sTextListSet[][] = {{"송편 10개", "송편 2개", "송편 5개"},
+                {"홍시 15개", "홍시 2개", "홍시 2개"},
+                {"", "밤 50개", "밤 25개"},
+                {"", "약과 20개\n송편 50개", "약과 5개\n송편 15개"},
+                {"", "녹두전 20장\n호박전 30개\n동태전 30개", "녹두전 2장\n호박전 3개\n동태전 5개"}};
+        private final int iAnswerList[] = {3, 11, 25, 50, 70};
+        private final int iBtnListSet[][] = {{2, 3, 4},
+                {10, 11, 12},
+                {20, 25, 30},
+                {40, 50, 60},
+                {60, 70, 80}};
 
         public String sDiscription;
-        public int iGrandmaImage;
-        public int iGrandfaImage;
-        public String sGrandmaFood;
-        public String sGrandfaFood;
+        public int iImageList[] = new int[3];
+        public String sTextList[] = new String[3];
         public int iAnswer;
         public int iBtnList[] = new int[3];
 
         public void setData(int iSeed){
-            sDiscription = sDiscriptionList[iFoodType[iSeed]];
-            iGrandmaImage = iGrandmaImageList[iFoodType[iSeed]];
-            iGrandfaImage = iGrandfaImageList[iFoodType[iSeed]];
-            sGrandmaFood = sGrandmaFoodList[iSeed];
-            sGrandfaFood = sGrandfaFoodList[iSeed];
+            sDiscription = sDiscriptionList[iSeed];
             iAnswer = iAnswerList[iSeed];
 
-            for(int i = 0; i < 3; i++)
+            for(int i = 0; i < 3; i++) {
+                iImageList[i] = iImageListSet[iSeed][i];
+                sTextList[i] = sTextListSet[iSeed][i];
                 iBtnList[i] = iBtnListSet[iSeed][i];
+            }
         }
     }
 }
