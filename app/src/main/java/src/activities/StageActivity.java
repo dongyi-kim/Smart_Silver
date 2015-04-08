@@ -24,7 +24,7 @@ public abstract class StageActivity extends FrameActivity {
     public void StartRecording()
     {
         arrResult[iStage-1] = new ResultData();
-        arrResult[iStage].Start();
+        arrResult[iStage-1].Start();
     }
 
     public void StopRecording(boolean bResult)
@@ -42,7 +42,7 @@ public abstract class StageActivity extends FrameActivity {
             strbuff.append("[Wrong] ");
 
         //time stamp;
-
+        strbuff.append((arrResult[iStage-1].getMilliTime()/1000) + "seconds");
         Toast toast = Toast.makeText(getApplicationContext(),
                 "토스트창에 출력될 문자", Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER, 0, 0);
