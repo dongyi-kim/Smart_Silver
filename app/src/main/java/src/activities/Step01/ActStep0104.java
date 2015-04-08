@@ -33,12 +33,11 @@ public class ActStep0104 extends StageActivity {
 
     private boolean isSelected[][] = new boolean[MAX_ROW_NUMBER][MAX_COLUMN_NUMBER];
     public final int iBtnValue[][] = new int[MAX_ROW_NUMBER][MAX_COLUMN_NUMBER];
-    private int iLevel = 0;
-    public int iAnswerCount = 0;
+    private int iStage = 0;
     private int iRetryCount = 0;
     public boolean isRight = false;
 
-    public Step04NumberSet numberSet = new Step04NumberSet();
+    public Step0104NumberSet numberSet = new Step0104NumberSet();
     private Random rand = new Random();
 
 
@@ -74,13 +73,8 @@ public class ActStep0104 extends StageActivity {
                                     r = ii; c = jj; break;
                                 }
 
-                        if(iBtnValue[r][c] % 2 == (numberSet.isOdd? 1 : 0)) {
-                            iAnswerCount++;
-                            isRight = true;
-                        }
-                        else {
-                            isRight = false;
-                        }
+                        if(iBtnValue[r][c] % 2 == (numberSet.isOdd? 1 : 0)) isRight = true;
+                        else isRight = false;
                         checkAnswer();
                     }
                 });
@@ -91,7 +85,7 @@ public class ActStep0104 extends StageActivity {
 
 
     public void setQuestion(boolean isRetry, Object object){
-        int iRandomSeed = 2 * iLevel + rand.nextInt(2);
+        int iRandomSeed = 2 * iStage + rand.nextInt(2);
         numberSet.setData(iRandomSeed);
 
         txtDiscription.setText(numberSet.isOdd? "다음 중 홀수를 찾아 누르세요." : "다음 중 짝수를 찾아 누르세요.");
@@ -115,8 +109,7 @@ public class ActStep0104 extends StageActivity {
                 int l = rand.nextInt(iWidthMarginSum) + 1;
                 int r = iHeightMarginSum - l;
 
-                LinearLayout.LayoutParams gridParams = new LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                LinearLayout.LayoutParams gridParams = ( LinearLayout.LayoutParams)frameGrid[i][j].getLayoutParams();
                 gridParams.setMargins(l, t, r, b);
                 frameGrid[i][j].setLayoutParams(gridParams);
             }
@@ -145,10 +138,10 @@ public class ActStep0104 extends StageActivity {
             @Override
             public void onDismiss(DialogInterface dialog) {
                 if(isRight || iRetryCount > 1){
-                    if(iLevel >= 3) goNext();
+                    iStage++;
+                    if(iStage >= 4) goNext();
                     else {
                         iRetryCount = 0;
-                        iLevel++;
                         setQuestion(false);
                     }
                 }
@@ -163,5 +156,42 @@ public class ActStep0104 extends StageActivity {
     public void goNext(Object object){
         Intent intent = new Intent(this, ActStep0105.class);
         startActivity(intent);
+    }
+
+    public class Step0104NumberSet {
+        private static final int MAX_SET_NUMBER = 8;
+
+    /*If file I/O
+    private static final boolean arrIsOdd[] = new boolean[MAX_SET_NUMBER];
+    private static final int arrNumCount[] = new int[MAX_SET_NUMBER];
+    private static final int[] arrNumSetList[] = new int[MAX_SET_NUMBER][];
+    */
+
+        //else
+        private final boolean arrIsOdd[] = {true, true, false, false, true, true, true, false};
+        private final int arrNumCount[] = {4, 2, 3, 2, 2, 3, 2, 3};
+        private final int[] arrNumSetList[] = {{1, 2, 6, 8},
+                {3, 2},
+                {6, 7, 9},
+                {39, 14},
+                {58, 97},
+                {48, 77, 52},
+                {121, 150},
+                {169, 126, 213}};
+
+        public boolean isOdd;
+        public int iNumCount;
+        public int arrNumSet[] = new int[4];
+
+        public Step0104NumberSet(){
+            //If file I/O, read file and set data
+        }
+
+        public void setData(int iSeed){
+            isOdd = arrIsOdd[iSeed];
+            iNumCount = arrNumCount[iSeed];
+            for(int i = 0; i < iNumCount; i++)
+                arrNumSet[i] = arrNumSetList[iSeed][i];
+        }
     }
 }
