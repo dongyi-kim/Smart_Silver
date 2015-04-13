@@ -44,10 +44,10 @@ public abstract class StageActivity extends FrameActivity {
         //time stamp;
         strbuff.append((arrResult[iStage-1].getMilliTime()/1000) + "seconds");
 
-        Toast toast = new Toast(this);
-        toast.setText(strbuff.toString());
-        toast.setGravity(Gravity.CENTER, 0, 0);
-        toast.show();
+//        Toast toast = new Toast(this);
+//        toast.setText(strbuff);
+//        toast.setGravity(Gravity.CENTER, 0, 0);
+//        toast.show();
     }
 
     //copy & paste
