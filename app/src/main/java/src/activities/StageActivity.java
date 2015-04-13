@@ -13,6 +13,7 @@ public abstract class StageActivity extends FrameActivity {
     public int NUM_OF_STAGE = 5;
     public int iStage = 1;
     public ResultData[] arrResult;
+    public ResultData dataNow = null;
 
     @Override
     public void onCreate(Bundle bundle)
@@ -23,31 +24,32 @@ public abstract class StageActivity extends FrameActivity {
 
     public void StartRecording()
     {
-        arrResult[iStage-1] = new ResultData();
-        arrResult[iStage-1].Start();
+        dataNow = arrResult[iStage-1] = new ResultData();
+        dataNow.Start();
     }
 
     public void StopRecording(boolean bResult)
     {
 
-        arrResult[iStage-1].Stop(bResult);
+        dataNow.Stop(bResult);
+
 
         //toast text
         StringBuffer strbuff = new StringBuffer("");
 
         //result
         if(bResult)
-            strbuff.append("[Accepted] ");
+            strbuff.append("[정답] ");
         else
-            strbuff.append("[Wrong] ");
+            strbuff.append("[오답] ");
 
         //time stamp;
-        strbuff.append((arrResult[iStage-1].getMilliTime()/1000) + "seconds");
+        strbuff.append((dataNow.getMilliTime()/1000) + "초 걸렸어요!");
 
-//        Toast toast = new Toast(this);
-//        toast.setText(strbuff);
-//        toast.setGravity(Gravity.CENTER, 0, 0);
-//        toast.show();
+        Toast.makeText(this, strbuff.toString(), Toast.LENGTH_LONG).show();
+
+        dataNow = null;
+
     }
 
     //copy & paste

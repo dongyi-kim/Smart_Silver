@@ -46,7 +46,7 @@ public class ActMain extends FrameActivity{
 
             if(v == btnStep01)
             {
-                Intent intent = new Intent(v.getContext(), ActStep0103.class);
+                Intent intent = new Intent(v.getContext(), ActStep01.class);
                 startActivity(intent);
 
             }else if(v == btnStep02)

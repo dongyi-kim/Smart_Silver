@@ -43,7 +43,6 @@ public class ViewNumberPad extends FrameView
     public ViewNumberPad( Context context, AttributeSet attrs, int defStyle )
     {
         super(context, attrs, defStyle);
-        init();
     }
 
     public void init()
