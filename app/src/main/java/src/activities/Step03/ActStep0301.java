@@ -69,10 +69,12 @@ public class ActStep0301 extends StageActivity {
         } // end of button listener
 
         setQuestion(false);
+
     }
 
 
     public void setQuestion(boolean isRetry, Object object){
+        StartRecording();
         if(!isRetry) {
             int iRandomSeed = 2 * iStage + rand.nextInt(2);
             processSet.setData(iRandomSeed);
@@ -101,6 +103,7 @@ public class ActStep0301 extends StageActivity {
         iProcess = 0;
         iNextResult = processSet.startNumber;
         setNextProcess();
+
     }
 
     public void setNextProcess(){
@@ -113,6 +116,7 @@ public class ActStep0301 extends StageActivity {
 
 
     public void checkAnswer(Object object){
+        StopRecording(isRight);
         if(isRight){
             iProcess++;
             setNextProcess();
