@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/unit_3"
+    android:paddingRight="@dimen/unit_3"
+    android:paddingTop="@dimen/unit_3"
+    >
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_lv4"
+                android:text="step 1-1"
+                android:id="@+id/btn_step_1_1"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_lv4"
+                android:text="step 1-3"
+                android:id="@+id/btn_step_1_3"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_lv4"
+                android:text="step 1-4"
+                android:id="@+id/btn_step_1_4"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_lv4"
+                android:text="step 1-5"
+                android:id="@+id/btn_step_1_5"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_lv4"
+                android:text="step 2-1"
+                android:id="@+id/btn_step_2_1"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_lv4"
+                android:text="step 3-1"
+                android:id="@+id/btn_step_3_1"
+                />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
