@@ -42,6 +42,9 @@
         <activity android:name="src.activities.Step02.ActStep0203">
         </activity>
 
+        <activity android:name="src.activities.Step02.ActStep0204">
+        </activity>
+
         <activity android:name="src.activities.Step03.ActStep0301">
         </activity>
 

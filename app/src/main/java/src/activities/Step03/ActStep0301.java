@@ -116,12 +116,12 @@ public class ActStep0301 extends StageActivity {
 
 
     public void checkAnswer(Object object){
-        StopRecording(isRight);
         if(isRight){
             iProcess++;
             setNextProcess();
 
             if(iProcess > 2){
+                StopRecording(isRight);
                 txtAnswer[iProcess].setText("" + iNextResult);
                 DlgResultMark dlg = new DlgResultMark(this, isRight);
                 dlg.show();
@@ -141,6 +141,7 @@ public class ActStep0301 extends StageActivity {
         }//isRight
 
         else{
+            StopRecording(isRight);
             DlgResultMark dlg = new DlgResultMark(this, isRight);
             dlg.show();
 

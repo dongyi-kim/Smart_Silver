@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_weight=".15"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="더하기 빼기를 이용하여 수 만들기\n□ 안에 알맞은 수를 찾아 누르세요."
+            android:id="@+id/txt_discription"
+            android:textSize="@dimen/font_size_lv4"
+            android:gravity="center"
+            android:layout_marginTop="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2">
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/empty_space_red"
+                    android:id="@+id/btn_operand_1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="@dimen/font_size_lv8"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/txt_operand_1"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="+"
+                android:textSize="@dimen/font_size_lv8"
+                android:id="@+id/operator_1"/>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2">
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/empty_space_blue"
+                    android:id="@+id/btn_operand_2"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="@dimen/font_size_lv8"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/txt_operand_2"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="="
+                android:textSize="@dimen/font_size_lv8"/>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2">
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/empty_space_green"
+                    android:id="@+id/btn_answer"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="@dimen/font_size_lv8"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/txt_answer"/>
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:weightSum="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:text="1"
+            android:textSize="@dimen/font_size_lv7"
+            android:id="@+id/btn_answer_1"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.05"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:text="2"
+            android:textSize="@dimen/font_size_lv7"
+            android:id="@+id/btn_answer_2"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.05"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:text="3"
+            android:textSize="@dimen/font_size_lv7"
+            android:id="@+id/btn_answer_3"/>
+    </LinearLayout>
+</LinearLayout>
+
+</RelativeLayout>
