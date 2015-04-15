@@ -23,6 +23,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 
 import cdmst.smartsilver.R;
+import src.activities.FrameActivity;
 
 /**
  * Author :    Chutaux Robin
@@ -134,6 +135,7 @@ public class RippleView extends RelativeLayout {
                 timerEmpty = 0;
                 canvas.restore();
                 invalidate();
+                ((FrameActivity)getContext()).onGetEvent(this, null);
                 return;
             } else
                 canvasHandler.postDelayed(runnable, FRAME_RATE);
@@ -237,17 +239,18 @@ public class RippleView extends RelativeLayout {
     }
 
     private void sendClickEvent(final Boolean isLongClick) {
-        if (getParent() instanceof ListView) {
-            final int position = ((ListView) getParent()).getPositionForView(this);
-            final long id = ((ListView) getParent()).getItemIdAtPosition(position);
-            if (isLongClick) {
-                if (((ListView) getParent()).getOnItemLongClickListener() != null)
-                    ((ListView) getParent()).getOnItemLongClickListener().onItemLongClick(((ListView) getParent()), this, position, id);
-            } else {
-                if (((ListView) getParent()).getOnItemClickListener() != null)
-                    ((ListView) getParent()).getOnItemClickListener().onItemClick(((ListView) getParent()), this, position, id);
-            }
-        }
+
+//        if (getParent() instanceof ListView) {
+//            final int position = ((ListView) getParent()).getPositionForView(this);
+//            final long id = ((ListView) getParent()).getItemIdAtPosition(position);
+//            if (isLongClick) {
+//                if (((ListView) getParent()).getOnItemLongClickListener() != null)
+//                    ((ListView) getParent()).getOnItemLongClickListener().onItemLongClick(((ListView) getParent()), this, position, id);
+//            } else {
+//                if (((ListView) getParent()).getOnItemClickListener() != null)
+//                    ((ListView) getParent()).getOnItemClickListener().onItemClick(((ListView) getParent()), this, position, id);
+//            }
+//        }
     }
 
     private Bitmap getCircleBitmap(final int radius) {
