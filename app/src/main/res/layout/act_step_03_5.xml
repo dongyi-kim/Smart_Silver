@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:text=" 할머니와 할아버지는 마당놀이를 보러 갔습니다. 할아버지는 입장료로 50,000원을 냈습니다. 마당놀이 1인 입장료는 15,000원 입니다. 받아야 할 거스름돈 만큼 오른쪽 아래 돈 모양을 누르세요."
-        android:id="@+id/text_discription"
+        android:id="@+id/txt_discription"
         android:textSize="@dimen/font_size_lv3"
         android:gravity="center"/>
 
@@ -52,11 +52,13 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.3">
+                    android:layout_weight="0.3"
+                    android:id="@+id/frame_set_1">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/empty_space_how_much"/>
+                        android:src="@drawable/empty_space_how_much"
+                        android:id="@+id/img_txt_space_1"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -86,11 +88,13 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.3">
+                    android:layout_weight="0.3"
+                    android:id="@+id/frame_set_2">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/empty_space_how_much"/>
+                        android:src="@drawable/empty_space_how_much"
+                        android:id="@+id/img_txt_space_2"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -103,6 +107,11 @@
             </LinearLayout>
         </LinearLayout>
 
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.01"
+            android:id="@+id/txt_for_margin_1"/>
         <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -112,7 +121,8 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="0.01"/>
+            android:layout_weight="0.01"
+            android:id="@+id/txt_for_margin_2"/>
 
         <LinearLayout
             android:layout_width="0dp"
@@ -139,11 +149,13 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.3">
+                    android:layout_weight="0.3"
+                    android:id="@+id/frame_set_3">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/empty_space_how_much"/>
+                        android:src="@drawable/empty_space_how_much"
+                        android:id="@+id/img_txt_space_3"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -173,11 +185,13 @@
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.3">
+                    android:layout_weight="0.3"
+                    android:id="@+id/frame_set_4">
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/empty_space_how_much"/>
+                        android:src="@drawable/empty_space_how_much"
+                        android:id="@+id/img_txt_space_4"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -193,7 +207,8 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="0.01"/>
+            android:layout_weight="0.01"
+            android:id="@+id/txt_for_margin_3"/>
         <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -203,7 +218,8 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_weight="0.01"/>
+            android:layout_weight="0.01"
+            android:id="@+id/txt_for_margin_4"/>
 
         <LinearLayout
             android:layout_width="0dp"
@@ -223,18 +239,20 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.3">
+                android:layout_weight="0.3"
+                android:id="@+id/frame_set_5_big">
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/empty_space_how_much_long"/>
+                    android:src="@drawable/empty_space_how_much_long"
+                    android:id="@+id/img_txt_space_5"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:textSize="@dimen/font_size_lv3"
-                    android:id="@+id/txt_set_4_long"
+                    android:id="@+id/txt_set_5_long"
                     android:text="마당놀이 입장권 15,000원"/>
             </FrameLayout>
 
@@ -258,6 +276,11 @@
                 android:text="1"
                 android:id="@+id/btn_answer_1"/>
 
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"/>
+
             <Button
                 android:layout_weight=".25"
                 android:textSize="@dimen/font_size_lv5"
@@ -265,6 +288,11 @@
                 android:layout_height="match_parent"
                 android:text="2"
                 android:id="@+id/btn_answer_2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"/>
 
             <Button
                 android:layout_weight=".25"

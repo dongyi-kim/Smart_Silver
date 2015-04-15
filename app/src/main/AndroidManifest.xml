@@ -33,6 +33,15 @@
         <activity android:name="src.activities.Step01.ActStep0105">
         </activity>
 
+        <activity android:name="src.activities.Step02.ActStep0201">
+        </activity>
+
+        <activity android:name="src.activities.Step02.ActStep0202">
+        </activity>
+
+        <activity android:name="src.activities.Step02.ActStep0203">
+        </activity>
+
         <activity android:name="src.activities.Step03.ActStep0301">
         </activity>
 
@@ -45,6 +54,9 @@
         <activity android:name="src.activities.ActTest">
         </activity>
 
+
+        <activity android:name="src.activities.Step03.ActStep0305">
+        </activity>
 
     </application>
 

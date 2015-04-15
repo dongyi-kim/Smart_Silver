@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import cdmst.smartsilver.R;
 import src.activities.Step01.*;
+import src.activities.Step02.*;
 import src.activities.Step03.*;
 import src.viewes.ViewNumberPad;
 import ui.CButton;
@@ -52,8 +53,8 @@ public class ActMain extends FrameActivity{
 
             if(v == rippleLearn)
             {
-
                 Intent intent = new Intent(v.getContext(), ActStep01.class);
+
                 startActivity(intent);
 
             }
