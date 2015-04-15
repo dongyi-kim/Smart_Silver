@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:weightSum="1">
+
+    <TextView
+        android:layout_weight=".15"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text=" 더하기 빼기 O, X 퀴즈\n다음 더하기 빼기가 맞으면 O, 틀리면 X를 누르세요."
+        android:id="@+id/txt_discription"
+        android:textSize="@dimen/font_size_lv4"
+        android:gravity="center"
+        android:layout_marginTop="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@color/material_blue_grey_800"
+                    android:textSize="@dimen/font_size_lv8"
+                    android:text="1"
+                    android:id="@+id/txt_operand_1"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@color/material_blue_grey_800"
+                    android:textSize="@dimen/font_size_lv8"
+                    android:text="+"
+                    android:id="@+id/txt_operator"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@color/material_blue_grey_800"
+                    android:textSize="@dimen/font_size_lv8"
+                    android:text="1"
+                    android:id="@+id/txt_operand_2"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@color/material_blue_grey_800"
+                    android:textSize="@dimen/font_size_lv8"
+                    android:text="="
+                    android:id="@+id/txt_equal_sign"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@color/material_blue_grey_800"
+                    android:textSize="@dimen/font_size_lv8"
+                    android:text="2"
+                    android:id="@+id/txt_answer"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.15"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:weightSum="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:text="O"
+                android:textSize="@dimen/font_size_lv7"
+                android:id="@+id/btn_answer_isRight"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:text="X"
+                android:textSize="@dimen/font_size_lv7"
+                android:id="@+id/btn_answer_isFalse"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

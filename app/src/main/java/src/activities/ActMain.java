@@ -10,7 +10,7 @@ import android.widget.Button;
 
 import cdmst.smartsilver.R;
 import src.activities.Step01.*;
-import src.activities.Step02.ActStep0201;
+import src.activities.Step02.*;
 import src.activities.Step03.*;
 import src.viewes.ViewNumberPad;
 import ui.CButton;
@@ -52,7 +52,7 @@ public class ActMain extends FrameActivity{
 
             }else if(v == btnStep02)
             {
-                Intent intent = new Intent(v.getContext(), ActStep0201.class);
+                Intent intent = new Intent(v.getContext(), ActStep0203.class);
                 startActivity(intent);
 
             }else if(v== btnStep03)
@@ -62,7 +62,5 @@ public class ActMain extends FrameActivity{
             }
         }
     };
-
-
 
 }

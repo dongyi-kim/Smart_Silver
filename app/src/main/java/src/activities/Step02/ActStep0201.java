@@ -154,7 +154,7 @@ public class ActStep0201 extends StageActivity {
             public void onDismiss(DialogInterface dialog) {
                 if(isRight || iRetryCount > 1){
                     iStage++;
-                    if(iStage < 5) setQuestion(false);
+                    if(iStage <= NUM_OF_STAGE) setQuestion(false);
                     else goNext();
                 }
                 else{
@@ -165,7 +165,7 @@ public class ActStep0201 extends StageActivity {
     }
 
     public void goNext(Object object){
-        Intent intent = new Intent(this, ActMain.class);
+        Intent intent = new Intent(this, ActStep0202.class);
         startActivity(intent);
     }
 
