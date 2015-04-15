@@ -11,6 +11,7 @@ import src.activities.Step01.ActStep01;
 import src.activities.Step01.ActStep0103;
 import src.activities.Step01.ActStep0104;
 import src.activities.Step01.ActStep0105;
+import src.activities.Step02.ActStep0201;
 import src.activities.Step03.ActStep0301;
 
 /**
@@ -81,8 +82,8 @@ public class ActTest extends FrameActivity {
             else if(v == btnStep2_1)
             {
 
-                //Intent intent = new Intent(v.getContext(), ActStep0201.class);
-                //startActivity(intent);
+                Intent intent = new Intent(v.getContext(), ActStep0201.class);
+                startActivity(intent);
             }
             else if(v == btnStep3_1)
             {

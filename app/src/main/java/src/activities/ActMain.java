@@ -53,6 +53,7 @@ public class ActMain extends FrameActivity{
 
             if(v == rippleLearn)
             {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
             }else if(v == btnStep02)
@@ -61,6 +62,10 @@ public class ActMain extends FrameActivity{
 =======
                 Intent intent = new Intent(v.getContext(), ActStep01.class);
 >>>>>>> origin/master
+=======
+                Intent intent = new Intent(v.getContext(), ActStep01.class);
+
+>>>>>>> origin/master
                 startActivity(intent);
 
             }
@@ -68,7 +73,10 @@ public class ActMain extends FrameActivity{
     };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/master
     @Override
     public void onGetEvent(Object vSender, Object obj) {
         if(vSender == rippleLearn)
@@ -85,5 +93,8 @@ public class ActMain extends FrameActivity{
         }
 
     }
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 }

@@ -52,6 +52,7 @@
         </activity>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         <activity android:name="src.activities.Step03.ActStep0305">
         </activity>
 
@@ -59,6 +60,15 @@
         <activity android:name="src.activities.ActTest">
         </activity>
 
+
+>>>>>>> origin/master
+=======
+        <activity android:name="src.activities.ActTest">
+        </activity>
+
+
+        <activity android:name="src.activities.Step03.ActStep0305">
+        </activity>
 
 >>>>>>> origin/master
     </application>
