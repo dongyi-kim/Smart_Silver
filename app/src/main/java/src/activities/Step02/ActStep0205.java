@@ -2,29 +2,24 @@ package src.activities.Step02;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.Random;
 
 import cdmst.smartsilver.R;
+import src.activities.ActMain;
 import src.activities.StageActivity;
 import src.dialogs.DlgResultMark;
-import src.activities.ActMain;
 
 /**
- * Created by Acka on 2015-04-15.
+ * Created by Acka on 2015-04-23.
  */
-public class ActStep0204 extends StageActivity {
-    private final FrameLayout frameNumber[] = new FrameLayout[4];
+public class ActStep0205 extends StageActivity{
     private final ImageView imgNumberField[] = new ImageView[4];
     private final TextView txtNumber[] = new TextView[4];
     private final TextView txtOperator[] = new TextView[2];
@@ -34,7 +29,7 @@ public class ActStep0204 extends StageActivity {
     private int iRetryCount = 0;
     public boolean isRight = false;
 
-    public Step0204DataSet dataSet = new Step0204DataSet();
+    public Step0205DataSet dataSet = new Step0205DataSet();
     private Random rand = new Random();
 
     @Override
@@ -42,10 +37,6 @@ public class ActStep0204 extends StageActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_02_4);
 
-        frameNumber[0] = (FrameLayout)findViewById(R.id.frame_number_1);
-        frameNumber[1] = (FrameLayout)findViewById(R.id.frame_number_2);
-        frameNumber[2] = (FrameLayout)findViewById(R.id.frame_number_3);
-        frameNumber[3] = (FrameLayout)findViewById(R.id.frame_number_4);
         imgNumberField[0] = (ImageView)findViewById(R.id.img_operand_field_1);
         imgNumberField[1] = (ImageView)findViewById(R.id.img_operand_field_2);
         imgNumberField[2] = (ImageView)findViewById(R.id.img_operand_field_3);
@@ -74,7 +65,7 @@ public class ActStep0204 extends StageActivity {
     }
 
     public void setQuestion(boolean isRetry, Object object){
-        int iRandomSeed = (iStage - 1) * 2 + rand.nextInt(1);
+        int iRandomSeed = iStage - 1;
         dataSet.setData(iRandomSeed);
 
         for(int i = 0; i < 2; i++){
@@ -83,9 +74,7 @@ public class ActStep0204 extends StageActivity {
 
             if(iOperator == 1) sOperator += '+';
             else if(iOperator == -1) sOperator += '-';
-
             txtOperator[i].setText(sOperator);
-            txtOperator[i].setVisibility(View.VISIBLE);
         }
 
         int iAnswerSign = 1;
@@ -93,14 +82,8 @@ public class ActStep0204 extends StageActivity {
         for(int i = 0; i < 4; i++){
             int iNumber = dataSet.iNumberSet[i];
 
-            if(iNumber == -2){
-                frameNumber[i].setVisibility(View.GONE);
-                txtOperator[i - 1].setVisibility(View.GONE);
-                continue;
-            }
-
-            frameNumber[i].setVisibility(View.VISIBLE);
-            if(iNumber == -1){
+            if(iNumber == -2) continue;
+            else if(iNumber == -1){
                 txtNumber[i].setText("");
                 if(i > 0 && i < 3) iAnswerSign = dataSet.iOperator[i - 1];
             }
@@ -142,21 +125,14 @@ public class ActStep0204 extends StageActivity {
     }
 
     public void goNext(Object object){
-        Intent intent = new Intent(this, ActStep0205.class);
+        Intent intent = new Intent(this, ActMain.class);
         startActivity(intent);
     }
 
-    public class Step0204DataSet{
-        private final int arrNumberSet[][] = {{4, -1, -2, 7}, {-1, 9, -2, 11},
-            {5, 2, -1, 10}, {2, -1, 7, 15},
-            {-1, 5, 7, 16}, {9, 8, -1, 19},
-            {9, 9, -2, -1}, {8, 5, -2, -1},
-            {7, -1, -2, 5}, {15, 5, -1, 5}};
-        private final int arrOperatorSet[][] = {{1, 0}, {1, 0},
-                {1, 1}, {1, 1},
-                {1, 1}, {1, 1},
-                {-1, 0}, {-1, 0},
-                {-1, 0}, {-1, -1}};
+    public class Step0205DataSet{
+        private final int arrNumberSet[][] = {{5, 4, -1, 7}, {6, 7, -1, 10},
+                {9, -1, 2, 11}, {4, -1, 1, 13}, {-1, 8, 3, 10}};
+        private final int arrOperatorSet[][] = {{1, -1}, {1, -1}, {1, -1}, {1, -1}, {1, -1}};
 
         public final int iNumberSet[] = new int[4];
         public final int iOperator[] = new int[2];

@@ -7,11 +7,8 @@ import android.widget.Button;
 
 import cdmst.smartsilver.R;
 
-import src.activities.Step01.ActStep01;
-import src.activities.Step01.ActStep0103;
-import src.activities.Step01.ActStep0104;
-import src.activities.Step01.ActStep0105;
-import src.activities.Step02.ActStep0201;
+import src.activities.Step01.*;
+import src.activities.Step02.*;
 import src.activities.Step03.ActStep0301;
 
 /**
@@ -24,6 +21,7 @@ public class ActTest extends FrameActivity {
     Button btnStep1_4;
     Button btnStep1_5;
     Button btnStep2_1;
+    Button btnStep2_4;
     Button btnStep3_1;
 
     @Override
@@ -47,11 +45,11 @@ public class ActTest extends FrameActivity {
         btnStep2_1 = (Button)findViewById(R.id.btn_step_2_1);
         btnStep2_1.setOnClickListener(clickBtnStep);
 
+        btnStep2_4 = (Button)findViewById(R.id.btn_step_2_4);
+        btnStep2_4.setOnClickListener(clickBtnStep);
+
         btnStep3_1 = (Button)findViewById(R.id.btn_step_3_1);
         btnStep3_1.setOnClickListener(clickBtnStep);
-
-
-
     }
 
     View.OnClickListener clickBtnStep = new View.OnClickListener()
@@ -83,6 +81,12 @@ public class ActTest extends FrameActivity {
             {
 
                 Intent intent = new Intent(v.getContext(), ActStep0201.class);
+                startActivity(intent);
+            }
+            else if(v == btnStep2_4)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0204.class);
                 startActivity(intent);
             }
             else if(v == btnStep3_1)
