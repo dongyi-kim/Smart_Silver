@@ -28,7 +28,6 @@ public class ActStep0301 extends StageActivity {
     private TextView txtAnswer[] = new TextView[4];
     private Button btnAnswer[] = new Button[3];
 
-    private int iStage = 0;
     private int iRetryCount = 0;
     public boolean isRight = false;
     public int iProcess = 0;
@@ -69,15 +68,14 @@ public class ActStep0301 extends StageActivity {
         } // end of button listener
 
         setQuestion(false);
-
     }
 
 
     public void setQuestion(boolean isRetry, Object object){
-        StartRecording();
         if(!isRetry) {
             int iRandomSeed = 2 * iStage + rand.nextInt(2);
             processSet.setData(iRandomSeed);
+            StartRecording();
         }
 
         //delete last process
@@ -85,9 +83,8 @@ public class ActStep0301 extends StageActivity {
             txtAnswer[i].setText("");
 
         //set process
-        String sSign = iStage < 4? "+" : "";
         for(int i = 0; i < 3; i++)
-            txtProcess[i].setText(sSign + processSet.arrProcess[i]);
+            txtProcess[i].setText("+" + processSet.arrProcess[i]);
 
         //set button
         int iChangeCount = 0, iButtonValue = processSet.startNumber;
@@ -103,7 +100,6 @@ public class ActStep0301 extends StageActivity {
         iProcess = 0;
         iNextResult = processSet.startNumber;
         setNextProcess();
-
     }
 
     public void setNextProcess(){
@@ -121,15 +117,15 @@ public class ActStep0301 extends StageActivity {
             setNextProcess();
 
             if(iProcess > 2){
-                StopRecording(isRight);
                 txtAnswer[iProcess].setText("" + iNextResult);
                 DlgResultMark dlg = new DlgResultMark(this, isRight);
                 dlg.show();
+                StopRecording(isRight);
 
                 dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
                     @Override
                     public void onDismiss(DialogInterface dialog) {
-                        if(iStage >= 7) goNext();
+                        if(iStage >= NUM_OF_STAGE) goNext();
                         else {
                             iRetryCount = 0;
                             iStage++;
@@ -141,9 +137,9 @@ public class ActStep0301 extends StageActivity {
         }//isRight
 
         else{
-            StopRecording(isRight);
             DlgResultMark dlg = new DlgResultMark(this, isRight);
             dlg.show();
+            if(iRetryCount > 1) StopRecording(isRight);
 
             dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
                 @Override
@@ -163,19 +159,19 @@ public class ActStep0301 extends StageActivity {
     }
 
     public void goNext(Object object){
-        Intent intent = new Intent(this, ActStep0303.class);
+        Intent intent = new Intent(this, ActStep0302.class);
         startActivity(intent);
     }
 
     public class Step0301DataSet {
-        private static final int MAX_SET_NUMBER = 4;
+        private static final int MAX_SET_NUMBER = 8;
 
     /*If file I/O
     private static final int arrStartNumber[] = new int[MAX_SET_NUMBER];
     private static final int[] arrProcessSet[] = new int[MAX_SET_NUMBER][];
     */
         //else
-        private final int arrStartNumber[] = {200, 400, 150, 380, 290, 590, 199, 699, 500, 400, 700, 500, 790, 101, 602, 602};
+        private final int arrStartNumber[] = {200, 400, 150, 380, 290, 590, 199, 699};
         private final int[] arrProcessSet[] = {{100, 10, 1},
                 {100, 100, 100},
                 {100, 100, 100},
@@ -183,15 +179,7 @@ public class ActStep0301 extends StageActivity {
                 {10, 10, 10},
                 {10, 10, 10},
                 {1, 1, 1},
-                {1, 1, 1},
-                {-100, -10, -1},
-                {-100, -100, -100},
-                {-100, -100, -100},
-                {-10, -10, -10},
-                {-10, -10, -10},
-                {-1, -1, -1},
-                {-1, -1, -1},
-                {-1, -1, -1}};
+                {1, 1, 1}};
         public int startNumber;
         public int arrProcess[] = new int[4];
 
@@ -200,6 +188,8 @@ public class ActStep0301 extends StageActivity {
         }
 
         public void setData(int iSeed){
+            if(iSeed >= MAX_SET_NUMBER) iSeed = MAX_SET_NUMBER - 1;
+
             startNumber = arrStartNumber[iSeed];
             for(int i = 0; i < 3; i++)
                 arrProcess[i] = arrProcessSet[iSeed][i];

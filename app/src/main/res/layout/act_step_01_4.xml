@@ -12,7 +12,7 @@
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:id="@+id/txt_discription"
-            android:text="다음 중 짝수를 찾아 누르세요."
+            android:text="다음 중 가장 큰 수를 찾아 누르세요."
             android:gravity="center"
             android:textSize="@dimen/font_size_lv4"
             android:layout_marginTop="20sp" />

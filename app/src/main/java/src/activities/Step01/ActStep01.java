@@ -8,7 +8,6 @@ import java.util.Random;
 
 import cdmst.smartsilver.R;
 import src.Utility;
-import src.activities.FrameActivity;
 import src.activities.StageActivity;
 import src.dialogs.DlgResultMark;
 import src.viewes.ViewNumberPad;
@@ -94,7 +93,7 @@ public class ActStep01 extends StageActivity {
     }
     public void goNext(Object object)
     {
-        Intent intent = new Intent(this, ActStep0103.class);
+        Intent intent = new Intent(this, ActStep0102.class);
         startActivity(intent);
     }
 

@@ -103,11 +103,14 @@ public class ActStep0205 extends StageActivity{
 
         for(int i = 0; i < 3; i++)
             btnAnswer[i].setText("" + (iNextExample + i));
+
+        StartRecording();
     }
 
     public void checkAnswer(Object o){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
+        if(isRight || iRetryCount > 1) StopRecording(isRight);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override

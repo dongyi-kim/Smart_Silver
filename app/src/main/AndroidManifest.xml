@@ -24,13 +24,13 @@
 
         </activity>
 
+        <activity android:name="src.activities.Step01.ActStep0102">
+        </activity>
+
         <activity android:name="src.activities.Step01.ActStep0103">
         </activity>
 
         <activity android:name="src.activities.Step01.ActStep0104">
-        </activity>
-
-        <activity android:name="src.activities.Step01.ActStep0105">
         </activity>
 
         <activity android:name="src.activities.Step02.ActStep0201">
@@ -49,6 +49,9 @@
         </activity>
 
         <activity android:name="src.activities.Step03.ActStep0301">
+        </activity>
+
+        <activity android:name="src.activities.Step03.ActStep0302">
         </activity>
 
         <activity android:name="src.activities.Step03.ActStep0303">
