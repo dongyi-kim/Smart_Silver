@@ -35,7 +35,7 @@ public class ActStep0205 extends StageActivity{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_step_02_4);
+        setContentView(R.layout.act_step_02_5);
 
         imgNumberField[0] = (ImageView)findViewById(R.id.img_operand_field_1);
         imgNumberField[1] = (ImageView)findViewById(R.id.img_operand_field_2);

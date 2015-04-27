@@ -83,6 +83,7 @@ public class ActStep0201 extends StageActivity {
             imgCorrectMark[i][9] = (ImageView)(linearLineCell[i].findViewById(R.id.img_correct_cell_10));
          }
 
+
         //button listener
         for(int i = 0; i < ROW_COUNT; i++)
         for(int j = 0; j < COLUMN_COUNT; j++)
