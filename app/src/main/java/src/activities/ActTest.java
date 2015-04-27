@@ -9,7 +9,8 @@ import cdmst.smartsilver.R;
 
 import src.activities.Step01.*;
 import src.activities.Step02.*;
-import src.activities.Step03.ActStep0301;
+import src.activities.Step03.*;
+import src.activities.Step04.*;
 
 /**
  * Created by waps12b on 15. 4. 15..
@@ -23,6 +24,7 @@ public class ActTest extends FrameActivity {
     Button btnStep2_1;
     Button btnStep2_4;
     Button btnStep3_1;
+    Button btnStep4_1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,9 @@ public class ActTest extends FrameActivity {
 
         btnStep3_1 = (Button)findViewById(R.id.btn_step_3_1);
         btnStep3_1.setOnClickListener(clickBtnStep);
+
+        btnStep4_1 = (Button)findViewById(R.id.btn_step_4_1);
+        btnStep4_1.setOnClickListener(clickBtnStep);
     }
 
     View.OnClickListener clickBtnStep = new View.OnClickListener()
@@ -93,6 +98,12 @@ public class ActTest extends FrameActivity {
             {
 
                 Intent intent = new Intent(v.getContext(), ActStep0301.class);
+                startActivity(intent);
+            }
+            else if(v == btnStep4_1)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0401.class);
                 startActivity(intent);
             }
         }
