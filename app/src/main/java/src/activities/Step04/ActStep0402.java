@@ -3,9 +3,7 @@ package src.activities.Step04;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -20,7 +18,7 @@ import src.dialogs.DlgResultMark;
 /**
  * Created by Acka on 2015-04-27.
  */
-public class ActStep0401 extends StageActivity{
+public class ActStep0402 extends StageActivity {
     private final ImageView imgPicture[] = new ImageView[2];
     public final ImageButton ibtnAnswer[] = new ImageButton[2];
     public final TextView txtAnswer[] = new TextView[2];
@@ -28,13 +26,13 @@ public class ActStep0401 extends StageActivity{
     private int iRetryCount = 0;
     public boolean isRight = false;
 
-    public Step0401DataSet dataSet = new Step0401DataSet();
+    public Step0402DataSet dataSet = new Step0402DataSet();
     private Random rand = new Random();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_step_04_1);
+        setContentView(R.layout.act_step_04_2);
 
         imgPicture[0] = (ImageView)findViewById(R.id.img_picture_1);
         imgPicture[1] = (ImageView)findViewById(R.id.img_picture_2);
@@ -67,9 +65,8 @@ public class ActStep0401 extends StageActivity{
 
             String sAnswer = "";
             sAnswer += dataSet.iAnswerCount[i][0];
-            if(dataSet.isFlower[i]) sAnswer += "송이씩\n";
-            else sAnswer += "개씩\n";
-            sAnswer += dataSet.iAnswerCount[i][1] + "묶음";
+            sAnswer += " X ";
+            sAnswer += dataSet.iAnswerCount[i][1];
 
             txtAnswer[i].setText(sAnswer);
         }
@@ -98,11 +95,11 @@ public class ActStep0401 extends StageActivity{
     }
 
     public void goNext(Object object){
-        Intent intent = new Intent(this, ActStep0402.class);
+        Intent intent = new Intent(this, ActMain.class);
         startActivity(intent);
     }
 
-    public class Step0401DataSet{
+    public class Step0402DataSet{
         //private enum ePictureType {goodgam, hongshi, apple, flower, waterhippo, cherry};
         private final int goodgam = 0, hongshi = 1, apple = 2, flower = 3, waterhippo = 4, cherry = 5;
 
@@ -111,20 +108,20 @@ public class ActStep0401 extends StageActivity{
                 {{4, 3}, {5, 2}},
                 {{4, 1}, {5, 2}},
                 {{3, 6}, {2, 9}},
-                {{7, 2}, {5, 3}}};
+                {{7, 2}, {2, 6}}};
         private final int arrAnswerCount[][][] = {{{5, 2}, {5, 2}},
                 {{4, 3}, {5, 3}},
                 {{4, 2}, {5, 2}},
                 {{3, 6}, {2, 6}},
-                {{7, 3}, {5, 3}}};
-        private final int arrImageType[][] = {{goodgam, hongshi}, {apple, hongshi}, {apple, flower}, {apple, cherry}, {waterhippo, flower}};
+                {{7, 2}, {2, 7}}};
+        private final int arrImageType[][] = {{goodgam, hongshi}, {apple, hongshi}, {apple, flower}, {apple, cherry}, {waterhippo, cherry}};
 
         public final int iPictureCount[][] = new int[2][2];
         public final int iAnswerCount[][] = new int[2][2];
         public final int iPictureSource[] = new int[2];
         public final boolean isFlower[] = new boolean[2];
 
-        public Step0401DataSet(){
+        public Step0402DataSet(){
             arrImageSource[goodgam][2][2] = R.drawable.mult_2_2_goodgam;
             arrImageSource[hongshi][5][2] = R.drawable.mult_5_2_hongshi;
             arrImageSource[apple][4][1] = R.drawable.mult_4_1_apple;
@@ -134,6 +131,7 @@ public class ActStep0401 extends StageActivity{
             arrImageSource[flower][5][3] = R.drawable.mult_5_3_flower;
             arrImageSource[waterhippo][7][2] = R.drawable.mult_7_2_waterhippo;
             arrImageSource[cherry][2][9] = R.drawable.mult_2_9_cherry;
+            arrImageSource[cherry][2][6] = R.drawable.mult_2_6_cherry;
         }
 
         public void setData(int iSeed){

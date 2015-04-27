@@ -23,8 +23,10 @@ public class ActTest extends FrameActivity {
     Button btnStep1_4;
     Button btnStep2_1;
     Button btnStep2_4;
+    Button btnStep2_5;
     Button btnStep3_1;
     Button btnStep4_1;
+    Button btnStep4_2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,11 +52,17 @@ public class ActTest extends FrameActivity {
         btnStep2_4 = (Button)findViewById(R.id.btn_step_2_4);
         btnStep2_4.setOnClickListener(clickBtnStep);
 
+        btnStep2_5 = (Button)findViewById(R.id.btn_step_2_5);
+        btnStep2_5.setOnClickListener(clickBtnStep);
+
         btnStep3_1 = (Button)findViewById(R.id.btn_step_3_1);
         btnStep3_1.setOnClickListener(clickBtnStep);
 
         btnStep4_1 = (Button)findViewById(R.id.btn_step_4_1);
         btnStep4_1.setOnClickListener(clickBtnStep);
+
+        btnStep4_2 = (Button)findViewById(R.id.btn_step_4_2);
+        btnStep4_2.setOnClickListener(clickBtnStep);
     }
 
     View.OnClickListener clickBtnStep = new View.OnClickListener()
@@ -94,6 +102,12 @@ public class ActTest extends FrameActivity {
                 Intent intent = new Intent(v.getContext(), ActStep0204.class);
                 startActivity(intent);
             }
+            else if(v == btnStep2_5)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0205.class);
+                startActivity(intent);
+            }
             else if(v == btnStep3_1)
             {
 
@@ -104,6 +118,12 @@ public class ActTest extends FrameActivity {
             {
 
                 Intent intent = new Intent(v.getContext(), ActStep0401.class);
+                startActivity(intent);
+            }
+            else if(v == btnStep4_2)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0402.class);
                 startActivity(intent);
             }
         }
