@@ -1,60 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_wall"
+        />
 
+    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
-
-        <TextView
-            android:layout_weight=".15"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_weight=".5"
+            android:padding="5dp"
+            android:background="@drawable/img_chalkboard_2"
+            >
 
-            android:gravity="center"
-            android:layout_marginTop="20sp"
-            android:text="아래의 숫자를 따라서 입력하세요"
-            android:textStyle="bold"
-            android:textSize="@dimen/font_size_lv4"
-            android:id="@+id/txt_description"
-            />
 
-        <LinearLayout
-            android:layout_weight=".25"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            android:gravity="center">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:textSize="@dimen/font_size_lv6"
-                android:textStyle="bold"
-                android:text="123456789"
-                android:id="@+id/txt_question"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:textSize="@dimen/font_size_lv6"
-                android:text="123456___"
-                android:id="@+id/txt_answer"
-                />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:layout_marginTop="20sp"
+                    android:text="아래에 적힌 숫자들을\n따라서 입력하세요"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/font_size_lv4"
+                    android:id="@+id/txt_description"
+                    />
 
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_weight=".25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:textSize="@dimen/font_size_lv6"
+                        android:textStyle="bold"
+                        android:text="123456789"
+                        android:textColor="#FFFFFF"
+                        android:id="@+id/txt_question"
+                        android:layout_marginBottom="5dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:textSize="@dimen/font_size_lv6"
+                        android:textColor="#FFFFFF"
+                        android:text="123456___"
+                        android:id="@+id/txt_answer"
+                        />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
 
         <src.viewes.ViewNumberPad
             android:id="@+id/view_number_pad"
             android:layout_weight=".5"
             android:layout_width="match_parent"
-            android:layout_height="0dp">
+            android:layout_height="0dp"
+            android:background="@color/trans_half">
 
         </src.viewes.ViewNumberPad>
 
