@@ -26,20 +26,30 @@
 
         </activity>
 
-        <activity android:name="src.activities.Step01.ActStep0102">
+        <activity android:name="src.activities.Step01.ActStep0102"
             android:noHistory="true"
+            android:screenOrientation="portrait"
+            >
+
         </activity>
 
-        <activity android:name="src.activities.Step01.ActStep0103">
+        <activity android:name="src.activities.Step01.ActStep0103"
             android:noHistory="true"
+            android:screenOrientation="portrait"
+            >
         </activity>
 
-        <activity android:name="src.activities.Step01.ActStep0104">
+        <activity android:name="src.activities.Step01.ActStep0104"
             android:noHistory="true"
+            android:screenOrientation="portrait">
+
         </activity>
 
-        <activity android:name="src.activities.Step02.ActStep0201">
+        <activity android:name="src.activities.Step02.ActStep0201"
             android:noHistory="true"
+            android:screenOrientation="portrait"
+            >
+
         </activity>
 
         <activity android:name="src.activities.Step02.ActStep0202">
