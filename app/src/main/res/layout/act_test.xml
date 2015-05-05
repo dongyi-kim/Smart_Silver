@@ -4,11 +4,12 @@
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/unit_3"
     android:paddingRight="@dimen/unit_3"
-    android:paddingTop="@dimen/unit_3"
+    android:paddingTop="5dp"
     >
     <ScrollView
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,6 +50,21 @@
                 android:text="step 2-1"
                 android:id="@+id/btn_step_2_1"
                 />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_lv4"
+                android:text="step 2-2"
+                android:id="@+id/btn_step_2_2"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_lv4"
+                android:text="step 2-3"
+                android:id="@+id/btn_step_2_3"
+                />
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -88,6 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/font_size_lv4"
+<<<<<<< HEAD
                 android:text="step 3-2"
                 android:id="@+id/btn_step_3_2"
                 />
@@ -112,6 +129,12 @@
                 android:text="step 3-5"
                 android:id="@+id/btn_step_3_5"
                 />
+=======
+                android:text="step 3-5"
+                android:id="@+id/btn_step_3_5"
+                />
+
+>>>>>>> origin/master
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -119,6 +142,7 @@
                 android:text="step 4-1"
                 android:id="@+id/btn_step_4_1"
                 />
+
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -126,6 +150,7 @@
                 android:text="step 4-2"
                 android:id="@+id/btn_step_4_2"
                 />
+<<<<<<< HEAD
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -133,6 +158,8 @@
                 android:text="step 4-3"
                 android:id="@+id/btn_step_4_3"
                 />
+=======
+>>>>>>> origin/master
 
         </LinearLayout>
     </ScrollView>

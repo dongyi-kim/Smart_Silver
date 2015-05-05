@@ -19,61 +19,75 @@
         </activity>
 
         <activity android:name="src.activities.Step01.ActStep01"
+            android:noHistory="true"
             android:screenOrientation="portrait"
             >
 
         </activity>
 
         <activity android:name="src.activities.Step01.ActStep0102">
+            android:noHistory="true"
         </activity>
 
         <activity android:name="src.activities.Step01.ActStep0103">
+            android:noHistory="true"
         </activity>
 
         <activity android:name="src.activities.Step01.ActStep0104">
+            android:noHistory="true"
         </activity>
 
         <activity android:name="src.activities.Step02.ActStep0201">
+            android:noHistory="true"
         </activity>
 
         <activity android:name="src.activities.Step02.ActStep0202">
+            android:noHistory="true"
         </activity>
 
         <activity android:name="src.activities.Step02.ActStep0203">
+            android:noHistory="true"
         </activity>
 
         <activity android:name="src.activities.Step02.ActStep0204">
+            android:noHistory="true"
         </activity>
 
         <activity android:name="src.activities.Step02.ActStep0205">
+            android:noHistory="true"
         </activity>
 
         <activity android:name="src.activities.Step03.ActStep0301">
+            android:noHistory="true"
         </activity>
 
         <activity android:name="src.activities.Step03.ActStep0302">
+            android:noHistory="true"
         </activity>
 
         <activity android:name="src.activities.Step03.ActStep0303">
+            android:noHistory="true"
         </activity>
 
         <activity android:name="src.activities.Step03.ActStep0304">
+            android:noHistory="true"
         </activity>
 
         <activity android:name="src.activities.Step03.ActStep0305">
+            android:noHistory="true"
         </activity>
 
         <activity android:name="src.activities.Step04.ActStep0401">
+            android:noHistory="true"
         </activity>
 
         <activity android:name="src.activities.Step04.ActStep0402">
-        </activity>
-
-        <activity android:name="src.activities.Step04.ActStep0403">
+            android:noHistory="true"
         </activity>
 
 
         <activity android:name="src.activities.ActTest">
+            android:noHistory="true"
         </activity>
 
 
