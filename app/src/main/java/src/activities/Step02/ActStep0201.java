@@ -4,8 +4,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -15,9 +13,7 @@ import java.util.Random;
 
 import cdmst.smartsilver.R;
 import src.activities.StageActivity;
-import src.activities.Step01.ActStep0104;
 import src.dialogs.DlgResultMark;
-import src.activities.ActMain;
 
 /**
  * Created by Acka on 2015-04-15.
@@ -87,6 +83,7 @@ public class ActStep0201 extends StageActivity {
             imgCorrectMark[i][9] = (ImageView)(linearLineCell[i].findViewById(R.id.img_correct_cell_10));
          }
 
+
         //button listener
         for(int i = 0; i < ROW_COUNT; i++)
         for(int j = 0; j < COLUMN_COUNT; j++)
@@ -143,11 +140,14 @@ public class ActStep0201 extends StageActivity {
 
         iAnswerCount = 0;
         iMaxAnswerCount = ((dataSet.iStartNumber - iCurrentNumber + 1) / dataSet.iDistanceNumber) - 1;
+
+        StartRecording();
     }
 
     public void checkAnswer(Object o){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
+        if(isRight || iRetryCount > 1) StopRecording(isRight);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override

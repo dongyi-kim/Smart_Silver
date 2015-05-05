@@ -74,11 +74,13 @@ public class ActStep0202 extends StageActivity{
         else iAnswer -= dataSet.iOperandSet[1];
 
         cAnswer = (iAnswer == dataSet.iAnswer? 'O' : 'X');
+        StartRecording();
     }
 
     public void checkAnswer(Object o){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
+        if(isRight || iRetryCount > 1) StopRecording(isRight);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override

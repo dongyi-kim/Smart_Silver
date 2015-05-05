@@ -106,7 +106,7 @@ public class ActStep0305 extends StageActivity{
     }
 
     public void setQuestion(boolean isRetry, Object object){
-        int iRandomSeed = iStage - 1;
+        int iRandomSeed = iStage;
         dataSet.setData(iRandomSeed);
 
         //set problem
@@ -140,21 +140,24 @@ public class ActStep0305 extends StageActivity{
                 arrLinearSet[i * 2 + j].setVisibility(View.GONE);
             }
         }
+
+        StartRecording();
     }
 
 
     public void checkAnswer(Object object){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
+        if(isRight || iRetryCount > 1) StopRecording(isRight);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface dialog) {
                 if(isRight || iRetryCount > 1){
+                    iStage++;
                     if(iStage >= NUM_OF_STAGE) goNext();
                     else {
                         iRetryCount = 0;
-                        iStage++;
                         setQuestion(false);
                     }
                 }

@@ -20,8 +20,6 @@ import src.dialogs.DlgResultMark;
  * Created by Acka on 2015-03-29.
  */
 public class ActStep0303 extends StageActivity{
-    private static final int MAX_STAGE_NUMBER = 5;
-
     private TextView txtDiscription;
     private ImageView imgGrandma;
     private ImageView imgGrandfa;
@@ -31,7 +29,6 @@ public class ActStep0303 extends StageActivity{
     private TextView txtGrandfaFood;
     private Button btnAnswer[] = new Button[3];
 
-    private int iStage = 1;
     private int iRetryCount = 0;
     public boolean isRight = false;
 
@@ -73,14 +70,14 @@ public class ActStep0303 extends StageActivity{
 
 
     public void setQuestion(boolean isRetry, Object object){
-        int iRandomSeed = iStage - 1;
+        int iRandomSeed = iStage;
         dataSet.setData(iRandomSeed);
 
         //set problem
         txtDiscription.setText(dataSet.sDiscription);
         imgGrandma.setImageResource(dataSet.iGrandmaImage);
         imgGrandfa.setImageResource(dataSet.iGrandfaImage);
-        if(iStage >= 5){
+        if(iStage >= 4){
             imgGrandmaFoodSpace.setImageResource(R.drawable.empty_space_the_number_food_extend);
             imgGrandfaFoodSpace.setImageResource(R.drawable.empty_space_the_number_food_extend);
         }
@@ -90,22 +87,24 @@ public class ActStep0303 extends StageActivity{
         //set button
         for(int i = 0; i < 3; i++)
             btnAnswer[i].setText("" + dataSet.iBtnList[i]);
+
+        StartRecording();
     }
 
 
     public void checkAnswer(Object object){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
+        if(isRight || iRetryCount > 1) StopRecording(isRight);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface dialog) {
                 if(isRight || iRetryCount > 1){
-                    Log.i("tag", "" + iStage);
-                    if(iStage >= MAX_STAGE_NUMBER) goNext();
+                    iStage++;
+                    if(iStage >= NUM_OF_STAGE) goNext();
                     else {
                         iRetryCount = 0;
-                        iStage++;
                         setQuestion(false);
                     }
                 }
