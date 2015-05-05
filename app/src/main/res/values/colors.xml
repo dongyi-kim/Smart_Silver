@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="transparent">#00FFFFFF</color>
-    <color name="rippelColor">#FFFFFF</color>
+    <color name="trans_half">#4FFFFFFF</color>
+    <color name="rippelColor">#95a5a6</color>
 
 
 </resources>
