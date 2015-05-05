@@ -22,7 +22,7 @@ public class ActMain extends FrameActivity{
 
     RippleView rippleLearn;
     RippleView rippleMyResult;
-    RippleView rippleMain;
+    RippleView rippleDeveloper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,29 +31,9 @@ public class ActMain extends FrameActivity{
 
         rippleLearn = (RippleView)findViewById(R.id.ripple_learning);
         rippleMyResult = (RippleView)findViewById(R.id.ripple_my_result);
-        rippleMain = (RippleView)findViewById(R.id.ripple_main_image);
-
- //       rippleLearn.setOnClickListener(clickBtnStep);
-
-//        btnStep01 = (Button)findViewById(R.id.btn_step01);
-//
-//        btnStep02 = (Button)findViewById(R.id.btn_step02);
-//        btnStep03 = (Button)findViewById(R.id.btn_step03);
-//
-//        btnStep01.setOnClickListener(clickBtnStep);
-//        btnStep02.setOnClickListener(clickBtnStep);
-//        btnStep03.setOnClickListener(clickBtnStep);
-
+        rippleDeveloper = (RippleView)findViewById(R.id.ripple_developer);
     }
 
-    View.OnClickListener clickBtnStep = new View.OnClickListener()
-    {
-        public void onClick(View v)
-        {
-
-
-        }
-    };
 
     @Override
     public void onGetEvent(Object vSender, Object obj) {
@@ -64,7 +44,7 @@ public class ActMain extends FrameActivity{
         }else if(vSender == rippleMyResult)
         {
 
-        }else if(vSender == rippleMain)
+        }else if(vSender == rippleDeveloper)
         {
             Intent intent = new Intent(this, ActTest.class);
             startActivity(intent);
