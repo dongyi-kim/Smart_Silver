@@ -52,57 +52,83 @@
 
         </activity>
 
-        <activity android:name="src.activities.Step02.ActStep0202">
+        <activity android:name="src.activities.Step02.ActStep0202"
             android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
+
         </activity>
 
-        <activity android:name="src.activities.Step02.ActStep0203">
+        <activity android:name="src.activities.Step02.ActStep0203"
             android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
+
         </activity>
 
-        <activity android:name="src.activities.Step02.ActStep0204">
+        <activity android:name="src.activities.Step02.ActStep0204"
             android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
         </activity>
 
-        <activity android:name="src.activities.Step02.ActStep0205">
+        <activity android:name="src.activities.Step02.ActStep0205"
             android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
         </activity>
 
-        <activity android:name="src.activities.Step03.ActStep0301">
+        <activity android:name="src.activities.Step03.ActStep0301"
             android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
         </activity>
 
-        <activity android:name="src.activities.Step03.ActStep0302">
+        <activity android:name="src.activities.Step03.ActStep0302"
             android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
         </activity>
 
-        <activity android:name="src.activities.Step03.ActStep0303">
+        <activity android:name="src.activities.Step03.ActStep0303"
             android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
         </activity>
 
-        <activity android:name="src.activities.Step03.ActStep0304">
+        <activity android:name="src.activities.Step03.ActStep0304"
             android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
         </activity>
 
-        <activity android:name="src.activities.Step03.ActStep0305">
+        <activity android:name="src.activities.Step03.ActStep0305"
             android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
         </activity>
 
-        <activity android:name="src.activities.Step04.ActStep0401">
+        <activity android:name="src.activities.Step04.ActStep0401"
             android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
         </activity>
 
-        <activity android:name="src.activities.Step04.ActStep0402">
+        <activity android:name="src.activities.Step04.ActStep0402"
             android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
         </activity>
 
-        <activity android:name="src.activities.Step04.ActStep0403">
+        <activity android:name="src.activities.Step04.ActStep0403"
             android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
         </activity>
 
 
-        <activity android:name="src.activities.ActTest">
-            android:noHistory="true"
+        <activity android:name="src.activities.ActTest"
+            >
         </activity>
 
 
