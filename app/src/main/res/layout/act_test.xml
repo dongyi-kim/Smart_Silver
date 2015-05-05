@@ -41,12 +41,27 @@
                 android:text="step 1-4"
                 android:id="@+id/btn_step_1_4"
                 />
+
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/font_size_lv4"
                 android:text="step 2-1"
                 android:id="@+id/btn_step_2_1"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_lv4"
+                android:text="step 2-2"
+                android:id="@+id/btn_step_2_2"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_lv4"
+                android:text="step 2-3"
+                android:id="@+id/btn_step_2_3"
                 />
             <Button
                 android:layout_width="match_parent"
@@ -59,7 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/font_size_lv4"
-                android:text="step 2-4"
+                android:text="step 2-5"
                 android:id="@+id/btn_step_2_5"
                 />
             <Button
@@ -73,6 +88,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/font_size_lv4"
+                android:text="step 3-2"
+                android:id="@+id/btn_step_3_2"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_lv4"
+                android:text="step 3-3"
+                android:id="@+id/btn_step_3_3"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_lv4"
+                android:text="step 3-4"
+                android:id="@+id/btn_step_3_4"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_lv4"
+                android:text="step 3-5"
+                android:id="@+id/btn_step_3_5"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_lv4"
                 android:text="step 4-1"
                 android:id="@+id/btn_step_4_1"
                 />
@@ -80,10 +123,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/font_size_lv4"
-                android:text="step 4-1"
+                android:text="step 4-2"
                 android:id="@+id/btn_step_4_2"
                 />
-
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_lv4"
+                android:text="step 4-3"
+                android:id="@+id/btn_step_4_3"
+                />
 
         </LinearLayout>
     </ScrollView>

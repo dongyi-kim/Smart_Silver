@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import cdmst.smartsilver.R;
 
 /**
@@ -17,13 +20,14 @@ public class DlgResultMark extends FrameDialog {
     private boolean isOkay;
     private ImageButton ibtnOkay;
     private ImageButton ibtnFail;
+    private final Dialog dlg;
 
 
     public DlgResultMark(Context context, boolean isOkay)
     {
         super(context, R.layout.dlg_result_mark);
         this.isOkay = isOkay;
-
+        dlg = this;
     }
 
     public void setIsOkay(boolean isOkay)
@@ -39,6 +43,21 @@ public class DlgResultMark extends FrameDialog {
             ibtnFail.setVisibility(ImageButton.VISIBLE);
         }
     }
+
+    private Timer t;
+    @Override
+    public void show() {
+        super.show();
+        t = new Timer();
+        t.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                dlg.dismiss();
+                t.cancel();
+            }
+        },2000);
+    }
+
 
     @Override
     public void onCreate(Bundle bundle)
