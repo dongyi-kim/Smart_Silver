@@ -50,21 +50,6 @@
                 android:text="step 2-1"
                 android:id="@+id/btn_step_2_1"
                 />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/font_size_lv4"
-                android:text="step 2-2"
-                android:id="@+id/btn_step_2_2"
-                />
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/font_size_lv4"
-                android:text="step 2-3"
-                android:id="@+id/btn_step_2_3"
-                />
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
