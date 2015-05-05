@@ -59,7 +59,7 @@ public class ActStep01 extends StageActivity {
                 arrStr[i] = Integer.toString(rnd.nextInt(10)).charAt(0);
             }
             strQuest = new String(arrStr);
-            vNumberPad.shuffleNumber();
+            //vNumberPad.shuffleNumber();
         }
 
         if(! Utility.isNumber(strQuest))

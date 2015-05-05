@@ -38,7 +38,7 @@
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:background="#ef7126"
+                android:background="#ff9900"
                 android:padding="@dimen/font_size_lv1"
                 android:id="@+id/ripple_learning">
                 <TextView
@@ -61,7 +61,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:background="#218c8d"
+                android:background="#097054"
                 android:padding="@dimen/font_size_lv1"
                 android:id="@+id/ripple_my_result">
                 <TextView

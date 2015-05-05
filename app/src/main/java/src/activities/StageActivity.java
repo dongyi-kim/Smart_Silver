@@ -16,7 +16,7 @@ public abstract class StageActivity extends FrameActivity {
     public ResultData dataNow = null;
 
     @Override
-    public void onCreate(Bundle bundle)g
+    public void onCreate(Bundle bundle)
     {
         super.onCreate(bundle);
         arrResult = new ResultData[NUM_OF_STAGE];
