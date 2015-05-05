@@ -1,0 +1,36 @@
+<resources>
+    <!-- Example customization of dimensions originally defined in res/values/dimens.xml
+         (such as screen margins) for screens with more than 820dp of available width. This
+         would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively). -->
+    <!-- Screen Margin -->
+    <dimen name="activity_horizontal_margin">60dp</dimen>   <!-- 1/10 swdp -->
+    <dimen name="activity_vertical_margin">60dp</dimen>     <!-- 1/10 swdp -->
+
+    <!-- Relative Font Size -->
+    <dimen name="font_size_lv0">30sp</dimen>    <!-- 5/100 swdp -->
+    <dimen name="font_size_lv1">36sp</dimen>    <!-- 6/100 swdp -->
+    <dimen name="font_size_lv2">42sp</dimen>    <!-- 7/100 swdp -->
+    <dimen name="font_size_lv3">48sp</dimen>    <!-- 8/100 swdp -->
+    <dimen name="font_size_lv4">54sp</dimen>    <!-- 9/100 swdp -->
+    <dimen name="font_size_lv5">66sp</dimen>    <!-- 11/100 swdp -->
+    <dimen name="font_size_lv6">72sp</dimen>    <!-- 12/100 swdp -->
+    <dimen name="font_size_lv7">84sp</dimen>    <!-- 14/100 swdp -->
+    <dimen name="font_size_lv8">102sp</dimen>    <!-- 17/100 swdp -->
+    <dimen name="font_size_lv9">120sp</dimen>    <!-- 20/100 swdp -->
+
+    <!-- Size Unit -->
+    <dimen name="unit_1">60dp</dimen>    <!-- 1/10 swdp -->
+    <dimen name="unit_2">120dp</dimen>    <!-- 2/10 swdp -->
+    <dimen name="unit_3">180dp</dimen>    <!-- 3/10 swdp -->
+    <dimen name="unit_4">240dp</dimen>    <!-- 4/10 swdp -->
+    <dimen name="unit_5">300dp</dimen>    <!-- 5/10 swdp -->
+    <dimen name="unit_6">360dp</dimen>    <!-- 6/10 swdp -->
+    <dimen name="unit_7">420dp</dimen>    <!-- 7/10 swdp -->
+    <dimen name="unit_8">480dp</dimen>    <!-- 8/10 swdp -->
+    <dimen name="unit_9">540dp</dimen>    <!-- 9/10 swdp -->
+    <dimen name="unit_10">600dp</dimen>    <!-- 10/10 swdp -->
+
+    <!-- Relative Font Size -->
+    <dimen name="button_padding">30dp</dimen> <!-- 1/20 swdp -->
+
+</resources>

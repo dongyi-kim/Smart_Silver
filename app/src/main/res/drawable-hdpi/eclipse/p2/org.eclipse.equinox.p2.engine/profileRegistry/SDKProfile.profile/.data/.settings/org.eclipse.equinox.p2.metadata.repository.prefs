@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+repositories/http\:__download.eclipse.org_eclipse_updates_4.3/count=1
+repositories/http\:__download.eclipse.org_eclipse_updates_4.3/enabled=true
+repositories/http\:__download.eclipse.org_eclipse_updates_4.3/nickname=The Eclipse Project Updates
+repositories/http\:__download.eclipse.org_eclipse_updates_4.3/uri=http\://download.eclipse.org/eclipse/updates/4.3
+repositories/http\:__download.eclipse.org_releases_luna/count=1
+repositories/http\:__download.eclipse.org_releases_luna/enabled=true
+repositories/http\:__download.eclipse.org_releases_luna/nickname=Luna
+repositories/http\:__download.eclipse.org_releases_luna/uri=http\://download.eclipse.org/releases/luna
+repositories/http\:__download.scala-ide.org_sdk_lithium_e44_scala211_stable_site/count=1
+repositories/http\:__download.scala-ide.org_sdk_lithium_e44_scala211_stable_site/enabled=true
+repositories/http\:__download.scala-ide.org_sdk_lithium_e44_scala211_stable_site/nickname=Scala IDE
+repositories/http\:__download.scala-ide.org_sdk_lithium_e44_scala211_stable_site/uri=http\://download.scala-ide.org/sdk/lithium/e44/scala211/stable/site

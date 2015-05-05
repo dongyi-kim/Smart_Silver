@@ -1,0 +1,33 @@
+<resources>
+    <!-- Screen Margin -->
+    <dimen name="activity_horizontal_margin">48dp</dimen>   <!-- 1/10 swdp -->
+    <dimen name="activity_vertical_margin">48dp</dimen>     <!-- 1/10 swdp -->
+
+    <!-- Relative Font Size -->
+    <dimen name="font_size_lv0">24sp</dimen>    <!-- 5/100 swdp -->
+    <dimen name="font_size_lv1">29sp</dimen>    <!-- 6/100 swdp -->
+    <dimen name="font_size_lv2">34sp</dimen>    <!-- 7/100 swdp -->
+    <dimen name="font_size_lv3">38sp</dimen>    <!-- 8/100 swdp -->
+    <dimen name="font_size_lv4">43sp</dimen>    <!-- 9/100 swdp -->
+    <dimen name="font_size_lv5">53sp</dimen>    <!-- 11/100 swdp -->
+    <dimen name="font_size_lv6">58sp</dimen>    <!-- 12/100 swdp -->
+    <dimen name="font_size_lv7">67sp</dimen>    <!-- 14/100 swdp -->
+    <dimen name="font_size_lv8">82sp</dimen>    <!-- 17/100 swdp -->
+    <dimen name="font_size_lv9">96sp</dimen>    <!-- 20/100 swdp -->
+
+    <!-- Size Unit -->
+    <dimen name="unit_1">48dp</dimen>    <!-- 1/10 swdp -->
+    <dimen name="unit_2">96dp</dimen>    <!-- 2/10 swdp -->
+    <dimen name="unit_3">144dp</dimen>    <!-- 3/10 swdp -->
+    <dimen name="unit_4">192dp</dimen>    <!-- 4/10 swdp -->
+    <dimen name="unit_5">240dp</dimen>    <!-- 5/10 swdp -->
+    <dimen name="unit_6">288dp</dimen>    <!-- 6/10 swdp -->
+    <dimen name="unit_7">336dp</dimen>    <!-- 7/10 swdp -->
+    <dimen name="unit_8">384dp</dimen>    <!-- 8/10 swdp -->
+    <dimen name="unit_9">432dp</dimen>    <!-- 9/10 swdp -->
+    <dimen name="unit_10">480dp</dimen>    <!-- 10/10 swdp -->
+
+    <!-- Relative Font Size -->
+    <dimen name="button_padding">24dp</dimen> <!-- 5/100 swdp -->
+
+</resources>

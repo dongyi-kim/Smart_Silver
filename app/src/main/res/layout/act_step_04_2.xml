@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_weight=".15"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text=" 다음 중 곱하기가 그림과 알맞게 표시된 것을 누르세요!"
+            android:id="@+id/txt_discription"
+            android:textSize="@dimen/font_size_lv4"
+            android:gravity="center"
+            android:layout_marginTop="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="0.7"
+            android:weightSum="1"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:weightSum="1">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/mult_2_2_goodgam"
+                    android:id="@+id/img_picture_1"/>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3">
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/txt_field_0401"
+                        android:id="@+id/ibtn_answer_1"
+                        android:background="@null"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="2 X 2"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="@dimen/font_size_lv6"
+                        android:id="@+id/txt_answer_1"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:weightSum="1">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/mult_5_2_hongshi"
+                    android:id="@+id/img_picture_2"/>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3">
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/txt_field_0401"
+                        android:id="@+id/ibtn_answer_2"
+                        android:background="@null"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="2 X 2"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="@dimen/font_size_lv6"
+                        android:id="@+id/txt_answer_2"/>
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

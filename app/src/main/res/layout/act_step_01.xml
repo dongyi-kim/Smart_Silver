@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+
+        <TextView
+            android:layout_weight=".15"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:gravity="center"
+            android:layout_marginTop="20sp"
+            android:text="아래의 숫자를 따라서 입력하세요"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_size_lv4"
+            android:id="@+id/txt_description"
+            />
+
+        <LinearLayout
+            android:layout_weight=".25"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:textSize="@dimen/font_size_lv6"
+                android:textStyle="bold"
+                android:text="123456789"
+                android:id="@+id/txt_question"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:textSize="@dimen/font_size_lv6"
+                android:text="123456___"
+                android:id="@+id/txt_answer"
+                />
+
+        </LinearLayout>
+
+
+        <src.viewes.ViewNumberPad
+            android:id="@+id/view_number_pad"
+            android:layout_weight=".5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+        </src.viewes.ViewNumberPad>
+
+
+    </LinearLayout>
+</RelativeLayout>

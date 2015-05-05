@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.scala-ide.scala211.feature"
+      label="Scala 2.11.5"
+      version="4.0.0.201501121807"
+      provider-name="scala-ide.org"
+      plugin="org.scala-lang.scala-library">
+
+   <description url="http://scala-ide.org">
+     Scala 2.11.5 library, compiler and associated jars.
+   </description>
+
+   <copyright url="http://scala-lang.org/downloads/">
+      Copyright (c) 2002-2014 EPFL, Lausanne.
+All rights reserved.
+   </copyright>
+
+   <license url="http://scala-lang.org/downloads/license.html">
+      SCALA LICENSE
+
+Copyright (c) 2002-2010 EPFL, Lausanne, unless otherwise specified.
+All rights reserved.
+
+This software was developed by the Programming Methods Laboratory of the
+Swiss Federal Institute of Technology (EPFL), Lausanne, Switzerland.
+
+Permission to use, copy, modify, and distribute this software in source
+or binary form for any purpose with or without fee is hereby granted,
+provided that the following conditions are met:
+
+   1. Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+
+   2. Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+
+   3. Neither the name of the EPFL nor the names of its contributors
+      may be used to endorse or promote products derived from this
+      software without specific prior written permission.
+
+
+THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS&apos;&apos; AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGE.
+   </license>
+
+   <url>
+      <update label="Scala IDE for Eclipse update site" url="http://download.scala-ide.org/update-current"/>
+   </url>
+
+   <includes
+      id="org.scala-ide.scala211.source.feature"
+      version="4.0.0.201501121807"
+      optional="true"/>
+
+   <plugin
+         id="org.scala-lang.scala-library"
+         download-size="5446"
+         install-size="13133"
+         version="2.11.5.v20150101-184742-3fafbc204f"
+         unpack="false"/>
+
+   <plugin
+         id="org.scala-lang.scala-compiler"
+         download-size="13880"
+         install-size="30279"
+         version="2.11.5.v20150101-184742-3fafbc204f"
+         unpack="false"/>
+
+   <plugin
+         id="org.scala-lang.scala-reflect"
+         download-size="4350"
+         install-size="10265"
+         version="2.11.5.v20150101-184742-3fafbc204f"
+         unpack="false"/>
+
+   <plugin
+         id="org.scala-lang.scala-actors"
+         download-size="463"
+         install-size="931"
+         version="2.11.5.v20150101-184742-3fafbc204f"
+         unpack="false"/>
+
+   <plugin
+         id="org.scala-lang.modules.scala-xml"
+         download-size="633"
+         install-size="1235"
+         version="1.0.2"
+         unpack="false"/>
+
+   <plugin
+         id="org.scala-lang.modules.scala-parser-combinators"
+         download-size="409"
+         install-size="845"
+         version="1.0.1"
+         unpack="false"/>
+
+   <plugin
+         id="org.scala-lang.modules.scala-swing"
+         download-size="709"
+         install-size="1636"
+         version="1.0.1"
+         unpack="false"/>
+
+   <!-- TODO remove when multiple bundles of Scala are supported -->
+   <plugin
+         id="org.scala-ide.scala210.jars"
+         download-size="26005"
+         install-size="29083"
+         version="4.0.0.201501121807"
+         unpack="true"/>
+
+
+</feature>

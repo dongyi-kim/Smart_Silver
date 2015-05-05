@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cdmst.smartsilver" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+        <activity
+            android:name="src.activities.ActMain"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="src.activities.Step01.ActStep01"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            >
+
+        </activity>
+
+        <activity android:name="src.activities.Step01.ActStep0102">
+            android:noHistory="true"
+        </activity>
+
+        <activity android:name="src.activities.Step01.ActStep0103">
+            android:noHistory="true"
+        </activity>
+
+        <activity android:name="src.activities.Step01.ActStep0104">
+            android:noHistory="true"
+        </activity>
+
+        <activity android:name="src.activities.Step02.ActStep0201">
+            android:noHistory="true"
+        </activity>
+
+        <activity android:name="src.activities.Step02.ActStep0202">
+            android:noHistory="true"
+        </activity>
+
+        <activity android:name="src.activities.Step02.ActStep0203">
+            android:noHistory="true"
+        </activity>
+
+        <activity android:name="src.activities.Step02.ActStep0204">
+            android:noHistory="true"
+        </activity>
+
+        <activity android:name="src.activities.Step02.ActStep0205">
+            android:noHistory="true"
+        </activity>
+
+        <activity android:name="src.activities.Step03.ActStep0301">
+            android:noHistory="true"
+        </activity>
+
+        <activity android:name="src.activities.Step03.ActStep0302">
+            android:noHistory="true"
+        </activity>
+
+        <activity android:name="src.activities.Step03.ActStep0303">
+            android:noHistory="true"
+        </activity>
+
+        <activity android:name="src.activities.Step03.ActStep0304">
+            android:noHistory="true"
+        </activity>
+
+        <activity android:name="src.activities.Step03.ActStep0305">
+            android:noHistory="true"
+        </activity>
+
+        <activity android:name="src.activities.Step04.ActStep0401">
+            android:noHistory="true"
+        </activity>
+
+        <activity android:name="src.activities.Step04.ActStep0402">
+            android:noHistory="true"
+        </activity>
+
+
+        <activity android:name="src.activities.ActTest">
+            android:noHistory="true"
+        </activity>
+
+
+    </application>
+
+</manifest>
