@@ -7,20 +7,10 @@ import android.widget.Button;
 
 import cdmst.smartsilver.R;
 
-import src.activities.Step01.ActStep01;
-import src.activities.Step01.ActStep0102;
-import src.activities.Step01.ActStep0103;
-import src.activities.Step01.ActStep0104;
-import src.activities.Step01.ActStep0105;
-import src.activities.Step02.ActStep0201;
-import src.activities.Step02.ActStep0202;
-import src.activities.Step02.ActStep0203;
-import src.activities.Step02.ActStep0204;
-import src.activities.Step02.ActStep0205;
-import src.activities.Step03.ActStep0301;
-import src.activities.Step03.ActStep0305;
-import src.activities.Step04.ActStep0401;
-import src.activities.Step04.ActStep0402;
+import src.activities.Step01.*;
+import src.activities.Step02.*;
+import src.activities.Step03.*;
+import src.activities.Step04.*;
 
 
 /**
@@ -38,9 +28,13 @@ public class ActTest extends FrameActivity {
     Button btnStep2_4;
     Button btnStep2_5;
     Button btnStep3_1;
+    Button btnStep3_2;
+    Button btnStep3_3;
+    Button btnStep3_4;
     Button btnStep3_5;
     Button btnStep4_1;
     Button btnStep4_2;
+    Button btnStep4_3;
 
 
     @Override
@@ -64,6 +58,9 @@ public class ActTest extends FrameActivity {
         btnStep2_1 = (Button)findViewById(R.id.btn_step_2_1);
         btnStep2_1.setOnClickListener(clickBtnStep);
 
+        btnStep2_1 = (Button)findViewById(R.id.btn_step_2_1);
+        btnStep2_1.setOnClickListener(clickBtnStep);
+
         btnStep2_2 = (Button)findViewById(R.id.btn_step_2_2);
         btnStep2_2.setOnClickListener(clickBtnStep);
 
@@ -79,6 +76,15 @@ public class ActTest extends FrameActivity {
         btnStep3_1 = (Button)findViewById(R.id.btn_step_3_1);
         btnStep3_1.setOnClickListener(clickBtnStep);
 
+        btnStep3_2 = (Button)findViewById(R.id.btn_step_3_2);
+        btnStep3_2.setOnClickListener(clickBtnStep);
+
+        btnStep3_3 = (Button)findViewById(R.id.btn_step_3_3);
+        btnStep3_3.setOnClickListener(clickBtnStep);
+
+        btnStep3_4 = (Button)findViewById(R.id.btn_step_3_4);
+        btnStep3_4.setOnClickListener(clickBtnStep);
+
         btnStep3_5 = (Button)findViewById(R.id.btn_step_3_5);
         btnStep3_5.setOnClickListener(clickBtnStep);
 
@@ -87,6 +93,9 @@ public class ActTest extends FrameActivity {
 
         btnStep4_2 = (Button)findViewById(R.id.btn_step_4_2);
         btnStep4_2.setOnClickListener(clickBtnStep);
+
+        btnStep4_3 = (Button)findViewById(R.id.btn_step_4_3);
+        btnStep4_3.setOnClickListener(clickBtnStep);
     }
 
     View.OnClickListener clickBtnStep = new View.OnClickListener()
@@ -135,6 +144,18 @@ public class ActTest extends FrameActivity {
                 Intent intent = new Intent(v.getContext(), ActStep0204.class);
                 startActivity(intent);
             }
+            else if(v == btnStep2_2)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0202.class);
+                startActivity(intent);
+            }
+            else if(v == btnStep2_3)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0203.class);
+                startActivity(intent);
+            }
             else if(v == btnStep2_4)
             {
 
@@ -153,9 +174,29 @@ public class ActTest extends FrameActivity {
                 Intent intent = new Intent(v.getContext(), ActStep0301.class);
                 startActivity(intent);
             }
+
+            else if(v == btnStep3_2)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0302.class);
+                startActivity(intent);
+            }
+            else if(v == btnStep3_3)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0303.class);
+                startActivity(intent);
+            }
+            else if(v == btnStep3_4)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0304.class);
+                startActivity(intent);
+            }
             else if(v == btnStep3_5) {
 
                 Intent intent = new Intent(v.getContext(), ActStep0305.class);
+                startActivity(intent);
             }
             else if(v == btnStep4_1)
             {
@@ -167,6 +208,12 @@ public class ActTest extends FrameActivity {
             {
 
                 Intent intent = new Intent(v.getContext(), ActStep0402.class);
+                startActivity(intent);
+            }
+            else if(v == btnStep4_3)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0403.class);
                 startActivity(intent);
             }
         }
