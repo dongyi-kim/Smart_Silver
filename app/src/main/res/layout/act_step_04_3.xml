@@ -39,6 +39,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="0.7"
                     android:src="@drawable/mult_8_2_waterhippo"
+                    android:id="@+id/img_hippo"/>
                 <TextView
                      android:layout_width="match_parent"
                      android:layout_height="0dp"
@@ -47,7 +48,7 @@
                      android:layout_gravity="center"
                      android:gravity="center"
                      android:textSize="@dimen/font_size_lv6"
-                     android:id="@+id/txt_answer_1"/>
+                     android:id="@+id/txt_answer"/>
             </LinearLayout>
 
             <LinearLayout
@@ -75,7 +76,8 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="0.1"/>
+                            android:layout_weight="0.1"
+                            android:id="@+id/txt_margin_top_1"/>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
@@ -85,7 +87,92 @@
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.2"/>
+                                android:layout_weight="0.2"
+                                android:id="@+id/txt_margin_left_1"/>
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3">
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/txt_field_0403"
+                                    android:scaleType="fitCenter"
+                                    android:id="@+id/ibtn_answer_1"
+                                    android:background="@null"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="1"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="@dimen/font_size_lv6"
+                                    android:id="@+id/txt_answer_1"/>
+                            </FrameLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.1"
+                            android:id="@+id/txt_margin_top_3"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.2"
+                            android:orientation="horizontal"
+                            android:weightSum="0.5">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.2"
+                                android:id="@+id/txt_margin_left_3"/>
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3">
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/txt_field_0403"
+                                    android:scaleType="fitCenter"
+                                    android:id="@+id/ibtn_answer_3"
+                                    android:background="@null"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="3"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="@dimen/font_size_lv6"
+                                    android:id="@+id/txt_answer_3"/>
+                            </FrameLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical"
+                        android:weightSum="0.66">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.1"
+                            android:id="@+id/txt_margin_top_2"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.2"
+                            android:orientation="horizontal"
+                            android:weightSum="0.5">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.2"
+                                android:id="@+id/txt_margin_left_2"/>
                             <FrameLayout
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -100,7 +187,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="16"
+                                    android:text="2"
                                     android:layout_gravity="center"
                                     android:gravity="center"
                                     android:textSize="@dimen/font_size_lv6"
@@ -111,7 +198,8 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="0.1"/>
+                            android:layout_weight="0.1"
+                            android:id="@+id/txt_margin_top_4"/>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
@@ -121,7 +209,8 @@
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.2"/>
+                                android:layout_weight="0.2"
+                                android:id="@+id/txt_margin_left_4"/>
                             <FrameLayout
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
@@ -131,34 +220,27 @@
                                     android:layout_height="match_parent"
                                     android:src="@drawable/txt_field_0403"
                                     android:scaleType="fitCenter"
-                                    android:id="@+id/ibtn_answer_2"
+                                    android:id="@+id/ibtn_answer_4"
                                     android:background="@null"/>
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="16"
+                                    android:text="4"
                                     android:layout_gravity="center"
                                     android:gravity="center"
                                     android:textSize="@dimen/font_size_lv6"
-                                    android:id="@+id/txt_answer_2"/>
+                                    android:id="@+id/txt_answer_4"/>
                             </FrameLayout>
                         </LinearLayout>
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.5"
-                        android:orientation="vertical">
-
-                    </LinearLayout>
-                    
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.1"/>
+                    android:layout_weight="0.1"
+                    android:id="@+id/txt_margin_top_5"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -170,7 +252,8 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="0.3"/>
+                        android:layout_weight="0.3"
+                        android:id="@+id/txt_margin_left_5"/>
                     <FrameLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -180,16 +263,16 @@
                             android:layout_height="match_parent"
                             android:src="@drawable/txt_field_0403"
                             android:scaleType="fitCenter"
-                            android:id="@+id/ibtn_answer_2"
+                            android:id="@+id/ibtn_answer_5"
                             android:background="@null"/>
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="16"
+                            android:text="5"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textSize="@dimen/font_size_lv6"
-                            android:id="@+id/txt_answer_2"/>
+                            android:id="@+id/txt_answer_5"/>
                     </FrameLayout>
 
                 </LinearLayout>

@@ -86,6 +86,10 @@
             android:noHistory="true"
         </activity>
 
+        <activity android:name="src.activities.Step04.ActStep0403">
+            android:noHistory="true"
+        </activity>
+
 
         <activity android:name="src.activities.ActTest">
             android:noHistory="true"
