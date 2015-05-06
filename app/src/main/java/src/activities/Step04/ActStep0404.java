@@ -39,7 +39,7 @@ public class ActStep0404 extends StageActivity {
 
         imgSerlap = (ImageView)findViewById(R.id.img_serlap);
         txtMarginTop = (TextView)findViewById(R.id.txt_margin_top);
-        txtAnswerDescription = (TextView)findViewById(R.id.txt_answer);
+        txtAnswerDescription = (TextView)findViewById(R.id.txt_answer_description);
         ibtnAnswer[0] = (ImageButton)findViewById(R.id.ibtn_answer_1);
         ibtnAnswer[1] = (ImageButton)findViewById(R.id.ibtn_answer_2);
         ibtnAnswer[2] = (ImageButton)findViewById(R.id.ibtn_answer_3);
