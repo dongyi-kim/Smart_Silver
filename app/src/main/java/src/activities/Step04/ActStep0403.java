@@ -27,7 +27,7 @@ public class ActStep0403 extends StageActivity {
     public final ImageButton ibtnAnswer[] = new ImageButton[5];
     public final TextView txtAnswer[] = new TextView[5];
 
-    private final float fMaxMarginTop = 0.16f;
+    private final float fMaxMarginTop[] = {0.1f, 0.1f, 0.1f, 0.1f, 0.05f};
     private final float fMaxMarginLeft[] = {0.2f, 0.2f, 0.2f, 0.2f, 0.7f};
 
     private int iRetryCount = 0;
@@ -98,7 +98,7 @@ public class ActStep0403 extends StageActivity {
             txtAnswer[i].setText("" + (iNextExample + i));
 
             LinearLayout.LayoutParams param = (LinearLayout.LayoutParams)txtMarginTop[i].getLayoutParams();
-            param.weight = (float)rand.nextInt((int)(fMaxMarginTop * 100)) / 100;
+            param.weight = (float)rand.nextInt((int)(fMaxMarginTop[i] * 100)) / 100;
             txtMarginTop[i].setLayoutParams(param);
 
             param = (LinearLayout.LayoutParams)txtMarginLeft[i].getLayoutParams();
