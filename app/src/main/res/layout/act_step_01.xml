@@ -23,7 +23,7 @@
                     android:layout_height="match_parent"
                     android:textSize="@dimen/wp10"
                     android:textStyle="bold"
-                    android:text="Step 1-1"/>
+                    android:text="스탭 1-1"/>
             </RelativeLayout>
 
         </ui.WhiteChalkFrameLayout>
