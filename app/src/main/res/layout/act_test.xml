@@ -134,6 +134,13 @@
                 android:text="step 4-3"
                 android:id="@+id/btn_step_4_3"
                 />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/wp4"
+                android:text="step 4-4"
+                android:id="@+id/btn_step_4_4"
+                />
         </LinearLayout>
     </ScrollView>
 
