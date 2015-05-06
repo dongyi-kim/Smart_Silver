@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
+import cdmst.smartsilver.R;
+
 /**
  * Created by waps12b on 15. 3. 1..
  */
@@ -38,6 +40,17 @@ public abstract class FrameView extends FrameLayout
         inflat = (LayoutInflater) getContext().getSystemService(infService);
         inflat.inflate(layoutID, this, true);
     }
+
+    protected void setBackgroundImage(int drawable_id)
+    {
+        int sdk = android.os.Build.VERSION.SDK_INT;
+        if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+            this.setBackgroundDrawable( getResources().getDrawable(drawable_id) );
+        } else {
+            this.setBackground( getResources().getDrawable(drawable_id));
+        }
+    }
+
 
 
 

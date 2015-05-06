@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/img_wall">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -8,72 +8,81 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
-        <TextView
-            android:layout_weight=".15"
+        <ui.ChalkFrameLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="그림의 개수가 몇 개인지\n 세어보고 알맞은 수를 고르세요"
-            android:id="@+id/text_discription"
-            android:textSize="@dimen/font_size_lv4"
-            android:gravity="center"
-            android:layout_marginTop="20sp" />
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.15"
+                    android:text="아래에 나타난 그림이\n총 몇개 일까요?"
+                    android:id="@+id/text_discription"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/font_size_lv4"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/unit_9"
+                    android:orientation="vertical"
+                    android:id="@+id/drawfield"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+
+                    <include layout="@layout/view_round_button_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/drawfield_row_1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="5sp"/>
+
+                    <include layout="@layout/view_round_button_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/drawfield_row_2"/>
+
+                    <include layout="@layout/view_round_button_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:id="@+id/drawfield_row_3"/>
+
+                    <include layout="@layout/view_round_button_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:id="@+id/drawfield_row_4"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </ui.ChalkFrameLayout>
+
+
 
         <LinearLayout
-            android:layout_weight=".7"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            android:id="@+id/drawfield"
-            android:background="@drawable/drawfield_01_04"
-            android:layout_marginLeft="10sp"
-            android:layout_marginRight="10sp"
-            android:layout_marginBottom="20sp"
-            android:layout_gravity="center"
-            android:gravity="center">
-
-
-            <include layout="@layout/view_round_button_layout"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:id="@+id/drawfield_row_1"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginTop="5sp"/>
-
-            <include layout="@layout/view_round_button_layout"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:id="@+id/drawfield_row_2"/>
-
-            <include layout="@layout/view_round_button_layout"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_weight="1"
-                android:id="@+id/drawfield_row_3"/>
-
-            <include layout="@layout/view_round_button_layout"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_weight="1"
-                android:id="@+id/drawfield_row_4"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_weight=".15"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="10sp">
-
+            android:layout_height="@dimen/unit_3">
             <Button
                 android:layout_weight="1"
                 android:textSize="32sp"
