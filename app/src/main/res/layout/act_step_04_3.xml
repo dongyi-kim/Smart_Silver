@@ -14,7 +14,7 @@
             android:layout_height="0dp"
             android:text=" 홈쇼핑 박스 배달\n장마철을 맞이하여 ‘물먹는 돼지’를 주문하였습니다.\n모두 몇 개입니까? 알맞은 숫자를 누르세요!"
             android:id="@+id/txt_discription"
-            android:textSize="@dimen/font_size_lv3"
+            android:textSize="@dimen/wp3"
             android:gravity="center"
             android:layout_marginTop="20sp" />
 
@@ -47,7 +47,7 @@
                      android:text="8 X 2"
                      android:layout_gravity="center"
                      android:gravity="center"
-                     android:textSize="@dimen/font_size_lv6"
+                     android:textSize="@dimen/wp6"
                      android:id="@+id/txt_answer"/>
             </LinearLayout>
 
@@ -110,7 +110,7 @@
                                     android:text="1"
                                     android:layout_gravity="center"
                                     android:gravity="center"
-                                    android:textSize="@dimen/font_size_lv6"
+                                    android:textSize="@dimen/wp6"
                                     android:id="@+id/txt_answer_1"/>
                             </FrameLayout>
                         </LinearLayout>
@@ -148,7 +148,7 @@
                                     android:text="3"
                                     android:layout_gravity="center"
                                     android:gravity="center"
-                                    android:textSize="@dimen/font_size_lv6"
+                                    android:textSize="@dimen/wp6"
                                     android:id="@+id/txt_answer_3"/>
                             </FrameLayout>
                         </LinearLayout>
@@ -196,7 +196,7 @@
                                     android:text="2"
                                     android:layout_gravity="center"
                                     android:gravity="center"
-                                    android:textSize="@dimen/font_size_lv6"
+                                    android:textSize="@dimen/wp6"
                                     android:id="@+id/txt_answer_2"/>
                             </FrameLayout>
                         </LinearLayout>
@@ -234,7 +234,7 @@
                                     android:text="4"
                                     android:layout_gravity="center"
                                     android:gravity="center"
-                                    android:textSize="@dimen/font_size_lv6"
+                                    android:textSize="@dimen/wp6"
                                     android:id="@+id/txt_answer_4"/>
                             </FrameLayout>
                         </LinearLayout>
@@ -277,7 +277,7 @@
                             android:text="5"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:textSize="@dimen/font_size_lv6"
+                            android:textSize="@dimen/wp6"
                             android:id="@+id/txt_answer_5"/>
                     </FrameLayout>
 

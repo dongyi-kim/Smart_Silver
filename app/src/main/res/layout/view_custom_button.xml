@@ -17,7 +17,7 @@
                 android:paddingRight="2dp"
                 android:textStyle="bold"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/font_size_lv3"
+                android:textSize="@dimen/wp3"
                 android:text="11212"
                 />
 

@@ -1,25 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@drawable/img_wall"
-        />
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/img_wall">
 
-    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:padding="@dimen/wp5"
         android:gravity="center_horizontal">
+        <ui.WhiteChalkFrameLayout
+            android:layout_width="@dimen/wp90"
+            android:layout_height="@dimen/wp25">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/wp10"
+                    android:textStyle="bold"
+                    android:text="Step 1-1"/>
+            </RelativeLayout>
 
+        </ui.WhiteChalkFrameLayout>
         <ui.ChalkFrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/wp80"
             >
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -32,26 +43,26 @@
                     android:layout_height="wrap_content"
                     android:padding="5dp"
                     android:gravity="center"
-                    android:layout_marginTop="20sp"
+                    android:layout_marginTop="10dp"
                     android:text="아래에 적힌 숫자들을\n따라서 입력하세요"
                     android:textColor="#FFFFFF"
                     android:textStyle="bold"
-                    android:textSize="@dimen/font_size_lv4"
+                    android:textSize="@dimen/wp10"
                     android:id="@+id/txt_description"
                     />
 
                 <LinearLayout
-                    android:layout_weight=".25"
                     android:layout_width="wrap_content"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:layout_marginTop="@dimen/wp5"
                     android:gravity="center">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
-                        android:textSize="@dimen/font_size_lv6"
+                        android:textSize="@dimen/wp10"
                         android:textStyle="bold"
                         android:text="123456789"
                         android:textColor="#FFFFFF"
@@ -62,7 +73,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
-                        android:textSize="@dimen/font_size_lv6"
+                        android:textSize="@dimen/wp10"
                         android:textColor="#FFFFFF"
                         android:text="123456___"
                         android:id="@+id/txt_answer"
@@ -80,7 +91,8 @@
         <src.viewes.ViewNumberPad
             android:id="@+id/view_number_pad"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/hdp_050"
+            android:layout_height="@dimen/wp80"
+            android:layout_margin="@dimen/wp5"
             android:background="@color/trans_half">
 
         </src.viewes.ViewNumberPad>

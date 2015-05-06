@@ -14,7 +14,7 @@
             android:layout_height="0dp"
             android:text="다음 네모 안에 알맞은 수를 찾아 누르세요."
             android:id="@+id/text_discription"
-            android:textSize="@dimen/font_size_lv4"
+            android:textSize="@dimen/wp10"
             android:gravity="center"
             android:layout_marginTop="20sp" />
 

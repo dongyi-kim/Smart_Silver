@@ -14,7 +14,7 @@
             android:layout_height="0dp"
             android:text="다음 네모 안에 알맞은 수를 찾아순서대로누르세요."
             android:id="@+id/text_discription"
-            android:textSize="@dimen/font_size_lv4"
+            android:textSize="@dimen/wp4"
             android:gravity="center"/>
 
         <LinearLayout
@@ -64,7 +64,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textSize="@dimen/font_size_lv3"
+                        android:textSize="@dimen/wp3"
                         android:text="+1"
                         android:id="@+id/txt_process_1">
                     </TextView>
@@ -93,7 +93,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textSize="@dimen/font_size_lv3"
+                        android:textSize="@dimen/wp3"
                         android:text="+2"
                         android:id="@+id/txt_process_2">
                     </TextView>
@@ -122,7 +122,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textSize="@dimen/font_size_lv3"
+                        android:textSize="@dimen/wp3"
                         android:text="+3"
                         android:id="@+id/txt_process_3">
                     </TextView>
@@ -156,7 +156,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textSize="@dimen/font_size_lv4"
+                        android:textSize="@dimen/wp4"
                         android:text="1"
                         android:id="@+id/txt_answer_1">
                     </TextView>
@@ -185,7 +185,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textSize="@dimen/font_size_lv4"
+                        android:textSize="@dimen/wp4"
                         android:text="2"
                         android:id="@+id/txt_answer_2">
                     </TextView>
@@ -214,7 +214,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textSize="@dimen/font_size_lv4"
+                        android:textSize="@dimen/wp4"
                         android:text="3"
                         android:id="@+id/txt_answer_3">
                     </TextView>
@@ -243,7 +243,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textSize="@dimen/font_size_lv4"
+                        android:textSize="@dimen/wp4"
                         android:text="4"
                         android:id="@+id/txt_answer_4">
                     </TextView>
@@ -263,7 +263,7 @@
 
             <Button
                 android:layout_weight=".25"
-                android:textSize="@dimen/font_size_lv4"
+                android:textSize="@dimen/wp4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="1"
@@ -271,7 +271,7 @@
 
             <Button
                 android:layout_weight=".25"
-                android:textSize="@dimen/font_size_lv4"
+                android:textSize="@dimen/wp4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="2"
@@ -279,7 +279,7 @@
 
             <Button
                 android:layout_weight=".25"
-                android:textSize="@dimen/font_size_lv4"
+                android:textSize="@dimen/wp4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="3"

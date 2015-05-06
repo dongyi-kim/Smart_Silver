@@ -8,13 +8,13 @@
         android:gravity="center_horizontal">
 
         <TextView
-            android:layout_weight=".15"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_margin="@dimen/wp5"
+            android:layout_height="@dimen/wp10"
             android:id="@+id/txt_discription"
-            android:text="다음 중 짝수를 찾아 누르세요."
+            android:text="다음 중 짝수를 찾아서 누르세요."
             android:gravity="center"
-            android:textSize="@dimen/font_size_lv4"
+            android:textSize="@dimen/wp10"
             android:layout_marginTop="20sp" />
 
         <LinearLayout
@@ -60,7 +60,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:clickable="false"
-                        android:textSize="@dimen/font_size_lv3"
+                        android:textSize="@dimen/wp7"
+                        android:textStyle="bold"
                         android:text="(1,1)"
                         android:id="@+id/txt_grid_1_1">
                     </TextView>
@@ -88,7 +89,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:clickable="false"
-                        android:textSize="@dimen/font_size_lv3"
+                        android:textSize="@dimen/wp7"
+                        android:textStyle="bold"
                         android:text="(1,2)"
                         android:id="@+id/txt_grid_1_2">
                     </TextView>
@@ -124,7 +126,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:clickable="false"
-                        android:textSize="@dimen/font_size_lv3"
+                        android:textSize="@dimen/wp7"
+                        android:textStyle="bold"
                         android:text="(2,1)"
                         android:id="@+id/txt_grid_2_1">
                     </TextView>
@@ -152,7 +155,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:clickable="false"
-                        android:textSize="@dimen/font_size_lv3"
+                        android:textSize="@dimen/wp7"
+                        android:textStyle="bold"
                         android:text="(2,2)"
                         android:id="@+id/txt_grid_2_2">
                     </TextView>
