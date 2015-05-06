@@ -38,18 +38,13 @@
                 android:orientation="vertical"
                 android:gravity="center">
 
-                <TextView
+                <ui.ChalkTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:gravity="center"
-                    android:layout_marginTop="10dp"
+                    android:id="@+id/txt_discription"
                     android:text="아래에 적힌 숫자들을\n따라서 입력하세요"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/wp10"
-                    android:id="@+id/txt_description"
-                    />
+                    android:textSize="@dimen/wp12"/>
+
 
                 <LinearLayout
                     android:layout_width="wrap_content"

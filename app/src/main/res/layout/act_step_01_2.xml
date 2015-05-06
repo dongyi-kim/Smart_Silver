@@ -36,15 +36,14 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.15"
+
+                <ui.ChalkTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_discription"
                     android:text="아래에 나타난 그림이\n총 몇개 일까요?"
-                    android:id="@+id/text_discription"
-                    android:textColor="#FFFFFF"
-                    android:textSize="@dimen/wp10"
-                    android:gravity="center"/>
+                    android:textSize="@dimen/wp12"/>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"

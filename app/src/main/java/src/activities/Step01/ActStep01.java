@@ -30,7 +30,7 @@ public class ActStep01 extends StageActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_01);
 
-        txtDescrib = (TextView)findViewById(R.id.txt_description);
+        //txtDescrib = (TextView)findViewById(R.id.txt_description);
         txtQuestion = (TextView)findViewById(R.id.txt_question);
         txtAnswer = (TextView)findViewById(R.id.txt_answer);
         vNumberPad = (ViewNumberPad)findViewById(R.id.view_number_pad);
