@@ -1,6 +1,6 @@
-# Smart_Silver
-"Smart Silver" is an android application that 
-  - help seniors adapt to smart-device and
-  - learn foundation of mathmatics.
- 
-this project is for android-studio with gradle.
+# Smart_Silver (Android Studio Project)
+"Smart Silver" is an android application that ...
+ - help seniors adapt to smart-device and
+ - help seniors learn foundation of mathmatics.
+
+Anyone can contribute to this project.
