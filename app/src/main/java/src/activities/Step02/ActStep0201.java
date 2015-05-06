@@ -141,6 +141,8 @@ public class ActStep0201 extends StageActivity {
         iAnswerCount = 0;
         iMaxAnswerCount = ((dataSet.iStartNumber - iCurrentNumber + 1) / dataSet.iDistanceNumber) - 1;
 
+        imgCorrectMark[0][0].setVisibility(View.VISIBLE);
+
         StartRecording();
     }
 
