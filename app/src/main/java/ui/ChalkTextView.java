@@ -27,7 +27,6 @@ public class ChalkTextView extends TextView {
         super(context, attrs, defStyle);
         Typeface typeface = Typeface.createFromAsset(context.getAssets(), "fonts/nanum_pen.ttf");
         setTypeface(typeface);
-        setTextColor(Color.WHITE);
         setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
     }
 }

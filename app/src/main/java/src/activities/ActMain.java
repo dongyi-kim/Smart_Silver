@@ -9,6 +9,7 @@ import android.widget.Button;
 
 
 import cdmst.smartsilver.R;
+import src.activities.ResultPage.StatisticsActivity;
 import src.activities.Step01.*;
 import src.activities.Step02.*;
 import src.activities.Step03.*;
@@ -43,7 +44,8 @@ public class ActMain extends FrameActivity{
             startActivity(intent);
         }else if(vSender == rippleMyResult)
         {
-
+            Intent intent = new Intent(this, StatisticsActivity.class);
+            startActivity(intent);
         }else if(vSender == rippleDeveloper)
         {
             Intent intent = new Intent(this, ActTest.class);
