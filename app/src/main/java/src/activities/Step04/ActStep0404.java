@@ -103,12 +103,12 @@ public class ActStep0404 extends StageActivity {
     }
 
     public void goNext(Object object){
-        Intent intent = new Intent(this, ActMain.class);
+        Intent intent = new Intent(this, ActStep0405.class);
         startActivity(intent);
     }
 
     public class Step0404DataSet{
-        private final String arrAnswerDescription[] = {"¹ÙÁö 3¹ú¾¿ 3´Ü", "¾ç¸» 6Â¦ 2ÁÙ", "Æ¼¼ÅÃ÷ 7Àå¾¿ 3ÁÙ", "¾çÆÄ 9°³ 4¹­À½", "ÆÄ 10°³Â¥¸® 3´Ü"};
+        private final String arrAnswerDescription[] = {"ë°”ì§€ 3ë²Œì”© 3ë‹¨", "ì–‘ë§ 6ì§ 2ì¤„", "í‹°ì…”ì¸  7ì¥ì”© 3ì¤„", "ì–‘íŒŒ 9ê°œ 4ë¬¶ìŒ", "íŒŒ 10ê°œì§œë¦¬ 3ë‹¨"};
         private final int arrImageSource[] = {R.drawable.serlap1_floor3, R.drawable.serlap1_floor2, R.drawable.serlap1_floor4, R.drawable.serlap2_floor3, R.drawable.serlap2_floor1};
         private final float arrMarginTop[] = {0.3f, 0.4f, 0.2f, 0.15f, 0.4f};
         private final int arrAnswer[] = {9, 12, 21, 36, 30};

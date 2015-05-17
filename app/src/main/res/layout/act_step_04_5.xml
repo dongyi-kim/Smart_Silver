@@ -12,8 +12,9 @@
             android:layout_weight=".15"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:text=" 다음 중 개수와 묶음이 알맞게 표시된 것을 누르세요!"
-            android:textSize="@dimen/wp4"
+            android:text=" 노인학교 가을 축제를 준비합니다. 화장지를 사러 마트에 갔습니다.\n더 많은 화장지를 찾아 단추를 누르세요!"
+            android:id="@+id/txt_description"
+            android:textSize="@dimen/wp5"
             android:gravity="center"
             android:layout_marginTop="20sp" />
 
@@ -37,7 +38,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="0.7"
-                    android:src="@drawable/mult_2_2_goodgam"
+                    android:src="@drawable/mult_3_3_tissue"
                     android:id="@+id/img_picture_1"/>
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -48,17 +49,25 @@
                         android:layout_height="match_parent"
                         android:src="@drawable/txt_field_0401"
                         android:id="@+id/ibtn_answer_1"
+                        android:scaleType="fitCenter"
                         android:background="@null"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="2개씩\n2묶음"
+                        android:text="3개씩\n3묶음"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:textSize="@dimen/wp4"
+                        android:textSize="@dimen/wp5"
                         android:id="@+id/txt_answer_1"/>
                 </FrameLayout>
             </LinearLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.03"
+                android:scaleType="fitCenter"
+                android:src="@drawable/line_blue"/>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -71,7 +80,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="0.7"
-                    android:src="@drawable/mult_5_2_hongshi"
+                    android:src="@drawable/mult_2_6_tissue"
                     android:id="@+id/img_picture_2"/>
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -82,14 +91,15 @@
                         android:layout_height="match_parent"
                         android:src="@drawable/txt_field_0401"
                         android:id="@+id/ibtn_answer_2"
+                        android:scaleType="fitCenter"
                         android:background="@null"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="2개씩\n2묶음"
+                        android:text="2개씩\n6묶음"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:textSize="@dimen/wp4"
+                        android:textSize="@dimen/wp5"
                         android:id="@+id/txt_answer_2"/>
                 </FrameLayout>
             </LinearLayout>
