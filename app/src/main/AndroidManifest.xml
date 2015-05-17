@@ -132,6 +132,12 @@
             >
         </activity>
 
+        <activity android:name="src.activities.Step04.ActStep0405"
+            android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
+        </activity>
+
 
         <activity android:name="src.activities.ActTest"
             >
