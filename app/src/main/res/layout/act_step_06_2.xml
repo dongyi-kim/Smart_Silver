@@ -28,64 +28,57 @@
             android:weightSum="1">
 
             <ImageView
-                android:id="@+id/img_6_1"
+                android:id="@+id/img_6_2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight=".4"
-                android:src="@drawable/calendar_6_1" />
+                android:src="@drawable/circle_graph_6_2" />
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.02"></LinearLayout>
+                android:layout_weight="0.06"></LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight=".15"
+                android:layout_weight="0.2"
                 android:gravity="center"
-                android:orientation="vertical"
-                android:weightSum="1">
+                android:weightSum="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2시간"
+                    android:textSize="@dimen/wp6"
+                    android:id="@+id/btn_ans_1"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight=".3">
+                    android:layout_weight=".1"></LinearLayout>
 
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="2계절"
-                        android:textSize="@dimen/wp5"
-                        android:id="@+id/btn_ans_1"/>
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.02"></LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".15"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:weightSum="1">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4시간"
+                    android:textSize="@dimen/wp6"
+                    android:id="@+id/btn_ans_2"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight=".3">
+                    android:layout_weight=".1"></LinearLayout>
 
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="4계절"
-                        android:textSize="@dimen/wp5"
-                        android:id="@+id/btn_ans_2"/>
-                </LinearLayout>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5시간"
+                    android:textSize="@dimen/wp6"
+                    android:id="@+id/btn_ans_3"/>
+
+
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
