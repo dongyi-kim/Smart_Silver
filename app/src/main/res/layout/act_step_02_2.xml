@@ -15,7 +15,7 @@
         android:layout_height="0dp"
         android:text=" 더하기 빼기 O, X 퀴즈\n다음 더하기 빼기가 맞으면 O, 틀리면 X를 누르세요."
         android:id="@+id/txt_discription"
-        android:textSize="@dimen/font_size_lv4"
+        android:textSize="@dimen/wp4"
         android:gravity="center"
         android:layout_marginTop="20sp" />
 
@@ -47,7 +47,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:background="@color/material_blue_grey_800"
-                    android:textSize="@dimen/font_size_lv8"
+                    android:textSize="@dimen/wp8"
                     android:text="1"
                     android:id="@+id/txt_operand_1"/>
                 <TextView
@@ -57,7 +57,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:background="@color/material_blue_grey_800"
-                    android:textSize="@dimen/font_size_lv8"
+                    android:textSize="@dimen/wp8"
                     android:text="+"
                     android:id="@+id/txt_operator"/>
                 <TextView
@@ -67,7 +67,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:background="@color/material_blue_grey_800"
-                    android:textSize="@dimen/font_size_lv8"
+                    android:textSize="@dimen/wp8"
                     android:text="1"
                     android:id="@+id/txt_operand_2"/>
                 <TextView
@@ -77,7 +77,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:background="@color/material_blue_grey_800"
-                    android:textSize="@dimen/font_size_lv8"
+                    android:textSize="@dimen/wp8"
                     android:text="="
                     android:id="@+id/txt_equal_sign"/>
                 <TextView
@@ -87,7 +87,7 @@
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:background="@color/material_blue_grey_800"
-                    android:textSize="@dimen/font_size_lv8"
+                    android:textSize="@dimen/wp8"
                     android:text="2"
                     android:id="@+id/txt_answer"/>
             </LinearLayout>
@@ -111,7 +111,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
                 android:text="O"
-                android:textSize="@dimen/font_size_lv7"
+                android:textSize="@dimen/wp7"
                 android:id="@+id/btn_answer_isRight"/>
 
             <TextView
@@ -124,7 +124,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
                 android:text="X"
-                android:textSize="@dimen/font_size_lv7"
+                android:textSize="@dimen/wp7"
                 android:id="@+id/btn_answer_isFalse"/>
         </LinearLayout>
 

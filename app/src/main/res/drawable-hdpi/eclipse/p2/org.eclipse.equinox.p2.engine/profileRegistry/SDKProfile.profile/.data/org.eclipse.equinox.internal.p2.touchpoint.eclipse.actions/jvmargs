@@ -1,4 +1,0 @@
-#Mon Jan 19 10:30:26 CET 2015
--Xms=200m
--XX\:MaxPermSize\==384m
--Xmx=2G

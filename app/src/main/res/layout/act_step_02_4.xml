@@ -14,7 +14,7 @@
             android:layout_height="0dp"
             android:text="더하기 빼기를 이용하여 수 만들기\n□ 안에 알맞은 수를 찾아 누르세요."
             android:id="@+id/txt_discription"
-            android:textSize="@dimen/font_size_lv4"
+            android:textSize="@dimen/wp4"
             android:gravity="center"
             android:layout_marginTop="20sp" />
 
@@ -48,7 +48,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="1"
-                    android:textSize="@dimen/font_size_lv8"
+                    android:textSize="@dimen/wp8"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:id="@+id/txt_operand_1"/>
@@ -61,7 +61,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="+"
-                android:textSize="@dimen/font_size_lv8"
+                android:textSize="@dimen/wp8"
                 android:id="@+id/txt_operator_1"/>
 
             <FrameLayout
@@ -80,7 +80,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="1"
-                    android:textSize="@dimen/font_size_lv8"
+                    android:textSize="@dimen/wp8"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:id="@+id/txt_operand_2"/>
@@ -93,7 +93,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="+"
-                android:textSize="@dimen/font_size_lv8"
+                android:textSize="@dimen/wp8"
                 android:id="@+id/txt_operator_2"/>
 
             <FrameLayout
@@ -112,7 +112,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="1"
-                    android:textSize="@dimen/font_size_lv8"
+                    android:textSize="@dimen/wp8"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:id="@+id/txt_operand_3"/>
@@ -125,7 +125,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="="
-                android:textSize="@dimen/font_size_lv8"/>
+                android:textSize="@dimen/wp8"/>
 
             <FrameLayout
                 android:layout_width="0dp"
@@ -143,7 +143,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="1"
-                    android:textSize="@dimen/font_size_lv8"
+                    android:textSize="@dimen/wp8"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:id="@+id/txt_answer"/>
@@ -169,7 +169,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"
                 android:text="1"
-                android:textSize="@dimen/font_size_lv7"
+                android:textSize="@dimen/wp7"
                 android:id="@+id/btn_answer_1"/>
 
             <TextView
@@ -182,7 +182,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"
                 android:text="2"
-                android:textSize="@dimen/font_size_lv7"
+                android:textSize="@dimen/wp7"
                 android:id="@+id/btn_answer_2"/>
 
             <TextView
@@ -195,7 +195,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.2"
                 android:text="3"
-                android:textSize="@dimen/font_size_lv7"
+                android:textSize="@dimen/wp7"
                 android:id="@+id/btn_answer_3"/>
         </LinearLayout>
     </LinearLayout>

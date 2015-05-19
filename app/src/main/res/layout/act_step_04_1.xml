@@ -13,8 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:text=" 다음 중 개수와 묶음이 알맞게 표시된 것을 누르세요!"
-            android:id="@+id/txt_discription"
-            android:textSize="@dimen/font_size_lv4"
+            android:textSize="@dimen/wp4"
             android:gravity="center"
             android:layout_marginTop="20sp" />
 
@@ -56,7 +55,7 @@
                         android:text="2개씩\n2묶음"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:textSize="@dimen/font_size_lv4"
+                        android:textSize="@dimen/wp4"
                         android:id="@+id/txt_answer_1"/>
                 </FrameLayout>
             </LinearLayout>
@@ -90,7 +89,7 @@
                         android:text="2개씩\n2묶음"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:textSize="@dimen/font_size_lv4"
+                        android:textSize="@dimen/wp4"
                         android:id="@+id/txt_answer_2"/>
                 </FrameLayout>
             </LinearLayout>

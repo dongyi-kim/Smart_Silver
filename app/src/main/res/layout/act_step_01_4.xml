@@ -14,7 +14,7 @@
             android:id="@+id/txt_discription"
             android:text="다음 중 가장 큰 수를 찾아 누르세요."
             android:gravity="center"
-            android:textSize="@dimen/font_size_lv4"
+            android:textSize="@dimen/wp4"
             android:layout_marginTop="20sp" />
 
         <LinearLayout
@@ -60,7 +60,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:clickable="false"
-                        android:textSize="@dimen/font_size_lv3"
+                        android:textSize="@dimen/wp3"
                         android:text="(1,1)"
                         android:id="@+id/txt_grid_1_1">
                     </TextView>
@@ -88,7 +88,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:clickable="false"
-                        android:textSize="@dimen/font_size_lv3"
+                        android:textSize="@dimen/wp3"
                         android:text="(1,2)"
                         android:id="@+id/txt_grid_1_2">
                     </TextView>
@@ -124,7 +124,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:clickable="false"
-                        android:textSize="@dimen/font_size_lv3"
+                        android:textSize="@dimen/wp3"
                         android:text="(2,1)"
                         android:id="@+id/txt_grid_2_1">
                     </TextView>
@@ -152,7 +152,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:clickable="false"
-                        android:textSize="@dimen/font_size_lv3"
+                        android:textSize="@dimen/wp3"
                         android:text="(2,2)"
                         android:id="@+id/txt_grid_2_2">
                     </TextView>

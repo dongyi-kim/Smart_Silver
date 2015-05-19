@@ -16,7 +16,7 @@
             android:text=" 할머니와 할아버지가 손주들에게 받은 송편을 먹었습니다. 송편은 모두 몇 개가 남았을까요? 아래 숫자를 누르세요!
 "
             android:id="@+id/text_discription"
-            android:textSize="@dimen/font_size_lv3"
+            android:textSize="@dimen/wp3"
             android:gravity="center"/>
 
         <LinearLayout
@@ -97,7 +97,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/font_size_lv2"
+                            android:textSize="@dimen/wp2"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:text="\n송편 10개"
@@ -140,7 +140,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/font_size_lv2"
+                            android:textSize="@dimen/wp2"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:text="\송편 2개"
@@ -194,7 +194,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/font_size_lv2"
+                            android:textSize="@dimen/wp2"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:text="\송편 5개"
@@ -215,7 +215,7 @@
 
             <Button
                 android:layout_weight=".25"
-                android:textSize="@dimen/font_size_lv4"
+                android:textSize="@dimen/wp4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="1"
@@ -223,7 +223,7 @@
 
             <Button
                 android:layout_weight=".25"
-                android:textSize="@dimen/font_size_lv4"
+                android:textSize="@dimen/wp4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="2"
@@ -231,7 +231,7 @@
 
             <Button
                 android:layout_weight=".25"
-                android:textSize="@dimen/font_size_lv4"
+                android:textSize="@dimen/wp4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="3"

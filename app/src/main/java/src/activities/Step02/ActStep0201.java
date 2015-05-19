@@ -141,6 +141,8 @@ public class ActStep0201 extends StageActivity {
         iAnswerCount = 0;
         iMaxAnswerCount = ((dataSet.iStartNumber - iCurrentNumber + 1) / dataSet.iDistanceNumber) - 1;
 
+        imgCorrectMark[0][0].setVisibility(View.VISIBLE);
+
         StartRecording();
     }
 
@@ -154,6 +156,7 @@ public class ActStep0201 extends StageActivity {
             public void onDismiss(DialogInterface dialog) {
                 if(isRight || iRetryCount > 1){
                     iStage++;
+
                     if(iStage <= NUM_OF_STAGE) setQuestion(false);
                     else goNext();
                 }

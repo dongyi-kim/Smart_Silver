@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_weight=".2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text=" 홈쇼핑 박스 배달\n장마철을 맞이하여 ‘물먹는 돼지’를 주문하였습니다.\n모두 몇 개입니까? 알맞은 숫자를 누르세요!"
+            android:id="@+id/txt_discription"
+            android:textSize="@dimen/wp3"
+            android:gravity="center"
+            android:layout_marginTop="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="0.7"
+            android:weightSum="1"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:weightSum="1">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/mult_8_2_waterhippo"
+                    android:id="@+id/img_hippo"/>
+                <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="0dp"
+                    android:layout_weight="0.3"
+                     android:text="8 X 2"
+                     android:layout_gravity="center"
+                     android:gravity="center"
+                     android:textSize="@dimen/wp6"
+                     android:id="@+id/txt_answer"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:weightSum="1">
+            
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:weightSum="0.7">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.1"
+                            android:id="@+id/txt_margin_top_1"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.25"
+                            android:orientation="horizontal"
+                            android:weightSum="0.5">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.2"
+                                android:id="@+id/txt_margin_left_1"/>
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3">
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/txt_field_0403"
+                                    android:scaleType="fitCenter"
+                                    android:id="@+id/ibtn_answer_1"
+                                    android:background="@null"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="1"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="@dimen/wp6"
+                                    android:id="@+id/txt_answer_1"/>
+                            </FrameLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.1"
+                            android:id="@+id/txt_margin_top_3"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.25"
+                            android:orientation="horizontal"
+                            android:weightSum="0.5">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.2"
+                                android:id="@+id/txt_margin_left_3"/>
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3">
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/txt_field_0403"
+                                    android:scaleType="fitCenter"
+                                    android:id="@+id/ibtn_answer_3"
+                                    android:background="@null"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="3"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="@dimen/wp6"
+                                    android:id="@+id/txt_answer_3"/>
+                            </FrameLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="0.7">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.1"
+                            android:id="@+id/txt_margin_top_2"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.25"
+                            android:orientation="horizontal"
+                            android:weightSum="0.5">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.2"
+                                android:id="@+id/txt_margin_left_2"/>
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3">
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/txt_field_0403"
+                                    android:scaleType="fitCenter"
+                                    android:id="@+id/ibtn_answer_2"
+                                    android:background="@null"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="2"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="@dimen/wp6"
+                                    android:id="@+id/txt_answer_2"/>
+                            </FrameLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.1"
+                            android:id="@+id/txt_margin_top_4"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.25"
+                            android:orientation="horizontal"
+                            android:weightSum="0.5">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.2"
+                                android:id="@+id/txt_margin_left_4"/>
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.3">
+                                <ImageButton
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/txt_field_0403"
+                                    android:scaleType="fitCenter"
+                                    android:id="@+id/ibtn_answer_4"
+                                    android:background="@null"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="4"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="@dimen/wp6"
+                                    android:id="@+id/txt_answer_4"/>
+                            </FrameLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.05"
+                    android:id="@+id/txt_margin_top_5"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.25"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3"
+                        android:id="@+id/txt_margin_left_5"/>
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3">
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/txt_field_0403"
+                            android:scaleType="fitCenter"
+                            android:id="@+id/ibtn_answer_5"
+                            android:background="@null"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="5"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="@dimen/wp6"
+                            android:id="@+id/txt_answer_5"/>
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -95,8 +95,8 @@ public class ActStep0104 extends StageActivity {
             }
 
         //set button's position
-        int iHeightMarginSum = (R.dimen.activity_vertical_margin) / 20000000;
-        int iWidthMarginSum = (R.dimen.activity_horizontal_margin) / 20000000;
+        int iHeightMarginSum = (R.dimen.wp5) / 20000000;
+        int iWidthMarginSum = (R.dimen.wp5) / 20000000;
 
         for(int i = 0; i < MAX_ROW_NUMBER; i++)
             for(int j = 0; j < MAX_COLUMN_NUMBER; j++){

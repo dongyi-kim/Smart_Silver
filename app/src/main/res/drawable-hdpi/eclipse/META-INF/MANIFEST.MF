@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Created-By: 1.6.0_32 (Sun Microsystems Inc.)
-
-Name: eclipsec.exe
-SHA1-Digest: 5UoAu2ayVBoVXQjXObbkKLQEmLQ=
-
-Name: eclipse.exe
-SHA1-Digest: 9gcT8YcLh0eyhZaIq1Y/aPmQ/o8=
-

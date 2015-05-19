@@ -38,7 +38,7 @@ public class CButton extends FrameView {
         vText = (TextView)findViewById(R.id.text);
 
         vText.setText(context.obtainStyledAttributes( attrs, R.styleable.CButton ).getString( R.styleable.CButton_text));
-        vText.setTextSize(TypedValue.COMPLEX_UNIT_PX, context.obtainStyledAttributes( attrs, R.styleable.CButton ).getDimension( R.styleable.CButton_textSize, R.dimen.font_size_lv2));
+        vText.setTextSize(TypedValue.COMPLEX_UNIT_PX, context.obtainStyledAttributes( attrs, R.styleable.CButton ).getDimension( R.styleable.CButton_textSize, R.dimen.wp5));
 
     }
 

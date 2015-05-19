@@ -15,7 +15,7 @@
         android:layout_height="0dp"
         android:text=" 할머니와 할아버지는 마당놀이를 보러 갔습니다. 할아버지는 입장료로 50,000원을 냈습니다. 마당놀이 1인 입장료는 15,000원 입니다. 받아야 할 거스름돈 만큼 오른쪽 아래 돈 모양을 누르세요."
         android:id="@+id/txt_discription"
-        android:textSize="@dimen/font_size_lv3"
+        android:textSize="@dimen/wp3"
         android:gravity="center"/>
 
     <LinearLayout
@@ -64,7 +64,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:textSize="@dimen/font_size_lv3"
+                        android:textSize="@dimen/wp3"
                         android:id="@+id/txt_set_1"
                         android:text="입장권\n15,000원"/>
                 </FrameLayout>
@@ -100,7 +100,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:textSize="@dimen/font_size_lv3"
+                        android:textSize="@dimen/wp3"
                         android:id="@+id/txt_set_2"
                         android:text="입장권\n15,000원"/>
                 </FrameLayout>
@@ -161,7 +161,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:textSize="@dimen/font_size_lv3"
+                        android:textSize="@dimen/wp3"
                         android:id="@+id/txt_set_3"
                         android:text="마당놀이 입장권 15,000원"/>
                 </FrameLayout>
@@ -197,7 +197,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:textSize="@dimen/font_size_lv3"
+                        android:textSize="@dimen/wp3"
                         android:id="@+id/txt_set_4"
                         android:text="마당놀이 입장권 15,000원"/>
                 </FrameLayout>
@@ -251,7 +251,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:textSize="@dimen/font_size_lv3"
+                    android:textSize="@dimen/wp3"
                     android:id="@+id/txt_set_5_long"
                     android:text="마당놀이 입장권 15,000원"/>
             </FrameLayout>
@@ -270,7 +270,7 @@
 
             <Button
                 android:layout_weight=".25"
-                android:textSize="@dimen/font_size_lv5"
+                android:textSize="@dimen/wp5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="1"
@@ -283,7 +283,7 @@
 
             <Button
                 android:layout_weight=".25"
-                android:textSize="@dimen/font_size_lv5"
+                android:textSize="@dimen/wp5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="2"
@@ -296,7 +296,7 @@
 
             <Button
                 android:layout_weight=".25"
-                android:textSize="@dimen/font_size_lv5"
+                android:textSize="@dimen/wp5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="3"

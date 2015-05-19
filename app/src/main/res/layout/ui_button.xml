@@ -24,7 +24,7 @@
                 android:id="@+id/text"
                 android:text="Button"
                 android:gravity="center"
-                android:textSize="@dimen/font_size_lv2"
+                android:textSize="@dimen/wp2"
 
                 android:background="@color/transparent"/>
 

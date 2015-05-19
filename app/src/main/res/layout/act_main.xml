@@ -5,117 +5,141 @@
     tools:context=".actMain"
     android:background="@drawable/img_wall">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="10">
-        <ImageView
-            android:layout_weight="7"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/unit_9"
-            android:paddingLeft="@dimen/unit_1"
-            android:paddingTop="@dimen/unit_1"
-            android:scaleType="centerInside"
-
-            android:src="@drawable/img_chalkboard"/>
-
+        android:layout_margin="@dimen/wp10">
+        
         <LinearLayout
-            android:layout_weight="3"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/wp100"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:paddingTop="@dimen/unit_2">
+            android:gravity="center">
+            <ui.WhiteChalkFrameLayout
+                android:layout_width="@dimen/wp90"
+                android:layout_height="@dimen/wp25">
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/wp10"
+                        android:text="시니어 스마트"/>
+                </RelativeLayout>
+
+            </ui.WhiteChalkFrameLayout>
+            <ImageView
+                android:layout_width="@dimen/wp100"
+                android:layout_height="@dimen/wp60"
+                android:scaleType="centerInside"
+
+                android:src="@drawable/img_chalkboard"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/wp50"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/wp10"
+            android:layout_marginLeft="@dimen/wp5">
 
             <ui.RippleView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/unit_2"
+                android:layout_height="@dimen/wp20"
                 android:id="@+id/ripple_learning"
                 >
-                <ImageView
+                <ui.MemoFrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/unit_2"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/img_memo_sticker"/>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="10dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:textSize="@dimen/font_size_lv4"
-                        android:text="학습하기"/>
-                    <ImageView
-                        android:layout_alignParentRight="true"
-                        android:layout_height="@dimen/unit_2"
-                        android:layout_width="@dimen/unit_2"
-                        android:src="@drawable/icon_pencil_black"/>
-                </RelativeLayout>
-            </ui.RippleView>
+                    android:layout_height="match_parent">
 
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/wp1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textSize="@dimen/wp9"
+                            android:text="학습하기"/>
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_height="match_parent"
+                            android:layout_width="@dimen/wp12"
+                            android:src="@drawable/icon_pencil_black"/>
+                    </RelativeLayout>
+
+                </ui.MemoFrameLayout>
+
+            </ui.RippleView>
 
             <ui.RippleView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/unit_2"
+                android:layout_height="@dimen/wp20"
                 android:id="@+id/ripple_my_result"
                 >
-                <ImageView
+                <ui.MemoFrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/unit_2"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/img_memo_sticker"/>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="10dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:textSize="@dimen/font_size_lv4"
-                        android:text="학습결과"/>
-                    <ImageView
-                        android:layout_alignParentRight="true"
-                        android:layout_height="@dimen/unit_2"
-                        android:layout_width="@dimen/unit_2"
-                        android:src="@drawable/icon_clipboard_black"/>
-                </RelativeLayout>
-            </ui.RippleView>
+                    android:layout_height="match_parent">
 
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/wp1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textSize="@dimen/wp9"
+                            android:text="학습결과"/>
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_height="match_parent"
+                            android:layout_width="@dimen/wp12"
+                            android:src="@drawable/icon_clipboard_black"/>
+                    </RelativeLayout>
+
+                </ui.MemoFrameLayout>
+
+            </ui.RippleView>
 
             <ui.RippleView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/unit_2"
+                android:layout_height="@dimen/wp20"
                 android:id="@+id/ripple_developer"
                 >
-                <ImageView
+                <ui.MemoFrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/unit_2"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/img_memo_sticker"/>
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="10dp">
-                    <TextView
-                        android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:textSize="@dimen/font_size_lv4"
-                        android:text="개발자"/>
-                    <ImageView
-                        android:layout_alignParentRight="true"
-                        android:layout_height="@dimen/unit_2"
-                        android:layout_width="@dimen/unit_2"
-                        android:src="@drawable/icon_setting_black"/>
-                </RelativeLayout>
+                        android:padding="@dimen/wp1">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textSize="@dimen/wp9"
+                            android:text="개발자"/>
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_height="match_parent"
+                            android:layout_width="@dimen/wp12"
+                            android:src="@drawable/icon_setting_black"/>
+                    </RelativeLayout>
+
+                </ui.MemoFrameLayout>
+
             </ui.RippleView>
-
-
 
 
         </LinearLayout>
@@ -124,17 +148,17 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/unit_7"
+        android:layout_height="@dimen/wp70"
         android:layout_alignParentBottom="true"
         android:gravity="left"
         android:orientation="horizontal">
         <ImageView
-            android:layout_width="@dimen/unit_4"
+            android:layout_width="@dimen/wp40"
             android:layout_height="match_parent"
             android:src="@drawable/img_char_grandfa"
             />
         <ImageView
-            android:layout_width="@dimen/unit_4"
+            android:layout_width="@dimen/wp40"
             android:layout_height="match_parent"
             android:src="@drawable/img_char_grandma"
             />

@@ -9,70 +9,70 @@
         android:layout_height="wrap_content"
         android:text="font size lv 1"
         android:textAlignment="center"
-        android:textSize="@dimen/font_size_lv1"
+        android:textSize="@dimen/wp10"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="font size lv 2"
         android:textAlignment="center"
-        android:textSize="@dimen/font_size_lv2"
+        android:textSize="@dimen/wp10"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="font size lv 3"
         android:textAlignment="center"
-        android:textSize="@dimen/font_size_lv3"
+        android:textSize="@dimen/wp10"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="font size lv 4"
         android:textAlignment="center"
-        android:textSize="@dimen/font_size_lv4"
+        android:textSize="@dimen/wp10"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="font size lv 5"
         android:textAlignment="center"
-        android:textSize="@dimen/font_size_lv5"
+        android:textSize="@dimen/wp10"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="font size lv 6"
         android:textAlignment="center"
-        android:textSize="@dimen/font_size_lv6"
+        android:textSize="@dimen/wp10"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="font size lv 7"
         android:textAlignment="center"
-        android:textSize="@dimen/font_size_lv7"
+        android:textSize="@dimen/wp10"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="font size lv 8"
         android:textAlignment="center"
-        android:textSize="@dimen/font_size_lv8"
+        android:textSize="@dimen/wp10"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="font size lv 9"
         android:textAlignment="center"
-        android:textSize="@dimen/font_size_lv9"
+        android:textSize="@dimen/wp10"
         />
 
     <customv.CButton
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:text="동해"
-        android:textSize="@dimen/font_size_lv9"
+        android:textSize="@dimen/wp10"
         />
 
 
