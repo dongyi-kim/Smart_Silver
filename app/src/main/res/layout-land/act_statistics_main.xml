@@ -53,6 +53,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/wp7"
                         android:text="128분"
+                        android:id="@+id/txt_playtime_today"
                         android:textColor="#FFFFFF"/>
                 </LinearLayout>
                 <LinearLayout
@@ -70,6 +71,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/wp7"
                         android:text="1024분"
+                        android:id="@+id/txt_playtime_total"
                         android:textColor="#FFFFFF"/>
                 </LinearLayout>
             </LinearLayout>
