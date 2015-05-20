@@ -1,6 +1,18 @@
 package src;
 
+import android.app.UiAutomation;
+import android.os.Environment;
+import android.text.format.Time;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.ObjectOutput;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  * Created by waps12b on 15. 3. 25..
@@ -8,33 +20,41 @@ import java.io.Serializable;
 public class ResultData implements Serializable {
 
     private boolean isRecording;
-    private boolean isSuccess; //test result
-    private long lTime;
     private long startTime ;
 
+    public boolean isSuccess; //test result
+    public long millisec;
+    public final int iStep;
+    public final int iLevel;
+    public final int iStage;
 
-    public ResultData()
+    public ResultData(int step, int level, int stage)
     {
+        this.iStep = step;
+        this.iStage = stage;
+        this.iLevel = level;
+
         isRecording = false;
-        lTime = 0;
+        millisec = 0;
     }
 
     public long getMilliTime()
     {
-        return lTime;
+        return millisec;
     }
 
     public void Start()
     {
         isRecording = true;
         startTime = System.currentTimeMillis();
+
     }
 
     public void Stop(boolean bResult)
     {
         isRecording = false;
         isSuccess = bResult;
-        lTime += System.currentTimeMillis() - startTime;
+        millisec += System.currentTimeMillis() - startTime;
     }
 
 }

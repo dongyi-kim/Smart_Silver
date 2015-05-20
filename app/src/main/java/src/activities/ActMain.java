@@ -3,12 +3,20 @@ package src.activities;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 
 import android.widget.Button;
 
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+
 import cdmst.smartsilver.R;
+import src.DB;
+import src.ResultData;
+import src.Utility;
 import src.activities.ResultPage.StatisticsActivity;
 import src.activities.Step01.*;
 import src.activities.Step02.*;
@@ -28,6 +36,7 @@ public class ActMain extends FrameActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        DB.INIT(getApplicationContext());
         setContentView(R.layout.act_main);
 
         rippleLearn = (RippleView)findViewById(R.id.ripple_learning);
@@ -40,7 +49,21 @@ public class ActMain extends FrameActivity{
     public void onGetEvent(Object vSender, Object obj) {
         if(vSender == rippleLearn)
         {
-            Intent intent = new Intent(this, ActStep01.class);
+            //set start step, level
+            //but stage is always 1
+            int iStep = 1;
+            int iLevel = 1;
+
+            //get last play data
+            ResultData[] dataset = DB.SELECT(DB.QUERY_GET_LAST);
+            if(dataset != null)
+            {
+                iStep = dataset[0].iStep;
+                iLevel = dataset[0].iLevel;
+            }
+
+            //call activity
+            Intent intent = new Intent(this, Utility.getStepClass(iStep, iLevel));
             startActivity(intent);
         }else if(vSender == rippleMyResult)
         {

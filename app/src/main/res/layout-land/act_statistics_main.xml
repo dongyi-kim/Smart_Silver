@@ -45,13 +45,13 @@
                     <ui.ChalkTextView
                         android:layout_width="@dimen/wp20"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/wp9"
+                        android:textSize="@dimen/wp7"
                         android:text="오늘"
                         android:textColor="#FFFFFF"/>
                     <ui.ChalkTextView
                         android:layout_width="@dimen/wp30"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/wp8"
+                        android:textSize="@dimen/wp7"
                         android:text="128분"
                         android:textColor="#FFFFFF"/>
                 </LinearLayout>
@@ -62,13 +62,13 @@
                     <ui.ChalkTextView
                         android:layout_width="@dimen/wp20"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/wp9"
+                        android:textSize="@dimen/wp7"
                         android:text="총합"
                         android:textColor="#FFFFFF"/>
                     <ui.ChalkTextView
                         android:layout_width="@dimen/wp30"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/wp8"
+                        android:textSize="@dimen/wp7"
                         android:text="1024분"
                         android:textColor="#FFFFFF"/>
                 </LinearLayout>
@@ -241,6 +241,62 @@
 
             </LinearLayout>
         </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_margin="@dimen/wp3"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/wp40"
+                android:orientation="vertical">
+                <ui.ChalkTextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/wp9"
+                    android:text="학습 통계"
+                    android:textColor="#FFFFFF"/>
+                <FrameLayout
+                    android:layout_width="@dimen/wp45"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="1px"
+                    android:background="#FFFFFF"
+                    android:layout_marginBottom="10px"></FrameLayout>
+                <ui.RippleView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wp10"
+                    android:background="@drawable/img_memo_sticker">
+                    <ui.ChalkTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/wp7"
+                        android:text="학습 진도표"/>
+                </ui.RippleView>
+                <ui.RippleView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wp10"
+                    android:background="@drawable/img_memo_sticker">
+                    <ui.ChalkTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/wp7"
+                        android:text="문항 정답률"/>
+                </ui.RippleView>
+                <ui.RippleView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wp10"
+                    android:background="@drawable/img_memo_sticker">
+                    <ui.ChalkTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/wp7"
+                        android:text="총 학습 결과표"/>
+                </ui.RippleView>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
     </LinearLayout>
 
 
