@@ -104,6 +104,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:background="@drawable/img_memo_sticker"
+                        android:id="@+id/btn_result_level01"
                         android:layout_height="match_parent">
                             <ui.ChalkTextView
                                 android:layout_width="match_parent"
