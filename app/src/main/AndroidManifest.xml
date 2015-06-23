@@ -143,7 +143,6 @@
 
 
         <activity android:name="src.activities.ResultPage.StatisticsActivity"
-            android:noHistory="true"
             android:screenOrientation="landscape"
             >
         </activity>
@@ -165,6 +164,11 @@
             >
         </activity>
 
+        <activity android:name="src.activities.ResultPage.StepStatisticsActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            >
+        </activity>
 
     </application>
 

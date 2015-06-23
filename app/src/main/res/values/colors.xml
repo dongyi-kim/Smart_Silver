@@ -3,6 +3,6 @@
     <color name="transparent">#00FFFFFF</color>
     <color name="trans_half">#4FFFFFFF</color>
     <color name="rippelColor">#95a5a6</color>
-
-
+    <color name="result_success">#2ecc71</color>
+    <color name="result_fail">#e74c3c</color>
 </resources>
