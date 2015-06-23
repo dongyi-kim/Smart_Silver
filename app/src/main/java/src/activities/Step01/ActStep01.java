@@ -25,6 +25,8 @@ public class ActStep01 extends StageActivity {
 
     private StringBuffer buffAnswer;
 
+    private int iRetry;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +52,7 @@ public class ActStep01 extends StageActivity {
             strQuest = txtQuestion.getText().toString();
         }else
         {
+            iRetry = 0;
             Random rnd = new Random();
             char[] arrStr = new char[9];
 
@@ -77,19 +80,25 @@ public class ActStep01 extends StageActivity {
 
         DlgResultMark dlg = new DlgResultMark(this, isAnswer);
         dlg.show();
-        if(isAnswer)
+        if(isAnswer == false)
+            iRetry ++;
+
+        if(isAnswer || iRetry >= 3 )
         {
             iStage ++;
             super.StopRecording(isAnswer);
+            if(iStage > NUM_OF_STAGE)
+            {   // next level
+                goNext();
+            }else
+            {   //go next stage
+                setQuestion(false);
+            }
+            return;
         }
 
-        if(iStage > NUM_OF_STAGE)
-        {   // next level
-            goNext();
-        }else
-        {   //go next stage
-            setQuestion(!isAnswer);
-        }
+
+        setQuestion(true);
     }
     public void goNext(Object object)
     {
