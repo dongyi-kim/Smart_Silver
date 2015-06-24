@@ -104,7 +104,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:background="@drawable/img_memo_sticker"
-                        android:id="@+id/btn_result_level01"
+                        android:id="@+id/btn_result_step01"
                         android:layout_height="match_parent">
                             <ui.ChalkTextView
                                 android:layout_width="match_parent"
@@ -116,6 +116,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:background="@drawable/img_memo_sticker"
+                        android:id="@+id/btn_result_step02"
                         android:layout_height="match_parent">
                         <ui.ChalkTextView
                             android:layout_width="match_parent"
@@ -127,6 +128,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:background="@drawable/img_memo_sticker"
+                        android:id="@+id/btn_result_step03"
                         android:layout_height="match_parent">
                         <ui.ChalkTextView
                             android:layout_width="match_parent"
@@ -138,6 +140,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:background="@drawable/img_memo_sticker"
+                        android:id="@+id/btn_result_step04"
                         android:layout_height="match_parent">
                         <ui.ChalkTextView
                             android:layout_width="match_parent"
@@ -160,6 +163,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:background="@drawable/img_memo_sticker"
+                        android:id="@+id/btn_result_step05"
                         android:layout_height="match_parent">
                         <ui.ChalkTextView
                             android:layout_width="match_parent"
@@ -178,7 +182,8 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:background="@drawable/img_memo_sticker"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:id="@+id/btn_result_step06">
                         <ui.ChalkTextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -189,6 +194,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:background="@drawable/img_memo_sticker"
+                        android:id="@+id/btn_result_step07"
                         android:layout_height="match_parent">
                         <ui.ChalkTextView
                             android:layout_width="match_parent"
@@ -200,6 +206,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:background="@drawable/img_memo_sticker"
+                        android:id="@+id/btn_result_step08"
                         android:layout_height="match_parent">
                         <ui.ChalkTextView
                             android:layout_width="match_parent"
@@ -211,6 +218,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:background="@drawable/img_memo_sticker"
+                        android:id="@+id/btn_result_step09"
                         android:layout_height="match_parent">
                         <ui.ChalkTextView
                             android:layout_width="match_parent"
@@ -222,6 +230,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:background="@drawable/img_memo_sticker"
+                        android:id="@+id/btn_result_step10"
                         android:layout_height="match_parent">
                         <ui.ChalkTextView
                             android:layout_width="match_parent"
