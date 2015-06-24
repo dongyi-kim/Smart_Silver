@@ -13,6 +13,7 @@ import src.activities.Step03.*;
 import src.activities.Step04.*;
 import src.activities.Step05.*;
 import src.activities.Step06.*;
+import src.activities.Step07.*;
 
 
 /**
@@ -44,6 +45,7 @@ public class ActTest extends FrameActivity {
     Button btnStep5_4;
     Button btnStep5_5;
     Button btnStep6_1;
+    Button btnStep7_1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,6 +127,9 @@ public class ActTest extends FrameActivity {
 
         btnStep6_1 = (Button)findViewById(R.id.btn_step_6_1);
         btnStep6_1.setOnClickListener(clickBtnStep);
+
+        btnStep7_1 = (Button)findViewById(R.id.btn_step_7_1);
+        btnStep7_1.setOnClickListener(clickBtnStep);
 
     }
 
@@ -287,6 +292,12 @@ public class ActTest extends FrameActivity {
             {
 
                 Intent intent = new Intent(v.getContext(), ActStep0601.class);
+                startActivity(intent);
+            }
+            else if(v == btnStep7_1)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0701.class);
                 startActivity(intent);
             }
 

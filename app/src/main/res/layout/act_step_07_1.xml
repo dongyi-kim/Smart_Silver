@@ -18,15 +18,10 @@
             android:textSize="@dimen/wp5"
             android:gravity="center"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".2"/>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.3"
+            android:layout_weight=".8"
             android:orientation="horizontal"
             android:weightSum="1"
             android:layout_gravity="center"
@@ -36,141 +31,152 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight=".8"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum=".8">
 
-                <LinearLayout
+                <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight=".6"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="0dp"
+                    android:layout_weight=".2">
+
+                    <View
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="출발시간"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textSize="@dimen/wp5"/>
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="소요시간"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textSize="@dimen/wp5"/>
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="운행거리"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textSize="@dimen/wp5"/>
+                        android:background="#FF222222"/>
+
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="3"
-                        android:orientation="vertical">
+                        android:orientation="horizontal"
+                        android:background="#FFDDDDDD"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="1dp"
+                        android:weightSum="1">
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:text="요금"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".18"
+                            android:text="출발시간"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="@dimen/wp5"
+                            android:layout_margin="2dp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".11"
+                            android:text="소요\n시간"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="@dimen/wp5"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".11"
+                            android:text="운행\n거리"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textSize="@dimen/wp5"/>
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:orientation="horizontal">
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="일반"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:textSize="@dimen/wp5"/>
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="아동"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:textSize="@dimen/wp5"/>
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="중고"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:textSize="@dimen/wp5"/>
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".6"
+                            android:orientation="vertical"
+                            android:weightSum="1">
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight=".4">
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/background_floating_material_dark"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="요금"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="@dimen/wp5"
+                                    android:layout_marginBottom="1dp"
+                                    android:background="#FFDDDDDD"/>
+                            </FrameLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight=".6"
+                                android:orientation="horizontal"
+                                android:weightSum=".6">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".2"
+                                    android:text="일반"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="@dimen/wp5"/>
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".2"
+                                    android:text="아동"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="@dimen/wp5"/>
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".2"
+                                    android:text="중고"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="@dimen/wp5"/>
 
+                            </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
 
-                </LinearLayout>
+                </FrameLayout>
 
-                <LinearLayout
+
+                <include layout="@layout/layout_bus_chart_line"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight=".4"
-                    android:orientation="horizontal">
-                    <Button
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="08:00"
-                        android:textSize="@dimen/wp5"
-                        android:background="@color/cardview_light_background"/>
-                    <Button
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="4시간"
-                        android:textSize="@dimen/wp5"
-                        android:background="@color/cardview_light_background"/>
-                    <Button
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="0"
-                        android:textSize="@dimen/wp5"
-                        android:background="@color/cardview_light_background"/>
-                    <Button
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="20,600원"
-                        android:textSize="@dimen/wp5"
-                        android:background="@color/cardview_light_background"/>
-                    <Button
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="10,300원"
-                        android:textSize="@dimen/wp5"
-                        android:background="@color/cardview_light_background"/>
-                    <Button
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="16,500원"
-                        android:textSize="@dimen/wp5"
-                        android:background="@color/cardview_light_background"/>
+                    android:layout_weight=".1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/layout_line_1"/>
+                <include layout="@layout/layout_bus_chart_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/layout_line_2"/>
+                <include layout="@layout/layout_bus_chart_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/layout_line_3"/>
+                <include layout="@layout/layout_bus_chart_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/layout_line_4"/>
 
-                </LinearLayout>
-
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".1"/>
             </LinearLayout>
-
-
         </LinearLayout>
-
 
     </LinearLayout>
 
