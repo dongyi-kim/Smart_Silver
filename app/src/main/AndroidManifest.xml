@@ -141,13 +141,6 @@
             >
         </activity>
 
-        <activity android:name="src.activities.Step06.ActStep0601"
-            android:noHistory="true"
-            android:screenOrientation="landscape"
-            >
-        </activity>
-
-
         <activity android:name="src.activities.ResultPage.StatisticsActivity"
             android:noHistory="true"
             android:screenOrientation="landscape"
@@ -167,13 +160,28 @@
             >
         </activity>
 
-        <activity android:name="src.activities.ActTest"
+        <activity android:name="src.activities.Step06.ActStep0601"
+            android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
+        </activity>
+
+        <activity android:name="src.activities.Step06.ActStep0602"
+            android:noHistory="true"
+            android:screenOrientation="landscape"
             >
         </activity>
 
 
+        <activity android:name="src.activities.Step06.ActStep0604"
+            android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
+        </activity>
 
+        <activity android:name="src.activities.ActTest"
+            >
+        </activity>
 
     </application>
-
 </manifest>

@@ -16,7 +16,7 @@
             android:layout_marginTop="20sp"
             android:layout_weight=".2"
             android:gravity="center"
-            android:text="다음 자료는 1주일이 모두 며칠로 이루어져 있는지 나타내는 자료입니다.\n다음 자료에서 1주일은 며칠입니까? 단추를 누르세요!"
+            android:text="아래 그림은 내일의 비올 확률입니다. \n대구지역의 내일 오후 비올 확률은 얼마인지 오른쪽 단추를 누르세요!"
             android:textSize="@dimen/wp6" />
 
         <LinearLayout
@@ -28,11 +28,11 @@
             android:weightSum="1">
 
             <ImageView
-                android:id="@+id/img_6_2"
+                android:id="@+id/img_6_4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight=".4"
-                android:src="@drawable/circle_graph_6_2" />
+                android:src="@drawable/map_weather_5_1" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -42,44 +42,41 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.2"
+                android:layout_weight="0.3"
                 android:gravity="center"
                 android:weightSum="1"
                 android:orientation="vertical">
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="2시간"
-                    android:textSize="@dimen/wp6"
-                    android:id="@+id/btn_ans_1"/>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight=".1"></LinearLayout>
+                    android:layout_weight=".3"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_weight=".4"
+                        android:layout_height="match_parent"
+                        android:text="0"
+                        android:id="@+id/btn_ans_1"
+                        android:textSize="@dimen/wp7"
+                        />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="4시간"
-                    android:textSize="@dimen/wp6"
-                    android:id="@+id/btn_ans_2"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".1"></LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight=".1"></LinearLayout>
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_weight=".4"
+                        android:layout_height="match_parent"
+                        android:text="10"
+                        android:id="@+id/btn_ans_2"
+                        android:textSize="@dimen/wp7"
+                        />
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="5시간"
-                    android:textSize="@dimen/wp6"
-                    android:visibility="gone"
-                    android:id="@+id/btn_ans_3"/>
-
-
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

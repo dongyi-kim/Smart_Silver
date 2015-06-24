@@ -10,33 +10,33 @@ import android.widget.TextView;
 
 import cdmst.smartsilver.R;
 import src.activities.StageActivity;
-import src.activities.Step05.ActStep0503;
 import src.dialogs.DlgResultMark;
 
 /**
- * Created by jhobo_000 on 2015-05-06.
+ * Created by jhobo_000 on 2015-06-22.
  */
-public class ActStep0601 extends StageActivity {
+public class ActStep0602 extends StageActivity {
 
     private TextView txtDiscription;
     private ImageView img;
-    private Button btnAnswer[] = new Button[2];
+    private Button btnAnswer[] = new Button[3];
     private boolean ans;
     private static int Count = 0;
-    public Step0601DataSet dataSet = new Step0601DataSet();
+    public Step0602DataSet dataSet = new Step0602DataSet();
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_step_06_1);
+        setContentView(R.layout.act_step_06_2);
 
         txtDiscription = (TextView)findViewById(R.id.txt_discription);
 
-        img = (ImageView)findViewById(R.id.img_6_1);
+        img = (ImageView)findViewById(R.id.img_6_2);
 
         btnAnswer[0] = (Button)findViewById(R.id.btn_ans_1);
         btnAnswer[1] = (Button)findViewById(R.id.btn_ans_2);
+        btnAnswer[2] = (Button)findViewById(R.id.btn_ans_3);
 
-        for(int i = 0; i < 2; i++){
+        for(int i = 0; i < 3; i++){
             btnAnswer[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v)
@@ -51,10 +51,8 @@ public class ActStep0601 extends StageActivity {
                 }
             });
         } // end of button listener
-
         setQuestion(false);
     }
-
 
     @Override
     public void setQuestion(boolean isRetry, Object object) {
@@ -67,8 +65,14 @@ public class ActStep0601 extends StageActivity {
 
         // btn set
 
-        btnAnswer[0].setText(dataSet.txtBtn1);
-        btnAnswer[1].setText(dataSet.txtBtn2);
+        btnAnswer[0].setText(dataSet.btnTxt[0]);
+        btnAnswer[1].setText(dataSet.btnTxt[1]);
+        if(Seed != 0) {
+            btnAnswer[2].setText(dataSet.btnTxt[2]);
+            btnAnswer[2].setVisibility(View.VISIBLE);
+        }
+        else
+            btnAnswer[2].setVisibility(View.GONE);
     }
 
     @Override
@@ -98,7 +102,7 @@ public class ActStep0601 extends StageActivity {
 
     @Override
     public void goNext(Object object) {
-        Intent intent = new Intent(this, ActStep0602.class);
+        Intent intent = new Intent(this, ActStep0604.class);
         startActivity(intent);
     }
 }
