@@ -3,6 +3,7 @@ package src.activities.Step02;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -31,8 +32,8 @@ public class ActStep0201 extends StageActivity {
 
     private int iRetryCount = 0;
     public boolean isRight = false;
-    public int iAnswerCount = 0;
-    public int iMaxAnswerCount = 0;
+    public int iNextAnswer = 0;
+    public boolean bCellSelected[][] = new boolean[ROW_COUNT][COLUMN_COUNT];
 
     public Step0201DataSet dataSet = new Step0201DataSet();
     private Random rand = new Random();
@@ -98,19 +99,22 @@ public class ActStep0201 extends StageActivity {
                         }
                     }
 
-                    int iDistance = dataSet.iStartNumber - Integer.parseInt(txtSingleCell[r][c].getText().toString());
-                    if(iDistance % dataSet.iDistanceNumber == 0 && iDistance != 0){
-                        imgCorrectMark[r][c].setVisibility(View.VISIBLE);
-                        iAnswerCount++;
+                    if(!bCellSelected[r][c]){
+                        Log.i("tag", "get:" + Integer.parseInt(txtSingleCell[r][c].getText().toString()) + " ans:" + iNextAnswer);
+                        if(Integer.parseInt(txtSingleCell[r][c].getText().toString()) == iNextAnswer){
+                            imgCorrectMark[r][c].setVisibility(View.VISIBLE);
+                            bCellSelected[r][c] = true;
+                            iNextAnswer -= dataSet.iDistanceNumber;
 
-                        if(iAnswerCount == iMaxAnswerCount) {
-                            isRight = true;
+                            if(iNextAnswer <= dataSet.iStartNumber - 10 * dataSet.iRowCount){
+                                isRight = true;
+                                checkAnswer();
+                            }
+                        }
+                        else{
+                            isRight = false;
                             checkAnswer();
                         }
-                    }
-                    else{
-                        isRight = false;
-                        checkAnswer();
                     }
                 }
             });// end of button listener
@@ -131,6 +135,7 @@ public class ActStep0201 extends StageActivity {
             for(int j = 0; j < COLUMN_COUNT; j++) {
                 txtSingleCell[i][j].setText("" + iCurrentNumber--);
                 imgCorrectMark[i][j].setVisibility(View.INVISIBLE);
+                bCellSelected[i][j] = false;
             }
         }
 
@@ -138,10 +143,10 @@ public class ActStep0201 extends StageActivity {
             linearLineCell[i].setVisibility(View.GONE);
         }
 
-        iAnswerCount = 0;
-        iMaxAnswerCount = ((dataSet.iStartNumber - iCurrentNumber + 1) / dataSet.iDistanceNumber) - 1;
+        iNextAnswer = dataSet.iStartNumber - dataSet.iDistanceNumber;
 
         imgCorrectMark[0][0].setVisibility(View.VISIBLE);
+        bCellSelected[0][0] = true;
 
         StartRecording();
     }
@@ -156,7 +161,7 @@ public class ActStep0201 extends StageActivity {
             public void onDismiss(DialogInterface dialog) {
                 if(isRight || iRetryCount > 1){
                     iStage++;
-
+                    iRetryCount = 0;
                     if(iStage <= NUM_OF_STAGE) setQuestion(false);
                     else goNext();
                 }
@@ -173,11 +178,11 @@ public class ActStep0201 extends StageActivity {
     }
 
     public class Step0201DataSet {
-        private final String arrDiscription[] = {"다음 수를 50에서 3씩 거꾸로 건너 띄며 세기\n해당 숫자를 누르세요~!",
-                "다음 수를 50에서 5씩 거꾸로 건너 띄며 세기\n해당 숫자를 누르세요~!",
-                "다음 수를 100에서 5씩 거꾸로 건너 띄며 세기\n해당 숫자를 누르세요~!",
-                "다음 수를 100에서 7씩 거꾸로 건너 띄며 세기\n해당 숫자를 누르세요~!",
-                "다음 수를 70에서 7씩 거꾸로 건너 띄며 세기\n해당 숫자를 누르세요~!"};
+        private final String arrDiscription[] = {"다음 수를 50에서 3씩 거꾸로 건너 띄며 세기.\n해당 숫자를 누르세요.",
+                "다음 수를 50에서 5씩 거꾸로 건너 띄며 세기.\n해당 숫자를 누르세요.",
+                "다음 수를 100에서 5씩 거꾸로 건너 띄며 세기.\n해당 숫자를 누르세요.",
+                "다음 수를 100에서 7씩 거꾸로 건너 띄며 세기.\n해당 숫자를 누르세요.",
+                "다음 수를 70에서 7씩 거꾸로 건너 띄며 세기.\n해당 숫자를 누르세요."};
         private final int arrStartNumber[] = {50, 50, 100, 100, 70};
         private final int arrRowCount[] = {3, 3, 2, 3, 3};
         private final int arrDistanceNumber[] = {3, 5, 5, 7, 7};

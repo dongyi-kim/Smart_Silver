@@ -21,15 +21,6 @@
                 android:textSize="@dimen/wp4"
                 android:text="step 1-1"
                 android:id="@+id/btn_step_1_1"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/wp4"
-                android:text="step 2-4"
-                android:id="@+id/btn_step_2_4"
-                />
-
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -73,7 +64,13 @@
                 android:text="step 2-3"
                 android:id="@+id/btn_step_2_3"
                 />
-
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/wp4"
+                android:text="step 2-4"
+                android:id="@+id/btn_step_2_4"
+                />
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

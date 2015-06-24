@@ -158,11 +158,11 @@ public class ActStep0304 extends StageActivity {
     }
 
     public class Step0304DataSet {
-        private final String sDiscriptionList[] = {" 할머니와 할아버지가 손주들에게 받은 송편을 먹었습니다. 송편은 모두 몇 개가 남았을까요? 아래 숫자를 누르세요!",
-                " 할머니가 홍시 선물을 받았습니다. 할아버지와 함께 홍시를 나누어 먹었습니다. 홍시는 몇 개 남았을까요? 아래 숫자를 누르세요!",
-                " 할머니와 할아버지가 추석에 사용할 밤을 까놓았습니다. 그런데, 손주들이 밤을 계속 가져갑니다. 밤은 몇 개 남았을까요? 아래 숫자를 누르세요!",
-                " 할머니와 할아버지가 추석에 사용할 약과와 송편을 만들었습니다. 손님이 오셔서 약과와 송편을 대접하였습니다. 모두 몇 개가 남았을까요? 아래 숫자를 누르세요!",
-                " 할머니와 할아버지가 제사준비를 하고 있습니다. 할머니가 전을 부치는데, 할아버지는 옆에서 먹기만 합니다. 남은 전은 모두 몇 개인지 아래 숫자를 누르세요!"};
+        private final String sDiscriptionList[] = {" 할머니와 할아버지가 손주들이 빚은 10개의 송편을 받았습니다.\n두 분이 드시고 남은 송편은 몇 개일까요?",
+                " 할머니가 15개의 홍시를 선물 받았습니다.\n할머니와 할아버지가 드시고 남은 홍시는 몇 개일까요?",
+                " 할머니와 할아버지가 추석에 사용할 밤을 50개 까놓았습니다. 그런데 손주들이 밤을 계속 가져갑니다. 밤은 몇 개 남았을까요?",
+                " 할머니와 할아버지가 추석에 사용할 약과 29개와 송편 50개를 만들었습니다. 손님이 오셔서 약과와 송편을 대접하였습니다. 모두 몇 개가 남았을까요?",
+                "할머니와 할아버지가 차례 상 준비를 하고 있습니다. 할머니가 전을 부치는데, 할아버지는 옆에서 먹기만 합니다. 남은 전은 모두 몇 개일까요?"};
         private final int iImageListSet[][] = {{R.drawable.img_songpyeon, R.drawable.img_grandma_only, R.drawable.img_grandfa_only},
                 {R.drawable.img_hongshi, R.drawable.img_grandma_only, R.drawable.img_grandfa_only},
                 {R.drawable.img_grandma_grandfa_with_bam, R.drawable.img_grandma_grandfa_with_bam, R.drawable.img_grandson},
