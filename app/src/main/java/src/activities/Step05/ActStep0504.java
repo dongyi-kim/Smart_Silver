@@ -144,8 +144,10 @@ public class ActStep0504 extends StageActivity {
             for(int j = 0; j < dataSet.arrLineDrawCount[i][0]; j++)
                 frameGrid[i][cnt++].setVisibility(View.INVISIBLE);
 
-            for(int j = 0; j < dataSet.arrLineDrawCount[i][1]; j++)
+            for(int j = 0; j < dataSet.arrLineDrawCount[i][1]; j++) {
+                ibtnShape[i][cnt].setImageResource(dataSet.iImageSource);
                 frameGrid[i][cnt++].setVisibility(View.VISIBLE);
+            }
 
             for(int j = 0; j < dataSet.arrLineDrawCount[i][2]; j++)
                 frameGrid[i][cnt++].setVisibility(View.INVISIBLE);
@@ -198,7 +200,7 @@ public class ActStep0504 extends StageActivity {
     }
 
     public void goNext(Object object){
-        Intent intent = new Intent(this, ActStep0504.class);
+        Intent intent = new Intent(this, ActStep0505.class);
         startActivity(intent);
     }
 
@@ -211,6 +213,7 @@ public class ActStep0504 extends StageActivity {
         private final String arrUnit[] = {"접시", "묶음", "접시", "팩", "소쿠리"};
         private final int arrSetCount[] = {2, 3, 4, 5, 7};
         private final int arrWholePrice[] = {1800, 300, 3200, 3500, 4900};
+        private final int arrImageSource[] = {R.drawable.img_songpyeon_single, R.drawable.img_napkin_single, R.drawable.img_songpyeon_single, R.drawable.img_apple_single, R.drawable.img_hobakjeon_single};
         private final int arrLineDrawCountListSet[][][] = {{{1, 2, 1}, {0, 0, 0}},
                 {{1, 3, 1}, {0, 0, 0}},
                 {{0, 4, 0}, {0, 0, 0}},
@@ -221,11 +224,13 @@ public class ActStep0504 extends StageActivity {
         public String sDescription;
         public String sAnswerDescription;
         public int iAnswer;
+        public int iImageSource;
 
         public void setData(int iSeed) {
             sDescription = arrDescription[iSeed];
             sAnswerDescription = "" + arrSetCount[iSeed] + arrUnit[iSeed] + " " + arrWholePrice[iSeed] + "원";
             iAnswer = arrWholePrice[iSeed] / arrSetCount[iSeed];
+            iImageSource = arrImageSource[iSeed];
 
             for (int i = 0; i < 2; i++)
                 for (int j = 0; j < 3; j++) {
