@@ -5,32 +5,35 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import cdmst.smartsilver.R;
+import src.activities.ActMain;
 import src.activities.StageActivity;
 import src.dialogs.DlgResultMark;
 
 /**
- * Created by jhobo_000 on 2015-05-06.
+ * Created by jhobo_000 on 2015-07-05.
  */
-public class ActStep0601 extends StageActivity {
+public class ActStep0605 extends StageActivity {
 
     private TextView txtDiscription;
     private ImageView img;
-    private Button btnAnswer[] = new Button[2];
+    private Button btnAnswer[] = new Button[3];
+
     private boolean ans;
     private static int Count = 0;
-    public Step0601DataSet dataSet = new Step0601DataSet();
+    public Step0605DataSet dataSet = new Step0605DataSet();
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_step_06_1);
+        setContentView(R.layout.act_step_06_5);
 
         txtDiscription = (TextView)findViewById(R.id.txt_discription);
 
-        img = (ImageView)findViewById(R.id.img_6_1);
+        img = (ImageView)findViewById(R.id.img_6_4);
 
         btnAnswer[0] = (Button)findViewById(R.id.btn_ans_1);
         btnAnswer[1] = (Button)findViewById(R.id.btn_ans_2);
@@ -38,16 +41,16 @@ public class ActStep0601 extends StageActivity {
         for(int i = 0; i < 2; i++){
             btnAnswer[i].setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v)
-                {
-                    Button btnCurrentButton = (Button)v;
+                public void onClick(View v) {
+                    Button btnCurrentButton = (Button) v;
+
                     String iSelectAnswer = btnCurrentButton.getText().toString();
 
-                    if(iSelectAnswer.equals(dataSet.strAns)) ans = true;
+                    if (iSelectAnswer.equals(dataSet.strAns)) ans = true;
                     else ans = false;
 
                     checkAnswer();
-                }
+                    }
             });
         } // end of button listener
 
@@ -66,8 +69,9 @@ public class ActStep0601 extends StageActivity {
 
         // btn set
 
-        btnAnswer[0].setText(dataSet.txtBtn1);
-        btnAnswer[1].setText(dataSet.txtBtn2);
+        btnAnswer[0].setText(dataSet.btnTxt[0]);
+        btnAnswer[1].setText(dataSet.btnTxt[1]);
+
     }
 
     @Override
@@ -97,7 +101,7 @@ public class ActStep0601 extends StageActivity {
 
     @Override
     public void goNext(Object object) {
-        Intent intent = new Intent(this, ActStep0602.class);
+        Intent intent = new Intent(this, ActMain.class);
         startActivity(intent);
     }
 }
