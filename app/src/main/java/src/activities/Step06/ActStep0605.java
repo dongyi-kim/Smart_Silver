@@ -33,7 +33,7 @@ public class ActStep0605 extends StageActivity {
 
         txtDiscription = (TextView)findViewById(R.id.txt_discription);
 
-        img = (ImageView)findViewById(R.id.img_6_4);
+        img = (ImageView)findViewById(R.id.img_6_5);
 
         btnAnswer[0] = (Button)findViewById(R.id.btn_ans_1);
         btnAnswer[1] = (Button)findViewById(R.id.btn_ans_2);

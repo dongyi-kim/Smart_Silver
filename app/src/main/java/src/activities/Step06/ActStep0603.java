@@ -15,6 +15,7 @@ import src.dialogs.DlgResultMark;
 /**
  * Created by jhobo_000 on 2015-07-05.
  */
+/*
 public class ActStep0603 extends StageActivity {
 
     private TextView txtDiscription;
@@ -105,3 +106,4 @@ public class ActStep0603 extends StageActivity {
         startActivity(intent);
     }
 }
+*/

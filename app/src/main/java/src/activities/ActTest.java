@@ -318,13 +318,13 @@ public class ActTest extends FrameActivity {
 
                 Intent intent = new Intent(v.getContext(), ActStep0602.class);
                 startActivity(intent);
-            }
+            }/*
             else if(v == btnStep6_3)
             {
 
                 Intent intent = new Intent(v.getContext(), ActStep0603.class);
                 startActivity(intent);
-            }
+            }*/
             else if(v == btnStep6_4)
             {
 
