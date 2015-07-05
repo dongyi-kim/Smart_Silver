@@ -22,13 +22,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight=".0.5" />
+            android:layout_weight=".05" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_gravity="center"
-            android:layout_weight=".7"
+            android:layout_weight=".68"
             android:gravity="center"
             android:orientation="horizontal"
             android:weightSum="1">
@@ -48,12 +48,12 @@
                     android:layout_height="match_parent"
                     android:layout_margin="4dp"
                     android:orientation="vertical"
-                    android:weightSum=".7">
+                    android:weightSum=".68">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_marginBottom="2dp"
+                        android:layout_marginBottom="1dp"
                         android:layout_weight=".1"
                         android:background="#FFFFFFFF"
                         android:orientation="horizontal"
@@ -65,14 +65,16 @@
                             android:layout_weight=".6"
                             android:gravity="bottom|center_horizontal"
                             android:text="거래하신 내용(예금 및 대출)"
-                            android:textSize="@dimen/wp4" />
+                            android:textSize="@dimen/wp5" />
 
                         <Button
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight=".2"
                             android:text="평생은행"
-                            android:textSize="@dimen/wp6" />
+                            android:textSize="@dimen/wp6"
+                            android:background="@drawable/borderline_clickable"
+                            android:id="@+id/btn_bank_name"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -82,14 +84,13 @@
                         android:layout_weight=".52"
                         android:orientation="horizontal"
                         android:weightSum=".8">
-
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight=".05"
                             android:orientation="vertical"
-                            android:weightSum=".52">
-
+                            android:weightSum=".52"
+                            android:layout_marginRight="1dp">
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -97,8 +98,68 @@
                                 android:background="#FFFFFFFF"
                                 android:gravity="center"
                                 android:text="차\n례"
-                                android:textSize="@dimen/wp5" />
-                         </LinearLayout>
+                                android:textSize="@dimen/wp4" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight=".4"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:background="#FFFFFFFF"
+                                    android:gravity="right|center_vertical"
+                                    android:text="01 "
+                                    android:textSize="@dimen/wp4"
+                                    android:layout_marginTop="1dp"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:background="#FFFFFFFF"
+                                    android:gravity="right|center_vertical"
+                                    android:text="02 "
+                                    android:textSize="@dimen/wp4"
+                                    android:layout_marginTop="1dp"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:background="#FFFFFFFF"
+                                    android:gravity="right|center_vertical"
+                                    android:text="03 "
+                                    android:textSize="@dimen/wp4"
+                                    android:layout_marginTop="1dp"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:background="#FFFFFFFF"
+                                    android:gravity="right|center_vertical"
+                                    android:text="04 "
+                                    android:textSize="@dimen/wp4"
+                                    android:layout_marginTop="1dp"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:background="#FFFFFFFF"
+                                    android:gravity="right|center_vertical"
+                                    android:text="05 "
+                                    android:textSize="@dimen/wp4"
+                                    android:layout_marginTop="1dp"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:background="#FFFFFFFF"
+                                    android:gravity="right|center_vertical"
+                                    android:text="06 "
+                                    android:textSize="@dimen/wp4"
+                                    android:layout_marginTop="1dp"/>
+                            </LinearLayout>
+                        </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -112,25 +173,81 @@
                                 android:layout_height="0dp"
                                 android:layout_weight=".06"
                                 android:orientation="horizontal"
-                                android:weightSum=".75">
+                                android:weightSum=".75"
+                                android:layout_marginBottom="1dp">
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".12"
+                                    android:background="#FFFFFFFF"
+                                    android:gravity="center"
+                                    android:text="거 래 일"
+                                    android:textSize="@dimen/wp4"
+                                    android:layout_marginRight="1dp"/>
                                 <TextView
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight=".1"
                                     android:background="#FFFFFFFF"
                                     android:gravity="center"
-                                    android:text="거래일"
-                                    android:textSize="@dimen/wp5" />
+                                    android:text="내   용"
+                                    android:textSize="@dimen/wp4"
+                                    android:layout_marginRight="1dp"/>
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".15"
+                                    android:background="#FFFFFFFF"
+                                    android:gravity="center"
+                                    android:text="찾으신금액"
+                                    android:textSize="@dimen/wp4"
+                                    android:layout_marginRight="1dp"/>
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".15"
+                                    android:background="#FFFFFFFF"
+                                    android:gravity="center"
+                                    android:text="맡기신금액"
+                                    android:textSize="@dimen/wp4"
+                                    android:layout_marginRight="1dp"/>
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".15"
+                                    android:background="#FFFFFFFF"
+                                    android:gravity="center"
+                                    android:text="남은금액"
+                                    android:textSize="@dimen/wp4"
+                                    android:layout_marginRight="1dp"/>
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".08"
+                                    android:background="#FFFFFFFF"
+                                    android:gravity="center"
+                                    android:text="거래점"
+                                    android:textSize="@dimen/wp4"/>
                             </LinearLayout>
 
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:layout_weight=".06"
                                 android:background="#FFFFFFFF"
-                                android:gravity="left|center_vertical"
-                                android:text="계좌번호 905091205-69"
-                                android:textSize="@dimen/wp5" />
+                                android:layout_marginBottom="1dp"
+                                android:orientation="horizontal"
+                                android:weightSum=".75">
+                                <Button
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".28"
+                                    android:gravity="center"
+                                    android:text="계좌번호 905091205-69"
+                                    android:textSize="@dimen/wp4"
+                                    android:background="@drawable/borderline_clickable"
+                                    android:id="@+id/btn_account_number"/>
+                            </LinearLayout>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -141,7 +258,7 @@
                                 <LinearLayout
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
-                                    android:layout_weight=".1"
+                                    android:layout_weight=".12"
                                     android:orientation="vertical"
                                     android:background="#FFFFFF">
                                     <TextView
@@ -151,6 +268,15 @@
                                         android:gravity="center"
                                         android:text="20141022"
                                         android:textSize="@dimen/wp4"/>
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="20141024"
+                                        android:textSize="@dimen/wp4"
+                                        android:background="@drawable/borderline_clickable"
+                                        android:id="@+id/btn_deal_date_2"/>
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
@@ -158,20 +284,15 @@
                                         android:gravity="center"
                                         android:text="20141024"
                                         android:textSize="@dimen/wp4"/>
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="0dp"
-                                        android:layout_weight="1"
-                                        android:gravity="center"
-                                        android:text="20141024"
-                                        android:textSize="@dimen/wp4"/>
-                                    <TextView
+                                    <Button
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="center"
                                         android:text="20141026"
-                                        android:textSize="@dimen/wp4"/>
+                                        android:textSize="@dimen/wp4"
+                                        android:background="@drawable/borderline_clickable"
+                                        android:id="@+id/btn_deal_date_4"/>
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
@@ -179,13 +300,15 @@
                                         android:gravity="center"
                                         android:text="20141028"
                                         android:textSize="@dimen/wp4"/>
-                                    <TextView
+                                    <Button
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="center"
                                         android:text="20141030"
-                                        android:textSize="@dimen/wp4"/>
+                                        android:textSize="@dimen/wp4"
+                                        android:background="@drawable/borderline_clickable"
+                                        android:id="@+id/btn_deal_date_6"/>
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -199,99 +322,49 @@
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="left|center_vertical"
-                                        android:text="예약이체"
+                                        android:text=" 박형식"
                                         android:textSize="@dimen/wp4"/>
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="left|center_vertical"
-                                        android:text="예약이체"
+                                        android:text=" 김수현"
                                         android:textSize="@dimen/wp4"/>
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="left|center_vertical"
-                                        android:text="예약이체"
+                                        android:text=" 이제신"
                                         android:textSize="@dimen/wp4"/>
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="left|center_vertical"
-                                        android:text="예약이체"
+                                        android:text=" 민형준"
                                         android:textSize="@dimen/wp4"/>
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="left|center_vertical"
-                                        android:text="예약이체"
+                                        android:text=" 유지은"
                                         android:textSize="@dimen/wp4"/>
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="left|center_vertical"
-                                        android:text="납부입금"
+                                        android:text=" 남동식"
                                         android:textSize="@dimen/wp4"/>
                                 </LinearLayout>
 
                                 <LinearLayout
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
-                                    android:layout_weight=".2"
-                                    android:orientation="vertical"
-                                    android:background="#FFFFFF">
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="0dp"
-                                        android:layout_weight="1"
-                                        android:gravity="left|center_vertical"
-                                        android:text="박형식"
-                                        android:textSize="@dimen/wp4"/>
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="0dp"
-                                        android:layout_weight="1"
-                                        android:gravity="left|center_vertical"
-                                        android:text="김수현"
-                                        android:textSize="@dimen/wp4"/>
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="0dp"
-                                        android:layout_weight="1"
-                                        android:gravity="left|center_vertical"
-                                        android:text="이제신"
-                                        android:textSize="@dimen/wp4"/>
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="0dp"
-                                        android:layout_weight="1"
-                                        android:gravity="left|center_vertical"
-                                        android:text="민형준"
-                                        android:textSize="@dimen/wp4"/>
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="0dp"
-                                        android:layout_weight="1"
-                                        android:gravity="left|center_vertical"
-                                        android:text="유지은"
-                                        android:textSize="@dimen/wp4"/>
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="0dp"
-                                        android:layout_weight="1"
-                                        android:gravity="left|center_vertical"
-                                        android:text="남동식"
-                                        android:textSize="@dimen/wp4"/>
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight=".1"
+                                    android:layout_weight=".15"
                                     android:orientation="vertical"
                                     android:background="#FFFFFF">
                                     <TextView
@@ -299,49 +372,81 @@
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="right|center_vertical"
-                                        android:text="￦10,000"
+                                        android:text="*10,000 "
                                         android:textSize="@dimen/wp4"/>
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="right|center_vertical"
-                                        android:text="￦10,000"
+                                        android:text="*10,000 "
                                         android:textSize="@dimen/wp4"/>
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="right|center_vertical"
-                                        android:text="￦10,000"
+                                        android:text="*10,000 "
                                         android:textSize="@dimen/wp4"/>
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="right|center_vertical"
-                                        android:text="￦20,000"
+                                        android:text="*20,000 "
                                         android:textSize="@dimen/wp4"/>
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="right|center_vertical"
-                                        android:text="￦20,000"
+                                        android:text="*20,000 "
                                         android:textSize="@dimen/wp4"/>
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="right|center_vertical"
-                                        android:text="￦10,000"
+                                        android:text="*10,000 "
                                         android:textSize="@dimen/wp4"/>
                                 </LinearLayout>
 
                                 <LinearLayout
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
-                                    android:layout_weight=".1"
+                                    android:layout_weight=".15"
+                                    android:orientation="vertical"
+                                    android:background="#FFFFFF">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".15"
                                     android:orientation="vertical"
                                     android:background="#FFFFFF">
                                     <TextView
@@ -349,53 +454,112 @@
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="right|center_vertical"
-                                        android:text="￦10,000"
+                                        android:text="*380,000 "
                                         android:textSize="@dimen/wp4"/>
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="right|center_vertical"
-                                        android:text="￦10,000"
+                                        android:text="*370,000 "
+                                        android:textSize="@dimen/wp4"/>
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:gravity="right|center_vertical"
+                                        android:text="*360,000 "
+                                        android:textSize="@dimen/wp4"
+                                        android:background="@drawable/borderline_clickable"
+                                        android:id="@+id/btn_balance_3"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:gravity="right|center_vertical"
+                                        android:text="*340,000 "
                                         android:textSize="@dimen/wp4"/>
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="right|center_vertical"
-                                        android:text="￦10,000"
+                                        android:text="*320,000 "
+                                        android:textSize="@dimen/wp4"/>
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:gravity="right|center_vertical"
+                                        android:text="*310,000 "
+                                        android:textSize="@dimen/wp4"
+                                        android:background="@drawable/borderline_clickable"
+                                        android:id="@+id/btn_balance_6"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".08"
+                                    android:orientation="vertical"
+                                    android:background="#FFFFFF">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:gravity="right|center_vertical"
+                                        android:text="행복점 "
                                         android:textSize="@dimen/wp4"/>
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="right|center_vertical"
-                                        android:text="￦20,000"
+                                        android:text="행복점 "
                                         android:textSize="@dimen/wp4"/>
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="right|center_vertical"
-                                        android:text="￦20,000"
+                                        android:text="행복점 "
                                         android:textSize="@dimen/wp4"/>
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="right|center_vertical"
-                                        android:text="￦10,000"
+                                        android:text="행복점 "
+                                        android:textSize="@dimen/wp4"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:gravity="right|center_vertical"
+                                        android:text="행복점 "
+                                        android:textSize="@dimen/wp4"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:gravity="right|center_vertical"
+                                        android:text="행복점 "
                                         android:textSize="@dimen/wp4"/>
                                 </LinearLayout>
 
                             </LinearLayout>
 
                         </LinearLayout>
-
-
-
                     </LinearLayout>
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".06"
+                        android:background="#FFFFFFFF"
+                        android:text="의뢰인:   나승주"
+                        android:gravity="center"
+                        android:textSize="@dimen/wp4"/>
                 </LinearLayout>
 
             </FrameLayout>
