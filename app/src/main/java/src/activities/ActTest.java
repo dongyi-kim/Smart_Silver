@@ -13,6 +13,7 @@ import src.activities.Step03.*;
 import src.activities.Step04.*;
 import src.activities.Step05.*;
 import src.activities.Step06.*;
+import src.activities.Step07.*;
 
 
 /**
@@ -42,7 +43,14 @@ public class ActTest extends FrameActivity {
     Button btnStep5_2;
     Button btnStep5_3;
     Button btnStep5_4;
+    Button btnStep5_5;
     Button btnStep6_1;
+    Button btnStep6_2;
+    Button btnStep6_3;
+    Button btnStep6_4;
+    Button btnStep6_5;
+    Button btnStep7_1;
+    Button btnStep7_3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,8 +127,29 @@ public class ActTest extends FrameActivity {
         btnStep5_4 = (Button)findViewById(R.id.btn_step_5_4);
         btnStep5_4.setOnClickListener(clickBtnStep);
 
+        btnStep5_5 = (Button)findViewById(R.id.btn_step_5_5);
+        btnStep5_5.setOnClickListener(clickBtnStep);
+
         btnStep6_1 = (Button)findViewById(R.id.btn_step_6_1);
         btnStep6_1.setOnClickListener(clickBtnStep);
+
+        btnStep6_2 = (Button)findViewById(R.id.btn_step_6_2);
+        btnStep6_2.setOnClickListener(clickBtnStep);
+
+        btnStep6_3 = (Button)findViewById(R.id.btn_step_6_3);
+        btnStep6_3.setOnClickListener(clickBtnStep);
+
+        btnStep6_4 = (Button)findViewById(R.id.btn_step_6_4);
+        btnStep6_4.setOnClickListener(clickBtnStep);
+
+        btnStep6_5 = (Button)findViewById(R.id.btn_step_6_5);
+        btnStep6_5.setOnClickListener(clickBtnStep);
+
+        btnStep7_1 = (Button)findViewById(R.id.btn_step_7_1);
+        btnStep7_1.setOnClickListener(clickBtnStep);
+
+        btnStep7_3 = (Button)findViewById(R.id.btn_step_7_3);
+        btnStep7_3.setOnClickListener(clickBtnStep);
 
     }
 
@@ -273,13 +302,54 @@ public class ActTest extends FrameActivity {
                 Intent intent = new Intent(v.getContext(), ActStep0504.class);
                 startActivity(intent);
             }
-            else if(v == btnStep6_1)
+            else if(v == btnStep5_5)
             {
+
+                Intent intent = new Intent(v.getContext(), ActStep0505.class);
+                startActivity(intent);
+            }
+            else if(v == btnStep6_1) {
 
                 Intent intent = new Intent(v.getContext(), ActStep0601.class);
                 startActivity(intent);
             }
+            else if(v == btnStep6_2)
+            {
 
+                Intent intent = new Intent(v.getContext(), ActStep0602.class);
+                startActivity(intent);
+            }/*
+            else if(v == btnStep6_3)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0603.class);
+                startActivity(intent);
+            }*/
+            else if(v == btnStep6_4)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0604.class);
+                startActivity(intent);
+            }
+
+            else if(v == btnStep6_5)
+            {
+                Intent intent = new Intent(v.getContext(), ActStep0605.class);
+                startActivity(intent);
+            }
+
+            else if(v == btnStep7_1)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0701.class);
+                startActivity(intent);
+            }
+            else if(v == btnStep7_3)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0703.class);
+                startActivity(intent);
+            }
         }
     };
 }

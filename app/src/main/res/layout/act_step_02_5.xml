@@ -12,7 +12,7 @@
             android:layout_weight=".15"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:text="더하기 빼기를 이용하여 수 만들기\n□ 안에 알맞은 수를 찾아 누르세요."
+            android:text="더하기 빼기를 이용하여 수 만들기.\n□ 안에 알맞은 수를 찾아 누르세요."
             android:id="@+id/txt_discription"
             android:textSize="@dimen/wp4"
             android:gravity="center"

@@ -121,10 +121,10 @@ public class ActStep0303 extends StageActivity{
     }
 
     public class Step0303DataSet {
-        private final String sDiscriptionList[] = {" 할머니와 할아버지가 손주들에게 받은 송편의 합은 모두 몇 개인가요? 아래 숫자를 누르세요!",
-                " 할머니 할아버지가 홍시 선물을 받았습니다. 모두 몇 개인지 아래 수를 누르세요!",
-                " 할머니와 할아버지가 추석에 사용할 밤을 까려고 합니다. 모두 몇 개의 밤을 까야 할까요? 아래 숫자를 누르세요!",
-                " 할머니와 할아버지가 제사준비를 하고 있습니다. 할머니와 할아버지가 전을 부칩니다. 얼만큼의 전을 부쳐야 할까요? 아래 숫자를 누르세요!"};
+        private final String sDiscriptionList[] = {" 할머니와 할아버지가 손주들에게 받은 송편의 합은 모두 몇 개인가요?",
+                " 할머니 할아버지가 홍시 선물을 받았습니다. 받은 홍시를 모두 더하면 몇 개일까요?",
+                " 할머니와 할아버지가 추석에 사용할 밤을 까려고 합니다. 모두 몇 개의 밤을 까야 할까요?",
+                " 할머니와 할아버지가 차례 상을 준비하기 위하여 아래와 같이 전을 부치셨습니다.\n할머니와 할아버지가 부친 전의 수를 모두 더하면 얼마일까요?"};
         private final int iFoodType[] = {0, 1, 2, 0, 3};
         private final int iGrandmaImageList[] = {R.drawable.grandma_with_songpyoen, R.drawable.grandma_with_hongshi, R.drawable.grandma_with_bam, R.drawable.grandma_with_jeon};
         private final int iGrandfaImageList[] = {R.drawable.grandfa_with_songpyoen, R.drawable.grandfa_with_hongshi, R.drawable.grandfa_with_bam, R.drawable.grandfa_with_jeon};

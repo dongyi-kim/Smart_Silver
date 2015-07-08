@@ -46,7 +46,7 @@
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:background="@color/material_blue_grey_800"
+                    android:background="#AA66AAAA"
                     android:textSize="@dimen/wp8"
                     android:text="1"
                     android:id="@+id/txt_operand_1"/>
@@ -56,7 +56,7 @@
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:background="@color/material_blue_grey_800"
+                    android:background="#AA66AAAA"
                     android:textSize="@dimen/wp8"
                     android:text="+"
                     android:id="@+id/txt_operator"/>
@@ -66,7 +66,7 @@
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:background="@color/material_blue_grey_800"
+                    android:background="#AA66AAAA"
                     android:textSize="@dimen/wp8"
                     android:text="1"
                     android:id="@+id/txt_operand_2"/>
@@ -76,7 +76,7 @@
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:background="@color/material_blue_grey_800"
+                    android:background="#AA66AAAA"
                     android:textSize="@dimen/wp8"
                     android:text="="
                     android:id="@+id/txt_equal_sign"/>
@@ -86,7 +86,7 @@
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:background="@color/material_blue_grey_800"
+                    android:background="#AA66AAAA"
                     android:textSize="@dimen/wp8"
                     android:text="2"
                     android:id="@+id/txt_answer"/>

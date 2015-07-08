@@ -138,6 +138,7 @@ public class ActStep0105 extends StageActivity {
             public void onDismiss(DialogInterface dialog) {
                 if(isRight || iRetryCount > 1){
                     iStage++;
+                    iRetryCount = 0;
                     if(iStage >= 4) goNext();
                     else {
                         iRetryCount = 0;

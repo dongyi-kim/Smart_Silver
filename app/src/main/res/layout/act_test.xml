@@ -173,9 +173,59 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/wp4"
+                android:text="step 5-5"
+                android:id="@+id/btn_step_5_5"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/wp4"
                 android:text="step 6-1"
                 android:id="@+id/btn_step_6_1"
                 />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/wp4"
+                android:text="step 6-2"
+                android:id="@+id/btn_step_6_2"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/wp4"
+                android:text="step 6-4"
+                android:id="@+id/btn_step_6_3"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/wp4"
+                android:text="step 6-4"
+                android:id="@+id/btn_step_6_4"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/wp4"
+                android:text="step 6-4"
+                android:id="@+id/btn_step_6_5"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/wp4"
+                android:text="step 7-1"
+                android:id="@+id/btn_step_7_1"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/wp4"
+                android:text="step 7-3"
+                android:id="@+id/btn_step_7_3"
+                />
+
         </LinearLayout>
     </ScrollView>
 

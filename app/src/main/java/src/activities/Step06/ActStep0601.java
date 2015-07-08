@@ -1,6 +1,7 @@
 package src.activities.Step06;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -56,7 +57,7 @@ public class ActStep0601 extends StageActivity {
 
     @Override
     public void setQuestion(boolean isRetry, Object object) {
-        int Seed = iStage;
+        int Seed = iStage - 1;
 
         dataSet.setData(Seed);
 
@@ -81,7 +82,7 @@ public class ActStep0601 extends StageActivity {
             public void onDismiss(DialogInterface dialog) {
                 if(ans || Count > 1){
                     iStage++;
-                    if(iStage >= NUM_OF_STAGE) goNext();
+                    if(iStage > NUM_OF_STAGE) goNext();
                     else {
                         Count = 0;
                         setQuestion(false);
@@ -96,5 +97,7 @@ public class ActStep0601 extends StageActivity {
 
     @Override
     public void goNext(Object object) {
+        Intent intent = new Intent(this, ActStep0602.class);
+        startActivity(intent);
     }
 }

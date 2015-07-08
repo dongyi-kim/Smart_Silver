@@ -76,6 +76,7 @@
                     android:layout_height="wrap_content"
                     android:text="5시간"
                     android:textSize="@dimen/wp6"
+                    android:visibility="gone"
                     android:id="@+id/btn_ans_3"/>
 
 
