@@ -49,39 +49,52 @@ public class StatisticsActivity extends FrameActivity {
 
     @Override
     public void onGetEvent(Object vSender, Object obj) {
-        Intent intent = new Intent(this, StepStatisticsActivity.class);
-
+        Intent intent = null;
         if(vSender == findViewById(R.id.btn_result_step01)) {
+            intent = new Intent(this, StepStatisticsActivity.class);
             intent.putExtra("iStep",1);
         }else if(vSender == findViewById(R.id.btn_result_step02))
         {
+            intent = new Intent(this, StepStatisticsActivity.class);
             intent.putExtra("iStep",2);
         }else if(vSender == findViewById(R.id.btn_result_step03))
         {
+            intent = new Intent(this, StepStatisticsActivity.class);
             intent.putExtra("iStep",3);
         }else if(vSender == findViewById(R.id.btn_result_step04))
         {
+            intent = new Intent(this, StepStatisticsActivity.class);
             intent.putExtra("iStep",4);
         }else if(vSender == findViewById(R.id.btn_result_step05))
         {
+            intent = new Intent(this, StepStatisticsActivity.class);
             intent.putExtra("iStep",5);
         }else if(vSender == findViewById(R.id.btn_result_step06))
         {
+            intent = new Intent(this, StepStatisticsActivity.class);
             intent.putExtra("iStep",6);
         }else if(vSender == findViewById(R.id.btn_result_step07))
         {
+            intent = new Intent(this, StepStatisticsActivity.class);
             intent.putExtra("iStep",7);
         }else if(vSender == findViewById(R.id.btn_result_step08))
         {
+            intent = new Intent(this, StepStatisticsActivity.class);
             intent.putExtra("iStep",8);
         }else if(vSender == findViewById(R.id.btn_result_step09))
         {
+            intent = new Intent(this, StepStatisticsActivity.class);
             intent.putExtra("iStep",9);
         }else if(vSender == findViewById(R.id.btn_result_step10))
         {
+            intent = new Intent(this, StepStatisticsActivity.class);
             intent.putExtra("iStep",10);
+        }else if(vSender == findViewById(R.id.btn_statistics_step_all))
+        {
+            intent = new Intent(this, StepAllStatisticsActivity.class);
         }
-        startActivity(intent);
+        if(intent != null)
+            startActivity(intent);
 
     }
 

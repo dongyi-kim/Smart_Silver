@@ -5,8 +5,6 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import cdmst.smartsilver.R;
 import src.DB;
 import src.ResultData;
@@ -21,7 +19,7 @@ public class StepStatisticsActivity extends FrameActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_statitics_step);
+        setContentView(R.layout.act_statistics_step);
         iStep = getIntent().getExtras().getInt("iStep");
         ((TextView)findViewById(R.id.txt_title)).setText(iStep + "단계 학습 결과표");
 
