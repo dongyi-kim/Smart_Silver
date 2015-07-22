@@ -153,7 +153,7 @@ public class ActStep0104 extends StageActivity {
 
 
     public void goNext(Object object){
-        Intent intent = new Intent(this, ActMain.class);
+        Intent intent = new Intent(this, ActStep0105.class);
         startActivity(intent);
     }
 

@@ -17,6 +17,7 @@ import src.dialogs.DlgResultMark;
 /**
  * Created by jhobo_000 on 2015-07-05.
  */
+
 public class ActStep0605 extends StageActivity {
 
     private TextView txtDiscription;
@@ -25,6 +26,7 @@ public class ActStep0605 extends StageActivity {
 
     private boolean ans;
     private static int Count = 0;
+
     public Step0605DataSet dataSet = new Step0605DataSet();
 
     public void onCreate(Bundle savedInstanceState) {
@@ -71,7 +73,6 @@ public class ActStep0605 extends StageActivity {
 
         btnAnswer[0].setText(dataSet.btnTxt[0]);
         btnAnswer[1].setText(dataSet.btnTxt[1]);
-
     }
 
     @Override

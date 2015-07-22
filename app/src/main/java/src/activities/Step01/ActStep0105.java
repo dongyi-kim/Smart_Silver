@@ -5,8 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -17,6 +19,7 @@ import cdmst.smartsilver.R;
 import src.activities.ActMain;
 import src.activities.FrameActivity;
 import src.activities.StageActivity;
+import src.activities.Step02.ActStep0201;
 import src.dialogs.DlgResultMark;
 
 /**
@@ -24,170 +27,153 @@ import src.dialogs.DlgResultMark;
  */
 
 public class ActStep0105 extends StageActivity {
-    public static final int MAX_ROW_NUMBER = 2;
-    public static final int MAX_COLUMN_NUMBER = 2;
 
-    private FrameLayout frameGrid[][] = new FrameLayout[2][2];
-    public ImageButton ibtnNumber[][] = new ImageButton[MAX_ROW_NUMBER][MAX_COLUMN_NUMBER];
-    private TextView txtNumber[][] = new TextView[MAX_ROW_NUMBER][MAX_COLUMN_NUMBER];
-    private TextView txtDiscription;
+    private TextView txtDescription;
+    private ImageView img;
+    private LinearLayout btnset1;
+    private LinearLayout btnset2;
+    private static int Count = 0;
 
-    private boolean isSelected[][] = new boolean[MAX_ROW_NUMBER][MAX_COLUMN_NUMBER];
-    public final int iBtnValue[][] = new int[MAX_ROW_NUMBER][MAX_COLUMN_NUMBER];
-    private int iStage = 0;
-    private int iRetryCount = 0;
-    public boolean isRight = false;
-
-    public Step0105NumberSet numberSet = new Step0105NumberSet();
-    private Random rand = new Random();
-
+    private Button btnAnswer[] = new Button[5];
+    private Step0105NumberSet dataSet = new Step0105NumberSet();
+    private boolean ans;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.act_step_01_5);
 
-        frameGrid[0][0] = (FrameLayout)findViewById(R.id.frame_grid_1_1);
-        frameGrid[0][1] = (FrameLayout)findViewById(R.id.frame_grid_1_2);
-        frameGrid[1][0] = (FrameLayout)findViewById(R.id.frame_grid_2_1);
-        frameGrid[1][1] = (FrameLayout)findViewById(R.id.frame_grid_2_2);
-        ibtnNumber[0][0] = (ImageButton)findViewById(R.id.btn_grid_1_1);
-        ibtnNumber[0][1] = (ImageButton)findViewById(R.id.btn_grid_1_2);
-        ibtnNumber[1][0] = (ImageButton)findViewById(R.id.btn_grid_2_1);
-        ibtnNumber[1][1] = (ImageButton)findViewById(R.id.btn_grid_2_2);
-        txtNumber[0][0] = (TextView)findViewById(R.id.txt_grid_1_1);
-        txtNumber[0][1] = (TextView)findViewById(R.id.txt_grid_1_2);
-        txtNumber[1][0] = (TextView)findViewById(R.id.txt_grid_2_1);
-        txtNumber[1][1] = (TextView)findViewById(R.id.txt_grid_2_2);
-        txtDiscription = (TextView)findViewById(R.id.txt_discription);
+        txtDescription = (TextView)findViewById(R.id.txt_description);
 
-        //button listener
-        for(int i = 0; i < MAX_ROW_NUMBER; i++)
-            for(int j = 0; j < MAX_COLUMN_NUMBER; j++){
-                ibtnNumber[i][j].setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        int r = 0, c = 0;
-                        for(int ii = 0; ii < MAX_ROW_NUMBER; ii++)
-                            for(int jj = 0; jj < MAX_COLUMN_NUMBER; jj++)
-                                if(ibtnNumber[ii][jj] == v){
-                                    r = ii; c = jj; break;
-                                }
+        img = (ImageView)findViewById(R.id.img_1_5);
 
-                        if(iBtnValue[r][c] == numberSet.iAnswer) isRight = true;
-                        else isRight = false;
-                        checkAnswer();
-                    }
-                });
-            } // end of button listener
+        btnset1 = (LinearLayout)findViewById(R.id.btnSet1);
+        btnset2 = (LinearLayout)findViewById(R.id.btnSet2);
 
+        btnAnswer[0] = (Button)findViewById(R.id.btn_ans_1);
+        btnAnswer[1] = (Button)findViewById(R.id.btn_ans_2);
+        btnAnswer[2] = (Button)findViewById(R.id.btn_ans_3);
+        btnAnswer[3] = (Button)findViewById(R.id.btn_ans_4);
+        btnAnswer[4] = (Button)findViewById(R.id.btn_ans_5);
+
+        for(int i = 0; i < 5; i++){
+            btnAnswer[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Button btnCurrentButton = (Button) v;
+
+                    String iSelectAnswer = btnCurrentButton.getText().toString();
+
+                    if (iSelectAnswer.equals(dataSet.strAns)) ans = true;
+                    else ans = false;
+
+                    checkAnswer();
+                }
+            });
+        }
         setQuestion(false);
     }
 
-
     public void setQuestion(boolean isRetry, Object object){
-        int iRandomSeed = 2 * iStage + rand.nextInt(2);
-        numberSet.setData(iRandomSeed);
+        int Seed = iStage - 1;
 
-        //delete all
-        for(int i = 0; i < MAX_ROW_NUMBER; i++)
-            for(int j = 0; j < MAX_COLUMN_NUMBER; j++){
-                ibtnNumber[i][j].setVisibility(View.INVISIBLE);
-                txtNumber[i][j].setVisibility(View.INVISIBLE);
-                isSelected[i][j] = false;
-            }
+        dataSet.setData(Seed);
 
-        //set button's position
-        int iHeightMarginSum = (R.dimen.wp5) / 20000000;
-        int iWidthMarginSum = (R.dimen.wp5) / 20000000;
+        txtDescription.setText(dataSet.Discription);
+        img.setImageResource(dataSet.img);
 
-        for(int i = 0; i < MAX_ROW_NUMBER; i++)
-            for(int j = 0; j < MAX_COLUMN_NUMBER; j++){
-                int t = rand.nextInt(iHeightMarginSum) + 1;
-                int b = iHeightMarginSum - t;
-                int l = rand.nextInt(iWidthMarginSum) + 1;
-                int r = iHeightMarginSum - l;
-
-                LinearLayout.LayoutParams gridParams = ( LinearLayout.LayoutParams)frameGrid[i][j].getLayoutParams();
-                gridParams.setMargins(l, t, r, b);
-                frameGrid[i][j].setLayoutParams(gridParams);
-            }
-
-        // draw buttons
-        int iSelectCount = 0, iNumCount = numberSet.iNumCount;
-        while(iSelectCount < iNumCount){
-            int r = rand.nextInt(2), c = rand.nextInt(2);
-            if(isSelected[r][c]) continue;
-
-            isSelected[r][c] = true;
-            iBtnValue[r][c] = numberSet.arrNumSet[iSelectCount];
-            txtNumber[r][c].setText(Integer.toString(numberSet.arrNumSet[iSelectCount++]));
-
-            ibtnNumber[r][c].setVisibility(View.VISIBLE);
-            txtNumber[r][c].setVisibility(View.VISIBLE);
+        if(Seed <= 3)
+        {
+            btnset1.setVisibility(View.VISIBLE);
+            btnset2.setVisibility(View.GONE);
+            for(int i = 0 ; i < 2 ; i++)
+                btnAnswer[i].setText(dataSet.btnTxt[i]);
+        }
+        else
+        {
+            btnset1.setVisibility(View.GONE);
+            btnset2.setVisibility(View.VISIBLE);
+            for(int i = 0 ; i < 3 ; i++)
+                btnAnswer[i+2].setText(dataSet.btnTxt[i]);
         }
     }
 
-
+    @Override
     public void checkAnswer(Object object){
-        DlgResultMark dlg = new DlgResultMark(this, isRight);
+        DlgResultMark dlg = new DlgResultMark(this, ans);
         dlg.show();
 
+//        if(ans || Count > 1) StopRecording(ans);
+
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
-            @Override
             public void onDismiss(DialogInterface dialog) {
-                if(isRight || iRetryCount > 1){
+                if(ans || Count > 1){
                     iStage++;
-                    iRetryCount = 0;
-                    if(iStage >= 4) goNext();
+                    if(iStage > NUM_OF_STAGE) goNext();
                     else {
-                        iRetryCount = 0;
+                        Count = 0;
                         setQuestion(false);
                     }
                 }
                 else{
-                    iRetryCount++;
+                    Count++;
                 }
             }
         });
     }
 
-
     public void goNext(Object object){
-        Intent intent = new Intent(this, ActMain.class);
+        Intent intent = new Intent(this, ActStep0201.class);
         startActivity(intent);
     }
 
     public class Step0105NumberSet {
-        private static final int MAX_SET_NUMBER = 9;
+        public int img;
+        public String Discription;
+        public String btnTxt[];
+        public String strAns;
 
-        private final int arrNumCount[] = {3, 2, 3, 2, 3, 4, 4, 2, 3};
-        private final int[] arrNumSetList[] = {{21, 29, 27},
-                {5, 9},
-                {5, 9, 4},
-                {13, 10},
-                {7, 19, 26},
-                {41, 70, 39, 80},
-                {52, 27, 78, 86},
-                {134, 174},
-                {108, 194, 167}};
-        private final int arrAnswerList[] = {29, 9, 9, 13, 26, 80, 86, 174, 194};
+        private final int imgList[][] = {
+                {R.drawable.clock_1_5_1_1,R.drawable.clock_1_5_1_2,R.drawable.clock_1_5_1_3},
+                {R.drawable.clock_1_5_2_1,R.drawable.clock_1_5_2_2,R.drawable.clock_1_5_2_3},
+                {R.drawable.clock_1_5_3_1,R.drawable.clock_1_5_3_2,R.drawable.clock_1_5_3_3},
+                {R.drawable.clock_1_5_4_1,R.drawable.clock_1_5_4_2,R.drawable.clock_1_5_4_3},
+                {R.drawable.clock_1_5_5_1,R.drawable.clock_1_5_5_2,R.drawable.clock_1_5_5_3},
+        };
 
-        public int iNumCount;
-        public int iAnswer;
-        public int arrNumSet[] = new int[4];
+        private final String DiscriptionList[] = {
+                "몇 시입니까? 아래 단추를 누르세요.",
+                "몇 시입니까? 아래 단추를 누르세요.",
+                "몇 시입니까? 아래 단추를 누르세요.",
+                "몇 시입니까? 아래 단추를 누르세요.",
+                "몇 시입니까? 오른쪽 단추를 누르세요!"
+        };
 
-        public Step0105NumberSet(){
-            //If file I/O, read file and set data
-        }
+        private final String strAnsList[][] = {
+                {"두 시", "한 시 십오 분", "다섯 시 사십 분"},
+                {"세 시 이십 분", "여섯 시 오십오 분", "일곱 시 오십 분"},
+                {"열두 시", "여덣 시 십육 분", "아홉 시 삼십팔 분"},
+                {"다섯 시 삼십팔 분", "네 시 이십구 분", "일곱 시 이십칠 분"},
+                {"아홉 시 이십팔 분", "열 시 십칠 분", "다섯 시 사십팔 분"}
+        };
 
-        public void setData(int iSeed){
-            if(iSeed >= MAX_SET_NUMBER) iSeed = MAX_SET_NUMBER - 1;
+        private final String txtBtnList[][][] = {
+                {{"두 시 십이 분", "두 시"}, {"한 시", "한 시 십오 분"}, {"다섯 시 이십 분", "다섯 시 사십 분"}},
+                {{"세 시", "세 시 이십 분"}, {"일곱 시", "여섯 시 오십오 분"}, {"여덣 시 십 분", "일곱 시 오십 분"}},
+                {{"열두 시", "열두 시 십이 분"}, {"여덣 시 십육 분", "열두 시 십육 분"}, {"아홉 시 삼십 분", "아홉 시 삼십팔 분"}},
+                {{"다섯 시", "다섯 시 삽심팔 분"}, {"네 시 이십 분", "네 시 이십구 분"}, {"일곱 시", "일곱 시 이십칠 분"}},
+                {{"아홉 시", "아홉 시 이십팔 분", "아홉 시 오십육 분"}, {"열 시 십칠 분", "열 시 십오 분", "열 시 십칠 분"}, {"다섯 시 사십 분", "다섯 시 사십이 분", "다섯 시 사십팔 분"}}
+        };
 
-            iAnswer = arrAnswerList[iSeed];
-            iNumCount = arrNumCount[iSeed];
-            for(int i = 0; i < iNumCount; i++)
-                arrNumSet[i] = arrNumSetList[iSeed][i];
+        public void setData(int iSeed) {
+
+            int rand = (int)(Math.random() * 3.0); // 0 ~ 2
+
+            Discription = DiscriptionList[iSeed];
+            img = imgList[iSeed][rand];
+            btnTxt = txtBtnList[iSeed][rand];
+            strAns = strAnsList[iSeed][rand];
         }
     }
 }
