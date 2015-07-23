@@ -24,7 +24,7 @@
 
         <activity android:name="src.activities.Step01.ActStep01"
             android:noHistory="true"
-            android:screenOrientation="portrait"
+            android:screenOrientation="landscape"
             >
 
         </activity>

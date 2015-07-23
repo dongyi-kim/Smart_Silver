@@ -3,26 +3,12 @@ package src.activities;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Environment;
-import android.view.View;
-
-import android.widget.Button;
-
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.ObjectInputStream;
 
 import cdmst.smartsilver.R;
 import src.DB;
 import src.ResultData;
 import src.Utility;
 import src.activities.ResultPage.StatisticsActivity;
-import src.activities.Step01.*;
-import src.activities.Step02.*;
-import src.activities.Step03.*;
-import src.viewes.ViewNumberPad;
-import ui.CButton;
 import ui.RippleView;
 
 

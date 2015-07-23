@@ -2,6 +2,10 @@ package src.activities.Step01;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -10,18 +14,15 @@ import cdmst.smartsilver.R;
 import src.Utility;
 import src.activities.StageActivity;
 import src.dialogs.DlgResultMark;
-import src.viewes.ViewNumberPad;
 
 
 /**
  * Created by waps12b on 15. 3. 15..
  */
-public class ActStep01 extends StageActivity {
+public class ActStep01 extends StageActivity implements View.OnClickListener {
 
-    private TextView txtDescrib;
     private TextView txtQuestion;
     private TextView txtAnswer;
-    private ViewNumberPad vNumberPad;
 
     private StringBuffer buffAnswer;
 
@@ -30,14 +31,23 @@ public class ActStep01 extends StageActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_step_01);
+        setContentView(R.layout.act_step_01_1);
 
-        //txtDescrib = (TextView)findViewById(R.id.txt_description);
+
         txtQuestion = (TextView)findViewById(R.id.txt_question);
         txtAnswer = (TextView)findViewById(R.id.txt_answer);
-        vNumberPad = (ViewNumberPad)findViewById(R.id.view_number_pad);
         iStage = 1;
-        setQuestion(false,"123456789");
+        TableLayout table = (TableLayout)findViewById(R.id.table_number);
+        for(int r=0;r<4;r++)
+        {
+            TableRow row = (TableRow)table.getChildAt(r);
+            for(int c=0; c<3; c++)
+            {
+                Button col = (Button)row.getChildAt(c);
+                col.setOnClickListener(this);
+            }
+        }
+        setQuestion(false,null);
     }
 
     public void setQuestion( boolean isRetry, Object object)
@@ -125,24 +135,31 @@ public class ActStep01 extends StageActivity {
     }
 
     @Override
-    public void onGetEvent(Object vSender, Object obj)
+    public void onClick(View vSender)
     {
-        if(vSender == vNumberPad)
-        {
-            int iCode = (int)obj;
-            switch (iCode)
-            {
-                case ViewNumberPad.CODE_MODIFY :
-                    modifyAnswer();
-                    break;
-
-                case ViewNumberPad.CODE_OKAY :
-                    checkAnswer();
-                    break;
-
-                default:
-                    catAnswer(iCode);
-            }
-        }
+        if(vSender == findViewById(R.id.btn_number_0))
+            catAnswer(0);
+        else if(vSender == findViewById(R.id.btn_number_1))
+            catAnswer(1);
+        else if(vSender == findViewById(R.id.btn_number_2))
+            catAnswer(2);
+        else if(vSender == findViewById(R.id.btn_number_3))
+            catAnswer(3);
+        else if(vSender == findViewById(R.id.btn_number_4))
+            catAnswer(4);
+        else if(vSender == findViewById(R.id.btn_number_5))
+            catAnswer(5);
+        else if(vSender == findViewById(R.id.btn_number_6))
+            catAnswer(6);
+        else if(vSender == findViewById(R.id.btn_number_7))
+            catAnswer(7);
+        else if(vSender == findViewById(R.id.btn_number_8))
+            catAnswer(8);
+        else if(vSender == findViewById(R.id.btn_number_9))
+            catAnswer(9);
+        else if(vSender == findViewById(R.id.btn_number_ok))
+            checkAnswer(null);
+        else if(vSender == findViewById(R.id.btn_number_erase))
+            modifyAnswer();
     }
 }
