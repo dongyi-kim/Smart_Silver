@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_weight=".15"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text=" 할머니와 할아버지가 손주들에게 받은 송편을 먹었습니다. 송편은 모두 몇 개가 남았을까요? 아래 숫자를 누르세요!
+"
+            android:id="@+id/text_discription"
+            android:textSize="@dimen/wp3"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".7"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1">
+            <LinearLayout
+                android:layout_weight=".9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/drawfield"
+                android:background="@drawable/drawfield_01_04"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight=".4"
+                    android:weightSum="1"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".2"
+                        android:id="@+id/img_upper_1"
+                        android:src="@drawable/img_songpyeon"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".05"
+                        android:id="@+id/txt_empty_upper_1"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".3"
+                        android:id="@+id/img_upper_2"
+                        android:src="@drawable/img_grandma_only"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".0"
+                        android:id="@+id/txt_empty_upper_2"/>
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".3"
+                        android:id="@+id/img_upper_3"
+                        android:src="@drawable/img_grandfa_only"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight=".3"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:weightSum="1">
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".2"
+                        android:id="@+id/frame_under_1">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/img_text_space_1"
+                            android:src="@drawable/empty_space_the_number_food"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/wp2"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="\n송편 10개"
+                            android:id="@+id/txt_under_1"/>
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".1"
+                        android:id="@+id/txt_empty_under_1"/>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".25">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/img_food_space_1"
+                            android:src="@drawable/empty_space_the_number_food"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:weightSum="1">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".05"/>
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:id="@+id/img_food_sign_1"
+                                android:src="@drawable/sign_minus"
+                                android:layout_weight=".2"/>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/wp2"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="\송편 2개"
+                            android:id="@+id/txt_food_1"/>
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".03"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/linear_under_2">
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0"
+                            android:src="@drawable/sign_minus"
+                            android:id="@+id/img_sign_between"/>
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".25">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/img_food_space_2"
+                            android:src="@drawable/empty_space_the_number_food"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            android:gravity="left"
+                            android:weightSum="1">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".05"/>
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:id="@+id/img_food_sign_2"
+                                android:src="@drawable/sign_minus"
+                                android:layout_weight=".2"/>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/wp2"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="\송편 5개"
+                            android:id="@+id/txt_food_2"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight=".15"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1">
+
+            <Button
+                android:layout_weight=".25"
+                android:textSize="@dimen/wp4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="1"
+                android:id="@+id/btn_answer_1"/>
+
+            <Button
+                android:layout_weight=".25"
+                android:textSize="@dimen/wp4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="2"
+                android:id="@+id/btn_answer_2" />
+
+            <Button
+                android:layout_weight=".25"
+                android:textSize="@dimen/wp4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="3"
+                android:id="@+id/btn_answer_3" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout><!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_03_4.xml -->

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:layout_centerVertical="true"
+        android:src="@drawable/mark_x"
+        android:background="@android:color/transparent"
+        android:id="@+id/ibtn_mark_x"
+        />
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:layout_centerVertical="true"
+        android:src="@drawable/mark_o"
+        android:background="@android:color/transparent"
+        android:id="@+id/ibtn_mark_o"
+        />
+</RelativeLayout><!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/dlg_result_mark.xml -->

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_weight=".15"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text=" 노인학교 가을 축제를 준비합니다. 화장지를 사러 마트에 갔습니다.\n더 많은 화장지를 찾아 단추를 누르세요!"
+            android:id="@+id/txt_description"
+            android:textSize="@dimen/wp5"
+            android:gravity="center"
+            android:layout_marginTop="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="0.7"
+            android:weightSum="1"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:weightSum="1">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/mult_3_3_tissue"
+                    android:id="@+id/img_picture_1"/>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3">
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/txt_field_0401"
+                        android:id="@+id/ibtn_answer_1"
+                        android:scaleType="fitCenter"
+                        android:background="@null"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="3개씩\n3묶음"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="@dimen/wp5"
+                        android:id="@+id/txt_answer_1"/>
+                </FrameLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.03"
+                android:scaleType="fitCenter"
+                android:src="@drawable/line_blue"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:weightSum="1">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/mult_2_6_tissue"
+                    android:id="@+id/img_picture_2"/>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3">
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/txt_field_0401"
+                        android:id="@+id/ibtn_answer_2"
+                        android:scaleType="fitCenter"
+                        android:background="@null"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="2개씩\n6묶음"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="@dimen/wp5"
+                        android:id="@+id/txt_answer_2"/>
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout><!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_04_5.xml -->
