@@ -187,6 +187,7 @@
                             android:textAlignment="center"
                             android:textColor="#FFFFFF"
                             android:text="아래의 전화번호로\n전화를 걸어보세요\n"/>
+
                         <ui.ChalkTextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
