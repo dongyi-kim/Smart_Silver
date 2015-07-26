@@ -84,7 +84,6 @@ public class ActStep0201 extends StageActivity {
             imgCorrectMark[i][9] = (ImageView)(linearLineCell[i].findViewById(R.id.img_correct_cell_10));
          }
 
-
         //button listener
         for(int i = 0; i < ROW_COUNT; i++)
         for(int j = 0; j < COLUMN_COUNT; j++)
@@ -143,10 +142,12 @@ public class ActStep0201 extends StageActivity {
             linearLineCell[i].setVisibility(View.GONE);
         }
 
-        iNextAnswer = dataSet.iStartNumber - dataSet.iDistanceNumber;
+        iNextAnswer = dataSet.iStartNumber - dataSet.iDistanceNumber * 2;
 
-        imgCorrectMark[0][0].setVisibility(View.VISIBLE);
+        ibtnSingleCell[0][0].setImageResource(R.drawable.bg_cell_start);
         bCellSelected[0][0] = true;
+        bCellSelected[0][dataSet.iDistanceNumber] = true;
+        imgCorrectMark[0][dataSet.iDistanceNumber].setVisibility(View.VISIBLE);
 
         StartRecording();
     }
