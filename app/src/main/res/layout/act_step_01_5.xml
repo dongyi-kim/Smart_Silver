@@ -8,21 +8,103 @@
         android:gravity="center_horizontal"
         android:weightSum="1">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight=".15"
-            android:id="@+id/txt_discription"
-            android:text="몇 시입니까? 아래 단추를 누르세요."
-            android:gravity="center"
-            android:textSize="@dimen/wp7"/>
-
-        <FrameLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight=".7">
+            android:layout_weight=".2">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/txt_description"
+                android:text="몇 시입니까? 아래 단추를 누르세요."
+                android:gravity="center"
+                android:textSize="@dimen/wp7"/>
 
-        </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".6"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:src="@drawable/clock_1_5_1_1"
+                android:id="@+id/img_1_5"
+                />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/btnSet2"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="아홉 시"
+                    android:textSize="@dimen/wp6"
+                    android:id="@+id/btn_ans_3"
+                    />
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"></LinearLayout>
+                <Button
+                    android:layout_width="150dp"
+                    android:textSize="@dimen/wp6"
+                    android:text="아홉시 이십팔분"
+                    android:id="@+id/btn_ans_4"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"></LinearLayout>
+                <Button
+                    android:layout_width="150dp"
+                    android:textSize="@dimen/wp5"
+                    android:text="아홉시 오십육분"
+                    android:id="@+id/btn_ans_5"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".2"
+            android:id="@+id/btnSet1"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="두 시 십이분"
+                android:textSize="@dimen/wp6"
+                android:id="@+id/btn_ans_1"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"></LinearLayout>
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="두 시"
+                android:id="@+id/btn_ans_2"
+                android:textSize="@dimen/wp6"/>
+
+        </LinearLayout>
+
 
     </LinearLayout>
 </RelativeLayout>

@@ -146,7 +146,7 @@ public class ActStep0604 extends StageActivity {
 
     @Override
     public void goNext(Object object) {
-        Intent intent = new Intent(this, ActMain.class);
+        Intent intent = new Intent(this, ActStep0605.class);
         startActivity(intent);
     }
 }
