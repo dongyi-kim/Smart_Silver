@@ -13,12 +13,13 @@ public class Step0604DataSet {
     public int iAns;
 
     public void setData(int iSeed) {
-        Discription = DiscriptionList[iSeed];
+        int rand = (int)(Math.random() * 3.0); // 0 ~ 2
+        Discription = DiscriptionList[iSeed][rand];
         img = imgList[iSeed];
-        btnTxt = txtBtnList[iSeed];
-        strAns = strAnsList[iSeed];
-        iAns = iAnsList[iSeed];
-        btnTxt = txtBtnList[iSeed];
+        btnTxt = txtBtnList[iSeed][rand];
+        strAns = strAnsList[iSeed][rand];
+        iAns = iAnsList[iSeed][rand];
+        btnTxt = txtBtnList[iSeed][rand];
     }
 
     private static final int imgList[] = {
@@ -29,23 +30,29 @@ public class Step0604DataSet {
             R.drawable.map_weather_4_5
     };
 
-    private static final String DiscriptionList[] = {
-            "아래 그림은 날씨 예보입니다. 제주의 날씨는 어떻습니까?\n오른쪽 날씨 단추를 누르세요!",
-            "아래 그림은 날씨 예보입니다. 청주의 날씨는 어떻습니까?\n오른쪽 날씨 단추를 누르세요!",
-            "아래 그림은 날씨 예보입니다. 부산은 대구 아래에 있다고 합니다.\n부산의 날씨는 어떤지 오른쪽 날씨 단추를 누르세요!",
-            "아래 그림은 날씨 예보입니다. 맑은 지역은 모두 몇 군데인가요?\n오른쪽 단추를 누르세요!",
-            "아래 그림은 날씨 예보입니다. 비가 오는 곳은 모두 몇 군데인가요?\n오른쪽 단추를 누르세요!"
+    private static final String DiscriptionList[][] = {
+            {"아래 그림은 날씨 예보입니다. 제주의 날씨는 어떻습니까?","아래 그림은 날씨 예보입니다. 춘천의 날씨는 어떻습니까?","아래 그림은 날씨 예보입니다. 광주의 날씨는 어떻습니까?",},
+            {"아래 그림은 날씨 예보입니다. 청주의 날씨는 어떻습니까?","아래 그림은 날씨 예보입니다. 대전의 날씨는 어떻습니까?","아래 그림은 날씨 예보입니다. 전주의 날씨는 어떻습니까?",},
+            {"아래 그림은 날씨 예보입니다. 부산의 날씨는 어떻습니까?","아래 그림은 날씨 예보입니다. 청주의 날씨는 어떻습니까?","아래 그림은 날씨 예보입니다. 제주의 날씨는 어떻습니까?",},
+            {"아래 그림은 날씨 예보입니다. 맑은 지역은 모두 몇 곳인가요?","아래 그림은 날씨 예보입니다. 비가 오는 지역은 모두 몇 곳인가요?","아래 그림은 날씨 예보입니다. 날씨가 흐린 지역은 모두 몇 곳인가요?"},
+            {"아래 그림은 날씨 예보입니다. 비가 오는 곳은 모두 몇 군데인가요?", "아래 그림은 날씨 예보입니다. 맑은 지역은 모두 몇 곳인가요?","아래 그림은 날씨 예보입니다. 날씨가 흐린 지역은 모두 몇 곳인가요?"}
     };
 
-    private static final int iAnsList[] = {1,2,1,0,0};
+    private static final int iAnsList[][] = {{1,0,1},{2,1,1},{1,2,1},{0},{0}};
 
-    private static final String strAnsList[] = {"","","","4","3"};
+    private static final String strAnsList[][] = {
+            {"", "", ""},
+            {"", "", ""},
+            {"", "", ""},
+            {"4", "4", "3"},
+            {"3", "5", "3"}
+    };
 
-    private static final String txtBtnList[][] = {
-            {},
-            {},
-            {},
-            {"2", "4"},
-            {"3", "5"}
+    private static final String txtBtnList[][][] = {
+            {{},{},{}},
+            {{},{},{}},
+            {{},{},{}},
+            {{"2", "4"},{"2", "4"},{"3", "4"}},
+            {{"3", "5"},{"3", "5"},{"3", "5"}}
     };
 }
