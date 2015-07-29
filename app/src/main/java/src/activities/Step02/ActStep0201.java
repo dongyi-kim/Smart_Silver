@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -29,6 +30,7 @@ public class ActStep0201 extends StageActivity {
     public final ImageButton ibtnSingleCell[][] = new ImageButton[ROW_COUNT][COLUMN_COUNT];
     public final TextView txtSingleCell[][] = new TextView[ROW_COUNT][COLUMN_COUNT];
     public final ImageView imgCorrectMark[][] = new ImageView[ROW_COUNT][COLUMN_COUNT];
+    private Button btnSubmit;
 
     private int iRetryCount = 0;
     public boolean isRight = false;
@@ -84,6 +86,8 @@ public class ActStep0201 extends StageActivity {
             imgCorrectMark[i][9] = (ImageView)(linearLineCell[i].findViewById(R.id.img_correct_cell_10));
          }
 
+        btnSubmit = (Button)findViewById(R.id.btn_submit);
+
         //button listener
         for(int i = 0; i < ROW_COUNT; i++)
         for(int j = 0; j < COLUMN_COUNT; j++)
@@ -104,11 +108,6 @@ public class ActStep0201 extends StageActivity {
                             imgCorrectMark[r][c].setVisibility(View.VISIBLE);
                             bCellSelected[r][c] = true;
                             iNextAnswer -= dataSet.iDistanceNumber;
-
-                            if(iNextAnswer <= dataSet.iStartNumber - 10 * dataSet.iRowCount){
-                                isRight = true;
-                                checkAnswer();
-                            }
                         }
                         else{
                             isRight = false;
@@ -117,6 +116,15 @@ public class ActStep0201 extends StageActivity {
                     }
                 }
             });// end of button listener
+
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                if(iNextAnswer < dataSet.iStartNumber - (dataSet.iRowCount * 10)) isRight = true;
+                else isRight = false;
+                checkAnswer();
+            }
+        });
 
         setQuestion(false);
     }
