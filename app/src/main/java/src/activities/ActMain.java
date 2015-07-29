@@ -35,27 +35,27 @@ public class ActMain extends FrameActivity{
     public void onGetEvent(Object vSender, Object obj) {
         if(vSender == rippleLearn)
         {
-            Intent intent = new Intent(this, ActStartLearning.class);
-            startActivity(intent);
-            return;
-
-//            ///////////nono
-//            //set start step, level
-//            //but stage is always 1
-//            int iStep = 1;
-//            int iLevel = 1;
-//
-//            //get last play data
-//            ResultData[] dataset = DB.SELECT(DB.QUERY_GET_LAST);
-//            if(dataset != null)
-//            {
-//                iStep = dataset[0].iStep;
-//                iLevel = dataset[0].iLevel;
-//            }
-//
-//            //call activity
-//            Intent intent = new Intent(this, Utility.getStepClass(iStep, iLevel));
+//            Intent intent = new Intent(this, ActStartLearning.class);
 //            startActivity(intent);
+//            return;
+
+            ///////////nono
+            //set start step, level
+            //but stage is always 1
+            int iStep = 1;
+            int iLevel = 1;
+
+            //get last play data
+            ResultData[] dataset = DB.SELECT(DB.QUERY_GET_LAST);
+            if(dataset != null)
+            {
+                iStep = dataset[0].iStep;
+                iLevel = dataset[0].iLevel;
+            }
+
+            //call activity
+            Intent intent = new Intent(this, Utility.getStepClass(iStep, iLevel));
+            startActivity(intent);
         }else if(vSender == rippleMyResult)
         {
             Intent intent = new Intent(this, StatisticsActivity.class);

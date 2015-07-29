@@ -368,7 +368,12 @@ public class ActTest extends FrameActivity {
 
                 Intent intent = new Intent(v.getContext(), ActStep0703.class);
                 startActivity(intent);
+            }else if(v == findViewById(R.id.btn_step_selector)){
+                    Intent intent = new Intent(v.getContext(), ActStartLearning.class);
+                    startActivity(intent);
+                    return;
             }
+
         }
     };
 }

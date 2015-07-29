@@ -19,6 +19,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/wp4"
+                android:text="step selector"
+                android:id="@+id/btn_step_selector"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/wp4"
                 android:text="step 1-1"
                 android:id="@+id/btn_step_1_1"/>
             <Button

@@ -27,7 +27,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.75"
+            android:layout_weight="0.7"
             android:orientation="horizontal"
             android:layout_gravity="center"
             android:gravity="center"
@@ -82,7 +82,29 @@
                     android:layout_weight="0.2"
                     android:id="@+id/layout_line_5"/>
             </LinearLayout>
+        </LinearLayout>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.02"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="0dp"
+            android:layout_weight=".08"
+            android:weightSum="1">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".85"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".14"
+                android:text="확인"
+                android:id="@+id/btn_submit"/>
         </LinearLayout>
      </LinearLayout>
 
