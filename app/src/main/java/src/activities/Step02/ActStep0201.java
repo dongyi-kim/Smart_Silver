@@ -120,7 +120,7 @@ public class ActStep0201 extends StageActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                if(iNextAnswer < dataSet.iStartNumber - (dataSet.iRowCount * 10)) isRight = true;
+                if(iNextAnswer <= dataSet.iStartNumber - (dataSet.iRowCount * 10)) isRight = true;
                 else isRight = false;
                 checkAnswer();
             }

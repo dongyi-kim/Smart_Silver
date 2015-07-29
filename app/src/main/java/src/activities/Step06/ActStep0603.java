@@ -48,7 +48,7 @@ public class ActStep0603 extends StageActivity {
     public Step0603DataSet dataSet = new Step0603DataSet();
 
     private static int leftCount, rightCount;
-    private static int lineMax[]={6,8,6,0,0};
+    private static int lineMax[]={8,8,8,0,0};
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
