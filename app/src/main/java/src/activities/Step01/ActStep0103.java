@@ -70,7 +70,7 @@ public class ActStep0103 extends StageActivity {
                                     r = ii; c = jj; break;
                                 }
 
-                        if(iBtnValue[r][c] % 2 == (numberSet.isOdd? 1 : 0)) isRight = true;
+                        if(Integer.parseInt(txtNumber[r][c].getText().toString()) % 2 == (numberSet.isOdd? 1 : 0)) isRight = true;
                         else isRight = false;
                         checkAnswer();
                     }
