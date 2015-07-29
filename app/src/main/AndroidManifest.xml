@@ -231,5 +231,10 @@
             >
         </activity>
 
+
+        <activity android:name="src.activities.ActStartLearning"
+            android:screenOrientation="landscape"
+            >
+        </activity>
     </application>
 </manifest>

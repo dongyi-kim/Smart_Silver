@@ -87,7 +87,7 @@ ADDED from AndroidManifest.xml:45:9
 		ADDED from AndroidManifest.xml:46:13
 	android:name
 		ADDED from AndroidManifest.xml:45:19
-activity#src.activities.Step02.ActStep0201
+activity#src.activities.Step01.ActStep0105
 ADDED from AndroidManifest.xml:51:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:53:13
@@ -95,31 +95,31 @@ ADDED from AndroidManifest.xml:51:9
 		ADDED from AndroidManifest.xml:52:13
 	android:name
 		ADDED from AndroidManifest.xml:51:19
-activity#src.activities.Step02.ActStep0202
-ADDED from AndroidManifest.xml:58:9
+activity#src.activities.Step02.ActStep0201
+ADDED from AndroidManifest.xml:57:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:60:13
-	android:noHistory
 		ADDED from AndroidManifest.xml:59:13
-	android:name
-		ADDED from AndroidManifest.xml:58:19
-activity#src.activities.Step02.ActStep0203
-ADDED from AndroidManifest.xml:65:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:67:13
 	android:noHistory
+		ADDED from AndroidManifest.xml:58:13
+	android:name
+		ADDED from AndroidManifest.xml:57:19
+activity#src.activities.Step02.ActStep0202
+ADDED from AndroidManifest.xml:64:9
+	android:screenOrientation
 		ADDED from AndroidManifest.xml:66:13
-	android:name
-		ADDED from AndroidManifest.xml:65:19
-activity#src.activities.Step02.ActStep0204
-ADDED from AndroidManifest.xml:72:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:74:13
 	android:noHistory
-		ADDED from AndroidManifest.xml:73:13
+		ADDED from AndroidManifest.xml:65:13
 	android:name
-		ADDED from AndroidManifest.xml:72:19
-activity#src.activities.Step02.ActStep0205
+		ADDED from AndroidManifest.xml:64:19
+activity#src.activities.Step02.ActStep0203
+ADDED from AndroidManifest.xml:71:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:73:13
+	android:noHistory
+		ADDED from AndroidManifest.xml:72:13
+	android:name
+		ADDED from AndroidManifest.xml:71:19
+activity#src.activities.Step02.ActStep0204
 ADDED from AndroidManifest.xml:78:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:80:13
@@ -127,7 +127,7 @@ ADDED from AndroidManifest.xml:78:9
 		ADDED from AndroidManifest.xml:79:13
 	android:name
 		ADDED from AndroidManifest.xml:78:19
-activity#src.activities.Step03.ActStep0301
+activity#src.activities.Step02.ActStep0205
 ADDED from AndroidManifest.xml:84:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:86:13
@@ -135,7 +135,7 @@ ADDED from AndroidManifest.xml:84:9
 		ADDED from AndroidManifest.xml:85:13
 	android:name
 		ADDED from AndroidManifest.xml:84:19
-activity#src.activities.Step03.ActStep0302
+activity#src.activities.Step03.ActStep0301
 ADDED from AndroidManifest.xml:90:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:92:13
@@ -143,7 +143,7 @@ ADDED from AndroidManifest.xml:90:9
 		ADDED from AndroidManifest.xml:91:13
 	android:name
 		ADDED from AndroidManifest.xml:90:19
-activity#src.activities.Step03.ActStep0303
+activity#src.activities.Step03.ActStep0302
 ADDED from AndroidManifest.xml:96:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:98:13
@@ -151,7 +151,7 @@ ADDED from AndroidManifest.xml:96:9
 		ADDED from AndroidManifest.xml:97:13
 	android:name
 		ADDED from AndroidManifest.xml:96:19
-activity#src.activities.Step03.ActStep0304
+activity#src.activities.Step03.ActStep0303
 ADDED from AndroidManifest.xml:102:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:104:13
@@ -159,7 +159,7 @@ ADDED from AndroidManifest.xml:102:9
 		ADDED from AndroidManifest.xml:103:13
 	android:name
 		ADDED from AndroidManifest.xml:102:19
-activity#src.activities.Step03.ActStep0305
+activity#src.activities.Step03.ActStep0304
 ADDED from AndroidManifest.xml:108:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:110:13
@@ -167,7 +167,7 @@ ADDED from AndroidManifest.xml:108:9
 		ADDED from AndroidManifest.xml:109:13
 	android:name
 		ADDED from AndroidManifest.xml:108:19
-activity#src.activities.Step04.ActStep0401
+activity#src.activities.Step03.ActStep0305
 ADDED from AndroidManifest.xml:114:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:116:13
@@ -175,7 +175,7 @@ ADDED from AndroidManifest.xml:114:9
 		ADDED from AndroidManifest.xml:115:13
 	android:name
 		ADDED from AndroidManifest.xml:114:19
-activity#src.activities.Step04.ActStep0402
+activity#src.activities.Step04.ActStep0401
 ADDED from AndroidManifest.xml:120:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:122:13
@@ -183,7 +183,7 @@ ADDED from AndroidManifest.xml:120:9
 		ADDED from AndroidManifest.xml:121:13
 	android:name
 		ADDED from AndroidManifest.xml:120:19
-activity#src.activities.Step04.ActStep0403
+activity#src.activities.Step04.ActStep0402
 ADDED from AndroidManifest.xml:126:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:128:13
@@ -191,7 +191,7 @@ ADDED from AndroidManifest.xml:126:9
 		ADDED from AndroidManifest.xml:127:13
 	android:name
 		ADDED from AndroidManifest.xml:126:19
-activity#src.activities.Step04.ActStep0404
+activity#src.activities.Step04.ActStep0403
 ADDED from AndroidManifest.xml:132:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:134:13
@@ -199,7 +199,7 @@ ADDED from AndroidManifest.xml:132:9
 		ADDED from AndroidManifest.xml:133:13
 	android:name
 		ADDED from AndroidManifest.xml:132:19
-activity#src.activities.Step04.ActStep0405
+activity#src.activities.Step04.ActStep0404
 ADDED from AndroidManifest.xml:138:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:140:13
@@ -207,21 +207,21 @@ ADDED from AndroidManifest.xml:138:9
 		ADDED from AndroidManifest.xml:139:13
 	android:name
 		ADDED from AndroidManifest.xml:138:19
-activity#src.activities.ResultPage.StatisticsActivity
+activity#src.activities.Step04.ActStep0405
 ADDED from AndroidManifest.xml:144:9
 	android:screenOrientation
+		ADDED from AndroidManifest.xml:146:13
+	android:noHistory
 		ADDED from AndroidManifest.xml:145:13
 	android:name
 		ADDED from AndroidManifest.xml:144:19
-activity#src.activities.Step05.ActStep0502
+activity#src.activities.ResultPage.StatisticsActivity
 ADDED from AndroidManifest.xml:150:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:152:13
-	android:noHistory
 		ADDED from AndroidManifest.xml:151:13
 	android:name
 		ADDED from AndroidManifest.xml:150:19
-activity#src.activities.Step05.ActStep0503
+activity#src.activities.Step05.ActStep0502
 ADDED from AndroidManifest.xml:156:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:158:13
@@ -229,7 +229,7 @@ ADDED from AndroidManifest.xml:156:9
 		ADDED from AndroidManifest.xml:157:13
 	android:name
 		ADDED from AndroidManifest.xml:156:19
-activity#src.activities.Step06.ActStep0601
+activity#src.activities.Step05.ActStep0503
 ADDED from AndroidManifest.xml:162:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:164:13
@@ -237,7 +237,7 @@ ADDED from AndroidManifest.xml:162:9
 		ADDED from AndroidManifest.xml:163:13
 	android:name
 		ADDED from AndroidManifest.xml:162:19
-activity#src.activities.Step05.ActStep0504
+activity#src.activities.Step06.ActStep0601
 ADDED from AndroidManifest.xml:168:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:170:13
@@ -245,7 +245,7 @@ ADDED from AndroidManifest.xml:168:9
 		ADDED from AndroidManifest.xml:169:13
 	android:name
 		ADDED from AndroidManifest.xml:168:19
-activity#src.activities.Step05.ActStep0505
+activity#src.activities.Step05.ActStep0504
 ADDED from AndroidManifest.xml:174:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:176:13
@@ -253,7 +253,7 @@ ADDED from AndroidManifest.xml:174:9
 		ADDED from AndroidManifest.xml:175:13
 	android:name
 		ADDED from AndroidManifest.xml:174:19
-activity#src.activities.Step07.ActStep0701
+activity#src.activities.Step05.ActStep0505
 ADDED from AndroidManifest.xml:180:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:182:13
@@ -261,7 +261,7 @@ ADDED from AndroidManifest.xml:180:9
 		ADDED from AndroidManifest.xml:181:13
 	android:name
 		ADDED from AndroidManifest.xml:180:19
-activity#src.activities.Step07.ActStep0703
+activity#src.activities.Step07.ActStep0701
 ADDED from AndroidManifest.xml:186:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:188:13
@@ -269,7 +269,7 @@ ADDED from AndroidManifest.xml:186:9
 		ADDED from AndroidManifest.xml:187:13
 	android:name
 		ADDED from AndroidManifest.xml:186:19
-activity#src.activities.Step06.ActStep0602
+activity#src.activities.Step07.ActStep0703
 ADDED from AndroidManifest.xml:192:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:194:13
@@ -277,31 +277,31 @@ ADDED from AndroidManifest.xml:192:9
 		ADDED from AndroidManifest.xml:193:13
 	android:name
 		ADDED from AndroidManifest.xml:192:19
-activity#src.activities.ResultPage.StepStatisticsActivity
+activity#src.activities.Step06.ActStep0602
 ADDED from AndroidManifest.xml:198:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:199:13
-	android:theme
 		ADDED from AndroidManifest.xml:200:13
+	android:noHistory
+		ADDED from AndroidManifest.xml:199:13
 	android:name
 		ADDED from AndroidManifest.xml:198:19
-activity#src.activities.ResultPage.StepAllStatisticsActivity
-ADDED from AndroidManifest.xml:205:9
+activity#src.activities.ResultPage.StepStatisticsActivity
+ADDED from AndroidManifest.xml:204:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:206:13
+		ADDED from AndroidManifest.xml:205:13
 	android:theme
-		ADDED from AndroidManifest.xml:207:13
+		ADDED from AndroidManifest.xml:206:13
 	android:name
-		ADDED from AndroidManifest.xml:205:19
-activity#src.activities.Step06.ActStep0604
-ADDED from AndroidManifest.xml:212:9
+		ADDED from AndroidManifest.xml:204:19
+activity#src.activities.ResultPage.StepAllStatisticsActivity
+ADDED from AndroidManifest.xml:211:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:214:13
-	android:noHistory
+		ADDED from AndroidManifest.xml:212:13
+	android:theme
 		ADDED from AndroidManifest.xml:213:13
 	android:name
-		ADDED from AndroidManifest.xml:212:19
-activity#src.activities.Step06.ActStep0605
+		ADDED from AndroidManifest.xml:211:19
+activity#src.activities.Step06.ActStep0604
 ADDED from AndroidManifest.xml:218:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:220:13
@@ -309,10 +309,18 @@ ADDED from AndroidManifest.xml:218:9
 		ADDED from AndroidManifest.xml:219:13
 	android:name
 		ADDED from AndroidManifest.xml:218:19
-activity#src.activities.ActTest
+activity#src.activities.Step06.ActStep0605
 ADDED from AndroidManifest.xml:224:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:226:13
+	android:noHistory
+		ADDED from AndroidManifest.xml:225:13
 	android:name
 		ADDED from AndroidManifest.xml:224:19
+activity#src.activities.ActTest
+ADDED from AndroidManifest.xml:230:9
+	android:name
+		ADDED from AndroidManifest.xml:230:19
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:21.0.3:15:5
