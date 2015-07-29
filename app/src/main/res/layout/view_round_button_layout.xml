@@ -156,6 +156,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:clickable="false"
                 android:textSize="@dimen/wp7"
                 android:text="6"
                 android:id="@+id/txt_col_6">
@@ -186,6 +187,7 @@
                 android:id="@+id/txt_col_7">
             </TextView>
         </FrameLayout>
+
 
     </LinearLayout>
 </LinearLayout>

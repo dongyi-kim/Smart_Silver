@@ -42,7 +42,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_discription"
-                    android:text="아래에 나타난 그림이\n총 몇개 일까요?"
+                    android:text="그림의 개수가 몇 개인지 세어보고\n알맞은 숫자를 누르세요."
                     android:textSize="@dimen/wp12"/>
 
 
@@ -53,7 +53,6 @@
                     android:id="@+id/drawfield"
                     android:layout_gravity="center"
                     android:gravity="center">
-
 
                     <include layout="@layout/view_round_button_layout"
                         android:layout_width="match_parent"
@@ -75,19 +74,19 @@
                     <include layout="@layout/view_round_button_layout"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/drawfield_row_3"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:layout_weight="1"
-                        android:id="@+id/drawfield_row_3"/>
+                        android:layout_marginTop="5sp"/>
 
                     <include layout="@layout/view_round_button_layout"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
+                        android:layout_weight="1"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:layout_weight="1"
                         android:id="@+id/drawfield_row_4"/>
-
                 </LinearLayout>
 
             </LinearLayout>

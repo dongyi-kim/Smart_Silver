@@ -126,6 +126,7 @@ public class ActStep0304 extends StageActivity {
             imgUpper[i].setImageResource(dataSet.iImageList[i]);
             btnAnswer[i].setText("" + dataSet.iBtnList[i]);
         }
+        StartRecording();
     }
 
 

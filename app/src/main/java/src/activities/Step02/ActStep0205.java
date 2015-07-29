@@ -65,8 +65,7 @@ public class ActStep0205 extends StageActivity{
     }
 
     public void setQuestion(boolean isRetry, Object object){
-        int iRandomSeed = iStage - 1;
-        dataSet.setData(iRandomSeed);
+        dataSet.setData(iStage);
 
         for(int i = 0; i < 2; i++){
             int iOperator = dataSet.iOperator[i];
@@ -134,14 +133,19 @@ public class ActStep0205 extends StageActivity{
     }
 
     public class Step0205DataSet{
-        private final int arrNumberSet[][] = {{5, 4, -1, 7}, {6, 7, -1, 10},
-                {9, -1, 2, 11}, {4, -1, 1, 13}, {-1, 8, 3, 10}};
-        private final int arrOperatorSet[][] = {{1, -1}, {1, -1}, {1, -1}, {1, -1}, {1, -1}};
+        private final int arrNumberSet[][] = {{5, 4, -1, 7}, {6, 7, -1, 10}, {9, -1, 2, 11}, {4, -1, 1, 13}, {-1, 8, 3, 10},
+                {3, 6, -1, 7}, {5, 8, -1, 10}, {8, -1, 1, 11}, {6, -1, 3, 13}, {-1, 9, 4, 10},
+                {8, 1, -1, 7}, {9, 4, -1, 10}, {9, -1, 1, 11}, {5, -1, 2, 13}, {-1, 7, 2, 10}};
+        private final int arrOperatorSet[][] = {{1, -1}, {1, -1}, {1, -1}, {1, -1}, {1, -1},
+                {1, -1}, {1, -1}, {1, -1}, {1, -1}, {1, -1},
+                {1, -1}, {1, -1}, {1, -1}, {1, -1}, {1, -1}};
 
         public final int iNumberSet[] = new int[4];
         public final int iOperator[] = new int[2];
 
-        public void setData(int iSeed){
+        public void setData(int iStage){
+            int iSeed = (iStage - 1) + 5 * rand.nextInt(3);
+
             for(int i = 0; i < 4; i++)
                 iNumberSet[i] = arrNumberSet[iSeed][i];
             iOperator[0] = arrOperatorSet[iSeed][0];

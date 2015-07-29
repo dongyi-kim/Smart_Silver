@@ -61,8 +61,7 @@ public class ActStep0202 extends StageActivity{
     }
 
     public void setQuestion(boolean isRetry, Object object){
-        int iRandomSeed = iStage  * 2 + rand.nextInt(1);
-        dataSet.setData(iRandomSeed);
+        dataSet.setData(iStage);
 
         txtOperandCell[0].setText("" + dataSet.iOperandSet[0]);
         txtOperandCell[1].setText("" + dataSet.iOperandSet[1]);
@@ -104,15 +103,22 @@ public class ActStep0202 extends StageActivity{
     }
 
     public class Step0202DataSet {
-        private final int arrOperandSet[][] = {{5, 3}, {2, 4}, {5, 3}, {8, 2}, {5, 7}, {6, 1}, {7, 4}, {12, 3}, {8, 7}, {14, 7}, {17, 9}};
-        private final char arrOperatorSet[] = {'+', '+', '-', '-', '+', '-', '+', '-', '+', '-', '-'};
-        private final int arrAnswerSet[] = {8, 7, 3, 6, 13, 4, 11, 7, 12, 6, 7};
+        private final int arrOperandSet[][] = {{2, 4}, {5, 3}, {8, 2}, {5, 7}, {6, 1}, {7, 4}, {12, 3}, {8, 7}, {14, 7}, {17, 9},
+                {3, 4}, {6, 4}, {7, 2}, {5, 8}, {7, 2}, {6, 7}, {11, 3}, {7, 9}, {16, 7}, {17, 8},
+                {3, 2}, {5, 2}, {8, 3}, {6, 7}, {6, 3}, {7, 5}, {13, 5}, {8, 6}, {15, 4}, {18, 9}};
+        private final char arrOperatorSet[] = {'+', '-', '-', '+', '-', '+', '-', '+', '-', '-',
+                '+', '-', '-', '+', '-', '+', '-', '+', '-', '-',
+                '+', '-', '-', '+', '-', '+', '-', '+', '-', '-'};
+        private final int arrAnswerSet[] = {7, 3, 6, 13, 4, 11, 7, 12, 6, 7,
+                8, 3, 5, 15, 4, 13, 7, 15, 8, 8,
+                6, 1, 5, 14, 5, 12, 9, 13, 12, 7};
 
         public int iOperandSet[] = new int[2];
         public char cOperator;
         public int iAnswer;
 
-        public void setData(int iSeed) {
+        public void setData(int iStage) {
+            int iSeed = (iStage - 1) * 2 + rand.nextInt(2) + 10 * rand.nextInt(3);
             iOperandSet[0] = arrOperandSet[iSeed][0];
             iOperandSet[1] = arrOperandSet[iSeed][1];
             cOperator = arrOperatorSet[iSeed];
