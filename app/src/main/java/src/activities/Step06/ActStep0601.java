@@ -100,4 +100,4 @@ public class ActStep0601 extends StageActivity {
         Intent intent = new Intent(this, ActStep0602.class);
         startActivity(intent);
     }
-}
+ }
