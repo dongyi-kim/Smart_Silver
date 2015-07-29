@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_gravity="center"
-            android:layout_weight=".68"
+            android:layout_weight=".62"
             android:gravity="center"
             android:orientation="horizontal"
             android:weightSum="1">
@@ -48,7 +48,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="4dp"
                     android:orientation="vertical"
-                    android:weightSum=".68">
+                    android:weightSum=".62">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -370,10 +370,35 @@
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
-                                        android:layout_weight="1"
-                                        android:gravity="right|center_vertical"
-                                        android:text="*10,000 "
-                                        android:textSize="@dimen/wp4"/>
+                                        android:layout_weight="1"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight=".15"
+                                    android:orientation="vertical"
+                                    android:background="#FFFFFF">
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
@@ -409,38 +434,13 @@
                                         android:gravity="right|center_vertical"
                                         android:text="*10,000 "
                                         android:textSize="@dimen/wp4"/>
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight=".15"
-                                    android:orientation="vertical"
-                                    android:background="#FFFFFF">
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="0dp"
-                                        android:layout_weight="1"/>
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="0dp"
-                                        android:layout_weight="1"/>
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="0dp"
-                                        android:layout_weight="1"/>
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="0dp"
-                                        android:layout_weight="1"/>
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="0dp"
-                                        android:layout_weight="1"/>
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="0dp"
-                                        android:layout_weight="1"/>
+                                        android:layout_weight="1"
+                                        android:gravity="right|center_vertical"
+                                        android:text="*10,000 "
+                                        android:textSize="@dimen/wp4"/>
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -454,30 +454,7 @@
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="right|center_vertical"
-                                        android:text="*380,000 "
-                                        android:textSize="@dimen/wp4"/>
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="0dp"
-                                        android:layout_weight="1"
-                                        android:gravity="right|center_vertical"
-                                        android:text="*370,000 "
-                                        android:textSize="@dimen/wp4"/>
-                                    <Button
-                                        android:layout_width="match_parent"
-                                        android:layout_height="0dp"
-                                        android:layout_weight="1"
-                                        android:gravity="right|center_vertical"
-                                        android:text="*360,000 "
-                                        android:textSize="@dimen/wp4"
-                                        android:background="@drawable/borderline_clickable"
-                                        android:id="@+id/btn_balance_3"/>
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="0dp"
-                                        android:layout_weight="1"
-                                        android:gravity="right|center_vertical"
-                                        android:text="*340,000 "
+                                        android:text="*310,000 "
                                         android:textSize="@dimen/wp4"/>
                                     <TextView
                                         android:layout_width="match_parent"
@@ -491,7 +468,30 @@
                                         android:layout_height="0dp"
                                         android:layout_weight="1"
                                         android:gravity="right|center_vertical"
-                                        android:text="*310,000 "
+                                        android:text="*340,000 "
+                                        android:textSize="@dimen/wp4"
+                                        android:background="@drawable/borderline_clickable"
+                                        android:id="@+id/btn_balance_3"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:gravity="right|center_vertical"
+                                        android:text="*360,000 "
+                                        android:textSize="@dimen/wp4"/>
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:gravity="right|center_vertical"
+                                        android:text="*370,000 "
+                                        android:textSize="@dimen/wp4"/>
+                                    <Button
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:gravity="right|center_vertical"
+                                        android:text="*380,000 "
                                         android:textSize="@dimen/wp4"
                                         android:background="@drawable/borderline_clickable"
                                         android:id="@+id/btn_balance_6"/>
@@ -552,14 +552,6 @@
                         </LinearLayout>
                     </LinearLayout>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight=".06"
-                        android:background="#FFFFFFFF"
-                        android:text="의뢰인:   나승주"
-                        android:gravity="center"
-                        android:textSize="@dimen/wp4"/>
                 </LinearLayout>
 
             </FrameLayout>

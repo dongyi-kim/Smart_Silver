@@ -147,12 +147,6 @@
             >
         </activity>
 
-        <activity android:name="src.activities.ResultPage.StatisticsActivity"
-            android:screenOrientation="landscape"
-            >
-        </activity>
-
-
         <activity android:name="src.activities.Step05.ActStep0502"
             android:noHistory="true"
             android:screenOrientation="landscape"
@@ -160,12 +154,6 @@
         </activity>
 
         <activity android:name="src.activities.Step05.ActStep0503"
-            android:noHistory="true"
-            android:screenOrientation="landscape"
-            >
-        </activity>
-
-        <activity android:name="src.activities.Step06.ActStep0601"
             android:noHistory="true"
             android:screenOrientation="landscape"
             >
@@ -183,13 +171,7 @@
             >
         </activity>
 
-        <activity android:name="src.activities.Step07.ActStep0701"
-            android:noHistory="true"
-            android:screenOrientation="landscape"
-            >
-        </activity>
-
-        <activity android:name="src.activities.Step07.ActStep0703"
+        <activity android:name="src.activities.Step06.ActStep0601"
             android:noHistory="true"
             android:screenOrientation="landscape"
             >
@@ -201,19 +183,11 @@
             >
         </activity>
 
-        <activity android:name="src.activities.ResultPage.StepStatisticsActivity"
+        <activity android:name="src.activities.Step06.ActStep0603"
+            android:noHistory="true"
             android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
             >
         </activity>
-
-
-        <activity android:name="src.activities.ResultPage.StepAllStatisticsActivity"
-            android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
-            >
-        </activity>
-
 
         <activity android:name="src.activities.Step06.ActStep0604"
             android:noHistory="true"
@@ -224,6 +198,42 @@
         <activity android:name="src.activities.Step06.ActStep0605"
             android:noHistory="true"
             android:screenOrientation="landscape"
+            >
+        </activity>
+
+        <activity android:name="src.activities.Step07.ActStep0701"
+            android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
+        </activity>
+
+        <activity android:name="src.activities.Step07.ActStep0702"
+            android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
+        </activity>
+
+        <activity android:name="src.activities.Step07.ActStep0703"
+            android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
+        </activity>
+
+
+        <activity android:name="src.activities.ResultPage.StatisticsActivity"
+            android:screenOrientation="landscape"
+            >
+        </activity>
+
+        <activity android:name="src.activities.ResultPage.StepStatisticsActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            >
+        </activity>
+
+        <activity android:name="src.activities.ResultPage.StepAllStatisticsActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
             >
         </activity>
 

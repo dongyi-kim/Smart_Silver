@@ -51,6 +51,7 @@ public class ActTest extends FrameActivity {
     Button btnStep6_4;
     Button btnStep6_5;
     Button btnStep7_1;
+    Button btnStep7_2;
     Button btnStep7_3;
 
     @Override
@@ -151,6 +152,9 @@ public class ActTest extends FrameActivity {
 
         btnStep7_1 = (Button)findViewById(R.id.btn_step_7_1);
         btnStep7_1.setOnClickListener(clickBtnStep);
+
+        btnStep7_2 = (Button)findViewById(R.id.btn_step_7_2);
+        btnStep7_2.setOnClickListener(clickBtnStep);
 
         btnStep7_3 = (Button)findViewById(R.id.btn_step_7_3);
         btnStep7_3.setOnClickListener(clickBtnStep);
@@ -351,6 +355,12 @@ public class ActTest extends FrameActivity {
             {
 
                 Intent intent = new Intent(v.getContext(), ActStep0701.class);
+                startActivity(intent);
+            }
+            else if(v == btnStep7_2)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0702.class);
                 startActivity(intent);
             }
             else if(v == btnStep7_3)

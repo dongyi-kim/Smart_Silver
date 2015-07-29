@@ -74,8 +74,7 @@ public class ActStep0204 extends StageActivity {
     }
 
     public void setQuestion(boolean isRetry, Object object){
-        int iRandomSeed = (iStage - 1) * 2 + rand.nextInt(1);
-        dataSet.setData(iRandomSeed);
+        dataSet.setData(iStage);
 
         for(int i = 0; i < 2; i++){
             int iOperator = dataSet.iOperator[i];
@@ -151,21 +150,19 @@ public class ActStep0204 extends StageActivity {
     }
 
     public class Step0204DataSet{
-        private final int arrNumberSet[][] = {{4, -1, -2, 7}, {-1, 9, -2, 11},
-            {5, 2, -1, 10}, {2, -1, 7, 15},
-            {-1, 5, 7, 16}, {9, 8, -1, 19},
-            {9, 9, -2, -1}, {8, 5, -2, -1},
-            {7, -1, -2, 5}, {15, 5, -1, 5}};
-        private final int arrOperatorSet[][] = {{1, 0}, {1, 0},
-                {1, 1}, {1, 1},
-                {1, 1}, {1, 1},
-                {-1, 0}, {-1, 0},
-                {-1, 0}, {-1, -1}};
+        private final int arrNumberSet[][] = {{4, -1, -2, 7}, {-1, 9, -2, 11}, {5, 2, -1, 10}, {2, -1, 7, 15}, {-1, 5, 7, 16}, {9, 8, -1, 19}, {9, 9, -2, -1}, {8, 5, -2, -1}, {7, -1, -2, 5}, {15, 5, -1, 5},
+                {4, -1, -2, 6}, {-1, 8, -2, 11}, {3, 4, -1, 10}, {3, -1, 6, 15}, {-1, 6, 6, 16}, {8, 7, -1, 19}, {8, 8, -2, -1}, {9, -1, -2, 6}, {8, -1, -2, 6}, {12, -1, 2, 5},
+                {5, -1, -2, 8}, {-1, 7, -2, 11}, {6, 1, -1, 10}, {4, -1, 5, 10}, {4, -1, 5, 15}, {-1, 8, 4, 16}, {6, 9, -1, 19}, {4, 4, -2, -1}, {7, -1, -2, 4}, {5, -1, -2, 3}, {13, 3, -1, 5}};
+        private final int arrOperatorSet[][] = {{1, 0}, {1, 0}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {-1, 0}, {-1, 0}, {-1, 0}, {-1, -1},
+                {1, 0}, {1, 0}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {-1, 0}, {-1, 0}, {-1, 0}, {-1, -1},
+                {1, 0}, {1, 0}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {-1, 0}, {-1, 0}, {-1, 0}, {-1, -1}};
 
         public final int iNumberSet[] = new int[4];
         public final int iOperator[] = new int[2];
 
-        public void setData(int iSeed){
+        public void setData(int iStage){
+            int iSeed = (iStage - 1) * 2 + rand.nextInt(2) + 10 * rand.nextInt(3);
+
             for(int i = 0; i < 4; i++)
                 iNumberSet[i] = arrNumberSet[iSeed][i];
             iOperator[0] = arrOperatorSet[iSeed][0];

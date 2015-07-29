@@ -57,8 +57,7 @@ public class ActStep0203 extends StageActivity {
     }
 
     public void setQuestion(boolean isRetry, Object object){
-        int iRandomSeed = (iStage - 1) * 2 + rand.nextInt(1);
-        dataSet.setData(iRandomSeed);
+        dataSet.setData(iStage);
 
         txtCalculateSet[0].setText(dataSet.sCalculateSet[0]);
         txtCalculateSet[1].setText(dataSet.sCalculateSet[1]);
@@ -120,14 +119,20 @@ public class ActStep0203 extends StageActivity {
     }
 
     public class Step0203DataSet {
-        private final String arrCalculateSet[][] = {{"2+1", "2+7"},
-                {"5+0", "2+9"}, {"4+8", "7+2"}, {"11+4", "9+8"}, {"5-3", "7-4"},
-                {"6-5", "8-1"}, {"9-3", "2+2"}, {"4+5", "12-7"}, {"5+6", "16-8"}};
+        private final String arrCalculateSet[][] = { {"5+0", "2+9"}, {"4+8", "7+2"}, {"11+4", "9+8"}, {"5-3", "7-4"},
+                {"6-5", "8-1"}, {"9-3", "2+2"}, {"4+5", "12-7"}, {"5+6", "16-8"},
+                {"4+0", "2+1"}, {"4+9", "6+4"}, {"9+4", "11+3"}, {"7-4", "6-5"},
+                {"8-4", "6-5"}, {"7-5", "4+5"}, {"13-6", "3+5"}, {"4+7", "14-2"},
+                {"3+5", "0+9"}, {"5+8", "7+8"}, {"10+5", "8+6"}, {"8-4", "5-3"},
+                {"7-5", "7-4"}, {"3+2", "9-2"}, {"11-5", "2+3"}, {"15-3", "3+8"}};
 
         public String sCalculateSet[] = new String[2];
 
-        public void setData(int iSeed) {
-            if(iSeed > 8) iSeed = 8;
+        public void setData(int iStage) {
+            int iSeed = (iStage - 1) * 2 + rand.nextInt(2);
+            if(iStage > 3) iSeed = 2 + iStage;
+            iSeed += 8 * rand.nextInt(3);
+
             sCalculateSet[0] = arrCalculateSet[iSeed][0];
             sCalculateSet[1] = arrCalculateSet[iSeed][1];
         }
