@@ -25,7 +25,7 @@ public class ChalkTextView extends TextView {
 
     public ChalkTextView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        Typeface typeface = Typeface.createFromAsset(context.getAssets(), "fonts/NanumGothic.ttf");
+        Typeface typeface = Typeface.createFromAsset(context.getAssets(), "fonts/roboto_light.ttf");
         setTypeface(typeface);
         setGravity(Gravity.CENTER_HORIZONTAL | Gravity.CENTER_VERTICAL);
     }
