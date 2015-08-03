@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/txt_description"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".15"
+            android:gravity="center"
+            android:text=" 아래 자료에서 전기요금 사용기간을 나타내는 곳을 찾아 누르세요."
+            android:textSize="@dimen/wp5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".05" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight=".62"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".8">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFAAAAAA" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight=".2"
+                        android:background="#FFAAAAAA"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:orientation="horizontal"
+                            android:background="#FFAAAAAA"
+                            android:layout_weight="1"
+                            android:weightSum="1">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".15"
+                                android:background="#FFEECC99"
+                                android:text="고 객 명"
+                                android:textSize="@dimen/wp3"
+                                android:gravity="center"
+                                android:layout_marginRight="1dp"/>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".3"
+                                android:background="#FFEEDDAA"
+                                android:text="홍길동"
+                                android:textSize="@dimen/wp3"
+                                android:gravity="center"
+                                android:layout_marginRight="1dp"/>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".15"
+                                android:background="#FFEECC99"
+                                android:text="주      소"
+                                android:layout_marginRight="1dp"
+                                android:gravity="center"
+                                android:textSize="@dimen/wp3"/>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".4"
+                                android:text="경기도 용인시 기흥구 구갈동 326-3"
+                                android:textSize="@dimen/wp3"
+                                android:gravity="center"
+                                android:background="#FFEEDDAA"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:orientation="horizontal"
+                            android:background="#FFAAAAAA"
+                            android:layout_weight="1"
+                            android:layout_marginTop="1dp"
+                            android:weightSum="1">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".15"
+                                android:background="#FFFFDDAA"
+                                android:text="상     호"
+                                android:textSize="@dimen/wp3"
+                                android:gravity="center"
+                                android:layout_marginRight="1dp"/>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".3"
+                                android:background="#FFFFEEBB"
+                                android:text="공동주택명"
+                                android:textSize="@dimen/wp3"
+                                android:gravity="center"
+                                android:layout_marginRight="1dp"/>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".15"
+                                android:background="#FFFFDDAA"
+                                android:text="공동주택명"
+                                android:layout_marginRight="1dp"
+                                android:gravity="center"
+                                android:textSize="@dimen/wp3"/>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".4"
+                                android:text="경기도 용인시 기흥구 구갈동 326-3"
+                                android:textSize="@dimen/wp3"
+                                android:gravity="center"
+                                android:background="#FFFFEEBB"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:orientation="horizontal"
+                            android:background="#FFAAAAAA"
+                            android:layout_marginTop="1dp"
+                            android:layout_weight="1"
+                            android:weightSum="1">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".15"
+                                android:background="#FFFEEECC"
+                                android:text="납 기 일"
+                                android:textSize="@dimen/wp3"
+                                android:gravity="center"
+                                android:layout_marginRight="1dp"/>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".3"
+                                android:background="#FFFEEEDD"
+                                android:text="2014년 07월 31일까지"
+                                android:textSize="@dimen/wp3"
+                                android:gravity="center"
+                                android:layout_marginRight="1dp"/>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".15"
+                                android:background="#FFFEEECC"
+                                android:text="사용기간"
+                                android:layout_marginRight="1dp"
+                                android:gravity="center"
+                                android:textSize="@dimen/wp3"/>
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".4"
+                                android:text="06월 08일 ~ 07월 07일까지"
+                                android:textSize="@dimen/wp3"
+                                android:gravity="center"
+                                android:background="#FFFEEEDD"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight=".8"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        android:background="#FFFFFFFF">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight=".3"
+                            android:weightSum="1"
+                            android:gravity="center">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="vertical"
+                                android:layout_height="0dp"
+                                android:layout_weight=".7"
+                                android:background="@drawable/my_rounded_corner"
+                                android:weightSum="1">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight=".1"
+                                    android:layout_margin="2dp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
