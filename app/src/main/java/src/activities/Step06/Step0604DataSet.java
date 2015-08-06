@@ -38,7 +38,7 @@ public class Step0604DataSet {
             {"아래 그림은 날씨 예보입니다. 비가 오는 곳은 모두 몇 군데인가요?", "아래 그림은 날씨 예보입니다. 맑은 지역은 모두 몇 곳인가요?","아래 그림은 날씨 예보입니다. 날씨가 흐린 지역은 모두 몇 곳인가요?"}
     };
 
-    private static final int iAnsList[][] = {{1,0,1},{2,1,1},{1,2,1},{0},{0}};
+    private static final int iAnsList[][] = {{1,0,1},{2,1,1},{1,2,1},{0,0,0},{0,0,0}};
 
     private static final String strAnsList[][] = {
             {"", "", ""},

@@ -23,9 +23,9 @@ import src.dialogs.DlgResultMark;
 public class ActStep0603 extends StageActivity {
 
     private TextView txtDiscription;
-    private ImageView[]img1 = new ImageView[2]; // Ã³À½ 2°³±×¸²..
-    private ImageView img2;   // ³ªÁß 1°³ Ç¥..
-    private Button btnAnswer[] = new Button[4]; // ¹öÆ° 4°³Â¥¸®
+    private ImageView[]img1 = new ImageView[2]; // ì²˜ìŒ 2ê°œê·¸ë¦¼..
+    private ImageView img2;   // ë‚˜ì¤‘ 1ê°œ í‘œ..
+    private Button btnAnswer[] = new Button[4]; // ë²„íŠ¼ 4ê°œì§œë¦¬
     private Button next;
     private boolean ans;
     private static int Count = 0;
@@ -34,14 +34,14 @@ public class ActStep0603 extends StageActivity {
 
     private int imgList[];
 
-    private TextView[] txtNum = new TextView[2]; //Ç¥ Á©¿ÞÂÊ ¼ýÀÚ..7,8¸¸ ¾ø¾Ù ¿ëµµ..
-    private TextView txtLeft, txtRight; // °úÀÏ ÀÌ¸§(°¨,»ç°ú µî..)
+    private TextView[] txtNum = new TextView[2]; //í‘œ ì ¤ì™¼ìª½ ìˆ«ìž..7,8ë§Œ ì—†ì•¨ ìš©ë„..
+    private TextView txtLeft, txtRight; // ê³¼ì¼ ì´ë¦„(ê°,ì‚¬ê³¼ ë“±..)
     private TextView txtTriL, txtTriR;
 
     private ImageView[] imgLeftGraph = new ImageView[9];
-    private ImageView[] imgRightGraph = new ImageView[9]; // Ç¥¿¡ ÀÌ¹ÌÁö ³Ö´Â°Å..
+    private ImageView[] imgRightGraph = new ImageView[9]; // í‘œì— ì´ë¯¸ì§€ ë„£ëŠ”ê±°..
 
-    private ImageButton IBleft1, IBleft2, IBright1, IBright2; // »ï°¢Çü..
+    private ImageButton IBleft1, IBleft2, IBright1, IBright2; // ì‚¼ê°í˜•..
 
     private LinearLayout layout1, layout2, layout3, layout4;
 
@@ -66,9 +66,9 @@ public class ActStep0603 extends StageActivity {
         img1[1] = (ImageView)findViewById(R.id.img_6_3_2);
         img2 = (ImageView)findViewById(R.id.img_6_3_3);
 
-        // ¼³¸í
+        // ì„¤ëª…
         txtDiscription = (TextView)findViewById(R.id.txt_discription);
-        // »ï°¢Çü
+        // ì‚¼ê°í˜•
         IBleft1 = (ImageButton)findViewById(R.id.triangle_left_1);
         IBleft2 = (ImageButton)findViewById(R.id.triangle_left_2);
         IBright1 = (ImageButton)findViewById(R.id.triangle_right_1);
@@ -111,11 +111,11 @@ public class ActStep0603 extends StageActivity {
             }
         });
 
-        //Ç¥¿ÞÂÊ ¼ýÀÚ..
+        //í‘œì™¼ìª½ ìˆ«ìž..
         txtNum[0] = (TextView)findViewById(R.id.cell_0_0);
         txtNum[1] = (TextView)findViewById(R.id.cell_1_0);
 
-        //Ç¥
+        //í‘œ
         imgLeftGraph[0] = (ImageView)findViewById(R.id.cell_0_1);
         imgLeftGraph[1] = (ImageView)findViewById(R.id.cell_1_1);
         imgLeftGraph[2] = (ImageView)findViewById(R.id.cell_2_1);
@@ -134,7 +134,7 @@ public class ActStep0603 extends StageActivity {
         imgRightGraph[6] = (ImageView)findViewById(R.id.cell_6_2);
         imgRightGraph[7] = (ImageView)findViewById(R.id.cell_7_2);
 
-        // ¹öÆ° 4°³Â¥¸®
+        // ë²„íŠ¼ 4ê°œì§œë¦¬
         btnAnswer[0] = (Button)findViewById(R.id.btn_ans_1);
         btnAnswer[1] = (Button)findViewById(R.id.btn_ans_2);
         btnAnswer[2] = (Button)findViewById(R.id.btn_ans_3);
@@ -168,7 +168,7 @@ public class ActStep0603 extends StageActivity {
             });
         } // end of button listener
 
-        // °úÀÏÀÌ¸§
+        // ê³¼ì¼ì´ë¦„
         txtLeft = (TextView)findViewById(R.id.cell_8_1);
         txtRight = (TextView)findViewById(R.id.cell_8_2);
 
@@ -224,7 +224,8 @@ public class ActStep0603 extends StageActivity {
     public void checkAnswer(Object object) {
         DlgResultMark dlg = new DlgResultMark(this, ans);
         dlg.show();
-       dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
+        if(ans || Count > 1) StopRecording(ans);
+        dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface dialog) {
                 if(ans || Count > 1){
