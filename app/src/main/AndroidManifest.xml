@@ -219,6 +219,12 @@
             >
         </activity>
 
+        <activity android:name="src.activities.Step07.ActStep0704"
+            android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
+        </activity>
+
 
         <activity android:name="src.activities.ResultPage.StatisticsActivity"
             android:screenOrientation="landscape"

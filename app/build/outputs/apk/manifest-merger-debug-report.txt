@@ -311,21 +311,21 @@ ADDED from AndroidManifest.xml:216:9
 		ADDED from AndroidManifest.xml:217:13
 	android:name
 		ADDED from AndroidManifest.xml:216:19
-activity#src.activities.ResultPage.StatisticsActivity
-ADDED from AndroidManifest.xml:223:9
+activity#src.activities.Step07.ActStep0704
+ADDED from AndroidManifest.xml:222:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:224:13
+	android:noHistory
+		ADDED from AndroidManifest.xml:223:13
 	android:name
-		ADDED from AndroidManifest.xml:223:19
-activity#src.activities.ResultPage.StepStatisticsActivity
-ADDED from AndroidManifest.xml:228:9
+		ADDED from AndroidManifest.xml:222:19
+activity#src.activities.ResultPage.StatisticsActivity
+ADDED from AndroidManifest.xml:229:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:229:13
-	android:theme
 		ADDED from AndroidManifest.xml:230:13
 	android:name
-		ADDED from AndroidManifest.xml:228:19
-activity#src.activities.ResultPage.StepAllStatisticsActivity
+		ADDED from AndroidManifest.xml:229:19
+activity#src.activities.ResultPage.StepStatisticsActivity
 ADDED from AndroidManifest.xml:234:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:235:13
@@ -333,16 +333,24 @@ ADDED from AndroidManifest.xml:234:9
 		ADDED from AndroidManifest.xml:236:13
 	android:name
 		ADDED from AndroidManifest.xml:234:19
-activity#src.activities.ActTest
+activity#src.activities.ResultPage.StepAllStatisticsActivity
 ADDED from AndroidManifest.xml:240:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:241:13
+	android:theme
+		ADDED from AndroidManifest.xml:242:13
 	android:name
 		ADDED from AndroidManifest.xml:240:19
-activity#src.activities.ActStartLearning
-ADDED from AndroidManifest.xml:245:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:246:13
+activity#src.activities.ActTest
+ADDED from AndroidManifest.xml:246:9
 	android:name
-		ADDED from AndroidManifest.xml:245:19
+		ADDED from AndroidManifest.xml:246:19
+activity#src.activities.ActStartLearning
+ADDED from AndroidManifest.xml:251:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:252:13
+	android:name
+		ADDED from AndroidManifest.xml:251:19
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:21.0.3:15:5
