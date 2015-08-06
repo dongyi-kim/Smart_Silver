@@ -168,15 +168,25 @@
                                 android:text="납 기 일"
                                 android:textSize="@dimen/wp3" />
 
-                            <TextView
+                            <FrameLayout
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_marginRight="1dp"
                                 android:layout_weight=".3"
-                                android:background="#FFFFFFDD"
-                                android:gravity="center"
-                                android:text="2014년 07월 31일까지"
-                                android:textSize="@dimen/wp3" />
+                                android:background="#FFFFFFDD">
+                                <Button
+                                    android:layout_margin="1dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/my_button_with_shadow"
+                                    android:id="@+id/btn_payday"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="2014년 07월 31일까지"
+                                    android:textSize="@dimen/wp3" />
+                            </FrameLayout>
 
                             <TextView
                                 android:layout_width="0dp"
@@ -188,14 +198,24 @@
                                 android:text="사용기간"
                                 android:textSize="@dimen/wp3" />
 
-                            <TextView
+                            <FrameLayout
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight=".4"
-                                android:background="#FFFFFFDD"
-                                android:gravity="center"
-                                android:text="06월 08일 ~ 07월 07일까지"
-                                android:textSize="@dimen/wp3" />
+                                android:background="#FFFFFFDD">
+                                <Button
+                                    android:layout_margin="1dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/my_button_with_shadow"
+                                    android:id="@+id/btn_using_period"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="06월 08일 ~ 07월 07일까지"
+                                    android:textSize="@dimen/wp3" />
+                            </FrameLayout>
                         </LinearLayout>
                     </LinearLayout>
 
@@ -508,15 +528,26 @@
                                     android:layout_weight=".55"
                                     android:background="@drawable/my_rounded_corner"
                                     android:id="@+id/linear_request_money_contents">
-                                    <TextView
+
+                                    <FrameLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_marginTop="2dip"
-                                        android:gravity="center|right"
-                                        android:text="18,700"
-                                        android:textSize="@dimen/wp3"
-                                        android:textStyle="bold"
-                                        android:layout_marginRight="3dip"/>
+                                        android:layout_marginRight="3dip">
+                                        <Button
+                                            android:layout_margin="1dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/my_button_with_shadow"
+                                            android:id="@+id/btn_amount"/>
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center|right"
+                                            android:text="18,700"
+                                            android:textStyle="bold"
+                                            android:textSize="@dimen/wp3" />
+                                    </FrameLayout>
                                 </LinearLayout>
                             </LinearLayout>
                         </LinearLayout>
@@ -1062,20 +1093,41 @@
                                                 android:layout_width="match_parent"
                                                 android:layout_height="0dp"
                                                 android:layout_weight=".02" />
-                                            <TextView
+                                            <FrameLayout
                                                 android:layout_width="match_parent"
                                                 android:layout_height="0dp"
-                                                android:layout_weight=".05"
-                                                android:gravity="center|right"
-                                                android:text="161 kWh"
-                                                android:textSize="@dimen/wp3" />
-                                            <TextView
+                                                android:layout_weight=".05">
+                                                <Button
+                                                    android:layout_margin="1dp"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:background="@drawable/my_button_with_shadow"
+                                                    android:id="@+id/btn_this_month"/>
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center|right"
+                                                    android:text="161 kWh"
+                                                    android:textSize="@dimen/wp3" />
+                                            </FrameLayout>
+
+                                            <FrameLayout
                                                 android:layout_width="match_parent"
                                                 android:layout_height="0dp"
-                                                android:layout_weight=".05"
-                                                android:gravity="right|center"
-                                                android:text="203 kWh"
-                                                android:textSize="@dimen/wp3" />
+                                                android:layout_weight=".05">
+                                                <Button
+                                                    android:layout_margin="1dp"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:background="@drawable/my_button_with_shadow"
+                                                    android:id="@+id/btn_last_month"/>
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center|right"
+                                                    android:text="203 kWh"
+                                                    android:textSize="@dimen/wp3" />
+                                            </FrameLayout>
                                             <TextView
                                                 android:layout_width="match_parent"
                                                 android:layout_height="0dp"

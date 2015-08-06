@@ -19,7 +19,7 @@ import src.dialogs.DlgResultMark;
  */
 public class ActStep0704  extends StageActivity {
 
-    private static final int BUTTON_COUNT = 7;
+    private static final int BUTTON_COUNT = 5;
 
     private LinearLayout linearRequestList;
     private LinearLayout linearRequestMoney[] = new LinearLayout[2];
@@ -27,19 +27,25 @@ public class ActStep0704  extends StageActivity {
     private LinearLayout linearDefaultList[] = new LinearLayout[2];
     private LinearLayout linearUsing[] = new LinearLayout[2];
     private LinearLayout linearTaxBill[] = new LinearLayout[2];
-
     private TextView txtDescription;
     public final Button btnAnswerButton[] = new Button[BUTTON_COUNT];
 
     private int iRetryCount = 0;
     public boolean isRight = false;
 
-    public Step0703DataSet dataSet = new Step0703DataSet();
+    public Step0704DataSet dataSet = new Step0704DataSet();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_07_4);
+
+        txtDescription = (TextView)findViewById(R.id.txt_description);
+        btnAnswerButton[0] = (Button)findViewById(R.id.btn_payday);
+        btnAnswerButton[1] = (Button)findViewById(R.id.btn_using_period);
+        btnAnswerButton[2] = (Button)findViewById(R.id.btn_this_month);
+        btnAnswerButton[3] = (Button)findViewById(R.id.btn_last_month);
+        btnAnswerButton[4] = (Button)findViewById(R.id.btn_amount);
 
         linearRequestList = (LinearLayout)findViewById(R.id.linear_request_list);
         linearRequestMoney[0] = (LinearLayout)findViewById(R.id.linear_request_money_head);
@@ -73,27 +79,28 @@ public class ActStep0704  extends StageActivity {
         ((GradientDrawable)linearTaxBill[0].getBackground()).setStroke(2, 0xFF6688FF);
         ((GradientDrawable)linearTaxBill[1].getBackground()).setStroke(2, 0xFF6688FF);
 
-/*
-        linearTest = (LinearLayout)findViewById(R.id.linear_test);
-        GradientDrawable bgShape = (GradientDrawable)linearTest.getBackground();
-        bgShape.setStroke(3, 0xFFFF0000);
-*/
-/*
         //button listener
         for(int i = 0; i < BUTTON_COUNT; i++){
             btnAnswerButton[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v){
+                    int iBtnIndex = 0;
+                    for(int i = 0; i < BUTTON_COUNT; i++)
+                        if(btnAnswerButton[i] == v) iBtnIndex = i;
 
+                    if(dataSet.iAnswerIndex == iBtnIndex) isRight = true;
+                    else isRight = false;
+                    checkAnswer();
                 }
             });
         }
-*/
         setQuestion(false);
     }
 
     public void setQuestion(boolean isRetry, Object object){
-        int iRandomSeed = iStage - 1;
+        dataSet.setData(iStage);
+
+        txtDescription.setText(dataSet.sDescription);
 
         StartRecording();
     }
@@ -125,22 +132,23 @@ public class ActStep0704  extends StageActivity {
         startActivity(intent);
     }
 
-    public class Step0703DataSet {
-        /*
-        private final String arrDescription[] = {"아래 통장에서 계좌번호를 찾아 누르세요!",
-                "아래 통장에서 ‘김수현’이  10,000원을 이체한 날짜를 몇 년 몇 월 며칠인가요?",
-                "아래 통장에서 ‘이제신’이 20,000원을 입금하고 난 후 통장에 남은 금액은 얼마인지 찾아 누르세요.",
+    public class Step0704DataSet {
+        private final String arrDescription[] = {"전기요금 납기일을 나타내는 곳을 찾아 누르세요.",
+                "전기요금 청구금액을 나타내는 곳을 찾아 누르세요.",
+                "아래 자료에서 당월 전기사용량을 나타내는 곳을 찾아 누르세요.",
                 "아래 통장을 보고 ‘남동식’이  10,000원을 입금하고 난 후 통장에 남은 금액은 얼마인지 찾아 누르세요.",
                 "아래 통장에서 ‘민형준’이 이체한 날짜를 찾아 누르세요."};
-        private final int arrAnswerButtonIndex[] = {1, 2, 5, 6, 3};
+        private final int arrAnswerButtonIndex[] = {0, 4, 2, 6, 3};
 
         public String sDescription;
         public int iAnswerIndex;
 
-        public void setData(int iSeed) {
+        public void setData(int iStage) {
+            int iSeed = iStage - 1;
+
             sDescription = arrDescription[iSeed];
             iAnswerIndex = arrAnswerButtonIndex[iSeed];
         }
-        */
+
     }
 }
