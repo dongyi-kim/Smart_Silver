@@ -66,8 +66,7 @@ public class ActStep0302 extends StageActivity{
 
     public void setQuestion(boolean isRetry, Object object){
         if(!isRetry) {
-            int iRandomSeed = 2 * iStage + rand.nextInt(1);
-            processSet.setData(iRandomSeed);
+            processSet.setData(iStage);
             StartRecording();
         }
 
@@ -157,16 +156,15 @@ public class ActStep0302 extends StageActivity{
     }
 
     public class Step0302DataSet {
-        private static final int MAX_SET_NUMBER = 7;
+        private static final int MAX_SET_NUMBER = 6;
 
         /*If file I/O
         private static final int arrStartNumber[] = new int[MAX_SET_NUMBER];
         private static final int[] arrProcessSet[] = new int[MAX_SET_NUMBER][];
         */
         //else
-        private final int arrStartNumber[] = {500, 400, 700, 500, 790, 101, 602};
-        private final int[] arrProcessSet[] = {{-100, -10, -1},
-                {-100, -100, -100},
+        private final int arrStartNumber[] = {400, 700, 500, 790, 101, 602};
+        private final int[] arrProcessSet[] = {{-100, -100, -100},
                 {-100, -100, -100},
                 {-10, -10, -10},
                 {-10, -10, -10},
@@ -179,8 +177,10 @@ public class ActStep0302 extends StageActivity{
             //If file I/O, read file and set data
         }
 
-        public void setData(int iSeed){
-            if(iSeed >= MAX_SET_NUMBER) iSeed = MAX_SET_NUMBER - 1;
+        public void setData(int iStage){
+            int iSeed = iStage - 1;
+            if(iSeed < 1) iSeed = iSeed * 2 + rand.nextInt(2);
+            else iSeed = MAX_SET_NUMBER - (NUM_OF_STAGE - iSeed);
 
             startNumber = arrStartNumber[iSeed];
             for(int i = 0; i < 3; i++)
