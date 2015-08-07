@@ -5,4 +5,7 @@
     <color name="rippelColor">#95a5a6</color>
     <color name="result_success">#2ecc71</color>
     <color name="result_fail">#e74c3c</color>
+    <color name="result_doing">#f39c12</color>
+    <color name="result_done">#f1c40f</color>
+
 </resources>

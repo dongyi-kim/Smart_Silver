@@ -201,6 +201,11 @@
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
         </activity>
+        <activity
+            android:name="src.activities.ResultPage.RatioPerStepActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+        </activity>
         <activity android:name="src.activities.ActTest" >
         </activity>
         <activity
