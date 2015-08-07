@@ -92,13 +92,13 @@ public class ActStep0703 extends StageActivity {
     }
 
     public void goNext(Object object){
-        Intent intent = new Intent(this, ActMain.class);
+        Intent intent = new Intent(this, ActStep0704.class);
         startActivity(intent);
     }
 
     public class Step0703DataSet {
-        private final String arrDescription[] = {"아래 통장에서 계좌번호를 찾아 누르세요!",
-                "아래 통장에서 ‘김수현’이  10,000원을 이체한 날짜를 몇 년 몇 월 며칠인가요?",
+        private final String arrDescription[] = {"아래 통장에서 계좌번호를 찾아 누르세요.",
+                "아래 통장에서 ‘김수현’이 10,000원을 이체한 날짜를 나타내는 곳을 찾아 누르세요.",
                 "아래 통장에서 ‘이제신’이 20,000원을 입금하고 난 후 통장에 남은 금액은 얼마인지 찾아 누르세요.",
                 "아래 통장을 보고 ‘남동식’이  10,000원을 입금하고 난 후 통장에 남은 금액은 얼마인지 찾아 누르세요.",
                 "아래 통장에서 ‘민형준’이 이체한 날짜를 찾아 누르세요."};

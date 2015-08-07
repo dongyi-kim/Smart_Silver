@@ -224,7 +224,8 @@ public class ActStep0603 extends StageActivity {
     public void checkAnswer(Object object) {
         DlgResultMark dlg = new DlgResultMark(this, ans);
         dlg.show();
-       dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
+        if(ans || Count > 1) StopRecording(ans);
+        dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface dialog) {
                 if(ans || Count > 1){

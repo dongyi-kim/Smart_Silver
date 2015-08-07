@@ -1,6 +1,8 @@
 -- Merging decision tree log ---
 manifest
 ADDED from AndroidManifest.xml:2:1
+	xmlns:android
+		ADDED from AndroidManifest.xml:2:11
 	package
 		ADDED from AndroidManifest.xml:3:5
 		INJECTED from AndroidManifest.xml:0:0
@@ -8,8 +10,6 @@ ADDED from AndroidManifest.xml:2:1
 	android:versionName
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
-	xmlns:android
-		ADDED from AndroidManifest.xml:2:11
 	android:versionCode
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
@@ -33,10 +33,10 @@ MERGED from com.android.support:cardview-v7:21.0.3:16:5
 		ADDED from AndroidManifest.xml:9:9
 	android:icon
 		ADDED from AndroidManifest.xml:10:9
-	android:largeHeap
-		ADDED from AndroidManifest.xml:12:9
 	android:theme
 		ADDED from AndroidManifest.xml:13:9
+	android:largeHeap
+		ADDED from AndroidManifest.xml:12:9
 activity#src.activities.ActMain
 ADDED from AndroidManifest.xml:14:9
 	android:screenOrientation
@@ -311,21 +311,21 @@ ADDED from AndroidManifest.xml:216:9
 		ADDED from AndroidManifest.xml:217:13
 	android:name
 		ADDED from AndroidManifest.xml:216:19
-activity#src.activities.ResultPage.StatisticsActivity
-ADDED from AndroidManifest.xml:223:9
+activity#src.activities.Step07.ActStep0704
+ADDED from AndroidManifest.xml:222:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:224:13
+	android:noHistory
+		ADDED from AndroidManifest.xml:223:13
 	android:name
-		ADDED from AndroidManifest.xml:223:19
-activity#src.activities.ResultPage.StepStatisticsActivity
-ADDED from AndroidManifest.xml:228:9
+		ADDED from AndroidManifest.xml:222:19
+activity#src.activities.ResultPage.StatisticsActivity
+ADDED from AndroidManifest.xml:229:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:229:13
-	android:theme
 		ADDED from AndroidManifest.xml:230:13
 	android:name
-		ADDED from AndroidManifest.xml:228:19
-activity#src.activities.ResultPage.StepAllStatisticsActivity
+		ADDED from AndroidManifest.xml:229:19
+activity#src.activities.ResultPage.StepStatisticsActivity
 ADDED from AndroidManifest.xml:234:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:235:13
@@ -333,7 +333,11 @@ ADDED from AndroidManifest.xml:234:9
 		ADDED from AndroidManifest.xml:236:13
 	android:name
 		ADDED from AndroidManifest.xml:234:19
+<<<<<<< HEAD
 activity#src.activities.ResultPage.RatioPerStepActivity
+=======
+activity#src.activities.ResultPage.StepAllStatisticsActivity
+>>>>>>> origin/Acka
 ADDED from AndroidManifest.xml:240:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:241:13
@@ -341,6 +345,7 @@ ADDED from AndroidManifest.xml:240:9
 		ADDED from AndroidManifest.xml:242:13
 	android:name
 		ADDED from AndroidManifest.xml:240:19
+<<<<<<< HEAD
 activity#src.activities.ActTest
 ADDED from AndroidManifest.xml:246:9
 	android:name
@@ -351,6 +356,26 @@ ADDED from AndroidManifest.xml:251:9
 		ADDED from AndroidManifest.xml:252:13
 	android:name
 		ADDED from AndroidManifest.xml:251:19
+=======
+activity#src.activities.Step07.ActStep0705
+ADDED from AndroidManifest.xml:246:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:248:13
+	android:noHistory
+		ADDED from AndroidManifest.xml:247:13
+	android:name
+		ADDED from AndroidManifest.xml:246:19
+activity#src.activities.ActTest
+ADDED from AndroidManifest.xml:252:9
+	android:name
+		ADDED from AndroidManifest.xml:252:19
+activity#src.activities.ActStartLearning
+ADDED from AndroidManifest.xml:257:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:258:13
+	android:name
+		ADDED from AndroidManifest.xml:257:19
+>>>>>>> origin/Acka
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:21.0.3:15:5

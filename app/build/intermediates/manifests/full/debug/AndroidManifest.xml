@@ -188,6 +188,11 @@
             android:screenOrientation="landscape" >
         </activity>
         <activity
+            android:name="src.activities.Step07.ActStep0704"
+            android:noHistory="true"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
             android:name="src.activities.ResultPage.StatisticsActivity"
             android:screenOrientation="landscape" >
         </activity>
@@ -202,9 +207,15 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
         </activity>
         <activity
+<<<<<<< HEAD
             android:name="src.activities.ResultPage.RatioPerStepActivity"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+=======
+            android:name="src.activities.Step07.ActStep0705"
+            android:noHistory="true"
+            android:screenOrientation="landscape" >
+>>>>>>> origin/Acka
         </activity>
         <activity android:name="src.activities.ActTest" >
         </activity>

@@ -80,7 +80,7 @@ public class ActStep0605 extends StageActivity {
         DlgResultMark dlg = new DlgResultMark(this, ans);
         dlg.show();
 
-//        if(ans || Count > 1) StopRecording(ans);
+        if(ans || Count > 1) StopRecording(ans);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override

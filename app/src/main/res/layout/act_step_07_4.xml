@@ -1,0 +1,1584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/txt_description"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".15"
+            android:gravity="center"
+            android:text=" 아래 자료에서 전기요금 사용기간을 나타내는 곳을 찾아 누르세요."
+            android:textSize="@dimen/wp5" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight=".8"
+            android:gravity="center">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/frame_7_4_1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".8">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#FFAAAAAA" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:orientation="vertical"
+                            android:weightSum="1">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight=".15"
+                                android:background="#FFAAAAAA"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:background="#FFAAAAAA"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="1dp"
+                                        android:layout_weight=".15"
+                                        android:background="#FFEEDDAA"
+                                        android:gravity="center"
+                                        android:text="고 객 명"
+                                        android:textSize="@dimen/wp3" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="1dp"
+                                        android:layout_weight=".3"
+                                        android:background="#FFFFEECC"
+                                        android:gravity="center"
+                                        android:text="홍길동"
+                                        android:textSize="@dimen/wp3" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="1dp"
+                                        android:layout_weight=".15"
+                                        android:background="#FFEEDDAA"
+                                        android:gravity="center"
+                                        android:text="주      소"
+                                        android:textSize="@dimen/wp3" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight=".4"
+                                        android:background="#FFFFEECC"
+                                        android:gravity="center"
+                                        android:text="경기도 용인시 기흥구 구갈동 326-3"
+                                        android:textSize="@dimen/wp3" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_weight="1"
+                                    android:background="#FFAAAAAA"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="1dp"
+                                        android:layout_weight=".15"
+                                        android:background="#FFDDDDAA"
+                                        android:gravity="center"
+                                        android:text="상     호"
+                                        android:textSize="@dimen/wp3" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="1dp"
+                                        android:layout_weight=".3"
+                                        android:background="#FFEEEEBB"
+                                        android:gravity="center"
+                                        android:text="공동주택명"
+                                        android:textSize="@dimen/wp3" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="1dp"
+                                        android:layout_weight=".15"
+                                        android:background="#FFDDDDAA"
+                                        android:gravity="center"
+                                        android:text="공동주택명"
+                                        android:textSize="@dimen/wp3" />
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight=".4"
+                                        android:background="#FFEEEEBB"
+                                        android:gravity="center"
+                                        android:textSize="@dimen/wp3" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_marginTop="1dp"
+                                    android:layout_weight="1"
+                                    android:background="#FFAAAAAA"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="1dp"
+                                        android:layout_weight=".15"
+                                        android:background="#FFEEEECC"
+                                        android:gravity="center"
+                                        android:text="납 기 일"
+                                        android:textSize="@dimen/wp3" />
+
+                                    <FrameLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="1dp"
+                                        android:layout_weight=".3"
+                                        android:background="#FFFFFFDD">
+                                        <Button
+                                            android:layout_margin="1dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/my_button_with_shadow"
+                                            android:id="@+id/btn_payday"/>
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:text="2014년 07월 31일까지"
+                                            android:textSize="@dimen/wp3" />
+                                    </FrameLayout>
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="1dp"
+                                        android:layout_weight=".15"
+                                        android:background="#FFEEEECC"
+                                        android:gravity="center"
+                                        android:text="사용기간"
+                                        android:textSize="@dimen/wp3" />
+
+                                    <FrameLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight=".4"
+                                        android:background="#FFFFFFDD">
+                                        <Button
+                                            android:layout_margin="1dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/my_button_with_shadow"
+                                            android:id="@+id/btn_using_period"/>
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:text="06월 08일 ~ 07월 07일까지"
+                                            android:textSize="@dimen/wp3" />
+                                    </FrameLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight=".85"
+                                android:background="#FFFFFFFF"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <!-- start first list-->
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="3dp"
+                                    android:layout_marginRight="3dp"
+                                    android:layout_weight=".3"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:weightSum="1">
+
+                                    <LinearLayout
+                                        android:id="@+id/linear_request_list"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight=".8"
+                                        android:background="@drawable/my_rounded_corner"
+                                        android:orientation="vertical"
+                                        android:weightSum=".8">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_marginTop="2dip"
+                                            android:layout_weight=".08"
+                                            android:gravity="center"
+                                            android:text="청 구 내 역"
+                                            android:textSize="@dimen/wp4"
+                                            android:textStyle="bold"
+                                            android:textColor="#FF4488DD"/>
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:background="#FF4488DD" />
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_marginLeft="6dp"
+                                            android:layout_marginRight="6dp"
+                                            android:layout_weight=".72"
+                                            android:orientation="horizontal"
+                                            android:weightSum="1">
+
+                                            <View
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight=".03" />
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight=".55"
+                                                android:orientation="vertical"
+                                                android:weightSum=".72">
+
+                                                <View
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".02" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|left"
+                                                    android:text="기본 요금"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="left|center"
+                                                    android:text="전력량요금"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="left|center"
+                                                    android:text="자동납부할인액"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="left|center"
+                                                    android:text="인터넷빌링할인"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="left|center"
+                                                    android:text="전기요금제"
+                                                    android:textSize="@dimen/wp3"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="left|center"
+                                                    android:text="부가가치세"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="left|center"
+                                                    android:text="전력기금"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="left|center"
+                                                    android:text="원단위절사"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="left|center"
+                                                    android:text="당월요금  계"
+                                                    android:textSize="@dimen/wp3"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="left|center"
+                                                    android:text="TV 수신료"
+                                                    android:textSize="@dimen/wp3" />
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight=".39"
+                                                android:orientation="vertical"
+                                                android:weightSum=".72">
+
+                                                <View
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".02" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|right"
+                                                    android:text="910"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|right"
+                                                    android:text="13,749"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|right"
+                                                    android:text="-203"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|right"
+                                                    android:text="-200"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|right"
+                                                    android:text="14,256"
+                                                    android:textSize="@dimen/wp3"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|right"
+                                                    android:text="1,426"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|right"
+                                                    android:text="520"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|right"
+                                                    android:text="-2"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|right"
+                                                    android:text="16,200"
+                                                    android:textSize="@dimen/wp3"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|right"
+                                                    android:text="2,500"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|right"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|right"
+                                                    android:text="18,700"
+                                                    android:textColor="#FFAA2222"
+                                                    android:textSize="@dimen/wp3"
+                                                    android:textStyle="bold" />
+                                            </LinearLayout>
+
+                                            <View
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight=".03" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight=".02" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight=".08"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight=".43"
+                                            android:background="@drawable/my_rounded_corner"
+                                            android:id="@+id/linear_request_money_head">
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginTop="2dip"
+                                                android:gravity="center"
+                                                android:text="청구금액"
+                                                android:textColor="#FFFFFFFF"
+                                                android:textSize="@dimen/wp3"
+                                                android:textStyle="bold" />
+                                        </LinearLayout>
+
+                                        <View
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight=".02" />
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight=".55"
+                                            android:background="@drawable/my_rounded_corner"
+                                            android:id="@+id/linear_request_money_contents">
+
+                                            <FrameLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginTop="2dip"
+                                                android:layout_marginRight="3dip">
+                                                <Button
+                                                    android:layout_margin="1dp"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:background="@drawable/my_button_with_shadow"
+                                                    android:id="@+id/btn_amount"/>
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:gravity="center|right"
+                                                    android:text="18,700"
+                                                    android:textStyle="bold"
+                                                    android:textSize="@dimen/wp3" />
+                                            </FrameLayout>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                                <!-- end rfirst line-->
+
+                                <!-- Start second line-->
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="3dp"
+                                    android:layout_marginRight="3dp"
+                                    android:layout_weight=".28"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:weightSum="1">
+
+                                    <FrameLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight=".08">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight="1" />
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight="1"
+                                                android:background="#FF3399EE" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/my_rounded_corner"
+                                            android:orientation="horizontal"
+                                            android:id="@+id/linear_client_list_head">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginTop="2dip"
+                                                android:gravity="center"
+                                                android:text="고 객 사 항"
+                                                android:textColor="#FFFFFFFF"
+                                                android:textSize="@dimen/wp4"
+                                                android:textStyle="bold" />
+                                        </LinearLayout>
+                                    </FrameLayout>
+
+                                    <FrameLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight=".45">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight="1"
+                                                android:background="#FFDDEEFF" />
+
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight="1" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/my_rounded_corner"
+                                            android:orientation="horizontal"
+                                            android:id="@+id/linear_client_list_contents"
+                                            android:weightSum="1">
+
+                                            <View
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight=".05" />
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight=".45"
+                                                android:orientation="vertical"
+                                                android:weightSum=".45">
+
+                                                <View
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".02" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|left"
+                                                    android:text="계약종별"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="left|center"
+                                                    android:text="정기검침일"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="left|center"
+                                                    android:text="계기번호"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="left|center"
+                                                    android:text="계기배수"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="left|center"
+                                                    android:text="계기전력"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="left|center"
+                                                    android:text="가구수"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="left|center"
+                                                    android:text="TV대수"
+                                                    android:textSize="@dimen/wp3" />
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight=".45"
+                                                android:orientation="vertical"
+                                                android:weightSum=".45">
+
+                                                <View
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".02" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|right"
+                                                    android:text="주택용전력"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|right"
+                                                    android:text="매월 08 일"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|right"
+                                                    android:text="SC143057361"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|right"
+                                                    android:text="1"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|right"
+                                                    android:text="3 kW"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|right"
+                                                    android:text="1"
+                                                    android:textSize="@dimen/wp3" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0dp"
+                                                    android:layout_weight=".05"
+                                                    android:gravity="center|right"
+                                                    android:text="1"
+                                                    android:textSize="@dimen/wp3" />
+                                            </LinearLayout>
+
+                                            <View
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight=".05" />
+                                        </LinearLayout>
+                                    </FrameLayout>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight=".02" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight=".08"
+                                        android:background="@drawable/my_rounded_corner"
+                                        android:id="@+id/linear_default_list_head">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="2dip"
+                                            android:gravity="center"
+                                            android:text="미 납 내 역"
+                                            android:textColor="#FFFFFFFF"
+                                            android:textSize="@dimen/wp4"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight=".02" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight=".25"
+                                        android:background="@drawable/my_rounded_corner"
+                                        android:orientation="vertical"
+                                        android:id="@+id/linear_default_list_contents"
+                                        android:weightSum=".25">
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_marginTop="2dip"
+                                            android:layout_weight=".08"
+                                            android:orientation="horizontal">
+                                            <TextView
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:gravity="center"
+                                                android:text="미납월"
+                                                android:textColor="#FF331155"
+                                                android:textSize="@dimen/wp4" />
+                                            <View
+                                                android:layout_width="1dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#FF331155" />
+                                            <TextView
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:gravity="center"
+                                                android:text="금액"
+                                                android:textColor="#FF331155"
+                                                android:textSize="@dimen/wp4" />
+                                        </LinearLayout>
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:background="#FF331155" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight=".17"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1" />
+
+                                            <View
+                                                android:layout_width="1dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#FF331155" />
+
+                                            <TextView
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                                <!-- end second line-->
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="3dp"
+                                    android:layout_marginRight="3dp"
+                                    android:layout_weight=".42"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:weightSum="1">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight=".25"
+                                        android:orientation="horizontal">
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight=".49"
+                                            android:orientation="vertical"
+                                            android:weightSum=".25">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight=".08"
+                                                android:background="@drawable/my_rounded_corner"
+                                                android:id="@+id/linear_using_list">
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginTop="2dip"
+                                                    android:gravity="center"
+                                                    android:text="미 납 내 역"
+                                                    android:textColor="#FFFFFFFF"
+                                                    android:textSize="@dimen/wp4"
+                                                    android:textStyle="bold" />
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight=".17"
+                                                android:orientation="horizontal"
+                                                android:weightSum="1">
+                                                <View
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight=".02"/>
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight=".5"
+                                                    android:orientation="vertical"
+                                                    android:weightSum=".17">
+                                                    <View
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_weight=".02"/>
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_weight=".05"
+                                                        android:gravity="center|left"
+                                                        android:text="당 월 지 침"
+                                                        android:textStyle="bold"
+                                                        android:textColor="#FF4466EE"
+                                                        android:textSize="@dimen/wp3" />
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_weight=".05"
+                                                        android:gravity="left|center"
+                                                        android:textStyle="bold"
+                                                        android:textColor="#FF4466EE"
+                                                        android:text="전 월 지 침"
+                                                        android:textSize="@dimen/wp3" />
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_weight=".05"
+                                                        android:gravity="left|center"
+                                                        android:textStyle="bold"
+                                                        android:textColor="#FF4466EE"
+                                                        android:text="사   용   량"
+                                                        android:textSize="@dimen/wp3" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight=".46"
+                                                    android:orientation="vertical"
+                                                    android:weightSum=".17">
+                                                    <View
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_weight=".02" />
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_weight=".05"
+                                                        android:gravity="center|right"
+                                                        android:text="7,830.00"
+                                                        android:textSize="@dimen/wp3" />
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_weight=".05"
+                                                        android:gravity="right|center"
+                                                        android:text="7,669.00"
+                                                        android:textSize="@dimen/wp3" />
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_weight=".05"
+                                                        android:gravity="right|center"
+                                                        android:text="161 kWh"
+                                                        android:textSize="@dimen/wp3" />
+                                                </LinearLayout>
+                                                <View
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight=".02"/>
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <View
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight=".02"/>
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight=".49"
+                                            android:orientation="vertical"
+                                            android:weightSum=".25">
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight=".08"
+                                                android:id="@+id/linear_using_compare"
+                                                android:background="@drawable/my_rounded_corner">
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_marginTop="2dip"
+                                                    android:gravity="center"
+                                                    android:text="사 용 량 비 교"
+                                                    android:textColor="#FFFFFFFF"
+                                                    android:textSize="@dimen/wp4"
+                                                    android:textStyle="bold" />
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight=".17"
+                                                android:orientation="horizontal"
+                                                android:weightSum="1">
+                                                <View
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight=".02"/>
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight=".5"
+                                                    android:orientation="vertical"
+                                                    android:weightSum=".17">
+                                                    <View
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_weight=".02"/>
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_weight=".05"
+                                                        android:gravity="center|left"
+                                                        android:text="당         월"
+                                                        android:textStyle="bold"
+                                                        android:textColor="#FF4466EE"
+                                                        android:textSize="@dimen/wp3" />
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_weight=".05"
+                                                        android:gravity="left|center"
+                                                        android:textStyle="bold"
+                                                        android:textColor="#FF4466EE"
+                                                        android:text="전         월"
+                                                        android:textSize="@dimen/wp3" />
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_weight=".05"
+                                                        android:gravity="left|center"
+                                                        android:textStyle="bold"
+                                                        android:textColor="#FF4466EE"
+                                                        android:text="전 년 동 월"
+                                                        android:textSize="@dimen/wp3" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight=".46"
+                                                    android:orientation="vertical"
+                                                    android:weightSum=".17">
+                                                    <View
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_weight=".02" />
+                                                    <FrameLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_weight=".05">
+                                                        <Button
+                                                            android:layout_margin="1dp"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:background="@drawable/my_button_with_shadow"
+                                                            android:id="@+id/btn_this_month"/>
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:gravity="center|right"
+                                                            android:text="161 kWh"
+                                                            android:textSize="@dimen/wp3" />
+                                                    </FrameLayout>
+
+                                                    <FrameLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_weight=".05">
+                                                        <Button
+                                                            android:layout_margin="1dp"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:background="@drawable/my_button_with_shadow"
+                                                            android:id="@+id/btn_last_month"/>
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:gravity="center|right"
+                                                            android:text="203 kWh"
+                                                            android:textSize="@dimen/wp3" />
+                                                    </FrameLayout>
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="0dp"
+                                                        android:layout_weight=".05"
+                                                        android:gravity="right|center"
+                                                        android:text="193 kWh"
+                                                        android:textSize="@dimen/wp3" />
+                                                </LinearLayout>
+                                                <View
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_weight=".02"/>
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight=".07"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight=".08"
+                                        android:background="@drawable/my_rounded_corner"
+                                        android:id="@+id/linear_tax_bill_head">
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="2dip"
+                                            android:gravity="center"
+                                            android:text="전 자 세 금 계 산 서"
+                                            android:textColor="#FFFFFFFF"
+                                            android:textSize="@dimen/wp4"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight=".01"/>
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight=".37"
+                                        android:orientation="horizontal"
+                                        android:weightSum="1"
+                                        android:id="@+id/linear_tax_bill_contents"
+                                        android:background="@drawable/my_rounded_corner">
+                                        <View
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight=".03"/>
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight=".55"
+                                            android:orientation="vertical"
+                                            android:weightSum=".37">
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight=".02"/>
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight=".05"
+                                                android:gravity="center|left"
+                                                android:text="공  급  자  등  번  호"
+                                                android:textStyle="bold"
+                                                android:textColor="#FF4466EE"
+                                                android:textSize="@dimen/wp3" />
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight=".05"
+                                                android:gravity="left|center"
+                                                android:textStyle="bold"
+                                                android:textColor="#FF4466EE"
+                                                android:text="공 급 받 는 자 등 록 번 호"
+                                                android:textSize="@dimen/wp3" />
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight=".05"
+                                                android:gravity="left|center"
+                                                android:textStyle="bold"
+                                                android:textColor="#FF4466EE"
+                                                android:text="공      급      가      액"
+                                                android:textSize="@dimen/wp3" />
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight=".05"
+                                                android:gravity="center|left"
+                                                android:text="세                      액"
+                                                android:textStyle="bold"
+                                                android:textColor="#FF4466EE"
+                                                android:textSize="@dimen/wp3" />
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight=".05"
+                                                android:gravity="left|center"
+                                                android:textStyle="bold"
+                                                android:textColor="#FF4466EE"
+                                                android:text="작      성      일      자"
+                                                android:textSize="@dimen/wp3" />
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight=".05"
+                                                android:gravity="left|center"
+                                                android:textStyle="bold"
+                                                android:textColor="#FF4466EE"
+                                                android:text="전자세금계산서 승인번호"
+                                                android:textSize="@dimen/wp3" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight=".39"
+                                            android:orientation="vertical"
+                                            android:weightSum=".37">
+                                            <View
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight=".02" />
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight=".05"
+                                                android:gravity="center|right"
+                                                android:text="120-82-00052"
+                                                android:textSize="@dimen/wp3" />
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight=".05"
+                                                android:gravity="right|center"
+                                                android:text="세금계산서 미발금"
+                                                android:textColor="#FFAA2222"
+                                                android:textSize="@dimen/wp3"
+                                                android:textStyle="bold" />
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight=".05"
+                                                android:gravity="right|center"
+                                                android:text="14,256 원"
+                                                android:textSize="@dimen/wp3" />
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight=".05"
+                                                android:gravity="center|right"
+                                                android:text="1,426 원"
+                                                android:textSize="@dimen/wp3" />
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="0dp"
+                                                android:layout_weight=".05"
+                                                android:gravity="right|center"
+                                                android:text="2014년 07월 21일"
+                                                android:textSize="@dimen/wp3" />
+                                        </LinearLayout>
+                                        <View
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight=".03"/>
+                                    </LinearLayout>
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight=".02"/>
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight=".12"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/logo_pyeongsang_jeonryuck"/>
+                                </LinearLayout>
+                                <!-- end thrid line-->
+                            </LinearLayout>
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_gravity="center"
+                android:gravity="center">
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/frame_7_4_2"
+                    android:layout_weight=".8">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/receipt_7_4_5_1"
+                        android:scaleType="fitCenter"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/img_receipt"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="1"
+                        android:layout_gravity="center"
+                        android:id="@+id/linear_whole_receipt">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight=".34"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:orientation="horizontal"
+                            android:layout_weight=".07"
+                            android:weightSum="1">
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".03"/>
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".23"
+                                android:id="@+id/btn_date"
+                                android:background="@null"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight=".14"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:orientation="horizontal"
+                            android:layout_weight=".051"
+                            android:weightSum="1">
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".72"/>
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".06"
+                                android:id="@+id/btn_quantity_1"
+                                android:background="@null"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".01"/>
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".21"
+                                android:id="@+id/btn_price_1"
+                                android:background="@null"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:orientation="horizontal"
+                            android:layout_weight=".051"
+                            android:weightSum="1">
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".72"/>
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".06"
+                                android:id="@+id/btn_quantity_2"
+                                android:background="@null"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".01"/>
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".21"
+                                android:id="@+id/btn_price_2"
+                                android:background="@null"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:orientation="horizontal"
+                            android:layout_weight=".051"
+                            android:weightSum="1">
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".72"/>
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".06"
+                                android:id="@+id/btn_quantity_3"
+                                android:background="@null"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".01"/>
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".21"
+                                android:id="@+id/btn_price_3"
+                                android:background="@null"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:orientation="horizontal"
+                            android:layout_weight=".051"
+                            android:weightSum="1">
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".72"/>
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".06"
+                                android:id="@+id/btn_quantity_4"
+                                android:background="@null"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".01"/>
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".21"
+                                android:id="@+id/btn_price_4"
+                                android:background="@null"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:orientation="horizontal"
+                            android:layout_weight=".051"
+                            android:weightSum="1">
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".72"/>
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".06"
+                                android:id="@+id/btn_quantity_5"
+                                android:background="@null"/>
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".01"/>
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".21"
+                                android:id="@+id/btn_price_5"
+                                android:background="@null"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:orientation="horizontal"
+                            android:layout_weight=".048"
+                            android:weightSum="1">
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".79"/>
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".21"
+                                android:id="@+id/btn_tax_amount"
+                                android:background="@null"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:orientation="horizontal"
+                            android:layout_weight=".051"
+                            android:weightSum="1">
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".79"/>
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".21"
+                                android:id="@+id/btn_add_amount"
+                                android:background="@null"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:orientation="horizontal"
+                            android:layout_weight=".051"
+                            android:weightSum="1">
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".79"/>
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight=".21"
+                                android:id="@+id/btn_total_amount"
+                                android:background="@null"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
