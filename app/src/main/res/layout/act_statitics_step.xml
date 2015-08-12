@@ -9,10 +9,11 @@
         android:layout_height="@dimen/wp100"
         android:background="#FFFFFF"
         android:orientation="vertical">
-        <ui.ChalkTextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp15"
-            android:textSize="@dimen/wp14"
+            android:textSize="@dimen/wp10"
+            android:gravity="center"
             android:id="@+id/txt_title"
             android:textColor="#000000"
             android:text="1단계 학습 결과표"/>

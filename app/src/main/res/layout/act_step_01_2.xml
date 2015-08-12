@@ -37,13 +37,15 @@
                 android:orientation="vertical"
                 android:gravity="center">
 
-                <ui.ChalkTextView
+                <TextView
+                    android:gravity="center"
+                    android:textSize="@dimen/wp8"
                     android:textColor="#FFFFFF"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_discription"
                     android:text="아래에 나타난 그림이\n총 몇개 일까요?"
-                    android:textSize="@dimen/wp12"/>
+                    />
 
 
                 <LinearLayout
