@@ -108,6 +108,7 @@ public class ActStep10 extends StageActivity {
                 }
                 else{
                     iRetryCount++;
+                    txtInputAnswer.setText("");
                 }
             }
         });
