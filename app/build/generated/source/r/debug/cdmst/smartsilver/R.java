@@ -4927,19 +4927,20 @@ containing a value of this type.
         public static final int act_step_07_3=0x7f03003e;
         public static final int act_step_07_4=0x7f03003f;
         public static final int act_step_07_5=0x7f030040;
-        public static final int act_test=0x7f030041;
-        public static final int card_with_icon=0x7f030042;
-        public static final int dlg_result_mark=0x7f030043;
-        public static final int layout_bus_chart_line=0x7f030044;
-        public static final int number_indicator_spinner=0x7f030045;
-        public static final int progress_dialog=0x7f030046;
-        public static final int support_simple_spinner_dropdown_item=0x7f030047;
-        public static final int ui_button=0x7f030048;
-        public static final int view_custom_button=0x7f030049;
-        public static final int view_number_pad=0x7f03004a;
-        public static final int view_round_button_layout=0x7f03004b;
-        public static final int view_single_cell_line_layout=0x7f03004c;
-        public static final int view_table_learning_time=0x7f03004d;
+        public static final int act_step_10=0x7f030041;
+        public static final int act_test=0x7f030042;
+        public static final int card_with_icon=0x7f030043;
+        public static final int dlg_result_mark=0x7f030044;
+        public static final int layout_bus_chart_line=0x7f030045;
+        public static final int number_indicator_spinner=0x7f030046;
+        public static final int progress_dialog=0x7f030047;
+        public static final int support_simple_spinner_dropdown_item=0x7f030048;
+        public static final int ui_button=0x7f030049;
+        public static final int view_custom_button=0x7f03004a;
+        public static final int view_number_pad=0x7f03004b;
+        public static final int view_round_button_layout=0x7f03004c;
+        public static final int view_single_cell_line_layout=0x7f03004d;
+        public static final int view_table_learning_time=0x7f03004e;
     }
     public static final class menu {
         public static final int menu_act_main=0x7f0d0000;

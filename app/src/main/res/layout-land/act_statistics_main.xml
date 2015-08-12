@@ -161,6 +161,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:background="@drawable/img_memo_sticker"
+                        android:id="@+id/btn_result_step05"
                         android:layout_height="match_parent">
                         <TextView
                             android:gravity="center"

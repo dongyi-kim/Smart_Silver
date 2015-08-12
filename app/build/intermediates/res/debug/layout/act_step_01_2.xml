@@ -37,13 +37,15 @@
                 android:orientation="vertical"
                 android:gravity="center">
 
-                <ui.ChalkTextView
+                <TextView
+                    android:gravity="center"
+                    android:textSize="@dimen/wp8"
                     android:textColor="#FFFFFF"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_discription"
-                    android:text="그림의 개수가 몇 개인지 세어보고\n알맞은 숫자를 누르세요."
-                    android:textSize="@dimen/wp12"/>
+                    android:text="아래에 나타난 그림이\n총 몇개 일까요?"
+                    />
 
 
                 <LinearLayout
@@ -133,4 +135,4 @@
         </LinearLayout>
     </LinearLayout>
 
-</RelativeLayout><!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_01_2.xml -->
+</RelativeLayout><!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_01_2.xml -->

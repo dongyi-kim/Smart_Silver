@@ -40,7 +40,7 @@
                 android:orientation="vertical"
                 android:gravity="center">
 
-                <ui.ChalkTextView
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_discription"
@@ -96,4 +96,4 @@
         android:background="@color/trans_half">
 
     </src.viewes.ViewNumberPad>
-</RelativeLayout><!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_01.xml -->
+</RelativeLayout><!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_01.xml -->
