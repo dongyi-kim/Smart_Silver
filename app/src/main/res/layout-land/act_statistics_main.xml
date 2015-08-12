@@ -8,13 +8,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <ui.ChalkTextView
-            android:layout_margin="@dimen/wp3"
+        <TextView
+            android:layout_margin="@dimen/wp4"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
-            android:textSize="@dimen/wp14"
+            android:textSize="@dimen/wp13"
             android:text="나의 학습 결과"/>
 
         <RelativeLayout
@@ -26,11 +26,11 @@
                 android:layout_width="@dimen/wp50"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <ui.ChalkTextView
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/wp9"
+                    android:textSize="@dimen/wp7"
                     android:text="학습 시간"
                     android:textColor="#FFFFFF"/>
                 <FrameLayout
@@ -42,16 +42,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <ui.ChalkTextView
+                    <TextView
+                        android:gravity="center"
+                        android:textSize="@dimen/wp6"
                         android:layout_width="@dimen/wp20"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/wp7"
                         android:text="오늘"
                         android:textColor="#FFFFFF"/>
-                    <ui.ChalkTextView
+                    <TextView
+                        android:gravity="center"
+                        android:textSize="@dimen/wp6"
                         android:layout_width="@dimen/wp30"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/wp7"
                         android:text="128분"
                         android:id="@+id/txt_playtime_today"
                         android:textColor="#FFFFFF"/>
@@ -60,16 +62,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <ui.ChalkTextView
+                    <TextView
+                        android:gravity="center"
+                        android:textSize="@dimen/wp6"
                         android:layout_width="@dimen/wp20"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/wp7"
                         android:text="총합"
                         android:textColor="#FFFFFF"/>
-                    <ui.ChalkTextView
+                    <TextView
+                        android:gravity="center"
+                        android:textSize="@dimen/wp6"
                         android:layout_width="@dimen/wp30"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/wp7"
                         android:text="1024분"
                         android:id="@+id/txt_playtime_total"
                         android:textColor="#FFFFFF"/>
@@ -82,11 +86,12 @@
                 android:layout_width="@dimen/wp100"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <ui.ChalkTextView
+                <TextView
+                    android:gravity="center"
+                    android:textSize="@dimen/wp7"
                     android:layout_width="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/wp9"
                     android:text="문항별 결과표"
                     android:textColor="#FFFFFF"/>
                 <FrameLayout
@@ -106,10 +111,11 @@
                         android:background="@drawable/img_memo_sticker"
                         android:id="@+id/btn_result_step01"
                         android:layout_height="match_parent">
-                            <ui.ChalkTextView
+                            <TextView
+                                android:gravity="center"
+                                android:textSize="@dimen/wp4"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:textSize="@dimen/wp7"
                                 android:text="1단계"/>
                     </ui.RippleView>
                     <ui.RippleView
@@ -118,10 +124,11 @@
                         android:background="@drawable/img_memo_sticker"
                         android:id="@+id/btn_result_step02"
                         android:layout_height="match_parent">
-                        <ui.ChalkTextView
+                        <TextView
+                            android:gravity="center"
+                            android:textSize="@dimen/wp4"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:textSize="@dimen/wp7"
                             android:text="2단계"/>
                     </ui.RippleView>
                     <ui.RippleView
@@ -130,10 +137,11 @@
                         android:background="@drawable/img_memo_sticker"
                         android:id="@+id/btn_result_step03"
                         android:layout_height="match_parent">
-                        <ui.ChalkTextView
+                        <TextView
+                            android:gravity="center"
+                            android:textSize="@dimen/wp4"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:textSize="@dimen/wp7"
                             android:text="3단계"/>
                     </ui.RippleView>
                     <ui.RippleView
@@ -142,10 +150,11 @@
                         android:background="@drawable/img_memo_sticker"
                         android:id="@+id/btn_result_step04"
                         android:layout_height="match_parent">
-                        <ui.ChalkTextView
+                        <TextView
+                            android:gravity="center"
+                            android:textSize="@dimen/wp4"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:textSize="@dimen/wp7"
                             android:text="4단계"/>
                     </ui.RippleView>
                     <ui.RippleView
@@ -153,23 +162,12 @@
                         android:layout_weight="1"
                         android:background="@drawable/img_memo_sticker"
                         android:layout_height="match_parent">
-                        <ui.ChalkTextView
+                        <TextView
+                            android:gravity="center"
+                            android:textSize="@dimen/wp4"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:textSize="@dimen/wp7"
                             android:text="5단계"/>
-                    </ui.RippleView>
-                    <ui.RippleView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/img_memo_sticker"
-                        android:id="@+id/btn_result_step05"
-                        android:layout_height="match_parent">
-                        <ui.ChalkTextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:textSize="@dimen/wp7"
-                            android:text="1단계"/>
                     </ui.RippleView>
                 </LinearLayout>
                 <LinearLayout
@@ -184,10 +182,11 @@
                         android:background="@drawable/img_memo_sticker"
                         android:layout_height="match_parent"
                         android:id="@+id/btn_result_step06">
-                        <ui.ChalkTextView
+                        <TextView
+                            android:gravity="center"
+                            android:textSize="@dimen/wp4"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:textSize="@dimen/wp7"
                             android:text="6단계"/>
                     </ui.RippleView>
                     <ui.RippleView
@@ -196,10 +195,11 @@
                         android:background="@drawable/img_memo_sticker"
                         android:id="@+id/btn_result_step07"
                         android:layout_height="match_parent">
-                        <ui.ChalkTextView
+                        <TextView
+                            android:gravity="center"
+                            android:textSize="@dimen/wp4"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:textSize="@dimen/wp7"
                             android:text="7단계"/>
                     </ui.RippleView>
                     <ui.RippleView
@@ -208,10 +208,11 @@
                         android:background="@drawable/img_memo_sticker"
                         android:id="@+id/btn_result_step08"
                         android:layout_height="match_parent">
-                        <ui.ChalkTextView
+                        <TextView
+                            android:gravity="center"
+                            android:textSize="@dimen/wp4"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:textSize="@dimen/wp7"
                             android:text="8단계"/>
                     </ui.RippleView>
                     <ui.RippleView
@@ -220,10 +221,11 @@
                         android:background="@drawable/img_memo_sticker"
                         android:id="@+id/btn_result_step09"
                         android:layout_height="match_parent">
-                        <ui.ChalkTextView
+                        <TextView
+                            android:gravity="center"
+                            android:textSize="@dimen/wp4"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:textSize="@dimen/wp7"
                             android:text="9단계"/>
                     </ui.RippleView>
                     <ui.RippleView
@@ -232,22 +234,12 @@
                         android:background="@drawable/img_memo_sticker"
                         android:id="@+id/btn_result_step10"
                         android:layout_height="match_parent">
-                        <ui.ChalkTextView
+                        <TextView
+                            android:gravity="center"
+                            android:textSize="@dimen/wp4"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:textSize="@dimen/wp7"
                             android:text="10단계"/>
-                    </ui.RippleView>
-                    <ui.RippleView
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/img_memo_sticker"
-                        android:layout_height="match_parent">
-                        <ui.ChalkTextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:textSize="@dimen/wp7"
-                            android:text="1단계"/>
                     </ui.RippleView>
                 </LinearLayout>
 
@@ -261,11 +253,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/wp40"
                 android:orientation="vertical">
-                <ui.ChalkTextView
+                <TextView
+                    android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/wp9"
+                    android:textSize="@dimen/wp7"
                     android:text="학습 통계"
                     android:textColor="#FFFFFF"/>
                 <FrameLayout
@@ -279,10 +272,11 @@
                     android:layout_height="@dimen/wp10"
                     android:id="@+id/btn_statistics_step_all"
                     android:background="@drawable/img_memo_sticker">
-                    <ui.ChalkTextView
+                    <TextView
+                        android:gravity="center"
+                        android:textSize="@dimen/wp5"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:textSize="@dimen/wp7"
                         android:text="학습 진도표"/>
                 </ui.RippleView>
                 <ui.RippleView
@@ -290,20 +284,22 @@
                     android:layout_height="@dimen/wp10"
                     android:id="@+id/btn_statistics_ratio_per_step"
                     android:background="@drawable/img_memo_sticker">
-                    <ui.ChalkTextView
+                    <TextView
+                        android:gravity="center"
+                        android:textSize="@dimen/wp5"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:textSize="@dimen/wp7"
                         android:text="문항 정답률"/>
                 </ui.RippleView>
                 <ui.RippleView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/wp10"
                     android:background="@drawable/img_memo_sticker">
-                    <ui.ChalkTextView
+                    <TextView
+                        android:gravity="center"
+                        android:textSize="@dimen/wp5"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:textSize="@dimen/wp7"
                         android:text="총 학습 결과표"/>
                 </ui.RippleView>
 
