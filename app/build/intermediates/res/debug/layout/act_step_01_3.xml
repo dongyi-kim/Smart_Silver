@@ -39,13 +39,15 @@
                 android:orientation="vertical"
                 android:gravity="center">
 
-                <ui.ChalkTextView
+                <TextView
+                    android:gravity="center"
+                    android:textSize="@dimen/wp7"
                     android:textColor="#FFFFFF"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_discription"
                     android:text="다음 중 짝수를\n찾아서 누르세요."
-                    android:textSize="@dimen/wp10"/>
+                    />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -314,4 +316,4 @@
         </GridLayout>
         -->
     </LinearLayout>
-</RelativeLayout><!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_01_3.xml -->
+</RelativeLayout><!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_01_3.xml -->

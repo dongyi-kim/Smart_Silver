@@ -9,10 +9,11 @@
         android:layout_height="@dimen/wp100"
         android:background="#FFFFFF"
         android:orientation="vertical">
-        <ui.ChalkTextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp15"
-            android:textSize="@dimen/wp14"
+            android:textSize="@dimen/wp10"
+            android:gravity="center"
             android:id="@+id/txt_title"
             android:textColor="#000000"
             android:text="1단계 학습 결과표"/>
@@ -489,4 +490,4 @@
 
     </LinearLayout>
 
-</RelativeLayout><!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_statistics_step.xml -->
+</RelativeLayout><!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_statistics_step.xml -->
