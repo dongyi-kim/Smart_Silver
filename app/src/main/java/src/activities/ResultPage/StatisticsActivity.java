@@ -92,6 +92,9 @@ public class StatisticsActivity extends FrameActivity {
         }else if(vSender == findViewById(R.id.btn_statistics_step_all))
         {
             intent = new Intent(this, StepAllStatisticsActivity.class);
+        }else if(vSender == findViewById(R.id.btn_statistics_ratio_per_step))
+        {
+            intent = new Intent(this, RatioPerStepActivity.class);
         }
         if(intent != null)
             startActivity(intent);

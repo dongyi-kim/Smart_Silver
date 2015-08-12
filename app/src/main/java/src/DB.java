@@ -92,14 +92,6 @@ public class DB extends SQLiteOpenHelper {
     {
         Calendar cal = Calendar.getInstance();
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-
-//        String dataset = "null," +
-//                String.valueOf(data.iStep) + "," + //step
-//                String.valueOf(data.iStage) + "," + //stage
-//                String.valueOf(data.iLevel) + "," + //level
-//                String.valueOf(data.millisec) + "," + //seconds
-//                "'" + (data.isSuccess ? "TRUE" : "FALSE") + "'," + //pass
-//                "'" + (sdf.format(cal.getTime())) + "'" ;//time
         String val = values(new Object[]{data.iStep, data.iLevel, data.iStage, data.millisec, data.isSuccess});
         String query = "INSERT INTO " + TABLE_RESULT + " values(null, "+ val +", DATETIME('NOW') );";
         QUERY(query);
@@ -110,7 +102,6 @@ public class DB extends SQLiteOpenHelper {
     {
         super(context, name, factory, version);
         mContext = context;
-
     }
 
     @Override

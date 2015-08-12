@@ -341,24 +341,32 @@ ADDED from AndroidManifest.xml:240:9
 		ADDED from AndroidManifest.xml:242:13
 	android:name
 		ADDED from AndroidManifest.xml:240:19
-activity#src.activities.Step07.ActStep0705
+activity#src.activities.ResultPage.RatioPerStepActivity
 ADDED from AndroidManifest.xml:246:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:248:13
-	android:noHistory
 		ADDED from AndroidManifest.xml:247:13
+	android:theme
+		ADDED from AndroidManifest.xml:248:13
 	android:name
 		ADDED from AndroidManifest.xml:246:19
-activity#src.activities.ActTest
+activity#src.activities.Step07.ActStep0705
 ADDED from AndroidManifest.xml:252:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:254:13
+	android:noHistory
+		ADDED from AndroidManifest.xml:253:13
 	android:name
 		ADDED from AndroidManifest.xml:252:19
-activity#src.activities.ActStartLearning
-ADDED from AndroidManifest.xml:257:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:258:13
+activity#src.activities.ActTest
+ADDED from AndroidManifest.xml:258:9
 	android:name
-		ADDED from AndroidManifest.xml:257:19
+		ADDED from AndroidManifest.xml:258:19
+activity#src.activities.ActStartLearning
+ADDED from AndroidManifest.xml:263:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:264:13
+	android:name
+		ADDED from AndroidManifest.xml:263:19
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:21.0.3:15:5

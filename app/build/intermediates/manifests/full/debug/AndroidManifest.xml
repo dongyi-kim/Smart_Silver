@@ -35,17 +35,17 @@
         <activity
             android:name="src.activities.Step01.ActStep0102"
             android:noHistory="true"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="src.activities.Step01.ActStep0103"
             android:noHistory="true"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="src.activities.Step01.ActStep0104"
             android:noHistory="true"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="src.activities.Step01.ActStep0105"
@@ -203,6 +203,11 @@
         </activity>
         <activity
             android:name="src.activities.ResultPage.StepAllStatisticsActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="src.activities.ResultPage.RatioPerStepActivity"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
         </activity>

@@ -288,6 +288,7 @@
                 <ui.RippleView
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/wp10"
+                    android:id="@+id/btn_statistics_ratio_per_step"
                     android:background="@drawable/img_memo_sticker">
                     <ui.ChalkTextView
                         android:layout_width="match_parent"
