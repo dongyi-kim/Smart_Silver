@@ -50,7 +50,7 @@
 
         <activity android:name="src.activities.Step01.ActStep0105"
             android:noHistory="true"
-            android:screenOrientation="portrait">
+            android:screenOrientation="landscape">
 
         </activity>
 
