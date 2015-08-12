@@ -35,22 +35,22 @@
         <activity
             android:name="src.activities.Step01.ActStep0102"
             android:noHistory="true"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="landscape" >
         </activity>
         <activity
             android:name="src.activities.Step01.ActStep0103"
             android:noHistory="true"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="landscape" >
         </activity>
         <activity
             android:name="src.activities.Step01.ActStep0104"
             android:noHistory="true"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="landscape" >
         </activity>
         <activity
             android:name="src.activities.Step01.ActStep0105"
             android:noHistory="true"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="landscape" >
         </activity>
         <activity
             android:name="src.activities.Step02.ActStep0201"
