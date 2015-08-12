@@ -14,6 +14,7 @@ import src.activities.Step04.*;
 import src.activities.Step05.*;
 import src.activities.Step06.*;
 import src.activities.Step07.*;
+import src.activities.Step10.*;
 
 
 /**
@@ -55,6 +56,7 @@ public class ActTest extends FrameActivity {
     Button btnStep7_3;
     Button btnStep7_4;
     Button btnStep7_5;
+    Button btnStep10;
     Button btnSelector;
 
     @Override
@@ -167,6 +169,9 @@ public class ActTest extends FrameActivity {
 
         btnStep7_5 = (Button)findViewById(R.id.btn_step_7_5);
         btnStep7_5.setOnClickListener(clickBtnStep);
+
+        btnStep10 = (Button)findViewById(R.id.btn_step_10);
+        btnStep10.setOnClickListener(clickBtnStep);
 
         btnSelector = (Button)findViewById(R.id.btn_step_selector);
         btnSelector.setOnClickListener(clickBtnStep);
@@ -391,6 +396,12 @@ public class ActTest extends FrameActivity {
             {
 
                 Intent intent = new Intent(v.getContext(), ActStep0705.class);
+                startActivity(intent);
+            }
+            else if(v == btnStep10)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep10.class);
                 startActivity(intent);
             }
 
