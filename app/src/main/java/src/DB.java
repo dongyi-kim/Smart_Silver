@@ -43,9 +43,36 @@ public class DB extends SQLiteOpenHelper {
 
 
     public static final String QUERY_GET_LAST = "SELECT * FROM " + TABLE_RESULT + " order by timestamp desc LIMIT 1;";
+
+
+//SELECT FUNCTIONS
+    public static ResultData[] SELECT(int iStep, int iLevel, int iStage, int isPassed, String strOption)
+    {
+        String query = "SELECT * FROM RESULT_DATA ";
+
+        int iWhere = 0;
+        String where = " WHERE ";
+        if(iStep != -1)
+            where += String.format(" %s %s = '%d' ",(iWhere++>0) ? "AND" : "" , "step", iStep );
+        if(iLevel != -1)
+            where += String.format(" %s %s = '%d' ",(iWhere++>0) ? "AND" : "" , "level", iLevel );
+        if(iStage != -1)
+            where += String.format(" %s %s = '%d' ",(iWhere++>0) ? "AND" : "" , "stage", iStage );
+        if(isPassed != -1)
+            where += String.format(" %s %s = '%d' ",(iWhere++>0) ? "AND" : "" , "pass", String.valueOf( (isPassed == 1) ));
+
+        if(iWhere > 0)
+            query += where;
+
+
+        query += strOption;
+
+        return SELECT(query);
+    }
+
+
     public static ResultData[] SELECT(String query)
     {
-
         SQLiteDatabase db = obj.getWritableDatabase();
 
         Cursor result = db.rawQuery(query, null);
@@ -63,12 +90,16 @@ public class DB extends SQLiteOpenHelper {
         }
         result.close();
         db.close();
+        if(list.size() == 0)
+            return null;
 
         ResultData[] arr = new ResultData[list.size()];
         for(int i=0; i<list.size(); i++)
             arr[i] = list.get(i);
         return arr;
     }
+
+
 
     public static String values(Object obj[])
     {

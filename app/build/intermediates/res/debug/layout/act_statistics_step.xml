@@ -10,19 +10,20 @@
         android:background="#FFFFFF"
         android:orientation="vertical">
         <TextView
+            android:layout_marginTop="@dimen/wp1"
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp15"
             android:textSize="@dimen/wp10"
             android:gravity="center"
             android:id="@+id/txt_title"
+            android:textStyle="bold"
             android:textColor="#000000"
             android:text="1단계 학습 결과표"/>
 
         <FrameLayout
             android:layout_gravity="center"
-            android:layout_width="@dimen/wp100"
+            android:layout_width="@dimen/wp80"
             android:layout_height="1px"
-            android:layout_marginTop="@dimen/wp1"
             android:background="#000000">
         </FrameLayout>
         
@@ -490,4 +491,4 @@
 
     </LinearLayout>
 
-</RelativeLayout><!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_statistics_step.xml -->
+</RelativeLayout><!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_statistics_step.xml -->
