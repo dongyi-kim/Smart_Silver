@@ -13,6 +13,10 @@ import src.activities.Step01.*;
 import src.activities.Step02.*;
 import src.activities.Step03.*;
 import src.activities.Step04.*;
+import src.activities.Step05.*;
+import src.activities.Step06.*;
+import src.activities.Step07.*;
+import src.activities.Step10.*;
 
 
 /**
@@ -148,12 +152,12 @@ public class Utility {
             {ActStep0201.class, ActStep0202.class, ActStep0203.class, ActStep0204.class, ActStep0205.class },//step2
             {ActStep0301.class, ActStep0302.class, ActStep0303.class, ActStep0304.class, ActStep0305.class },//step3
             {ActStep0401.class, ActStep0402.class, ActStep0403.class, ActStep0404.class, ActStep0405.class },//step4
-            { },//step5
-            { },//step6
-            { },//step7
+            {ActStep0502.class, ActStep0502.class, ActStep0503.class, ActStep0504.class, ActStep0605.class },//step5
+            {ActStep0601.class, ActStep0602.class, ActStep0603.class, ActStep0604.class, ActStep0605.class },//step6
+            {ActStep0701.class, ActStep0702.class, ActStep0703.class, ActStep0704.class, ActStep0705.class },//step7
             { },//step8
             { },//step9
-            { },//step10
+            {ActStep10.class },//step10
     };
 
     public static final Class<?> getStepClass(int iStep, int iLevel)

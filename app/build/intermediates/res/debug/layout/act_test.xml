@@ -259,9 +259,16 @@
                 android:text="step 7-5"
                 android:id="@+id/btn_step_7_5"
                 />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/wp4"
+                android:text="step 10"
+                android:id="@+id/btn_step_10"
+                />
 
         </LinearLayout>
     </ScrollView>
 
 
-</RelativeLayout><!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_test.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_test.xml -->
