@@ -157,7 +157,7 @@ public class ActStep01 extends StageActivity implements View.OnClickListener {
             catAnswer(8);
         else if(vSender == findViewById(R.id.btn_number_9))
             catAnswer(9);
-        else if(vSender == findViewById(R.id.btn_number_ok))
+        else if(vSender == findViewById(R.id.btn_number_ok) || vSender == findViewById(R.id.btn_ok))
             checkAnswer(null);
         else if(vSender == findViewById(R.id.btn_number_erase))
             modifyAnswer();
