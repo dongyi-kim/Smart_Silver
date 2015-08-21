@@ -10,6 +10,8 @@ import android.widget.TextView;
 import java.util.Random;
 
 import cdmst.smartsilver.R;
+import src.DB;
+import src.ResultData;
 import src.activities.ActMain;
 import src.activities.StageActivity;
 import src.dialogs.DlgResultMark;
@@ -25,6 +27,7 @@ public class ActStep10 extends StageActivity {
     public TextView txtInputAnswer;
     public final Button btnAnswerButton[] = new Button[BUTTON_COUNT];
 
+    private int iStepCount = 0;
     private int iRetryCount = 0;
     public boolean isRight = false;
 
@@ -35,6 +38,10 @@ public class ActStep10 extends StageActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_10);
+
+        ResultData[] result = DB.SELECT(10, 1, 1, -1, "");
+        if(result == null) iStepCount = 1;
+        else iStepCount = result.length + 1;
 
         NUM_OF_STAGE = 10;
 
@@ -54,7 +61,6 @@ public class ActStep10 extends StageActivity {
         btnAnswerButton[9] = (Button)findViewById(R.id.btn_number_9);
         btnAnswerButton[10] = (Button)findViewById(R.id.btn_erase);
         btnAnswerButton[11] = (Button)findViewById(R.id.btn_submit);
-
 
         //button listener for 7_4_1
         for(int i = 0; i < BUTTON_COUNT; i++){
@@ -85,6 +91,7 @@ public class ActStep10 extends StageActivity {
     public void setQuestion(boolean isRetry, Object object){
         dataSet.setData(iStage);
 
+        txtStepNumber.setText("10 - " + iStepCount + " - " + iStage);
         txtFomula.setText(dataSet.sFomula);
         txtInputAnswer.setText("");
 
