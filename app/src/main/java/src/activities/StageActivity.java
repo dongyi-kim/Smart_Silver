@@ -32,6 +32,7 @@ public abstract class StageActivity extends FrameActivity {
 
 
 
+
     @Override
     public void onCreate(Bundle bundle)
     {
@@ -70,6 +71,26 @@ public abstract class StageActivity extends FrameActivity {
         dataNow = null;
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if(dataNow != null)
+        {
+            dataNow.Stop(false);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(dataNow != null)
+        {
+            dataNow.Start();
+        }
+    }
+
+
+
     //copy & paste
     // public void setQuestion( boolean isRetry, Object object);
     // public void checkAnswer(Object object);
@@ -104,5 +125,6 @@ public abstract class StageActivity extends FrameActivity {
      */
     public abstract void goNext(Object object);
     public final void goNext() { goNext(null); };
+
 
 }
