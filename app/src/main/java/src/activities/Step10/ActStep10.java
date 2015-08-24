@@ -33,6 +33,7 @@ public class ActStep10 extends StageActivity {
     private int iStepCount = 0;
     private int iRetryCount = 0;
     public boolean isRight = false;
+    public boolean bStepContinue = false;
 
     public Step10DataSet dataSet = new Step10DataSet();
     private Random rand = new Random();
@@ -42,48 +43,48 @@ public class ActStep10 extends StageActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_10);
 
-        ResultData[] result = DB.SELECT(10, 1, 1, -1, "");
-        if(result == null) iStepCount = 1;
+        ResultData[] result = DB.SELECT(10, 1, 10, -1, "");
+        if (result == null) iStepCount = 1;
         else iStepCount = result.length + 1;
 
         NUM_OF_STAGE = 10;
 
-        txtStepNumber = (TextView)findViewById(R.id.txt_step_number);
-        txtFomula = (TextView)findViewById(R.id.txt_fomula);
-        txtInputAnswer = (TextView)findViewById(R.id.txt_input_answer);
+        txtStepNumber = (TextView) findViewById(R.id.txt_step_number);
+        txtFomula = (TextView) findViewById(R.id.txt_fomula);
+        txtInputAnswer = (TextView) findViewById(R.id.txt_input_answer);
 
-        btnAnswerButton[0] = (Button)findViewById(R.id.btn_number_0);
-        btnAnswerButton[1] = (Button)findViewById(R.id.btn_number_1);
-        btnAnswerButton[2] = (Button)findViewById(R.id.btn_number_2);
-        btnAnswerButton[3] = (Button)findViewById(R.id.btn_number_3);
-        btnAnswerButton[4] = (Button)findViewById(R.id.btn_number_4);
-        btnAnswerButton[5] = (Button)findViewById(R.id.btn_number_5);
-        btnAnswerButton[6] = (Button)findViewById(R.id.btn_number_6);
-        btnAnswerButton[7] = (Button)findViewById(R.id.btn_number_7);
-        btnAnswerButton[8] = (Button)findViewById(R.id.btn_number_8);
-        btnAnswerButton[9] = (Button)findViewById(R.id.btn_number_9);
-        btnAnswerButton[10] = (Button)findViewById(R.id.btn_erase);
-        btnAnswerButton[11] = (Button)findViewById(R.id.btn_submit);
+        btnAnswerButton[0] = (Button) findViewById(R.id.btn_number_0);
+        btnAnswerButton[1] = (Button) findViewById(R.id.btn_number_1);
+        btnAnswerButton[2] = (Button) findViewById(R.id.btn_number_2);
+        btnAnswerButton[3] = (Button) findViewById(R.id.btn_number_3);
+        btnAnswerButton[4] = (Button) findViewById(R.id.btn_number_4);
+        btnAnswerButton[5] = (Button) findViewById(R.id.btn_number_5);
+        btnAnswerButton[6] = (Button) findViewById(R.id.btn_number_6);
+        btnAnswerButton[7] = (Button) findViewById(R.id.btn_number_7);
+        btnAnswerButton[8] = (Button) findViewById(R.id.btn_number_8);
+        btnAnswerButton[9] = (Button) findViewById(R.id.btn_number_9);
+        btnAnswerButton[10] = (Button) findViewById(R.id.btn_erase);
+        btnAnswerButton[11] = (Button) findViewById(R.id.btn_submit);
 
         //button listener for 7_4_1
-        for(int i = 0; i < BUTTON_COUNT; i++){
+        for (int i = 0; i < BUTTON_COUNT; i++) {
             btnAnswerButton[i].setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v){
+                public void onClick(View v) {
                     int iBtnIndex = 0;
-                    for(int ii = 0; ii < BUTTON_COUNT; ii++)
-                        if(btnAnswerButton[ii] == v) iBtnIndex = ii;
+                    for (int ii = 0; ii < BUTTON_COUNT; ii++)
+                        if (btnAnswerButton[ii] == v) iBtnIndex = ii;
 
-                    if(iBtnIndex == 11){
-                        if(dataSet.iAnswer == Integer.parseInt(txtInputAnswer.getText().toString())) isRight = true;
+                    if (iBtnIndex == 11) {
+                        if (dataSet.iAnswer == Integer.parseInt(txtInputAnswer.getText().toString()))
+                            isRight = true;
                         else isRight = false;
                         checkAnswer();
-                    }
-                    else if(iBtnIndex == 10){
-                        if(txtInputAnswer.length() <= 0) ;
-                        else txtInputAnswer.setText(txtInputAnswer.getText().toString().substring(0, txtInputAnswer.length() - 1));
-                    }
-                    else txtInputAnswer.setText(txtInputAnswer.getText().toString() + iBtnIndex);
+                    } else if (iBtnIndex == 10) {
+                        if (txtInputAnswer.length() <= 0) ;
+                        else
+                            txtInputAnswer.setText(txtInputAnswer.getText().toString().substring(0, txtInputAnswer.length() - 1));
+                    } else txtInputAnswer.setText(txtInputAnswer.getText().toString() + iBtnIndex);
                 }
             });
         }
@@ -91,7 +92,7 @@ public class ActStep10 extends StageActivity {
         setQuestion(false);
     }
 
-    public void setQuestion(boolean isRetry, Object object){
+    public void setQuestion(boolean isRetry, Object object) {
         dataSet.setData(iStage);
 
         txtStepNumber.setText("10 - " + iStepCount + " - " + iStage);
@@ -101,22 +102,21 @@ public class ActStep10 extends StageActivity {
         StartRecording();
     }
 
-    public void checkAnswer(Object o){
+    public void checkAnswer(Object o) {
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
-        if(isRight || iRetryCount > 1) StopRecording(isRight);
+        if (isRight || iRetryCount > 1) StopRecording(isRight);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface dialog) {
-                if(isRight || iRetryCount > 1){
+                if (isRight || iRetryCount > 1) {
                     iStage++;
                     iRetryCount = 0;
 
-                    if(iStage <= NUM_OF_STAGE) setQuestion(false);
+                    if (iStage <= NUM_OF_STAGE) setQuestion(false);
                     else goNext();
-                }
-                else{
+                } else {
                     iRetryCount++;
                     txtInputAnswer.setText("");
                 }
@@ -124,8 +124,8 @@ public class ActStep10 extends StageActivity {
         });
     }
 
-    public void goNext(Object object){
-        Intent intent = new Intent(this, ActMain.class);
+    public void goNext(Object object) {
+        Intent intent = new Intent(this, ActAskContinue.class);
         startActivity(intent);
     }
 
@@ -136,32 +136,31 @@ public class ActStep10 extends StageActivity {
         public void setData(int iStage) {
             int iOperand1 = -1, iOperand2 = -1, iOperand3 = -1;
 
-            if(iStage == 1 || iStage == 4 || iStage == 5 || iStage == 9) iOperand1 = rand.nextInt(10);
-            else if(iStage == 2 || iStage == 6 || iStage == 8 || iStage == 10) iOperand1 = (rand.nextInt(9) + 1) * 10;
+            if (iStage == 1 || iStage == 4 || iStage == 5 || iStage == 9)
+                iOperand1 = rand.nextInt(10);
+            else if (iStage == 2 || iStage == 6 || iStage == 8 || iStage == 10)
+                iOperand1 = (rand.nextInt(9) + 1) * 10;
             else iOperand1 = rand.nextInt(81) + 10;
 
-            if(iStage == 4) iOperand2 = rand.nextInt(81) + 10;
+            if (iStage == 4) iOperand2 = rand.nextInt(81) + 10;
             else iOperand2 = rand.nextInt(10);
 
-            if(iStage == 6 || iStage == 7){
+            if (iStage == 6 || iStage == 7) {
                 sFomula = "" + iOperand1 + " - " + iOperand2;
                 iAnswer = iOperand1 - iOperand2;
-            }
-            else if(iStage == 9 || iStage == 10){
+            } else if (iStage == 9 || iStage == 10) {
                 sFomula = "" + iOperand1 + " X " + iOperand2;
                 iAnswer = iOperand1 * iOperand2;
-            }
-            else{
+            } else {
                 sFomula = "" + iOperand1 + " + " + iOperand2;
                 iAnswer = iOperand1 + iOperand2;
             }
 
-            if(iStage == 5){
+            if (iStage == 5) {
                 iOperand3 = rand.nextInt(10);
                 sFomula += " + " + iOperand3;
                 iAnswer += iOperand3;
-            }
-            else if(iStage == 8){
+            } else if (iStage == 8) {
                 iOperand3 = rand.nextInt(10);
                 sFomula += " - " + iOperand3;
                 iAnswer -= iOperand3;
