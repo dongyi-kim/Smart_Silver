@@ -102,9 +102,6 @@
                 android:text="두 시"
                 android:id="@+id/btn_ans_2"
                 android:textSize="@dimen/wp6"/>
-
         </LinearLayout>
-
-
     </LinearLayout>
 </RelativeLayout>
