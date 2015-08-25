@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/img_chalkboard_2"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <LinearLayout
@@ -13,6 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:text=" 노인학교에서 가을축제 준비를 하기 위해 시장에 갔습니다.\n값이 더 저렴한 송편의 그림을 누르세요!"
+            android:textColor="#FFFFFF"
             android:id="@+id/txt_description"
             android:textSize="@dimen/wp5"
             android:gravity="center" />
@@ -50,6 +52,7 @@
                         android:background="@null"/>
                     <TextView
                         android:layout_width="match_parent"
+                        android:textColor="#FFFFFF"
                         android:layout_height="match_parent"
                         android:text="1접시 1200원\n"
                         android:layout_gravity="center"
@@ -89,6 +92,7 @@
                         android:scaleType="fitCenter"
                         android:background="@null"/>
                     <TextView
+                        android:textColor="#FFFFFF"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="1접시 1800원\n"
@@ -110,4 +114,4 @@
 
     </LinearLayout>
 
-</RelativeLayout><!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_05_5.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/jhobo_000/fuck/Smart_Silver/app/src/main/res/layout/act_step_05_5.xml -->

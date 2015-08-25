@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/img_chalkboard_2"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <LinearLayout
@@ -12,6 +13,7 @@
             android:layout_weight=".15"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:textColor="#FFFFFF"
             android:text=" 노인학교 가을 축제를 준비합니다. 화장지를 사러 마트에 갔습니다.\n더 많은 화장지를 찾아 단추를 누르세요!"
             android:id="@+id/txt_description"
             android:textSize="@dimen/wp5"
@@ -110,4 +112,4 @@
     </LinearLayout>
 
 
-</RelativeLayout><!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_04_5.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/jhobo_000/fuck/Smart_Silver/app/src/main/res/layout/act_step_04_5.xml -->

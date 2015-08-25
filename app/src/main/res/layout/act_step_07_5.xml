@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="@drawable/img_chalkboard_2"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -15,6 +16,7 @@
             android:layout_height="0dp"
             android:layout_weight=".2"
             android:textSize="@dimen/wp5"
+            android:textColor="#FFFFFF"
             android:gravity="center"
             android:id="@+id/txt_description"
             android:text="아래 영수증은 진료비 계산서입니다.\n김 할머니의 진찰료는 얼마인지 찾아 누르세요.">

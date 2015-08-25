@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/img_chalkboard_2"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -12,6 +13,7 @@
 
         <TextView
             android:id="@+id/txt_description"
+            android:textColor="#FFFFFF"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight=".15"
@@ -559,4 +561,4 @@
 
     </LinearLayout>
 
-</RelativeLayout><!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_07_3.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/jhobo_000/fuck/Smart_Silver/app/src/main/res/layout/act_step_07_3.xml -->

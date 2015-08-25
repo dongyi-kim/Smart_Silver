@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="@drawable/img_chalkboard_2"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -16,8 +17,14 @@
             android:layout_marginTop="20sp"
             android:layout_weight=".2"
             android:gravity="center"
+            android:textColor="#FFFFFF"
             android:text="아래 그림은 내일의 비올 확률입니다. \n대구지역의 내일 오후 비올 확률은 얼마인지 오른쪽 단추를 누르세요!"
             android:textSize="@dimen/wp6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".05"></LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
