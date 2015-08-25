@@ -11,12 +11,12 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wp15"
+            android:layout_height="@dimen/wp12"
             android:text=" 다음 수를 50에서 7씩 거꾸로 건너 띄며 세기\n해당 숫자를 누르세요~!"
             android:id="@+id/txt_discription"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            android:textSize="@dimen/wp6"
+            android:textSize="@dimen/wp5"
             android:gravity="center"
             android:layout_marginTop="@dimen/wp2" />
 
