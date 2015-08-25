@@ -46,9 +46,16 @@ public class DB extends SQLiteOpenHelper {
 
 
 //SELECT FUNCTIONS
+    public static ResultData[] SELECT(int iStep, int iLevel, int iStage, int isPassed){
+        return SELECT(iStep,iLevel,iStage,isPassed);
+    }
     public static ResultData[] SELECT(int iStep, int iLevel, int iStage, int isPassed, String strOption)
     {
+        if(strOption == null)
+            strOption = "";
+
         String query = "SELECT * FROM RESULT_DATA ";
+
 
         int iWhere = 0;
         String where = " WHERE ";
