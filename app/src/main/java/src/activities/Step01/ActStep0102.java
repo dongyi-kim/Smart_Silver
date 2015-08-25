@@ -3,6 +3,7 @@ package src.activities.Step01;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -20,20 +21,20 @@ import src.dialogs.DlgResultMark;
  * Created by waps12b on 15. 3. 15..
  */
 public class ActStep0102 extends StageActivity {
-
-    private static final int ROW_COUNT = 4;
+    private static final int ROW_COUNT = 2;
     private static final int COLUMN_COUNT = 7;
+    private static final float BUTTON_WEIGHT = 0.12f;
+    private static final float MARGIN_WEIGHT = 0.01f;
 
-    private LinearLayout linearDrawfield;
-    private LinearLayout linearDrawfieldRow[] = new LinearLayout[ROW_COUNT];
-    public final FrameLayout frameGrid[][] = new FrameLayout[ROW_COUNT][COLUMN_COUNT];
-    public final ImageButton ibtnShape[][] = new ImageButton[ROW_COUNT][COLUMN_COUNT];
-    public final TextView txtShape[][] = new TextView[ROW_COUNT][COLUMN_COUNT];
+    private final LinearLayout linearDrawfieldRow[] = new LinearLayout[ROW_COUNT];
+    public final ImageButton ibtnCell[][] = new ImageButton[ROW_COUNT][COLUMN_COUNT];
+    public final View emptyBetween[][] = new View[ROW_COUNT][COLUMN_COUNT - 1];
+    public final View emptySide[][] = new View[ROW_COUNT][2];
+
     public final Button btnAnswer[] = new Button[3];
     public int iAnswerValue[] = new int[3];
-    private TextView txtDiscription;
+    private TextView txtDescription;
 
-    private int iStage = 0;
     private int iRetryCount = 0;
     public boolean isRight = false;
 
@@ -45,61 +46,39 @@ public class ActStep0102 extends StageActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_01_2);
 
-        linearDrawfield = (LinearLayout)findViewById(R.id.drawfield);
         linearDrawfieldRow[0] = (LinearLayout)findViewById(R.id.drawfield_row_1);
         linearDrawfieldRow[1] = (LinearLayout)findViewById(R.id.drawfield_row_2);
-        linearDrawfieldRow[2] = (LinearLayout)findViewById(R.id.drawfield_row_3);
-        linearDrawfieldRow[3] = (LinearLayout)findViewById(R.id.drawfield_row_4);
         for(int i = 0; i < ROW_COUNT; i++){
-            frameGrid[i][0] = (FrameLayout)(linearDrawfieldRow[i].findViewById(R.id.frame_col_1));
-            frameGrid[i][1] = (FrameLayout)(linearDrawfieldRow[i].findViewById(R.id.frame_col_2));
-            frameGrid[i][2] = (FrameLayout)(linearDrawfieldRow[i].findViewById(R.id.frame_col_3));
-            frameGrid[i][3] = (FrameLayout)(linearDrawfieldRow[i].findViewById(R.id.frame_col_4));
-            frameGrid[i][4] = (FrameLayout)(linearDrawfieldRow[i].findViewById(R.id.frame_col_5));
-            frameGrid[i][5] = (FrameLayout)(linearDrawfieldRow[i].findViewById(R.id.frame_col_6));
-            frameGrid[i][6] = (FrameLayout)(linearDrawfieldRow[i].findViewById(R.id.frame_col_7));
+            ibtnCell[i][0] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.ibtn_col_1));
+            ibtnCell[i][1] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.ibtn_col_2));
+            ibtnCell[i][2] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.ibtn_col_3));
+            ibtnCell[i][3] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.ibtn_col_4));
+            ibtnCell[i][4] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.ibtn_col_5));
+            ibtnCell[i][5] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.ibtn_col_6));
+            ibtnCell[i][6] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.ibtn_col_7));
 
-            ibtnShape[i][0] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.btn_col_1));
-            ibtnShape[i][1] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.btn_col_2));
-            ibtnShape[i][2] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.btn_col_3));
-            ibtnShape[i][3] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.btn_col_4));
-            ibtnShape[i][4] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.btn_col_5));
-            ibtnShape[i][5] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.btn_col_6));
-            ibtnShape[i][6] = (ImageButton)(linearDrawfieldRow[i].findViewById(R.id.btn_col_7));
+            emptyBetween[i][0] = (View)(linearDrawfieldRow[i].findViewById(R.id.empty_between_col_1_2));
+            emptyBetween[i][1] = (View)(linearDrawfieldRow[i].findViewById(R.id.empty_between_col_2_3));
+            emptyBetween[i][2] = (View)(linearDrawfieldRow[i].findViewById(R.id.empty_between_col_3_4));
+            emptyBetween[i][3] = (View)(linearDrawfieldRow[i].findViewById(R.id.empty_between_col_4_5));
+            emptyBetween[i][4] = (View)(linearDrawfieldRow[i].findViewById(R.id.empty_between_col_5_6));
+            emptyBetween[i][5] = (View)(linearDrawfieldRow[i].findViewById(R.id.empty_between_col_6_7));
 
-            txtShape[i][0] = (TextView)(linearDrawfieldRow[i].findViewById(R.id.txt_col_1));
-            txtShape[i][1] = (TextView)(linearDrawfieldRow[i].findViewById(R.id.txt_col_2));
-            txtShape[i][2] = (TextView)(linearDrawfieldRow[i].findViewById(R.id.txt_col_3));
-            txtShape[i][3] = (TextView)(linearDrawfieldRow[i].findViewById(R.id.txt_col_4));
-            txtShape[i][4] = (TextView)(linearDrawfieldRow[i].findViewById(R.id.txt_col_5));
-            txtShape[i][5] = (TextView)(linearDrawfieldRow[i].findViewById(R.id.txt_col_6));
-            txtShape[i][6] = (TextView)(linearDrawfieldRow[i].findViewById(R.id.txt_col_7));
+            emptySide[i][0] = (View)(linearDrawfieldRow[i].findViewById(R.id.empty_left));
+            emptySide[i][1] = (View)(linearDrawfieldRow[i].findViewById(R.id.empty_right));
         }
 
         btnAnswer[0] = (Button)findViewById(R.id.btn_answer_1);
         btnAnswer[1] = (Button)findViewById(R.id.btn_answer_2);
         btnAnswer[2] = (Button)findViewById(R.id.btn_answer_3);
-        txtDiscription = (TextView)findViewById(R.id.txt_discription);
-
-        for(int i = 0; i < ROW_COUNT; i++){
-            for(int j = 0; j < COLUMN_COUNT; j++){
-                txtShape[i][j].setText("");
-            }
-        }
+        txtDescription = (TextView)findViewById(R.id.txt_description);
 
         //button listener
         for(int i = 0; i <3; i++)
             btnAnswer[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v){
-                    int x = 0;
-                    for(int ii = 0; ii < 3; ii++){
-                        if(btnAnswer[ii] == v){
-                            x = ii; break;
-                        }
-                    }
-
-                    if(iAnswerValue[x] == dataSet.iAnswer) isRight = true;
+                    if(Integer.parseInt(((Button)v).getText().toString()) == dataSet.iAnswer) isRight = true;
                     else isRight = false;
                     checkAnswer();
                 }
@@ -109,70 +88,49 @@ public class ActStep0102 extends StageActivity {
     }
 
     public void setQuestion(boolean isRetry, Object object){
-        int iRandomSeed = 2 * iStage + rand.nextInt(1);
-        dataSet.setData(iRandomSeed);
+        dataSet.setData(iStage);
 
         int iFirstAnsNumber = dataSet.iAnswer - rand.nextInt(3);
         if(iFirstAnsNumber <= 0) iFirstAnsNumber = 1;
         for(int i = 0; i < 3; i++){
             iAnswerValue[i] = iFirstAnsNumber++;
+            btnAnswer[i].setText("" + iAnswerValue[i]);
         }
 
-        for(int i = 0; i < ROW_COUNT; i++){
-            linearDrawfieldRow[i].setVisibility(View.VISIBLE);
-            LinearLayout.LayoutParams param = (LinearLayout.LayoutParams)linearDrawfieldRow[i].getLayoutParams();
-            param.weight = 1;
-            linearDrawfieldRow[i].setLayoutParams(param);
-            for(int j = 0; j < COLUMN_COUNT; j++)
-                frameGrid[i][j].setVisibility(View.VISIBLE);
-        }
+        for(int r = 0; r < ROW_COUNT; r++) {
+            if(dataSet.iLineCount[r] == 0){
+                linearDrawfieldRow[r].setVisibility(View.GONE);
+                break;
+            }
+            else linearDrawfieldRow[r].setVisibility(View.VISIBLE);
 
+            for (int i = 0; i < COLUMN_COUNT; i++) {
+                if (i >= dataSet.iLineCount[r]) {
+                    ibtnCell[r][i].setVisibility(View.GONE);
+                    emptyBetween[r][i - 1].setVisibility(View.GONE);
+                } else {
+                    ibtnCell[r][i].setVisibility(View.VISIBLE);
+                    ibtnCell[r][i].setImageResource(dataSet.iIconSource);
+                    emptyBetween[r][i].setVisibility(View.VISIBLE);
 
-        for(int i = 0; i < ROW_COUNT; i++){
-            int sum = dataSet.arrLineDrawCount[i][0] + dataSet.arrLineDrawCount[i][1] + dataSet.arrLineDrawCount[i][2];
-            if(sum == 0){
-                linearDrawfieldRow[i].setVisibility(View.GONE);
-                LinearLayout.LayoutParams param = (LinearLayout.LayoutParams)linearDrawfieldRow[i].getLayoutParams();
-                param.weight = 0.2f;
-                linearDrawfieldRow[i].setLayoutParams(param);
-                continue;
+                    LinearLayout.LayoutParams emptyParams = (LinearLayout.LayoutParams) emptyBetween[r][i].getLayoutParams();
+                    emptyParams.weight = MARGIN_WEIGHT * dataSet.iMarginMagnif;
+                    emptyBetween[r][i].setLayoutParams(emptyParams);
+                }
             }
 
-            int cnt = 0;
-            for(int j = 0; j < dataSet.arrLineDrawCount[i][0]; j++)
-                frameGrid[i][cnt++].setVisibility(View.INVISIBLE);
-
-            for(int j = 0; j < dataSet.arrLineDrawCount[i][1]; j++)
-                frameGrid[i][cnt++].setVisibility(View.VISIBLE);
-
-            for(int j = 0; j < dataSet.arrLineDrawCount[i][2]; j++)
-                frameGrid[i][cnt++].setVisibility(View.INVISIBLE);
-
-            for(int j = sum; j < COLUMN_COUNT; j++)
-                frameGrid[i][cnt++].setVisibility(View.GONE);
-        }
-
-        for(int i = 0; i < 3; i++){
-            btnAnswer[i].setText("" + iAnswerValue[i]);
+            float fWeightSum = dataSet.iLineCount[r] * BUTTON_WEIGHT + (dataSet.iLineCount[r] - 1) * MARGIN_WEIGHT * dataSet.iMarginMagnif;
+            LinearLayout.LayoutParams emptyLeft = (LinearLayout.LayoutParams) emptySide[r][0].getLayoutParams();
+            LinearLayout.LayoutParams emptyRight = (LinearLayout.LayoutParams) emptySide[r][1].getLayoutParams();
+            emptyLeft.weight = (1.0f - fWeightSum) * dataSet.iSideRatio[r][0] / (float)(dataSet.iSideRatio[r][0] + dataSet.iSideRatio[r][1]);
+            emptyRight.weight = (1.0f - fWeightSum) * dataSet.iSideRatio[r][1] / ((float)dataSet.iSideRatio[r][0] + dataSet.iSideRatio[r][1]);
+            emptySide[r][0].setLayoutParams(emptyLeft);
+            emptySide[r][1].setLayoutParams(emptyRight);
         }
 
         StartRecording();
     }
 
-
-    private void drawScreen(int iShapeCount){
-        for(int i = 0; i < ROW_COUNT; i++){
-            for(int j = 0; j < COLUMN_COUNT; j++){
-                if(COLUMN_COUNT * i + j < iShapeCount){
-                    ibtnShape[i][j].setImageResource(R.drawable.img_shape_star);
-                    ibtnShape[i][j].setVisibility(View.VISIBLE);
-                }
-                else{
-                    ibtnShape[i][j].setVisibility(View.INVISIBLE);
-                }
-            }
-        }
-    }
 
     public void checkAnswer(Object o){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
@@ -182,13 +140,12 @@ public class ActStep0102 extends StageActivity {
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface dialog) {
-                if(isRight || iRetryCount > 1){
+                if (isRight || iRetryCount > 1) {
                     iStage++;
                     iRetryCount = 0;
-                    if(iStage < NUM_OF_STAGE) setQuestion(false);
+                    if (iStage <= NUM_OF_STAGE) setQuestion(false);
                     else goNext();
-                }
-                else{
+                } else {
                     iRetryCount++;
                 }
             }
@@ -201,35 +158,60 @@ public class ActStep0102 extends StageActivity {
     }
 
     public class Step0102DataSet {
-        private static final int MAX_SET_NUMBER = 11;
+        private final int arrVariationCount[] = {0, 0, 1, 1, 1, 2, 3, 2, 2, 1, 1};
 
-        private final int arrAnswerList[] = {3, 2, 4, 5, 6, 7, 7, 8, 10, 11, 19};
-        private final int arrLineDrawCountListSet[][][] = {{{1, 3, 1}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}},
-                {{1, 2, 1}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}},
-                {{1, 4, 1}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}},
-                {{1, 5, 1}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}},
-                {{1, 3, 3}, {2, 3, 1}, {0, 0, 0}, {0, 0, 0}},
-                {{1, 3, 1}, {1, 4 , 1}, {0, 0, 0}, {0, 0, 0}},
-                {{0, 7, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}},
-                {{2, 3, 2}, {1, 5, 1}, {0, 0, 0}, {0, 0, 0}},
-                {{0, 5, 1}, {1, 5, 0}, {0, 0, 0},{0, 0, 0}},
-                {{1, 1, 5}, {1, 5, 1}, {1, 5, 1}, {0, 0, 0}},
-                {{1, 5, 1}, {1, 5, 1},{1, 5, 1}, {1, 4, 2}}};
+        private final int arrLineCount2[][] = {{2, 0}};
+        private final int arrLineCount3[][] = {{3, 0}};
+        private final int arrLineCount4[][] = {{4, 0}};
+        private final int arrLineCount5[][] = {{5, 0}, {2, 3}};
+        private final int arrLineCount6[][] = {{3, 3}, {3, 3}, {6, 0}};
+        private final int arrLineCount7[][] = {{3, 4}, {4, 3}};
+        private final int arrLineCount8[][] = {{3, 5}, {4, 4}};
+        private final int arrLineCount9[][] = {{4, 5}};
+        private final int arrLineCount10[][] = {{5, 5}};
+        private final int arrLineCount[][][] = {{{}}, {{}}, arrLineCount2, arrLineCount3, arrLineCount4, arrLineCount5,
+                arrLineCount6, arrLineCount7, arrLineCount8, arrLineCount9, arrLineCount10};
+
+        private final int arrSideRatio2[][][] = {{{1, 1}}};
+        private final int arrSideRatio3[][][] = {{{1, 1}}};
+        private final int arrSideRatio4[][][] = {{{1, 1}}};
+        private final int arrSideRatio5[][][] = {{{1, 1}}, {{2, 5}, {3, 2}}};
+        private final int arrSideRatio6[][][] = {{{12, 30}, {30, 12}}, {{2, 3}, {3, 2}}, {{1, 1}}};
+        private final int arrSideRatio7[][][] = {{{1, 1}, {1, 1}}, {{1, 5}, {4, 1}}};
+        private final int arrSideRatio8[][][] = {{{1, 1}, {1, 1}}, {{1, 4}, {4, 1}}};
+        private final int arrSideRatio9[][][] = {{{8, 15}, {1, 1}}};
+        private final int arrSideRatio10[][][] = {{{1, 1}, {1, 1}}};
+        private final int arrSideRatio[][][][] = {{{{}}}, {{{}}}, arrSideRatio2, arrSideRatio3, arrSideRatio4, arrSideRatio5,
+                arrSideRatio6, arrSideRatio7, arrSideRatio8, arrSideRatio9, arrSideRatio10};
+
+        private final int arrMarginMagnif[][] = {{}, {}, {10}, {8}, {8}, {5, 6}, {5, 8, 2}, {8, 2}, {2, 4}, {2}, {2}};
+        private final int arrIconSource[] = {R.drawable.icon_count_eggplant, R.drawable.icon_count_green_circle, R.drawable.icon_count_pear,
+                R.drawable.icon_count_mandarin, R.drawable.icon_count_octopus};
 
         public int iAnswer;
-        public int arrLineDrawCount[][] = new int[4][3];
+        public int iLineCount[] = new int[2];
+        public int iSideRatio[][] = new int[2][2];
+        public int iMarginMagnif;
+        public int iIconSource;
 
-        public Step0102DataSet(){
-            //If file I/O, read file and set data
-        }
+        public void setData(int iStage) {
+            if(iStage <= 3) iAnswer = iStage + 1 + rand.nextInt(3);
+            else if(iStage <= 4) iAnswer = iStage + 1 + rand.nextInt(4);
+            else iAnswer = iStage + 2 + rand.nextInt(4);
 
-        public void setData(int iSeed) {
-            iAnswer = arrAnswerList[iSeed];
+            int iSeed = rand.nextInt(arrVariationCount[iAnswer]);
+            iLineCount[0] = arrLineCount[iAnswer][iSeed][0];
+            iLineCount[1] = arrLineCount[iAnswer][iSeed][1];
 
-            for (int i = 0; i < 4; i++)
-                for (int j = 0; j < 3; j++) {
-                    arrLineDrawCount[i][j] = arrLineDrawCountListSet[iSeed][i][j];
-                }
+            iSideRatio[0][0] = arrSideRatio[iAnswer][iSeed][0][0];
+            iSideRatio[0][1] = arrSideRatio[iAnswer][iSeed][0][1];
+            if(iLineCount[1] != 0){
+                iSideRatio[1][0] = arrSideRatio[iAnswer][iSeed][1][0];
+                iSideRatio[1][1] = arrSideRatio[iAnswer][iSeed][1][1];
+            }
+
+            iMarginMagnif = arrMarginMagnif[iAnswer][iSeed];
+            iIconSource = arrIconSource[rand.nextInt(5)];
         }
     }
 

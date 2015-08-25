@@ -149,7 +149,7 @@ public class ActStep10 extends StageActivity {
                 sFomula = "" + iOperand1 + " - " + iOperand2;
                 iAnswer = iOperand1 - iOperand2;
             } else if (iStage == 9 || iStage == 10) {
-                sFomula = "" + iOperand1 + " X " + iOperand2;
+                sFomula = "" + iOperand1 + " × " + iOperand2;
                 iAnswer = iOperand1 * iOperand2;
             } else {
                 sFomula = "" + iOperand1 + " + " + iOperand2;
