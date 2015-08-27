@@ -17,9 +17,9 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 
 import cdmst.smartsilver.R;
 import src.activities.ActMain;
+import src.activities.Step02.*;
 import src.activities.FrameActivity;
 import src.activities.StageActivity;
-import src.activities.Step02.ActStep0201;
 import src.dialogs.DlgResultMark;
 
 /**

@@ -131,7 +131,6 @@ public class ActStep0102 extends StageActivity {
         StartRecording();
     }
 
-
     public void checkAnswer(Object o){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();

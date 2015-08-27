@@ -34,6 +34,8 @@ public class ActStep01 extends StageActivity implements View.OnClickListener {
         setContentView(R.layout.act_step_01_1);
 
 
+        ((Button)findViewById(R.id.btn_ok)).setOnClickListener(this);
+
         txtQuestion = (TextView)findViewById(R.id.txt_question);
         txtAnswer = (TextView)findViewById(R.id.txt_answer);
         iStage = 1;
