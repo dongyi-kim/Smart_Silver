@@ -30,7 +30,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/wp60"
+                    android:layout_height="@dimen/wp50"
                     android:orientation="vertical"
                     android:id="@+id/drawfield"
                     android:layout_gravity="center"
@@ -57,10 +57,10 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wp30">
+            android:layout_height="@dimen/wp25">
             <Button
                 android:layout_weight="1"
-                android:textSize="@dimen/wp15"
+                android:textSize="@dimen/wp12"
                 android:textStyle="bold"
                 android:layout_margin="10sp"
                 android:layout_width="0dp"
@@ -70,7 +70,7 @@
 
             <Button
                 android:layout_weight="1"
-                android:textSize="@dimen/wp15"
+                android:textSize="@dimen/wp12"
                 android:textStyle="bold"
                 android:layout_margin="10sp"
                 android:layout_width="0dp"
@@ -80,7 +80,7 @@
 
             <Button
                 android:layout_weight="1"
-                android:textSize="@dimen/wp15"
+                android:textSize="@dimen/wp12"
                 android:textStyle="bold"
                 android:layout_margin="10sp"
                 android:layout_width="0dp"

@@ -76,7 +76,8 @@ public class ActStep10 extends StageActivity {
                         if (btnAnswerButton[ii] == v) iBtnIndex = ii;
 
                     if (iBtnIndex == 11) {
-                        if (dataSet.iAnswer == Integer.parseInt(txtInputAnswer.getText().toString()))
+                        if(txtInputAnswer.length() >= 10 || txtInputAnswer.length() <= 0) isRight = false;
+                        else if (dataSet.iAnswer == Integer.parseInt(txtInputAnswer.getText().toString()))
                             isRight = true;
                         else isRight = false;
                         checkAnswer();

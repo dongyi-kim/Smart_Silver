@@ -47,6 +47,8 @@ public class ActStep0502 extends StageActivity {
         btnAnswer[2] = (Button)findViewById(R.id.btn_answer_3);
 
         mDrawingView = new DrawView(this);
+        mDrawingView.setColorCode(0xFFFFFFFF);
+
         mDrawingPad=(LinearLayout)findViewById(R.id.draw_field_0502);
         mDrawingPad.addView(mDrawingView);
 

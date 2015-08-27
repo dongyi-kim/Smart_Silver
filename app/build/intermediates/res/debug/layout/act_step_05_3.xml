@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/img_chalkboard_2"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <LinearLayout
@@ -11,11 +12,12 @@
 
         <TextView
             android:layout_weight=".2"
+            android:textColor="#FFFFFF"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:text=" 아래 10L 의 빈 항아리가 있습니다. 빈 항아리를 채우려면\n옆의 그릇으로 몇 번 부어야 하는지 알맞은 숫자를 누르세요."
             android:id="@+id/txt_description"
-            android:textSize="@dimen/wp5"
+            android:textSize="@dimen/wp6"
             android:gravity="center"/>
 
         <LinearLayout

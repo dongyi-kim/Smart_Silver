@@ -27,6 +27,7 @@ public class DrawView extends View {
     Canvas  mCanvas;
     Path mPath;
     Paint   mBitmapPaint;
+    private int iColorCode = 0xFFFFFFFF;
 
     public DrawView(Context context) {
         super(context);
@@ -34,7 +35,7 @@ public class DrawView extends View {
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
         mPaint.setDither(true);
-        mPaint.setColor(0xFF1166AA);
+        mPaint.setColor(iColorCode);
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeJoin(Paint.Join.ROUND);
         mPaint.setStrokeCap(Paint.Cap.ROUND);
@@ -44,6 +45,12 @@ public class DrawView extends View {
         mBitmapPaint = new Paint();
         mBitmapPaint.setColor(Color.BLUE);
     }
+
+    public void setColorCode(int iColor){
+        iColorCode = iColor;
+        mPaint.setColor(iColorCode);
+    }
+
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);

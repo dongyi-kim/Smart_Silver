@@ -39,11 +39,11 @@ public class ActStep0201 extends StageActivity {
     public int iNextAnswer = -1;
 
     public final String arrDescription[] = {
-            "´ÙÀ½ ¼ö¸¦ 50¿¡¼­ 3¾¿ °Å²Ù·Î °Ç³Ê ¶ç¸ç ¼¼±â.\nÇØ´ç ¼ýÀÚ¸¦ ´©¸£¼¼¿ä.",
-            "´ÙÀ½ ¼ö¸¦ 50¿¡¼­ 5¾¿ °Å²Ù·Î °Ç³Ê ¶ç¸ç ¼¼±â.\nÇØ´ç ¼ýÀÚ¸¦ ´©¸£¼¼¿ä.",
-            "´ÙÀ½ ¼ö¸¦ 100¿¡¼­ 5¾¿ °Å²Ù·Î °Ç³Ê ¶ç¸ç ¼¼±â.\nÇØ´ç ¼ýÀÚ¸¦ ´©¸£¼¼¿ä.",
-            "´ÙÀ½ ¼ö¸¦ 100¿¡¼­ 7¾¿ °Å²Ù·Î °Ç³Ê ¶ç¸ç ¼¼±â.\nÇØ´ç ¼ýÀÚ¸¦ ´©¸£¼¼¿ä.",
-            "´ÙÀ½ ¼ö¸¦ 70¿¡¼­ 7¾¿ °Å²Ù·Î °Ç³Ê ¶ç¸ç ¼¼±â.\nÇØ´ç ¼ýÀÚ¸¦ ´©¸£¼¼¿ä."
+            "ë‹¤ìŒ ìˆ˜ë¥¼ 50ì—ì„œ 3ì”© ê±°ê¾¸ë¡œ ê±´ë„ˆ ë„ë©° ì„¸ê¸°.\ní•´ë‹¹ ìˆ«ìžë¥¼ ëˆ„ë¥´ì„¸ìš”.",
+            "ë‹¤ìŒ ìˆ˜ë¥¼ 50ì—ì„œ 5ì”© ê±°ê¾¸ë¡œ ê±´ë„ˆ ë„ë©° ì„¸ê¸°.\ní•´ë‹¹ ìˆ«ìžë¥¼ ëˆ„ë¥´ì„¸ìš”.",
+            "ë‹¤ìŒ ìˆ˜ë¥¼ 100ì—ì„œ 5ì”© ê±°ê¾¸ë¡œ ê±´ë„ˆ ë„ë©° ì„¸ê¸°.\ní•´ë‹¹ ìˆ«ìžë¥¼ ëˆ„ë¥´ì„¸ìš”.",
+            "ë‹¤ìŒ ìˆ˜ë¥¼ 100ì—ì„œ 7ì”© ê±°ê¾¸ë¡œ ê±´ë„ˆ ë„ë©° ì„¸ê¸°.\ní•´ë‹¹ ìˆ«ìžë¥¼ ëˆ„ë¥´ì„¸ìš”.",
+            "ë‹¤ìŒ ìˆ˜ë¥¼ 70ì—ì„œ 7ì”© ê±°ê¾¸ë¡œ ê±´ë„ˆ ë„ë©° ì„¸ê¸°.\ní•´ë‹¹ ìˆ«ìžë¥¼ ëˆ„ë¥´ì„¸ìš”."
     };
     private final int arrStartNumber[] =        {50, 50, 100, 100, 70};
     private final int arrRowCount[] =           {3, 3, 2, 3, 3};

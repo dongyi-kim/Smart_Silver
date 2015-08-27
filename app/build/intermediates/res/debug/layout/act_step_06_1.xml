@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/img_chalkboard_2"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -13,11 +14,12 @@
             android:id="@+id/txt_discription"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:textColor="#FFFFFF"
             android:layout_marginTop="20sp"
             android:layout_weight=".2"
             android:gravity="center"
             android:text="다음 자료는 1주일이 모두 며칠로 이루어져 있는지 나타내는 자료입니다.\n다음 자료에서 1주일은 며칠입니까? 단추를 누르세요!"
-            android:textSize="@dimen/wp6" />
+            android:textSize="@dimen/wp5" />
 
         <LinearLayout
             android:layout_width="match_parent"

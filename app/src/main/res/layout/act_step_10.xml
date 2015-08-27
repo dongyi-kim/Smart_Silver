@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="@drawable/img_chalkboard_2"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -33,22 +34,26 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight=".05"
-                    android:background="#FF223366"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:weightSum="1">
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight=".6"
-                        android:background="#FFFFFFFF" />
+                        android:layout_weight=".6" />
 
-                    <View
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_marginLeft="2dp"
-                        android:layout_marginTop="2dp"
                         android:layout_weight=".4"
-                        android:background="#FFFFFFFF" />
+                        android:background="#FF223366">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#FFFFFFFF"/>
+                    </LinearLayout>
                 </LinearLayout>
 
                 <TextView
@@ -65,22 +70,25 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight=".6"
-                    android:background="#FF223366"
                     android:orientation="vertical">
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight=".6"
-                        android:background="#FFFFFFFF" />
+                        android:layout_weight=".6"/>
 
-                    <View
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_marginRight="2dp"
-                        android:layout_marginTop="2dp"
                         android:layout_weight=".4"
-                        android:background="#FFFFFFFF" />
+                        android:background="#FF223366">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#FFFFFFFF"/>
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
