@@ -1,185 +1,237 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/img_wall">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:padding="@dimen/wp5">
-
-
-        <ui.WhiteChalkFrameLayout
-            android:layout_width="@dimen/wp90"
-            android:layout_height="@dimen/wp25"
-            android:layout_marginBottom="10dp">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_centerInParent="true"
-                    android:gravity="center"
-                    android:textAlignment="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:textSize="@dimen/wp10"
-                    android:textStyle="bold"
-                    android:text="스탭 1-4"/>
-
-            </RelativeLayout>
-        </ui.WhiteChalkFrameLayout>
+        android:orientation="vertical"
+        android:padding="@dimen/wp5"
+        android:weightSum="1">
 
         <ui.ChalkFrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/wp100"
-                android:orientation="vertical"
-                android:id="@+id/drawfield"
-                android:background="@android:color/transparent"
-                android:layout_marginLeft="10sp"
-                android:layout_marginRight="10sp"
-                android:layout_marginBottom="20sp"
-                android:layout_gravity="center"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:weightSum="1">
+                android:orientation="vertical"
+                android:padding="5dp">
 
-                <ui.ChalkTextView
-                    android:textColor="#FFFFFF"
+                <TextView
+                    android:id="@+id/txt_description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txt_discription"
-                    android:text="다음 중 짝수를\n찾아서 누르세요."
-                    android:textSize="@dimen/wp10"/>
+                    android:gravity="center"
+                    android:text="다음 중 가장 큰 수를\n찾아서 누르세요."
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/wp7" />
 
                 <LinearLayout
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:layout_weight=".4"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:orientation="horizontal"
                     android:id="@+id/drawfield_row_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wp40"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
                     android:weightSum="1">
 
-                    <FrameLayout
-                        android:layout_gravity="center"
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".1"
+                        android:id="@+id/empty_left_grid_1_1"/>
+
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight=".3"
-                        android:id="@+id/frame_grid_1_1">
-                        <ImageButton
+                        android:orientation="vertical"
+                        android:id="@+id/linear_grid_1_1"
+                        android:weightSum="1">
+
+                        <View
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/round_button"
-                            android:background="@null"
-                            android:scaleType="fitCenter"
-                            android:layout_gravity="center"
-                            android:id="@+id/btn_grid_1_1"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:clickable="false"
-                            android:textSize="@dimen/wp3"
-                            android:text="(1,1)"
-                            android:id="@+id/txt_grid_1_1">
-                        </TextView>
-                    </FrameLayout>
-                    <TextView
+                            android:layout_height="0dp"
+                            android:layout_weight=".15"
+                            android:id="@+id/empty_upper_grid_1_1"/>
+
+                        <FrameLayout
+                            android:id="@+id/frame_grid_1_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight=".7">
+
+                            <ImageButton
+                                android:id="@+id/ibtn_grid_1_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/round_button" />
+
+                            <TextView
+                                android:id="@+id/txt_grid_1_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="(1,1)"
+                                android:textSize="@dimen/wp7"
+                                android:textStyle="bold" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <View
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="0.1"/>
-                    <FrameLayout
-                        android:layout_gravity="center"
+                        android:layout_weight=".2"
+                        android:id="@+id/empty_left_grid_1_2"/>
+
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight=".3"
-                        android:id="@+id/frame_grid_1_2">
-                        <ImageButton
+                        android:orientation="vertical"
+                        android:weightSum="1"
+                        android:id="@+id/linear_grid_1_2">
+
+                        <View
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/round_button"
-                            android:background="@null"
-                            android:scaleType="fitCenter"
-                            android:layout_gravity="center"
-                            android:id="@+id/btn_grid_1_2"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:clickable="false"
-                            android:textSize="@dimen/wp3"
-                            android:text="(1,2)"
-                            android:id="@+id/txt_grid_1_2">
-                        </TextView>
-                    </FrameLayout>
+                            android:layout_height="0dp"
+                            android:layout_weight=".15"
+                            android:id="@+id/empty_upper_grid_1_2"/>
+
+                        <FrameLayout
+                            android:id="@+id/frame_grid_1_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight=".7">
+
+                            <ImageButton
+                                android:id="@+id/ibtn_grid_1_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/round_button" />
+
+                            <TextView
+                                android:id="@+id/txt_grid_1_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="(1,2)"
+                                android:textSize="@dimen/wp7"
+                                android:textStyle="bold" />
+                        </FrameLayout>
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:layout_weight=".4"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:orientation="horizontal"
                     android:id="@+id/drawfield_row_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wp40"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
                     android:weightSum="1">
 
-                    <FrameLayout
-                        android:layout_gravity="center"
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".1"
+                        android:id="@+id/empty_left_grid_2_1"/>
+
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight=".3"
-                        android:id="@+id/frame_grid_2_1">
-                        <ImageButton
+                        android:orientation="vertical"
+                        android:weightSum="1"
+                        android:id="@+id/linear_grid_2_1">
+
+                        <View
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/round_button"
-                            android:background="@null"
-                            android:scaleType="fitCenter"
-                            android:layout_gravity="center"
-                            android:id="@+id/btn_grid_2_1"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:clickable="false"
-                            android:textSize="@dimen/wp3"
-                            android:text="(2,1)"
-                            android:id="@+id/txt_grid_2_1">
-                        </TextView>
-                    </FrameLayout>
-                    <TextView
+                            android:layout_height="0dp"
+                            android:layout_weight=".15"
+                            android:id="@+id/empty_upper_grid_2_1"/>
+
+                        <FrameLayout
+                            android:id="@+id/frame_grid_2_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight=".7">
+
+                            <ImageButton
+                                android:id="@+id/ibtn_grid_2_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/round_button" />
+
+                            <TextView
+                                android:id="@+id/txt_grid_2_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="(2,1)"
+                                android:textSize="@dimen/wp7"
+                                android:textStyle="bold" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <View
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="0.1"/>
-                    <FrameLayout
-                        android:layout_gravity="center"
+                        android:layout_weight=".2"
+                        android:id="@+id/empty_left_grid_2_2"/>
+
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight=".3"
-                        android:id="@+id/frame_grid_2_2">
-                        <ImageButton
+                        android:orientation="vertical"
+                        android:weightSum="1"
+                        android:id="@+id/linear_grid_2_2">
+
+                        <View
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/round_button"
-                            android:background="@null"
-                            android:scaleType="fitCenter"
-                            android:layout_gravity="center"
-                            android:id="@+id/btn_grid_2_2"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:clickable="false"
-                            android:textSize="@dimen/wp3"
-                            android:text="(2,2)"
-                            android:id="@+id/txt_grid_2_2">
-                        </TextView>
-                    </FrameLayout>
+                            android:layout_height="0dp"
+                            android:layout_weight=".15"
+                            android:id="@+id/empty_upper_grid_2_2"/>
+
+                        <FrameLayout
+                            android:id="@+id/frame_grid_2_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight=".7">
+
+                            <ImageButton
+                                android:id="@+id/ibtn_grid_2_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/round_button" />
+
+                            <TextView
+                                android:id="@+id/txt_grid_2_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="(2,2)"
+                                android:textSize="@dimen/wp7"
+                                android:textStyle="bold" />
+                        </FrameLayout>
+                    </LinearLayout>
                 </LinearLayout>
 
             </LinearLayout>

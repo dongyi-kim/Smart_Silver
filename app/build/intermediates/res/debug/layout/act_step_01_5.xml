@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/img_chalkboard_2">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,6 +19,7 @@
                 android:id="@+id/txt_description"
                 android:text="몇 시입니까? 아래 단추를 누르세요."
                 android:gravity="center"
+                android:textColor="#FFFFFFFF"
                 android:textSize="@dimen/wp7"/>
 
         </LinearLayout>
@@ -85,7 +87,7 @@
             android:gravity="center">
 
             <Button
-                android:layout_width="130dp"
+                android:layout_width="@dimen/wp40"
                 android:layout_height="wrap_content"
                 android:text="두 시 십이분"
                 android:textSize="@dimen/wp6"
@@ -97,7 +99,7 @@
                 android:layout_weight=".1"></LinearLayout>
 
             <Button
-                android:layout_width="130dp"
+                android:layout_width="@dimen/wp40"
                 android:layout_height="wrap_content"
                 android:text="두 시"
                 android:id="@+id/btn_ans_2"

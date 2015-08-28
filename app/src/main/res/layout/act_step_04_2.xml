@@ -51,6 +51,7 @@
                         android:layout_height="match_parent"
                         android:src="@drawable/txt_field_0401"
                         android:id="@+id/ibtn_answer_1"
+                        android:scaleType="fitCenter"
                         android:background="@null"/>
                     <TextView
                         android:layout_width="match_parent"
@@ -85,6 +86,7 @@
                         android:layout_height="match_parent"
                         android:src="@drawable/txt_field_0401"
                         android:id="@+id/ibtn_answer_2"
+                        android:scaleType="fitCenter"
                         android:background="@null"/>
                     <TextView
                         android:layout_width="match_parent"
