@@ -116,6 +116,8 @@ public class ActStep0604 extends StageActivity {
             btnAnswer[0].setVisibility(View.GONE);
             btnAnswer[1].setVisibility(View.GONE);
         }
+
+        StartRecording();
     }
 
     @Override

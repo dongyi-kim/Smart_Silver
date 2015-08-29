@@ -73,6 +73,8 @@ public class ActStep0602 extends StageActivity {
         }
         else
             btnAnswer[2].setVisibility(View.GONE);
+
+        StartRecording();
     }
 
     @Override

@@ -99,7 +99,7 @@ public class ActStep0103 extends StageActivity {
 
 
     public void setQuestion(boolean isRetry, Object object){
-        bAnswerIsOdd = (rand.nextInt(1) == 0 ? false : true);
+        bAnswerIsOdd = (rand.nextInt(2) == 0 ? false : true);
         txtDescription.setText(bAnswerIsOdd? "다음 중 홀수를 찾아 누르세요." : "다음 중 짝수를 찾아 누르세요.");
 
         int iOddCount = 0, iEvenCount = 0;
