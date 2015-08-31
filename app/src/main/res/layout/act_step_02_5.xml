@@ -37,7 +37,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/frame_cell_white"
+                    android:src="@drawable/frame_cell_pink"
                     android:id="@+id/img_operand_field_1"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -70,7 +70,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/frame_cell_white"
+                    android:src="@drawable/frame_cell_pink"
                     android:id="@+id/img_operand_field_2"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -103,7 +103,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/frame_cell_white"
+                    android:src="@drawable/frame_cell_pink"
                     android:id="@+id/img_operand_field_3"/>
                 <TextView
                     android:layout_width="match_parent"
@@ -135,7 +135,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/frame_cell_white"
+                    android:src="@drawable/frame_cell_pink"
                     android:id="@+id/img_answer_field"/>
                 <TextView
                     android:layout_width="match_parent"
