@@ -182,11 +182,11 @@ public class ActStep0305 extends StageActivity{
         private final int arrLayoutCountList[][] = {{1, 2, 0}, {1, 1, 0}, {1, 2, 0}, {1, 2, 0}, {2, 2, 1}};
         private final int arrSignSetList[][] = {{0, 2}, {0, 2}, {0, 2}, {0, 2}, {1, 1}};
         private final int arrSignImage[] = {R.drawable.sign_minus, R.drawable.sign_plus, 0};
-        private final int arrImageSetList[][][] = {{{R.drawable.img_korean_dollar_50000, 0}, {R.drawable.img_grandma_only, R.drawable.img_grandfa_only}, {0}},
+        private final int arrImageSetList[][][] = {{{R.drawable.img_korean_dollar_50000, 0}, {R.drawable.icon_grandma, R.drawable.icon_grandfa}, {0}},
             {{R.drawable.img_korean_dollar_10000, 0}, {R.drawable.img_coin_wallet, 0}, {0}},
-            {{R.drawable.img_korean_dollar_15000, 0}, {R.drawable.img_grandma_only, R.drawable.img_grandfa_only}, {0}},
-            {{R.drawable.img_korean_dollar_50000, 0}, {R.drawable.img_grandma_only, R.drawable.img_grandfa_only}, {0}},
-            {{R.drawable.img_grandma_only, R.drawable.img_grandfa_only}, {R.drawable.img_korean_food, R.drawable.img_korean_food}, {R.drawable.img_coin_wallet}}};
+            {{R.drawable.img_korean_dollar_15000, 0}, {R.drawable.icon_grandma, R.drawable.icon_grandfa}, {0}},
+            {{R.drawable.img_korean_dollar_50000, 0}, {R.drawable.icon_grandma, R.drawable.icon_grandfa}, {0}},
+            {{R.drawable.icon_grandma, R.drawable.icon_grandfa}, {R.drawable.img_korean_food, R.drawable.img_korean_food}, {R.drawable.img_coin_wallet}}};
         private final int arrSpaceImageList[] = {R.drawable.empty_space_the_number_food, R.drawable.empty_space_how_much, R.drawable.empty_space_how_much_long};
         private final int arrSpaceIndexList[][][] = {{{0, 0}, {1, 1}, {0}},
                 {{0, 0}, {2, 0}, {0}},

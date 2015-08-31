@@ -31,7 +31,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:id="@+id/drawfield"
-            android:background="@drawable/drawfield_01_04"
+            android:background="@drawable/background_white_transparent"
 
             android:layout_gravity="center"
             android:gravity="center"

@@ -48,7 +48,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="0.4"
                     android:id="@+id/img_set_1"
-                    android:src="@drawable/img_grandma_only"/>
+                    android:src="@drawable/icon_grandma"/>
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
@@ -84,7 +84,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="0.4"
                     android:id="@+id/img_set_2"
-                    android:src="@drawable/img_grandfa_only"/>
+                    android:src="@drawable/icon_grandfa"/>
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
@@ -145,7 +145,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="0.4"
                     android:id="@+id/img_set_3"
-                    android:src="@drawable/img_grandma_only"/>
+                    android:src="@drawable/icon_grandma"/>
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
@@ -181,7 +181,7 @@
                     android:layout_height="0dp"
                     android:layout_weight="0.4"
                     android:id="@+id/img_set_4"
-                    android:src="@drawable/img_grandfa_only"/>
+                    android:src="@drawable/icon_grandfa"/>
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
@@ -235,7 +235,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="0.4"
                 android:id="@+id/img_set_5_big"
-                android:src="@drawable/img_grandma_only"/>
+                android:src="@drawable/icon_grandma"/>
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
