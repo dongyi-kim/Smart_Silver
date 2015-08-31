@@ -99,8 +99,10 @@ public class ActStep0204 extends StageActivity {
             }
 
             frameNumber[i].setVisibility(View.VISIBLE);
+            imgNumberField[i].setVisibility(View.GONE);
             if(iNumber == -1){
                 txtNumber[i].setText("");
+                imgNumberField[i].setVisibility(View.VISIBLE);
                 if(i > 0 && i < 3) iAnswerSign = dataSet.iOperator[i - 1];
             }
             else{

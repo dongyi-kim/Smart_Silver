@@ -8,28 +8,10 @@
         android:orientation="vertical"
         android:padding="@dimen/wp5"
         android:gravity="center_horizontal">
-        <ui.WhiteChalkFrameLayout
-            android:layout_width="@dimen/wp90"
-            android:layout_height="@dimen/wp25">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_centerInParent="true"
-                    android:gravity="center"
-                    android:textAlignment="center"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:textSize="@dimen/wp10"
-                    android:textStyle="bold"
-                    android:text="스탭 1-2"/>
-            </RelativeLayout>
 
-        </ui.WhiteChalkFrameLayout>
         <ui.ChalkFrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <LinearLayout
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
@@ -43,20 +25,17 @@
                     android:textColor="#FFFFFF"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txt_discription"
-                    android:text="아래에 나타난 그림이\n총 몇개 일까요?"
-                    />
-
+                    android:id="@+id/txt_description"
+                    android:text="아래에 나타난 그림이\n총 몇개 일까요?" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/wp70"
+                    android:layout_height="@dimen/wp50"
                     android:orientation="vertical"
                     android:id="@+id/drawfield"
                     android:layout_gravity="center"
                     android:gravity="center">
-
-                    <include layout="@layout/view_round_button_layout"
+                    <include layout="@layout/view_horizeontal_image_button_layout"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
@@ -64,48 +43,24 @@
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:layout_marginTop="5sp"/>
-
-                    <include layout="@layout/view_round_button_layout"
+                    <include layout="@layout/view_horizeontal_image_button_layout"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:id="@+id/drawfield_row_2"/>
-
-                    <include layout="@layout/view_round_button_layout"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:id="@+id/drawfield_row_3"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:layout_marginTop="5sp"/>
-
-                    <include layout="@layout/view_round_button_layout"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:id="@+id/drawfield_row_4"/>
                 </LinearLayout>
-
             </LinearLayout>
-
-
-
         </ui.ChalkFrameLayout>
-
-
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wp30">
+            android:layout_height="@dimen/wp25">
             <Button
                 android:layout_weight="1"
-                android:textSize="@dimen/wp15"
+                android:textSize="@dimen/wp12"
                 android:textStyle="bold"
                 android:layout_margin="10sp"
                 android:layout_width="0dp"
@@ -115,7 +70,7 @@
 
             <Button
                 android:layout_weight="1"
-                android:textSize="@dimen/wp15"
+                android:textSize="@dimen/wp12"
                 android:textStyle="bold"
                 android:layout_margin="10sp"
                 android:layout_width="0dp"
@@ -125,7 +80,7 @@
 
             <Button
                 android:layout_weight="1"
-                android:textSize="@dimen/wp15"
+                android:textSize="@dimen/wp12"
                 android:textStyle="bold"
                 android:layout_margin="10sp"
                 android:layout_width="0dp"

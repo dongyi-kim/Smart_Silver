@@ -3,6 +3,7 @@ package src.activities.Step01;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
@@ -23,39 +24,54 @@ public class ActStep0103 extends StageActivity {
     public static final int MAX_ROW_NUMBER = 2;
     public static final int MAX_COLUMN_NUMBER = 2;
 
-    private FrameLayout frameGrid[][] = new FrameLayout[2][2];
-    public ImageButton ibtnNumber[][] = new ImageButton[MAX_ROW_NUMBER][MAX_COLUMN_NUMBER];
-    private TextView txtNumber[][] = new TextView[MAX_ROW_NUMBER][MAX_COLUMN_NUMBER];
-    private TextView txtDiscription;
+    public static final int iSampleCount[] = {2, 3, 2, 3, 3};
+    public static final int iBaseNumber[] = {1, 1, 10, 10, 100};
+    public static final int iRandomRange[] = {5, 9, 30, 90, 200};
 
-    private boolean isSelected[][] = new boolean[MAX_ROW_NUMBER][MAX_COLUMN_NUMBER];
-    public final int iBtnValue[][] = new int[MAX_ROW_NUMBER][MAX_COLUMN_NUMBER];
-    private int iStage = 0;
+    private LinearLayout linearGrid[][] = new LinearLayout[MAX_ROW_NUMBER][MAX_COLUMN_NUMBER];
+    public ImageButton ibtnNumber[][] = new ImageButton[MAX_ROW_NUMBER][MAX_COLUMN_NUMBER];
+    public TextView txtNumber[][] = new TextView[MAX_ROW_NUMBER][MAX_COLUMN_NUMBER];
+    private TextView txtDescription;
+
+    private View emptyWidth[][] = new View[MAX_ROW_NUMBER][MAX_COLUMN_NUMBER];
+    private View emptyHeight[][] = new View[MAX_ROW_NUMBER][MAX_COLUMN_NUMBER];
+
+    public static final int iWidthBase[] = {5, 10};
+    public static final int iWidthRange[] = {10, 10};
+
     private int iRetryCount = 0;
     public boolean isRight = false;
+    public boolean bAnswerIsOdd = true;
 
-    public Step0103NumberSet numberSet = new Step0103NumberSet();
     private Random rand = new Random();
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_01_3);
 
-        frameGrid[0][0] = (FrameLayout)findViewById(R.id.frame_grid_1_1);
-        frameGrid[0][1] = (FrameLayout)findViewById(R.id.frame_grid_1_2);
-        frameGrid[1][0] = (FrameLayout)findViewById(R.id.frame_grid_2_1);
-        frameGrid[1][1] = (FrameLayout)findViewById(R.id.frame_grid_2_2);
-        ibtnNumber[0][0] = (ImageButton)findViewById(R.id.btn_grid_1_1);
-        ibtnNumber[0][1] = (ImageButton)findViewById(R.id.btn_grid_1_2);
-        ibtnNumber[1][0] = (ImageButton)findViewById(R.id.btn_grid_2_1);
-        ibtnNumber[1][1] = (ImageButton)findViewById(R.id.btn_grid_2_2);
+        linearGrid[0][0] = (LinearLayout)findViewById(R.id.linear_grid_1_1);
+        linearGrid[0][1] = (LinearLayout)findViewById(R.id.linear_grid_1_2);
+        linearGrid[1][0] = (LinearLayout)findViewById(R.id.linear_grid_2_1);
+        linearGrid[1][1] = (LinearLayout)findViewById(R.id.linear_grid_2_2);
+        ibtnNumber[0][0] = (ImageButton)findViewById(R.id.ibtn_grid_1_1);
+        ibtnNumber[0][1] = (ImageButton)findViewById(R.id.ibtn_grid_1_2);
+        ibtnNumber[1][0] = (ImageButton)findViewById(R.id.ibtn_grid_2_1);
+        ibtnNumber[1][1] = (ImageButton)findViewById(R.id.ibtn_grid_2_2);
         txtNumber[0][0] = (TextView)findViewById(R.id.txt_grid_1_1);
         txtNumber[0][1] = (TextView)findViewById(R.id.txt_grid_1_2);
         txtNumber[1][0] = (TextView)findViewById(R.id.txt_grid_2_1);
         txtNumber[1][1] = (TextView)findViewById(R.id.txt_grid_2_2);
-        txtDiscription = (TextView)findViewById(R.id.txt_discription);
+        txtDescription = (TextView)findViewById(R.id.txt_description);
+
+        emptyWidth[0][0] = (View)findViewById(R.id.empty_left_grid_1_1);
+        emptyWidth[0][1] = (View)findViewById(R.id.empty_left_grid_1_2);
+        emptyWidth[1][0] = (View)findViewById(R.id.empty_left_grid_2_1);
+        emptyWidth[1][1] = (View)findViewById(R.id.empty_left_grid_2_2);
+        emptyHeight[0][0] = (View)findViewById(R.id.empty_upper_grid_1_1);
+        emptyHeight[0][1] = (View)findViewById(R.id.empty_upper_grid_1_2);
+        emptyHeight[1][0] = (View)findViewById(R.id.empty_upper_grid_2_1);
+        emptyHeight[1][1] = (View)findViewById(R.id.empty_upper_grid_2_2);
 
         //button listener
         for(int i = 0; i < MAX_ROW_NUMBER; i++)
@@ -70,8 +86,9 @@ public class ActStep0103 extends StageActivity {
                                     r = ii; c = jj; break;
                                 }
 
-                        if(Integer.parseInt(txtNumber[r][c].getText().toString()) % 2 == (numberSet.isOdd? 1 : 0)) isRight = true;
+                        if((Integer.parseInt(txtNumber[r][c].getText().toString()) % 2) == (bAnswerIsOdd? 1 : 0)) isRight = true;
                         else isRight = false;
+
                         checkAnswer();
                     }
                 });
@@ -82,47 +99,60 @@ public class ActStep0103 extends StageActivity {
 
 
     public void setQuestion(boolean isRetry, Object object){
-        int iRandomSeed = 2 * iStage + rand.nextInt(2);
-        numberSet.setData(iRandomSeed);
+        bAnswerIsOdd = (rand.nextInt(2) == 0 ? false : true);
+        txtDescription.setText(bAnswerIsOdd? "다음 중 홀수를 찾아 누르세요." : "다음 중 짝수를 찾아 누르세요.");
 
-        txtDiscription.setText(numberSet.isOdd? "다음 중 홀수를 찾아 누르세요." : "다음 중 짝수를 찾아 누르세요.");
-
-        //delete all
-        for(int i = 0; i < MAX_ROW_NUMBER; i++)
+        int iOddCount = 0, iEvenCount = 0;
+        for(int i = 0; i < MAX_ROW_NUMBER; i++){
             for(int j = 0; j < MAX_COLUMN_NUMBER; j++){
-                ibtnNumber[i][j].setVisibility(View.INVISIBLE);
-                txtNumber[i][j].setVisibility(View.INVISIBLE);
-                isSelected[i][j] = false;
+                if(iOddCount + iEvenCount >= iSampleCount[iStage - 1]){
+                    linearGrid[i][j].setVisibility(View.GONE);
+                    continue;
+                }
+
+                int iRemainCount = MAX_ROW_NUMBER * MAX_COLUMN_NUMBER - (i * MAX_COLUMN_NUMBER + j);
+                if(iOddCount + iEvenCount + iRemainCount <= iSampleCount[iStage - 1] || rand.nextInt(1) == 1){
+                    boolean bOddPossible = true, bEvenPossible = true;
+
+                    if(iOddCount + iEvenCount == iSampleCount[iStage - 1] - 1){
+                        if(bAnswerIsOdd && iOddCount== 0) bEvenPossible = false;
+                        if(!bAnswerIsOdd && iEvenCount == 0) bOddPossible = false;
+                    }
+                    if(bAnswerIsOdd && iOddCount >= 1) bOddPossible = false;
+                    else if(!bAnswerIsOdd && iEvenCount >= 1) bEvenPossible = false;
+
+                    int iRandomNumber;
+                    boolean bIsOdd;
+                    while(true) {
+                        iRandomNumber = iBaseNumber[iStage - 1] + rand.nextInt(iRandomRange[iStage - 1]);
+
+                        bIsOdd = iRandomNumber % 2 == 1 ? true : false;
+                        if(bIsOdd && bOddPossible) break;
+                        if(!bIsOdd && bEvenPossible) break;
+                    }
+
+                    if(bIsOdd) iOddCount++;
+                    else iEvenCount++;
+
+                    txtNumber[i][j].setText("" + iRandomNumber);
+                    linearGrid[i][j].setVisibility(View.VISIBLE);
+                }
+                else linearGrid[i][j].setVisibility(View.GONE);
             }
+        }
 
-        //set button's position
-        int iHeightMarginSum = (R.dimen.wp5) / 20000000;
-        int iWidthMarginSum = (R.dimen.wp5) / 20000000;
-
-        for(int i = 0; i < MAX_ROW_NUMBER; i++)
+        for(int i = 0; i < MAX_ROW_NUMBER; i++){
             for(int j = 0; j < MAX_COLUMN_NUMBER; j++){
-                int t = rand.nextInt(iHeightMarginSum) + 1;
-                int b = iHeightMarginSum - t;
-                int l = rand.nextInt(iWidthMarginSum) + 1;
-                int r = iHeightMarginSum - l;
+                int iWidthWeight = iWidthBase[j] + rand.nextInt(iWidthRange[j]);
+                LinearLayout.LayoutParams emptyParam = (LinearLayout.LayoutParams) emptyWidth[i][j].getLayoutParams();
+                emptyParam.weight = iWidthWeight / 100f;
+                emptyWidth[i][j].setLayoutParams(emptyParam);
 
-                LinearLayout.LayoutParams gridParams = ( LinearLayout.LayoutParams)frameGrid[i][j].getLayoutParams();
-                gridParams.setMargins(l, t, r, b);
-                frameGrid[i][j].setLayoutParams(gridParams);
+                int iHeightWeight = 5 + rand.nextInt(20);
+                emptyParam = (LinearLayout.LayoutParams) emptyHeight[i][j].getLayoutParams();
+                emptyParam.weight = iHeightWeight / 100f;
+                emptyHeight[i][j].setLayoutParams(emptyParam);
             }
-
-        // draw buttons
-        int iSelectCount = 0, iNumCount = numberSet.iNumCount;
-        while(iSelectCount < iNumCount){
-            int r = rand.nextInt(2), c = rand.nextInt(2);
-            if(isSelected[r][c]) continue;
-
-            isSelected[r][c] = true;
-            iBtnValue[r][c] = numberSet.arrNumSet[iSelectCount];
-            txtNumber[r][c].setText(Integer.toString(numberSet.arrNumSet[iSelectCount++]));
-
-            ibtnNumber[r][c].setVisibility(View.VISIBLE);
-            txtNumber[r][c].setVisibility(View.VISIBLE);
         }
 
         StartRecording();
@@ -140,59 +170,17 @@ public class ActStep0103 extends StageActivity {
                 if(isRight || iRetryCount > 1){
                     iStage++;
                     iRetryCount = 0;
-                    if(iStage >= 4) goNext();
-                    else {
-                        iRetryCount = 0;
-                        setQuestion(false);
-                    }
+
+                    if(iStage > NUM_OF_STAGE) goNext();
+                    else setQuestion(false);
                 }
-                else{
-                    iRetryCount++;
-                }
+                else iRetryCount++;
             }
         });
     }
 
-
     public void goNext(Object object){
         Intent intent = new Intent(this, ActStep0104.class);
         startActivity(intent);
-    }
-
-    public class Step0103NumberSet {
-        private static final int MAX_SET_NUMBER = 8;
-
-    /*If file I/O
-    private static final boolean arrIsOdd[] = new boolean[MAX_SET_NUMBER];
-    private static final int arrNumCount[] = new int[MAX_SET_NUMBER];
-    private static final int[] arrNumSetList[] = new int[MAX_SET_NUMBER][];
-    */
-
-        //else
-        private final boolean arrIsOdd[] = {true, true, false, false, true, true, true, false};
-        private final int arrNumCount[] = {4, 2, 3, 2, 2, 3, 2, 3};
-        private final int[] arrNumSetList[] = {{1, 2, 6, 8},
-                {3, 2},
-                {6, 7, 9},
-                {39, 14},
-                {58, 97},
-                {48, 77, 52},
-                {121, 150},
-                {169, 126, 213}};
-
-        public boolean isOdd;
-        public int iNumCount;
-        public int arrNumSet[] = new int[4];
-
-        public Step0103NumberSet(){
-            //If file I/O, read file and set data
-        }
-
-        public void setData(int iSeed){
-            isOdd = arrIsOdd[iSeed];
-            iNumCount = arrNumCount[iSeed];
-            for(int i = 0; i < iNumCount; i++)
-                arrNumSet[i] = arrNumSetList[iSeed][i];
-        }
     }
 }

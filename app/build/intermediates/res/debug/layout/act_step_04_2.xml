@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/img_chalkboard_2"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <LinearLayout
@@ -14,7 +15,8 @@
             android:layout_height="0dp"
             android:text=" 다음 중 곱하기가 그림과 알맞게 표시된 것을 누르세요!"
             android:id="@+id/txt_discription"
-            android:textSize="@dimen/wp4"
+            android:textSize="@dimen/wp6"
+            android:textColor="#FFFFFF"
             android:gravity="center"
             android:layout_marginTop="20sp" />
 
@@ -49,6 +51,7 @@
                         android:layout_height="match_parent"
                         android:src="@drawable/txt_field_0401"
                         android:id="@+id/ibtn_answer_1"
+                        android:scaleType="fitCenter"
                         android:background="@null"/>
                     <TextView
                         android:layout_width="match_parent"
@@ -83,6 +86,7 @@
                         android:layout_height="match_parent"
                         android:src="@drawable/txt_field_0401"
                         android:id="@+id/ibtn_answer_2"
+                        android:scaleType="fitCenter"
                         android:background="@null"/>
                     <TextView
                         android:layout_width="match_parent"

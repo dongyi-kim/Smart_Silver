@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="@drawable/img_chalkboard_2"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -16,7 +17,8 @@
             android:layout_height="0dp"
             android:text=" 노인학교에서 가을축제 준비를 하기 위해 동대문에 갔습니다.\n냅킨 한 묶음의 가격은 얼마입니까?"
             android:id="@+id/txt_description"
-            android:textSize="@dimen/wp7"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/wp6"
             android:gravity="center"/>
 
         <FrameLayout
@@ -31,6 +33,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
                 android:text="3묶음 300원\n"
                 android:layout_gravity="center"
                 android:textSize="@dimen/wp6"

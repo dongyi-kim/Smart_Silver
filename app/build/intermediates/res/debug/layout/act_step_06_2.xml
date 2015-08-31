@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="@drawable/img_chalkboard_2"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -11,6 +12,7 @@
 
         <TextView
             android:id="@+id/txt_discription"
+            android:textColor="#FFFFFF"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="20sp"
@@ -37,7 +39,7 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.06"></LinearLayout>
+                android:layout_weight="0.1"></LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"

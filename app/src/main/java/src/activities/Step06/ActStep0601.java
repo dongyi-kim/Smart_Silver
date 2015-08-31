@@ -68,6 +68,8 @@ public class ActStep0601 extends StageActivity {
 
         btnAnswer[0].setText(dataSet.txtBtn1);
         btnAnswer[1].setText(dataSet.txtBtn2);
+
+        StartRecording();
     }
 
     @Override

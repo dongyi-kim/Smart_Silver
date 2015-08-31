@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/img_chalkboard_2"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <LinearLayout
@@ -14,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:text=" 아래 그림은 천안에서 포항으로 가는 고속버스 운행시간입니다.\n조옥자씨는 포항에 있는 언니네 가려고 합니다.\n버스 요금은 얼마인지 해당 요금을 누르세요!"
+            android:textColor="#FFFFFF"
             android:id="@+id/txt_description"
             android:textSize="@dimen/wp5"
             android:gravity="center"/>
