@@ -4,26 +4,23 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="1">
+        android:layout_centerInParent="true"
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
+        android:orientation="vertical">
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.84"
+            android:layout_height="@dimen/wp85"
             android:layout_gravity="center">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:weightSum="0.84">
+                android:orientation="vertical">
                 <TextView
-                    android:layout_weight=".15"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="@dimen/wp20"
                     android:textColor="#FFFFFF"
                     android:text=" 평생학교 행복반에서 간식으로 딸기를 두 개씩 나누어 먹으려고 합니다.\n몇 명이 먹을 수 있습니까? 손가락으로 두 개씩 묶어보세요!"
                     android:id="@+id/txt_description"
@@ -32,10 +29,10 @@
                     android:layout_marginTop="20sp" />
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.6"
+                    android:layout_height="@dimen/wp60"
                     android:layout_gravity="center"
-                    android:scaleType="fitCenter"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/frame_cell_white"
                     android:src="@drawable/strawberry_14"
                     android:id="@+id/img_many_fruits"/>
             </LinearLayout>
@@ -52,9 +49,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.15"
-            android:weightSum="1"
+            android:layout_height="@dimen/wp15"
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="horizontal">
@@ -96,4 +91,12 @@
     </LinearLayout>
 
 
+    <TextView
+        android:layout_width="@dimen/wp20"
+        android:layout_height="@dimen/wp10"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="5 - 2"
+        android:background="@drawable/img_memo_sticker"
+        android:textSize="@dimen/wp5"/>
 </RelativeLayout>
