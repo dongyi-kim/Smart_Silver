@@ -1335,6 +1335,7 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:weightSum="1"
+                android:visibility="gone"
                 android:layout_gravity="center"
                 android:gravity="center">
                 <FrameLayout
