@@ -92,7 +92,7 @@ public class ActStep0304 extends StageActivity {
 
         int iGapMult = dataSet.iAnswer <= 10 ? 1 : (dataSet.iAnswer % 10 == 0 ? 10 : 1);
         int iFirstAnsNumber = dataSet.iAnswer - rand.nextInt(3) * iGapMult;
-        if(iFirstAnsNumber <= 0) iFirstAnsNumber = 1 * iGapMult;
+        if(iFirstAnsNumber <= 0) iFirstAnsNumber = dataSet.iAnswer - (dataSet.iAnswer > 2 * iGapMult ? 2 : 1) * iGapMult;
         for(int i = 0; i < 3; i++){
             btnAnswer[i].setText("" + iFirstAnsNumber);
             iFirstAnsNumber += iGapMult;
