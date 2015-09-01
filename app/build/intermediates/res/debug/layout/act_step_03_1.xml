@@ -53,20 +53,21 @@
                         android:background="@null"
                         android:scaleType="fitCenter"
                         android:src="@drawable/process_to_next" />
+
                     <TextView
                         android:id="@+id/txt_process_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/wp2"
                         android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/wp2"
                         android:text="+1"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/wp5"/>
+                        android:textSize="@dimen/wp5"
+                        android:textStyle="bold" />
                 </FrameLayout>
 
                 <TextView
                     android:layout_width="@dimen/wp5"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
 
                 <FrameLayout
                     android:id="@+id/frame_process_2"
@@ -82,6 +83,7 @@
                         android:background="@null"
                         android:scaleType="fitCenter"
                         android:src="@drawable/process_to_next" />
+
                     <TextView
                         android:id="@+id/txt_process_2"
                         android:layout_width="wrap_content"
@@ -89,13 +91,13 @@
                         android:layout_gravity="center"
                         android:layout_marginBottom="@dimen/wp2"
                         android:text="+2"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/wp5"/>
+                        android:textSize="@dimen/wp5"
+                        android:textStyle="bold" />
                 </FrameLayout>
 
                 <TextView
                     android:layout_width="@dimen/wp5"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
 
                 <FrameLayout
                     android:id="@+id/frame_process_3"
@@ -116,11 +118,11 @@
                         android:id="@+id/txt_process_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/wp2"
                         android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/wp2"
                         android:text="+3"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/wp5"/>
+                        android:textSize="@dimen/wp5"
+                        android:textStyle="bold" />
                 </FrameLayout>
             </LinearLayout>
 
@@ -267,8 +269,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight=".25"
                 android:text="1"
-                android:textStyle="bold"
-                android:textSize="@dimen/wp5" />
+                android:textSize="@dimen/wp5"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btn_answer_2"
@@ -276,8 +278,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight=".25"
                 android:text="2"
-                android:textStyle="bold"
-                android:textSize="@dimen/wp5"/>
+                android:textSize="@dimen/wp5"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btn_answer_3"
@@ -285,8 +287,18 @@
                 android:layout_height="match_parent"
                 android:layout_weight=".25"
                 android:text="3"
-                android:textStyle="bold"
-                android:textSize="@dimen/wp5"/>
+                android:textSize="@dimen/wp5"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
+
+
+    <TextView
+        android:layout_width="@dimen/wp20"
+        android:layout_height="@dimen/wp10"
+        android:layout_gravity="center"
+        android:background="@drawable/img_memo_sticker"
+        android:gravity="center"
+        android:text="3 - 1"
+        android:textSize="@dimen/wp5" />
 </RelativeLayout><!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_03_1.xml -->
