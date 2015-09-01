@@ -4,27 +4,26 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="1">
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
 
         <TextView
-            android:layout_weight=".15"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/wp15"
             android:text=" 다음 중 곱하기가 그림과 알맞게 표시된 것을 누르세요!"
             android:id="@+id/txt_discription"
             android:textSize="@dimen/wp6"
+            android:textStyle="bold"
             android:textColor="#FFFFFF"
-            android:gravity="center"
-            android:layout_marginTop="20sp" />
+            android:gravity="center"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/wp80"
+            android:background="@drawable/frame_cell_white"
             android:orientation="horizontal"
-            android:layout_weight="0.7"
             android:weightSum="1"
             android:layout_gravity="center"
             android:gravity="center">
@@ -104,4 +103,14 @@
 
     </LinearLayout>
 
+
+
+    <TextView
+        android:layout_width="@dimen/wp20"
+        android:layout_height="@dimen/wp10"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="4 - 2"
+        android:background="@drawable/img_memo_sticker"
+        android:textSize="@dimen/wp5"/>
 </RelativeLayout>

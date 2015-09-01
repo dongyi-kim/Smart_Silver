@@ -184,8 +184,8 @@ public class ActStep0102 extends StageActivity {
                 arrSideRatio6, arrSideRatio7, arrSideRatio8, arrSideRatio9, arrSideRatio10};
 
         private final int arrMarginMagnif[][] = {{}, {}, {10}, {8}, {8}, {5, 6}, {5, 8, 2}, {8, 2}, {2, 4}, {2}, {2}};
-        private final int arrIconSource[] = {R.drawable.icon_count_eggplant, R.drawable.icon_count_green_circle, R.drawable.icon_count_pear,
-                R.drawable.icon_count_mandarin, R.drawable.icon_count_octopus};
+        private final int arrIconSource[] = {R.drawable.icon_single_eggplant, R.drawable.icon_single_green_circle, R.drawable.icon_single_pear,
+                R.drawable.icon_single_mandarin, R.drawable.icon_single_octopus};
 
         public int iAnswer;
         public int iLineCount[] = new int[2];

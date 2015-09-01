@@ -1,93 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/img_wall">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_chalkboard_2">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="@dimen/wp5"
-        android:gravity="center_horizontal">
+        android:layout_centerInParent="true"
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <ui.ChalkFrameLayout
+
+        <TextView
+            android:id="@+id/txt_description"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_margin="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <TextView
-                    android:gravity="center"
-                    android:textSize="@dimen/wp8"
-                    android:textColor="#FFFFFF"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_description"
-                    android:text="아래에 나타난 그림이\n총 몇개 일까요?" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/wp50"
-                    android:orientation="vertical"
-                    android:id="@+id/drawfield"
-                    android:layout_gravity="center"
-                    android:gravity="center">
-                    <include layout="@layout/view_horizeontal_image_button_layout"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:id="@+id/drawfield_row_1"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:layout_marginTop="5sp"/>
-                    <include layout="@layout/view_horizeontal_image_button_layout"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:id="@+id/drawfield_row_2"/>
-                </LinearLayout>
-            </LinearLayout>
-        </ui.ChalkFrameLayout>
+            android:layout_height="@dimen/wp15"
+            android:gravity="center"
+            android:text="아래에 나타난 그림이 총 몇개 일까요?"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/wp8"
+            android:textStyle="bold" />
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:id="@+id/drawfield"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wp25">
-            <Button
+            android:layout_height="@dimen/wp60"
+            android:layout_gravity="center"
+            android:background="@drawable/frame_cell_white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/drawfield_row_1"
+                layout="@layout/view_horizeontal_image_button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5sp"
                 android:layout_weight="1"
-                android:textSize="@dimen/wp12"
-                android:textStyle="bold"
-                android:layout_margin="10sp"
+                android:gravity="center" />
+
+            <include
+                android:id="@+id/drawfield_row_2"
+                layout="@layout/view_horizeontal_image_button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wp20"
+            android:layout_marginTop="@dimen/wp5"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_answer_1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
                 android:text="1"
-                android:id="@+id/btn_answer_1"/>
+                android:textSize="@dimen/wp12"
+                android:textStyle="bold" />
 
             <Button
-                android:layout_weight="1"
-                android:textSize="@dimen/wp12"
-                android:textStyle="bold"
-                android:layout_margin="10sp"
+                android:id="@+id/btn_answer_2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
                 android:text="2"
-                android:id="@+id/btn_answer_2" />
+                android:textSize="@dimen/wp12"
+                android:textStyle="bold" />
 
             <Button
-                android:layout_weight="1"
-                android:textSize="@dimen/wp12"
-                android:textStyle="bold"
-                android:layout_margin="10sp"
+                android:id="@+id/btn_answer_3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
                 android:text="3"
-                android:id="@+id/btn_answer_3" />
+                android:textSize="@dimen/wp12"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 
+    <TextView
+        android:layout_width="@dimen/wp20"
+        android:layout_height="@dimen/wp10"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="1 - 2"
+        android:background="@drawable/img_memo_sticker"
+        android:textSize="@dimen/wp5"/>
 </RelativeLayout>

@@ -5,10 +5,10 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
+        android:layout_centerInParent="true"
         android:orientation="vertical"
-
         android:weightSum="1">
 
         <TextView
@@ -618,4 +618,13 @@
 
         </LinearLayout>
     </LinearLayout>
+
+    <TextView
+        android:layout_width="@dimen/wp20"
+        android:layout_height="@dimen/wp10"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="6 - 3"
+        android:background="@drawable/img_memo_sticker"
+        android:textSize="@dimen/wp5"/>
 </RelativeLayout><!-- From: file:/C:/Users/jhobo_000/fuck/Smart_Silver/app/src/main/res/layout/act_step_06_3.xml -->

@@ -1,291 +1,304 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_chalkboard_2">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
         <TextView
-            android:layout_weight=".15"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="다음 네모 안에 알맞은 수를 찾아 순서대로 누르세요."
             android:id="@+id/text_discription"
-            android:textSize="@dimen/wp4"
-            android:gravity="center"/>
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wp10"
+            android:gravity="center"
+            android:text="다음 네모 안에 알맞은 수를 찾아 순서대로 누르세요."
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/wp6"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".7"
-            android:orientation="horizontal"
+            android:layout_height="@dimen/wp70"
             android:layout_gravity="center"
+            android:layout_margin="@dimen/wp5"
+            android:background="@drawable/frame_cell_white"
             android:gravity="center"
-            android:weightSum="1">
-        <LinearLayout
-            android:layout_weight=".9"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:id="@+id/drawfield"
-            android:background="@drawable/drawfield_01_04"
-
-            android:layout_gravity="center"
-            android:gravity="center"
             android:weightSum="1">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:orientation="horizontal"
-                android:layout_weight=".4"
-                android:weightSum="1"
+                android:layout_height="@dimen/wp25"
                 android:layout_gravity="center"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <FrameLayout
-                    android:layout_gravity="center"
-                    android:layout_width="0dp"
+                    android:id="@+id/frame_process_1"
+                    android:layout_width="@dimen/wp30"
                     android:layout_height="match_parent"
-                    android:layout_weight=".2"
-                    android:id="@+id/frame_process_1">
+                    android:layout_gravity="center">
+
                     <ImageView
+                        android:id="@+id/img_process_1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/process_to_next"
+                        android:layout_gravity="center"
                         android:background="@null"
                         android:scaleType="fitCenter"
-                        android:layout_gravity="center"
-                        android:id="@+id/img_process_1"/>
+                        android:src="@drawable/process_to_next" />
+
                     <TextView
+                        android:id="@+id/txt_process_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textSize="@dimen/wp3"
+                        android:layout_marginBottom="@dimen/wp2"
                         android:text="+1"
-                        android:id="@+id/txt_process_1">
-                    </TextView>
+                        android:textSize="@dimen/wp5"
+                        android:textStyle="bold" />
                 </FrameLayout>
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight=".05"/>
+                    android:layout_width="@dimen/wp5"
+                    android:layout_height="match_parent" />
 
                 <FrameLayout
-                    android:layout_gravity="center"
-                    android:layout_width="0dp"
+                    android:id="@+id/frame_process_2"
+                    android:layout_width="@dimen/wp30"
                     android:layout_height="match_parent"
-                    android:layout_weight=".2"
-                    android:id="@+id/frame_process_2">
+                    android:layout_gravity="center">
+
                     <ImageView
+                        android:id="@+id/img_process_2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/process_to_next"
+                        android:layout_gravity="center"
                         android:background="@null"
                         android:scaleType="fitCenter"
-                        android:layout_gravity="center"
-                        android:id="@+id/img_process_2"/>
+                        android:src="@drawable/process_to_next" />
+
                     <TextView
+                        android:id="@+id/txt_process_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textSize="@dimen/wp3"
+                        android:layout_marginBottom="@dimen/wp2"
                         android:text="+2"
-                        android:id="@+id/txt_process_2">
-                    </TextView>
+                        android:textSize="@dimen/wp5"
+                        android:textStyle="bold" />
                 </FrameLayout>
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight=".05"/>
+                    android:layout_width="@dimen/wp5"
+                    android:layout_height="match_parent" />
 
                 <FrameLayout
-                    android:layout_gravity="center"
-                    android:layout_width="0dp"
+                    android:id="@+id/frame_process_3"
+                    android:layout_width="@dimen/wp30"
                     android:layout_height="match_parent"
-                    android:layout_weight=".2"
-                    android:id="@+id/frame_process_3">
+                    android:layout_gravity="center">
+
                     <ImageView
+                        android:id="@+id/img_process_3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/process_to_next"
+                        android:layout_gravity="center"
                         android:background="@null"
                         android:scaleType="fitCenter"
-                        android:layout_gravity="center"
-                        android:id="@+id/img_process_3"/>
+                        android:src="@drawable/process_to_next" />
+
                     <TextView
+                        android:id="@+id/txt_process_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textSize="@dimen/wp3"
+                        android:layout_marginBottom="@dimen/wp2"
                         android:text="+3"
-                        android:id="@+id/txt_process_3">
-                    </TextView>
+                        android:textSize="@dimen/wp5"
+                        android:textStyle="bold" />
                 </FrameLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:orientation="horizontal"
-                android:layout_weight=".3"
+                android:layout_height="@dimen/wp10"
                 android:layout_gravity="center"
                 android:gravity="center"
+                android:orientation="horizontal"
                 android:weightSum="1">
 
                 <FrameLayout
+                    android:id="@+id/frame_answer_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
                     android:layout_gravity="top"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight=".15"
-                    android:id="@+id/frame_answer_1">
+                    android:layout_weight=".15">
+
                     <ImageView
+                        android:id="@+id/img_answer_sapace_1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/empty_square_space"
+                        android:layout_gravity="center"
                         android:background="@null"
                         android:scaleType="fitCenter"
-                        android:layout_gravity="center"
-                        android:id="@+id/img_answer_sapace_1"/>
+                        android:src="@drawable/empty_square_space" />
+
                     <TextView
+                        android:id="@+id/txt_answer_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textSize="@dimen/wp4"
                         android:text="1"
-                        android:id="@+id/txt_answer_1">
-                    </TextView>
+                        android:textSize="@dimen/wp5"
+                        android:textStyle="bold" />
                 </FrameLayout>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight=".08"/>
+                    android:layout_weight=".08" />
 
                 <FrameLayout
-                    android:layout_gravity="center"
+                    android:id="@+id/frame_answer_2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight=".15"
-                    android:id="@+id/frame_answer_2">
+                    android:layout_gravity="center"
+                    android:layout_weight=".15">
+
                     <ImageView
+                        android:id="@+id/img_answer_sapace_2"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/empty_square_space"
+                        android:layout_gravity="center"
                         android:background="@null"
                         android:scaleType="fitCenter"
-                        android:layout_gravity="center"
-                        android:id="@+id/img_answer_sapace_2"/>
+                        android:src="@drawable/empty_square_space" />
+
                     <TextView
+                        android:id="@+id/txt_answer_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textSize="@dimen/wp4"
-                        android:text="2"
-                        android:id="@+id/txt_answer_2">
-                    </TextView>
+                        android:text="1"
+                        android:textSize="@dimen/wp5"
+                        android:textStyle="bold" />
                 </FrameLayout>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight=".08"/>
+                    android:layout_weight=".08" />
 
                 <FrameLayout
-                    android:layout_gravity="center"
+                    android:id="@+id/frame_answer_3"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight=".15"
-                    android:id="@+id/frame_answer_3">
+                    android:layout_gravity="center"
+                    android:layout_weight=".15">
+
                     <ImageView
+                        android:id="@+id/img_answer_sapace_3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/empty_square_space"
+                        android:layout_gravity="center"
                         android:background="@null"
                         android:scaleType="fitCenter"
-                        android:layout_gravity="center"
-                        android:id="@+id/img_answer_sapace_3"/>
+                        android:src="@drawable/empty_square_space" />
+
                     <TextView
+                        android:id="@+id/txt_answer_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textSize="@dimen/wp4"
-                        android:text="3"
-                        android:id="@+id/txt_answer_3">
-                    </TextView>
+                        android:text="1"
+                        android:textSize="@dimen/wp5"
+                        android:textStyle="bold" />
                 </FrameLayout>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight=".08"/>
+                    android:layout_weight=".08" />
 
                 <FrameLayout
-                    android:layout_gravity="center"
+                    android:id="@+id/frame_answer_4"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight=".15"
-                    android:id="@+id/frame_answer_4">
+                    android:layout_gravity="center"
+                    android:layout_weight=".15">
+
                     <ImageView
+                        android:id="@+id/img_answer_sapace_4"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/empty_square_space"
+                        android:layout_gravity="center"
                         android:background="@null"
                         android:scaleType="fitCenter"
-                        android:layout_gravity="center"
-                        android:id="@+id/img_answer_sapace_4"/>
+                        android:src="@drawable/empty_square_space" />
+
                     <TextView
+                        android:id="@+id/txt_answer_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textSize="@dimen/wp4"
-                        android:text="4"
-                        android:id="@+id/txt_answer_4">
-                    </TextView>
+                        android:text="1"
+                        android:textSize="@dimen/wp5"
+                        android:textStyle="bold" />
                 </FrameLayout>
             </LinearLayout>
         </LinearLayout>
-        </LinearLayout>
 
         <LinearLayout
-            android:layout_weight=".15"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/wp10"
             android:layout_gravity="center"
             android:gravity="center"
+            android:orientation="horizontal"
             android:weightSum="1">
 
             <Button
-                android:layout_weight=".25"
-                android:textSize="@dimen/wp4"
+                android:id="@+id/btn_answer_1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_weight=".25"
                 android:text="1"
-                android:id="@+id/btn_answer_1"/>
+                android:textSize="@dimen/wp5"
+                android:textStyle="bold" />
 
             <Button
-                android:layout_weight=".25"
-                android:textSize="@dimen/wp4"
+                android:id="@+id/btn_answer_2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_weight=".25"
                 android:text="2"
-                android:id="@+id/btn_answer_2" />
+                android:textSize="@dimen/wp5"
+                android:textStyle="bold" />
 
             <Button
-                android:layout_weight=".25"
-                android:textSize="@dimen/wp4"
+                android:id="@+id/btn_answer_3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_weight=".25"
                 android:text="3"
-                android:id="@+id/btn_answer_3" />
+                android:textSize="@dimen/wp5"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 
 
+    <TextView
+        android:layout_width="@dimen/wp20"
+        android:layout_height="@dimen/wp10"
+        android:layout_gravity="center"
+        android:background="@drawable/img_memo_sticker"
+        android:gravity="center"
+        android:text="3 - 1"
+        android:textSize="@dimen/wp5" />
 </RelativeLayout>

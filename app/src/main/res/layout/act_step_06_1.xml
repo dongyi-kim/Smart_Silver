@@ -5,28 +5,27 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
         android:orientation="vertical"
-        android:weightSum="1">
+        android:gravity="center"
+        android:layout_centerInParent="true">
 
         <TextView
             android:id="@+id/txt_discription"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/wp20"
             android:textColor="#FFFFFF"
-            android:layout_marginTop="20sp"
-            android:layout_weight=".2"
             android:gravity="center"
             android:text="다음 자료는 1주일이 모두 며칠로 이루어져 있는지 나타내는 자료입니다.\n다음 자료에서 1주일은 며칠입니까? 단추를 누르세요!"
             android:textSize="@dimen/wp5" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".6"
+            android:layout_height="@dimen/wp75"
             android:gravity="center"
             android:orientation="horizontal"
+            android:background="@drawable/frame_cell_white"
             android:weightSum="1">
 
             <ImageView
@@ -92,4 +91,14 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+
+    <TextView
+        android:layout_width="@dimen/wp20"
+        android:layout_height="@dimen/wp10"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="6 - 1"
+        android:background="@drawable/img_memo_sticker"
+        android:textSize="@dimen/wp5"/>
 </RelativeLayout>
