@@ -2,6 +2,7 @@ package src.activities.Step03;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +10,8 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.Random;
 
@@ -21,81 +24,66 @@ import src.dialogs.DlgResultMark;
  * Created by Acka on 2015-04-13.
  */
 public class ActStep0305 extends StageActivity{
-    private TextView txtDiscription;
-    private LinearLayout arrLinearSet[] = new LinearLayout[5];
-    private FrameLayout arrFrameSet[] = new FrameLayout[5];
-    private ImageView arrImgSet[] = new ImageView[5];
-    private TextView arrTxtSet[] = new TextView[5];
-    private ImageView arrImgTxtSpace[] = new ImageView[5];
-    private ImageView arrImgSign[] = new ImageView[2];
-    private TextView arrMarginTxt[] = new TextView[4];
-    private Button arrBtnAnswer[] = new Button[3];
+    private TextView txtDescription;
+    private LinearLayout linearFrame[] = new LinearLayout[2];
+    private LinearLayout linearSpend1_2;
+    private ImageView imgPayMoney;
+    private ImageView imgSpendThing[] = new ImageView[2];
+    private Button btnAnswer[] = new Button[3];
+    private TextView txtSpendDescription1[] = new TextView[3];
+    private TextView txtSpendDescription2[] = new TextView[5];
 
     private int iRetryCount = 0;
     public boolean isRight = false;
 
-    public Step0305DataSet dataSet = new Step0305DataSet();
     private Random rand = new Random();
+    public Step0305DataSet dataSet = new Step0305DataSet();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_03_5);
 
-        txtDiscription = (TextView)findViewById(R.id.txt_discription);
-        arrLinearSet[0] = (LinearLayout)findViewById(R.id.linear_set_1);
-        arrLinearSet[1] = (LinearLayout)findViewById(R.id.linear_set_2);
-        arrLinearSet[2] = (LinearLayout)findViewById(R.id.linear_set_3);
-        arrLinearSet[3] = (LinearLayout)findViewById(R.id.linear_set_4);
-        arrLinearSet[4] = (LinearLayout)findViewById(R.id.linear_set_5_big);
-        arrFrameSet[0] = (FrameLayout)findViewById(R.id.frame_set_1);
-        arrFrameSet[1] = (FrameLayout)findViewById(R.id.frame_set_2);
-        arrFrameSet[2] = (FrameLayout)findViewById(R.id.frame_set_3);
-        arrFrameSet[3] = (FrameLayout)findViewById(R.id.frame_set_4);
-        arrFrameSet[4] = (FrameLayout)findViewById(R.id.frame_set_5_big);
-        arrImgSet[0] = (ImageView)findViewById(R.id.img_set_1);
-        arrImgSet[1] = (ImageView)findViewById(R.id.img_set_2);
-        arrImgSet[2] = (ImageView)findViewById(R.id.img_set_3);
-        arrImgSet[3] = (ImageView)findViewById(R.id.img_set_4);
-        arrImgSet[4] = (ImageView)findViewById(R.id.img_set_5_big);
-        arrTxtSet[0] = (TextView)findViewById(R.id.txt_set_1);
-        arrTxtSet[1] = (TextView)findViewById(R.id.txt_set_2);
-        arrTxtSet[2] = (TextView)findViewById(R.id.txt_set_3);
-        arrTxtSet[3] = (TextView)findViewById(R.id.txt_set_4);
-        arrTxtSet[4] = (TextView)findViewById(R.id.txt_set_5_long);
-        arrImgTxtSpace[0] = (ImageView)findViewById(R.id.img_txt_space_1);
-        arrImgTxtSpace[1] = (ImageView)findViewById(R.id.img_txt_space_2);
-        arrImgTxtSpace[2] = (ImageView)findViewById(R.id.img_txt_space_3);
-        arrImgTxtSpace[3] = (ImageView)findViewById(R.id.img_txt_space_4);
-        arrImgTxtSpace[4] = (ImageView)findViewById(R.id.img_txt_space_5);
-        arrImgSign[0] = (ImageView)findViewById(R.id.img_sign_1);
-        arrImgSign[1] = (ImageView)findViewById(R.id.img_sign_2);
-        arrMarginTxt[0] = (TextView)findViewById(R.id.txt_for_margin_1);
-        arrMarginTxt[1] = (TextView)findViewById(R.id.txt_for_margin_2);
-        arrMarginTxt[2] = (TextView)findViewById(R.id.txt_for_margin_3);
-        arrMarginTxt[3] = (TextView)findViewById(R.id.txt_for_margin_4);
-        arrBtnAnswer[0] = (Button)findViewById(R.id.btn_answer_1);
-        arrBtnAnswer[1] = (Button)findViewById(R.id.btn_answer_2);
-        arrBtnAnswer[2] = (Button)findViewById(R.id.btn_answer_3);
+        NUM_OF_STAGE = 4;
 
+        txtDescription = (TextView)findViewById(R.id.txt_description);
+        linearFrame[0] = (LinearLayout)findViewById(R.id.linear_frame_1_to_3);
+        linearFrame[1] = (LinearLayout)findViewById(R.id.linear_frame_4);
+        linearSpend1_2 = (LinearLayout)findViewById(R.id.linear_spend_1_2);
+        imgPayMoney = (ImageView)findViewById(R.id.img_pay_money);
+        imgSpendThing[0] = (ImageView)findViewById(R.id.img_spend_1);
+        imgSpendThing[1] = (ImageView)findViewById(R.id.img_spend_2);
+
+        txtSpendDescription1[0] = (TextView)findViewById(R.id.txt_pay_description);
+        txtSpendDescription1[1] = (TextView)findViewById(R.id.txt_spend_decription_1);
+        txtSpendDescription1[2] = (TextView)findViewById(R.id.txt_spend_decription_2);
+        txtSpendDescription2[0] = (TextView)findViewById(R.id.txt_spend_1);
+        txtSpendDescription2[1] = (TextView)findViewById(R.id.txt_spend_2);
+        txtSpendDescription2[2] = (TextView)findViewById(R.id.txt_spend_3);
+        txtSpendDescription2[3] = (TextView)findViewById(R.id.txt_spend_4);
+        txtSpendDescription2[4] = (TextView)findViewById(R.id.txt_spend_5);
+
+        btnAnswer[0] = (Button)findViewById(R.id.btn_answer_1);
+        btnAnswer[1] = (Button)findViewById(R.id.btn_answer_2);
+        btnAnswer[2] = (Button)findViewById(R.id.btn_answer_3);
+
+        linearFrame[1].setVisibility(View.GONE);
+        linearSpend1_2.setVisibility(View.GONE);
         //button listener
         for(int i = 0; i < 3; i++){
-            arrBtnAnswer[i].setOnClickListener(new View.OnClickListener() {
+            btnAnswer[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v){
-                    String sSelectAnswer = ((Button) v).getText().toString();
-                    int iSelectAnswer = 0, iLength = sSelectAnswer.length();
+                    String sSelect = ((Button)v).getText().toString();
+                    int iSelect = 0;
 
-                    for(int i = 0; i < iLength; i++){
-                        char cReadX = sSelectAnswer.charAt(i);
-                        if(cReadX == ',') continue;
-                        else if(cReadX < '0' || cReadX > '9') break;
-
-                        iSelectAnswer *= 10;
-                        iSelectAnswer += cReadX - '0';
+                    for(int i = 0; sSelect.charAt(i) != ','; i++){
+                        iSelect *= 10;
+                        iSelect += sSelect.charAt(i) - '0';
                     }
+                    iSelect *= 1000;
 
-                    if(iSelectAnswer == dataSet.iAnswer) isRight = true;
+                    if(iSelect== dataSet.iAnswer) isRight = true;
                     else isRight = false;
                     checkAnswer();
                 }
@@ -106,41 +94,45 @@ public class ActStep0305 extends StageActivity{
     }
 
     public void setQuestion(boolean isRetry, Object object){
-        int iRandomSeed = iStage;
-        dataSet.setData(iRandomSeed);
-
-        //set problem
-        txtDiscription.setText(dataSet.sDiscription);
-
-        for(int i = 0; i < 2; i++){
-            if(dataSet.iSignImage[i] == 0){
-                arrImgSign[i].setVisibility(View.GONE);
-                arrMarginTxt[i * 2].setVisibility(View.GONE);
-                arrMarginTxt[i * 2 + 1].setVisibility(View.GONE);
-            }
-            else{
-                arrImgSign[i].setVisibility(View.VISIBLE);
-                arrMarginTxt[i * 2].setVisibility(View.VISIBLE);
-                arrMarginTxt[i * 2 + 1].setVisibility(View.VISIBLE);
-                arrImgSign[i].setImageResource(dataSet.iSignImage[i]);
-            }
+        if(iStage == 1){
+            imgPayMoney.setImageResource(R.drawable.icon_paper_meoney_10000);
+            imgSpendThing[0].setImageResource(R.drawable.icon_coin_wallet);
         }
+        else if(iStage == 2){
+            imgPayMoney.setImageResource(R.drawable.icon_paper_meoney_15000);
+            imgSpendThing[0].setImageResource(R.drawable.icon_sundaeguk);
+            imgSpendThing[1].setImageResource(R.drawable.icon_sundaeguk);
+            linearSpend1_2.setVisibility(View.VISIBLE);
+        }
+        else if(iStage == 3){
+            imgSpendThing[0].setImageResource(R.drawable.icon_grandma);
+            imgSpendThing[1].setImageResource(R.drawable.icon_grandfa);
+            imgPayMoney.setImageResource(R.drawable.icon_paper_meoney_50000);
+        }
+        else if(iStage == NUM_OF_STAGE){
+            linearFrame[0].setVisibility(View.GONE);
+            linearFrame[1].setVisibility(View.VISIBLE);
+        }
+        dataSet.setData(iStage);
 
+        int iGapMult = (iStage <= 2 ? 1000 : 10000);
+        int iFirstAnsNumber = dataSet.iAnswer - rand.nextInt(3) * iGapMult;
+        if(iFirstAnsNumber <= 0) iFirstAnsNumber = dataSet.iAnswer - (dataSet.iAnswer > 2 * iGapMult ? 2 : 1) * iGapMult;
         for(int i = 0; i < 3; i++){
-            arrBtnAnswer[i].setText(dataSet.sExample[i]);
-
-            int j = 0, iLayoutCount = dataSet.iLayoutCount[i];
-            for(; j < iLayoutCount; j++){
-                arrLinearSet[i * 2 + j].setVisibility(View.VISIBLE);
-                arrImgSet[i * 2 + j].setImageResource(dataSet.iImageSet[i][j]);
-                arrTxtSet[i * 2 + j].setText(dataSet.sTextSet[i][j]);
-                arrImgTxtSpace[i * 2 + j].setImageResource(dataSet.iSpaceImage[i][j]);
-            }
-            for(; j < (i == 2? 1: 2); j++ ){
-                arrLinearSet[i * 2 + j].setVisibility(View.GONE);
-            }
+            btnAnswer[i].setText("" + iFirstAnsNumber / 1000 + ",000원");
+            iFirstAnsNumber += iGapMult;
         }
 
+        txtDescription.setText(dataSet.sDescription);
+
+        if(iStage == NUM_OF_STAGE){
+            for(int i = 0; i < 5; i++)
+                txtSpendDescription2[i].setText(dataSet.sMoneyDescription[i]);
+        }
+        else {
+            for (int i = 0; i < 3; i++)
+                txtSpendDescription1[i].setText(dataSet.sMoneyDescription[i]);
+        }
         StartRecording();
     }
 
@@ -155,7 +147,7 @@ public class ActStep0305 extends StageActivity{
             public void onDismiss(DialogInterface dialog) {
                 if(isRight || iRetryCount > 1){
                     iStage++;
-                    if(iStage >= NUM_OF_STAGE) goNext();
+                    if(iStage > NUM_OF_STAGE) goNext();
                     else {
                         iRetryCount = 0;
                         setQuestion(false);
@@ -173,65 +165,43 @@ public class ActStep0305 extends StageActivity{
         startActivity(intent);
     }
 
-    public class Step0305DataSet {
-        private final String arrDiscriptionList[] = {" 할머니와 할아버지가 마당놀이를 보러 가서 입장료로 50,000원을 냈습니다. 마당놀이 1인 입장료가 15,000원 일 때, 두 분이 받을 거스름돈은 얼마입니까? 아래 단추를 누르세요.",
-                " 할아버지가 할머니에게 동전지갑을 선물하려고 합니다. 10,000원을 내고 3,000원짜리 동전지갑을 샀습니다. 할아버지가 받아야 할 거스름돈은 얼마입니까?",
-                " 할머니와 할아버지는 6000원짜리 순댓국 2그릇을 먹었습니다.\n15,000원을 내고 받아야 할 거스름돈은 얼마입니까?",
-                " 할머니와 할아버지가 마당놀이를 보러 가서 입장료로 50,000원을 냈습니다. 마당놀이 1인 입장료가 15,000원 일 때, 두 분이 받을 거스름돈은 얼마입니까? 아래 단추를 누르세요.",
-                " 할아버지는 할머니와 같이 마당놀이를 함께 보고, 순댓국을 먹고, 할머니에게 동전지갑을 선물했습니다. 오늘 쓴 돈은 모두 얼마입니까?"};
-        private final int arrLayoutCountList[][] = {{1, 2, 0}, {1, 1, 0}, {1, 2, 0}, {1, 2, 0}, {2, 2, 1}};
-        private final int arrSignSetList[][] = {{0, 2}, {0, 2}, {0, 2}, {0, 2}, {1, 1}};
-        private final int arrSignImage[] = {R.drawable.sign_minus, R.drawable.sign_plus, 0};
-        private final int arrImageSetList[][][] = {{{R.drawable.img_korean_dollar_50000, 0}, {R.drawable.img_grandma_only, R.drawable.img_grandfa_only}, {0}},
-            {{R.drawable.img_korean_dollar_10000, 0}, {R.drawable.img_coin_wallet, 0}, {0}},
-            {{R.drawable.img_korean_dollar_15000, 0}, {R.drawable.img_grandma_only, R.drawable.img_grandfa_only}, {0}},
-            {{R.drawable.img_korean_dollar_50000, 0}, {R.drawable.img_grandma_only, R.drawable.img_grandfa_only}, {0}},
-            {{R.drawable.img_grandma_only, R.drawable.img_grandfa_only}, {R.drawable.img_korean_food, R.drawable.img_korean_food}, {R.drawable.img_coin_wallet}}};
-        private final int arrSpaceImageList[] = {R.drawable.empty_space_the_number_food, R.drawable.empty_space_how_much, R.drawable.empty_space_how_much_long};
-        private final int arrSpaceIndexList[][][] = {{{0, 0}, {1, 1}, {0}},
-                {{0, 0}, {2, 0}, {0}},
-                {{0, 0}, {1, 1}, {0}},
-                {{0, 0}, {1, 1}, {0}},
-                {{1, 1}, {1, 1}, {2}}};
-        private final String arrTextSetList[][][] = {{{"낸 돈 50,000원", ""}, {"입장권 15,000원", "입장권 15,000원"}, {""}},
-                {{"낸 돈 10,000원", ""}, {"동전지갑 3,000원", ""}, {""}},
-                {{"낸 돈 15,000원", ""}, {"순대국 6,000원", "순대국 6,000원"}, {""}},
-                {{"낸 돈 50,000원", ""}, {"입장권 15,000원", "입장권 15,000원"}, {""}},
-                {{"입장권 15,000원", "입장권 15,000원"}, {"순대국 6,000원", "순대국 6,000원"}, {"동전지갑 3,000원"}}};
-        private final int arrAnswerList[] = {20000, 7000, 3000, 20000, 45000};
-        private final String arrExampleSetList[][] = {{"15,000 원", "20,000 원", "30,000 원"},
-                {"2,000 원", "5,000 원", "7,000 원"},
-                {"1,500 원", "3,000 원", "5,000 원"},
-                {"15,000 원", "20,000 원", "30,000 원"},
-                {"35,000 원", "45,000 원", "50,000 원"},};
+    public class Step0305DataSet{
+        private final String arrDescription[] = {"할아버지가 할머니에게 동전지갑을 선물하려고 합니다.\n할아버지가 받아야 할 거스름돈은 얼마입니까?",
+                "할머니와 할아버지는 순댓국 2그릇을 먹었습니다.\n받아야 할 거스름돈은 얼마입니까?",
+                "할머니와 할아버지가 마당놀이를 보러 가서 입장료를 냈습니다.\n두 분이 받을 거스름돈은 얼마입니까?",
+                "할아버지는 할머니와 같이 마당놀이를 함께 보고, 순댓국을 먹고, 할머니에게 동전지갑을 선물했습니다. 오늘 쓴 돈은 모두 얼마입니까?"};
+        private final String arrMoneyDescription[][][] = {{{"낸 돈 10,000", "동전지갑 3,000"}, {"낸 돈 15,000", "순대국\n6,000"}, {"낸 돈 50,000", "입장권\n15,000"}, {"", "", ""}},
+        {{"낸 돈 10,000", "동전지갑 5,000"}, {"낸 돈 15,000", "순대국\n5,000"}, {"낸 돈 50,000", "입장권\n10,000"}, {"", "", ""}},
+        {{"낸 돈 10,000", "동전지갑 8,000"}, {"낸 돈 15,000", "순대국\n6,500"}, {"낸 돈 50,000", "입장권\n20,000"}, {"", "", ""}}};
+        private final int arrAnswer[][] = {{7000, 3000, 20000},
+                {5000, 5000, 30000},
+                {2000, 2000, 10000}};
+        private final int arrPayMoney[] = {10000, 15000, 50000};
 
-        public String sDiscription;
-        public int iLayoutCount[] = new int[3];
-        public int iSignImage[] = new int[2];
-        public int iImageSet[][] = new int[3][2];
-        public int iSpaceImage[][] = new int[3][2];
-        public String sTextSet[][] = new String[3][2];
+        private int arrSeed[] = new int[3];
+        public String sDescription;
+        public String sMoneyDescription[] = new String[5];
         public int iAnswer;
-        public String sExample[] = new String[3];
 
-        public void setData(int iSeed){
-            sDiscription = arrDiscriptionList[iSeed];
-            iAnswer = arrAnswerList[iSeed];
+        void setData(int iStage){
+            int iSeed = rand.nextInt(3);
 
-            iSignImage[0] = arrSignImage[arrSignSetList[iSeed][0]];
-            iSignImage[1] = arrSignImage[arrSignSetList[iSeed][1]];
+            sDescription = arrDescription[iStage - 1];
+            if(iStage == NUM_OF_STAGE){
+                iAnswer = 0;
+                for(int i = 0; i < 3; i++)
+                    iAnswer += arrPayMoney[i] - arrAnswer[arrSeed[i]][i];
 
-            for(int i = 0; i < 3; i++) {
-                iLayoutCount[i] = arrLayoutCountList[iSeed][i];
-                sExample[i] = arrExampleSetList[iSeed][i];
+                for(int i = 0; i < 5; i++)
+                    sMoneyDescription[i] = arrMoneyDescription[arrSeed[(5 - i) / 2]][(5 - i) / 2][1];
+            }
+            else{
+                sMoneyDescription[0] = arrMoneyDescription[iSeed][iStage - 1][0];
+                sMoneyDescription[1] = sMoneyDescription[2] = arrMoneyDescription[iSeed][iStage - 1][1];
+                iAnswer = arrAnswer[iSeed][iStage - 1];
 
-                for(int j = 0; j < iLayoutCount[i]; j++){
-                    iImageSet[i][j] = arrImageSetList[iSeed][i][j];
-                    iSpaceImage[i][j] = arrSpaceImageList[arrSpaceIndexList[iSeed][i][j]];
-                    sTextSet[i][j] = arrTextSetList[iSeed][i][j];
-                }
+                arrSeed[iStage - 1] = iSeed;
             }
         }
     }
-
 }

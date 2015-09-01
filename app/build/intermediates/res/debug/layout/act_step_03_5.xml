@@ -1,307 +1,319 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
-
-    <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:weightSum="1">
-
-    <TextView
-        android:layout_weight=".2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:text=" 할머니와 할아버지는 마당놀이를 보러 갔습니다. 할아버지는 입장료로 50,000원을 냈습니다. 마당놀이 1인 입장료는 15,000원 입니다. 받아야 할 거스름돈 만큼 오른쪽 아래 돈 모양을 누르세요."
-        android:id="@+id/txt_discription"
-        android:textSize="@dimen/wp3"
-        android:gravity="center"/>
+    android:background="@drawable/img_wall"
+    android:gravity="center">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.6"
-        android:orientation="horizontal"
-        android:weightSum="1"
-        android:layout_gravity="center"
-        android:gravity="center">
+        android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_weight="0.28">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:id="@+id/linear_set_1"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:weightSum="1">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.4"
-                    android:id="@+id/img_set_1"
-                    android:src="@drawable/img_grandma_only"/>
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.3"
-                    android:id="@+id/frame_set_1">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/empty_space_how_much"
-                        android:id="@+id/img_txt_space_1"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textSize="@dimen/wp3"
-                        android:id="@+id/txt_set_1"
-                        android:text="입장권\n15,000원"/>
-                </FrameLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:id="@+id/linear_set_2"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:weightSum="1">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.4"
-                    android:id="@+id/img_set_2"
-                    android:src="@drawable/img_grandfa_only"/>
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.3"
-                    android:id="@+id/frame_set_2">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/empty_space_how_much"
-                        android:id="@+id/img_txt_space_2"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textSize="@dimen/wp3"
-                        android:id="@+id/txt_set_2"
-                        android:text="입장권\n15,000원"/>
-                </FrameLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="0.01"
-            android:id="@+id/txt_for_margin_1"/>
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.05"
-            android:src="@drawable/sign_minus"
-            android:id="@+id/img_sign_1"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="0.01"
-            android:id="@+id/txt_for_margin_2"/>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_weight="0.28">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:id="@+id/linear_set_3"
-                android:weightSum="1">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.4"
-                    android:id="@+id/img_set_3"
-                    android:src="@drawable/img_grandma_only"/>
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.3"
-                    android:id="@+id/frame_set_3">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/empty_space_how_much"
-                        android:id="@+id/img_txt_space_3"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textSize="@dimen/wp3"
-                        android:id="@+id/txt_set_3"
-                        android:text="마당놀이 입장권 15,000원"/>
-                </FrameLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:id="@+id/linear_set_4"
-                android:weightSum="1">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.4"
-                    android:id="@+id/img_set_4"
-                    android:src="@drawable/img_grandfa_only"/>
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.3"
-                    android:id="@+id/frame_set_4">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/empty_space_how_much"
-                        android:id="@+id/img_txt_space_4"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:textSize="@dimen/wp3"
-                        android:id="@+id/txt_set_4"
-                        android:text="마당놀이 입장권 15,000원"/>
-                </FrameLayout>
-            </LinearLayout>
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="0.01"
-            android:id="@+id/txt_for_margin_3"/>
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0.05"
-            android:id="@+id/img_sign_2"
-            android:src="@drawable/sign_minus"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="0.01"
-            android:id="@+id/txt_for_margin_4"/>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
+            android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:gravity="center"
-            android:layout_weight="0.20"
-            android:id="@+id/linear_set_5_big"
-            android:weightSum="1">
-            <ImageView
+            android:paddingLeft="@dimen/wp5"
+            android:paddingRight="@dimen/wp5">
+
+            <ui.ChalkFrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.4"
-                android:id="@+id/img_set_5_big"
-                android:src="@drawable/img_grandma_only"/>
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.3"
-                android:id="@+id/frame_set_5_big">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/empty_space_how_much_long"
-                    android:id="@+id/img_txt_space_5"/>
-                <TextView
+                android:layout_height="wrap_content">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
                     android:gravity="center"
-                    android:textSize="@dimen/wp3"
-                    android:id="@+id/txt_set_5_long"
-                    android:text="마당놀이 입장권 15,000원"/>
-            </FrameLayout>
+                    android:orientation="vertical">
 
+                    <TextView
+                        android:id="@+id/txt_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/wp18"
+                        android:gravity="center"
+                        android:text="할아버지는 할머니와 같이 마당놀이를 함께 보고, 순댓국을 먹고, 할머니에게 동전지갑을 선물했습니다. 오늘 쓴 돈은 모두 얼마입니까?"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/wp7" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wp60"
+                        android:layout_gravity="center">
+
+                        <!-- first frame -->
+                        <LinearLayout
+                            android:id="@+id/linear_frame_1_to_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/wp60"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/img_pay_money"
+                                    android:src="@drawable/icon_paper_meoney_50000"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/wp40"
+                                    android:background="@drawable/background_white_transparent" />
+
+                                <TextView
+                                    android:id="@+id/txt_pay_description"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/wp12"
+                                    android:background="@drawable/my_rounded_corner"
+                                    android:gravity="center"
+                                    android:text="낸 돈 50,000원"
+                                    android:textColor="#FF000000"
+                                    android:textSize="@dimen/wp6" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="@dimen/wp20"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="@dimen/wp3"
+                                android:gravity="center"
+                                android:text="-"
+                                android:textColor="#EEFFFFFF"
+                                android:textSize="@dimen/wp20"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="@dimen/wp60"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+                                    <ImageView
+                                        android:id="@+id/img_spend_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/wp40"
+                                        android:background="@drawable/background_white_transparent"
+                                        android:src="@drawable/icon_grandma" />
+                                    <TextView
+                                        android:id="@+id/txt_spend_decription_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/wp12"
+                                        android:gravity="center"
+                                        android:text="입장권\n15,000원"
+                                        android:textColor="#FFFFFFFF"
+                                        android:textSize="@dimen/wp5"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:id="@+id/linear_spend_1_2">
+                                    <ImageView
+                                        android:id="@+id/img_spend_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/wp40"
+                                        android:background="@drawable/background_white_transparent"
+                                        android:src="@drawable/icon_grandfa" />
+                                    <TextView
+                                        android:id="@+id/txt_spend_decription_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/wp12"
+                                        android:gravity="center"
+                                        android:text="입장권\n15,000원"
+                                        android:textColor="#FFFFFFFF"
+                                        android:textSize="@dimen/wp5"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!-- -->
+
+                        <!--second frame -->
+                        <LinearLayout
+                            android:id="@+id/linear_frame_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/wp20"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/wp40"
+                                    android:background="@drawable/background_white_transparent"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/icon_grandma" />
+                                <TextView
+                                    android:id="@+id/txt_spend_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/wp12"
+                                    android:background="@drawable/my_rounded_corner"
+                                    android:gravity="center"
+                                    android:text="입장권\n15,000"
+                                    android:textColor="#FF000000"
+                                    android:textSize="@dimen/wp5" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="@dimen/wp20"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/wp40"
+                                    android:background="@drawable/background_white_transparent"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/icon_grandfa" />
+                                <TextView
+                                    android:id="@+id/txt_spend_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/wp12"
+                                    android:background="@drawable/my_rounded_corner"
+                                    android:gravity="center"
+                                    android:text="입장권\n15,000"
+                                    android:textColor="#FF000000"
+                                    android:textSize="@dimen/wp5" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="@dimen/wp15"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="@dimen/wp3"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="#EEFFFFFF"
+                                android:textSize="@dimen/wp20"
+                                android:textStyle="bold" />
+                            <LinearLayout
+                                android:layout_width="@dimen/wp20"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/wp40"
+                                    android:background="@drawable/background_white_transparent"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/icon_sundaeguk" />
+                                <TextView
+                                    android:id="@+id/txt_spend_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/wp12"
+                                    android:background="@drawable/my_rounded_corner"
+                                    android:gravity="center"
+                                    android:text="순대국\n3,000"
+                                    android:textColor="#FF000000"
+                                    android:textSize="@dimen/wp5" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="@dimen/wp20"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/wp40"
+                                    android:background="@drawable/background_white_transparent"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/icon_sundaeguk" />
+                                <TextView
+                                    android:id="@+id/txt_spend_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/wp12"
+                                    android:background="@drawable/my_rounded_corner"
+                                    android:gravity="center"
+                                    android:text="순대국\n3,000"
+                                    android:textColor="#FF000000"
+                                    android:textSize="@dimen/wp5" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/txt_operator_1"
+                                android:layout_width="@dimen/wp15"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="@dimen/wp3"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="#EEFFFFFF"
+                                android:textSize="@dimen/wp20"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/linear_spend_2"
+                                android:layout_width="@dimen/wp40"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/wp40"
+                                    android:background="@drawable/background_white_transparent"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/icon_coin_wallet" />
+                                <TextView
+                                    android:id="@+id/txt_spend_5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/wp12"
+                                    android:gravity="center"
+                                    android:text="동전지갑 3,000"
+                                    android:textColor="#FF000000"
+                                    android:textSize="@dimen/wp5"
+                                    android:background="@drawable/my_rounded_corner"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!-- -->
+                    </FrameLayout>
+                </LinearLayout>
+            </ui.ChalkFrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/wp25"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_answer_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:text="10,000원"
+                    android:textSize="@dimen/wp8"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_answer_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:text="20,000원"
+                    android:textSize="@dimen/wp8"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_answer_3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:text="30,000원"
+                    android:textSize="@dimen/wp8"
+                    android:textStyle="bold" />
+            </LinearLayout>
         </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_weight=".2"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:weightSum="1">
-
-            <Button
-                android:layout_weight=".25"
-                android:textSize="@dimen/wp5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:text="1"
-                android:id="@+id/btn_answer_1"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.05"/>
-
-            <Button
-                android:layout_weight=".25"
-                android:textSize="@dimen/wp5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:text="2"
-                android:id="@+id/btn_answer_2" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.05"/>
-
-            <Button
-                android:layout_weight=".25"
-                android:textSize="@dimen/wp5"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:text="3"
-                android:id="@+id/btn_answer_3" />
-        </LinearLayout>
-</LinearLayout>
-
+    </LinearLayout>
 </RelativeLayout><!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_03_5.xml -->
