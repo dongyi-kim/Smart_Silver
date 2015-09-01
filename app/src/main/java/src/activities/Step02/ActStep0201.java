@@ -26,10 +26,10 @@ import src.dialogs.DlgResultMark;
  */
 public class ActStep0201 extends StageActivity {
 
-    private static final int ROW_COUNT = 5;
+    private static final int ROW_COUNT = 4;
     private static final int COLUMN_COUNT = 10;
 
-    private TextView txtDiscription;
+    private TextView txtDescription;
     private Button btnSingleCell[] = new Button[ROW_COUNT*COLUMN_COUNT];
     private FrameLayout frameLayout[] = new FrameLayout[ROW_COUNT*COLUMN_COUNT];
     private HashMap<View, Integer> mapIndex = new HashMap<View, Integer>();
@@ -61,7 +61,7 @@ public class ActStep0201 extends StageActivity {
         setContentView(R.layout.act_step_02_1);
 
         gridLayout = (GridLayout)findViewById(R.id.grid);
-        txtDiscription = (TextView)findViewById(R.id.txt_discription);
+        txtDescription = (TextView)findViewById(R.id.txt_description);
         btnSubmit = (Button)findViewById(R.id.btn_submit);
 
         for(int i = 0 ; i < ROW_COUNT * COLUMN_COUNT ; i ++)
@@ -90,7 +90,7 @@ public class ActStep0201 extends StageActivity {
     public void setQuestion(boolean isRetry, Object object){
         int iVal = arrStartNumber[iStage-1];
         int iDistance = arrDistanceNumber[iStage-1];
-        txtDiscription.setText(arrDescription[iStage-1]);
+        txtDescription.setText(arrDescription[iStage-1]);
         int idxLast = ROW_COUNT * COLUMN_COUNT -1;
 
         for(int i=0;i<=idxLast;i++){

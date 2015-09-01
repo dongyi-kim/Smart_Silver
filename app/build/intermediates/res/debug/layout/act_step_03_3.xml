@@ -2,174 +2,172 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img_wall"
-    android:gravity="center">
+    android:background="@drawable/img_chalkboard_2">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_description"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/wp18"
+            android:gravity="center"
+            android:text="할머니 할아버지가 홍시 선물을 받았습니다.\n받은 홍시를 모두 더하면 몇 개일까요?"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/wp6" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:paddingLeft="@dimen/wp5"
-            android:paddingRight="@dimen/wp5">
-
-            <ui.ChalkFrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/txt_description"
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/wp18"
-                        android:gravity="center"
-                        android:text="할머니 할아버지가 홍시 선물을 받았습니다.\n받은 홍시를 모두 더하면 몇 개일까요?"
-                        android:textColor="#FFFFFF"
-                        android:textSize="@dimen/wp7" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/wp60"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="@dimen/wp65"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical">
-                            <FrameLayout
-                                android:layout_width="match_parent"
-                                android:layout_marginRight="@dimen/wp5"
-                                android:layout_marginLeft="@dimen/wp5"
-                                android:layout_height="@dimen/wp40"
-                                android:background="@drawable/background_white_transparent">
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_marginLeft="@dimen/wp1"
-                                    android:scaleType="fitStart"
-                                    android:src="@drawable/icon_grandma"/>
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_marginTop="@dimen/wp10"
-                                    android:scaleType="fitEnd"
-                                    android:src="@drawable/icon_set_dried_persimmon_3"
-                                    android:id="@+id/img_food_set_1"/>
-                            </FrameLayout>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/wp12"
-                                android:background="@drawable/my_rounded_corner"
-                                android:gravity="center"
-                                android:layout_marginRight="@dimen/wp5"
-                                android:layout_marginLeft="@dimen/wp5"
-                                android:text="호박전 50장 + 호박전 50장\n + 호박전50장"
-                                android:textColor="#FF000000"
-                                android:textSize="@dimen/wp6"
-                                android:id="@+id/txt_food_description_1"/>
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="@dimen/wp15"
-                            android:layout_height="match_parent"
-                            android:layout_marginBottom="@dimen/wp3"
-                            android:gravity="center"
-                            android:text="+"
-                            android:textColor="#EEFFFFFF"
-                            android:textSize="@dimen/wp20"
-                            android:textStyle="bold" />
-
-                        <LinearLayout
-                            android:layout_width="@dimen/wp65"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical">
-                            <FrameLayout
-                                android:layout_width="match_parent"
-                                android:layout_marginRight="@dimen/wp5"
-                                android:layout_marginLeft="@dimen/wp5"
-                                android:layout_height="@dimen/wp40"
-                                android:background="@drawable/background_white_transparent">
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_marginLeft="@dimen/wp1"
-                                    android:scaleType="fitStart"
-                                    android:src="@drawable/icon_grandfa" />
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:layout_marginTop="@dimen/wp10"
-                                    android:scaleType="fitEnd"
-                                    android:src="@drawable/icon_set_dried_persimmon_3"
-                                    android:id="@+id/img_food_set_2"/>
-                            </FrameLayout>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/wp12"
-                                android:background="@drawable/my_rounded_corner"
-                                android:gravity="center"
-                                android:layout_marginRight="@dimen/wp5"
-                                android:layout_marginLeft="@dimen/wp5"
-                                android:text="홍시 5개"
-                                android:textColor="#FF000000"
-                                android:textSize="@dimen/wp6"
-                                android:id="@+id/txt_food_description_2"/>
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </ui.ChalkFrameLayout>
+            android:layout_height="@dimen/wp60"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/wp5"
+            android:background="@drawable/frame_cell_white"
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/wp25"
-                android:orientation="horizontal">
+                android:layout_width="@dimen/wp60"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/btn_answer_1"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10sp"
-                    android:layout_weight="1"
-                    android:text="1"
-                    android:textSize="@dimen/wp12"
-                    android:textStyle="bold" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wp40"
+                    android:layout_marginLeft="@dimen/wp5"
+                    android:layout_marginRight="@dimen/wp5"
+                    android:background="@drawable/background_white_transparent">
 
-                <Button
-                    android:id="@+id/btn_answer_2"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10sp"
-                    android:layout_weight="1"
-                    android:text="2"
-                    android:textSize="@dimen/wp12"
-                    android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/wp1"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/icon_grandma" />
 
-                <Button
-                    android:id="@+id/btn_answer_3"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10sp"
-                    android:layout_weight="1"
-                    android:text="3"
-                    android:textSize="@dimen/wp12"
-                    android:textStyle="bold" />
+                    <ImageView
+                        android:id="@+id/img_food_set_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/wp10"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/icon_set_dried_persimmon_3" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/txt_food_description_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wp12"
+                    android:layout_marginLeft="@dimen/wp5"
+                    android:layout_marginRight="@dimen/wp5"
+                    android:background="@drawable/my_rounded_corner"
+                    android:gravity="center"
+                    android:text="호박전 50장 + 호박전 50장\n + 호박전50장"
+                    android:textColor="#FF000000"
+                    android:textSize="@dimen/wp6" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="@dimen/wp15"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/wp3"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="#EEFFFFFF"
+                android:textSize="@dimen/wp20"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="@dimen/wp60"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wp40"
+                    android:layout_marginLeft="@dimen/wp5"
+                    android:layout_marginRight="@dimen/wp5"
+                    android:background="@drawable/background_white_transparent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/wp1"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/icon_grandfa" />
+
+                    <ImageView
+                        android:id="@+id/img_food_set_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/wp10"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/icon_set_dried_persimmon_3" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/txt_food_description_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wp12"
+                    android:layout_marginLeft="@dimen/wp5"
+                    android:layout_marginRight="@dimen/wp5"
+                    android:background="@drawable/my_rounded_corner"
+                    android:gravity="center"
+                    android:text="홍시 5개"
+                    android:textColor="#FF000000"
+                    android:textSize="@dimen/wp6" />
             </LinearLayout>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wp12"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/btn_answer_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:text="1"
+                android:textSize="@dimen/wp6"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_answer_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:text="2"
+                android:textSize="@dimen/wp6"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_answer_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:text="3"
+                android:textSize="@dimen/wp6"
+                android:textStyle="bold" />
+        </LinearLayout>
     </LinearLayout>
-</RelativeLayout><!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_03_3.xml -->
+
+
+    <TextView
+        android:layout_width="@dimen/wp20"
+        android:layout_height="@dimen/wp10"
+        android:layout_gravity="center"
+        android:background="@drawable/img_memo_sticker"
+        android:gravity="center"
+        android:text="3 - 3"
+        android:textSize="@dimen/wp5" />
+</RelativeLayout><!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_03_3.xml -->

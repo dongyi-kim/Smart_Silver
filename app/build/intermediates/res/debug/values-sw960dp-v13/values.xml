@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/values-sw960dp/dimens.xml -->
+    <!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/values-sw960dp/dimens.xml -->
     <eat-comment/>
     <dimen name="wp1">9dp</dimen>
     <dimen name="wp10">96dp</dimen>

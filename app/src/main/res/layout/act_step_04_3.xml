@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/img_chalkboard_2"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_chalkboard_2">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -10,149 +11,161 @@
         android:weightSum="1">
 
         <TextView
-            android:layout_weight=".2"
-            android:layout_width="match_parent"
-            android:textColor="#FFFFFF"
-            android:layout_height="0dp"
-            android:text=" 홈쇼핑 박스 배달\n장마철을 맞이하여 ‘물먹는 돼지’를 주문하였습니다.\n모두 몇 개입니까? 알맞은 숫자를 누르세요!"
             android:id="@+id/txt_discription"
-            android:textSize="@dimen/wp5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20sp"
+            android:layout_weight=".2"
             android:gravity="center"
-            android:layout_marginTop="20sp" />
+            android:text="장마철을 맞이하여 ‘물먹는 돼지’를 주문하였습니다.\n모두 몇 개입니까? 알맞은 숫자를 누르세요!"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/wp5" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:layout_weight="0.7"
-            android:weightSum="1"
             android:layout_gravity="center"
-            android:gravity="center">
+            android:layout_weight="0.7"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_weight="0.4"
                 android:orientation="vertical"
-                android:layout_gravity="center"
                 android:weightSum="1">
+
                 <ImageView
+                    android:id="@+id/img_hippo"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="0.7"
-                    android:src="@drawable/mult_8_2_waterhippo"
-                    android:id="@+id/img_hippo"/>
+                    android:src="@drawable/mult_8_2_waterhippo" />
+
                 <TextView
-                     android:layout_width="match_parent"
-                     android:layout_height="0dp"
-                     android:layout_weight="0.3"
-                     android:textColor="#FFFFFF"
-                     android:text="8 X 2"
-                     android:layout_gravity="center"
-                     android:gravity="center"
-                     android:textSize="@dimen/wp6"
-                     android:id="@+id/txt_answer"/>
+                    android:id="@+id/txt_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.3"
+                    android:gravity="center"
+                    android:text="8 X 2"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/wp6" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:layout_weight="0.4"
                 android:orientation="vertical"
-                android:layout_gravity="center"
                 android:weightSum="1">
-            
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.7"
-                    android:orientation="horizontal"
                     android:layout_gravity="center"
+                    android:layout_weight="0.7"
                     android:gravity="center"
+                    android:orientation="horizontal"
                     android:weightSum="1">
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="0.5"
-                        android:orientation="vertical"
                         android:layout_gravity="center"
+                        android:layout_weight="0.5"
                         android:gravity="center"
+                        android:orientation="vertical"
                         android:weightSum="0.7">
 
                         <TextView
+                            android:id="@+id/txt_margin_top_1"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="0.1"
-                            android:id="@+id/txt_margin_top_1"/>
+                            android:layout_weight="0.1" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="0.25"
                             android:orientation="horizontal"
                             android:weightSum="0.5">
+
                             <TextView
+                                android:id="@+id/txt_margin_left_1"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.2"
-                                android:id="@+id/txt_margin_left_1"/>
+                                android:layout_weight="0.2" />
+
                             <FrameLayout
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="0.3">
+
                                 <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:src="@drawable/txt_field_0403"
-                                    android:scaleType="fitCenter"
                                     android:id="@+id/ibtn_answer_1"
-                                    android:background="@null"/>
-                                <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="1"
+                                    android:background="@null"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/txt_field_0403" />
+
+                                <TextView
+                                    android:id="@+id/txt_answer_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:gravity="center"
-                                    android:textSize="@dimen/wp6"
-                                    android:id="@+id/txt_answer_1"/>
+                                    android:text="1"
+                                    android:textSize="@dimen/wp6" />
                             </FrameLayout>
                         </LinearLayout>
 
                         <TextView
+                            android:id="@+id/txt_margin_top_3"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="0.1"
-                            android:id="@+id/txt_margin_top_3"/>
+                            android:layout_weight="0.1" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="0.25"
                             android:orientation="horizontal"
                             android:weightSum="0.5">
+
                             <TextView
+                                android:id="@+id/txt_margin_left_3"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.2"
-                                android:id="@+id/txt_margin_left_3"/>
+                                android:layout_weight="0.2" />
+
                             <FrameLayout
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="0.3">
+
                                 <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:src="@drawable/txt_field_0403"
-                                    android:scaleType="fitCenter"
                                     android:id="@+id/ibtn_answer_3"
-                                    android:background="@null"/>
-                                <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="3"
+                                    android:background="@null"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/txt_field_0403" />
+
+                                <TextView
+                                    android:id="@+id/txt_answer_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:gravity="center"
-                                    android:textSize="@dimen/wp6"
-                                    android:id="@+id/txt_answer_3"/>
+                                    android:text="3"
+                                    android:textSize="@dimen/wp6" />
                             </FrameLayout>
                         </LinearLayout>
                     </LinearLayout>
@@ -160,85 +173,95 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="0.5"
                         android:layout_gravity="center"
+                        android:layout_weight="0.5"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:weightSum="0.7">
 
                         <TextView
+                            android:id="@+id/txt_margin_top_2"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="0.1"
-                            android:id="@+id/txt_margin_top_2"/>
+                            android:layout_weight="0.1" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="0.25"
                             android:orientation="horizontal"
                             android:weightSum="0.5">
+
                             <TextView
+                                android:id="@+id/txt_margin_left_2"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.2"
-                                android:id="@+id/txt_margin_left_2"/>
+                                android:layout_weight="0.2" />
+
                             <FrameLayout
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="0.3">
+
                                 <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:src="@drawable/txt_field_0403"
-                                    android:scaleType="fitCenter"
                                     android:id="@+id/ibtn_answer_2"
-                                    android:background="@null"/>
-                                <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="2"
+                                    android:background="@null"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/txt_field_0403" />
+
+                                <TextView
+                                    android:id="@+id/txt_answer_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:gravity="center"
-                                    android:textSize="@dimen/wp6"
-                                    android:id="@+id/txt_answer_2"/>
+                                    android:text="2"
+                                    android:textSize="@dimen/wp6" />
                             </FrameLayout>
                         </LinearLayout>
 
                         <TextView
+                            android:id="@+id/txt_margin_top_4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
-                            android:layout_weight="0.1"
-                            android:id="@+id/txt_margin_top_4"/>
+                            android:layout_weight="0.1" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="0.25"
                             android:orientation="horizontal"
                             android:weightSum="0.5">
+
                             <TextView
+                                android:id="@+id/txt_margin_left_4"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
-                                android:layout_weight="0.2"
-                                android:id="@+id/txt_margin_left_4"/>
+                                android:layout_weight="0.2" />
+
                             <FrameLayout
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="0.3">
+
                                 <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:src="@drawable/txt_field_0403"
-                                    android:scaleType="fitCenter"
                                     android:id="@+id/ibtn_answer_4"
-                                    android:background="@null"/>
-                                <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="4"
+                                    android:background="@null"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/txt_field_0403" />
+
+                                <TextView
+                                    android:id="@+id/txt_answer_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:gravity="center"
-                                    android:textSize="@dimen/wp6"
-                                    android:id="@+id/txt_answer_4"/>
+                                    android:text="4"
+                                    android:textSize="@dimen/wp6" />
                             </FrameLayout>
                         </LinearLayout>
                     </LinearLayout>
@@ -246,10 +269,10 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/txt_margin_top_5"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.05"
-                    android:id="@+id/txt_margin_top_5"/>
+                    android:layout_weight="0.05" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -259,34 +282,35 @@
                     android:weightSum="1">
 
                     <TextView
+                        android:id="@+id/txt_margin_left_5"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="0.3"
-                        android:id="@+id/txt_margin_left_5"/>
+                        android:layout_weight="0.3" />
+
                     <FrameLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.3">
+
                         <ImageButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/txt_field_0403"
-                            android:scaleType="fitCenter"
                             android:id="@+id/ibtn_answer_5"
-                            android:background="@null"/>
-                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="5"
+                            android:background="@null"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/txt_field_0403" />
+
+                        <TextView
+                            android:id="@+id/txt_answer_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:textSize="@dimen/wp6"
-                            android:id="@+id/txt_answer_5"/>
+                            android:text="5"
+                            android:textSize="@dimen/wp6" />
                     </FrameLayout>
 
                 </LinearLayout>
-
-
 
 
             </LinearLayout>
@@ -299,10 +323,10 @@
     <TextView
         android:layout_width="@dimen/wp20"
         android:layout_height="@dimen/wp10"
-        android:gravity="center"
         android:layout_gravity="center"
-        android:text="4 - 3"
         android:background="@drawable/img_memo_sticker"
-        android:textSize="@dimen/wp5"/>
+        android:gravity="center"
+        android:text="4 - 3"
+        android:textSize="@dimen/wp5" />
 
 </RelativeLayout>

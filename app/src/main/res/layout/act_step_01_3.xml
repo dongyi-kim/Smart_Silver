@@ -14,17 +14,16 @@
         <TextView
             android:id="@+id/txt_description"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/wp15"
+            android:layout_height="@dimen/wp20"
             android:gravity="center"
             android:text="다음 중 짝수를 찾아서 누르세요."
             android:textColor="#FFFFFF"
-            android:textSize="@dimen/wp8"
+            android:textSize="@dimen/wp7"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp80"
-            android:layout_marginTop="@dimen/wp5"
             android:background="@drawable/frame_cell_white"
             android:orientation="vertical">
 
@@ -230,6 +229,9 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/wp2"/>
         </LinearLayout>
     </LinearLayout>
 

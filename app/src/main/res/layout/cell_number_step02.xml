@@ -10,5 +10,4 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         android:text="50"/>
-
 </FrameLayout>
