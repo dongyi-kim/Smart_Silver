@@ -83,12 +83,13 @@ public class ActStep0205 extends StageActivity{
 
             if(iNumber == -2) continue;
             else if(iNumber == -1){
+                imgNumberField[i].setVisibility(View.VISIBLE);
                 txtNumber[i].setText("");
                 if(i > 0 && i < 3) iAnswerSign = dataSet.iOperator[i - 1];
             }
             else{
                 txtNumber[i].setText("" + iNumber);
-
+                imgNumberField[i].setVisibility(View.GONE);
                 if(i >= 3) iNumber *= -1;
                 else if(i >= 1) iNumber *= dataSet.iOperator[i - 1];
                 iAnswer += iNumber * -1;

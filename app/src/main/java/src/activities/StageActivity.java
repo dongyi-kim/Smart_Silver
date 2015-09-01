@@ -89,7 +89,14 @@ public abstract class StageActivity extends FrameActivity {
         }
     }
 
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(dataNow!=null)
+        {
+            dataNow = null;
+        }
+    }
 
     //copy & paste
     // public void setQuestion( boolean isRetry, Object object);

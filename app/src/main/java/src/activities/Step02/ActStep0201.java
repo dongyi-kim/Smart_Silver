@@ -2,6 +2,7 @@ package src.activities.Step02;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,14 +30,19 @@ public class ActStep0201 extends StageActivity {
     private static final int COLUMN_COUNT = 10;
 
     private TextView txtDiscription;
-    public final Button btnSingleCell[] = new Button[ROW_COUNT*COLUMN_COUNT];
-    public final HashMap<View, Integer> mapIndex = new HashMap<View, Integer>();
+    private Button btnSingleCell[] = new Button[ROW_COUNT*COLUMN_COUNT];
+    private FrameLayout frameLayout[] = new FrameLayout[ROW_COUNT*COLUMN_COUNT];
+    private HashMap<View, Integer> mapIndex = new HashMap<View, Integer>();
+    private boolean[] isSelected = new boolean[ROW_COUNT * COLUMN_COUNT];
+
 
     private GridLayout gridLayout;
     private Button btnSubmit;
 
     private int iRetryCount = 0;
-    public int iNextAnswer = -1;
+    private int iNextAnswer = -1;
+    private int iLastButton = 49;
+
 
     public final String arrDescription[] = {
             "다음 수를 50에서 3씩 거꾸로 건너 띄며 세기.\n해당 숫자를 누르세요.",
@@ -60,8 +66,8 @@ public class ActStep0201 extends StageActivity {
 
         for(int i = 0 ; i < ROW_COUNT * COLUMN_COUNT ; i ++)
         {
-            FrameLayout frameLayout  = (FrameLayout)gridLayout.getChildAt(i);
-            btnSingleCell[i] = (Button)frameLayout.getChildAt(0);
+            frameLayout[i]  = (FrameLayout)gridLayout.getChildAt(i);
+            btnSingleCell[i] = (Button)frameLayout[i].getChildAt(0);
             mapIndex.put(btnSingleCell[i], i);
             btnSingleCell[i].setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -75,7 +81,10 @@ public class ActStep0201 extends StageActivity {
 
 
     public void setCheck(Button btn){
+
         btn.setBackgroundResource(R.drawable.dialog_correct_cell);
+
+        isSelected[mapIndex.get(btn)] = true;
     }
 
     public void setQuestion(boolean isRetry, Object object){
@@ -93,28 +102,40 @@ public class ActStep0201 extends StageActivity {
         setCheck(btnSingleCell[iDistance]);
 
         iNextAnswer = 2*iDistance ;
+        iLastButton = arrRowCount[iStage-1] * 10 -1;
+        for(int i=0;i<=idxLast;i++)
+        {
+            isSelected[iLastButton] = false;
+            if(i <= iLastButton)
+                frameLayout[i].setVisibility(View.VISIBLE);
+            else
+                frameLayout[i].setVisibility(View.GONE);
+        }
 
         iRetryCount = 0;
+        frameLayout[0].setBackgroundColor(Color.GRAY);
         StartRecording();
     }
 
     public void checkAnswer(Object o){
         int iSelected = mapIndex.get(o);
+        if(isSelected[iSelected])
+            return;
+
 
         boolean isRight;
         if(iNextAnswer == iSelected){
             setCheck( btnSingleCell[iSelected] );
             iNextAnswer += arrDistanceNumber[iStage-1];
-            if(iNextAnswer < 50)
+            if(iNextAnswer <= iLastButton)
                 return;
             isRight = true;
-
         }else{
             isRight = false;
             iRetryCount ++;
         }
 
-        if(iRetryCount >= 3 || iNextAnswer >= 50) {
+        if(iRetryCount >= 3 || iNextAnswer > iLastButton) {
             StopRecording(isRight);
             if(++iStage <= 5)
                 setQuestion(false);

@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\Acka\AndroidStudioProjects\Smart_Silver\app\src\androidTest\res"/><source path="C:\Users\Acka\AndroidStudioProjects\Smart_Silver\app\build\generated\res\rs\test\debug"/><source path="C:\Users\Acka\AndroidStudioProjects\Smart_Silver\app\build\generated\res\generated\test\debug"/></dataSet><mergedItems/></merger>
+<<<<<<< HEAD
+<merger version="3"><dataSet config="main"><source path="/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/androidTest/res"/><source path="/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/build/generated/res/rs/test/debug"/><source path="/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/build/generated/res/generated/test/debug"/></dataSet><mergedItems/></merger>
+=======
+<merger version="3"><dataSet config="main"><source path="C:\Users\jhobo_000\fuck\Smart_Silver\app\src\androidTest\res"/><source path="C:\Users\jhobo_000\fuck\Smart_Silver\app\build\generated\res\rs\test\debug"/><source path="C:\Users\jhobo_000\fuck\Smart_Silver\app\build\generated\res\generated\test\debug"/></dataSet><mergedItems/></merger>
+>>>>>>> origin/adman

@@ -20,8 +20,9 @@ import src.dialogs.DlgResultMark;
  * Created by Acka on 2015-04-15.
  */
 public class ActStep0203 extends StageActivity {
-    private final TextView txtCalculateSet[] = new TextView[2];
-    public final ImageButton btnCalculate[] = new ImageButton[2];
+
+
+    private final Button[] btnCalculate = new Button[2];
 
     private int iRetryCount = 0;
     public boolean isRight = false;
@@ -35,10 +36,8 @@ public class ActStep0203 extends StageActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_02_3);
 
-        txtCalculateSet[0] = (TextView)findViewById(R.id.txt_calculate_1);
-        txtCalculateSet[1] = (TextView)findViewById(R.id.txt_calculate_2);
-        btnCalculate[0] = (ImageButton)findViewById(R.id.btn_calculate_1);
-        btnCalculate[1] = (ImageButton)findViewById(R.id.btn_calculate_2);
+        btnCalculate[0] = (Button)findViewById(R.id.btn_calculate_1);
+        btnCalculate[1] = (Button)findViewById(R.id.btn_calculate_2);
 
         //button listener
         for(int i = 0; i < 2; i++) {
@@ -59,12 +58,12 @@ public class ActStep0203 extends StageActivity {
     public void setQuestion(boolean isRetry, Object object){
         dataSet.setData(iStage);
 
-        txtCalculateSet[0].setText(dataSet.sCalculateSet[0]);
-        txtCalculateSet[1].setText(dataSet.sCalculateSet[1]);
+        btnCalculate[0].setText(dataSet.sCalculateSet[0]);
+        btnCalculate[1].setText(dataSet.sCalculateSet[1]);
 
         int iResult[] = new int[2];
         for(int i = 0; i < 2; i++){
-            String sCurrentString = txtCalculateSet[i].getText().toString();
+            String sCurrentString = btnCalculate[i].getText().toString();
             int iLength = sCurrentString.length();
             int iOperand[] = new int[2];
             char cOperator = '+';
