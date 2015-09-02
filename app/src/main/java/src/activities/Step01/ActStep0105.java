@@ -137,11 +137,11 @@ public class ActStep0105 extends StageActivity {
         public String strAns;
 
         private final int imgList[][] = {
-                {R.drawable.clock_1_5_1_1,R.drawable.clock_1_5_1_2,R.drawable.clock_1_5_1_3},
-                {R.drawable.clock_1_5_2_1,R.drawable.clock_1_5_2_2,R.drawable.clock_1_5_2_3},
-                {R.drawable.clock_1_5_3_1,R.drawable.clock_1_5_3_2,R.drawable.clock_1_5_3_3},
-                {R.drawable.clock_1_5_4_1,R.drawable.clock_1_5_4_2,R.drawable.clock_1_5_4_3},
-                {R.drawable.clock_1_5_5_1,R.drawable.clock_1_5_5_2,R.drawable.clock_1_5_5_3},
+                {R.drawable.clock_1_5_1_0200,R.drawable.clock_1_5_1_0115,R.drawable.clock_1_5_1_0540},
+                {R.drawable.clock_1_5_1_0320,R.drawable.clock_1_5_1_0655,R.drawable.clock_1_5_4_0938},
+                {R.drawable.clock_1_5_4_1200,R.drawable.clock_1_5_4_0816,R.drawable.clock_1_5_4_0938},
+                {R.drawable.clock_1_5_4_0538,R.drawable.clock_1_5_4_0429,R.drawable.clock_1_5_4_0727},
+                {R.drawable.clock_1_5_6_0928,R.drawable.clock_1_5_6_1017,R.drawable.clock_1_5_6_0548},
         };
 
         private final String DiscriptionList[] = {

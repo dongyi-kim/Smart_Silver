@@ -36,7 +36,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight=".4"
-                android:src="@drawable/clock_1_5_1_1"
+                android:src="@drawable/clock_1_5_1_0115"
                 android:id="@+id/img_1_5"
                 />
 
@@ -50,7 +50,7 @@
                 android:gravity="center">
 
                 <Button
-                    android:layout_width="150dp"
+                    android:layout_width="@dimen/wp50"
                     android:layout_height="wrap_content"
                     android:text="아홉 시"
                     android:textSize="@dimen/wp6"
@@ -60,7 +60,7 @@
                     android:layout_width="10dp"
                     android:layout_height="10dp"></LinearLayout>
                 <Button
-                    android:layout_width="150dp"
+                    android:layout_width="@dimen/wp50"
                     android:textSize="@dimen/wp6"
                     android:text="아홉시 이십팔분"
                     android:id="@+id/btn_ans_4"
@@ -69,7 +69,7 @@
                     android:layout_width="10dp"
                     android:layout_height="10dp"></LinearLayout>
                 <Button
-                    android:layout_width="150dp"
+                    android:layout_width="@dimen/wp50"
                     android:textSize="@dimen/wp5"
                     android:text="아홉시 오십육분"
                     android:id="@+id/btn_ans_5"
@@ -87,7 +87,7 @@
             android:gravity="center">
 
             <Button
-                android:layout_width="@dimen/wp40"
+                android:layout_width="@dimen/wp50"
                 android:layout_height="wrap_content"
                 android:text="두 시 십이분"
                 android:textSize="@dimen/wp6"
@@ -99,7 +99,7 @@
                 android:layout_weight=".1"></LinearLayout>
 
             <Button
-                android:layout_width="@dimen/wp40"
+                android:layout_width="@dimen/wp50"
                 android:layout_height="wrap_content"
                 android:text="두 시"
                 android:id="@+id/btn_ans_2"
