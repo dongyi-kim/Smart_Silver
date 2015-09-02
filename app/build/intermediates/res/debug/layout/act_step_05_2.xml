@@ -32,7 +32,7 @@
                 android:layout_gravity="center"
                 android:scaleType="fitCenter"
                 android:layout_margin="@dimen/wp5"
-                android:src="@drawable/img_draw_strawberry_14_with_line" />
+                android:src="@drawable/img_draw_strawberry_14_with_line"/>
             <LinearLayout
                 android:id="@+id/draw_field_0502"
                 android:layout_width="match_parent"

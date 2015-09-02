@@ -56,8 +56,8 @@ public class ActStep0702 extends StageActivity{
 
         txtDescription.setText(dataSet.sDescription);
         imgSubway.setImageResource(dataSet.iImageSource);
-        btnAnswer[0].setText("" + dataSet.iAnswerSet[0] + "정거장");
-        btnAnswer[1].setText("" + dataSet.iAnswerSet[1] + "정거장");
+        btnAnswer[0].setText(dataSet.iAnswerSet[0]);
+        btnAnswer[1].setText(dataSet.iAnswerSet[1]);
 
         StartRecording();
     }
@@ -89,37 +89,32 @@ public class ActStep0702 extends StageActivity{
     }
 
     public class Step0702DataSet{
-        private final String arrDescription[] = {"아래 표는 지하철 노선도입니다. 약수에 사는 점순이 할머니는 삼각지에 가려고 합니다. 약수에서 삼각지까지 가장 빠르게 가려면 몇 정거장 가야 합니까.",
-                "아래 표는 지하철 노선도입니다. 양재에 사는 조옥자씨는 언니와 가락시장에 가려고 합니다. 양재에서 가락시장까지 가장 빠르게 가려면 몇 정거장 가야 합니까.",
-                "아래 표는 지하철 노선도입니다. 조옥자씨가 서울역에서 흑석동에 가려고 합니다. 서울역에서 흑석동까지 가장 빠르게 가려면 몇 정거장 가야 합니까.",
-                "아래 표는 지하철 노선도입니다. 선릉에서 남한산성입구까지 1번 갈아타고 가려면 몇 정거장 가야 합니까.",
-                "아래 표는 지하철 노선도입니다.강남에서 미금까지 1번 갈아타고 가려면 몇 정거장 가야 합니까."};
+        private final String arrDescription[][] = {{"약수에 사는 점순이 할머니가 삼각지에 가려고 합니다. 갈아타지 않을 때, 몇 정거장 가면 될까요?", "이촌에 사는 김 할머니가 옥수에 가려고 합니다. 갈아타지 않을 때, 몇 정거장 가면 될까요?","공덕에서 충무로까지 가려고 합니다. 서울역에서 한 번 갈아타고 갈 때, 모두 몇 정거장 가면 될까요?"},
+                {"양재에 사는 조옥자씨가 언니와 가락시장에 가려고 합니다. 갈아타지 않을 때, 몇 정거장 가면 될까요?", "오금에 사는 김 할머니가 대치에 가려고 합니다. 갈아타지 않을 때, 모두 몇 정거장 가면 될까요?", "정자에 사는 김 할머니가 청계산입구에 가려고 합니다. 갈아타지 않을 때, 몇 정거장 가면 될까요?"},
+                {"조옥자씨는 서울역에서 흑석동에 가려고 합니다. 노량진에서 한 번 갈아타고 갈 때, 모두 몇 정거장 가면 될까요?","김 할머니는 서울역에서 옥수에 가려고 합니다. 충무로에서 한 번 갈아탈 때, 모두 몇 정거장 가면 될까요?","노량진에 사는 김 할머니가 옥수에 가려고 합니다. 용산에서 한 번 갈아타고 갈 때, 모두 몇 정거장 가면 될까요?"},
+                {"선릉에서 남한산성입구에 가려고 합니다. 복정에서 한 번 갈아타고 갈 때, 모두 몇 정거장 가면 될까요?","신천에서 가락시장에 가려고 합니다. 잠실에서 한 번 갈아타고 갈 때, 모두 몇 정거장 가면 될까요?","모란에 사는 김 할머니가 경찰병원에 가려고 합니다. 가락시장에서 한 번 갈아타고 갈 때, 모두 몇 정거장 가면 될까요?"},
+                {"강남에서 미금까지 가는데, 어느 역에서 갈아타야 총 6정거장 걸릴까요?","선릉에서 가락시장까지 가는데, 어느 역에서 갈아타야 총 7정거장 걸릴까요?","양재에서 복정까지 가는데, 어느 역에서 갈아타야 총 7정거장 걸릴까요?"}
+        };
 
-        private final int arrAnswerSet[][] = {{5, 8}, {8, 10}, {5, 10}, {9, 15}, {6, 10}};
-        private final int arrAnswer[] = {5, 8, 5, 9, 6};
-        private final int arrImageSource[] = new int[5];
+        private final String arrAnswerSet[][][] = {{{"5 정거장","8 정거장"}, {"1 정거장","3 정거장"}, {"4 정거장","6 정거장"}}, {{"8 정거장","10 정거장"},{"4 정거장","7 정거장"},{"2 정거장","4 정거장"}},{{"5 정거장","10 정거장"},{"4 정거장","7 정거장"},{"5 정거장","8 정거장"}},{{"9 정거장","15 정거장"}, {"4 정거장","7 정거장"},{"5 정거장","10 정거장"}},{{"정자","선릉"},{"잠실","도곡"},{"도곡","수서"}}};
+        private final String arrAnswer[][] = {{"5 정거장", "3 정거장", "6 정거장"}, {"8 정거장", "7 정거장", "2 정거장"}, {"5 정거장", "7 정거장", "5 정거장"}, {"9 정거장", "4 정거장", "1정거장"}, {"정자","잠실", "도곡"}};
+
+        private final int arrImageSource[][] = {{R.drawable.subway_1_1, R.drawable.subway_1_2, R.drawable.subway_1_3},{R.drawable.subway_2_1, R.drawable.subway_2_2, R.drawable.subway_2_3},{R.drawable.subway_3_1, R.drawable.subway_3_2, R.drawable.subway_3_3}, {R.drawable.subway_4_1, R.drawable.subway_4_2, R.drawable.subway_4_3}, {R.drawable.subway_5_1, R.drawable.subway_5_2, R.drawable.subway_5_3},};
 
         public String sDescription;
-        public int iAnswerSet[] = new int[2];
-        public int iAnswer;
+        public String iAnswerSet[] = new String[2];
+        public String iAnswer;
         public int iImageSource;
 
-        public Step0702DataSet(){
-            arrImageSource[0] = R.drawable.subway_yaksu_samgakji;
-            arrImageSource[1] = R.drawable.subway_yangjae_garak;
-            arrImageSource[2] = R.drawable.subway_seoulstation_heuksuck;
-            arrImageSource[3] = R.drawable.subway_sunleon_namhansansung;
-            arrImageSource[4] = R.drawable.subway_gangnam_miguem;
-        }
-
         public void setData(int iStage){
+            int rand = (int)(Math.random() * 3.0); // 0 ~ 2
             int iSeed = iStage - 1;
 
-            sDescription = arrDescription[iSeed];
-            iAnswerSet[0] = arrAnswerSet[iSeed][0];
-            iAnswerSet[1] = arrAnswerSet[iSeed][1];
-            iAnswer = arrAnswer[iSeed];
-            iImageSource = arrImageSource[iSeed];
+            sDescription = arrDescription[iSeed][rand];
+            iAnswerSet[0] = arrAnswerSet[iSeed][rand][0];
+            iAnswerSet[1] = arrAnswerSet[iSeed][rand][1];
+            iAnswer = arrAnswer[iSeed][rand];
+            iImageSource = arrImageSource[iSeed][rand];
         }
     }
 }
