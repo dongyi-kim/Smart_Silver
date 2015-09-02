@@ -4527,8 +4527,8 @@ containing a value of this type.
         public static final int tabbar_bg=0x7f020270;
         public static final int tile_brush_circle=0x7f020271;
         public static final int transparent_backgrouns=0x7f020272;
-        public static final int triangle_left=0x7f020273;
-        public static final int triangle_right=0x7f020274;
+        public static final int triangle_left_new=0x7f020273;
+        public static final int triangle_right_new=0x7f020274;
         public static final int txt_field_0401=0x7f020275;
         public static final int txt_field_0403=0x7f020276;
         public static final int ui_button=0x7f020277;

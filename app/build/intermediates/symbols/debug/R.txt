@@ -1549,8 +1549,8 @@ int drawable tab 0x7f02026f
 int drawable tabbar_bg 0x7f020270
 int drawable tile_brush_circle 0x7f020271
 int drawable transparent_backgrouns 0x7f020272
-int drawable triangle_left 0x7f020273
-int drawable triangle_right 0x7f020274
+int drawable triangle_left_new 0x7f020273
+int drawable triangle_right_new 0x7f020274
 int drawable txt_field_0401 0x7f020275
 int drawable txt_field_0403 0x7f020276
 int drawable ui_button 0x7f020277
