@@ -561,7 +561,7 @@
                         android:background="#FFFFE0B2"
                         android:gravity="center"
                         android:text="갯수/이름"
-                        android:textSize="@dimen/wp5"></TextView>
+                        android:textSize="@dimen/wp3"></TextView>
 
                     <TextView
                         android:id="@+id/cell_8_1"
@@ -572,7 +572,7 @@
                         android:background="#FFFFE0B2"
                         android:gravity="center"
                         android:text="사과"
-                        android:textSize="@dimen/wp5"></TextView>
+                        android:textSize="@dimen/wp4"></TextView>
 
                     <TextView
                         android:id="@+id/cell_8_2"
@@ -583,7 +583,7 @@
                         android:background="#FFFFE0B2"
                         android:gravity="center"
                         android:text="감"
-                        android:textSize="@dimen/wp5"></TextView>
+                        android:textSize="@dimen/wp4"></TextView>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -605,9 +605,10 @@
 
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/wp20"
+                android:layout_height="match_parent"
                 android:id="@+id/btn_ans"
+                android:textSize="@dimen/wp6"
                 android:text="확인"/>
 
             <LinearLayout

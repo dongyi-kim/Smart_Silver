@@ -19,7 +19,7 @@
             android:textColor="#FFFFFF"
             android:text="다음 자료는 1주일이 모두 며칠로 이루어져 있는지 나타내는 자료입니다.\n다음 자료에서 1주일은 며칠입니까? 단추를 누르세요!"
             android:textStyle="bold"
-            android:textSize="@dimen/wp5"
+            android:textSize="@dimen/wp7"
             />
 
         <LinearLayout

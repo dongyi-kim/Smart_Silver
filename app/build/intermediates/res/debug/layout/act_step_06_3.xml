@@ -9,16 +9,13 @@
         android:layout_height="@dimen/wp100"
         android:layout_centerInParent="true"
         android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:weightSum="1">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/txt_discription"
             android:layout_width="match_parent"
             android:textColor="#FFFFFF"
-            android:layout_height="0dp"
-            android:layout_marginTop="20sp"
-            android:layout_weight=".2"
+            android:layout_height="@dimen/wp20"
             android:gravity="center"
             android:text="아래 과일의 수만큼 오른쪽 표에 스티커를 붙여봅시다!\n왼쪽 아래 단추를 사과의 갯수만큼 누르세요! "
             android:textSize="@dimen/wp6"
@@ -105,11 +102,11 @@
         <LinearLayout
             android:id="@+id/layout_6_1"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".67"
+            android:layout_height="@dimen/wp67"
             android:gravity="center"
             android:orientation="horizontal"
             android:visibility="visible"
+            android:layout_marginBottom="@dimen/wp2"
             android:weightSum="1">
 
             <LinearLayout
@@ -564,7 +561,7 @@
                         android:background="#FFFFE0B2"
                         android:gravity="center"
                         android:text="갯수/이름"
-                        android:textSize="@dimen/wp5"></TextView>
+                        android:textSize="@dimen/wp3"></TextView>
 
                     <TextView
                         android:id="@+id/cell_8_1"
@@ -575,7 +572,7 @@
                         android:background="#FFFFE0B2"
                         android:gravity="center"
                         android:text="사과"
-                        android:textSize="@dimen/wp5"></TextView>
+                        android:textSize="@dimen/wp4"></TextView>
 
                     <TextView
                         android:id="@+id/cell_8_2"
@@ -586,7 +583,7 @@
                         android:background="#FFFFE0B2"
                         android:gravity="center"
                         android:text="감"
-                        android:textSize="@dimen/wp5"></TextView>
+                        android:textSize="@dimen/wp4"></TextView>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -601,17 +598,17 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".1"
+            android:layout_height="@dimen/wp13"
             android:id="@+id/layout_6_1_2"
             android:visibility="visible"
             android:gravity="right">
 
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/wp20"
+                android:layout_height="match_parent"
                 android:id="@+id/btn_ans"
+                android:textSize="@dimen/wp6"
                 android:text="확인"/>
 
             <LinearLayout
