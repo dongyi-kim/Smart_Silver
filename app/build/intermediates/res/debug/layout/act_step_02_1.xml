@@ -1,112 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/img_chalkboard_2">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
 
         <TextView
+            android:id="@+id/txt_description"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wp12"
-            android:text=" 다음 수를 50에서 7씩 거꾸로 건너 띄며 세기\n해당 숫자를 누르세요~!"
-            android:id="@+id/txt_discription"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:textSize="@dimen/wp5"
+            android:layout_height="@dimen/wp20"
             android:gravity="center"
-            android:layout_marginTop="@dimen/wp2" />
+            android:text=" 다음 수를 50에서 7씩 거꾸로 건너 띄며 세기\n해당 숫자를 누르세요."
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/wp6"
+            android:textStyle="bold" />
 
         <RelativeLayout
             android:layout_width="@dimen/wp150"
-            android:layout_height="@dimen/wp77">
+            android:layout_height="@dimen/wp67">
+
             <GridLayout
-                android:layout_centerInParent="true"
+                android:id="@+id/grid"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:columnCount="10"
-                android:rowCount="5"
-                android:useDefaultMargins="false"
                 android:orientation="horizontal"
-                android:id="@+id/grid"
-                android:layout_marginTop="@dimen/wp2">
+                android:rowCount="4"
+                android:useDefaultMargins="false">
 
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
-                <include layout="@layout/cell_number_step02"/>
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
+
+                <include layout="@layout/cell_number_step02" />
             </GridLayout>
 
         </RelativeLayout>
 
 
-
         <Button
-            android:layout_width="@dimen/wp20"
-            android:layout_height="@dimen/wp10"
-            android:textSize="@dimen/wp5"
-            android:layout_marginRight="@dimen/wp10"
-            android:text="확인"
+            android:id="@+id/btn_submit"
+            android:layout_width="@dimen/wp30"
+            android:layout_height="@dimen/wp12"
             android:layout_gravity="right"
-            android:id="@+id/btn_submit"/>
-     </LinearLayout>
+            android:layout_marginBottom="@dimen/wp3"
+            android:text="확인"
+            android:textSize="@dimen/wp5" />
 
+    </LinearLayout>
 
     <TextView
-        android:layout_width="@dimen/wp20"
-        android:layout_height="@dimen/wp10"
-        android:gravity="center"
+        android:layout_width="@dimen/wp16"
+        android:layout_height="@dimen/wp8"
         android:layout_gravity="center"
-        android:text="2 - 1"
         android:background="@drawable/img_memo_sticker"
-        android:textSize="@dimen/wp5"/>
+        android:gravity="center"
+        android:text="2 - 1"
+        android:textSize="@dimen/wp4" />
 </RelativeLayout><!-- From: file:/C:/Users/jhobo_000/fuck/Smart_Silver/app/src/main/res/layout/act_step_02_1.xml -->

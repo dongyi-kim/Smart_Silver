@@ -5,33 +5,33 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
+        android:layout_centerInParent="true"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:weightSum="1">
+        >
 
         <TextView
             android:id="@+id/txt_description"
             android:textColor="#FFFFFF"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".15"
+            android:layout_height="@dimen/wp20"
             android:gravity="center"
             android:text=" 아래 자료에서 전기요금 사용기간을 나타내는 곳을 찾아 누르세요."
-            android:textSize="@dimen/wp5" />
+            android:textSize="@dimen/wp6"
+            android:layout_marginBottom="@dimen/wp2"
+            android:textStyle="bold"/>
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/wp80"
             android:layout_gravity="center"
-            android:layout_weight=".8"
             android:gravity="center">
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/frame_7_4_1">
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -1583,12 +1583,13 @@
         </FrameLayout>
 
     </LinearLayout>
+
     <TextView
-        android:layout_width="@dimen/wp20"
-        android:layout_height="@dimen/wp10"
-        android:gravity="center"
+        android:layout_width="@dimen/wp16"
+        android:layout_height="@dimen/wp8"
         android:layout_gravity="center"
-        android:text="7 - 4"
         android:background="@drawable/img_memo_sticker"
-        android:textSize="@dimen/wp5"/>
+        android:gravity="center"
+        android:text="7 - 4"
+        android:textSize="@dimen/wp4" />
 </RelativeLayout>

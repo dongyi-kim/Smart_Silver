@@ -1,102 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/img_chalkboard_2"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_chalkboard_2">
 
     <LinearLayout
-        android:layout_centerInParent="true"
         android:layout_width="@dimen/wp150"
         android:layout_height="@dimen/wp100"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_description"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wp20"
+            android:gravity="center"
+            android:text="평생학교 행복반에서 간식으로 딸기를 두 개씩 나누어 먹으려고 합니다. 몇 명이 먹을 수 있습니까? 손가락으로 두 개씩 묶어보세요."
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/wp5"
+            android:textStyle="bold" />
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wp85"
-            android:layout_gravity="center">
-
-            <LinearLayout
+            android:layout_height="@dimen/wp60"
+            android:background="@drawable/frame_cell_white">
+            <ImageView
+                android:id="@+id/img_many_fruits"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/wp20"
-                    android:textColor="#FFFFFF"
-                    android:text=" 평생학교 행복반에서 간식으로 딸기를 두 개씩 나누어 먹으려고 합니다.\n몇 명이 먹을 수 있습니까? 손가락으로 두 개씩 묶어보세요!"
-                    android:id="@+id/txt_description"
-                    android:textSize="@dimen/wp5"
-                    android:gravity="center"
-                    android:layout_marginTop="20sp" />
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/wp60"
-                    android:layout_gravity="center"
-                    android:scaleType="centerInside"
-                    android:background="@drawable/frame_cell_white"
-                    android:src="@drawable/strawberry_14"
-                    android:id="@+id/img_many_fruits"/>
-            </LinearLayout>
-
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:layout_margin="@dimen/wp5"
+                android:src="@drawable/img_draw_strawberry_14_with_line"/>
             <LinearLayout
+                android:id="@+id/draw_field_0502"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:id="@+id/draw_field_0502">
-
+                android:orientation="horizontal">
             </LinearLayout>
-
+            <Button
+                android:layout_width="@dimen/wp15"
+                android:layout_height="@dimen/wp8"
+                android:text="지우기"
+                android:textSize="@dimen/wp3"
+                android:layout_gravity="end|bottom"
+                android:id="@+id/btn_redraw"/>
         </FrameLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wp15"
-            android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_height="@dimen/wp20"
+            android:layout_marginTop="@dimen/wp2"
             android:orientation="horizontal">
             <Button
+                android:id="@+id/btn_answer_1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.2"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
                 android:text="1"
                 android:textSize="@dimen/wp7"
-                android:id="@+id/btn_answer_1"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.08"/>
-
+                android:textStyle="bold" />
             <Button
+                android:id="@+id/btn_answer_2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.2"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
                 android:text="2"
                 android:textSize="@dimen/wp7"
-                android:id="@+id/btn_answer_2"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.08"/>
-
+                android:textStyle="bold" />
             <Button
+                android:id="@+id/btn_answer_3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.2"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
                 android:text="3"
                 android:textSize="@dimen/wp7"
-                android:id="@+id/btn_answer_3"/>
+                android:textStyle="bold" />
         </LinearLayout>
-
     </LinearLayout>
 
-
     <TextView
-        android:layout_width="@dimen/wp20"
-        android:layout_height="@dimen/wp10"
-        android:gravity="center"
+        android:layout_width="@dimen/wp16"
+        android:layout_height="@dimen/wp8"
         android:layout_gravity="center"
-        android:text="5 - 2"
         android:background="@drawable/img_memo_sticker"
-        android:textSize="@dimen/wp5"/>
+        android:gravity="center"
+        android:text="5 - 2"
+        android:textSize="@dimen/wp4" />
 </RelativeLayout>

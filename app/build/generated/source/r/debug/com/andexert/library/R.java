@@ -24,7 +24,7 @@ public final class R {
 	}
 	public static final class drawable {
 		public static final int ic_launcher = 0x7f0200ba;
-		public static final int shape_rounded = 0x7f0201ca;
+		public static final int shape_rounded = 0x7f02023e;
 	}
 	public static final class id {
 		public static final int doubleRipple = 0x7f090036;

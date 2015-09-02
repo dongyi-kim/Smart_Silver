@@ -71,12 +71,10 @@
                     android:layout_height="match_parent"
                     android:layout_weight=".6"
                     android:orientation="vertical">
-
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight=".6"/>
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
@@ -357,4 +355,13 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+    <TextView
+        android:layout_width="@dimen/wp16"
+        android:layout_height="@dimen/wp8"
+        android:layout_gravity="center"
+        android:background="@drawable/img_memo_sticker"
+        android:gravity="center"
+        android:text="5 - 2"
+        android:textSize="@dimen/wp4" />
 </RelativeLayout>

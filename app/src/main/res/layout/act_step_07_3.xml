@@ -5,32 +5,27 @@
     android:background="@drawable/img_chalkboard_2">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
+        android:layout_centerInParent="true"
         android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:weightSum="1">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/txt_description"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".15"
+            android:layout_height="@dimen/wp20"
             android:gravity="center"
             android:text=" 아래 통장은 어느 은행의 것인지 해당 정보를 찾아 누르세요."
             android:textColor="#FFFFFF"
-            android:textSize="@dimen/wp5" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".05" />
+            android:textSize="@dimen/wp6"
+            android:layout_marginBottom="@dimen/wp2"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/wp80"
             android:layout_gravity="center"
-            android:layout_weight=".62"
             android:gravity="center"
             android:orientation="horizontal"
             android:weightSum="1">
@@ -38,7 +33,7 @@
             <FrameLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight=".8">
+                android:layout_weight="1">
 
                 <View
                     android:layout_width="match_parent"
@@ -65,7 +60,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight=".6"
-                            android:gravity="bottom|center_horizontal"
+                            android:gravity="center"
                             android:text="거래하신 내용(예금 및 대출)"
                             android:textSize="@dimen/wp5" />
 
@@ -867,12 +862,13 @@
         </LinearLayout>
 
     </LinearLayout>
+
     <TextView
-        android:layout_width="@dimen/wp20"
-        android:layout_height="@dimen/wp10"
-        android:gravity="center"
+        android:layout_width="@dimen/wp16"
+        android:layout_height="@dimen/wp8"
         android:layout_gravity="center"
-        android:text="7 - 3"
         android:background="@drawable/img_memo_sticker"
-        android:textSize="@dimen/wp5"/>
+        android:gravity="center"
+        android:text="7 - 3"
+        android:textSize="@dimen/wp4" />
 </RelativeLayout>

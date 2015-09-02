@@ -17,12 +17,15 @@
             android:gravity="center"
             android:textColor="#FFFFFF"
             android:text="아래 그림은 내일의 비올 확률입니다. \n대구지역의 내일 오후 비올 확률은 얼마인지 오른쪽 단추를 누르세요!"
-            android:textSize="@dimen/wp5" />
+            android:textSize="@dimen/wp6"
+            android:textStyle="bold
+            "/>
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp80"
+            android:layout_marginBottom="@dimen/wp2"
             android:background="@drawable/frame_cell_white"
             android:gravity="center"
             android:orientation="horizontal"
@@ -52,26 +55,25 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight=".3"
+                    android:gravity="center"
                     android:orientation="horizontal"
                     android:weightSum="1">
                     <Button
-                        android:layout_width="0dp"
-                        android:layout_weight=".4"
-                        android:layout_height="match_parent"
+                        android:layout_width="@dimen/wp20"
+                        android:layout_height="@dimen/wp20"
                         android:text="0"
                         android:id="@+id/btn_ans_1"
                         android:textSize="@dimen/wp7"
                         />
 
                     <LinearLayout
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/wp5"
                         android:layout_height="match_parent"
                         android:layout_weight=".1"></LinearLayout>
 
                     <Button
-                        android:layout_width="0dp"
-                        android:layout_weight=".4"
-                        android:layout_height="match_parent"
+                        android:layout_width="@dimen/wp20"
+                        android:layout_height="@dimen/wp20"
                         android:text="10"
                         android:id="@+id/btn_ans_2"
                         android:textSize="@dimen/wp7"
@@ -81,12 +83,13 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
     <TextView
-        android:layout_width="@dimen/wp20"
-        android:layout_height="@dimen/wp10"
-        android:gravity="center"
+        android:layout_width="@dimen/wp16"
+        android:layout_height="@dimen/wp8"
         android:layout_gravity="center"
-        android:text="6 - 5"
         android:background="@drawable/img_memo_sticker"
-        android:textSize="@dimen/wp5"/>
+        android:gravity="center"
+        android:text="6 - 5"
+        android:textSize="@dimen/wp4" />
 </RelativeLayout>
