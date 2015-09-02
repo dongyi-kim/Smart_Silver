@@ -1,88 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img_wall">
+    android:background="@drawable/img_wall"
+    android:orientation="vertical">
 
     <LinearLayout
-        android:layout_centerInParent="true"
         android:layout_width="@dimen/wp150"
         android:layout_height="@dimen/wp100"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:layout_centerInParent="true"
+        android:background="@drawable/img_chalkboard_2"
+        android:gravity="center"
+        android:orientation="vertical">
 
 
-    <ui.RippleView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ripple_set_01">
+        <ui.RippleView
+            android:id="@+id/ripple_set_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-        <ui.MemoFrameLayout
-            android:layout_width="@dimen/wp100"
-            android:layout_height="@dimen/wp20">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="A 단계"
-                android:textSize="@dimen/wp13"/>
+            <ui.MemoFrameLayout
+                android:layout_width="@dimen/wp100"
+                android:layout_height="@dimen/wp20">
 
-        </ui.MemoFrameLayout>
-    </ui.RippleView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="A 단계"
+                    android:textSize="@dimen/wp13" />
 
-    <ui.RippleView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/wp5"
-        android:id="@+id/ripple_set_02">
-        <ui.MemoFrameLayout
-            android:layout_width="@dimen/wp100"
-            android:layout_height="@dimen/wp20">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="B 단계"
-                android:textSize="@dimen/wp13"/>
+            </ui.MemoFrameLayout>
+        </ui.RippleView>
 
-        </ui.MemoFrameLayout>
-    </ui.RippleView>
+        <ui.RippleView
+            android:id="@+id/ripple_set_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/wp5">
 
-    <ui.RippleView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/wp5"
-        android:id="@+id/ripple_set_03">
-        <ui.MemoFrameLayout
-            android:layout_width="@dimen/wp100"
-            android:layout_height="@dimen/wp20">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="C 단계"
-                android:textSize="@dimen/wp13"/>
+            <ui.MemoFrameLayout
+                android:layout_width="@dimen/wp100"
+                android:layout_height="@dimen/wp20">
 
-        </ui.MemoFrameLayout>
-    </ui.RippleView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="B 단계"
+                    android:textSize="@dimen/wp13" />
 
-    <ui.RippleView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/wp5"
-        android:id="@+id/ripple_set_04">
-        <ui.MemoFrameLayout
-            android:layout_width="@dimen/wp100"
-            android:layout_height="@dimen/wp20">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="D 단계"
-                android:textSize="@dimen/wp13"/>
+            </ui.MemoFrameLayout>
+        </ui.RippleView>
 
-        </ui.MemoFrameLayout>
-    </ui.RippleView>
+        <ui.RippleView
+            android:id="@+id/ripple_set_03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/wp5">
+
+            <ui.MemoFrameLayout
+                android:layout_width="@dimen/wp100"
+                android:layout_height="@dimen/wp20">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="C 단계"
+                    android:textSize="@dimen/wp13" />
+
+            </ui.MemoFrameLayout>
+        </ui.RippleView>
+
+        <ui.RippleView
+            android:id="@+id/ripple_set_04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/wp5">
+
+            <ui.MemoFrameLayout
+                android:layout_width="@dimen/wp100"
+                android:layout_height="@dimen/wp20">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="D 단계"
+                    android:textSize="@dimen/wp13" />
+
+            </ui.MemoFrameLayout>
+        </ui.RippleView>
 
 
     </LinearLayout>

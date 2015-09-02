@@ -117,6 +117,7 @@ public class ActStep0201 extends StageActivity {
         StartRecording();
     }
 
+    //123123
     public void checkAnswer(Object o){
         int iSelected = mapIndex.get(o);
         if(isSelected[iSelected])

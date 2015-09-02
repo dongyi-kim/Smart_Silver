@@ -1,24 +1,11 @@
 package src.activities;
 
 import android.os.Bundle;
-import android.os.Environment;
-import android.view.Gravity;
 import android.widget.Toast;
-
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
-import java.io.OutputStream;
-import java.io.Serializable;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import src.DB;
 import src.ResultData;
 import src.Utility;
-import src.activities.Step01.ActStep01;
 
 /**
  * Created by waps12b on 15. 3. 25..

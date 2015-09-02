@@ -8,7 +8,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import src.activities.*;
 import src.activities.Step01.*;
 import src.activities.Step02.*;
 import src.activities.Step03.*;
@@ -148,7 +147,7 @@ public class Utility {
     }
 
     private static Class<?>[][] arrStepClass = {
-            {ActStep01.class, ActStep0102.class, ActStep0103.class, ActStep0104.class, ActStep0105.class  },//step1
+            {ActStep0101.class, ActStep0102.class, ActStep0103.class, ActStep0104.class, ActStep0105.class  },//step1
             {ActStep0201.class, ActStep0202.class, ActStep0203.class, ActStep0204.class, ActStep0205.class },//step2
             {ActStep0301.class, ActStep0302.class, ActStep0303.class, ActStep0304.class, ActStep0305.class },//step3
             {ActStep0401.class, ActStep0402.class, ActStep0403.class, ActStep0404.class, ActStep0405.class },//step4

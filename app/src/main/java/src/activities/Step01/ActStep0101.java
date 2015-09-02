@@ -19,7 +19,7 @@ import src.dialogs.DlgResultMark;
 /**
  * Created by waps12b on 15. 3. 15..
  */
-public class ActStep01 extends StageActivity implements View.OnClickListener {
+public class ActStep0101 extends StageActivity implements View.OnClickListener {
 
     private TextView txtQuestion;
     private TextView txtAnswer;

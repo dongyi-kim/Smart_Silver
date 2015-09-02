@@ -13,6 +13,7 @@ import java.util.Random;
 import cdmst.smartsilver.R;
 import src.activities.ActMain;
 import src.activities.StageActivity;
+import src.activities.Step06.ActStep0601;
 import src.dialogs.DlgResultMark;
 
 /**
@@ -92,7 +93,7 @@ public class ActStep0505 extends StageActivity {
     }
 
     public void goNext(Object object){
-        Intent intent = new Intent(this, ActMain.class);
+        Intent intent = new Intent(this, ActStep0601.class);
         startActivity(intent);
     }
 
