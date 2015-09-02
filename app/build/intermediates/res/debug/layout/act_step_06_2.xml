@@ -8,17 +8,18 @@
         android:layout_width="@dimen/wp150"
         android:layout_height="@dimen/wp100"
         android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txt_discription"
+            android:id="@+id/txt_description"
             android:textColor="#FFFFFF"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wp15"
+            android:layout_height="@dimen/wp20"
             android:gravity="center"
-            android:textStyle="bold"
             android:text="다음 자료에서 1주일은 며칠입니까?"
-            android:textSize="@dimen/wp6" />
+            android:textSize="@dimen/wp7"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,13 +27,14 @@
             android:background="@drawable/frame_cell_white"
             android:gravity="center"
             android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/wp2"
             android:weightSum="1">
 
             <ImageView
                 android:id="@+id/img_6_2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight=".4"
+                android:layout_weight=".5"
                 android:src="@drawable/circle_graph_6_2" />
 
             <LinearLayout
@@ -49,8 +51,8 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/wp40"
+                    android:layout_height="@dimen/wp15"
                     android:text="2시간"
                     android:textSize="@dimen/wp7"
                     android:id="@+id/btn_ans_1"/>
@@ -61,8 +63,8 @@
                     android:layout_weight=".1"></LinearLayout>
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/wp40"
+                    android:layout_height="@dimen/wp15"
                     android:text="4시간"
                     android:textSize="@dimen/wp7"
                     android:id="@+id/btn_ans_2"/>
@@ -73,8 +75,8 @@
                     android:layout_weight=".1"></LinearLayout>
 
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/wp40"
+                    android:layout_height="@dimen/wp15"
                     android:text="5시간"
                     android:textSize="@dimen/wp6"
                     android:visibility="gone"

@@ -4,16 +4,16 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
+        android:layout_centerInParent="true"
         android:gravity="center_horizontal"
-        android:weightSum="1">
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_weight=".2"
+    <TextView
+            android:layout_height="@dimen/wp20"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:textStyle="bold"
             android:text=" 아래 그림은 천안에서 포항으로 가는 고속버스 운행시간입니다.\n조옥자씨는 포항에 있는 언니네 가려고 합니다.\n버스 요금은 얼마인지 해당 요금을 누르세요!"
             android:textColor="#FFFFFF"
             android:id="@+id/txt_description"
@@ -21,18 +21,16 @@
             android:gravity="center"/>
 
         <LinearLayout
+            android:layout_height="@dimen/wp80"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".8"
             android:orientation="horizontal"
             android:weightSum="1"
             android:layout_gravity="center"
             android:gravity="center">
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight=".8"
                 android:orientation="vertical"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -173,10 +171,6 @@
                     android:gravity="center"
                     android:id="@+id/layout_line_4"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight=".1"/>
             </LinearLayout>
         </LinearLayout>
 

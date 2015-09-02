@@ -4,14 +4,14 @@ import cdmst.smartsilver.R;
 public class Step0601DataSet {
 
     public int img;
-    public String Discription;
+    public String Description;
     public String txtBtn1;
     public String txtBtn2;
     public String strAns;
 
     public void setData(int iSeed) {
         int rand = (int)(Math.random() * 3.0); // 0 ~ 2
-        Discription = DiscriptionList[iSeed][rand];
+        Description = DescriptionList[iSeed][rand];
         img = imgList[iSeed][rand];
         txtBtn1 = txtBtn1List[iSeed][rand];
         txtBtn2 = txtBtn2List[iSeed][rand];
@@ -26,7 +26,7 @@ public class Step0601DataSet {
             {R.drawable.circle_graph_6_1_3,R.drawable.circle_graph_6_1_3,R.drawable.circle_graph_6_1_3,}
     };
 
-    private static final String DiscriptionList[][] = {
+    private static final String DescriptionList[][] = {
             {"다음 표에서 봄에 해당되는 개월 수는 몇 개월인가요?", "다음 표에서 여름에 해당되는 개월 수는 몇 개월인가요?", "다음 표에서 봄에 해당되는 개월 수는 몇 개월인가요?"},
             {"다음은 어느 해의 달력입니다. 목요일이 되는 날짜는 몇 개입니까?","다음은 어느 해의 달력입니다. 월요일이 되는 날짜는 몇 개입니까?","다음은 어느 해의 달력입니다. 일요일이 되는 날짜는 몇 개입니까?"},
             {"다음 표에서 3월부터 5월은 무슨 계절입니까?","다음 표에서 9월부터 11월은 무슨 계절입니까?","다음 표에서 6월부터 8월은 무슨 계절입니까?"},

@@ -5,27 +5,27 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
+        android:layout_centerInParent="true"
         android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:weightSum="1">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".2"
+            android:layout_height="@dimen/wp20"
             android:textSize="@dimen/wp5"
+            android:textStyle="bold"
             android:textColor="#FFFFFF"
             android:gravity="center"
             android:id="@+id/txt_description"
+            android:layout_marginBottom="@dimen/wp2"
             android:text="아래 영수증은 진료비 계산서입니다.\n김 할머니의 진찰료는 얼마인지 찾아 누르세요.">
         </TextView>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".75"
+            android:layout_height="@dimen/wp80"
             android:gravity="center"
             android:orientation="horizontal"
             android:visibility="gone"
@@ -33,14 +33,13 @@
             android:weightSum="1">
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:src="@drawable/receipt_7_5_1_1"
                 android:layout_height="match_parent"
+                android:layout_width="@dimen/wp100"
+                android:src="@drawable/receipt_7_5_1_1"
                 android:orientation="vertical"
                 android:weightSum="1"
                 android:background="@drawable/receipt_7_5_4_1"
-                android:id="@+id/img_7_5_2"
-                android:layout_weight=".6">
+                android:id="@+id/img_7_5_2">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -156,8 +155,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".75"
+            android:layout_height="@dimen/wp80"
             android:gravity="center"
             android:visibility="visible"
             android:id="@+id/layout_7_5_1"

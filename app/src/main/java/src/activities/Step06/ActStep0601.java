@@ -17,7 +17,7 @@ import src.dialogs.DlgResultMark;
  */
 public class ActStep0601 extends StageActivity {
 
-    private TextView txtDiscription;
+    private TextView txtDescription;
     private ImageView img;
     private Button btnAnswer[] = new Button[2];
     private boolean ans;
@@ -28,7 +28,7 @@ public class ActStep0601 extends StageActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_06_1);
 
-        txtDiscription = (TextView)findViewById(R.id.txt_discription);
+        txtDescription = (TextView)findViewById(R.id.txt_description);
 
         img = (ImageView)findViewById(R.id.img_6_1);
 
@@ -61,7 +61,7 @@ public class ActStep0601 extends StageActivity {
 
         dataSet.setData(Seed);
 
-        txtDiscription.setText(dataSet.Discription);
+        txtDescription.setText(dataSet.Description);
         img.setImageResource(dataSet.img);
 
         // btn set

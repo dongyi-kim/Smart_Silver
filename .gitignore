@@ -4,6 +4,7 @@
 
 # files for the dex VM
 *.dex
+app.iml
 
 # Java class files
 *.class

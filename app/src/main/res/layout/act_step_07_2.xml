@@ -5,30 +5,25 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="1">
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_weight=".2"
+    <TextView
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/wp20"
             android:text="아래 표는 지하철 노선도입니다.\n약수에 사는 점순이 할머니는 삼각지에 가려고 합니다.\n약수에서 삼각지까지 가장 빠르게 가려면 몇 정거장 가야 합니까?"
             android:id="@+id/txt_description"
             android:textSize="@dimen/wp6"
+            android:textStyle="bold"
             android:textColor="#FFFFFF"
             android:gravity="center"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".05"/>
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".65"
+            android:layout_height="@dimen/wp80"
             android:gravity="center"
             android:orientation="horizontal"
             android:weightSum="1">
