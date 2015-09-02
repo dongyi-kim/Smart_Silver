@@ -4,31 +4,26 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="1">
+        android:layout_centerInParent="true"
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
+        android:orientation="vertical">
 
         <TextView
-            android:layout_weight=".15"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/wp20"
             android:text=" 노인학교에서 가을축제 준비를 하기 위해 시장에 갔습니다.\n값이 더 저렴한 송편의 그림을 누르세요!"
             android:textColor="#FFFFFF"
             android:id="@+id/txt_description"
-            android:textSize="@dimen/wp5"
+            android:textSize="@dimen/wp6"
             android:gravity="center" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".05"/>
 
         <LinearLayout
+            android:background="@drawable/frame_cell_white"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/wp80"
             android:orientation="horizontal"
-            android:layout_weight="0.7"
             android:weightSum="1"
             android:layout_gravity="center"
             android:gravity="center">
@@ -39,6 +34,7 @@
                 android:layout_weight="0.4"
                 android:orientation="vertical"
                 android:layout_gravity="center"
+                android:gravity="bottom"
                 android:weightSum="1">
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -80,6 +76,7 @@
                 android:layout_weight="0.4"
                 android:orientation="vertical"
                 android:layout_gravity="center"
+                android:gravity="bottom"
                 android:weightSum="1">
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -114,4 +111,12 @@
 
     </LinearLayout>
 
+    <TextView
+        android:layout_width="@dimen/wp18"
+        android:layout_height="@dimen/wp8"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="5 - 5"
+        android:background="@drawable/img_memo_sticker"
+        android:textSize="@dimen/wp5"/>
 </RelativeLayout><!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_05_5.xml -->

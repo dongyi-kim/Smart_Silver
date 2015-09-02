@@ -5,31 +5,25 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
         android:orientation="vertical"
-        android:weightSum="1">
+        android:layout_centerInParent="true">
 
         <TextView
             android:id="@+id/txt_discription"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="20sp"
-            android:layout_weight=".2"
+            android:layout_height="@dimen/wp20"
             android:gravity="center"
             android:textColor="#FFFFFF"
             android:text="아래 그림은 내일의 비올 확률입니다. \n대구지역의 내일 오후 비올 확률은 얼마인지 오른쪽 단추를 누르세요!"
-            android:textSize="@dimen/wp6" />
+            android:textSize="@dimen/wp5" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".05"></LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".6"
+            android:layout_height="@dimen/wp80"
+            android:background="@drawable/frame_cell_white"
             android:gravity="center"
             android:orientation="horizontal"
             android:weightSum="1">
@@ -87,4 +81,12 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+    <TextView
+        android:layout_width="@dimen/wp18"
+        android:layout_height="@dimen/wp8"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="6 - 5"
+        android:background="@drawable/img_memo_sticker"
+        android:textSize="@dimen/wp5"/>
 </RelativeLayout><!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_06_5.xml -->

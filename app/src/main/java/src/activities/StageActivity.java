@@ -39,6 +39,7 @@ public abstract class StageActivity extends FrameActivity {
         super.onCreate(bundle);
         iStep  = Utility.getStep(this.getClass());
         iLevel = Utility.getLevel(this.getClass());
+        iStage = 1;
     }
 
     public void StartRecording()
@@ -96,6 +97,7 @@ public abstract class StageActivity extends FrameActivity {
         {
             dataNow = null;
         }
+        iStage = 1;
     }
 
     //copy & paste

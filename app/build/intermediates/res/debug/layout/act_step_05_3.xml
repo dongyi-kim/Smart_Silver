@@ -1,67 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/img_chalkboard_2"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_chalkboard_2">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
+        android:layout_centerInParent="true"
         android:gravity="center_horizontal"
-        android:weightSum="1">
+        android:orientation="vertical">
 
         <TextView
-            android:layout_weight=".2"
-            android:textColor="#FFFFFF"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text=" 아래 10L 의 빈 항아리가 있습니다. 빈 항아리를 채우려면\n옆의 그릇으로 몇 번 부어야 하는지 알맞은 숫자를 누르세요."
             android:id="@+id/txt_description"
-            android:textSize="@dimen/wp6"
-            android:gravity="center"/>
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wp15"
+            android:gravity="center"
+            android:text=" 아래 10L 의 빈 항아리가 있습니다. 빈 항아리를 채우려면\n옆의 그릇으로 몇 번 부어야 하는지 알맞은 숫자를 누르세요."
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/wp6" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.6"
-            android:orientation="horizontal"
-            android:weightSum="1"
+            android:layout_height="@dimen/wp65"
+            android:layout_marginBottom="@dimen/wp2"
+            android:layout_marginTop="@dimen/wp2"
             android:layout_gravity="center"
-            android:gravity="center">
-            
+            android:background="@drawable/frame_cell_white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.3"
                 android:orientation="vertical"
-                android:weightSum="1">
+                android:weightSum="1"
+                android:gravity="center">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
+                    android:layout_gravity="right"
                     android:layout_weight=".25"
                     android:scaleType="fitXY"
-                    android:layout_gravity="right"
-                    android:src="@drawable/arrow_pot_small_to_big"/>
+                    android:src="@drawable/arrow_pot_small_to_big" />
+
                 <ImageButton
+                    android:id="@+id/ibtn_pot_small"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight=".25"
-                    android:scaleType="fitCenter"
                     android:background="@null"
-                    android:id="@+id/ibtn_pot_small"
-                    android:src="@drawable/pot_small"/>
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pot_small" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight=".1"/>
+                    android:layout_weight=".1" />
+
                 <TextView
+                    android:id="@+id/txt_pot_small_capacity"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
-                    android:layout_weight=".2"
                     android:layout_gravity="center"
+                    android:layout_weight=".2"
                     android:text="1L"
-                    android:id="@+id/txt_pot_small_capacity"
-                    android:textSize="@dimen/wp7"/>
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/wp7"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
@@ -69,72 +78,83 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.4"
                 android:orientation="vertical"
-                android:weightSum="1">
+                android:weightSum="1"
+                android:gravity="center">
+
                 <ImageView
+                    android:id="@+id/img_pot_big"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight=".75"
-                    android:scaleType="fitCenter"
                     android:background="@null"
-                    android:id="@+id/img_pot_big"
-                    android:src="@drawable/pot_0_percent"/>
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pot_0_percent" />
 
                 <TextView
+                    android:id="@+id/txt_pot_big_capacity"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
-                    android:layout_weight=".2"
                     android:layout_gravity="center"
+                    android:layout_weight=".2"
                     android:text="12L"
-                    android:id="@+id/txt_pot_big_capacity"
-                    android:textSize="@dimen/wp7"/>
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/wp7"
+                    android:textStyle="bold" />
             </LinearLayout>
 
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_weight=".2"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/wp15"
             android:layout_gravity="center"
             android:gravity="center"
+            android:orientation="horizontal"
             android:weightSum="1">
 
             <Button
-                android:layout_weight=".25"
-                android:textSize="@dimen/wp5"
+                android:id="@+id/btn_answer_1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_weight=".25"
                 android:text="1"
-                android:id="@+id/btn_answer_1"/>
+                android:textSize="@dimen/wp5" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.05"/>
+                android:layout_weight="0.05" />
 
             <Button
-                android:layout_weight=".25"
-                android:textSize="@dimen/wp5"
+                android:id="@+id/btn_answer_2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_weight=".25"
                 android:text="2"
-                android:id="@+id/btn_answer_2" />
+                android:textSize="@dimen/wp5" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.05"/>
+                android:layout_weight="0.05" />
 
             <Button
-                android:layout_weight=".25"
-                android:textSize="@dimen/wp5"
+                android:id="@+id/btn_answer_3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_weight=".25"
                 android:text="3"
-                android:id="@+id/btn_answer_3" />
+                android:textSize="@dimen/wp5" />
         </LinearLayout>
     </LinearLayout>
 
+    <TextView
+        android:layout_width="@dimen/wp18"
+        android:layout_height="@dimen/wp8"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="5 - 3"
+        android:background="@drawable/img_memo_sticker"
+        android:textSize="@dimen/wp5"/>
 </RelativeLayout><!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_05_3.xml -->

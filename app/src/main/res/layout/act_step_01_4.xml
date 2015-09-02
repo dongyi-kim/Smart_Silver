@@ -235,13 +235,12 @@
         </LinearLayout>
     </LinearLayout>
 
-
     <TextView
-        android:layout_width="@dimen/wp20"
-        android:layout_height="@dimen/wp10"
-        android:layout_gravity="center"
-        android:background="@drawable/img_memo_sticker"
+        android:layout_width="@dimen/wp18"
+        android:layout_height="@dimen/wp8"
         android:gravity="center"
+        android:layout_gravity="center"
         android:text="1 - 4"
-        android:textSize="@dimen/wp5" />
+        android:background="@drawable/img_memo_sticker"
+        android:textSize="@dimen/wp5"/>
 </RelativeLayout>

@@ -122,4 +122,12 @@
         </LinearLayout>
     </LinearLayout>
 
+    <TextView
+        android:layout_width="@dimen/wp18"
+        android:layout_height="@dimen/wp8"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="5 - 4"
+        android:background="@drawable/img_memo_sticker"
+        android:textSize="@dimen/wp5"/>
 </RelativeLayout><!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_05_4.xml -->

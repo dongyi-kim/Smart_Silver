@@ -5,26 +5,25 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="1">
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/txt_discription"
             android:textColor="#FFFFFF"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="20sp"
-            android:layout_weight=".2"
+            android:layout_height="@dimen/wp15"
             android:gravity="center"
+            android:textStyle="bold"
             android:text="다음 자료에서 1주일은 며칠입니까?"
             android:textSize="@dimen/wp6" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".6"
+            android:layout_height="@dimen/wp80"
+            android:background="@drawable/frame_cell_white"
             android:gravity="center"
             android:orientation="horizontal"
             android:weightSum="1">
@@ -85,4 +84,13 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+    <TextView
+        android:layout_width="@dimen/wp18"
+        android:layout_height="@dimen/wp8"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="6 - 2"
+        android:background="@drawable/img_memo_sticker"
+        android:textSize="@dimen/wp5"/>
 </RelativeLayout><!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_06_2.xml -->

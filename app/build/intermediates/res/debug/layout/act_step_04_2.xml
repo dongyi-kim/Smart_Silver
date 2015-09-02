@@ -7,14 +7,15 @@
         android:layout_width="@dimen/wp150"
         android:layout_height="@dimen/wp100"
         android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wp15"
-            android:text=" 다음 중 곱하기가 그림과 알맞게 표시된 것을 누르세요!"
+            android:layout_height="@dimen/wp20"
+            android:text=" 다음 중 곱하기가\n그림과 알맞게 표시된 것을 누르세요!"
             android:id="@+id/txt_discription"
-            android:textSize="@dimen/wp6"
+            android:textSize="@dimen/wp7"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
             android:gravity="center"/>
@@ -97,17 +98,13 @@
                         android:id="@+id/txt_answer_2"/>
                 </FrameLayout>
             </LinearLayout>
-
         </LinearLayout>
-
-
     </LinearLayout>
 
 
-
     <TextView
-        android:layout_width="@dimen/wp20"
-        android:layout_height="@dimen/wp10"
+        android:layout_width="@dimen/wp18"
+        android:layout_height="@dimen/wp8"
         android:gravity="center"
         android:layout_gravity="center"
         android:text="4 - 2"
