@@ -1,114 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/img_chalkboard_2"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_chalkboard_2">
 
     <LinearLayout
-        android:layout_centerInParent="true"
         android:layout_width="@dimen/wp150"
         android:layout_height="@dimen/wp100"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/txt_description"
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp20"
-            android:text=" 노인학교에서 가을축제 준비를 하기 위해 시장에 갔습니다.\n값이 더 저렴한 송편의 그림을 누르세요!"
+            android:gravity="center"
+            android:text="노인학교에서 가을축제 준비를 하기 위해 시장에 갔습니다. 한 접시 당 가격이 더 저렴한 것은 어느 것일까요?"
             android:textColor="#FFFFFF"
-            android:id="@+id/txt_description"
             android:textSize="@dimen/wp6"
-            android:gravity="center" />
-
+            android:textStyle="bold" />
 
         <LinearLayout
-            android:background="@drawable/frame_cell_white"
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp80"
-            android:orientation="horizontal"
-            android:weightSum="1"
             android:layout_gravity="center"
-            android:gravity="center">
+            android:layout_marginBottom="@dimen/wp2"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.4"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:gravity="bottom"
-                android:weightSum="1">
-                <FrameLayout
+            <FrameLayout
+                android:layout_width="@dimen/wp60"
+                android:layout_height="@dimen/wp65">
+                <Button
+                    android:id="@+id/btn_answer_1"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.25">
+                    android:layout_height="match_parent"
+                    android:background="@null" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background_white_transparent"
+                    android:orientation="vertical">
                     <ImageView
+                        android:id="@+id/img_picture_1"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/empty_space_0505"
+                        android:layout_height="@dimen/wp50"
                         android:scaleType="fitCenter"
-                        android:background="@null"/>
+                        android:src="@drawable/img_mult_songpyeon_4_1" />
                     <TextView
+                        android:id="@+id/txt_answer_1"
                         android:layout_width="match_parent"
-                        android:textColor="#FFFFFF"
-                        android:layout_height="match_parent"
-                        android:text="1접시 1200원\n"
+                        android:layout_height="@dimen/wp15"
                         android:layout_gravity="center"
+                        android:background="#FFFFFFFF"
                         android:gravity="center"
-                        android:textSize="@dimen/wp5"
-                        android:id="@+id/txt_answer_description_1"/>
-                </FrameLayout>
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.7"
-                    android:src="@drawable/img_songpyeon_1"
-                    android:background="@null"
-                    android:id="@+id/ibtn_answer_1"/>
-            </LinearLayout>
+                        android:text="1접시 1,000원"
+                        android:textSize="@dimen/wp6" />
+                </LinearLayout>
+            </FrameLayout>
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".05"/>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.4"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:gravity="bottom"
-                android:weightSum="1">
-                <FrameLayout
+            <View
+                android:layout_width="@dimen/wp15"
+                android:layout_height="match_parent"/>
+            <FrameLayout
+                android:layout_width="@dimen/wp60"
+                android:layout_height="@dimen/wp65">
+                <Button
+                    android:id="@+id/btn_answer_2"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.25">
+                    android:layout_height="match_parent"
+                    android:background="@null" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background_white_transparent"
+                    android:orientation="vertical">
                     <ImageView
+                        android:id="@+id/img_picture_2"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/empty_space_0505"
+                        android:layout_height="@dimen/wp50"
                         android:scaleType="fitCenter"
-                        android:background="@null"/>
+                        android:src="@drawable/img_mult_songpyeon_4_2" />
                     <TextView
-                        android:textColor="#FFFFFF"
+                        android:id="@+id/txt_answer_2"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="1접시 1800원\n"
+                        android:layout_height="@dimen/wp15"
                         android:layout_gravity="center"
+                        android:background="#FFFFFFFF"
                         android:gravity="center"
-                        android:textSize="@dimen/wp5"
-                        android:id="@+id/txt_answer_description_2"/>
-                </FrameLayout>
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.7"
-                    android:src="@drawable/img_songpyeon_2"
-                    android:background="@null"
-                    android:id="@+id/ibtn_answer_2"/>
-            </LinearLayout>
-
+                        android:text="2접시 1,800원"
+                        android:textSize="@dimen/wp6" />
+                </LinearLayout>
+            </FrameLayout>
         </LinearLayout>
-
     </LinearLayout>
 
     <TextView

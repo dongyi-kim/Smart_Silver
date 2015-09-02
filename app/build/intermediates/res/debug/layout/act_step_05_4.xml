@@ -1,124 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@drawable/img_chalkboard_2"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/img_chalkboard_2">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
+        android:layout_centerInParent="true"
         android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:weightSum="1">
+        android:orientation="vertical">
 
         <TextView
-            android:layout_weight=".2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text=" 노인학교에서 가을축제 준비를 하기 위해 동대문에 갔습니다.\n냅킨 한 묶음의 가격은 얼마입니까?"
             android:id="@+id/txt_description"
-            android:textColor="#FFFFFF"
-            android:textSize="@dimen/wp6"
-            android:gravity="center"/>
-
-        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".15">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/empty_space_0504"
-                android:scaleType="fitCenter"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#FFFFFF"
-                android:text="3묶음 300원\n"
-                android:layout_gravity="center"
-                android:textSize="@dimen/wp6"
-                android:id="@+id/txt_answer_description"/>
-        </FrameLayout>
+            android:layout_height="@dimen/wp20"
+            android:gravity="center"
+            android:text=" 노인학교에서 가을축제 준비를 하기 위해 동대문에 갔습니다. 냅킨 한 묶음의 가격은 얼마입니까?"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="@dimen/wp6" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".45"
-            android:weightSum="1"
+            android:layout_height="@dimen/wp60"
             android:layout_gravity="center"
+            android:background="@drawable/frame_cell_white"
             android:gravity="center"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:id="@+id/drawfield"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".8"
-                android:layout_gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_price_description"
+                android:layout_width="@dimen/wp50"
+                android:layout_height="@dimen/wp10"
                 android:gravity="center"
-                android:orientation="vertical">
-
-
-                <include
-                    android:id="@+id/drawfield_row_1"
-                    layout="@layout/view_round_button_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center" />
-
-                <include
-                    android:id="@+id/drawfield_row_2"
-                    layout="@layout/view_round_button_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center" />
-
-
-            </LinearLayout>
-
+                android:textColor="#FFFFFFFF"
+                android:layout_margin="@dimen/wp2"
+                android:text="2묶음 1800원"
+                android:textSize="@dimen/wp6"
+                android:background="@drawable/frame_cell_blue"/>
+            <include
+                android:id="@+id/drawfield_row_1"
+                layout="@layout/view_horizeontal_image_button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5sp"
+                android:layout_weight="1"
+                android:gravity="center" />
+            <include
+                android:id="@+id/drawfield_row_2"
+                layout="@layout/view_horizeontal_image_button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center" />
         </LinearLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".04"/>
-
         <LinearLayout
-            android:layout_weight=".15"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:weightSum="1">
+            android:layout_height="@dimen/wp20"
+            android:layout_marginTop="@dimen/wp2"
+            android:orientation="horizontal">
 
             <Button
-                android:layout_weight=".25"
-                android:textSize="@dimen/wp7"
+                android:id="@+id/btn_answer_1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
                 android:text="1"
-                android:id="@+id/btn_answer_1"/>
+                android:textSize="@dimen/wp7"
+                android:textStyle="bold" />
 
             <Button
-                android:layout_weight=".25"
-                android:textSize="@dimen/wp7"
+                android:id="@+id/btn_answer_2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
                 android:text="2"
-                android:id="@+id/btn_answer_2" />
+                android:textSize="@dimen/wp7"
+                android:textStyle="bold" />
 
             <Button
-                android:layout_weight=".25"
-                android:textSize="@dimen/wp7"
+                android:id="@+id/btn_answer_3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
                 android:text="3"
-                android:id="@+id/btn_answer_3" />
+                android:textSize="@dimen/wp7"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 

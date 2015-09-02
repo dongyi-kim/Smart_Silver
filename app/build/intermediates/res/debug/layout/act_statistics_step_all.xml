@@ -9,7 +9,8 @@
         android:layout_height="@dimen/wp100"
         android:background="#FFFFFF"
         android:orientation="vertical">
-        <ui.ChalkTextView
+        <TextView
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp15"
             android:textSize="@dimen/wp14"
