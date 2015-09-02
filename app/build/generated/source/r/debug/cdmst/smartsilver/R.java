@@ -4888,7 +4888,7 @@ containing a value of this type.
         public static final int txt_description=0x7f09008c;
         public static final int txt_discription=0x7f0900b3;
         public static final int txt_equal_sign=0x7f0900b9;
-        public static final int txt_fomula=0x7f09019f;
+        public static final int txt_fomula=0x7f09019e;
         public static final int txt_food_description_1=0x7f0900e0;
         public static final int txt_food_description_2=0x7f0900e2;
         public static final int txt_fruit_left=0x7f090123;
@@ -4897,7 +4897,7 @@ containing a value of this type.
         public static final int txt_grid_1_2=0x7f09009e;
         public static final int txt_grid_2_1=0x7f0900a4;
         public static final int txt_grid_2_2=0x7f0900aa;
-        public static final int txt_input_answer=0x7f0901a0;
+        public static final int txt_input_answer=0x7f09019f;
         public static final int txt_margin_left_1=0x7f090103;
         public static final int txt_margin_left_2=0x7f090108;
         public static final int txt_margin_left_3=0x7f090105;
@@ -4934,7 +4934,7 @@ containing a value of this type.
         public static final int txt_spend_5=0x7f0900fc;
         public static final int txt_spend_decription_1=0x7f0900f2;
         public static final int txt_spend_decription_2=0x7f0900f5;
-        public static final int txt_step_number=0x7f09019e;
+        public static final int txt_step_number=0x7f0901a0;
         public static final int txt_title=0x7f09007a;
         public static final int up=0x7f090008;
         public static final int useLogo=0x7f090019;

@@ -105,7 +105,7 @@ public class ActStep0201 extends StageActivity {
         iLastButton = arrRowCount[iStage-1] * 10 -1;
         for(int i=0;i<=idxLast;i++)
         {
-            isSelected[iLastButton] = false;
+            isSelected[i] = false;
             if(i <= iLastButton)
                 frameLayout[i].setVisibility(View.VISIBLE);
             else

@@ -55,7 +55,7 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:21:17
 	android:name
 		ADDED from AndroidManifest.xml:21:27
-activity#src.activities.Step01.ActStep01
+activity#src.activities.Step01.ActStep0101
 ADDED from AndroidManifest.xml:25:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:27:13

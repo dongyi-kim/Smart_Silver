@@ -1908,7 +1908,7 @@ int id txt_current_record 0x7f090061
 int id txt_description 0x7f09008c
 int id txt_discription 0x7f0900b3
 int id txt_equal_sign 0x7f0900b9
-int id txt_fomula 0x7f09019f
+int id txt_fomula 0x7f09019e
 int id txt_food_description_1 0x7f0900e0
 int id txt_food_description_2 0x7f0900e2
 int id txt_fruit_left 0x7f090123
@@ -1917,7 +1917,7 @@ int id txt_grid_1_1 0x7f090098
 int id txt_grid_1_2 0x7f09009e
 int id txt_grid_2_1 0x7f0900a4
 int id txt_grid_2_2 0x7f0900aa
-int id txt_input_answer 0x7f0901a0
+int id txt_input_answer 0x7f09019f
 int id txt_margin_left_1 0x7f090103
 int id txt_margin_left_2 0x7f090108
 int id txt_margin_left_3 0x7f090105
@@ -1954,7 +1954,7 @@ int id txt_spend_4 0x7f0900fa
 int id txt_spend_5 0x7f0900fc
 int id txt_spend_decription_1 0x7f0900f2
 int id txt_spend_decription_2 0x7f0900f5
-int id txt_step_number 0x7f09019e
+int id txt_step_number 0x7f0901a0
 int id txt_title 0x7f09007a
 int id up 0x7f090008
 int id useLogo 0x7f090019
