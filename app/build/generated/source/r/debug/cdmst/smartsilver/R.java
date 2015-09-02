@@ -4759,7 +4759,6 @@ containing a value of this type.
         public static final int disableHome=0x7f090013;
         public static final int doubleRipple=0x7f090036;
         public static final int draw_field_0502=0x7f090114;
-        public static final int drawfield=0x7f09011a;
         public static final int drawfield_row_1=0x7f09008d;
         public static final int drawfield_row_2=0x7f09008e;
         public static final int dropdown=0x7f09003b;
@@ -5077,6 +5076,7 @@ containing a value of this type.
         public static final int txt_playtime_total=0x7f09006d;
         public static final int txt_pot_big_capacity=0x7f090119;
         public static final int txt_pot_small_capacity=0x7f090117;
+        public static final int txt_price_description=0x7f09011a;
         public static final int txt_process_1=0x7f0900cb;
         public static final int txt_process_2=0x7f0900ce;
         public static final int txt_process_3=0x7f0900d1;
