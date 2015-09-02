@@ -24,11 +24,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp80"
-            android:background="@drawable/frame_cell_white"
-            android:orientation="vertical">
-
-            <LinearLayout
                 android:id="@+id/drawfield_row_1"
+                android:background="@drawable/frame_cell_white"
+                android:orientation="vertical">
+
+                <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/wp40"
                 android:layout_gravity="center"
