@@ -1,77 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/img_chalkboard_2">
 
     <LinearLayout
-        android:layout_centerInParent="true"
         android:layout_width="@dimen/wp150"
         android:layout_height="@dimen/wp100"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/wp10"
-            android:text=" 다음 중 큰 수를 찾아 누르세요."
             android:id="@+id/txt_discription"
-            android:textSize="@dimen/wp8"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wp20"
+            android:layout_margin="@dimen/wp5"
             android:gravity="center"
-            android:layout_margin="@dimen/wp5"/>
+            android:text=" 다음 중 큰 수를 찾아 누르세요."
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/wp8"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="@dimen/wp150"
-            android:layout_height="@dimen/wp20"
-            android:layout_marginTop="@dimen/wp10"
+            android:layout_height="@dimen/wp25"
             android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:layout_marginTop="@dimen/wp10"
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <FrameLayout
                 android:layout_width="@dimen/wp75"
                 android:layout_height="match_parent">
+
                 <Button
-                    android:layout_gravity="center"
+                    android:id="@+id/btn_calculate_1"
                     android:layout_width="@dimen/wp50"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/wp3"
                     android:background="@drawable/frame_cell_pink"
                     android:text="1+1=2"
-                    android:textStyle="bold"
                     android:textColor="#FFFFFF"
-                    android:id="@+id/btn_calculate_1"
-                    android:textSize="@dimen/wp10"/>
-
+                    android:textSize="@dimen/wp10"
+                    android:textStyle="bold" />
             </FrameLayout>
 
 
             <FrameLayout
                 android:layout_width="@dimen/wp75"
                 android:layout_height="match_parent">
+
                 <Button
-                    android:layout_gravity="center"
+                    android:id="@+id/btn_calculate_2"
                     android:layout_width="@dimen/wp50"
                     android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/wp3"
                     android:background="@drawable/frame_cell_blue"
                     android:text="1+1=2"
-                    android:textStyle="bold"
                     android:textColor="#FFFFFF"
-                    android:id="@+id/btn_calculate_2"
-                    android:textSize="@dimen/wp10"/>
+                    android:textSize="@dimen/wp10"
+                    android:textStyle="bold" />
             </FrameLayout>
         </LinearLayout>
 
     </LinearLayout>
 
-
-
     <TextView
-        android:layout_width="@dimen/wp20"
-        android:layout_height="@dimen/wp10"
-        android:gravity="center"
+        android:layout_width="@dimen/wp16"
+        android:layout_height="@dimen/wp8"
         android:layout_gravity="center"
-        android:text="2 - 3"
         android:background="@drawable/img_memo_sticker"
-        android:textSize="@dimen/wp5"/>
+        android:gravity="center"
+        android:text="2 - 3"
+        android:textSize="@dimen/wp4" />
 </RelativeLayout>

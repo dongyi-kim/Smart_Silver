@@ -38,7 +38,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight=".6"
-                android:src="@drawable/subway_gangnam_miguem" />
+                android:src="@drawable/subway_1_1" />
 
             <View
                 android:layout_width="0dp"
@@ -75,12 +75,13 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
     <TextView
-        android:layout_width="@dimen/wp20"
-        android:layout_height="@dimen/wp10"
-        android:gravity="center"
+        android:layout_width="@dimen/wp16"
+        android:layout_height="@dimen/wp8"
         android:layout_gravity="center"
-        android:text="7 - 2"
         android:background="@drawable/img_memo_sticker"
-        android:textSize="@dimen/wp5"/>
+        android:gravity="center"
+        android:text="7 - 2"
+        android:textSize="@dimen/wp4" />
 </RelativeLayout>

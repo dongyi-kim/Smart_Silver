@@ -27,6 +27,7 @@ public class ActStep0502 extends StageActivity {
 
     private TextView txtDescription;
     private ImageView imgFruits;
+    private Button btnRedraw;
     public final Button btnAnswer[] = new Button[3];
 
     private int iRetryCount = 0;
@@ -40,19 +41,29 @@ public class ActStep0502 extends StageActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_05_2);
 
-        txtDescription = (TextView)findViewById(R.id.txt_description);
-        imgFruits = (ImageView)findViewById(R.id.img_many_fruits);
-        btnAnswer[0] = (Button)findViewById(R.id.btn_answer_1);
-        btnAnswer[1] = (Button)findViewById(R.id.btn_answer_2);
-        btnAnswer[2] = (Button)findViewById(R.id.btn_answer_3);
+        txtDescription = (TextView) findViewById(R.id.txt_description);
+        imgFruits = (ImageView) findViewById(R.id.img_many_fruits);
+        btnRedraw = (Button) findViewById(R.id.btn_redraw);
+        btnAnswer[0] = (Button) findViewById(R.id.btn_answer_1);
+        btnAnswer[1] = (Button) findViewById(R.id.btn_answer_2);
+        btnAnswer[2] = (Button) findViewById(R.id.btn_answer_3);
 
         mDrawingView = new DrawView(this);
         mDrawingView.setColorCode(0xFFFFFFFF);
 
-        mDrawingPad=(LinearLayout)findViewById(R.id.draw_field_0502);
+        mDrawingPad = (LinearLayout) findViewById(R.id.draw_field_0502);
         mDrawingPad.addView(mDrawingView);
 
-        for(int i = 0; i < 3; i++)
+        btnRedraw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDrawingPad.removeAllViews();
+                mDrawingView.clearView();
+                mDrawingPad.addView(mDrawingView);
+            }
+        });
+
+        for (int i = 0; i < 3; i++)
             btnAnswer[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -66,86 +77,68 @@ public class ActStep0502 extends StageActivity {
         setQuestion(false);
     }
 
-    public void setQuestion(boolean isRetry, Object object){
-        int iRandomSeed = iStage - 1;
-        dataSet.setData(iRandomSeed);
+    public void setQuestion(boolean isRetry, Object object) {
+        dataSet.setData(iStage);
 
         txtDescription.setText(dataSet.sDescription);
         imgFruits.setImageResource(dataSet.iFruitImage);
 
         int iNextExample = dataSet.iAnswer - rand.nextInt(2);
-        if(iNextExample < 0) iNextExample = 0;
+        if (iNextExample < 0) iNextExample = 0;
 
-        for(int i = 0; i < 3; i++)
+        for (int i = 0; i < 3; i++)
             btnAnswer[i].setText("" + (iNextExample + i));
 
         StartRecording();
     }
 
-    public void checkAnswer(Object o){
+    public void checkAnswer(Object o) {
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
-        if(isRight || iRetryCount > 1) StopRecording(isRight);
+        if (isRight || iRetryCount > 1) StopRecording(isRight);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface dialog) {
-                if(isRight || iRetryCount > 1){
+                if (isRight || iRetryCount > 1) {
                     mDrawingView.clearView();
                     iRetryCount = 0;
                     iStage++;
-                    if(iStage <= NUM_OF_STAGE) setQuestion(false);
+                    if (iStage <= NUM_OF_STAGE) setQuestion(false);
                     else goNext();
-                }
-                else{
+                } else {
                     iRetryCount++;
                 }
             }
         });
     }
 
-    public void goNext(Object object){
+    public void goNext(Object object) {
         Intent intent = new Intent(this, ActStep0503.class);
         startActivity(intent);
     }
 
     public class Step0502DataSet {
-        //private enum ePictureType {goodgam, hongshi, apple, flower, waterhippo, cherry};
-        private final int strawberry = 0, gam = 1, pear = 2, apple = 3;
+        private final int arrFruitCount[] = {16, 12, 15, 30, 32};
+        private final String arrFruitDescription[] = {"감을", "딸기를", "배를", "사과를", "사과를"};
+        private final String arrCountDescription[] = {"", "한 개씩", "두 개씩", "세 개씩", "네 개씩", "다섯 개씩", "여섯 개씩", "일곱 개씩", "여덟 개씩", "아홉 개씩"};
+        private final int arrImageSource[] = {R.drawable.img_draw_persimmon_16, R.drawable.img_draw_strawberry_12, R.drawable.img_draw_pear_15, R.drawable.img_draw_apple_30, R.drawable.img_draw_apple_32};
 
-        private final String arrDescription[] = {" 평생학교 행복반에서 간식으로 딸기를 두 개씩 나누어 먹으려고 합니다. 몇 명이 먹을 수 있습니까? 손가락으로 두 개씩 묶어보세요!",
-                " 평생학교 지혜반에서 간식으로 감을 네 개씩 나누어 먹으려고 합니다. 몇 명이 먹을 수 있습니까? 손가락으로 네 개씩 묶어보세요!",
-                " 평생학교 소망반에서 간식으로 반쪽 짜리 배를 세 개씩 나누어 먹으려고 합니다. 몇 명이 먹을 수 있습니까? 손가락으로 세 개씩 묶어보세요!",
-                " 평생학교 소망반에서 간식으로 사과를 여섯 개씩 나누어 가려고 합니다. 몇 명이 나눌 수 있습니까? 손가락으로 여섯 개씩 묶어보세요!",
-                " 평생학교 지혜반에서 간식으로 사과를 여덟 개씩 나누어 가려고 합니다. 몇 명이 나눌 수 있습니까? 손가락으로 여덟 개씩 묶어보세요!"};
-        private final int arrFruitType[] = {strawberry, gam, pear, apple, apple};
-        private final int arrFruitCount[] = {12, 16, 15, 30, 32};
-        private final int arrShareCount[] = {2, 4, 3, 6, 8};
-        private final int arrImageSource[][][] = new int[5][100][10];
 
         public String sDescription;
-        public int iFruitType;
-        public int iFruitCount;
-        public int iShareCount;
         public int iFruitImage;
         public int iAnswer;
 
-        public Step0502DataSet() {
-            arrImageSource[strawberry][12][2] = R.drawable.strawberry_12;
-            arrImageSource[gam][16][4] = R.drawable.gam_16;
-            arrImageSource[pear][15][3] = R.drawable.pear_15;
-            arrImageSource[apple][30][6] = R.drawable.apple_30;
-            arrImageSource[apple][32][8] = R.drawable.apple_32;
-        }
+        public void setData(int iStage) {
+            int iCount = 0;
+            do{
+                iCount = 2 + rand.nextInt(7);
+            } while(arrFruitCount[iStage - 1] % iCount != 0);
 
-        public void setData(int iSeed) {
-            iFruitType = arrFruitType[iSeed];
-            sDescription = arrDescription[iSeed];
-            iFruitCount = arrFruitCount[iSeed];
-            iShareCount = arrShareCount[iSeed];
-            iFruitImage = arrImageSource[iFruitType][iFruitCount][iShareCount];
-
-            iAnswer = iFruitCount / iShareCount;
+            sDescription = "평생학교에서 간식으로 " + arrFruitDescription[iStage - 1] + " 나누어 먹으려 합니다. 한 사람이 " + arrCountDescription[iCount] +
+                    " 먹는다면, 몇 명이 먹을 수 있을까요? 손가락으로 " + arrCountDescription[iCount] + " 묶어 보세요.";
+            iFruitImage = arrImageSource[iStage - 1];
+            iAnswer = arrFruitCount[iStage - 1] / iCount;
         }
     }
 }

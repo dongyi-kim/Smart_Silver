@@ -15,12 +15,11 @@
         <TextView
             android:id="@+id/txt_description"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wp15"
-            android:layout_marginBottom="@dimen/wp5"
+            android:layout_height="@dimen/wp20"
             android:gravity="center"
             android:text="다음 중 가장 큰 수를 찾아서 누르세요."
             android:textColor="#FFFFFF"
-            android:textSize="@dimen/wp8"
+            android:textSize="@dimen/wp7"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -230,16 +229,18 @@
                     </FrameLayout>
                 </LinearLayout>
             </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/wp2"/>
         </LinearLayout>
     </LinearLayout>
 
-
     <TextView
-        android:layout_width="@dimen/wp20"
-        android:layout_height="@dimen/wp10"
+        android:layout_width="@dimen/wp16"
+        android:layout_height="@dimen/wp8"
         android:layout_gravity="center"
         android:background="@drawable/img_memo_sticker"
         android:gravity="center"
         android:text="1 - 4"
-        android:textSize="@dimen/wp5" />
+        android:textSize="@dimen/wp4" />
 </RelativeLayout><!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_01_4.xml -->
