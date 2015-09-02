@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/img_chalkboard_2"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_chalkboard_2">
 
     <LinearLayout
         android:layout_width="@dimen/wp150"
@@ -13,101 +14,96 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp20"
-            android:text=" 다음 중 곱하기가\n그림과 알맞게 표시된 것을 누르세요!"
-            android:id="@+id/txt_discription"
-            android:textSize="@dimen/wp7"
-            android:textStyle="bold"
+            android:gravity="center"
+            android:text=" 다음 중 개수와 묶음이\n알맞게 표시된 것을 누르세요."
             android:textColor="#FFFFFF"
-            android:gravity="center"/>
+            android:textSize="@dimen/wp7"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp80"
-            android:background="@drawable/frame_cell_white"
-            android:orientation="horizontal"
-            android:weightSum="1"
             android:layout_gravity="center"
-            android:gravity="center">
+            android:layout_marginBottom="@dimen/wp2"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.4"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:weightSum="1">
-                <ImageView
+            <FrameLayout
+                android:layout_width="@dimen/wp60"
+                android:layout_height="@dimen/wp65">
+                <Button
+                    android:id="@+id/btn_answer_1"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.7"
-                    android:src="@drawable/mult_2_2_goodgam"
-                    android:id="@+id/img_picture_1"/>
-                <FrameLayout
+                    android:layout_height="match_parent"
+                    android:background="@null" />
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.3">
-                    <ImageButton
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background_white_transparent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/img_picture_1"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/txt_field_0401"
-                        android:id="@+id/ibtn_answer_1"
+                        android:layout_height="@dimen/wp50"
                         android:scaleType="fitCenter"
-                        android:background="@null"/>
+                        android:src="@drawable/img_mult_dried_persimmon_4_4" />
                     <TextView
+                        android:id="@+id/txt_answer_1"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="2 X 2"
+                        android:layout_height="@dimen/wp15"
                         android:layout_gravity="center"
+                        android:background="#FFFFFFFF"
                         android:gravity="center"
-                        android:textSize="@dimen/wp6"
-                        android:id="@+id/txt_answer_1"/>
-                </FrameLayout>
-            </LinearLayout>
+                        android:text="2 × 2"
+                        android:textSize="@dimen/wp7" />
+                </LinearLayout>
+            </FrameLayout>
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.4"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:weightSum="1">
-                <ImageView
+            <View
+                android:layout_width="@dimen/wp15"
+                android:layout_height="match_parent"/>
+            <FrameLayout
+                android:layout_width="@dimen/wp60"
+                android:layout_height="@dimen/wp65">
+                <Button
+                    android:id="@+id/btn_answer_2"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.7"
-                    android:src="@drawable/mult_5_2_hongshi"
-                    android:id="@+id/img_picture_2"/>
-                <FrameLayout
+                    android:layout_height="match_parent"
+                    android:background="@null" />
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.3">
-                    <ImageButton
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background_white_transparent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/img_picture_2"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/txt_field_0401"
-                        android:id="@+id/ibtn_answer_2"
+                        android:layout_height="@dimen/wp50"
                         android:scaleType="fitCenter"
-                        android:background="@null"/>
+                        android:src="@drawable/img_mult_flower_4_4" />
                     <TextView
+                        android:id="@+id/txt_answer_2"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="2 X 2"
+                        android:layout_height="@dimen/wp15"
                         android:layout_gravity="center"
+                        android:background="#FFFFFFFF"
                         android:gravity="center"
-                        android:textSize="@dimen/wp6"
-                        android:id="@+id/txt_answer_2"/>
-                </FrameLayout>
-            </LinearLayout>
+                        android:text="2 × 2"
+                        android:textSize="@dimen/wp7" />
+                </LinearLayout>
+            </FrameLayout>
         </LinearLayout>
     </LinearLayout>
 
-
     <TextView
-        android:layout_width="@dimen/wp18"
+        android:layout_width="@dimen/wp16"
         android:layout_height="@dimen/wp8"
-        android:gravity="center"
         android:layout_gravity="center"
-        android:text="4 - 2"
         android:background="@drawable/img_memo_sticker"
-        android:textSize="@dimen/wp5"/>
+        android:gravity="center"
+        android:text="4 - 2"
+        android:textSize="@dimen/wp4" />
 </RelativeLayout><!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_04_2.xml -->

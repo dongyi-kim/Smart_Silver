@@ -168,11 +168,11 @@
     </LinearLayout>
 
     <TextView
-        android:layout_width="@dimen/wp18"
+        android:layout_width="@dimen/wp16"
         android:layout_height="@dimen/wp8"
-        android:gravity="center"
         android:layout_gravity="center"
-        android:text="4 - 4"
         android:background="@drawable/img_memo_sticker"
-        android:textSize="@dimen/wp5"/>
+        android:gravity="center"
+        android:text="4 - 4"
+        android:textSize="@dimen/wp4" />
 </RelativeLayout><!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_04_4.xml -->

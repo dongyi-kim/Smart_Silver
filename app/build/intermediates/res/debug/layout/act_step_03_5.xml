@@ -131,7 +131,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="@dimen/wp15"
+                    android:layout_width="@dimen/wp18"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -152,7 +152,7 @@
                         android:textSize="@dimen/wp5" />
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="@dimen/wp15"
+                    android:layout_width="@dimen/wp18"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -174,7 +174,7 @@
                 </LinearLayout>
 
                 <TextView
-                    android:layout_width="@dimen/wp15"
+                    android:layout_width="@dimen/wp18"
                     android:layout_height="match_parent"
                     android:layout_marginBottom="@dimen/wp3"
                     android:gravity="center"
@@ -183,7 +183,7 @@
                     android:textSize="@dimen/wp16"
                     android:textStyle="bold" />
                 <LinearLayout
-                    android:layout_width="@dimen/wp15"
+                    android:layout_width="@dimen/wp18"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -238,7 +238,7 @@
 
                 <LinearLayout
                     android:id="@+id/linear_spend_2"
-                    android:layout_width="@dimen/wp30"
+                    android:layout_width="@dimen/wp38"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -301,11 +301,11 @@
     </LinearLayout>
 
     <TextView
-        android:layout_width="@dimen/wp18"
+        android:layout_width="@dimen/wp16"
         android:layout_height="@dimen/wp8"
-        android:gravity="center"
         android:layout_gravity="center"
-        android:text="3 - 5"
         android:background="@drawable/img_memo_sticker"
-        android:textSize="@dimen/wp5"/>
+        android:gravity="center"
+        android:text="3 - 5"
+        android:textSize="@dimen/wp4" />
 </RelativeLayout><!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout/act_step_03_5.xml -->
