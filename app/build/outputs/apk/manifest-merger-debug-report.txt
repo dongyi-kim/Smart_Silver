@@ -381,6 +381,8 @@ activity#src.activities.ActStartLearning
 ADDED from AndroidManifest.xml:275:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:276:13
+	android:noHistory
+		ADDED from AndroidManifest.xml:277:13
 	android:name
 		ADDED from AndroidManifest.xml:275:19
 uses-sdk
