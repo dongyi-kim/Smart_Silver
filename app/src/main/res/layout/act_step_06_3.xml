@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@drawable/img_chalkboard_2"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/img_chalkboard_2">
 
     <LinearLayout
         android:layout_width="@dimen/wp150"
         android:layout_height="@dimen/wp100"
         android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
         android:weightSum="1">
 
@@ -20,7 +21,8 @@
             android:layout_weight=".2"
             android:gravity="center"
             android:text="아래 과일의 수만큼 오른쪽 표에 스티커를 붙여봅시다!\n왼쪽 아래 단추를 사과의 갯수만큼 누르세요! "
-            android:textSize="@dimen/wp6" />
+            android:textSize="@dimen/wp6"
+            android:textStyle="bold" />
 
 
         <LinearLayout
