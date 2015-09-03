@@ -20,22 +20,22 @@ public final class R {
 		public static final int rv_zoomScale = 0x7f01010b;
 	}
 	public static final class color {
-		public static final int rippelColor = 0x7f070031;
+		public static final int rippelColor = 0x7f080031;
 	}
 	public static final class drawable {
 		public static final int ic_launcher = 0x7f0200c3;
 		public static final int shape_rounded = 0x7f020252;
 	}
 	public static final class id {
-		public static final int doubleRipple = 0x7f090036;
-		public static final int rectangle = 0x7f090033;
-		public static final int simpleRipple = 0x7f090037;
+		public static final int doubleRipple = 0x7f0a0036;
+		public static final int rectangle = 0x7f0a0033;
+		public static final int simpleRipple = 0x7f0a0037;
 	}
 	public static final class string {
-		public static final int app_name = 0x7f0b0011;
+		public static final int app_name = 0x7f0c0011;
 	}
 	public static final class style {
-		public static final int AppTheme = 0x7f0c0000;
+		public static final int AppTheme = 0x7f0d0000;
 	}
 	public static final class styleable {
 		public static final int[] RippleView = { 0x7f010017, 0x7f010018, 0x7f010102, 0x7f010103, 0x7f010104, 0x7f010105, 0x7f010106, 0x7f010107, 0x7f010108, 0x7f010109, 0x7f01010a, 0x7f01010b };
