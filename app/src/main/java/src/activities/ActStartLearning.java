@@ -7,6 +7,7 @@ import android.os.PersistableBundle;
 import cdmst.smartsilver.R;
 import src.DB;
 import src.ResultData;
+import src.Setting;
 import src.Utility;
 
 /**
@@ -54,8 +55,8 @@ public class ActStartLearning extends FrameActivity {
         if (data != null) {
             iStep = data[0].iStep;
             iLevel = data[0].iLevel;
-            if (data[0].iStage == 5) {
-                if (++iLevel > 5) {
+            if (data[0].iStage == Setting.arrNumOfStage[iStep-1][iLevel-1]) {
+                if (++iLevel > Setting.arrNumOfStage[iStep-1].length) {
                     iLevel = 1;
                     if (++iStep > to) {
                         iStep = from;

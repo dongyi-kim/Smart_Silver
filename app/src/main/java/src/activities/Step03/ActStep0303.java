@@ -34,7 +34,7 @@ public class ActStep0303 extends StageActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_03_3);
 
-        NUM_OF_STAGE = 4;
+        //NUM_OF_STAGE = 4;
 
         txtDescription = (TextView)findViewById(R.id.txt_description);
         imgFood[0] = (ImageView)findViewById(R.id.img_food_set_1);
