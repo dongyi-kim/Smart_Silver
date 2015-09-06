@@ -100,6 +100,7 @@
                 </LinearLayout>
 
                 <ui.RippleView
+                    android:visibility="gone"
                     android:layout_width="@dimen/wp40"
                     android:layout_height="@dimen/wp10"
                     android:layout_gravity="center"
