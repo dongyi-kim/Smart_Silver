@@ -1,6 +1,7 @@
 package src.activities;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import src.DB;
@@ -17,8 +18,7 @@ public abstract class StageActivity extends FrameActivity {
     public int iStage = 1;
     public ResultData dataNow = null;
 
-
-
+    public static Toast nowToast = null;
 
     @Override
     public void onCreate(Bundle bundle)
@@ -29,15 +29,22 @@ public abstract class StageActivity extends FrameActivity {
         iStage = 1;
     }
 
-    public void StartRecording()
+    public synchronized void StartRecording()
     {
+        if(dataNow!=null){
+            Log.d("Start Recoding","but not null");
+            return;
+        }
         dataNow = new ResultData( iStep, iLevel,iStage);
         dataNow.Start();
     }
 
-    public void StopRecording(boolean bResult)
+    public synchronized void StopRecording(boolean bResult)
     {
-
+        if(dataNow == null){
+            Log.d("Stop Recoding","but null");
+            return;
+        }
         dataNow.Stop(bResult);
 
 
@@ -54,7 +61,15 @@ public abstract class StageActivity extends FrameActivity {
         strbuff.append((dataNow.getMilliTime()/1000) + "초 걸렸어요!");
 
         //save data into db
-        Toast.makeText(this, strbuff.toString(), Toast.LENGTH_LONG).show();
+
+        if(nowToast != null){
+            nowToast.cancel();
+            nowToast = null;
+        }
+
+        nowToast = Toast.makeText(this, strbuff.toString(), Toast.LENGTH_SHORT);
+        nowToast.show();
+
         DB.INSERT(dataNow);
         dataNow = null;
     }
