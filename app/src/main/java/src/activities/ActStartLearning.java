@@ -48,7 +48,7 @@ public class ActStartLearning extends FrameActivity {
         int iLevel = 1;
 
         String sql = "SELECT * FROM RESULT_DATA WHERE ";
-        sql += String.format(" step <= '%d' AND step <= '%d' ORDER BY _id DESC LIMIT 1", from, to);
+        sql += String.format(" '%d' <= step AND step <= '%d' ORDER BY _id DESC LIMIT 1", from, to);
 
         ResultData[] data = DB.SELECT(sql);
         if (data != null) {
