@@ -100,6 +100,7 @@
                 </LinearLayout>
 
                 <ui.RippleView
+                    android:visibility="gone"
                     android:layout_width="@dimen/wp40"
                     android:layout_height="@dimen/wp10"
                     android:layout_gravity="center"
@@ -387,4 +388,4 @@
     </LinearLayout>
 
 
-</RelativeLayout><!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout-land/act_statistics_main.xml -->
+</RelativeLayout><!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/layout-land/act_statistics_main.xml -->
