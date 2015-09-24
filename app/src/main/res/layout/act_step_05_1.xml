@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_chalkboard_2">
+
+    <LinearLayout
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wp20"
+            android:gravity="center"
+            android:text="아래와 같이 녹두전을 나누었습니다.\n몇 등분 되었나요?"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/wp6"
+            android:textStyle="bold"
+            android:id="@+id/txt_description"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wp70"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/wp5"
+            android:layout_marginBottom="@dimen/wp7">
+            <ImageView
+                android:layout_width="@dimen/wp80"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:padding="@dimen/wp4"
+                android:layout_gravity="center"
+                android:background="@drawable/background_white_transparent"
+                android:src="@drawable/img_divide_jeon_2"
+                android:id="@+id/img_divide"/>
+            <LinearLayout
+                android:layout_width="@dimen/wp50"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/wp10"
+                android:orientation="vertical"
+                android:gravity="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wp18"
+                    android:layout_margin="10sp"
+                    android:text="1"
+                    android:textSize="@dimen/wp9"
+                    android:id="@+id/btn_answer_1"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wp18"
+                    android:layout_margin="10sp"
+                    android:text="2"
+                    android:textSize="@dimen/wp9"
+                    android:id="@+id/btn_answer_2"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="@dimen/wp16"
+        android:layout_height="@dimen/wp8"
+        android:layout_gravity="center"
+        android:background="@drawable/img_memo_sticker"
+        android:gravity="center"
+        android:text="5 - 1"
+        android:textSize="@dimen/wp4" />
+</RelativeLayout>
