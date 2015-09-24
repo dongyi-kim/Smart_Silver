@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -43,16 +44,23 @@ public class ActStep0401 extends StageActivity{
         txtAnswer[0] = (TextView)findViewById(R.id.txt_answer_1);
         txtAnswer[1] = (TextView)findViewById(R.id.txt_answer_2);
 
-        for(int i = 0; i < 2; i++)
-            btnAnswer[i].setOnClickListener(new View.OnClickListener(){
+
+        for(int i = 0; i < 2; i++) {
+            btnAnswer[i].setOnTouchListener(new View.OnTouchListener() {
                 @Override
-                public void onClick(View v){
-                    int iSelectIndex = (v == btnAnswer[0]? 0 : 1);
-                    if(dataSet.bIsAnswer[iSelectIndex]) isRight = true;
-                    else isRight = false;
-                    checkAnswer();
+                public boolean onTouch(View v, MotionEvent motionEvent)
+                {
+                    if (motionEvent.getPointerCount() < 1)
+                    {
+                        int iSelectIndex = (v == btnAnswer[0] ? 0 : 1);
+                        if (dataSet.bIsAnswer[iSelectIndex]) isRight = true;
+                        else isRight = false;
+                        checkAnswer();
+                    }
+                    return false;
                 }
             });
+        }
 
         setQuestion(false);
     }

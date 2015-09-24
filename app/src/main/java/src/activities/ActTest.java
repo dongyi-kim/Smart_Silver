@@ -14,6 +14,7 @@ import src.activities.Step04.*;
 import src.activities.Step05.*;
 import src.activities.Step06.*;
 import src.activities.Step07.*;
+import src.activities.Step08.*;
 import src.activities.Step10.*;
 
 
@@ -56,6 +57,11 @@ public class ActTest extends FrameActivity {
     Button btnStep7_3;
     Button btnStep7_4;
     Button btnStep7_5;
+    Button btnStep8_1;
+    Button btnStep8_2;
+    Button btnStep8_3;
+    Button btnStep8_4;
+    Button btnStep8_5;
     Button btnStep10;
     Button btnSelector;
 
@@ -169,6 +175,21 @@ public class ActTest extends FrameActivity {
 
         btnStep7_5 = (Button)findViewById(R.id.btn_step_7_5);
         btnStep7_5.setOnClickListener(clickBtnStep);
+
+        btnStep8_1 = (Button)findViewById(R.id.btn_step_8_1);
+        btnStep8_1.setOnClickListener(clickBtnStep);
+
+        btnStep8_2 = (Button)findViewById(R.id.btn_step_8_2);
+        btnStep8_2.setOnClickListener(clickBtnStep);
+
+        btnStep8_3 = (Button)findViewById(R.id.btn_step_8_3);
+        btnStep8_3.setOnClickListener(clickBtnStep);
+
+        btnStep8_4 = (Button)findViewById(R.id.btn_step_8_4);
+        btnStep8_4.setOnClickListener(clickBtnStep);
+
+        btnStep8_5 = (Button)findViewById(R.id.btn_step_8_5);
+        btnStep8_5.setOnClickListener(clickBtnStep);
 
         btnStep10 = (Button)findViewById(R.id.btn_step_10);
         btnStep10.setOnClickListener(clickBtnStep);
@@ -396,6 +417,36 @@ public class ActTest extends FrameActivity {
             {
 
                 Intent intent = new Intent(v.getContext(), ActStep0705.class);
+                startActivity(intent);
+            }
+            else if(v == btnStep8_1)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0801.class);
+                startActivity(intent);
+            }
+            else if(v == btnStep8_2)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0802.class);
+                startActivity(intent);
+            }
+            else if(v == btnStep8_3)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0803.class);
+                startActivity(intent);
+            }
+            else if(v == btnStep8_4)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0804.class);
+                startActivity(intent);
+            }
+            else if(v == btnStep8_5)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0805.class);
                 startActivity(intent);
             }
             else if(v == btnStep10)

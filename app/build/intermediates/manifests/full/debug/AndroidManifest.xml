@@ -217,6 +217,31 @@
             android:screenOrientation="landscape" >
         </activity>
         <activity
+            android:name="src.activities.Step08.ActStep0801"
+            android:noHistory="true"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="src.activities.Step08.ActStep0802"
+            android:noHistory="true"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="src.activities.Step08.ActStep0803"
+            android:noHistory="true"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="src.activities.Step08.ActStep0804"
+            android:noHistory="true"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="src.activities.Step08.ActStep0805"
+            android:noHistory="true"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
             android:name="src.activities.Step10.ActStep10"
             android:noHistory="true"
             android:screenOrientation="landscape" >

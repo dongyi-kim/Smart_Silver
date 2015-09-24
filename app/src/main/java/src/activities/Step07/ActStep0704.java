@@ -230,11 +230,13 @@ public class ActStep0704  extends StageActivity {
     }
 
     public class Step0704DataSet {
-        private final String arrDescription[] = {"아래 자료는 전기요금고지서입니다.아래 자료에서 전기요금 납기일은 언제인지 해당되는 곳을 누르세요.",
-                "아래 자료는 전기요금고지서입니다.아래 자료에서 전기요금 청구금액은 얼마인가요. 청구금액을 누르세요.",
-                "아래 자료는 전기요금고지서입니다.아래 자료에서 당원 전기사용량은 얼마인가요? 당월 전기사용량을 누르세요.",
-                "아래 영수증은 평생마트 영수증입니다.모듬 버섯 불고기는 얼마인지 아래 영수증에서 해당 금액을 누르세요.",
-                "아래 영수증은 평생마트 영수증입니다.평생마트에서 물건을 산 날짜는 언제인지 아래 영수증에서 찾아 누르세요."};
+        private final String arrDescription[][] = {{"전기요금 납기일을 나타내는 곳을 찾아 누르세요.",},
+                {"전기요금 청구금액을 나타내는 곳을 찾아 누르세요.",},
+                {"아래 자료에서 당월 전기사용량을 나타내는 곳을 찾아 누르세요.",},
+                {"아래 영수증은 평생마트 영수증입니다. 모듬 버섯 불고기는 얼마인지 찾아 누르세요.", "아래 영수증은 평생마트 영수증입니다. 지불할 금액은 모두 얼마인지 찾아 누르세요.","아래 자료는 평생마트 영수증입니다. 상추는 얼마인지 찾아 누르세요."},
+                {"아래 영수증은 평생마트 영수증입니다. 평생마트에서 물건을 산 날짜는 언제인지 찾아 누르세요.", "아래 영수증은 평생마트 영수증입니다. 평생마트에서 물건을 산 날짜는 언제인지 찾아 누르세요.", "아래 자료는 평생마트 영수증입니다. 오렌지 주스를 몇 개 샀는지 수량을 찾아 누르세요."}
+        };
+
         private final int arrAnswerButtonIndex[] = {0, 4, 2};
         private final int arrReceiptImage[] = {R.drawable.receipt_7_4_4_1, R.drawable.receipt_7_4_5_1};
 
@@ -254,11 +256,16 @@ public class ActStep0704  extends StageActivity {
 
         public void setData(int iStage) {
             int iSeed = iStage - 1;
+            int rand = (int)(Math.random() * 3.0); // 0 ~ 2
 
-            sDescription = arrDescription[iSeed];
 
-            if(iSeed < 3) iAnswerIndex = arrAnswerButtonIndex[iSeed];
+            if(iSeed < 3)
+            {
+                sDescription = arrDescription[iSeed][0];
+                iAnswerIndex = arrAnswerButtonIndex[iSeed];
+            }
             else{
+                sDescription = arrDescription[iSeed][rand];
                 iAnswerRow = arrAnswerButtonRow[iSeed - 3];
                 iAnswerColumn = arrAnswerButtonColumn[iSeed - 3];
                 iReceiptImage = arrReceiptImage[iSeed - 3];
