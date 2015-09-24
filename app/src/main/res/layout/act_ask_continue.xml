@@ -40,16 +40,16 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
                     android:text="기록:  "
-                    android:textSize="@dimen/wp12" />
+                    android:textSize="@dimen/wp10" />
 
                 <TextView
                     android:id="@+id/txt_current_record"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
-                    android:text="XXX 초"
+                    android:text="XXX점(XXX초)"
                     android:textColor="#FF222266"
-                    android:textSize="@dimen/wp20"
+                    android:textSize="@dimen/wp16"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -63,17 +63,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
-                    android:text="최단기록:  "
-                    android:textSize="@dimen/wp10" />
+                    android:text="최고기록:  "
+                    android:textSize="@dimen/wp8" />
 
                 <TextView
                     android:id="@+id/txt_best_record"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
-                    android:text="XXX 초"
+                    android:text="XXX점(XXX초)"
                     android:textColor="#FFDD4444"
-                    android:textSize="@dimen/wp16" />
+                    android:textSize="@dimen/wp14" />
             </LinearLayout>
         </LinearLayout>
 

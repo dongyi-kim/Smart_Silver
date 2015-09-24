@@ -204,7 +204,7 @@
                         android:textSize="@dimen/wp5" />
                 </LinearLayout>
                 <LinearLayout
-                    android:layout_width="@dimen/wp15"
+                    android:layout_width="@dimen/wp18"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:orientation="vertical">
