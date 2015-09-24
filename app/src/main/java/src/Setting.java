@@ -7,6 +7,8 @@ import src.activities.Step04.*;
 import src.activities.Step05.*;
 import src.activities.Step06.*;
 import src.activities.Step07.*;
+
+import src.activities.Step09.*;
 import src.activities.Step10.ActStep10;
 
 /**
@@ -25,7 +27,7 @@ public class Setting {
             {5,5,5,5,5},
             {5,5,5,5,5},
             {5,5,5,5,5},
-            {5,5,5,5,5},
+            {4,5,5,5,5},
             {10},
     };
 
@@ -38,7 +40,7 @@ public class Setting {
             {ActStep0601.class, ActStep0602.class, ActStep0603.class, ActStep0604.class, ActStep0605.class },//step6
             {ActStep0701.class, ActStep0702.class, ActStep0703.class, ActStep0704.class, ActStep0705.class },//step7
             { },//step8
-            { },//step9
+            {ActStep0901.class },//step9
             {ActStep10.class },//step10
     };
 
