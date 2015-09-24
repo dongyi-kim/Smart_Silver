@@ -100,7 +100,7 @@ public class ActStep0104 extends StageActivity {
 
     public void setQuestion(boolean isRetry, Object object){
         iMaxNumber = 0;
-        txtDescription.setText(iSampleCount[iStage - 1] > 2 ? "다음 중 가장 큰 수를\n찾아 누르세요." : "다음 중 큰 수를\n찾아 누르세요.");
+        txtDescription.setText(iSampleCount[iStage - 1] > 2 ? "다음 중 가장 큰 수를 찾아 누르세요." : "다음 중 큰 수를 찾아 누르세요.");
 
         int iSelectCount = 0;
         for(int i = 0; i < MAX_ROW_NUMBER; i++){

@@ -83,7 +83,7 @@ public class Utility {
 
     /**
      * 디렉토리에 안에 내용을 보여 준다.
-     * @param File
+     * @param
      * @return string[]
      */
     public static String[] getList(File dir){
@@ -146,47 +146,56 @@ public class Utility {
         return buffer;
     }
 
-    private static Class<?>[][] arrStepClass = {
-            {ActStep0101.class, ActStep0102.class, ActStep0103.class, ActStep0104.class, ActStep0105.class  },//step1
-            {ActStep0201.class, ActStep0202.class, ActStep0203.class, ActStep0204.class, ActStep0205.class },//step2
-            {ActStep0301.class, ActStep0302.class, ActStep0303.class, ActStep0304.class, ActStep0305.class },//step3
-            {ActStep0401.class, ActStep0402.class, ActStep0403.class, ActStep0404.class, ActStep0405.class },//step4
-            {ActStep0502.class, ActStep0502.class, ActStep0503.class, ActStep0504.class, ActStep0605.class },//step5
-            {ActStep0601.class, ActStep0602.class, ActStep0603.class, ActStep0604.class, ActStep0605.class },//step6
-            {ActStep0701.class, ActStep0702.class, ActStep0703.class, ActStep0704.class, ActStep0705.class },//step7
-            { },//step8
-            { },//step9
-            {ActStep10.class },//step10
-    };
+
+
+
+
+
+
+
 
     public static final Class<?> getStepClass(int iStep, int iLevel)
     {
-        return arrStepClass[iStep-1][iLevel-1];
+        return Setting.arrStepClass[iStep-1][iLevel-1];
     }
 
     public static final int getStep(Class<?> classStep)
     {
-        for(int i=0; i< arrStepClass.length; i++)
+        for(int i=0; i< Setting.arrStepClass.length; i++)
         {
-            for(int j=0; j<arrStepClass[i].length; j++)
+            for(int j=0; j< Setting.arrStepClass[i].length; j++)
             {
-                if(classStep == arrStepClass[i][j])
+                if(classStep == Setting.arrStepClass[i][j])
                     return i+1;
             }
+
+
         }
         return 0;
     }
 
     public static final int getLevel(Class<?> classStep)
     {
-        for(int i=0; i< arrStepClass.length; i++)
+        for(int i=0; i< Setting.arrStepClass.length; i++)
         {
-            for(int j=0; j<arrStepClass[i].length; j++)
+            for(int j=0; j< Setting.arrStepClass[i].length; j++)
             {
-                if(classStep == arrStepClass[i][j])
+                if(classStep ==  Setting.arrStepClass[i][j])
                     return j+1;
             }
         }
         return 0;
+    }
+
+    public static final int getNumOfStage(Class<?> classStep){
+        for(int i=0; i< Setting.arrStepClass.length; i++)
+        {
+            for(int j=0; j< Setting.arrStepClass[i].length; j++)
+            {
+                if(classStep == Setting.arrStepClass[i][j])
+                    return Setting.arrNumOfStage[i][j];
+            }
+        }
+        return -1;
     }
 }

@@ -62,12 +62,12 @@ public class ActStep0403 extends StageActivity {
         imgHippo.setImageResource(dataSet.iPictureSource);
 
         if(rand.nextBoolean()){
-            btnAnswer[0].setText(dataSet.iAnotherExample);
-            btnAnswer[1].setText(dataSet.iAnswer);
+            btnAnswer[0].setText("" + dataSet.iAnotherExample);
+            btnAnswer[1].setText("" + dataSet.iAnswer);
         }
         else{
-            btnAnswer[0].setText(dataSet.iAnswer);
-            btnAnswer[1].setText(dataSet.iAnotherExample);
+            btnAnswer[0].setText("" + dataSet.iAnswer);
+            btnAnswer[1].setText("" + dataSet.iAnotherExample);
         }
 
         StartRecording();
@@ -113,12 +113,12 @@ public class ActStep0403 extends StageActivity {
         public void setData(int iStage){
             int iSeed = (iStage > 3 ? (9 + (iStage - 4) * 2 + rand.nextInt(2)) : ((iStage - 1) * 3 + rand.nextInt(3)));
             iPictureSource = arrImageSource[iSeed];
-            sAnswerDescription = "" + arrAnswerCount[iSeed][0] + " ¡¿ " + arrAnswerCount[iSeed][1];
+            sAnswerDescription = "" + arrAnswerCount[iSeed][0] + " Ã— " + arrAnswerCount[iSeed][1];
             iAnswer = arrAnswerCount[iSeed][0] * arrAnswerCount[iSeed][1];
 
             if(iStage > 3){
-                sAnswerDescription += " ¡¿ " + arrAnswerCount[iSeed][2];
-                iAnswer = arrAnswerCount[iSeed][2];
+                sAnswerDescription += " Ã— " + arrAnswerCount[iSeed][2];
+                iAnswer *= arrAnswerCount[iSeed][2];
             }
 
             iAnotherExample = iAnswer + (rand.nextBoolean() ? -1 : 1) * arrAnswerCount[iSeed][rand.nextInt(2)];

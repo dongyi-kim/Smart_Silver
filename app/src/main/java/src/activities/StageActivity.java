@@ -12,7 +12,7 @@ import src.Utility;
  * Created by waps12b on 15. 3. 25..
  */
 public abstract class StageActivity extends FrameActivity {
-    public int NUM_OF_STAGE = 5;
+    public final int NUM_OF_STAGE = Utility.getNumOfStage(this.getClass());
     public int iStep;
     public int iLevel;
     public int iStage = 1;

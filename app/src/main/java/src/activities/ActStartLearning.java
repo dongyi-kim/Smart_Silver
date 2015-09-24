@@ -7,6 +7,7 @@ import android.os.PersistableBundle;
 import cdmst.smartsilver.R;
 import src.DB;
 import src.ResultData;
+import src.Setting;
 import src.Utility;
 
 /**
@@ -48,14 +49,14 @@ public class ActStartLearning extends FrameActivity {
         int iLevel = 1;
 
         String sql = "SELECT * FROM RESULT_DATA WHERE ";
-        sql += String.format(" step <= '%d' AND step <= '%d' ORDER BY _id DESC LIMIT 1", from, to);
+        sql += String.format(" '%d' <= step AND step <= '%d' ORDER BY _id DESC LIMIT 1", from, to);
 
         ResultData[] data = DB.SELECT(sql);
         if (data != null) {
             iStep = data[0].iStep;
             iLevel = data[0].iLevel;
-            if (data[0].iStage == 5) {
-                if (++iLevel > 5) {
+            if (data[0].iStage == Setting.arrNumOfStage[iStep-1][iLevel-1]) {
+                if (++iLevel > Setting.arrNumOfStage[iStep-1].length) {
                     iLevel = 1;
                     if (++iStep > to) {
                         iStep = from;

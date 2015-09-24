@@ -97,7 +97,7 @@ public class ActStep0501 extends StageActivity {
                 R.drawable.img_divide_jeon_6, 0, R.drawable.img_divide_jeon_8, 0, R.drawable.img_divide_jeon_10, 0, R.drawable.img_divide_jeon_12},
                 {0, 0, R.drawable.img_divide_dduck_2, R.drawable.img_divide_dduck_3, R.drawable.img_divide_dduck_4, 0,
                 R.drawable.img_divide_dduck_6, 0, R.drawable.img_divide_dduck_8, R.drawable.img_divide_dduck_9, R.drawable.img_divide_dduck_10, 0, R.drawable.img_divide_dduck_12}};
-        private final String arrFoodDescription[] = {"≥ÏµŒ¿¸", "Ω√∑Á∂±"};
+        private final String arrFoodDescription[] = {"ÎÖπÎëêÏ†Ñ", "ÏãúÎ£®Îñ°"};
 
         public String sDescription;
         public int iAnswerCount[] = new int[2];
@@ -108,11 +108,11 @@ public class ActStep0501 extends StageActivity {
             int iFoodSeed = rand.nextInt(2), iDivideCount = 0;
             if(iStage <= 3){
                 while(arrImageSource[iFoodSeed][iDivideCount] == 0) iDivideCount = 2 + rand.nextInt(7);
-                sDescription = "æ∆∑° " + arrFoodDescription[iFoodSeed] + "¿ª ∂»∞∞¿Ã ≥™¥©æÓ ∏‘¿∏∑¡∞Ì «’¥œ¥Ÿ.\n" + arrFoodDescription[iFoodSeed] + "¿∫ ∏µŒ ∏Ó ∏Ì¿Ã ∏‘¿ª ºˆ ¿÷≥™ø‰?";
+                sDescription = "ÏïÑÎûò " + arrFoodDescription[iFoodSeed] + "ÏùÑ ÎòëÍ∞ôÏù¥ ÎÇòÎàÑÏñ¥ Î®πÏúºÎ†§Í≥† Ìï©ÎãàÎã§.\n" + arrFoodDescription[iFoodSeed] + "ÏùÄ Î™®Îëê Î™á Î™ÖÏù¥ Î®πÏùÑ Ïàò ÏûàÎÇòÏöî?";
             }
             else{
                 while(arrImageSource[iFoodSeed][iDivideCount] == 0) iDivideCount = 8 + rand.nextInt(5);
-                sDescription = "æ∆∑° " + arrFoodDescription[iFoodSeed] + "¿ª " + iDivideCount + "∏Ì¿Ã ∂»∞∞¿Ã ≥™¥©æÓ ∏‘±‚ ¿ß«ÿº≠¥¬\n∏Ó µÓ∫–¿ª «ÿæﬂ «’¥œ±Ó?";
+                sDescription = "ÏïÑÎûò " + arrFoodDescription[iFoodSeed] + "ÏùÑ " + iDivideCount + "Î™ÖÏù¥ ÎòëÍ∞ôÏù¥ ÎÇòÎàÑÏñ¥ Î®πÍ∏∞ ÏúÑÌï¥ÏÑúÎäî\nÎ™á Îì±Î∂ÑÏùÑ Ìï¥Ïïº Ìï©ÎãàÍπå?";
             }
 
             iPictureSource = arrImageSource[iFoodSeed][iDivideCount];
