@@ -64,7 +64,8 @@ public class ActStep0302 extends StageActivity{
     }
 
 
-    public void setQuestion(boolean isRetry, Object object){
+    public synchronized void setQuestion(boolean isRetry, Object object){
+
         if(!isRetry) {
             processSet.setData(iStage);
             StartRecording();
@@ -76,7 +77,7 @@ public class ActStep0302 extends StageActivity{
 
         //set process
         for(int i = 0; i < 3; i++)
-            txtProcess[i].setText("" + processSet.arrProcess[i]);
+            txtProcess[i].setText("" + processSet.iProcess);
 
         //set button
         int iChangeCount = 0, iButtonValue = processSet.startNumber;
@@ -84,9 +85,10 @@ public class ActStep0302 extends StageActivity{
         while(iChangeCount < 3){
             int index = rand.nextInt(3);
             if(isChanged[index]) continue;
-            iButtonValue += processSet.arrProcess[iChangeCount++];
+            iButtonValue += processSet.iProcess;
             btnAnswer[index].setText("" + iButtonValue);
             isChanged[index] = true;
+            iChangeCount++;
         }
 
         iProcess = 0;
@@ -99,11 +101,11 @@ public class ActStep0302 extends StageActivity{
         iCurrentResult = iNextResult;
 
         if(iProcess < 3)
-            iNextResult = iCurrentResult + processSet.arrProcess[iProcess];
+            iNextResult = iCurrentResult + processSet.iProcess;
     }
 
 
-    public void checkAnswer(Object object){
+    public synchronized void checkAnswer(Object object){
         if(isRight){
             iProcess++;
             setNextProcess();
@@ -150,41 +152,29 @@ public class ActStep0302 extends StageActivity{
         }// !isRight
     }
 
-    public void goNext(Object object){
+    public synchronized void goNext(Object object){
         Intent intent = new Intent(this, ActStep0303.class);
         startActivity(intent);
     }
 
     public class Step0302DataSet {
-        private static final int MAX_SET_NUMBER = 6;
+        private final int arrHundredBase[] = {4, 1, 2, 1, 2};
+        private final int arrHundredRange[] = {2, 3, 4, 5, 5};
+        private final int arrTenBase[] = {0, 3, 0, 1, 0};
+        private final int arrTenRange[] = {10, 7, 3, 9, 1};
+        private final int arrOneBase[] = {0, 0, 0, 3, 0};
+        private final int arrOneRange[] = {1, 1, 1, 7, 3};
+        private final int arrProcessSet[] = {-100, -10, -10, -1, -1};
 
-        /*If file I/O
-        private static final int arrStartNumber[] = new int[MAX_SET_NUMBER];
-        private static final int[] arrProcessSet[] = new int[MAX_SET_NUMBER][];
-        */
-        //else
-        private final int arrStartNumber[] = {400, 700, 500, 790, 101, 602};
-        private final int[] arrProcessSet[] = {{-100, -100, -100},
-                {-100, -100, -100},
-                {-10, -10, -10},
-                {-10, -10, -10},
-                {-1, -1, -1},
-                {-1, -1, -1}};
         public int startNumber;
-        public int arrProcess[] = new int[4];
-
-        public Step0302DataSet(){
-            //If file I/O, read file and set data
-        }
+        public int iProcess;
 
         public void setData(int iStage){
             int iSeed = iStage - 1;
-            if(iSeed < 1) iSeed = iSeed * 2 + rand.nextInt(2);
-            else iSeed = MAX_SET_NUMBER - (NUM_OF_STAGE - iSeed);
 
-            startNumber = arrStartNumber[iSeed];
-            for(int i = 0; i < 3; i++)
-                arrProcess[i] = arrProcessSet[iSeed][i];
+            startNumber = (arrHundredBase[iSeed] + rand.nextInt(arrHundredRange[iSeed])) * 100
+                    + (arrTenBase[iSeed] + rand.nextInt(arrTenRange[iSeed])) * 10 +  (arrOneBase[iSeed] + rand.nextInt(arrOneRange[iSeed]));
+            iProcess = arrProcessSet[iSeed];
         }
     }
 }

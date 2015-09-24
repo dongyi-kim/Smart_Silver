@@ -39,7 +39,7 @@ public class ActStep0701 extends StageActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_07_1);
 
-        NUM_OF_STAGE = 4;
+        //NUM_OF_STAGE = 4;
 
         txtDescription = (TextView) findViewById(R.id.txt_description);
         linearLineCell[0] = (LinearLayout) findViewById(R.id.layout_line_1);

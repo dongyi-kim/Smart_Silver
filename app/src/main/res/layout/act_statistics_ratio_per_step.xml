@@ -14,9 +14,10 @@
             android:layout_marginTop="@dimen/wp5"
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp10"
-            android:textSize="@dimen/wp10"
-            android:gravity="center_horizontal"
+            android:textSize="@dimen/wp9"
+            android:gravity="center_horizontal|bottom"
             android:id="@+id/txt_title"
+            android:textStyle="bold"
             android:textColor="#000000"
             android:text="단계별 문항 정답률"/>
 
@@ -96,7 +97,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="5"
                         android:layout_height="@dimen/wp3"
-                        android:background="@color/result_doing">
+                        android:background="@color/result_success">
                     </LinearLayout>
                     <TextView
                         android:layout_width="0dp"
@@ -141,7 +142,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="6"
                         android:layout_height="@dimen/wp3"
-                        android:background="@color/result_doing">
+                        android:background="@color/result_success">
                     </LinearLayout>
                     <TextView
                         android:layout_width="0dp"
@@ -185,7 +186,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="6"
                         android:layout_height="@dimen/wp3"
-                        android:background="@color/result_doing">
+                        android:background="@color/result_success">
                     </LinearLayout>
                     <TextView
                         android:layout_width="0dp"
@@ -230,7 +231,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="6"
                         android:layout_height="@dimen/wp3"
-                        android:background="@color/result_doing">
+                        android:background="@color/result_success">
                     </LinearLayout>
                     <TextView
                         android:layout_width="0dp"
@@ -275,7 +276,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="6"
                         android:layout_height="@dimen/wp3"
-                        android:background="@color/result_doing">
+                        android:background="@color/result_success">
                     </LinearLayout>
                     <TextView
                         android:layout_width="0dp"
@@ -320,7 +321,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="6"
                         android:layout_height="@dimen/wp3"
-                        android:background="@color/result_doing">
+                        android:background="@color/result_success">
                     </LinearLayout>
                     <TextView
                         android:layout_width="0dp"
@@ -365,7 +366,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="6"
                         android:layout_height="@dimen/wp3"
-                        android:background="@color/result_doing">
+                        android:background="@color/result_success">
                     </LinearLayout>
                     <TextView
                         android:layout_width="0dp"
@@ -410,7 +411,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="6"
                         android:layout_height="@dimen/wp3"
-                        android:background="@color/result_doing">
+                        android:background="@color/result_success">
                     </LinearLayout>
                     <TextView
                         android:layout_width="0dp"
@@ -455,7 +456,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="6"
                         android:layout_height="@dimen/wp3"
-                        android:background="@color/result_doing">
+                        android:background="@color/result_success">
                     </LinearLayout>
                     <TextView
                         android:layout_width="0dp"
@@ -500,7 +501,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="6"
                         android:layout_height="@dimen/wp3"
-                        android:background="@color/result_doing">
+                        android:background="@color/result_success">
                     </LinearLayout>
                     <TextView
                         android:layout_width="0dp"

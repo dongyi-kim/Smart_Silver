@@ -4,7 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,17 +13,18 @@ import java.util.Random;
 import cdmst.smartsilver.R;
 import src.activities.ActMain;
 import src.activities.StageActivity;
+import src.activities.Step06.ActStep0601;
 import src.dialogs.DlgResultMark;
 
 /**
  * Created by Acka on 2015-06-24.
  */
 public class ActStep0505 extends StageActivity {
+    private final ImageView imgPicture[] = new ImageView[2];
+    public final Button btnAnswer[] = new Button[2];
+    public final TextView txtAnswer[] = new TextView[2];
     private TextView txtDescription;
-    public final ImageButton ibtnAnswer[] = new ImageButton[2];
-    public final TextView txtAnswerDescription[] = new TextView[2];
 
-    public int iAnswerIndex = 0;
     private int iRetryCount = 0;
     public boolean isRight = false;
 
@@ -36,17 +37,19 @@ public class ActStep0505 extends StageActivity {
         setContentView(R.layout.act_step_05_5);
 
         txtDescription = (TextView)findViewById(R.id.txt_description);
-        ibtnAnswer[0] = (ImageButton)findViewById(R.id.ibtn_answer_1);
-        ibtnAnswer[1] = (ImageButton)findViewById(R.id.ibtn_answer_2);
-        txtAnswerDescription[0] = (TextView)findViewById(R.id.txt_answer_description_1);
-        txtAnswerDescription[1] = (TextView)findViewById(R.id.txt_answer_description_2);
+        imgPicture[0] = (ImageView)findViewById(R.id.img_picture_1);
+        imgPicture[1] = (ImageView)findViewById(R.id.img_picture_2);
+        btnAnswer[0] = (Button)findViewById(R.id.btn_answer_1);
+        btnAnswer[1] = (Button)findViewById(R.id.btn_answer_2);
+        txtAnswer[0] = (TextView)findViewById(R.id.txt_answer_1);
+        txtAnswer[1] = (TextView)findViewById(R.id.txt_answer_2);
 
         for(int i = 0; i < 2; i++)
-            ibtnAnswer[i].setOnClickListener(new View.OnClickListener(){
+            btnAnswer[i].setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v){
-                    int iSelectIndex = (v == ibtnAnswer[0]? 0 : 1);
-                    if(iSelectIndex == iAnswerIndex) isRight = true;
+                    int iSelectIndex = (v == btnAnswer[0]? 0 : 1);
+                    if(dataSet.bIsAnswer[iSelectIndex]) isRight = true;
                     else isRight = false;
                     checkAnswer();
                 }
@@ -56,16 +59,13 @@ public class ActStep0505 extends StageActivity {
     }
 
     public void setQuestion(boolean isRetry, Object object){
-        int iRandomSeed = iStage - 1;
-        dataSet.setData(iRandomSeed);
+        dataSet.setData(iStage);
 
-        txtDescription.setText(dataSet.sDescription);
-
-        for(int i = 0; i < 2; i++) {
-            ibtnAnswer[i].setImageResource(dataSet.iImageSource[i]);
-            txtAnswerDescription[i].setText(dataSet.sAnswerDescription[i]);
+        if(iStage == NUM_OF_STAGE) txtDescription.setText("노인학교에서 가을축제 준비를 하기 위해 시장에 갔습니다. 사과 한 개 당 가격이 더 저렴한 것은 어느 것일까요?");
+        for(int i = 0; i < 2; i++){
+            imgPicture[i].setImageResource(dataSet.iImageResource[i]);
+            txtAnswer[i].setText(dataSet.sCountDescription[i]);
         }
-        iAnswerIndex = (dataSet.iWholePrice[0] / dataSet.iImageCount[0] < dataSet.iWholePrice[1] / dataSet.iImageCount[1]? 0 : 1);
 
         StartRecording();
     }
@@ -79,8 +79,8 @@ public class ActStep0505 extends StageActivity {
             @Override
             public void onDismiss(DialogInterface dialog) {
                 if(isRight || iRetryCount > 1){
-                    iRetryCount = 0;
                     iStage++;
+                    iRetryCount = 0;
                     if(iStage <= NUM_OF_STAGE) setQuestion(false);
                     else goNext();
                 }
@@ -92,52 +92,35 @@ public class ActStep0505 extends StageActivity {
     }
 
     public void goNext(Object object){
-        Intent intent = new Intent(this, ActMain.class);
+        Intent intent = new Intent(this, ActStep0601.class);
         startActivity(intent);
     }
 
     public class Step0505DataSet{
-        //private enum ePictureType {goodgam, hongshi, apple, flower, waterhippo, cherry};
-        private final int songpyeon = 0, hobakjeon = 1, apple = 2;
+        private final String arrCountUnit[] = {"접시", "접시", "접시", "접시", "개"};
+        private final int arrSetCount[][] = {{1, 2}, {2, 3}, {3, 4}, {2, 5}, {9, 8}};
+        private final int arrImageSource[][] = {{R.drawable.img_mult_songpyeon_4_1, R.drawable.img_mult_songpyeon_4_2},
+                {R.drawable.img_mult_pumpkin_pancake_4_2, R.drawable.img_mult_pumpkin_pancake_4_3}, {R.drawable.img_mult_apple_4_3, R.drawable.img_mult_apple_4_4},
+                {R.drawable.img_mult_songpyeon_5_2, R.drawable.img_mult_songpyeon_5_5}, {R.drawable.img_set_apple_9, R.drawable.img_set_apple_8}};
 
-        private final String arrDescriptionType[] = {"송편", "호박전", "사과"};
-        private final String arrUnit[] = {"접시", "접시", "묶음", "접시", "개"};
-        private final int arrImageSource[][] = new int[4][11];
-        private final int arrImageCount[][] = {{1, 2}, {2, 3}, {3, 4}, {2, 5}, {9, 8}};
-        private final int arrImageType[] = {songpyeon, hobakjeon, apple, songpyeon, apple};
-        private final int arrWholePrice[][] = {{1200, 1800}, {1200, 2100}, {2400, 3600}, {1800, 3500}, {7200, 7200}};
+        public String sCountDescription[] = new String[2];
+        public int iImageResource[] = new int[2];
+        public boolean bIsAnswer[] = new boolean[2];
 
-        public final int iImageCount[] = new int[2];
-        public final int iImageSource[] = new int[2];
-        public final int iWholePrice[] = new int[2];
-        public String sAnswerDescription[] = new String[2];
-        public String sDescription;
-        public int iImageType;
+        public void setData(int iStage) {
+            int iPrice[] = {6 + rand.nextInt(5), 0};
 
-        public Step0505DataSet(){
-            arrImageSource[songpyeon][1] = R.drawable.img_songpyeon_1;
-            arrImageSource[songpyeon][2] = R.drawable.img_songpyeon_2;
-            arrImageSource[songpyeon][3] = R.drawable.img_songpyeon_2_small;
-            arrImageSource[songpyeon][5] = R.drawable.img_songpyeon_5;
-            arrImageSource[hobakjeon][2] = R.drawable.img_hobakjeon_2;
-            arrImageSource[hobakjeon][3] = R.drawable.img_hobakjeon_3;
-            arrImageSource[apple][3] = R.drawable.img_apple_3;
-            arrImageSource[apple][4] = R.drawable.img_apple_4;
-            arrImageSource[apple][8] = R.drawable.img_apple_8;
-            arrImageSource[apple][9] = R.drawable.img_apple_9;
-        }
-
-        public void setData(int iSeed){
-            iImageType = arrImageType[iSeed];
-            sDescription = " 노인학교에서 가을축제 준비를 하기 위해 시장에 갔습니다.\n값이 더 저렴한 " + arrDescriptionType[iImageType] + "의 그림을 누르세요!";
+            bIsAnswer[0] = iPrice[0] == 10 ? false : rand.nextBoolean();
+            bIsAnswer[1] = !bIsAnswer[0];
+            iPrice[1] = iPrice[0] + (bIsAnswer[1] ? -1 : 1);
 
             for(int i = 0; i < 2; i++){
-                iImageCount[i] = arrImageCount[iSeed][i];
-                iImageSource[i] = arrImageSource[iImageType][iImageCount[i]];
-                if(iSeed == 3 && i == 0) iImageSource[i] = arrImageSource[iImageType][iImageCount[i] + 1];
-                iWholePrice[i] = arrWholePrice[iSeed][i];
+                iPrice[i] *= arrSetCount[iStage - 1][i];
 
-                sAnswerDescription[i] = iImageCount[i] + arrUnit[iSeed] + " " + iWholePrice[i] + "원";
+                iImageResource[i] = arrImageSource[iStage - 1][i];
+                sCountDescription[i] = "" + arrSetCount[iStage - 1][i] + arrCountUnit[iStage - 1] + " ";
+                if(iPrice[i] >= 10) sCountDescription[i] += "" + iPrice[i] / 10 + ",";
+                sCountDescription[i] += "" + iPrice[i] % 10 + "00원";
             }
         }
     }

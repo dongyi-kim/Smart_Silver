@@ -15,12 +15,13 @@ import src.activities.Step05.*;
 import src.activities.Step06.*;
 import src.activities.Step07.*;
 import src.activities.Step08.*;
+import src.activities.Step09.*;
 import src.activities.Step10.*;
 
 
 /**
  * Created by waps12b on 15. 4. 15..
- */
+*/
 public class ActTest extends FrameActivity {
 
     Button btnStep1_1;
@@ -43,6 +44,7 @@ public class ActTest extends FrameActivity {
     Button btnStep4_3;
     Button btnStep4_4;
     Button btnStep4_5;
+    Button btnStep5_1;
     Button btnStep5_2;
     Button btnStep5_3;
     Button btnStep5_4;
@@ -62,6 +64,7 @@ public class ActTest extends FrameActivity {
     Button btnStep8_3;
     Button btnStep8_4;
     Button btnStep8_5;
+    Button btnStep9_1;
     Button btnStep10;
     Button btnSelector;
 
@@ -134,6 +137,9 @@ public class ActTest extends FrameActivity {
         btnStep4_5 = (Button)findViewById(R.id.btn_step_4_5);
         btnStep4_5.setOnClickListener(clickBtnStep);
 
+        btnStep5_1 = (Button)findViewById(R.id.btn_step_5_1);
+        btnStep5_1.setOnClickListener(clickBtnStep);
+
         btnStep5_2 = (Button)findViewById(R.id.btn_step_5_2);
         btnStep5_2.setOnClickListener(clickBtnStep);
 
@@ -191,6 +197,9 @@ public class ActTest extends FrameActivity {
         btnStep8_5 = (Button)findViewById(R.id.btn_step_8_5);
         btnStep8_5.setOnClickListener(clickBtnStep);
 
+        btnStep9_1 = (Button)findViewById(R.id.btn_step_9_1);
+        btnStep9_1.setOnClickListener(clickBtnStep);
+
         btnStep10 = (Button)findViewById(R.id.btn_step_10);
         btnStep10.setOnClickListener(clickBtnStep);
 
@@ -207,7 +216,7 @@ public class ActTest extends FrameActivity {
             if(v == btnStep1_1)
             {
 
-                Intent intent = new Intent(v.getContext(), ActStep01.class);
+                Intent intent = new Intent(v.getContext(), ActStep0101.class);
                 startActivity(intent);
             }else if(v == btnStep1_2)
             {
@@ -334,7 +343,12 @@ public class ActTest extends FrameActivity {
                 Intent intent = new Intent(v.getContext(), ActStep0405.class);
                 startActivity(intent);
             }
+            else if(v == btnStep5_1)
+            {
 
+                Intent intent = new Intent(v.getContext(), ActStep0501.class);
+                startActivity(intent);
+            }
             else if(v == btnStep5_2)
             {
 
@@ -447,6 +461,11 @@ public class ActTest extends FrameActivity {
             {
 
                 Intent intent = new Intent(v.getContext(), ActStep0805.class);
+                startActivity(intent);}
+            else if(v == btnStep9_1)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0901.class);
                 startActivity(intent);
             }
             else if(v == btnStep10)

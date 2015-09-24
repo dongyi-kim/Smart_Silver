@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="src.activities.Step01.ActStep01"
+        <activity android:name="src.activities.Step01.ActStep0101"
             android:noHistory="true"
             android:screenOrientation="landscape"
             >
@@ -147,6 +147,12 @@
             >
         </activity>
 
+        <activity android:name="src.activities.Step05.ActStep0501"
+            android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
+        </activity>
+
         <activity android:name="src.activities.Step05.ActStep0502"
             android:noHistory="true"
             android:screenOrientation="landscape"
@@ -225,6 +231,13 @@
             >
         </activity>
 
+
+
+        <activity android:name="src.activities.Step09.ActStep0901"
+            android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
+        </activity>
 
         <activity android:name="src.activities.ResultPage.StatisticsActivity"
             android:screenOrientation="landscape"
@@ -305,6 +318,7 @@
 
         <activity android:name="src.activities.ActStartLearning"
             android:screenOrientation="landscape"
+            android:noHistory="true"
             >
         </activity>
     </application>

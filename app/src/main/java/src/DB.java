@@ -152,4 +152,20 @@ public class DB extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
+
+    public static int COUNT(String where){
+        String sql = "SELECT count(*) FROM RESULT_DATA WHERE " + where;
+
+        SQLiteDatabase db = obj.getWritableDatabase();
+
+        Cursor cursor = db.rawQuery(sql, null);
+        cursor.moveToFirst();
+
+        if (cursor.getCount() > 0 && cursor.getColumnCount() > 0) {
+            return cursor.getInt(0);
+        } else {
+            return 0;
+        }
+    }
 }
+

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cdmst.smartsilver"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionCode="2"
+    android:versionName="1.1" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="src.activities.Step01.ActStep01"
+            android:name="src.activities.Step01.ActStep0101"
             android:noHistory="true"
             android:screenOrientation="landscape" >
         </activity>
@@ -128,6 +128,11 @@
             android:screenOrientation="landscape" >
         </activity>
         <activity
+            android:name="src.activities.Step05.ActStep0501"
+            android:noHistory="true"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
             android:name="src.activities.Step05.ActStep0502"
             android:noHistory="true"
             android:screenOrientation="landscape" >
@@ -189,6 +194,11 @@
         </activity>
         <activity
             android:name="src.activities.Step07.ActStep0704"
+            android:noHistory="true"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="src.activities.Step09.ActStep0901"
             android:noHistory="true"
             android:screenOrientation="landscape" >
         </activity>
@@ -255,6 +265,7 @@
         </activity>
         <activity
             android:name="src.activities.ActStartLearning"
+            android:noHistory="true"
             android:screenOrientation="landscape" >
         </activity>
     </application>

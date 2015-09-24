@@ -9,23 +9,26 @@
         android:layout_height="@dimen/wp100"
         android:background="#FFFFFF"
         android:orientation="vertical">
+
         <TextView
-            android:layout_marginTop="@dimen/wp1"
+            android:layout_marginTop="@dimen/wp5"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wp15"
-            android:textSize="@dimen/wp10"
-            android:gravity="center"
+            android:layout_height="@dimen/wp10"
+            android:textSize="@dimen/wp9"
+            android:gravity="center_horizontal|bottom"
             android:id="@+id/txt_title"
-            android:textStyle="bold"
             android:textColor="#000000"
-            android:text="1단계 학습 결과표"/>
+            android:textStyle="bold"
+            android:text="단계별 문항 정답률"/>
 
         <FrameLayout
             android:layout_gravity="center"
             android:layout_width="@dimen/wp80"
             android:layout_height="1px"
+            android:layout_marginTop="@dimen/wp1"
             android:background="#000000">
         </FrameLayout>
+
         
         <TableLayout
             android:layout_gravity="center"

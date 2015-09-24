@@ -22,7 +22,6 @@ import src.viewes.DrawView;
  * Created by Acka on 2015-05-19.
  */
 public class ActStep0503 extends StageActivity {
-    private TextView txtDescription;
     private ImageButton ibtnPotSmall;
     private ImageView imgPotBig;
     private TextView txtPotSamllCapacity;
@@ -42,7 +41,6 @@ public class ActStep0503 extends StageActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_05_3);
 
-        txtDescription = (TextView)findViewById(R.id.txt_description);
         ibtnPotSmall = (ImageButton)findViewById(R.id.ibtn_pot_small);
         imgPotBig = (ImageView)findViewById(R.id.img_pot_big);
         txtPotSamllCapacity = (TextView)findViewById(R.id.txt_pot_small_capacity);
@@ -80,12 +78,10 @@ public class ActStep0503 extends StageActivity {
         int iRandomSeed = iStage - 1;
         dataSet.setData(iRandomSeed);
 
-        txtDescription.setText(dataSet.sDescription);
-
         iBigPotFill = 0;
         imgPotBig.setImageResource(dataSet.iPotBigImage[iBigPotFill]);
-        txtPotSamllCapacity.setText("" + dataSet.iPotSmallCapacity + "L");
-        txtPotBigCapacity.setText("" + dataSet.iPotBigCapacity + "L");
+        txtPotSamllCapacity.setText("" + dataSet.iPotSmallCapacity + "되");
+        txtPotBigCapacity.setText("" + dataSet.iPotBigCapacity + "되");
 
         int iNextExample = dataSet.iAnswer - rand.nextInt(2);
         if(iNextExample < 0) iNextExample = 0;
@@ -123,16 +119,10 @@ public class ActStep0503 extends StageActivity {
     }
 
     public class Step0503DataSet {
-        private final String arrDescription[] = {" 아래 10L 의 빈 항아리가 있습니다. 빈 항아리를 채우려면\n옆의 그릇으로 몇 번 부어야 하는지 알맞은 숫자를 누르세요.",
-                " 아래 10L 의 빈 항아리가 있습니다. 빈 항아리를 채우려면\n옆의 그릇으로 몇 번 부어야 하는지 알맞은 숫자를 누르세요.",
-                " 아래 10L 의 빈 항아리가 있습니다. 빈 항아리를 채우려면\n옆의 그릇으로 몇 번 부어야 하는지 알맞은 숫자를 누르세요.",
-                " 아래 10L 의 빈 항아리가 있습니다. 빈 항아리를 채우려면\n옆의 그릇으로 몇 번 부어야 하는지 알맞은 숫자를 누르세요.",
-                " 아래 10L 의 빈 항아리가 있습니다. 빈 항아리를 채우려면\n옆의 그릇으로 몇 번 부어야 하는지 알맞은 숫자를 누르세요."};
         private final int arrPotBigCapacity[] = {12, 12, 12, 12, 12};
         private final int arrPotSmallCapacity[] = {1, 2, 3, 4, 6};
         public final int arrPotBigImageSource[][] = new int[13][13];
 
-        public String sDescription;
         public int iPotBigCapacity;
         public int iPotSmallCapacity;
         public int iPotBigImage[] = new int[13];
@@ -155,7 +145,6 @@ public class ActStep0503 extends StageActivity {
         }
 
         public void setData(int iSeed) {
-            sDescription = arrDescription[iSeed];
             iPotBigCapacity = arrPotBigCapacity[iSeed];
             iPotSmallCapacity = arrPotSmallCapacity[iSeed];
 

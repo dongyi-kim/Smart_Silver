@@ -2,7 +2,6 @@ package src.activities.Step10;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -40,30 +39,38 @@ public class ActAskContinue extends FrameActivity {
 
         int iResultCount = result.length;
         int iPastLevel = 0;
+        int iCorrectCount = 0;
+        int iMaxCorrectCount = 0;
         long iCurrentRecord = 0;
         long iBestRecord = 1l << 62;
 
         for(int i = 0; i < iResultCount; i++){
             if(iPastLevel == 10){
-                if(iCurrentRecord < iBestRecord) iBestRecord = iCurrentRecord;
-                iCurrentRecord = iPastLevel = 0;
+                if(iCorrectCount >= iMaxCorrectCount || (iCorrectCount == iMaxCorrectCount && iCurrentRecord < iBestRecord)) {
+                    iMaxCorrectCount = iCorrectCount;
+                    iBestRecord = iCurrentRecord;
+                }
+
+                iCurrentRecord = iPastLevel = iCorrectCount = 0;
             }
 
             if(result[i].iStage - iPastLevel != 1){
                 iCurrentRecord = iPastLevel = 0; continue;
             }
 
+            if(result[i].isSuccess) iCorrectCount++;
             iCurrentRecord += result[i].getMilliTime();
             iPastLevel++;
         }
 
-        if(iBestRecord > iCurrentRecord){
+        if(iCorrectCount >= iMaxCorrectCount || (iCorrectCount == iMaxCorrectCount && iCurrentRecord < iBestRecord)) {
             txtCurrentRecord.setTextColor(0xFFEE3333);
+            iMaxCorrectCount = iCorrectCount;
             iBestRecord = iCurrentRecord;
         }
 
-        txtCurrentRecord.setText("" + iCurrentRecord / 1000.0 + " 초");
-        txtBestRecord.setText("" + iBestRecord / 1000.0 + " 초");
+        txtCurrentRecord.setText("" + iCorrectCount * 10 + "점(" + iCurrentRecord / 1000 + " 초)");
+        txtBestRecord.setText("" + iMaxCorrectCount * 10 + "점(" + iBestRecord / 1000 + " 초)");
     }
 
     View.OnClickListener clickBtnContinue = new View.OnClickListener() {

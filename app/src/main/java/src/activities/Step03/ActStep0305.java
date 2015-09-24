@@ -17,6 +17,7 @@ import java.util.Random;
 
 import cdmst.smartsilver.R;
 import src.activities.ActMain;
+import src.activities.ActStartLearning;
 import src.activities.StageActivity;
 import src.dialogs.DlgResultMark;
 
@@ -44,7 +45,7 @@ public class ActStep0305 extends StageActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_03_5);
 
-        NUM_OF_STAGE = 4;
+        //NUM_OF_STAGE = 4;
 
         txtDescription = (TextView)findViewById(R.id.txt_description);
         linearFrame[0] = (LinearLayout)findViewById(R.id.linear_frame_1_to_3);
@@ -161,7 +162,7 @@ public class ActStep0305 extends StageActivity{
     }
 
     public void goNext(Object object){
-        Intent intent = new Intent(this, ActMain.class);
+        Intent intent = new Intent(this, ActStartLearning.class);
         startActivity(intent);
     }
 

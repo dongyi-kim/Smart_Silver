@@ -47,7 +47,7 @@ public class ActStep10 extends StageActivity {
         if (result == null) iStepCount = 1;
         else iStepCount = result.length + 1;
 
-        NUM_OF_STAGE = 10;
+        //NUM_OF_STAGE = 10;
 
         txtStepNumber = (TextView) findViewById(R.id.txt_step_number);
         txtFomula = (TextView) findViewById(R.id.txt_fomula);
