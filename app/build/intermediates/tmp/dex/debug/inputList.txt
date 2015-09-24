@@ -1,7 +1,7 @@
-C:\Users\jhobo_000\fuck\Smart_Silver\app\build\intermediates\classes\debug
-C:\Users\jhobo_000\fuck\Smart_Silver\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-b20b7f6cf2030c7959751b1fac1d5c9563793d6b.jar
-C:\Users\jhobo_000\fuck\Smart_Silver\app\build\intermediates\pre-dexed\debug\classes-50bc885c39017978742c2e150b3c165fe012a2e1.jar
-C:\Users\jhobo_000\fuck\Smart_Silver\app\build\intermediates\pre-dexed\debug\classes-2e8399ec7cefe807f6a2a154cf1e1fb60d6a704d.jar
-C:\Users\jhobo_000\fuck\Smart_Silver\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-1ba50ae881356f0ca07ad83137bb134229ed2bc9.jar
-C:\Users\jhobo_000\fuck\Smart_Silver\app\build\intermediates\pre-dexed\debug\classes-5b1f578729f3f1b36ba7317478505528a42c54e4.jar
-C:\Users\jhobo_000\fuck\Smart_Silver\app\build\intermediates\pre-dexed\debug\classes-fe7b4b9d528bd91b78110188c36d2dfbad36723b.jar
+C:\Users\Acka\AndroidStudioProjects\Smart_Silver\app\build\intermediates\classes\debug
+C:\Users\Acka\AndroidStudioProjects\Smart_Silver\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-41f924985e747230ee3576f7ec410b06343d6042.jar
+C:\Users\Acka\AndroidStudioProjects\Smart_Silver\app\build\intermediates\pre-dexed\debug\classes-ad0f302c7eef335b56cf206cb145650951b266c7.jar
+C:\Users\Acka\AndroidStudioProjects\Smart_Silver\app\build\intermediates\pre-dexed\debug\classes-b8c9e84356228f055ff0483f3f5274284cd60013.jar
+C:\Users\Acka\AndroidStudioProjects\Smart_Silver\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-022cd52ad7f5a3b869d8cbf914af7d1d1dc01824.jar
+C:\Users\Acka\AndroidStudioProjects\Smart_Silver\app\build\intermediates\pre-dexed\debug\classes-1aea3c46d1850aa26f974f554e35b856db1fe1e7.jar
+C:\Users\Acka\AndroidStudioProjects\Smart_Silver\app\build\intermediates\pre-dexed\debug\classes-46c8e461771f0da72ef96aa118a0599c37e3eb48.jar
