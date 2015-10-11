@@ -1,117 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/img_chalkboard_2"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_chalkboard_2">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="1">
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
         <TextView
-            android:layout_weight=".15"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:textColor="#FFFFFF"
-            android:text=" 노인학교 가을 축제를 준비합니다. 화장지를 사러 마트에 갔습니다.\n더 많은 화장지를 찾아 단추를 누르세요!"
             android:id="@+id/txt_description"
-            android:textSize="@dimen/wp5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wp20"
             android:gravity="center"
-            android:layout_marginTop="20sp" />
+            android:text="노인학교 가을 축제에 필요한 화장지를 사러\n마트에 갔습니다. 더 많은 화장지를 찾아 누르세요."
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/wp6"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".05"></LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="horizontal"
-            android:layout_weight="0.7"
-            android:weightSum="1"
+            android:layout_height="@dimen/wp80"
             android:layout_gravity="center"
-            android:gravity="center">
+            android:layout_marginBottom="@dimen/wp2"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
 
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.4"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:weightSum="1">
-                <ImageView
+            <FrameLayout
+                android:layout_width="@dimen/wp70"
+                android:layout_height="@dimen/wp70">
+                <Button
+                    android:id="@+id/btn_answer_1"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.7"
-                    android:src="@drawable/mult_3_3_tissue"
-                    android:id="@+id/img_picture_1"/>
-                <FrameLayout
+                    android:layout_height="match_parent"
+                    android:background="@null" />
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.3">
-                    <ImageButton
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background_white_transparent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/img_picture_1"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/ibtn_answer_1"
+                        android:layout_height="@dimen/wp55"
                         android:scaleType="fitCenter"
-                        android:background="@null"/>
+                        android:src="@drawable/img_mult_tissue1_3_3" />
                     <TextView
+                        android:id="@+id/txt_answer_1"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="3개씩\n3묶음"
+                        android:layout_height="@dimen/wp15"
                         android:layout_gravity="center"
+                        android:background="#FFFFFFFF"
                         android:gravity="center"
-                        android:textSize="@dimen/wp5"
-                        android:id="@+id/txt_answer_1"/>
-                </FrameLayout>
-            </LinearLayout>
+                        android:text="3개씩 3묶음"
+                        android:textSize="@dimen/wp7" />
+                </LinearLayout>
+            </FrameLayout>
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.03"
-                android:scaleType="fitCenter"
-                android:src="@drawable/line_blue"/>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.4"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:weightSum="1">
-                <ImageView
+            <View
+                android:layout_width="@dimen/wp10"
+                android:layout_height="match_parent"/>
+            <FrameLayout
+                android:layout_width="@dimen/wp70"
+                android:layout_height="@dimen/wp70">
+                <Button
+                    android:id="@+id/btn_answer_2"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.7"
-                    android:src="@drawable/mult_2_6_tissue"
-                    android:id="@+id/img_picture_2"/>
-                <FrameLayout
+                    android:layout_height="match_parent"
+                    android:background="@null" />
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="0.3">
-                    <ImageButton
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background_white_transparent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/img_picture_2"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/ibtn_answer_2"
+                        android:layout_height="@dimen/wp55"
                         android:scaleType="fitCenter"
-                        android:background="@null"/>
+                        android:src="@drawable/img_mult_tissue2_4_2" />
                     <TextView
+                        android:id="@+id/txt_answer_2"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="2개씩\n6묶음"
+                        android:layout_height="@dimen/wp15"
                         android:layout_gravity="center"
+                        android:background="#FFFFFFFF"
                         android:gravity="center"
-                        android:textSize="@dimen/wp5"
-                        android:id="@+id/txt_answer_2"/>
-                </FrameLayout>
-            </LinearLayout>
-
+                        android:text="4개씩 2묶음"
+                        android:textSize="@dimen/wp7" />
+                </LinearLayout>
+            </FrameLayout>
         </LinearLayout>
-
-
     </LinearLayout>
 
     <TextView
