@@ -31,7 +31,7 @@
             android:weightSum="1">
 
             <FrameLayout
-                android:layout_width="@dimen/wp70"
+                android:layout_width="@dimen/wp68"
                 android:layout_height="@dimen/wp65">
                 <Button
                     android:id="@+id/btn_answer_1"
@@ -66,7 +66,7 @@
                 android:layout_width="@dimen/wp10"
                 android:layout_height="match_parent"/>
             <FrameLayout
-                android:layout_width="@dimen/wp70"
+                android:layout_width="@dimen/wp68"
                 android:layout_height="@dimen/wp65">
                 <Button
                     android:id="@+id/btn_answer_2"
@@ -83,6 +83,7 @@
                         android:id="@+id/img_picture_2"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/wp52"
+                        android:padding="@dimen/wp1"
                         android:scaleType="fitCenter"
                         android:src="@drawable/img_mult_tissue2_4_2" />
                     <TextView

@@ -160,11 +160,6 @@ public class ActStep0304 extends StageActivity {
     }
 
     public class Step0304DataSet{
-        private final String arrDescription[] = {"할머니와 할아버지가 손주들이 빚은 송편을 받았습니다.\n두 분이 드시고 남은 송편은 몇 개일까요?",
-                "할머니가 홍시를 선물 받았습니다. 할머니와 할아버지가\n드시고 남은 홍시는 몇 개일까요?",
-                "할머니와 할아버지가 추석에 사용할 밤을 까놓았습니다.\n그런데 손주들이 밤을 계속 가져갑니다. 밤은 몇 개 남았을까요?",
-                "할머니와 할아버지가 추석에 사용할 약과와 송편을 만들었습니다.\n손님이 오셔서 약과와 송편을 대접하였습니다. 모두 몇 개가 남았을까요?",
-                "할머니와 할아버지가 차례 상 준비를 하고 있습니다. 할머니가 전을 부치는데,\n할아버지는 옆에서 먹기만 합니다. 남은 전은 모두 몇 개일까요?"};
         private final int arrSampleCount[][][][] = {{{{10}, {2}, {5}}, {{15}, {2}, {2}}, {{50}, {25}}, {{20, 50}, {5, 15}}, {{20, 30, 30}, {2, 3, 5}}},
                 {{{10}, {3}, {3}}, {{15}, {2}, {3}}, {{40}, {20}}, {{40, 40}, {5, 15}}, {{10, 20, 30}, {2, 3, 5}}},
                 {{{10}, {3}, {5}}, {{15}, {5}, {5}}, {{50}, {20}}, {{20, 40}, {15, 5}}, {{20, 30, 20}, {3, 3, 4}}}};
@@ -186,7 +181,6 @@ public class ActStep0304 extends StageActivity {
             int iSeed = rand.nextInt(3);
 
             iAnswer = 0;
-            sDescription = arrDescription[iStage - 1];
             int iSampleCount = arrSampleCount[iSeed][iStage - 1][0].length;
 
             for(int i = 0; i < arrSampleCount[iSeed][iStage - 1].length; i++){
@@ -200,6 +194,12 @@ public class ActStep0304 extends StageActivity {
                 }
                 iImageResource[i] = arrImageResource[iStage - 1][i];
             }
+
+            if(iStage == 1) sDescription = "" + arrSampleCount[iSeed][0][0][0] + "개의 송편이 있습니다. 할머니와 할아버지가\n각각 " + arrSampleCount[iSeed][0][1][0] + "개와 " + arrSampleCount[iSeed][0][2][0]+ "개를 드시고 남은 송편은 몇 개일까요?";
+            else if(iStage == 2) sDescription = "" + arrSampleCount[iSeed][1][0][0] + "개의 곶감이 있습니다. 할머니와 할아버지가\n각각 " + arrSampleCount[iSeed][1][1][0] + "개와 " + arrSampleCount[iSeed][1][2][0] + "개를 드시고 남은 송편은 몇 개일까요?";
+            else if(iStage == 3) sDescription = "추석에 사용할 밤을 " + arrSampleCount[iSeed][2][0][0] + "개 까놓았는데, 손주들이\n밤을 가져갔습니다. 밤은 몇 개 남았을까요?";
+            else if(iStage == 4) sDescription = "추석에 사용할 약과와 송편을 만들어\n손님께 대접하였습니다. 모두 몇 개가 남았을까요?";
+            else sDescription = "할머니와 할아버지는 아래의 전을 만들고, 먹었습니다.\n남은 전은 모두 몇 개일까요?";
         }
     }
 

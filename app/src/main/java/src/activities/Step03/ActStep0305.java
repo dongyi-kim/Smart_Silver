@@ -167,10 +167,8 @@ public class ActStep0305 extends StageActivity{
     }
 
     public class Step0305DataSet{
-        private final String arrDescription[] = {"할아버지가 할머니에게 동전지갑을 선물하려고 합니다.\n할아버지가 받아야 할 거스름돈은 얼마입니까?",
-                "할머니와 할아버지는 순댓국 2그릇을 먹었습니다.\n받아야 할 거스름돈은 얼마입니까?",
-                "할머니와 할아버지가 마당놀이를 보러 가서 입장료를 냈습니다.\n두 분이 받을 거스름돈은 얼마입니까?",
-                "할아버지는 할머니와 같이 마당놀이를 함께 보고, 순댓국을 먹고, 할머니에게 동전지갑을 선물했습니다. 오늘 쓴 돈은 모두 얼마입니까?"};
+        private final String arrDescription[] = {"할아버지가 할머니에게 아래의 동전지갑을 선물하려고\n합니다. 할아버지가 받아야 할 거스름돈은 얼마입니까?",
+                "", "", "할아버지는 할머니와 같이 마당놀이를 함께 보고, 순댓국을 먹고, 할머니에게 동전지갑을 선물했습니다. 오늘 쓴 돈은 모두 얼마입니까?"};
         private final String arrMoneyDescription[][][] = {{{"낸 돈 10,000", "동전지갑 3,000"}, {"낸 돈 15,000", "순대국\n6,000"}, {"낸 돈 50,000", "입장권\n15,000"}, {"", "", ""}},
         {{"낸 돈 10,000", "동전지갑 5,000"}, {"낸 돈 15,000", "순대국\n5,000"}, {"낸 돈 50,000", "입장권\n10,000"}, {"", "", ""}},
         {{"낸 돈 10,000", "동전지갑 8,000"}, {"낸 돈 15,000", "순대국\n6,500"}, {"낸 돈 50,000", "입장권\n20,000"}, {"", "", ""}}};
@@ -187,7 +185,6 @@ public class ActStep0305 extends StageActivity{
         void setData(int iStage){
             int iSeed = rand.nextInt(3);
 
-            sDescription = arrDescription[iStage - 1];
             if(iStage == NUM_OF_STAGE){
                 iAnswer = 0;
                 for(int i = 0; i < 3; i++)
@@ -203,6 +200,10 @@ public class ActStep0305 extends StageActivity{
 
                 arrSeed[iStage - 1] = iSeed;
             }
+
+            sDescription = arrDescription[iStage - 1];
+            if(iStage == 2) sDescription = "할머니와 할아버지가 " + sMoneyDescription[2].substring(4) + "원짜리 순대국 두 그릇을\n드셨습니다. 받아야 할 거스름돈은 얼마입니까?";
+            else if(iStage == 3) sDescription = "할머니와 할아버지가 입장권이 " + sMoneyDescription[2].substring(4) + "원인 마당놀이를\n보러 갔습니다. 두 분이 받을 거스름돈은 얼마입니까?";
         }
     }
 }
