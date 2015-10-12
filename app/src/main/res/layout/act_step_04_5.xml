@@ -32,7 +32,7 @@
 
             <FrameLayout
                 android:layout_width="@dimen/wp70"
-                android:layout_height="@dimen/wp70">
+                android:layout_height="@dimen/wp65">
                 <Button
                     android:id="@+id/btn_answer_1"
                     android:layout_width="match_parent"
@@ -47,13 +47,13 @@
                     <ImageView
                         android:id="@+id/img_picture_1"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/wp55"
+                        android:layout_height="@dimen/wp52"
                         android:scaleType="fitCenter"
                         android:src="@drawable/img_mult_tissue1_3_3" />
                     <TextView
                         android:id="@+id/txt_answer_1"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/wp15"
+                        android:layout_height="@dimen/wp13"
                         android:layout_gravity="center"
                         android:background="#FFFFFFFF"
                         android:gravity="center"
@@ -67,7 +67,7 @@
                 android:layout_height="match_parent"/>
             <FrameLayout
                 android:layout_width="@dimen/wp70"
-                android:layout_height="@dimen/wp70">
+                android:layout_height="@dimen/wp65">
                 <Button
                     android:id="@+id/btn_answer_2"
                     android:layout_width="match_parent"
@@ -82,13 +82,13 @@
                     <ImageView
                         android:id="@+id/img_picture_2"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/wp55"
+                        android:layout_height="@dimen/wp52"
                         android:scaleType="fitCenter"
                         android:src="@drawable/img_mult_tissue2_4_2" />
                     <TextView
                         android:id="@+id/txt_answer_2"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/wp15"
+                        android:layout_height="@dimen/wp13"
                         android:layout_gravity="center"
                         android:background="#FFFFFFFF"
                         android:gravity="center"

@@ -52,23 +52,16 @@ public class ActStep0405 extends StageActivity {
         txtAnswer[0] = (TextView)findViewById(R.id.txt_answer_1);
         txtAnswer[1] = (TextView)findViewById(R.id.txt_answer_2);
 
-
-        for(int i = 0; i < 2; i++) {
-            btnAnswer[i].setOnTouchListener(new View.OnTouchListener() {
+        for(int i = 0; i < 2; i++)
+            btnAnswer[i].setOnClickListener(new View.OnClickListener(){
                 @Override
-                public boolean onTouch(View v, MotionEvent motionEvent)
-                {
-                    if (motionEvent.getPointerCount() < 1)
-                    {
-                        int iSelectIndex = (v == btnAnswer[0] ? 0 : 1);
-                        if (dataSet.bIsBig[iSelectIndex]) isRight = true;
-                        else isRight = false;
-                        checkAnswer();
-                    }
-                    return false;
+                public void onClick(View v){
+                    int iSelectIndex = (v == btnAnswer[0]? 0 : 1);
+                    if (dataSet.bIsBig[iSelectIndex]) isRight = true;
+                    else isRight = false;
+                    checkAnswer();
                 }
             });
-        }
 
         setQuestion(false);
     }
@@ -76,6 +69,7 @@ public class ActStep0405 extends StageActivity {
     public void setQuestion(boolean isRetry, Object object){
         dataSet.setData(iStage);
 
+        txtDescription.setText(dataSet.txtDescription);
         for(int i = 0; i < 2; i++){
             imgPicture[i].setImageResource(dataSet.iImageResource[i]);
             txtAnswer[i].setText(dataSet.sCountDescription[i]);
@@ -124,44 +118,54 @@ public class ActStep0405 extends StageActivity {
                 {{R.drawable.img_mult_onion1_4, R.drawable.img_mult_onion1_6, R.drawable.img_mult_onion1_8}, {R.drawable.img_mult_onion2_4, R.drawable.img_mult_onion2_5, R.drawable.img_mult_onion2_6}},
                 {{R.drawable.img_mult_napkin1_3, R.drawable.img_mult_napkin1_4, R.drawable.img_mult_napkin1_5}, {R.drawable.img_mult_napkin2_7, R.drawable.img_mult_napkin2_8, R.drawable.img_mult_napkin2_9}}};
 
+        private int iPastSeed = -1;
         public String txtDescription;
         public String sCountDescription[] = new String[2];
         public int iImageResource[] = new int[2];
         public boolean bIsBig[] = new boolean[2];
 
         public void setData(int iStage) {
-            int iStageType = iStage / 2;
+            int iStageType = (iStage - 1) / 2;
             int iMaxSetCount = arrImageCount[iStageType][0].length;
             int iSeed[] = {(1 - (iStage % 2)) * (iMaxSetCount / 2) + rand.nextInt((iMaxSetCount + 1) / 2), 0};
+
+            if(iStage % 2 == 0){
+                while(iSeed[0] == iPastSeed){
+                    iSeed[0] = (1 - (iStage % 2)) * (iMaxSetCount / 2) + rand.nextInt((iMaxSetCount + 1) / 2);
+                }
+            }
+
             int iLeftAmount = arrImageCount[iStageType][0][iSeed[0]][0] * arrImageCount[iStageType][0][iSeed[0]][1];
-            int iTolerance = Math.min(arrImageCount[iStageType][0][iSeed[0]][0], arrImageCount[iStageType][0][iSeed[0]][1]);
-            int iRightAmout = 0, iDifferent = 0;
+            int iTolerance = Math.max(arrImageCount[iStageType][0][iSeed[0]][0], arrImageCount[iStageType][0][iSeed[0]][1]);
+            int iRightAmount = 0, iDifferent = 0;
 
-            txtDescription = arrDescription[iStageType];
-
-            if(iStageType == 0 && iSeed[0] == 0){
-                iSeed[1] = 3;
-                iRightAmout = arrImageCount[iStageType][1][iSeed[1]][0] * arrImageCount[iStageType][1][iSeed[1]][1];
+            if(iStageType < 2 && iSeed[0] == 0){
+                iSeed[1] = iStage == 0 ? 3 : 1;
+                iRightAmount = arrImageCount[iStageType][1][iSeed[1]][0] * arrImageCount[iStageType][1][iSeed[1]][1];
             }
             else{
                 do {
-                    do{ iSeed[1] = rand.nextInt(iMaxSetCount); } while(arrImageCount[iStageType][0][iSeed[0]][0] != arrImageCount[iStageType][1][iSeed[1]][0]
-                            && arrImageCount[iStageType][0][iSeed[0]][0] != arrImageCount[iStageType][1][iSeed[1]][1]
-                            && arrImageCount[iStageType][0][iSeed[0]][1] != arrImageCount[iStageType][1][iSeed[1]][0]
-                            && arrImageCount[iStageType][0][iSeed[0]][1] != arrImageCount[iStageType][1][iSeed[1]][1]);
+                    do{ iSeed[1] = rand.nextInt(iMaxSetCount); } while(arrImageCount[iStageType][0][iSeed[0]][0] == arrImageCount[iStageType][1][iSeed[1]][0]
+                            || arrImageCount[iStageType][0][iSeed[0]][0] == arrImageCount[iStageType][1][iSeed[1]][1]
+                            || arrImageCount[iStageType][0][iSeed[0]][1] == arrImageCount[iStageType][1][iSeed[1]][0]
+                            || arrImageCount[iStageType][0][iSeed[0]][1] == arrImageCount[iStageType][1][iSeed[1]][1]);
 
-                    iRightAmout = arrImageCount[iStageType][1][iSeed[1]][0] * arrImageCount[iStageType][1][iSeed[1]][1];
-                    iDifferent = Math.abs(iLeftAmount - iRightAmout);
-                } while (iDifferent != 0 && iDifferent <= iTolerance);
+                    iRightAmount = arrImageCount[iStageType][1][iSeed[1]][0] * arrImageCount[iStageType][1][iSeed[1]][1];
+                    iDifferent = Math.abs(iLeftAmount - iRightAmount);
+                } while (iDifferent == 0 || iDifferent > iTolerance);
             }
 
-            bIsBig[0] = iLeftAmount > iRightAmout;
-            bIsBig[1] = iRightAmout > iLeftAmount;
+            txtDescription = arrDescription[iStageType];
+
+            bIsBig[0] = iLeftAmount > iRightAmount;
+            bIsBig[1] = iRightAmount > iLeftAmount;
 
             for(int i = 0; i < 2; i++){
                 iImageResource[i] = arrImageSource[iStageType][i][iSeed[i]];
-                sCountDescription[i] = "" + arrImageCount[iStageType][i][iSeed[i]][0] + arrCountUnit[iStageType][0] + " " + arrImageCount[iStageType][i][iSeed[i]][1] + arrCountUnit[iStageType][1];
+                sCountDescription[i] = "" + arrImageCount[iStageType][i][iSeed[i]][0] + arrCountUnit[0][iStageType] + " " + arrImageCount[iStageType][i][iSeed[i]][1] + arrCountUnit[1][iStageType];
             }
+
+            iPastSeed = iSeed[0];
         }
     }
 }

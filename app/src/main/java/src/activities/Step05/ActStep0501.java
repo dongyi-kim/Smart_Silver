@@ -121,6 +121,10 @@ public class ActStep0501 extends StageActivity {
 
             int iAddValue = 1 + rand.nextInt(3);
             iAnswerCount[(iAnswerIndex + 1) % 2] = iDivideCount + (iAddValue < iDivideCount ? (rand.nextBoolean() ? -1 : 1) : -1) * (1 + rand.nextInt(3));
+
+            for(int i = 0; i < 2; i++) {
+                if (iAnswerCount[i] <= 0) iAnswerCount[i] = 1;
+            }
         }
     }
 }
