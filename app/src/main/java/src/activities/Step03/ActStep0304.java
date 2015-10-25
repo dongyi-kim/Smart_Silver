@@ -168,7 +168,7 @@ public class ActStep0304 extends StageActivity {
 
         private int arrImageResource[][] = {{R.drawable.icon_set_songpyeon_10, R.drawable.icon_grandma, R.drawable.icon_grandfa},
                 {R.drawable.icon_set_dried_persimmon_15, R.drawable.icon_grandma, R.drawable.icon_grandfa},
-                {R.drawable.img_grandma_grandfa_with_chestnut, R.drawable.icon_grandson},
+                {R.drawable.img_grandma_grandfa_with_chestnut, R.drawable.img_char_son},
                 {R.drawable.img_grandma_grandfa_with_dagwa, R.drawable.img_dagwa},
                 {R.drawable.img_grandma_with_pumpkin_pancake, R.drawable.img_grandfa_with_empty_plates}};
 
