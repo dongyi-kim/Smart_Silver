@@ -2,18 +2,20 @@ package src.activities.Step05;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.*;
 import android.os.Bundle;
+import android.support.v4.graphics.*;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.io.ByteArrayOutputStream;
 import java.util.Random;
 
 import cdmst.smartsilver.R;
-import src.activities.ActMain;
 import src.activities.StageActivity;
 import src.dialogs.DlgResultMark;
 import src.viewes.DrawView;
@@ -23,34 +25,34 @@ import src.viewes.DrawView;
  */
 public class ActStep0503 extends StageActivity {
     private ImageButton ibtnPotSmall;
-    private ImageView imgPotBig;
+    private ImageView imgWater;
     private TextView txtPotSamllCapacity;
     private TextView txtPotBigCapacity;
     public final Button btnAnswer[] = new Button[3];
 
+    public  int iWaterLevel = 0;
     private int iRetryCount = 0;
     public boolean isRight = false;
 
     public Step0503DataSet dataSet = new Step0503DataSet();
     private Random rand = new Random();
 
-    private int iBigPotFill;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_05_3);
 
-        ibtnPotSmall = (ImageButton)findViewById(R.id.ibtn_pot_small);
-        imgPotBig = (ImageView)findViewById(R.id.img_pot_big);
-        txtPotSamllCapacity = (TextView)findViewById(R.id.txt_pot_small_capacity);
-        txtPotBigCapacity = (TextView)findViewById(R.id.txt_pot_big_capacity);
-        btnAnswer[0] = (Button)findViewById(R.id.btn_answer_1);
-        btnAnswer[1] = (Button)findViewById(R.id.btn_answer_2);
-        btnAnswer[2] = (Button)findViewById(R.id.btn_answer_3);
+        ibtnPotSmall = (ImageButton) findViewById(R.id.ibtn_pot_small);
+        imgWater = (ImageView) findViewById(R.id.img_water_in_pot);
+        txtPotSamllCapacity = (TextView) findViewById(R.id.txt_small_pot_capacity);
+        txtPotBigCapacity = (TextView) findViewById(R.id.txt_big_pot_capacity);
+        btnAnswer[0] = (Button) findViewById(R.id.btn_answer_1);
+        btnAnswer[1] = (Button) findViewById(R.id.btn_answer_2);
+        btnAnswer[2] = (Button) findViewById(R.id.btn_answer_3);
 
         ibtnPotSmall.setOnClickListener(clickSmallPot);
-        for(int i = 0; i < 3; i++)
+
+        for (int i = 0; i < 3; i++)
             btnAnswer[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -66,92 +68,97 @@ public class ActStep0503 extends StageActivity {
 
     View.OnClickListener clickSmallPot = new View.OnClickListener() {
         public void onClick(View v) {
-            iBigPotFill += dataSet.iPotSmallCapacity;
-            if(iBigPotFill > dataSet.iPotBigCapacity)
-                iBigPotFill = 0;
-
-            imgPotBig.setImageResource(dataSet.iPotBigImage[iBigPotFill]);
+            Bitmap bmFull = BitmapFactory.decodeResource(getResources(), R.drawable.img_water_in_pot);
+            imgWater.setImageBitmap(cropBitmapHeight(bmFull, (100 * iWaterLevel) / dataSet.iAnswer));
         }
     };
 
-    public void setQuestion(boolean isRetry, Object object){
-        int iRandomSeed = iStage - 1;
-        dataSet.setData(iRandomSeed);
+    private Bitmap cropBitmapHeight(Bitmap bmOrigin, int iHeightRatio) {
+        if (iHeightRatio <= 1) iHeightRatio = 100;
+        else if (iHeightRatio >= 99) iHeightRatio = 0;
+        else{
+            iHeightRatio = 90 - ((iHeightRatio * 70) / 100) ;
+            iHeightRatio -= iHeightRatio / 10;
+        }
 
-        iBigPotFill = 0;
-        imgPotBig.setImageResource(dataSet.iPotBigImage[iBigPotFill]);
-        txtPotSamllCapacity.setText("" + dataSet.iPotSmallCapacity + "되");
-        txtPotBigCapacity.setText("" + dataSet.iPotBigCapacity + "되");
+        int iHeight = bmOrigin.getHeight() * iHeightRatio / 100;
+
+        Bitmap bmOverlay = Bitmap.createBitmap(bmOrigin.getWidth(), bmOrigin.getHeight(), Bitmap.Config.ARGB_8888);
+
+        Paint p = new Paint();
+        p.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
+        Canvas c = new Canvas(bmOverlay);
+        c.drawBitmap(bmOrigin, 0, 0, null);
+        c.drawRect(0, 0, bmOrigin.getWidth(), iHeight, p);
+
+        iWaterLevel++; if(iWaterLevel > dataSet.iAnswer) iWaterLevel = 0;
+        return bmOverlay;
+    }
+
+    public void setQuestion(boolean isRetry, Object object) {
+        dataSet.setData(iStage);
+
+        iWaterLevel = 0;
+        Bitmap bmFull = BitmapFactory.decodeResource(getResources(), R.drawable.img_water_in_pot);
+        imgWater.setImageBitmap(cropBitmapHeight(bmFull, 0));
+
+        txtPotBigCapacity.setText("" + dataSet.iBigCapacity + "되");
+        txtPotSamllCapacity.setText("" + dataSet.iSmallCapacity + "되");
 
         int iNextExample = dataSet.iAnswer - rand.nextInt(2);
-        if(iNextExample < 0) iNextExample = 0;
-
-        for(int i = 0; i < 3; i++)
+        for (int i = 0; i < 3; i++)
             btnAnswer[i].setText("" + (iNextExample + i));
 
         StartRecording();
     }
 
-    public void checkAnswer(Object o){
+    public void checkAnswer(Object o) {
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
-        if(isRight || iRetryCount > 1) StopRecording(isRight);
+        if (isRight || iRetryCount > 1) StopRecording(isRight);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface dialog) {
-                if(isRight || iRetryCount > 1){
+                if (isRight || iRetryCount > 1) {
                     iRetryCount = 0;
                     iStage++;
-                    if(iStage <= NUM_OF_STAGE) setQuestion(false);
+                    if (iStage <= NUM_OF_STAGE) setQuestion(false);
                     else goNext();
-                }
-                else{
+                } else {
                     iRetryCount++;
                 }
             }
         });
     }
 
-    public void goNext(Object object){
+    public void goNext(Object object) {
         Intent intent = new Intent(this, ActStep0504.class);
         startActivity(intent);
     }
 
     public class Step0503DataSet {
-        private final int arrPotBigCapacity[] = {12, 12, 12, 12, 12};
-        private final int arrPotSmallCapacity[] = {1, 2, 3, 4, 6};
-        public final int arrPotBigImageSource[][] = new int[13][13];
+        private int arrRandomBase[] = {10, 14, 16, 20};
+        private int arrRandomRange[] = {6, 11, 20, 30};
 
-        public int iPotBigCapacity;
-        public int iPotSmallCapacity;
-        public int iPotBigImage[] = new int[13];
         public int iAnswer;
+        public int iBigCapacity;
+        public int iSmallCapacity;
 
-        public Step0503DataSet() {
-            arrPotBigImageSource[12][0] = R.drawable.pot_0_percent;
-            arrPotBigImageSource[12][1] = R.drawable.pot_8_percent;
-            arrPotBigImageSource[12][2] = R.drawable.pot_17_percent;
-            arrPotBigImageSource[12][3] = R.drawable.pot_25_percent;
-            arrPotBigImageSource[12][4] = R.drawable.pot_33_percent;
-            arrPotBigImageSource[12][5] = R.drawable.pot_42_percent;
-            arrPotBigImageSource[12][6] = R.drawable.pot_50_percent;
-            arrPotBigImageSource[12][7] = R.drawable.pot_59_percent;
-            arrPotBigImageSource[12][8] = R.drawable.pot_67_percent;
-            arrPotBigImageSource[12][9] = R.drawable.pot_75_percent;
-            arrPotBigImageSource[12][10] = R.drawable.pot_83_percent;
-            arrPotBigImageSource[12][11] = R.drawable.pot_92_percent;
-            arrPotBigImageSource[12][12] = R.drawable.pot_100_percent;
-        }
+        public void setData(int iStage) {
+            int iSeed = iStage - 1;
 
-        public void setData(int iSeed) {
-            iPotBigCapacity = arrPotBigCapacity[iSeed];
-            iPotSmallCapacity = arrPotSmallCapacity[iSeed];
+            do{
+                int iDivisorOrder = 0;
+                iBigCapacity = arrRandomBase[iSeed] + rand.nextInt(arrRandomRange[iSeed]);
+                for(iSmallCapacity = 2; iSmallCapacity <= iBigCapacity; iSmallCapacity++) {
+                    if ((iBigCapacity % iSmallCapacity) == 0) iDivisorOrder++;
+                    if (iDivisorOrder == iStage) break;
+                }
 
-            for(int i = 0; i <= iPotBigCapacity; i++)
-                iPotBigImage[i] = arrPotBigImageSource[iPotBigCapacity][i];
+            } while(iSmallCapacity < 2 || iSmallCapacity >= 10);
 
-            iAnswer = iPotBigCapacity / iPotSmallCapacity;
+            iAnswer = iBigCapacity / iSmallCapacity;
         }
     }
 }
