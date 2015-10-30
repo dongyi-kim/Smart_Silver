@@ -271,13 +271,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/wp4"
-                android:text="step 9-1"
-                android:id="@+id/btn_step_9_1"
-                />
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/wp4"
                 android:text="step 8-1"
                 android:id="@+id/btn_step_8_1"
                 />
@@ -309,6 +302,42 @@
                 android:text="step 8-5"
                 android:id="@+id/btn_step_8_5"
                 />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/wp4"
+                android:text="step 9-1"
+                android:id="@+id/btn_step_9_1"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/wp4"
+                android:text="step 9-2"
+                android:id="@+id/btn_step_9_2"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/wp4"
+                android:text="step 9-3"
+                android:id="@+id/btn_step_9_3"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/wp4"
+                android:text="step 9-4"
+                android:id="@+id/btn_step_9_4"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/wp4"
+                android:text="step 9-5"
+                android:id="@+id/btn_step_9_5"
+                />
+
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

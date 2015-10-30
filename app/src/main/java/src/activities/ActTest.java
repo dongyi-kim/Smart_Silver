@@ -65,6 +65,10 @@ public class ActTest extends FrameActivity {
     Button btnStep8_4;
     Button btnStep8_5;
     Button btnStep9_1;
+    Button btnStep9_2;
+    Button btnStep9_3;
+    Button btnStep9_4;
+    Button btnStep9_5;
     Button btnStep10;
     Button btnSelector;
 
@@ -199,6 +203,18 @@ public class ActTest extends FrameActivity {
 
         btnStep9_1 = (Button)findViewById(R.id.btn_step_9_1);
         btnStep9_1.setOnClickListener(clickBtnStep);
+
+        btnStep9_2 = (Button)findViewById(R.id.btn_step_9_2);
+        btnStep9_2.setOnClickListener(clickBtnStep);
+
+        btnStep9_3 = (Button)findViewById(R.id.btn_step_9_3);
+        btnStep9_3.setOnClickListener(clickBtnStep);
+
+        btnStep9_4 = (Button)findViewById(R.id.btn_step_9_4);
+        btnStep9_4.setOnClickListener(clickBtnStep);
+
+        btnStep9_5 = (Button)findViewById(R.id.btn_step_9_5);
+        btnStep9_5.setOnClickListener(clickBtnStep);
 
         btnStep10 = (Button)findViewById(R.id.btn_step_10);
         btnStep10.setOnClickListener(clickBtnStep);
@@ -462,10 +478,28 @@ public class ActTest extends FrameActivity {
 
                 Intent intent = new Intent(v.getContext(), ActStep0805.class);
                 startActivity(intent);}
-            else if(v == btnStep9_1)
+            else if(v == btnStep9_2)
             {
 
-                Intent intent = new Intent(v.getContext(), ActStep0901.class);
+                Intent intent = new Intent(v.getContext(), ActStep0902.class);
+                startActivity(intent);
+            }
+            else if(v == btnStep9_3)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0903.class);
+                startActivity(intent);
+            }
+            else if(v == btnStep9_4)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0904.class);
+                startActivity(intent);
+            }
+            else if(v == btnStep9_5)
+            {
+
+                Intent intent = new Intent(v.getContext(), ActStep0905.class);
                 startActivity(intent);
             }
             else if(v == btnStep10)

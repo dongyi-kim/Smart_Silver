@@ -232,13 +232,6 @@
         </activity>
 
 
-
-        <activity android:name="src.activities.Step09.ActStep0901"
-            android:noHistory="true"
-            android:screenOrientation="landscape"
-            >
-        </activity>
-
         <activity android:name="src.activities.ResultPage.StatisticsActivity"
             android:screenOrientation="landscape"
             >
@@ -293,6 +286,30 @@
         </activity>
 
         <activity android:name="src.activities.Step08.ActStep0805"
+            android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
+        </activity>
+
+        <activity android:name="src.activities.Step09.ActStep0902"
+            android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
+        </activity>
+
+        <activity android:name="src.activities.Step09.ActStep0903"
+            android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
+        </activity>
+
+        <activity android:name="src.activities.Step09.ActStep0904"
+            android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
+        </activity>
+
+        <activity android:name="src.activities.Step09.ActStep0905"
             android:noHistory="true"
             android:screenOrientation="landscape"
             >

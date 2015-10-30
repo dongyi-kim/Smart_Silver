@@ -27,7 +27,7 @@ public class Setting {
             {5,5,5,5,5},
             {5,5,5,5,5},
             {5,5,5,5,5},
-            {4,5,5,5,5},
+            {4,4,5,4,4},
             {10},
     };
 
@@ -40,7 +40,7 @@ public class Setting {
             {ActStep0601.class, ActStep0602.class, ActStep0603.class, ActStep0604.class, ActStep0605.class },//step6
             {ActStep0701.class, ActStep0702.class, ActStep0703.class, ActStep0704.class, ActStep0705.class },//step7
             { },//step8
-            {ActStep0901.class },//step9
+            {ActStep0902.class, ActStep0902.class, ActStep0903.class, ActStep0904.class, ActStep0905.class,  },//step9
             {ActStep10.class },//step10
     };
 
