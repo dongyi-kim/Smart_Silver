@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_chalkboard_2">
+
+    <LinearLayout
+        android:layout_width="@dimen/wp150"
+        android:layout_height="@dimen/wp100"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wp20"
+            android:gravity="center"
+            android:text="아래의 밥과 찌개에서 각각 1종류를 고르려 합니다.\n선택할 수 있는 종류는 모두 몇 가지인가요?"
+            android:textColor="#FFFFFF"
+            android:id="@+id/txt_description"
+            android:textSize="@dimen/wp6"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:background="@drawable/frame_cell_white"
+            android:orientation="vertical"
+            android:layout_height="@dimen/wp60">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="@dimen/wp30">
+
+                <LinearLayout
+                    android:layout_width="@dimen/wp40"
+                    android:orientation="vertical"
+                    android:id="@+id/soup6"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wp23"
+                        android:src="@drawable/soup_9_2_5"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wp5"
+                        android:gravity="center"
+                        android:text="김치찌개"
+                        android:textSize="@dimen/wp5"
+                        android:textColor="#FFFFFF"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/wp40"
+                    android:orientation="vertical"
+                    android:id="@+id/soup7"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wp23"
+                        android:src="@drawable/soup_9_2_1"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wp5"
+                        android:gravity="center"
+                        android:text="동태찌개"
+                        android:textSize="@dimen/wp5"
+                        android:textColor="#FFFFFF"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/wp40"
+                    android:orientation="vertical"
+                    android:id="@+id/soup8"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wp23"
+                        android:src="@drawable/soup_9_2_4"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wp5"
+                        android:gravity="center"
+                        android:text="된장찌개"
+                        android:textSize="@dimen/wp5"
+                        android:textColor="#FFFFFF"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/wp40"
+                    android:layout_marginLeft="@dimen/wp2"
+                    android:orientation="vertical"
+                    android:id="@+id/soup9"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wp23"
+                        android:src="@drawable/soup_9_2_3"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wp5"
+                        android:gravity="center"
+                        android:text="콩나물국"
+                        android:textSize="@dimen/wp5"
+                        android:textColor="#FFFFFF"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/wp40"
+                    android:layout_marginLeft="@dimen/wp2"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wp23"
+                        android:src="@drawable/soup_9_2_2"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wp5"
+                        android:gravity="center"
+                        android:text="순두부찌개"
+                        android:textSize="@dimen/wp5"
+                        android:textColor="#FFFFFF"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="@dimen/wp30">
+                <LinearLayout
+                    android:layout_width="@dimen/wp40"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wp23"
+                        android:id="@+id/img_2_2_1"
+                        android:src="@drawable/rice_9_2_1"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wp5"
+                        android:gravity="center"
+                        android:id="@+id/txt_2_2_1"
+                        android:text="현미밥"
+                        android:textSize="@dimen/wp5"
+                        android:textColor="#FFFFFF"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="@dimen/wp40"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/wp2"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/img_2_2_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wp23"
+                        android:src="@drawable/rice_9_2_2"/>
+                    <TextView
+                        android:id="@+id/txt_2_2_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wp5"
+                        android:gravity="center"
+                        android:text="쌀밥"
+                        android:textSize="@dimen/wp5"
+                        android:textColor="#FFFFFF"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wp60"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/wp50"
+                android:layout_height="@dimen/wp60"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wp10"
+                    android:gravity="center"
+                    android:text="밥"
+                    android:textSize="@dimen/wp7"
+                    android:textColor="#FFFFFF"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/frame_cell_white"
+                    android:layout_height="@dimen/wp50">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wp50"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wp25"
+                        android:id="@+id/rice1"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:src="@drawable/rice_9_2_1"
+                            android:layout_height="@dimen/wp17" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/wp6"
+                            android:textColor="#FFFFFF"
+                            android:text="쌀밥"
+                            android:gravity="center"
+                            android:textSize="@dimen/wp5"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wp25"
+                        android:id="@+id/rice2"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:src="@drawable/rice_9_2_2"
+                            android:layout_height="@dimen/wp17" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/wp8"
+                            android:textColor="#FFFFFF"
+                            android:text="현미밥"
+                            android:gravity="center"
+                            android:textSize="@dimen/wp5"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="@dimen/wp5"
+                android:layout_height="match_parent"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/wp95"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wp10"
+                    android:gravity="center"
+                    android:text="찌개"
+                    android:textSize="@dimen/wp7"
+                    android:textColor="#FFFFFF"/>
+
+                <LinearLayout
+                    android:background="@drawable/frame_cell_white"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="@dimen/wp50">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wp25"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/wp25"
+                            android:layout_height="@dimen/wp25"
+                            android:layout_marginLeft="@dimen/wp10"
+                            android:layout_marginRight="@dimen/wp10"
+                            android:id="@+id/soup1"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:src="@drawable/soup_9_2_5"
+                                android:layout_height="@dimen/wp17" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/wp8"
+                                android:textColor="#FFFFFF"
+                                android:text="김치찌개"
+                                android:gravity="center"
+                                android:textSize="@dimen/wp5"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/wp25"
+                            android:layout_height="@dimen/wp25"
+                            android:id="@+id/soup2"
+                            android:layout_marginLeft="@dimen/wp10"
+                            android:layout_marginRight="@dimen/wp10"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:src="@drawable/soup_9_2_4"
+                                android:layout_height="@dimen/wp17" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/wp8"
+                                android:textColor="#FFFFFF"
+                                android:text="된장찌개"
+                                android:gravity="center"
+                                android:textSize="@dimen/wp5"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/wp25"
+                            android:layout_height="@dimen/wp25"
+                            android:id="@+id/soup3"
+                            android:layout_marginLeft="@dimen/wp10"
+                            android:layout_marginRight="@dimen/wp10"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:src="@drawable/soup_9_2_3"
+                                android:layout_height="@dimen/wp17" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/wp8"
+                                android:textColor="#FFFFFF"
+                                android:text="콩나물국"
+                                android:gravity="center"
+                                android:textSize="@dimen/wp5"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wp25"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                    <LinearLayout
+                            android:layout_width="@dimen/wp30"
+                            android:layout_height="@dimen/wp25"
+                        android:layout_marginLeft="@dimen/wp10"
+                        android:layout_marginRight="@dimen/wp10"
+                        android:id="@+id/soup4"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:src="@drawable/soup_9_2_2"
+                                android:layout_height="@dimen/wp17" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/wp8"
+                                android:textColor="#FFFFFF"
+                                android:text="순두부찌개"
+                                android:gravity="center"
+                                android:textSize="@dimen/wp5"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="@dimen/wp25"
+                            android:layout_height="@dimen/wp25"
+                            android:id="@+id/soup5"
+                            android:layout_marginLeft="@dimen/wp10"
+                            android:layout_marginRight="@dimen/wp10"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:src="@drawable/soup_9_2_1"
+                                android:layout_height="@dimen/wp17" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/wp8"
+                                android:textColor="#FFFFFF"
+                                android:text="동태찌개"
+                                android:gravity="center"
+                                android:textSize="@dimen/wp5"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wp20"
+            android:layout_marginTop="@dimen/wp2"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_answer_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:text="1"
+                android:textSize="@dimen/wp7"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_answer_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:text="2"
+                android:textSize="@dimen/wp7"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_answer_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:layout_weight="1"
+                android:text="3"
+                android:textSize="@dimen/wp7"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="@dimen/wp16"
+        android:layout_height="@dimen/wp8"
+        android:layout_gravity="center"
+        android:background="@drawable/img_memo_sticker"
+        android:gravity="center"
+        android:text="9 - 2"
+        android:textSize="@dimen/wp4" />
+</RelativeLayout>

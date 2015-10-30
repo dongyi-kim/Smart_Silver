@@ -27,7 +27,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="A 단계"
+                    android:text="1~3 단계"
                     android:textSize="@dimen/wp13" />
 
             </ui.MemoFrameLayout>
@@ -47,7 +47,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="B 단계"
+                    android:text="4~6 단계"
                     android:textSize="@dimen/wp13" />
 
             </ui.MemoFrameLayout>
@@ -67,7 +67,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="C 단계"
+                    android:text="6~9 단계"
                     android:textSize="@dimen/wp13" />
 
             </ui.MemoFrameLayout>
@@ -87,7 +87,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="D 단계"
+                    android:text="10 단계"
                     android:textSize="@dimen/wp13" />
 
             </ui.MemoFrameLayout>
