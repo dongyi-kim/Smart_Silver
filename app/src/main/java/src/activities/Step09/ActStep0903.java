@@ -91,18 +91,18 @@ public class ActStep0903 extends StageActivity {
         }
 
         for(int i = 0 ; i < 2 ; i++){
-            if(dataSet.cloth[1] > i){
+            if(dataSet.cloth[1] > i) {
                 pants[i].setImageResource(dataSet.pants[i]);
                 pants[i].setVisibility(View.VISIBLE);
-            }else{
+            } else {
                 pants[i].setVisibility(View.GONE);
             }
         }
 
-        if(dataSet.cloth[2] == 1){
+        if(dataSet.cloth[2] == 1) {
             cap.setVisibility(View.VISIBLE);
         }
-        else{
+        else {
             cap.setVisibility(View.GONE);
         }
 
@@ -155,9 +155,9 @@ public class ActStep0903 extends StageActivity {
 
         private final int ismanset[][]={ // 0이면 여자당
                 {R.drawable.img_woman, R.drawable.img_woman, R.drawable.img_woman},
-                {R.drawable.img_man, R.drawable.img_man, R.drawable.img_woman},
-                {R.drawable.img_woman, R.drawable.img_man, R.drawable.img_woman},
-                {R.drawable.img_man, R.drawable.img_man, R.drawable.img_man},
+                {R.drawable.img_man,   R.drawable.img_man,   R.drawable.img_woman},
+                {R.drawable.img_woman, R.drawable.img_man,   R.drawable.img_woman},
+                {R.drawable.img_man,   R.drawable.img_man,   R.drawable.img_man},
                 {R.drawable.img_woman, R.drawable.img_woman, R.drawable.img_woman},
         };
 
@@ -177,11 +177,11 @@ public class ActStep0903 extends StageActivity {
                 {{"5가지", "6가지", "7가지"},{"1가지", "2가지", "4가지"},{"1가지", "2가지", "4가지"}},
         };
         private final int shirtset[][][] = {
-                {{R.drawable.tshirt_1, R.drawable.tshirt_5},{R.drawable.tshirt_3,}, {R.drawable.tshirt_4} },
+                {{R.drawable.tshirt_1, R.drawable.tshirt_5}, {R.drawable.tshirt_3,}, {R.drawable.tshirt_4} },
                 {{R.drawable.tshirt_8, R.drawable.tshirt_9, R.drawable.tshirt_10}, {R.drawable.tshirt_12}, {R.drawable.tshirt_6,R.drawable.tshirt_7}},
                 {{R.drawable.tshirt_1, R.drawable.tshirt_2}, {R.drawable.tshirt_14}, {R.drawable.tshirt_6,R.drawable.tshirt_7}},
-                {{R.drawable.tshirt_11,R.drawable.tshirt_12},{R.drawable.tshirt_13,R.drawable.tshirt_12},{R.drawable.tshirt_11,R.drawable.tshirt_14}},
-                {{R.drawable.tshirt_3,R.drawable.tshirt_4,R.drawable.tshirt_5},{R.drawable.tshirt_3},{R.drawable.tshirt_6,R.drawable.tshirt_7}}
+                {{R.drawable.tshirt_11,R.drawable.tshirt_12}, {R.drawable.tshirt_13, R.drawable.tshirt_12},{R.drawable.tshirt_11,R.drawable.tshirt_14}},
+                {{R.drawable.tshirt_3, R.drawable.tshirt_4, R.drawable.tshirt_5}, {R.drawable.tshirt_3}, {R.drawable.tshirt_6,R.drawable.tshirt_7}}
         };
         private final int pantsset[][][] = {
                 {{R.drawable.pants_4},{R.drawable.pants_4},{R.drawable.pants_4,R.drawable.pants_3}},

@@ -4,6 +4,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -13,75 +15,106 @@ import java.util.Random;
 
 import cdmst.smartsilver.R;
 import src.activities.ActMain;
+import src.activities.ActStartLearning;
 import src.activities.StageActivity;
 import src.dialogs.DlgResultMark;
 
 /**
  * Created by Acka on 2015-05-06.
  */
-public class ActStep0404 extends StageActivity {
-    private ImageView imgSerlap;
-    private TextView txtMarginTop;
-    private TextView txtAnswerDescription;
-    public final ImageButton ibtnAnswer[] = new ImageButton[3];
-    public final TextView txtAnswer[] = new TextView[3];
+public class ActStep0404 extends StageActivity{
+    private LinearLayout linearFrame[] = new LinearLayout[2];
+    private ImageView imgDisplay[] = new ImageView[2];
+    private TextView txtAnswerDescription[] = new TextView[2];
+    private View viewLine[] = new View[2];
+    private Button btnAnswer[] = new Button[3];
 
     private int iRetryCount = 0;
     public boolean isRight = false;
 
-    public Step0404DataSet dataSet = new Step0404DataSet();
     private Random rand = new Random();
+    public Step0404DataSet dataSet = new Step0404DataSet();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_04_4);
 
-        imgSerlap = (ImageView)findViewById(R.id.img_serlap);
-        txtMarginTop = (TextView)findViewById(R.id.txt_margin_top);
-        txtAnswerDescription = (TextView)findViewById(R.id.txt_answer_description);
-        ibtnAnswer[0] = (ImageButton)findViewById(R.id.ibtn_answer_1);
-        ibtnAnswer[1] = (ImageButton)findViewById(R.id.ibtn_answer_2);
-        ibtnAnswer[2] = (ImageButton)findViewById(R.id.ibtn_answer_3);
-        txtAnswer[0] = (TextView)findViewById(R.id.txt_answer_1);
-        txtAnswer[1] = (TextView)findViewById(R.id.txt_answer_2);
-        txtAnswer[2] = (TextView)findViewById(R.id.txt_answer_3);
+        linearFrame[0] = (LinearLayout)findViewById(R.id.linear_frame_1_3);
+        linearFrame[1] = (LinearLayout)findViewById(R.id.linear_frame_4_5);
+        imgDisplay[0] = (ImageView)findViewById(R.id.img_drawer);
+        imgDisplay[1] = (ImageView)findViewById(R.id.img_display_stand);
+        txtAnswerDescription[0] = (TextView)findViewById(R.id.txt_answer_description_1);
+        txtAnswerDescription[1] = (TextView)findViewById(R.id.txt_answer_description_2);
+        viewLine[0] = (View)findViewById(R.id.view_line_1);
+        viewLine[1] = (View)findViewById(R.id.view_line_2);
+        btnAnswer[0] = (Button)findViewById(R.id.btn_answer_1);
+        btnAnswer[1] = (Button)findViewById(R.id.btn_answer_2);
+        btnAnswer[2] = (Button)findViewById(R.id.btn_answer_3);
 
-        for(int i = 0; i < 3; i++)
-            ibtnAnswer[i].setOnClickListener(new View.OnClickListener(){
+        linearFrame[1].setVisibility(View.GONE);
+
+        //button listener
+        for(int i = 0; i < 3; i++){
+            btnAnswer[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v){
-                    int iBtnIndex = 0;
-                    while(ibtnAnswer[iBtnIndex] != v) iBtnIndex++;
+                    String sSelect = ((Button)v).getText().toString();
+                    int iSelect = 0;
 
-                    if(Integer.parseInt(txtAnswer[iBtnIndex].getText().toString()) == dataSet.iAnswer) isRight = true;
+                    for(int i = 0; '0' <= sSelect.charAt(i) && sSelect.charAt(i) <= '9'; i++){
+                        iSelect *= 10;
+                        iSelect += sSelect.charAt(i) - '0';
+                    }
+
+                    if(iSelect== dataSet.iAnswer) isRight = true;
                     else isRight = false;
                     checkAnswer();
                 }
             });
+        } // end of button listener
 
         setQuestion(false);
     }
 
     public void setQuestion(boolean isRetry, Object object){
-        int iRandomSeed = iStage - 1;
-        dataSet.setData(iRandomSeed);
+        float fTextMarginTop[] = {getResources().getDimension(R.dimen.wp10), getResources().getDimension(R.dimen.wp20), getResources().getDimension(R.dimen.wp28),
+                getResources().getDimension(R.dimen.wp38), getResources().getDimension(R.dimen.wp18), getResources().getDimension(R.dimen.wp15)};
+        float fLineMarginTop[] = {getResources().getDimension(R.dimen.wp15), getResources().getDimension(R.dimen.wp25), getResources().getDimension(R.dimen.wp33),
+                getResources().getDimension(R.dimen.wp43), getResources().getDimension(R.dimen.wp25), getResources().getDimension(R.dimen.wp22)};
+        float fLineWidth[] = {-1, -1, -1, -1, getResources().getDimension(R.dimen.wp33), getResources().getDimension(R.dimen.wp14)};
+        float fLineMarginRight[] = {-1, -1, -1, -1, getResources().getDimension(R.dimen.wp14), getResources().getDimension(R.dimen.wp4)};
 
+        dataSet.setData(iStage);
 
-        imgSerlap.setImageResource(dataSet.iPictureSource);
-        txtAnswerDescription.setText(dataSet.sAnswerDesciption);
+        int iComponentIndex = (iStage <= 3 ? 0 : 1);
 
-        LinearLayout.LayoutParams param = (LinearLayout.LayoutParams)txtMarginTop.getLayoutParams();
-        param.weight = dataSet.fMarginTop;
-        txtMarginTop.setLayoutParams(param);
+        if(iStage == 4){
+            linearFrame[0].setVisibility(View.GONE);
+            linearFrame[1].setVisibility(View.VISIBLE);
+        }
 
+        LinearLayout.LayoutParams txtParam = (LinearLayout.LayoutParams) txtAnswerDescription[iComponentIndex].getLayoutParams();
+        txtParam.topMargin = (int)fTextMarginTop[iStage];
+        txtAnswerDescription[iComponentIndex].setLayoutParams(txtParam);
+
+        FrameLayout.LayoutParams lineParam = (FrameLayout.LayoutParams) viewLine[iComponentIndex].getLayoutParams();
+        lineParam.topMargin = (int)fLineMarginTop[iStage];
+        if(iComponentIndex == 1){
+            lineParam.width = (int)fLineWidth[iStage];
+            lineParam.rightMargin = (int)fLineMarginRight[iStage];
+        } viewLine[iComponentIndex].setLayoutParams(lineParam);
+
+        imgDisplay[iComponentIndex].setImageResource(dataSet.iImageResource);
+        txtAnswerDescription[iComponentIndex].setText(dataSet.sAnswerDescription);
         for(int i = 0; i < 3; i++)
-            txtAnswer[i].setText("" + dataSet.iExample[i]);
+            btnAnswer[i].setText(dataSet.sAnswerExample[i]);
 
         StartRecording();
     }
 
-    public void checkAnswer(Object o){
+
+    public void checkAnswer(Object object){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
         if(isRight || iRetryCount > 1) StopRecording(isRight);
@@ -90,10 +123,12 @@ public class ActStep0404 extends StageActivity {
             @Override
             public void onDismiss(DialogInterface dialog) {
                 if(isRight || iRetryCount > 1){
-                    iRetryCount = 0;
                     iStage++;
-                    if(iStage <= NUM_OF_STAGE) setQuestion(false);
-                    else goNext();
+                    if(iStage > NUM_OF_STAGE) goNext();
+                    else {
+                        iRetryCount = 0;
+                        setQuestion(false);
+                    }
                 }
                 else{
                     iRetryCount++;
@@ -108,26 +143,38 @@ public class ActStep0404 extends StageActivity {
     }
 
     public class Step0404DataSet{
-        private final String arrAnswerDescription[] = {"바지 3벌씩 3단", "양말 6짝 2줄", "티셔츠 7장씩 3줄", "양파 9개 4묶음", "파 10개짜리 3단"};
-        private final int arrImageSource[] = {R.drawable.serlap1_floor3, R.drawable.serlap1_floor2, R.drawable.serlap1_floor4, R.drawable.serlap2_floor3, R.drawable.serlap2_floor1};
-        private final float arrMarginTop[] = {0.3f, 0.4f, 0.2f, 0.15f, 0.4f};
-        private final int arrAnswer[] = {9, 12, 21, 36, 30};
-        private final int arrExample[][] = {{7, 8, 9}, {9, 11, 12}, {28, 21, 14}, {27, 36, 45}, {20, 30, 40}};
+        private final int arrRandomBase[][] = {{2, 3}, {3, 4}, {4, 3}, {6, 1}, {7, 2}};
+        private final int arrRandomRange[][] = {{3, 1}, {3, 1}, {4, 1}, {5, 3}, {4, 3}};
+        private final int arrImageResource[][] = {{R.drawable.img_drawer_floor_2, R.drawable.img_drawer_floor_3, R.drawable.img_drawer_floor_4},
+                {R.drawable.img_display_stand_springonion_1, R.drawable.img_display_stand_springonion_2, R.drawable.img_display_stand_springonion_3},
+                {R.drawable.img_display_stand_onion_2, R.drawable.img_display_stand_onion_3, R.drawable.img_display_stand_onion_4}};
+        private final String arrUnit[][] = {{"바지", "양말", "티셔츠", "양파", "파"},
+                {"벌씩", "짝", "장씩", "개", "개짜리"},
+                {"단", "줄", "줄", "묶음", "단"},
+                {"개", "짝", "장", "개", "개"}};
 
-        public final int iExample[] = new int[3];
-        public int iPictureSource;
-        public float fMarginTop;
+        public int iImageResource;
+        public String sAnswerDescription;
+        public String sAnswerExample[] = new String[3];
         public int iAnswer;
-        public String sAnswerDesciption;
 
-        public void setData(int iSeed){
-            iExample[0] = arrExample[iSeed][0];
-            iExample[1] = arrExample[iSeed][1];
-            iExample[2] = arrExample[iSeed][2];
-            fMarginTop = arrMarginTop[iSeed];
-            iPictureSource = arrImageSource[iSeed];
-            iAnswer = arrAnswer[iSeed];
-            sAnswerDesciption = arrAnswerDescription[iSeed];
+        void setData(int iStage) {
+            int iSeed = iStage - 1;
+            int iLeftValue = arrRandomBase[iSeed][0] + rand.nextInt(arrRandomRange[iSeed][0]);
+            int iRightValue = arrRandomBase[iSeed][1] + rand.nextInt(arrRandomRange[iSeed][1]);
+
+            if(iSeed < 3) iImageResource = arrImageResource[0][iSeed];
+            else iImageResource = arrImageResource[iSeed - 2][iRightValue - arrRandomBase[iSeed][1]];
+
+            sAnswerDescription = arrUnit[0][iSeed] + " " + iLeftValue + arrUnit[1][iSeed] + " "  + iRightValue + arrUnit[2][iSeed];
+            iAnswer = iLeftValue * iRightValue;
+
+            int iPastValue = iLeftValue * (iRightValue - rand.nextInt(3));
+            if(iPastValue <= 0) iPastValue = iLeftValue;
+            for(int i = 0; i < 3; i++){
+                sAnswerExample[i] = "" + iPastValue + arrUnit[3][iSeed];
+                iPastValue += iLeftValue;
+            }
         }
     }
 }

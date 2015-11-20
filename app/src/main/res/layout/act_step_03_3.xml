@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/wp20"
             android:gravity="center"
-            android:text="할머니 할아버지가 홍시 선물을 받았습니다.\n받은 홍시를 모두 더하면 몇 개일까요?"
+            android:text="할머니 할아버지가 홍시 선물을 받았습니다.\n받은 홍시를 모두 더하면 몇 개인가요?"
             android:textColor="#FFFFFF"
             android:textSize="@dimen/wp6" />
 
