@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/values/attributes.xml -->
+    <!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/values/attributes.xml -->
     <eat-comment/>
     <attr format="integer|reference" name="dp_animDuration"/>
     <attr format="integer" name="dp_day"/>
@@ -24,12 +24,12 @@
     <attr format="integer" name="dp_year"/>
     <attr format="integer" name="dp_yearMax"/>
     <attr format="integer" name="dp_yearMin"/>
-    <!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
-    <!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/values/attributes.xml -->
+    <!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/values/attributes.xml -->
     <eat-comment/>
     <attr format="float" name="pv_progress"/>
     <attr format="integer" name="pv_progressMode">
@@ -41,7 +41,7 @@
     <attr format="float" name="pv_secondaryProgress"/>
     <attr format="boolean" name="rd_enable"/>
     <attr format="reference" name="rd_style"/>
-    <!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <attr format="string" name="title"/>
     <bool name="abc_action_bar_embed_tabs">true</bool>
@@ -68,13 +68,13 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <color name="cardview_dark_background">#FF202020</color>
     <color name="cardview_light_background">#FFFAFAFA</color>
     <color name="cardview_shadow_end_color">#03000000</color>
     <color name="cardview_shadow_start_color">#37000000</color>
-    <!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
@@ -99,14 +99,14 @@
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
-    <!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="result_doing">#f39c12</color>
     <color name="result_done">#f1c40f</color>
     <color name="result_fail">#e74c3c</color>
     <color name="result_success">#2ecc71</color>
     <color name="rippelColor">#95a5a6</color>
-    <!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <color name="ripple_material_dark">#40ffffff</color>
     <color name="ripple_material_light">#40000000</color>
@@ -116,7 +116,7 @@
     <color name="secondary_text_disabled_material_light">#24000000</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
-    <!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="trans_half">#4FFFFFFF</color>
     <color name="transparent">#00FFFFFF</color>
@@ -168,7 +168,7 @@
     <declare-styleable name="View"><attr format="dimension" name="paddingStart"/><attr format="dimension" name="paddingEnd"/><attr name="android:focusable"/></declare-styleable>
     <declare-styleable name="ViewStubCompat"><attr name="android:layout"/><attr name="android:inflatedId"/><attr name="android:id"/></declare-styleable>
     <declare-styleable name="YearPicker"><attr name="dp_yearMin"/><attr name="dp_yearMax"/><attr name="dp_year"/><attr format="dimension|reference" name="dp_yearTextSize"/><attr format="dimension|reference" name="dp_yearItemHeight"/><attr name="dp_textHighlightColor"/><attr name="dp_textColor"/><attr name="dp_selectionColor"/><attr name="dp_animDuration"/><attr name="dp_inInterpolator"/><attr name="dp_outInterpolator"/><attr name="dp_fontFamily"/><attr name="dp_textStyle"/></declare-styleable>
-    <!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
     <dimen name="abc_action_bar_default_padding_material">4dp</dimen>
@@ -207,12 +207,12 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
-    <!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
@@ -246,17 +246,17 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">시니어 스마트</string>
     <string name="hello_world">Hello world!</string>
-    <!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
 
     </style>
-    <!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance">
         <item name="android:textColor">?android:textColorPrimary</item>
@@ -1010,7 +1010,7 @@
         <item name="android:scaleType">center</item>
         <item name="android:background">?attr/selectableItemBackground</item>
     </style>
-    <!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <style name="CardView">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
@@ -1026,7 +1026,7 @@
     <style name="CardView.Light">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
     </style>
-    <!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="Material"/>
     <style name="Material.App"/>
@@ -1504,7 +1504,7 @@
     <style name="Material.Widget.YearPicker.Light" parent="Material.Widget.TimePicker">
         <item name="dp_textColor">@color/abc_primary_text_material_light</item>
     </style>
-    <!-- From: file:/C:/Users/Acka/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <!-- From: file:/Users/waps12b/AndroidStudioProjects/Smart_Silver/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
