@@ -1,7 +1,0 @@
-C:\Users\Acka\AndroidStudioProjects\Smart_Silver\app\build\intermediates\classes\debug
-C:\Users\Acka\AndroidStudioProjects\Smart_Silver\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-41f924985e747230ee3576f7ec410b06343d6042.jar
-C:\Users\Acka\AndroidStudioProjects\Smart_Silver\app\build\intermediates\pre-dexed\debug\classes-ad0f302c7eef335b56cf206cb145650951b266c7.jar
-C:\Users\Acka\AndroidStudioProjects\Smart_Silver\app\build\intermediates\pre-dexed\debug\classes-b8c9e84356228f055ff0483f3f5274284cd60013.jar
-C:\Users\Acka\AndroidStudioProjects\Smart_Silver\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-022cd52ad7f5a3b869d8cbf914af7d1d1dc01824.jar
-C:\Users\Acka\AndroidStudioProjects\Smart_Silver\app\build\intermediates\pre-dexed\debug\classes-1aea3c46d1850aa26f974f554e35b856db1fe1e7.jar
-C:\Users\Acka\AndroidStudioProjects\Smart_Silver\app\build\intermediates\pre-dexed\debug\classes-46c8e461771f0da72ef96aa118a0599c37e3eb48.jar
