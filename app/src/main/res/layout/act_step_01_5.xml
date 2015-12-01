@@ -70,7 +70,7 @@
                     android:layout_height="10dp"></LinearLayout>
                 <Button
                     android:layout_width="@dimen/wp50"
-                    android:textSize="@dimen/wp5"
+                    android:textSize="@dimen/wp6"
                     android:text="아홉시 오십육분"
                     android:id="@+id/btn_ans_5"
                     android:layout_height="wrap_content" />
