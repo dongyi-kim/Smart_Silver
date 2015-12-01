@@ -119,15 +119,15 @@ public class ActStep0902 extends StageActivity {
         private final int rices[][][] = {
                 {{1,2}, {1,2}, {1,2}},
                 {{1,2}, {1,2}, {0,2}},
-                {{0,1},{0,1,},{0,1}},
-                {{2,2},{2,2},{0,1}},
+                {{0,1}, {0,1}, {0,1}},
+                {{2,2}, {2,2}, {0,1}},
         };
 
-        private final int soups[][][] = {//0,1,2    3,4
+        private final int soups[][][] = {
                 {{1,4,9,9},{1,9,9,9},{0,1,3,9}},
                 {{0,1,3,9},{2,3,9,9},{0,1,3,4}},
                 {{2,3,9,9},{0,4,9,9},{1,2,3,9}},
-                {{5,7,9,9},{6,8,9,9},{0,2,3,4}} // 5 6 7 8
+                {{5,7,9,9},{6,8,9,9},{0,2,3,4}}
         };
 
         private final String btns[][][] = {
@@ -144,20 +144,21 @@ public class ActStep0902 extends StageActivity {
                 {"6가지", "6가지", "8가지"}
         };
 
-        int rice[] = new int[5], soup[] = new int[10]; String ans = new String();
+        int rice[] = new int[5], soup[] = new int[10];
+        String ans = new String();
         String btn[] = new String[3];
 
         public void setData(int iStage) {
             int rand = (int)(Math.random() * 3.0); // 0 ~ 2
 
-            if(iStage < 3 || (iStage == 4 && rand == 2)) { // 2 frames
+            if(iStage < 3 || (iStage == 3 && rand == 2)) { // 2 frames
                 layout[0].setVisibility(View.VISIBLE);
                 layout[1].setVisibility(View.GONE);
                 soup = soups[iStage][rand];
                 rice = rices[iStage][rand];
             } else {  // frames
                 soup = soups[iStage][rand];
-                   layout[0].setVisibility(View.GONE);
+                layout[0].setVisibility(View.GONE);
                 layout[1].setVisibility(View.VISIBLE);
             }
             btn = btns[iStage][rand];
