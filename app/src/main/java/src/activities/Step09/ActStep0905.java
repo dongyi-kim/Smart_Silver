@@ -101,7 +101,7 @@ public class ActStep0905 extends StageActivity {
         };
 
         private final String ansset[][] ={
-                {"1가지","3가지","2가지",},
+                {"2가지","3가지","2가지",},
                 {"2가지","4가지","3가지"},
                 {"3가지","4가지","6가지"},
                 {"3가지","6가지","7가지"},
