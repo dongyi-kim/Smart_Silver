@@ -18,12 +18,7 @@
             android:textStyle="bold"
             android:textColor="#FFFFFF"
             android:gravity="center"
-<<<<<<< HEAD
             android:id="@+id/txt_description"
-=======
-            android:text=" 아래 자료에서\n전기요금 사용기간을 나타내는 곳을 찾아 누르세요."
-            android:textSize="@dimen/wp6"
->>>>>>> 70afe3043c0221dc5da7a39f3460f38de7c63ef6
             android:layout_marginBottom="@dimen/wp2"
             android:text="전기요금 청구금액을 나타내는 곳을 찾아 누르세요.">
         </TextView>

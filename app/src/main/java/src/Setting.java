@@ -40,11 +40,7 @@ public class Setting {
             {ActStep0601.class, ActStep0602.class, ActStep0603.class, ActStep0604.class, ActStep0605.class },//step6
             {ActStep0701.class, ActStep0702.class, ActStep0703.class, ActStep0704.class, ActStep0705.class },//step7
             {ActStep0801.class, ActStep0802.class, ActStep0803.class, ActStep0804.class, ActStep0805.class },//step8
-<<<<<<< HEAD
-            {ActStep0902.class, ActStep0903.class, ActStep0904.class, ActStep0905.class,  },//step9
-=======
             {ActStep0901.class, ActStep0902.class, ActStep0903.class, ActStep0904.class, ActStep0905.class },//step9
->>>>>>> 70afe3043c0221dc5da7a39f3460f38de7c63ef6
             {ActStep10.class },//step10
     };
 
