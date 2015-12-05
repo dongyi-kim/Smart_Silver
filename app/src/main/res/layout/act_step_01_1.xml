@@ -68,19 +68,19 @@
                                     android:layout_height="match_parent"
                                     android:text="1"
                                     android:id="@+id/btn_number_1"
-                                    android:textSize="@dimen/wp6"/>
+                                    android:textSize="@dimen/wp5"/>
                                 <Button
                                     android:layout_weight="1.4"
                                     android:layout_height="match_parent"
                                     android:text="2"
                                     android:id="@+id/btn_number_2"
-                                    android:textSize="@dimen/wp6"/>
+                                    android:textSize="@dimen/wp5"/>
                                 <Button
                                     android:id="@+id/btn_number_3"
                                     android:layout_weight="0.8"
                                     android:layout_height="match_parent"
                                     android:text="3"
-                                    android:textSize="@dimen/wp6"/>
+                                    android:textSize="@dimen/wp5"/>
                             </TableRow>
                             <TableRow
                                 android:layout_weight="1"
@@ -90,19 +90,19 @@
                                     android:layout_height="match_parent"
                                     android:text="4"
                                     android:id="@+id/btn_number_4"
-                                    android:textSize="@dimen/wp6"/>
+                                    android:textSize="@dimen/wp5"/>
                                 <Button
                                     android:layout_weight="1.4"
                                     android:layout_height="match_parent"
                                     android:text="5"
                                     android:id="@+id/btn_number_5"
-                                    android:textSize="@dimen/wp6"/>
+                                    android:textSize="@dimen/wp5"/>
                                 <Button
                                     android:id="@+id/btn_number_6"
                                     android:layout_weight="0.8"
                                     android:layout_height="match_parent"
                                     android:text="6"
-                                    android:textSize="@dimen/wp6"/>
+                                    android:textSize="@dimen/wp5"/>
                             </TableRow>
                             <TableRow
                                 android:layout_weight="1"
@@ -112,19 +112,19 @@
                                     android:layout_height="match_parent"
                                     android:text="7"
                                     android:id="@+id/btn_number_7"
-                                    android:textSize="@dimen/wp6"/>
+                                    android:textSize="@dimen/wp5"/>
                                 <Button
                                     android:layout_weight="1.4"
                                     android:layout_height="match_parent"
                                     android:text="8"
                                     android:id="@+id/btn_number_8"
-                                    android:textSize="@dimen/wp6"/>
+                                    android:textSize="@dimen/wp5"/>
                                 <Button
                                     android:id="@+id/btn_number_9"
                                     android:layout_weight="0.8"
                                     android:layout_height="match_parent"
                                     android:text="9"
-                                    android:textSize="@dimen/wp6"/>
+                                    android:textSize="@dimen/wp5"/>
                             </TableRow>
                             <TableRow
                                 android:layout_weight="1"
@@ -134,19 +134,19 @@
                                     android:layout_weight="0.8"
                                     android:layout_height="match_parent"
                                     android:text="☎"
-                                    android:textSize="@dimen/wp6"/>
+                                    android:textSize="@dimen/wp5"/>
                                 <Button
                                     android:id="@+id/btn_number_0"
                                     android:layout_weight="1.4"
                                     android:layout_height="match_parent"
                                     android:text="0"
-                                    android:textSize="@dimen/wp6"/>
+                                    android:textSize="@dimen/wp5"/>
                                 <Button
                                     android:id="@+id/btn_number_erase"
                                     android:layout_weight="0.8"
                                     android:layout_height="match_parent"
                                     android:text="≪"
-                                    android:textSize="@dimen/wp6"/>
+                                    android:textSize="@dimen/wp5"/>
                             </TableRow>
 
                         </TableLayout>
@@ -184,7 +184,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:textSize="@dimen/wp7"
+                            android:textSize="@dimen/wp5"
                             android:textAlignment="center"
                             android:textColor="#FFFFFF"
                             android:text="아래의 전화번호로\n전화를 걸어보세요\n"/>
@@ -193,7 +193,7 @@
                             android:gravity="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/wp10"
+                            android:textSize="@dimen/wp9"
                             android:id="@+id/txt_question"
                             android:textColor="#FFFFFF"
                             android:text="123456789"/>
@@ -208,7 +208,7 @@
                     android:layout_gravity="center"
                     android:layout_width="@dimen/wp40"
                     android:text="확인"
-                    android:textSize="@dimen/wp8"
+                    android:textSize="@dimen/wp7"
                     android:id="@+id/btn_ok"
                     android:layout_height="@dimen/wp15" />
             </LinearLayout>
