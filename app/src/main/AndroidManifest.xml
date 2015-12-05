@@ -291,6 +291,12 @@
             >
         </activity>
 
+        <activity android:name="src.activities.Step09.ActStep0901"
+            android:noHistory="true"
+            android:screenOrientation="landscape"
+            >
+        </activity>
+
         <activity android:name="src.activities.Step09.ActStep0902"
             android:noHistory="true"
             android:screenOrientation="landscape"

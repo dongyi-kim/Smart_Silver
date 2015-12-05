@@ -147,6 +147,9 @@ public class ActStep0301 extends StageActivity {
                     if(iRetryCount > 1){
                         iRetryCount = 0;
                         iStage++;
+                        /* TODO
+                         * Error occured here!
+                         */
                         setQuestion(false);
                     }
                     else{

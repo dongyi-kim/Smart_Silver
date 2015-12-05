@@ -141,6 +141,7 @@ public class ActStep0704 extends StageActivity {
         startActivity(intent);
     }
 
+<<<<<<< HEAD
     public class Step0703DataSet {
         private final String arrDescription[][]={
                 {"아래 통장에서 계좌번호를 나타내는 곳을 찾아 누르세요.", "아래 통장에서 계좌번호를 찾아 누르세요.", "아래 통장에서 계좌번호를 찾아 누르세요."},
@@ -157,6 +158,16 @@ public class ActStep0704 extends StageActivity {
                 {{4,10,12}, {4,10,12},{14,15,16}},
                 {{7,10,13,},{7,10,13},{10,11,12}},
                 {{5,7,10},{3,5,7},{15,16,14}}};
+=======
+    public class Step0704DataSet {
+        private final String arrDescription[] = {"전기요금 납기일을 나타내는 곳을 찾아 누르세요.",
+                "전기요금 청구금액을 나타내는 곳을 찾아 누르세요.",
+                "아래 자료에서 당월 전기사용량을 나타내는 곳을 찾아 누르세요.",
+                "아래 영수증은 평생마트 영수증입니다. 모듬 버섯 불고기는 얼마인지 찾아 누르세요.",
+                "아래 영수증은 평생마트 영수증입니다. 평생마트에서 물건을 산 날짜는 언제인지 찾아 누르세요."};
+        private final int arrAnswerButtonIndex[] = {0, 4, 2};
+        private final int arrReceiptImage[] = {R.drawable.receipt_7_4_4_1, R.drawable.receipt_7_4_5_1};
+>>>>>>> 70afe3043c0221dc5da7a39f3460f38de7c63ef6
 
         private final String  accountList[]={"계좌번호 123456-78-9101112", "계좌번호 100037-56-166616", "계좌번호 222-11-4321-123"};
         private final String  moneyList[][]={{"310,000 ", "320,000 ","340,000 ","360,000 ","370,000 ","380,000 "},{"410,000 ","420,000 ","440,000 ","460,000 ","470,000 ","480,000 "}, {"357,200 ","367,200 ","387,200 ","407,200 ","417,200 ","427,200 "}};
@@ -167,6 +178,7 @@ public class ActStep0704 extends StageActivity {
         public int iBtnList[] = new int[3];
         public String money[] = new String[6];
 
+<<<<<<< HEAD
         public void setData(int iSeed)
         {
             int rand = (int)(Math.random() * 3.0); // 0 ~ 2
@@ -175,6 +187,28 @@ public class ActStep0704 extends StageActivity {
             iBtnList = BtnList[iSeed][rand];
             money = moneyList[rand];
             account = accountList[rand];
+=======
+        public int arrApear[][] = new int[CELL_ROW][CELL_COLUMN];
+        public int iAnswerRow;
+        public int iAnswerColumn;
+        public int iReceiptImage;
+
+        public void setData(int iStage) {
+            int iSeed = iStage - 1;
+
+            sDescription = arrDescription[iSeed];
+
+            if(iSeed < 3) iAnswerIndex = arrAnswerButtonIndex[iSeed];
+            else{
+                iAnswerRow = arrAnswerButtonRow[iSeed - 3];
+                iAnswerColumn = arrAnswerButtonColumn[iSeed - 3];
+                iReceiptImage = arrReceiptImage[iSeed - 3];
+
+                for(int i = 0; i < CELL_ROW; i++)
+                    for(int j = 0; j < iRowCount[i]; j++)
+                        arrApear[i][j] = arrApearList[iSeed - 3][i][j];
+            }
+>>>>>>> 70afe3043c0221dc5da7a39f3460f38de7c63ef6
         }
     }
 }

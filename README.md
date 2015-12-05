@@ -7,3 +7,6 @@
  - 주요 테스트 기기 : Galaxy Note Pro 12.2, Galaxy Note 3
  - 오픈소스 프로젝트로, 누구나 참여할 수 있습니다.
  -
+
+# Library
+ - https://github.com/PhilJay/MPAndroidChart
