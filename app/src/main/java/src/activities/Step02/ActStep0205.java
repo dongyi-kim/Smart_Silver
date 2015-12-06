@@ -26,7 +26,6 @@ public class ActStep0205 extends StageActivity{
     private final TextView txtOperator[] = new TextView[2];
     private final Button btnAnswer[] = new Button[3];
 
-    public int iAnswer = 0;
     private int iRetryCount = 0;
     public boolean isRight = false;
 
@@ -56,7 +55,7 @@ public class ActStep0205 extends StageActivity{
             btnAnswer[i].setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v){
-                    if(Integer.parseInt(((Button) v).getText().toString()) == iAnswer) isRight = true;
+                    if(Integer.parseInt(((Button) v).getText().toString()) == dataSet.iNumberSet[dataSet.iEmptyIndex]) isRight = true;
                     else isRight = false;
                     checkAnswer();
                 }
@@ -68,39 +67,20 @@ public class ActStep0205 extends StageActivity{
     public void setQuestion(boolean isRetry, Object object){
         dataSet.setData(iStage);
 
-        for(int i = 0; i < 2; i++){
-            int iOperator = dataSet.iOperator[i];
-            String sOperator = "";
-
-            if(iOperator == 1) sOperator += '+';
-            else if(iOperator == -1) sOperator += '-';
-            txtOperator[i].setText(sOperator);
-        }
-
-        int iAnswerSign = 1;
-        iAnswer = 0;
         for(int i = 0; i < 4; i++){
-            int iNumber = dataSet.iNumberSet[i];
-
-            if(iNumber == -2) continue;
-            else if(iNumber == -1){
+            if(i == dataSet.iEmptyIndex){
                 imgNumberField[i].setVisibility(View.VISIBLE);
                 txtNumber[i].setText("");
-                if(i > 0 && i < 3) iAnswerSign = dataSet.iOperator[i - 1];
             }
             else{
-                txtNumber[i].setText("" + iNumber);
-                imgNumberField[i].setVisibility(View.GONE);
-                if(i >= 3) iNumber *= -1;
-                else if(i >= 1) iNumber *= dataSet.iOperator[i - 1];
-                iAnswer += iNumber * -1;
+                imgNumberField[i].setVisibility(View.INVISIBLE);
+                txtNumber[i].setText("" + dataSet.iNumberSet[i]);
             }
-            Log.i("tat", "" + iAnswer);
         }
-        iAnswer *= iAnswerSign;
 
-        int iNextExample = iAnswer - rand.nextInt(2);
+        int iNextExample = dataSet.iNumberSet[dataSet.iEmptyIndex] - rand.nextInt(2);
         if(iNextExample < 0) iNextExample = 0;
+        if(iNextExample > 7) iNextExample = 7;
 
         for(int i = 0; i < 3; i++)
             btnAnswer[i].setText("" + (iNextExample + i));
@@ -134,24 +114,28 @@ public class ActStep0205 extends StageActivity{
         startActivity(intent);
     }
 
-    public class Step0205DataSet{
-        private final int arrNumberSet[][] = {{5, 4, -1, 7}, {6, 7, -1, 10}, {9, -1, 2, 11}, {4, -1, 1, 13}, {-1, 8, 3, 10},
-                {3, 6, -1, 7}, {5, 8, -1, 10}, {8, -1, 1, 11}, {6, -1, 3, 13}, {-1, 9, 4, 10},
-                {8, 1, -1, 7}, {9, 4, -1, 10}, {9, -1, 1, 11}, {5, -1, 2, 13}, {-1, 7, 2, 10}};
-        private final int arrOperatorSet[][] = {{1, -1}, {1, -1}, {1, -1}, {1, -1}, {1, -1},
-                {1, -1}, {1, -1}, {1, -1}, {1, -1}, {1, -1},
-                {1, -1}, {1, -1}, {1, -1}, {1, -1}, {1, -1}};
+    public class Step0205DataSet {
+        private final boolean arrExceedTen[] = {false, true, false, true, true};
+        private final int arrEmptyIndex[] = {2, 2, 1, 1, 0};
+        private final int arrOperator[] = {1, 1, -1};
 
-        public final int iNumberSet[] = new int[4];
-        public final int iOperator[] = new int[2];
+        public int iNumberSet[] = new int[4];
+        public int iEmptyIndex;
 
-        public void setData(int iStage){
-            int iSeed = (iStage - 1) + 5 * rand.nextInt(3);
+        public void setData(int iStage) {
+            int iSeed = iStage - 1;
 
-            for(int i = 0; i < 4; i++)
-                iNumberSet[i] = arrNumberSet[iSeed][i];
-            iOperator[0] = arrOperatorSet[iSeed][0];
-            iOperator[1] = arrOperatorSet[iSeed][1];
+            iEmptyIndex = arrEmptyIndex[iSeed];
+
+            boolean bExeedTen = false;
+            do {
+                iNumberSet[3] = 0;
+                for (int i = 0; i < 3; i++) {
+                    iNumberSet[i] = 1 + rand.nextInt(9);
+                    iNumberSet[3] += arrOperator[i] * iNumberSet[i];
+                    if(iNumberSet[3] >= 10) bExeedTen = true;
+                }
+            } while (iNumberSet[3] < 0 || bExeedTen != arrExceedTen[iSeed]);
         }
     }
 }
