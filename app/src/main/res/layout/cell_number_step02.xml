@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="@dimen/wp15" android:layout_height="@dimen/wp15"
+    android:layout_width="@dimen/wp12" android:layout_height="@dimen/wp112"
     android:background="@drawable/frame_cell_white">
     <Button
-        android:layout_width="@dimen/wp15"
-        android:layout_height="@dimen/wp15"
+        android:layout_width="@dimen/wp13"
+        android:layout_height="@dimen/wp13"
         android:background="#00000000"
-        android:textSize="@dimen/wp7"
+        android:textSize="@dimen/wp6"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         android:text="50"/>
