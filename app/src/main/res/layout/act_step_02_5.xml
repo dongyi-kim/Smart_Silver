@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="+"
+                android:text="-"
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/wp10"
                 android:textStyle="bold" />

@@ -30,9 +30,8 @@ public class ActStep0204 extends StageActivity {
     private final TextView txtOperator[] = new TextView[2];
     private final Button btnAnswer[] = new Button[3];
 
-    public int iAnswer = 0;
     private int iRetryCount = 0;
-    public boolean isRight = false;
+    private boolean isRight = false;
 
     public Step0204DataSet dataSet = new Step0204DataSet();
     private Random rand = new Random();
@@ -42,6 +41,7 @@ public class ActStep0204 extends StageActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_02_4);
 
+        Log.i("tag", "\n\n[!!!!!!] start\n");
         frameNumber[0] = (FrameLayout)findViewById(R.id.frame_number_1);
         frameNumber[1] = (FrameLayout)findViewById(R.id.frame_number_2);
         frameNumber[2] = (FrameLayout)findViewById(R.id.frame_number_3);
@@ -64,7 +64,7 @@ public class ActStep0204 extends StageActivity {
             btnAnswer[i].setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v){
-                    if(Integer.parseInt(((Button) v).getText().toString()) == iAnswer) isRight = true;
+                    if(Integer.parseInt(((Button) v).getText().toString()) == dataSet.iNumberSet[dataSet.iEmptyIndex]) isRight = true;
                     else isRight = false;
                     checkAnswer();
                 }
@@ -77,47 +77,31 @@ public class ActStep0204 extends StageActivity {
         dataSet.setData(iStage);
 
         for(int i = 0; i < 2; i++){
-            int iOperator = dataSet.iOperator[i];
-            String sOperator = "";
-
-            if(iOperator == 1) sOperator += '+';
-            else if(iOperator == -1) sOperator += '-';
-
-            txtOperator[i].setText(sOperator);
-            txtOperator[i].setVisibility(View.VISIBLE);
+            if(dataSet.iOperator[i] == 0){
+                txtOperator[i].setVisibility(View.INVISIBLE);
+                frameNumber[i + 1].setVisibility(View.GONE);
+            }
+            else {
+                txtOperator[i].setVisibility(View.VISIBLE);
+                frameNumber[i + 1].setVisibility(View.VISIBLE);
+                txtOperator[i].setText((dataSet.iOperator[i] == 1 ? "+" : "-"));
+            }
         }
 
-        int iAnswerSign = 1;
-        iAnswer = 0;
         for(int i = 0; i < 4; i++){
-            int iNumber = dataSet.iNumberSet[i];
-
-            if(iNumber == -2){
-                frameNumber[i].setVisibility(View.GONE);
-                txtOperator[i - 1].setVisibility(View.GONE);
-                continue;
-            }
-
-            frameNumber[i].setVisibility(View.VISIBLE);
-            imgNumberField[i].setVisibility(View.GONE);
-            if(iNumber == -1){
-                txtNumber[i].setText("");
+            if(i == dataSet.iEmptyIndex){
                 imgNumberField[i].setVisibility(View.VISIBLE);
-                if(i > 0 && i < 3) iAnswerSign = dataSet.iOperator[i - 1];
+                txtNumber[i].setText("");
             }
             else{
-                txtNumber[i].setText("" + iNumber);
-
-                if(i >= 3) iNumber *= -1;
-                else if(i >= 1) iNumber *= dataSet.iOperator[i - 1];
-                iAnswer += iNumber * -1;
+                imgNumberField[i].setVisibility(View.INVISIBLE);
+                txtNumber[i].setText("" + dataSet.iNumberSet[i]);
             }
-            Log.i("tat", "" + iAnswer);
         }
-        iAnswer *= iAnswerSign;
 
-        int iNextExample = iAnswer - rand.nextInt(2);
+        int iNextExample = dataSet.iNumberSet[dataSet.iEmptyIndex] - rand.nextInt(2);
         if(iNextExample < 0) iNextExample = 0;
+        if(iNextExample > 7) iNextExample = 7;
 
         for(int i = 0; i < 3; i++)
             btnAnswer[i].setText("" + (iNextExample + i));
@@ -152,23 +136,29 @@ public class ActStep0204 extends StageActivity {
     }
 
     public class Step0204DataSet{
-        private final int arrNumberSet[][] = {{4, -1, -2, 7}, {-1, 9, -2, 11}, {5, 2, -1, 10}, {2, -1, 7, 15}, {-1, 5, 7, 16}, {9, 8, -1, 19}, {9, 9, -2, -1}, {8, 5, -2, -1}, {7, -1, -2, 5}, {15, 5, -1, 5},
-                {4, -1, -2, 6}, {-1, 8, -2, 11}, {3, 4, -1, 10}, {3, -1, 6, 15}, {-1, 6, 6, 16}, {8, 7, -1, 19}, {8, 8, -2, -1}, {9, -1, -2, 6}, {8, -1, -2, 6}, {12, -1, 2, 5},
-                {5, -1, -2, 8}, {-1, 7, -2, 11}, {6, 1, -1, 10}, {4, -1, 5, 10}, {4, -1, 5, 15}, {-1, 8, 4, 16}, {6, 9, -1, 19}, {4, 4, -2, -1}, {7, -1, -2, 4}, {5, -1, -2, 3}, {13, 3, -1, 5}};
-        private final int arrOperatorSet[][] = {{1, 0}, {1, 0}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {-1, 0}, {-1, 0}, {-1, 0}, {-1, -1},
-                {1, 0}, {1, 0}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {-1, 0}, {-1, 0}, {-1, 0}, {-1, -1},
-                {1, 0}, {1, 0}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {-1, 0}, {-1, 0}, {-1, 0}, {-1, -1}};
-
-        public final int iNumberSet[] = new int[4];
-        public final int iOperator[] = new int[2];
+        private final int arrOperator[][] = {{1, 1}, {1, 1, 1}, {1, 1, 1}, {1, -1}, {1, -1, -1}};
+        public int iNumberSet[] = new int[4];
+        public int iOperator[] = new int[2];
+        public int iEmptyIndex;
 
         public void setData(int iStage){
-            int iSeed = (iStage - 1) * 2 + rand.nextInt(2) + 10 * rand.nextInt(3);
+            int iSeed = iStage - 1;
 
-            for(int i = 0; i < 4; i++)
-                iNumberSet[i] = arrNumberSet[iSeed][i];
-            iOperator[0] = arrOperatorSet[iSeed][0];
-            iOperator[1] = arrOperatorSet[iSeed][1];
+            for(int i = 1; i < arrOperator[iSeed].length; i++)
+                iOperator[i - 1] = arrOperator[iSeed][i];
+            if(arrOperator[iSeed].length < 3) iOperator[1] = 0;
+
+            do{
+                iEmptyIndex = rand.nextInt(4);
+            }while(iEmptyIndex == 2 && arrOperator[iSeed].length <= 2);
+
+            do{
+                iNumberSet[3] = 0;
+                for(int i = 0; i < arrOperator[iSeed].length; i++){
+                    iNumberSet[i] = 1 + rand.nextInt(9);
+                    iNumberSet[3] += arrOperator[iSeed][i] * iNumberSet[i];
+                }
+            }while(iNumberSet[3] < 0 || (iEmptyIndex == 3 && iNumberSet[3] >= 10));
         }
     }
 }
