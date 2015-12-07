@@ -20,19 +20,25 @@ public class DB extends SQLiteOpenHelper {
 
 
     public static final String DB_PATH = "/data/data/senior_smart/databases";
-    public static final String DB_NAME ="db";// Database name
-    public static final String TABLE_RESULT = "RESULT_DATA";
+    public static final String DB_NAME ="db_silvermath";// Database name
+    public static final String TABLE_RESULT = "result";
+    public static final String TABLE_STATISTICS = "statistics";
 
 
     private final Context mContext;
 
-    public static DB obj = null;
-    public static final void INIT(Context context)
+    private static DB obj = null;
+    static {
+
+    }
+    public static synchronized final void INIT(Context context)
     {
         if(obj!=null)
             return;
         obj = new DB(context, DB_NAME, null, 1);
     }
+
+
     public static boolean QUERY(String query)
     {
         SQLiteDatabase db = obj.getWritableDatabase();
@@ -145,7 +151,8 @@ public class DB extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db)
     {//when DB doesn't exist.
-        db.execSQL("CREATE TABLE " + TABLE_RESULT +"( _id INTEGER PRIMARY KEY AUTOINCREMENT, step INTEGER, level INTEGER, stage INTEGER, second INTEGER, pass TEXT, timestamp DATE);");
+        db.execSQL("CREATE TABLE " + TABLE_RESULT       +" ( id INTEGER PRIMARY KEY AUTOINCREMENT, step INTEGER, level INTEGER, stage INTEGER, second INTEGER, success INTEGER, timestamp DATE);");
+        db.execSQL("CREATE TABLE " + TABLE_STATISTICS   +" ( id INTEGER PRIMARY KEY AUTOINCREMENT, step INTEGER, success INTEGER, fail INTEGER, second INTEGER, timestamp DATE);");
     }
 
     @Override
@@ -167,5 +174,6 @@ public class DB extends SQLiteOpenHelper {
             return 0;
         }
     }
+
 }
 
