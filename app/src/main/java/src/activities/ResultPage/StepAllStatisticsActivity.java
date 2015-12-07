@@ -1,14 +1,13 @@
 package src.activities.ResultPage;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
 import cdmst.smartsilver.R;
-import src.DB;
-import src.ResultData;
+import src.data.DB;
+import src.data.ResultData;
 import src.activities.FrameActivity;
 
 /**
@@ -28,7 +27,7 @@ public class StepAllStatisticsActivity extends FrameActivity {
             {
                 TextView txtTitle = (TextView)rowLevel.getChildAt(iLevel);
 
-                ResultData[] res = DB.SELECT("SELECT * FROM RESULT_DATA WHERE step = '" + iStep + "' AND level = '"+ iLevel +"' ORDER BY stage DESC LIMIT 1");
+                ResultData[] res = DB.getResultData( String.format("SELECT * FROM %s WHERE step = '%d' AND level = '%d' ORDER BY stage DESC LIMIT 1 ;", DB.TABLE_RESULT, iStep, iLevel) );
                 if(res == null || res.length == 0) continue;
 
                 if( res[0].iStage == 5)

@@ -5,7 +5,7 @@
 
     <LinearLayout
         android:layout_centerInParent="true"
-        android:layout_width="@dimen/wp150"
+        android:layout_width="@dimen/wp130"
         android:layout_height="@dimen/wp100"
         android:background="#FFFFFF"
         android:orientation="vertical">
@@ -29,11 +29,11 @@
             android:background="#000000">
         </FrameLayout>
 
-        <com.github.mikephil.charting.charts.BarChart
+        <com.github.mikephil.charting.charts.CombinedChart
             android:layout_marginTop="@dimen/wp5"
             android:layout_gravity="center_horizontal"
             android:id="@+id/chart1"
-            android:layout_width="@dimen/wp140"
+            android:layout_width="@dimen/wp120"
             android:layout_height="@dimen/wp70" />
 
         <!--<TableLayout-->

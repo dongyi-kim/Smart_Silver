@@ -116,13 +116,9 @@
             </LinearLayout>
 
 
-
-
-
-
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/wp40"
+                android:layout_height="wrap_content"
                 android:layout_margin="@dimen/wp3"
                 android:layout_alignParentRight="true"
                 android:orientation="vertical">
@@ -171,19 +167,6 @@
                         android:textSize="@dimen/wp5" />
                 </ui.RippleView>
 
-                <ui.RippleView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/wp10"
-                    android:background="@drawable/img_memo_sticker">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="총 학습 결과표"
-                        android:textSize="@dimen/wp5" />
-                </ui.RippleView>
-
             </LinearLayout>
 
         </RelativeLayout>
@@ -194,6 +177,7 @@
 
 
             <LinearLayout
+
                 android:layout_width="@dimen/wp100"
                 android:layout_height="wrap_content"
 
