@@ -40,8 +40,9 @@
                 android:id="@+id/img_7_5_1"
                 android:background="@drawable/receipt_7_4_1"
                 android:layout_weight="1">
-
             </LinearLayout>
+
+
         </LinearLayout>
     </LinearLayout>
 
