@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@drawable/img_chalkboard_2"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/img_chalkboard_2">
 
     <LinearLayout
         android:layout_width="@dimen/wp150"
@@ -12,36 +12,224 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/txt_description"
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp20"
-            android:textSize="@dimen/wp5"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:gravity="center"
-            android:id="@+id/txt_description"
             android:layout_marginBottom="@dimen/wp2"
-            android:text="전기요금 청구금액을 나타내는 곳을 찾아 누르세요.">
-        </TextView>
+            android:gravity="center"
+            android:text="전기요금 청구금액을 나타내는 곳을 찾아 누르세요."
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/wp5"
+            android:textStyle="bold"></TextView>
 
         <LinearLayout
-            android:layout_width="@dimen/wp130"
+            android:layout_width="@dimen/wp120"
             android:layout_height="@dimen/wp70"
             android:gravity="center"
-            android:visibility="visible"
-            android:id="@+id/layout_7_5_1"
             android:orientation="horizontal"
             android:weightSum="1">
 
             <LinearLayout
+                android:id="@+id/page_7_4_2"
+                android:layout_width="@dimen/wp70"
+                android:layout_height="@dimen/wp70"
+                android:background="@drawable/receipt_7_4_4_1"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".34"></LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_2_1"
+                    android:layout_width="@dimen/wp17"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/wp1"
+                    android:layout_weight=".07"
+                    android:background="@drawable/button_fit_background_solid_border_transparent"
+                    android:text="2014-04-04"
+                    android:textSize="@dimen/wp3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".125"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".065"
+                    android:gravity="right">
+
+                    <Button
+                        android:id="@+id/btn_2_2"
+                        android:layout_width="@dimen/wp15"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_fit_background_solid_border_transparent"
+                        android:text="10,500"
+                        android:textSize="@dimen/wp3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".1">
+
+                    <Button
+                        android:layout_width="@dimen/wp6"
+                        android:layout_height="@dimen/wp5"
+                        android:layout_marginTop="@dimen/wp2"
+                        android:layout_marginLeft="@dimen/wp50"
+                        android:text="1"
+                        android:id="@+id/btn_2_5"
+                        android:background="@drawable/button_fit_background_solid_border_transparent"
+                        android:textSize="@dimen/wp2"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".065"
+                    android:gravity="right">
+
+                    <Button
+                        android:id="@+id/btn_2_3"
+                        android:layout_width="@dimen/wp15"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_fit_background_solid_border_transparent"
+                        android:text="10,500"
+                        android:textSize="@dimen/wp3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".14"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".06"
+                    android:gravity="right">
+
+                    <Button
+                        android:id="@+id/btn_2_4"
+                        android:layout_width="@dimen/wp20"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_fit_background_solid_border_transparent"
+                        android:text="40,820"
+                        android:textSize="@dimen/wp3" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/page_7_4_1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:weightSum="1"
-                android:id="@+id/img_7_5_1"
+                android:layout_weight="1"
                 android:background="@drawable/receipt_7_4_1"
-                android:layout_weight="1">
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:weightSum="1">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".12"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".07"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".14"></LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_1_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".26"
+                        android:background="@drawable/button_fit_background_solid_border_transparent"
+                        android:gravity="center"
+                        android:text="2016년 5월 27일"
+                        android:textSize="@dimen/wp3" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".14"></LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_1_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".46"
+                        android:background="@drawable/button_fit_background_solid_border_transparent"
+                        android:gravity="center"
+                        android:text="2004년 01월부터 2004년 04월 30일 까지"
+                        android:textSize="@dimen/wp3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".075"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".1"
+                    android:gravity="right"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <Button
+                        android:id="@+id/btn_1_3"
+                        android:layout_width="@dimen/wp7"
+                        android:layout_height="0dp"
+                        android:layout_marginRight="@dimen/wp5"
+                        android:layout_weight=".5"
+                        android:background="@drawable/button_fit_background_solid_border_transparent"
+                        android:text="15"
+                        android:textSize="@dimen/wp3" />
+
+                    <Button
+                        android:id="@+id/btn_1_4"
+                        android:layout_width="@dimen/wp7"
+                        android:layout_height="0dp"
+                        android:layout_marginRight="@dimen/wp5"
+                        android:layout_weight=".5"
+                        android:background="@drawable/button_fit_background_solid_border_transparent"
+                        android:text="15"
+                        android:textSize="@dimen/wp3" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".547"></LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_1_5"
+                    android:layout_width="@dimen/wp20"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/wp14"
+                    android:layout_weight=".07"
+                    android:background="@drawable/button_fit_background_solid_border_transparent"
+                    android:text="12,800"
+                    android:textSize="@dimen/wp4" />
             </LinearLayout>
+
+
         </LinearLayout>
     </LinearLayout>
 
@@ -52,6 +240,5 @@
         android:background="@drawable/img_memo_sticker"
         android:gravity="center"
         android:text="7 - 4"
-        android:textSize="@dimen/wp4"
-        />
+        android:textSize="@dimen/wp4" />
 </RelativeLayout>
