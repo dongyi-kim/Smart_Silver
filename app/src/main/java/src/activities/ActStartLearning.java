@@ -2,11 +2,10 @@ package src.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 
 import cdmst.smartsilver.R;
-import src.DB;
-import src.ResultData;
+import src.data.DB;
+import src.data.ResultData;
 import src.Setting;
 import src.Utility;
 
@@ -48,10 +47,10 @@ public class ActStartLearning extends FrameActivity {
         int iStep = from;
         int iLevel = 1;
 
-        String sql = "SELECT * FROM RESULT_DATA WHERE ";
-        sql += String.format(" '%d' <= step AND step <= '%d' ORDER BY _id DESC LIMIT 1", from, to);
 
-        ResultData[] data = DB.SELECT(sql);
+        String query = String.format("SELECT * FROM %s WHERE '%d' <= step AND step <= '%d' ORDER BY id DESC LIMIT 1", DB.TABLE_RESULT, from, to);
+
+        ResultData[] data = DB.getResultData(query);
         if (data != null) {
             iStep = data[0].iStep;
             iLevel = data[0].iLevel;

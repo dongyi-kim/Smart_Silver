@@ -4,15 +4,16 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
-import src.DB;
-import src.ResultData;
+import src.data.DB;
+import src.data.ResultData;
 import src.Utility;
+import src.data.StatisticsData;
 
 /**
  * Created by waps12b on 15. 3. 25..
  */
 public abstract class StageActivity extends FrameActivity {
-    public final int NUM_OF_STAGE = Utility.getNumOfStage(this.getClass());
+    public final int NUM_OF_STAGE = Utility.getNumberOfStage(this.getClass());
     public int iStep;
     public int iLevel;
     public int iStage = 1;
@@ -27,9 +28,14 @@ public abstract class StageActivity extends FrameActivity {
         iStep  = Utility.getStep(this.getClass());
         iLevel = Utility.getLevel(this.getClass());
         iStage = 1;
+
+        if(iLevel == 1)
+        {
+            StatisticsData.startNewStatistics();
+        }
     }
 
-    public synchronized void StartRecording()
+    public final synchronized void StartRecording()
     {
         if(dataNow!=null){
             Log.d("Start Recoding","but not null");
@@ -39,7 +45,7 @@ public abstract class StageActivity extends FrameActivity {
         dataNow.Start();
     }
 
-    public synchronized void StopRecording(boolean bResult)
+    public final synchronized void StopRecording(boolean bResult)
     {
         if(dataNow == null){
             Log.d("Stop Recoding","but null");
@@ -58,7 +64,12 @@ public abstract class StageActivity extends FrameActivity {
             strbuff.append("[오답] ");
 
         //time stamp;
-        strbuff.append((dataNow.getMilliTime()/1000) + "초 걸렸어요!");
+        long second = dataNow.getMilliTime()/1000;
+        if(second < 60){
+            strbuff.append(String.format("%d초 걸렸어요!" , second));
+        }else{
+            strbuff.append(String.format("%d분 %d초 걸렸어요", second / 60, second % 60));
+        }
 
         //save data into db
 
@@ -70,7 +81,15 @@ public abstract class StageActivity extends FrameActivity {
         nowToast = Toast.makeText(this, strbuff.toString(), Toast.LENGTH_SHORT);
         nowToast.show();
 
-        DB.INSERT(dataNow);
+        DB.insertResult(dataNow);
+
+        StatisticsData.addResultIntoStatistics(dataNow);
+        if(iStage == NUM_OF_STAGE && iLevel == Utility.getNumberOfLevel(iStep))
+        {   // when it is last level
+            StatisticsData.saveStatistics();
+            StatisticsData.clearStatistics();
+        }
+
         dataNow = null;
     }
 

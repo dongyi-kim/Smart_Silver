@@ -5,12 +5,9 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import cdmst.smartsilver.R;
-import src.DB;
-import src.ResultData;
-import src.Utility;
-import src.activities.ActTest;
+import src.data.DB;
+import src.data.ResultData;
 import src.activities.FrameActivity;
-import ui.RippleView;
 
 /**
  * Created by waps12b on 15. 5. 17..
@@ -19,14 +16,13 @@ public class StatisticsActivity extends FrameActivity {
 
     private int get_minute(String query)
     {
-        long millisec = 0;
-        ResultData[] data = DB.SELECT(query);
-        if(data == null)
+        ResultData[] datas = DB.getResultData(query);
+        if(datas == null || datas.length == 0)
             return 0;
 
-        for(int i=0; i<data.length; i++)
-        {
-            millisec += data[i].millisec;
+        long millisec = 0;
+        for(ResultData data : datas){
+            millisec += data.millisec;
         }
         return (int)(millisec / 60000);
     }
@@ -37,14 +33,12 @@ public class StatisticsActivity extends FrameActivity {
 
         //set play time
         TextView txtToday =  (TextView)findViewById(R.id.txt_playtime_today);
-        txtToday.setText( get_minute("SELECT * FROM RESULT_DATA WHERE timestamp >= date('now');") + "분");
+        int minuteToday = get_minute(String.format("SELECT * FROM %s WHERE timestamp >= date('now'); ", DB.TABLE_RESULT));
+        txtToday.setText( minuteToday + "분" );
 
         TextView txtTotal =  (TextView)findViewById(R.id.txt_playtime_total);
-        txtTotal.setText( get_minute("SELECT * FROM RESULT_DATA;") + "분");
-
-        //
-
-
+        int minuteTotal = get_minute(String.format("SELECT * FROM %s ; ", DB.TABLE_RESULT));
+        txtTotal.setText( minuteTotal + "분" );
     }
 
     @Override

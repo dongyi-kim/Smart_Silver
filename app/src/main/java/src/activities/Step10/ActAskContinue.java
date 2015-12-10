@@ -7,8 +7,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import cdmst.smartsilver.R;
-import src.DB;
-import src.ResultData;
+import src.data.DB;
+import src.data.ResultData;
 import src.activities.ActMain;
 import src.activities.FrameActivity;
 
@@ -35,7 +35,8 @@ public class ActAskContinue extends FrameActivity {
         txtCurrentRecord = (TextView)findViewById(R.id.txt_current_record);
         txtBestRecord = (TextView)findViewById(R.id.txt_best_record);
 
-        ResultData[] result = DB.SELECT(10, -1, -1, -1, "");
+        ResultData[] result = DB.getResultData( String.format("SELECT * FROM %s WHERE step = '%d' ; ", DB.TABLE_RESULT, 10) );
+
 
         int iResultCount = result.length;
         int iPastLevel = 0;

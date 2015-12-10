@@ -7,6 +7,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.concurrent.ScheduledExecutorService;
 
 import src.activities.Step01.*;
 import src.activities.Step02.*;
@@ -187,15 +188,19 @@ public class Utility {
         return 0;
     }
 
-    public static final int getNumOfStage(Class<?> classStep){
+    public static final int getNumberOfStage(Class<?> classLevel){
         for(int i=0; i< Setting.arrStepClass.length; i++)
         {
             for(int j=0; j< Setting.arrStepClass[i].length; j++)
             {
-                if(classStep == Setting.arrStepClass[i][j])
+                if(classLevel == Setting.arrStepClass[i][j])
                     return Setting.arrNumOfStage[i][j];
             }
         }
         return -1;
+    }
+
+    public static final int getNumberOfLevel(int iStep){
+        return Setting.arrStepClass[iStep - 1].length;
     }
 }

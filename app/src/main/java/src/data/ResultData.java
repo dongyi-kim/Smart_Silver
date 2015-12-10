@@ -1,4 +1,4 @@
-package src;
+package src.data;
 
 import android.app.UiAutomation;
 import android.os.Environment;
@@ -11,6 +11,7 @@ import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -18,6 +19,8 @@ import java.util.Date;
  * Created by waps12b on 15. 3. 25..
  */
 public class ResultData implements Serializable {
+
+
 
     private boolean isRecording;
     private long startTime ;
@@ -27,15 +30,21 @@ public class ResultData implements Serializable {
     public final int iStep;
     public final int iLevel;
     public final int iStage;
+    public final String userId;
 
     public ResultData(int step, int level, int stage)
     {
+        this(step, level, stage, null);
+    }
+
+    public ResultData(int step, int level, int stage, String userId){
         this.iStep = step;
         this.iStage = stage;
         this.iLevel = level;
 
         isRecording = false;
         millisec = 0;
+        this.userId = userId;
     }
 
     public long getMilliTime()
@@ -55,6 +64,16 @@ public class ResultData implements Serializable {
         isRecording = false;
         isSuccess = bResult;
         millisec += System.currentTimeMillis() - startTime;
+    }
+
+    @Override
+    public String toString(){
+        // +" ( id INTEGER PRIMARY KEY AUTOINCREMENT, step INTEGER, level INTEGER, stage INTEGER, second INTEGER, success INTEGER, timestamp DATE, user_id TEXT);");
+        if(userId != null){
+            return String.format(" (null, '%d', '%d', '%d', '%d', '%d',  DATETIME('NOW'), null ) " , iStep, iLevel, iStage, millisec, (isSuccess ? 1 : 0));
+        }else{
+            return String.format(" (null, '%d', '%d', '%d', '%d', '%d',  DATETIME('NOW'), %s ) ", iStep, iLevel, iStage, millisec, (isSuccess ? 1 : 0), userId);
+        }
     }
 
 }

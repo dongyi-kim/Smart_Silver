@@ -1,20 +1,17 @@
 package src.activities.Step10;
 
-import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Random;
 
 import cdmst.smartsilver.R;
-import src.DB;
-import src.ResultData;
-import src.activities.ActMain;
+import src.data.DB;
+import src.data.ResultData;
 import src.activities.StageActivity;
 import src.dialogs.DlgResultMark;
 
@@ -43,7 +40,7 @@ public class ActStep10 extends StageActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_10);
 
-        ResultData[] result = DB.SELECT(10, 1, 10, -1, "");
+        ResultData[] result = DB.getResultData(String.format("SELECT * FROM %s WHERE step = '%d' ; ", DB.TABLE_RESULT, 10));
         if (result == null) iStepCount = 1;
         else iStepCount = result.length + 1;
 

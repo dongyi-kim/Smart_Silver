@@ -1,13 +1,10 @@
 package src.activities;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 
 import cdmst.smartsilver.R;
-import src.DB;
-import src.ResultData;
-import src.Utility;
+import src.data.DB;
 import src.activities.ResultPage.StatisticsActivity;
 import ui.RippleView;
 
