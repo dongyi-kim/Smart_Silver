@@ -124,12 +124,14 @@ public class ActStep0205 extends StageActivity{
 
         public void setData(int iStage) {
             int iSeed = iStage - 1;
+            boolean bExeedTen;
 
             iEmptyIndex = arrEmptyIndex[iSeed];
 
-            boolean bExeedTen = false;
             do {
+                bExeedTen = false;
                 iNumberSet[3] = 0;
+
                 for (int i = 0; i < 3; i++) {
                     iNumberSet[i] = 1 + rand.nextInt(9);
                     iNumberSet[3] += arrOperator[i] * iNumberSet[i];
