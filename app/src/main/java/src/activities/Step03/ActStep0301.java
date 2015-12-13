@@ -145,12 +145,12 @@ public class ActStep0301 extends StageActivity {
                 @Override
                 public void onDismiss(DialogInterface dialog) {
                     if(iRetryCount > 1){
-                        iRetryCount = 0;
-                        iStage++;
-                        /* TODO
-                         * Error occured here!
-                         */
-                        setQuestion(false);
+                        if(iStage >= NUM_OF_STAGE) goNext();
+                        else {
+                            iRetryCount = 0;
+                            iStage++;
+                            setQuestion(false);
+                        }
                     }
                     else{
                         iRetryCount++;
