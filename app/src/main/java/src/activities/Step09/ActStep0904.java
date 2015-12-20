@@ -204,6 +204,7 @@ public class ActStep0904  extends StageActivity {
 
         public void setData(int iStage) {
             int rand = (int)(Math.random() * 3.0); // 0 ~ 2
+            System.out.println(iStage + "\n" + rand + "\n");
             btn = btnset[iStage][rand];
             ans = ansset[iStage][rand];
             des = desset[iStage][rand];
