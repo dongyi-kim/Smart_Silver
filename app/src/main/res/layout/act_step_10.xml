@@ -5,16 +5,16 @@
     android:background="@drawable/img_chalkboard_2">
 
     <LinearLayout
-        android:layout_width="@dimen/wp150"
+        android:layout_width="@dimen/wp130"
         android:layout_height="@dimen/wp100"
         android:layout_centerInParent="true"
-        android:orientation="horizontal">
-
+        android:orientation="horizontal"
+        android:gravity="center">
 
         <LinearLayout
-            android:layout_width="@dimen/wp70"
+            android:layout_width="@dimen/wp60"
             android:layout_height="match_parent"
-            android:layout_marginRight="@dimen/wp5"
+            android:layout_marginRight="@dimen/wp10"
             android:gravity="center"
             android:orientation="vertical"
             android:weightSum="1">
@@ -22,12 +22,12 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/wp35">
+                android:layout_height="@dimen/wp30">
 
                 <FrameLayout
                     android:layout_centerInParent="true"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/wp30">
+                    android:layout_height="@dimen/wp25">
 
 
                     <LinearLayout
@@ -52,7 +52,7 @@
                                 android:layout_height="match_parent"
                                 android:gravity="center"
                                 android:text="00 + 0 - 0 = "
-                                android:textSize="@dimen/wp8"
+                                android:textSize="@dimen/wp7"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -62,7 +62,7 @@
                                 android:background="#FFFFFFFF"
                                 android:gravity="center"
                                 android:text="00"
-                                android:textSize="@dimen/wp8"
+                                android:textSize="@dimen/wp7"
                                 android:textStyle="bold" />
                         </LinearLayout>
                     </LinearLayout>
@@ -85,8 +85,8 @@
 
 
         <LinearLayout
-            android:layout_width="@dimen/wp25"
-            android:layout_height="@dimen/wp80"
+            android:layout_width="@dimen/wp20"
+            android:layout_height="@dimen/wp70"
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="vertical"
@@ -106,7 +106,7 @@
                     android:layout_weight=".2"
                     android:background="#FFFFFFFF"
                     android:text="1"
-                    android:textSize="@dimen/wp10" />
+                    android:textSize="@dimen/wp9" />
 
                 <Button
                     android:id="@+id/btn_number_4"
@@ -116,7 +116,7 @@
                     android:layout_weight=".2"
                     android:background="#FFFFFFFF"
                     android:text="4"
-                    android:textSize="@dimen/wp10" />
+                    android:textSize="@dimen/wp9" />
 
                 <Button
                     android:id="@+id/btn_number_7"
@@ -126,7 +126,7 @@
                     android:layout_weight=".2"
                     android:background="#FFFFFFFF"
                     android:text="7"
-                    android:textSize="@dimen/wp10" />
+                    android:textSize="@dimen/wp9" />
 
                 <Button
                     android:id="@+id/btn_erase"
@@ -136,13 +136,13 @@
                     android:layout_weight=".2"
                     android:background="#FFFFFFFF"
                     android:text="정정"
-                    android:textSize="@dimen/wp10" />
+                    android:textSize="@dimen/wp8" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="@dimen/wp25"
-            android:layout_height="@dimen/wp80"
+            android:layout_width="@dimen/wp20"
+            android:layout_height="@dimen/wp70"
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="vertical"
@@ -162,7 +162,7 @@
                     android:layout_weight=".2"
                     android:background="#FFFFFFFF"
                     android:text="2"
-                    android:textSize="@dimen/wp10" />
+                    android:textSize="@dimen/wp9" />
 
                 <Button
                     android:id="@+id/btn_number_5"
@@ -172,7 +172,7 @@
                     android:layout_weight=".2"
                     android:background="#FFFFFFFF"
                     android:text="5"
-                    android:textSize="@dimen/wp10" />
+                    android:textSize="@dimen/wp9" />
 
                 <Button
                     android:id="@+id/btn_number_8"
@@ -182,7 +182,7 @@
                     android:layout_weight=".2"
                     android:background="#FFFFFFFF"
                     android:text="8"
-                    android:textSize="@dimen/wp10" />
+                    android:textSize="@dimen/wp9" />
 
                 <Button
                     android:id="@+id/btn_number_0"
@@ -192,13 +192,13 @@
                     android:layout_weight=".2"
                     android:background="#FFFFFFFF"
                     android:text="0"
-                    android:textSize="@dimen/wp10" />
+                    android:textSize="@dimen/wp9" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="@dimen/wp25"
-            android:layout_height="@dimen/wp80"
+            android:layout_width="@dimen/wp20"
+            android:layout_height="@dimen/wp70"
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="vertical"
@@ -218,7 +218,7 @@
                     android:layout_weight=".2"
                     android:background="#FFFFFFFF"
                     android:text="3"
-                    android:textSize="@dimen/wp10" />
+                    android:textSize="@dimen/wp9" />
 
                 <Button
                     android:id="@+id/btn_number_6"
@@ -228,7 +228,7 @@
                     android:layout_weight=".2"
                     android:background="#FFFFFFFF"
                     android:text="6"
-                    android:textSize="@dimen/wp10" />
+                    android:textSize="@dimen/wp9" />
 
                 <Button
                     android:id="@+id/btn_number_9"
@@ -238,7 +238,7 @@
                     android:layout_weight=".2"
                     android:background="#FFFFFFFF"
                     android:text="9"
-                    android:textSize="@dimen/wp10" />
+                    android:textSize="@dimen/wp9" />
 
                 <Button
                     android:id="@+id/btn_submit"
@@ -248,7 +248,7 @@
                     android:layout_weight=".2"
                     android:background="#FFFFFFFF"
                     android:text="확인"
-                    android:textSize="@dimen/wp10" />
+                    android:textSize="@dimen/wp8" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
