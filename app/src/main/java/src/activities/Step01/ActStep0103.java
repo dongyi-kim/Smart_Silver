@@ -98,7 +98,7 @@ public class ActStep0103 extends StageActivity {
     }
 
 
-    public void setQuestion(boolean isRetry, Object object){
+    public synchronized void setQuestion(boolean isRetry, Object object){
         bAnswerIsOdd = (rand.nextInt(2) == 0 ? false : true);
         txtDescription.setText(bAnswerIsOdd? "다음 중 홀수를 찾아 누르세요." : "다음 중 짝수를 찾아 누르세요.");
 
@@ -159,7 +159,7 @@ public class ActStep0103 extends StageActivity {
     }
 
 
-    public void checkAnswer(Object object){
+    public synchronized void checkAnswer(Object object){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
         if(isRight || iRetryCount > 1) StopRecording(isRight);
@@ -179,7 +179,7 @@ public class ActStep0103 extends StageActivity {
         });
     }
 
-    public void goNext(Object object){
+    public synchronized void goNext(Object object){
         Intent intent = new Intent(this, ActStep0104.class);
         startActivity(intent);
     }

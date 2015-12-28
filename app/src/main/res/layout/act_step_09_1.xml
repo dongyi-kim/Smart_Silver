@@ -13,11 +13,12 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wp20"
+            android:layout_marginTop="@dimen/wp3"
+            android:layout_height="@dimen/wp17"
             android:gravity="center"
             android:text="다음과 같이 재활용 분리수거를 나누었습니다.\n분리수거 종류는 모두 몇 가지인가요?"
             android:textColor="#FFFFFF"
-            android:textSize="@dimen/wp6"
+            android:textSize="@dimen/wp5"
             android:textStyle="bold" />
 
         <LinearLayout

@@ -83,7 +83,7 @@ public class ActStep0304 extends StageActivity {
         setQuestion(false);
     }
 
-    public void setQuestion(boolean isRetry, Object object){
+    public synchronized void setQuestion(boolean isRetry, Object object){
         if(iStage == 3){
             linearFrame[0].setVisibility(View.GONE);
             linearFrame[1].setVisibility(View.VISIBLE);
@@ -131,7 +131,7 @@ public class ActStep0304 extends StageActivity {
     }
 
 
-    public void checkAnswer(Object object){
+    public synchronized void checkAnswer(Object object){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
         if(isRight || iRetryCount > 1) StopRecording(isRight);
@@ -154,7 +154,7 @@ public class ActStep0304 extends StageActivity {
         });
     }
 
-    public void goNext(Object object){
+    public synchronized void goNext(Object object){
         Intent intent = new Intent(this, ActStep0305.class);
         startActivity(intent);
     }

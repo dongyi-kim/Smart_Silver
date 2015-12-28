@@ -61,7 +61,7 @@ public class ActStep0303 extends StageActivity{
     }
 
 
-    public void setQuestion(boolean isRetry, Object object){
+    public synchronized void setQuestion(boolean isRetry, Object object){
         dataSet.setData(iStage);
 
         int iGapMult = dataSet.iAnswer <= 10 ? 1 : (dataSet.iAnswer % 10 == 0 ? 10 : 1);
@@ -94,7 +94,7 @@ public class ActStep0303 extends StageActivity{
     }
 
 
-    public void checkAnswer(Object object){
+    public synchronized void checkAnswer(Object object){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
         if(isRight || iRetryCount > 1) StopRecording(isRight);
@@ -117,7 +117,7 @@ public class ActStep0303 extends StageActivity{
         });
     }
 
-    public void goNext(Object object){
+    public synchronized void goNext(Object object){
         Intent intent = new Intent(this, ActStep0304.class);
         startActivity(intent);
     }

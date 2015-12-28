@@ -58,7 +58,7 @@ public class ActStep0505 extends StageActivity {
         setQuestion(false);
     }
 
-    public void setQuestion(boolean isRetry, Object object){
+    public synchronized void setQuestion(boolean isRetry, Object object){
         dataSet.setData(iStage);
 
         if(iStage == NUM_OF_STAGE) txtDescription.setText("노인학교에서 가을축제 준비를 하기 위해 시장에 갔습니다. 사과 한 개 당 가격이 더 저렴한 것은 어느 것일까요?");
@@ -70,7 +70,7 @@ public class ActStep0505 extends StageActivity {
         StartRecording();
     }
 
-    public void checkAnswer(Object o){
+    public synchronized void checkAnswer(Object o){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
         if(isRight || iRetryCount > 1) StopRecording(isRight);
@@ -91,7 +91,7 @@ public class ActStep0505 extends StageActivity {
         });
     }
 
-    public void goNext(Object object){
+    public synchronized void goNext(Object object){
         Intent intent = new Intent(this, ActStep0601.class);
         startActivity(intent);
     }

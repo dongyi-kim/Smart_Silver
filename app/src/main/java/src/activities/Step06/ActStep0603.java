@@ -176,7 +176,7 @@ public class ActStep0603 extends StageActivity {
     }
 
     @Override
-    public void setQuestion(boolean isRetry, Object object) {
+    public synchronized void setQuestion(boolean isRetry, Object object) {
         int Seed = iStage - 1;
 
         leftCount = rightCount = 0;
@@ -223,7 +223,7 @@ public class ActStep0603 extends StageActivity {
     }
 
     @Override
-    public void checkAnswer(Object object) {
+    public synchronized void checkAnswer(Object object) {
         DlgResultMark dlg = new DlgResultMark(this, ans);
         dlg.show();
         if(ans || Count > 1) StopRecording(ans);
@@ -246,7 +246,7 @@ public class ActStep0603 extends StageActivity {
     }
 
     @Override
-    public void goNext(Object object) {
+    public synchronized void goNext(Object object) {
         Intent intent = new Intent(this, ActStep0604.class);
         startActivity(intent);
     }

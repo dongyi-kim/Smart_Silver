@@ -80,14 +80,14 @@ public class ActStep0201 extends StageActivity {
     }
 
 
-    public void setCheck(Button btn){
+    public synchronized void setCheck(Button btn){
 
         btn.setBackgroundResource(R.drawable.dialog_correct_cell);
 
         isSelected[mapIndex.get(btn)] = true;
     }
 
-    public void setQuestion(boolean isRetry, Object object){
+    public synchronized void setQuestion(boolean isRetry, Object object){
         int iVal = arrStartNumber[iStage-1];
         int iDistance = arrDistanceNumber[iStage-1];
         txtDescription.setText(arrDescription[iStage-1]);
@@ -118,7 +118,7 @@ public class ActStep0201 extends StageActivity {
     }
 
     //123123
-    public void checkAnswer(Object o){
+    public synchronized void checkAnswer(Object o){
         int iSelected = mapIndex.get(o);
         if(isSelected[iSelected])
             return;

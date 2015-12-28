@@ -87,7 +87,7 @@ public class ActStep0102 extends StageActivity {
         setQuestion(false);
     }
 
-    public void setQuestion(boolean isRetry, Object object){
+    public synchronized void setQuestion(boolean isRetry, Object object){
         dataSet.setData(iStage);
 
         int iFirstAnsNumber = dataSet.iAnswer - rand.nextInt(3);
@@ -131,7 +131,7 @@ public class ActStep0102 extends StageActivity {
         StartRecording();
     }
 
-    public void checkAnswer(Object o){
+    public synchronized void checkAnswer(Object o){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
         if(isRight || iRetryCount > 1) StopRecording(isRight);
@@ -151,7 +151,7 @@ public class ActStep0102 extends StageActivity {
         });
     }
 
-    public void goNext(Object object){
+    public synchronized void goNext(Object object){
         Intent intent = new Intent(this, ActStep0103.class);
         startActivity(intent);
     }

@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="@dimen/wp150"
+        android:layout_width="@dimen/wp130"
         android:layout_height="@dimen/wp100"
         android:layout_centerInParent="true"
         android:gravity="center_horizontal"
@@ -25,20 +25,20 @@
         <LinearLayout
             android:layout_marginBottom="@dimen/wp2"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wp80"
+            android:layout_height="@dimen/wp70"
             android:gravity="center"
             android:orientation="horizontal"
             android:background="@drawable/frame_cell_white"
             android:weightSum="1">
 
             <ImageView
-                android:layout_width="@dimen/wp70"
-                android:layout_height="@dimen/wp75"
+                android:layout_width="@dimen/wp80"
+                android:layout_height="@dimen/wp70"
                 android:id="@+id/img"/>
 
             <LinearLayout
-                android:layout_width="@dimen/wp70"
-                android:layout_height="@dimen/wp75"
+                android:layout_width="@dimen/wp50"
+                android:layout_height="@dimen/wp70"
                 android:gravity="center"
                 android:orientation="vertical">
 

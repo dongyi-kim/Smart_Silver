@@ -77,7 +77,7 @@ public class ActStep0404 extends StageActivity{
         setQuestion(false);
     }
 
-    public void setQuestion(boolean isRetry, Object object){
+    public synchronized void setQuestion(boolean isRetry, Object object){
         float fTextMarginTop[] = {getResources().getDimension(R.dimen.wp10), getResources().getDimension(R.dimen.wp20), getResources().getDimension(R.dimen.wp28),
                 getResources().getDimension(R.dimen.wp38), getResources().getDimension(R.dimen.wp18), getResources().getDimension(R.dimen.wp15)};
         float fLineMarginTop[] = {getResources().getDimension(R.dimen.wp15), getResources().getDimension(R.dimen.wp25), getResources().getDimension(R.dimen.wp33),
@@ -114,7 +114,7 @@ public class ActStep0404 extends StageActivity{
     }
 
 
-    public void checkAnswer(Object object){
+    public synchronized void checkAnswer(Object object){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
         if(isRight || iRetryCount > 1) StopRecording(isRight);
@@ -137,7 +137,7 @@ public class ActStep0404 extends StageActivity{
         });
     }
 
-    public void goNext(Object object){
+    public synchronized void goNext(Object object){
         Intent intent = new Intent(this, ActStep0405.class);
         startActivity(intent);
     }
