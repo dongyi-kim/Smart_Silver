@@ -5,8 +5,9 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="@dimen/wp150"
-        android:layout_height="@dimen/wp100"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical"
         android:layout_centerInParent="true">
 
@@ -17,14 +18,15 @@
             android:layout_marginBottom="@dimen/wp2"
             android:gravity="center"
             android:textColor="#FFFFFF"
-            android:text="아래 그림은 내일의 비올 확률입니다. 대구지역의 내일 오후 비올 확률은 얼마인지 오른쪽 단추를 누르세요!"
+            android:layout_marginTop="@dimen/wp4"
+            android:text="아래 그림은 내일의 비올 확률입니다. 대구지역의 내일 오후 비올 확률은 얼마인가요?"
             android:textSize="@dimen/wp6"
             android:textStyle="bold"/>
 
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/wp80"
+            android:layout_width="@dimen/wp130"
+            android:layout_height="@dimen/wp65"
             android:background="@drawable/frame_cell_white"
             android:gravity="center"
             android:orientation="horizontal"

@@ -61,7 +61,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight=".15"></LinearLayout>
+                    android:layout_weight=".17"></LinearLayout>
 
                 <Button
                     android:layout_width="@dimen/wp40"
@@ -73,14 +73,13 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight=".15"></LinearLayout>
+                    android:layout_weight=".17"></LinearLayout>
 
                 <Button
                     android:layout_width="@dimen/wp40"
                     android:layout_height="@dimen/wp15"
                     android:text="5시간"
                     android:textSize="@dimen/wp7"
-                    android:visibility="gone"
                     android:id="@+id/btn_ans_3"/>
 
 
