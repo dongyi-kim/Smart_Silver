@@ -5,26 +5,27 @@
     android:background="@drawable/img_chalkboard_2">
 
     <LinearLayout
-        android:layout_width="@dimen/wp150"
-        android:layout_height="@dimen/wp100"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wp20"
+            android:layout_height="@dimen/wp16"
+            android:layout_marginTop="@dimen/wp3"
             android:gravity="center"
             android:text="아래의 밥과 찌개에서 각각 1종류를 고르려 합니다.\n선택할 수 있는 종류는 모두 몇 가지인가요?"
             android:textColor="#FFFFFF"
             android:id="@+id/txt_description"
-            android:textSize="@dimen/wp6"
+            android:textSize="@dimen/wp5"
             android:textStyle="bold" />
 
         <LinearLayout
             android:id="@+id/layout2"
-            android:layout_width="match_parent"
-            android:visibility="visible"
+            android:layout_width="@dimen/wp130"
+            android:visibility="gone"
             android:background="@drawable/frame_cell_white"
             android:orientation="vertical"
             android:layout_height="@dimen/wp60">
@@ -179,15 +180,15 @@
 
         <LinearLayout
             android:id="@+id/layout1"
-            android:layout_width="match_parent"
+            android:layout_width="@dimen/wp130"
             android:layout_height="@dimen/wp60"
             android:layout_gravity="center"
-            android:visibility="gone"
+            android:visibility="visible"
             android:gravity="center"
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="@dimen/wp50"
+                android:layout_width="@dimen/wp40"
                 android:layout_height="@dimen/wp60"
                 android:orientation="vertical">
                 <TextView
@@ -255,7 +256,7 @@
                 android:layout_height="match_parent"></LinearLayout>
 
             <LinearLayout
-                android:layout_width="@dimen/wp95"
+                android:layout_width="@dimen/wp85"
                 android:orientation="vertical"
                 android:layout_height="match_parent">
                 <TextView
@@ -395,7 +396,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wp20"
+            android:layout_height="@dimen/wp16"
             android:layout_marginTop="@dimen/wp2"
             android:orientation="horizontal">
 

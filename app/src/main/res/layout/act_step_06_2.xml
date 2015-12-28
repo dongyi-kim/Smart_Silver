@@ -13,12 +13,13 @@
 
         <TextView
             android:id="@+id/txt_description"
+            android:layout_marginTop="@dimen/wp3"
             android:textColor="#FFFFFF"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wp20"
+            android:layout_height="@dimen/wp17"
             android:gravity="center"
             android:text="다음 자료에서 1주일은 며칠입니까?"
-            android:textSize="@dimen/wp7"
+            android:textSize="@dimen/wp6"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -60,7 +61,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight=".1"></LinearLayout>
+                    android:layout_weight=".17"></LinearLayout>
 
                 <Button
                     android:layout_width="@dimen/wp40"
@@ -72,14 +73,13 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight=".1"></LinearLayout>
+                    android:layout_weight=".17"></LinearLayout>
 
                 <Button
                     android:layout_width="@dimen/wp40"
                     android:layout_height="@dimen/wp15"
                     android:text="5시간"
-                    android:textSize="@dimen/wp6"
-                    android:visibility="gone"
+                    android:textSize="@dimen/wp7"
                     android:id="@+id/btn_ans_3"/>
 
 

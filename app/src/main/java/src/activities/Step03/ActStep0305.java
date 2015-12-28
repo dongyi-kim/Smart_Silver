@@ -94,7 +94,7 @@ public class ActStep0305 extends StageActivity{
         setQuestion(false);
     }
 
-    public void setQuestion(boolean isRetry, Object object){
+    public synchronized void setQuestion(boolean isRetry, Object object){
         if(iStage == 1){
             imgPayMoney.setImageResource(R.drawable.icon_paper_meoney_10000);
             imgSpendThing[0].setImageResource(R.drawable.icon_coin_wallet);
@@ -138,7 +138,7 @@ public class ActStep0305 extends StageActivity{
     }
 
 
-    public void checkAnswer(Object object){
+    public synchronized void checkAnswer(Object object){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
         if(isRight || iRetryCount > 1) StopRecording(isRight);
@@ -161,7 +161,7 @@ public class ActStep0305 extends StageActivity{
         });
     }
 
-    public void goNext(Object object){
+    public synchronized void goNext(Object object){
         Intent intent = new Intent(this, ActStartLearning.class);
         startActivity(intent);
     }

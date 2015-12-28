@@ -5,19 +5,19 @@
     tools:context=".actMain"
     android:background="@drawable/img_wall">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:layout_margin="@dimen/wp10">
         
         <LinearLayout
-            android:layout_width="@dimen/wp100"
+            android:layout_width="@dimen/wp80"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center">
             <ui.WhiteChalkFrameLayout
-                android:layout_width="@dimen/wp90"
+                android:layout_width="@dimen/wp80"
                 android:layout_height="@dimen/wp25">
                 <RelativeLayout
                     android:layout_width="fill_parent"
@@ -33,7 +33,7 @@
 
             </ui.WhiteChalkFrameLayout>
             <ImageView
-                android:layout_width="@dimen/wp100"
+                android:layout_width="@dimen/wp80"
                 android:layout_height="@dimen/wp60"
                 android:scaleType="centerInside"
 
@@ -42,7 +42,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="@dimen/wp50"
+            android:layout_width="@dimen/wp40"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:paddingTop="@dimen/wp10"
@@ -50,30 +50,31 @@
 
             <ui.RippleView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/wp20"
+                android:layout_height="@dimen/wp18"
+                android:layout_marginBottom="@dimen/wp3"
                 android:id="@+id/ripple_learning"
                 >
                 <ui.MemoFrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:gravity="center"
                         android:padding="@dimen/wp1">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:textStyle="bold"
                             android:gravity="center"
-                            android:textSize="@dimen/wp9"
-                            android:text="학습하기"/>
+                            android:textSize="@dimen/wp7"
+                            android:text="학습하기 "/>
                         <ImageView
-                            android:layout_alignParentRight="true"
                             android:layout_height="match_parent"
-                            android:layout_width="@dimen/wp12"
+                            android:layout_width="@dimen/wp7"
                             android:src="@drawable/icon_pencil_black"/>
-                    </RelativeLayout>
+                    </LinearLayout>
 
                 </ui.MemoFrameLayout>
 
@@ -81,30 +82,32 @@
 
             <ui.RippleView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/wp20"
+                android:layout_height="@dimen/wp18"
                 android:id="@+id/ripple_my_result"
+                android:layout_marginBottom="@dimen/wp3"
                 >
                 <ui.MemoFrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:gravity="center"
                         android:padding="@dimen/wp1">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:textStyle="bold"
                             android:gravity="center"
-                            android:textSize="@dimen/wp9"
-                            android:text="학습결과"/>
+                            android:textSize="@dimen/wp7"
+                            android:text="학습결과 "/>
                         <ImageView
                             android:layout_alignParentRight="true"
                             android:layout_height="match_parent"
-                            android:layout_width="@dimen/wp12"
+                            android:layout_width="@dimen/wp7"
                             android:src="@drawable/icon_clipboard_black"/>
-                    </RelativeLayout>
+                    </LinearLayout>
 
                 </ui.MemoFrameLayout>
 
@@ -112,30 +115,30 @@
 
             <ui.RippleView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/wp20"
+                android:layout_height="@dimen/wp18"
                 android:id="@+id/ripple_developer"
                 >
                 <ui.MemoFrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:gravity="center"
                         android:padding="@dimen/wp1">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:textStyle="bold"
                             android:gravity="center"
-                            android:textSize="@dimen/wp9"
-                            android:text="개발자"/>
+                            android:textSize="@dimen/wp7"
+                            android:text="개 발 자  "/>
                         <ImageView
-                            android:layout_alignParentRight="true"
                             android:layout_height="match_parent"
-                            android:layout_width="@dimen/wp12"
+                            android:layout_width="@dimen/wp7"
                             android:src="@drawable/icon_setting_black"/>
-                    </RelativeLayout>
+                    </LinearLayout>
 
                 </ui.MemoFrameLayout>
 

@@ -5,15 +5,16 @@
     android:background="@drawable/img_chalkboard_2">
 
     <LinearLayout
-        android:layout_width="@dimen/wp150"
-        android:layout_height="@dimen/wp100"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wp20"
+            android:layout_height="@dimen/wp17"
+            android:layout_marginTop="@dimen/wp3"
             android:gravity="center"
             android:text="아래의 과일과 견과류에서 각각 1종류씩 골라 주스를 만들려 합니다. 선택할 수 있는 종류는 모두 몇 가지인가요?"
             android:textColor="#FFFFFF"
@@ -199,15 +200,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wp20"
+            android:layout_height="@dimen/wp15"
             android:layout_marginTop="@dimen/wp2"
             android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="@dimen/wp10"
-                android:layout_height="match_parent"
-                android:layout_marginRight="@dimen/wp3"
-                android:src="@drawable/mixer_9_4"/>
 
             <Button
                 android:id="@+id/btn_answer_1"

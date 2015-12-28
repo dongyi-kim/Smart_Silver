@@ -63,7 +63,7 @@ public class ActStep0804 extends StageActivity {
         setQuestion(false);
     }
 
-    public void setQuestion(boolean isRetry, Object object) {
+    public synchronized void setQuestion(boolean isRetry, Object object) {
         dataSet.setData(iStage - 1);
 
         btn1.setText(dataSet.strbtn[0]);
@@ -75,7 +75,7 @@ public class ActStep0804 extends StageActivity {
         StartRecording();
     }
 
-    public void checkAnswer(Object o) {
+    public synchronized void checkAnswer(Object o) {
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
         if (isRight || iRetryCount > 1) StopRecording(isRight);
@@ -95,7 +95,7 @@ public class ActStep0804 extends StageActivity {
         });
     }
 
-    public void goNext(Object object) {
+    public synchronized void goNext(Object object) {
         // check
         Intent intent = new Intent(this, ActStep0805.class);
         startActivity(intent);
@@ -133,26 +133,13 @@ public class ActStep0804 extends StageActivity {
         };
 
         private final int arrImg[] = {R.drawable.graph_8_4_1, R.drawable.graph_8_4_2, R.drawable.graph_8_4_3};
-        private final String ansbtn[][] = {{"오전 8시",
-                "오전 7시",
-                "오후 8시",},
-
-                {"오전 6시",
-                        "오전 5시",
-                        "오전 6시",},
-
-                {"6 대",
-                        "8 대",
-                        "5 대",},
-
-                {"5 대",
-                        "4 대",
-                        "6 대",},
-
-                {"오전 6시 22분",
-                        "오전 5시 46분",
-                        "오후 11시 48분",},};
-
+        private final String ansbtn[][] = {
+                {"오전 8시","오전 7시","오후 8시",},
+                {"오전 6시","오전 5시","오전 6시",},
+                {"6 대","8 대","5 대",},
+                {"5 대","4 대","6 대",},
+                {"오전 6시 22분","오전 5시 46분","오후 11시 48분"}
+        };
 
         int img;
         String des = new String();

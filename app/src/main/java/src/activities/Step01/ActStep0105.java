@@ -75,7 +75,7 @@ public class ActStep0105 extends StageActivity {
         setQuestion(false);
     }
 
-    public void setQuestion(boolean isRetry, Object object){
+    public synchronized void setQuestion(boolean isRetry, Object object){
         int Seed = iStage - 1;
 
         dataSet.setData(Seed);
@@ -102,7 +102,7 @@ public class ActStep0105 extends StageActivity {
     }
 
     @Override
-    public void checkAnswer(Object object){
+    public synchronized void checkAnswer(Object object){
         DlgResultMark dlg = new DlgResultMark(this, ans);
         dlg.show();
 
@@ -125,7 +125,7 @@ public class ActStep0105 extends StageActivity {
         });
     }
 
-    public void goNext(Object object){
+    public synchronized void goNext(Object object){
         Intent intent = new Intent(this, ActStep0201.class);
         startActivity(intent);
     }
@@ -154,7 +154,7 @@ public class ActStep0105 extends StageActivity {
 
         private final String strAnsList[][] = {
                 {"두 시", "한 시 십오 분", "다섯 시 사십 분"},
-                {"세 시 이십 분", "여섯 시 오십오 분", "일곱 시 오십 분"},
+                {"세 시 이십 분", "여섯 시 오십오 분", "아홉 시 삼십팔 분"},
                 {"열두 시", "여덟 시 십육 분", "아홉 시 삼십팔 분"},
                 {"다섯 시 삼십팔 분", "네 시 이십구 분", "일곱 시 이십칠 분"},
                 {"아홉 시 이십팔 분", "열 시 십칠 분", "다섯 시 사십팔 분"}
@@ -162,7 +162,7 @@ public class ActStep0105 extends StageActivity {
 
         private final String txtBtnList[][][] = {
                 {{"두 시 십이 분", "두 시"}, {"한 시", "한 시 십오 분"}, {"다섯 시 이십 분", "다섯 시 사십 분"}},
-                {{"세 시", "세 시 이십 분"}, {"일곱 시", "여섯 시 오십오 분"}, {"여덟 시 십 분", "일곱 시 오십 분"}},
+                {{"세 시", "세 시 이십 분"}, {"일곱 시", "여섯 시 오십오 분"}, {"여덟 시 십 분", "아홉 시 삼십팔 분"}},
                 {{"열두 시", "열두 시 십이 분"}, {"여덟 시 십육 분", "열두 시 십육 분"}, {"아홉 시 삼십 분", "아홉 시 삼십팔 분"}},
                 {{"다섯 시", "다섯 시 삼십팔 분"}, {"네 시 이십 분", "네 시 이십구 분"}, {"일곱 시", "일곱 시 이십칠 분"}},
                 {{"아홉 시", "아홉 시 이십팔 분", "아홉 시 오십육 분"}, {"열 시 십칠 분", "열 시 십오 분", "열 시 십팔 분"}, {"다섯 시 사십 분", "다섯 시 사십이 분", "다섯 시 사십팔 분"}}

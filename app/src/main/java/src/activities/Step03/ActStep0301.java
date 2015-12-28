@@ -71,7 +71,7 @@ public class ActStep0301 extends StageActivity {
     }
 
 
-    public void setQuestion(boolean isRetry, Object object){
+    public synchronized void setQuestion(boolean isRetry, Object object){
         if(!isRetry) {
             processSet.setData(iStage);
             StartRecording();
@@ -111,7 +111,7 @@ public class ActStep0301 extends StageActivity {
     }
 
 
-    public void checkAnswer(Object object){
+    public synchronized void checkAnswer(Object object){
         if(isRight){
             iProcess++;
             setNextProcess();
@@ -161,7 +161,7 @@ public class ActStep0301 extends StageActivity {
         }// !isRight
     }
 
-    public void goNext(Object object){
+    public synchronized void goNext(Object object){
         Intent intent = new Intent(this, ActStep0302.class);
         startActivity(intent);
     }

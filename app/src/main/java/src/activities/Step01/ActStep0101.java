@@ -52,7 +52,7 @@ public class ActStep0101 extends StageActivity implements View.OnClickListener {
         setQuestion(false,null);
     }
 
-    public void setQuestion( boolean isRetry, Object object)
+    public synchronized void setQuestion( boolean isRetry, Object object)
     {
         String strQuest;
         if(iStage == 1)
@@ -86,7 +86,7 @@ public class ActStep0101 extends StageActivity implements View.OnClickListener {
             super.StartRecording();
     }
 
-    public void checkAnswer(Object object)
+    public synchronized void checkAnswer(Object object)
     {
         boolean isAnswer = txtAnswer.getText().equals(txtQuestion.getText());
 
@@ -112,7 +112,7 @@ public class ActStep0101 extends StageActivity implements View.OnClickListener {
 
         setQuestion(true);
     }
-    public void goNext(Object object)
+    public synchronized void goNext(Object object)
     {
         Intent intent = new Intent(this, ActStep0102.class);
         startActivity(intent);

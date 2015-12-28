@@ -55,7 +55,7 @@ public class ActStep0602 extends StageActivity {
     }
 
     @Override
-    public void setQuestion(boolean isRetry, Object object) {
+    public synchronized void setQuestion(boolean isRetry, Object object) {
         int Seed = iStage - 1;
 
         dataSet.setData(Seed);
@@ -78,7 +78,7 @@ public class ActStep0602 extends StageActivity {
     }
 
     @Override
-    public void checkAnswer(Object object) {
+    public synchronized void checkAnswer(Object object) {
         DlgResultMark dlg = new DlgResultMark(this, ans);
         dlg.show();
 
@@ -103,7 +103,7 @@ public class ActStep0602 extends StageActivity {
     }
 
     @Override
-    public void goNext(Object object) {
+    public synchronized void goNext(Object object) {
         Intent intent = new Intent(this, ActStep0603.class);
         startActivity(intent);
     }
