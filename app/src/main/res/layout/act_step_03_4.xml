@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/wp20"
             android:gravity="center"
-            android:text="할머니와 할아버지가 손주들이 빚은 송편을 받았습니다.\n두 분이 드시고 남은 송편은 몇 개일까요"
+            android:text="할머니와 할아버지가 손주들이 빚은 송편을 받았습니다. 두 분이 드시고 남은 송편은 몇 개일까요"
             android:textColor="#FFFFFFFF"
             android:textSize="@dimen/wp6" />
 
@@ -58,18 +58,18 @@
                         android:gravity="center"
                         android:text="송편 10개"
                         android:textColor="#FF000000"
-                        android:textSize="@dimen/wp6" />
+                        android:textSize="@dimen/wp5" />
                 </LinearLayout>
 
                 <TextView
                     android:id="@+id/txt_operator_1"
                     android:layout_width="@dimen/wp15"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/wp20"
-                    android:gravity="center_vertical|right"
-                    android:text="-"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/wp40"
+                    android:text="―"
                     android:textColor="#EEFFFFFF"
-                    android:textSize="@dimen/wp20"
+                    android:textSize="@dimen/wp12"
                     android:textStyle="bold" />
 
                 <LinearLayout
@@ -91,22 +91,21 @@
                         android:id="@+id/txt_minus_1"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/wp12"
+                        android:background="@drawable/my_rounded_corner"
                         android:gravity="center"
                         android:text="송편 2개"
-                        android:textColor="#FFFFFFFF"
-                        android:textSize="@dimen/wp6"
-                        android:textStyle="bold" />
+                        android:textSize="@dimen/wp5" />
                 </LinearLayout>
 
                 <TextView
                     android:id="@+id/txt_operator_2"
                     android:layout_width="@dimen/wp15"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="@dimen/wp20"
-                    android:gravity="center_vertical|right"
-                    android:text="-"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/wp40"
+                    android:text="―"
                     android:textColor="#EEFFFFFF"
-                    android:textSize="@dimen/wp20"
+                    android:textSize="@dimen/wp12"
                     android:textStyle="bold" />
 
                 <LinearLayout
@@ -128,11 +127,10 @@
                         android:id="@+id/txt_minus_2"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/wp12"
+                        android:background="@drawable/my_rounded_corner"
                         android:gravity="center"
                         android:text="홍시 5개"
-                        android:textColor="#FFFFFFFF"
-                        android:textSize="@dimen/wp6"
-                        android:textStyle="bold" />
+                        android:textSize="@dimen/wp5" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -166,17 +164,16 @@
                         android:layout_marginRight="@dimen/wp5"
                         android:background="@drawable/my_rounded_corner"
                         android:gravity="center"
-                        android:text="호박전 50장 + 호박전 50장\n + 호박전50장"
+                        android:text="호박전 50장 + 호박전 50장 + 호박전50장"
                         android:textColor="#FF000000"
-                        android:textSize="@dimen/wp6" />
+                        android:textSize="@dimen/wp5" />
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="@dimen/wp15"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="@dimen/wp3"
                     android:gravity="center"
-                    android:text="-"
+                    android:text="―"
                     android:textColor="#EEFFFFFF"
                     android:textSize="@dimen/wp20"
                     android:textStyle="bold" />
@@ -202,10 +199,10 @@
                         android:layout_height="@dimen/wp12"
                         android:layout_marginLeft="@dimen/wp5"
                         android:layout_marginRight="@dimen/wp5"
+                        android:background="@drawable/my_rounded_corner"
                         android:gravity="center"
                         android:text="홍시 5개"
-                        android:textColor="#FFFFFFFF"
-                        android:textSize="@dimen/wp6"
+                        android:textSize="@dimen/wp5"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>

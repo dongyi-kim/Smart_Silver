@@ -163,7 +163,7 @@ public class ActStep0304 extends StageActivity {
         private final int arrSampleCount[][][][] = {{{{10}, {2}, {5}}, {{15}, {2}, {2}}, {{50}, {25}}, {{20, 50}, {5, 15}}, {{20, 30, 30}, {2, 3, 5}}},
                 {{{10}, {3}, {3}}, {{15}, {2}, {3}}, {{40}, {20}}, {{40, 40}, {5, 15}}, {{10, 20, 30}, {2, 3, 5}}},
                 {{{10}, {3}, {5}}, {{15}, {5}, {5}}, {{50}, {20}}, {{20, 40}, {15, 5}}, {{20, 30, 20}, {3, 3, 4}}}};
-        private final String arrFoodKind[][] = {{"송편"}, {"홍시"}, {"밤"}, {"약과", "송편"}, {"녹두전", "호박전", "동태전"}};
+        private final String arrFoodKind[][] = {{"송편"}, {"곶감"}, {"밤"}, {"약과", "송편"}, {"녹두전", "호박전", "동태전"}};
         private final String arrCountUnit[] = {"개", "개", "개", "개", "장"};
 
         private int arrImageResource[][] = {{R.drawable.icon_set_songpyeon_10, R.drawable.icon_grandma, R.drawable.icon_grandfa},
@@ -195,11 +195,11 @@ public class ActStep0304 extends StageActivity {
                 iImageResource[i] = arrImageResource[iStage - 1][i];
             }
 
-            if(iStage == 1) sDescription = "" + arrSampleCount[iSeed][0][0][0] + "개의 송편이 있습니다. 할머니와 할아버지가\n각각 " + arrSampleCount[iSeed][0][1][0] + "개와 " + arrSampleCount[iSeed][0][2][0]+ "개를 드시고 남은 송편은 몇 개일까요?";
-            else if(iStage == 2) sDescription = "" + arrSampleCount[iSeed][1][0][0] + "개의 곶감이 있습니다. 할머니와 할아버지가\n각각 " + arrSampleCount[iSeed][1][1][0] + "개와 " + arrSampleCount[iSeed][1][2][0] + "개를 드시고 남은 송편은 몇 개일까요?";
-            else if(iStage == 3) sDescription = "추석에 사용할 밤을 " + arrSampleCount[iSeed][2][0][0] + "개 까놓았는데, 손주들이\n밤을 가져갔습니다. 밤은 몇 개 남았을까요?";
-            else if(iStage == 4) sDescription = "추석에 사용할 약과와 송편을 만들어\n손님께 대접하였습니다. 모두 몇 개가 남았을까요?";
-            else sDescription = "할머니와 할아버지는 아래의 전을 만들고, 먹었습니다.\n남은 전은 모두 몇 개일까요?";
+            if(iStage == 1) sDescription = "" + arrSampleCount[iSeed][0][0][0] + "개의 송편이 있습니다. 할머니와 할아버지가 각각 " + arrSampleCount[iSeed][0][1][0] + "개와 " + arrSampleCount[iSeed][0][2][0]+ "개를 드시고 남은 송편은 몇 개일까요?";
+            else if(iStage == 2) sDescription = "" + arrSampleCount[iSeed][1][0][0] + "개의 곶감이 있습니다. 할머니와 할아버지가 각각 " + arrSampleCount[iSeed][1][1][0] + "개와 " + arrSampleCount[iSeed][1][2][0] + "개를 드시고 남은 곶감은 몇 개일까요?";
+            else if(iStage == 3) sDescription = "추석에 사용할 밤을 " + arrSampleCount[iSeed][2][0][0] + "개 까놓았는데, 손주들이 밤을 가져갔습니다. 밤은 몇 개 남았을까요?";
+            else if(iStage == 4) sDescription = "추석에 사용할 약과와 송편을 만들어 손님께 대접하였습니다. 모두 몇 개가 남았을까요?";
+            else sDescription = "할머니와 할아버지는 아래의 전을 만들고, 먹었습니다. 남은 전은 모두 몇 개일까요?";
         }
     }
 
