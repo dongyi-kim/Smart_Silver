@@ -14,7 +14,7 @@
             android:layout_height="@dimen/wp20"
             android:layout_width="match_parent"
             android:textStyle="bold"
-            android:text=" 아래 그림은 천안에서 포항으로 가는 고속버스 운행시간입니다.\n조옥자씨는 포항에 있는 언니네 가려고 합니다.\n버스 요금은 얼마인지 해당 요금을 누르세요!"
+            android:text="천안에서 포항으로 가는 고속버스 운행시간입니다.\n조옥자씨는 포항에 있는 언니네 가려고 합니다.\n버스 요금은 얼마인지 해당 요금을 누르세요!"
             android:textColor="#FFFFFF"
             android:id="@+id/txt_description"
             android:textSize="@dimen/wp5"

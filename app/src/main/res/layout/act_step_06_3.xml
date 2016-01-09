@@ -29,7 +29,7 @@
             android:layout_weight=".8"
             android:gravity="center"
             android:orientation="vertical"
-            android:visibility="gone"
+            android:visibility="visible"
             android:weightSum="1">
 
             <LinearLayout
@@ -39,7 +39,7 @@
                 android:gravity="center">
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/img_6_3_3"
                     android:src="@drawable/graph_6_1_1"/>
@@ -106,7 +106,7 @@
             android:layout_marginTop="@dimen/wp3"
             android:gravity="center"
             android:orientation="horizontal"
-            android:visibility="visible"
+            android:visibility="gone"
             android:layout_marginBottom="@dimen/wp2"
             android:weightSum="1">
 
@@ -592,7 +592,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:visibility="visible"
+            android:visibility="gone"
             android:id="@+id/layout_6_1_1"
             android:orientation="horizontal"
             android:layout_weight=".03"></LinearLayout>
@@ -601,7 +601,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp11"
             android:id="@+id/layout_6_1_2"
-            android:visibility="visible"
+            android:visibility="gone"
             android:gravity="right">
 
 

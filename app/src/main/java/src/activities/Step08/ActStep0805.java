@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import cdmst.smartsilver.R;
 import src.activities.StageActivity;
+import src.activities.Step09.ActStep0901;
 import src.dialogs.DlgResultMark;
 
 /**
@@ -97,17 +98,17 @@ public class ActStep0805 extends StageActivity {
 
     public synchronized void goNext(Object object) {
         // check
-        Intent intent = new Intent(this, ActStep0804.class);
+        Intent intent = new Intent(this, ActStep0901.class);
         startActivity(intent);
     }
 
     public class Step0805DataSet {
 
-        private final String deslist[][] = {{"다음은 어느 평생학교 시간표입니다. 매주 화요일 2교시에는 평생학교에서 무엇을 하나요?","다음은 평생학교 시간표입니다. 스포츠댄스는 언제 배우나요?","다음은 평생학교 시간표입니다. 국어는 언제 배우나요?",},
-                {"다음은 어느 평생학교 시간표입니다. 매주 금요일 1교시에는 평생학교에서 무엇을 하나요?","다음은 평생학교 시간표입니다. 수영은 언제 배우나요? ","다음은 평생학교 시간표입니다. 수학은 언제 배우나요? ",},
-                {"아래 표는 병원에서 규칙적으로 하는 운동시간표입니다. 평일 오전에는 어떤 운동을 합니까?","아래 표는 병원에서 규칙적으로 하는 운동시간표입니다. 걷기는 오전과 오후 중 언제 합니까? ","아래 표는 병원에서 규칙적으로 하는 운동시간표입니다. 체조는 언제 합니까?",},
-                {"아래 표는 병원에서 규칙적으로 하는 운동시간표입니다. 매주 목요일 오후에는 어떤 운동을 합니까?","아래 표는 병원에서 규칙적으로 하는 운동시간표입니다. 체조는 매주 오전과 오후 중 언제 합니까?","아래 표는 병원에서 규칙적으로 하는 운동시간표입니다. 걷기는 언제 합니까?",},
-                {"아래 표는 병원에서 하는 재활운동시간표 입니다. 월, 수, 금요일에 규칙적으로 하는 재활운동은 무엇인가요? ","아래 표는 병원에서 하는 재활운동시간표 입니다. 요가는 언제 합니까?","아래 표는 병원에서 하는 재활운동시간표 입니다. 아쿠아로빅은 언제 합니까?",},};
+        private final String deslist[][] = {{"다음은 어느 평생학교 시간표입니다.\n매주 화요일 2교시에는 평생학교에서 무엇을 하나요?","다음은 평생학교 시간표입니다.\n스포츠댄스는 언제 배우나요?","다음은 평생학교 시간표입니다.\n국어는 언제 배우나요?",},
+                {"다음은 어느 평생학교 시간표입니다.\n매주 금요일 1교시에는 평생학교에서 무엇을 하나요?","다음은 평생학교 시간표입니다.\n수영은 언제 배우나요? ","다음은 평생학교 시간표입니다.\n수학은 언제 배우나요? ",},
+                {"아래 표는 병원에서 규칙적으로 하는 운동시간표입니다.\n평일 오전에는 어떤 운동을 합니까?","아래 표는 병원에서 규칙적으로 하는 운동시간표입니다.\n걷기는 오전과 오후 중 언제 합니까? ","아래 표는 병원에서 규칙적으로 하는 운동시간표입니다.\n체조는 언제 합니까?",},
+                {"아래 표는 병원에서 규칙적으로 하는 운동시간표입니다.\n매주 목요일 오후에는 어떤 운동을 합니까?","아래 표는 병원에서 규칙적으로 하는 운동시간표입니다.\n체조는 매주 오전과 오후 중 언제 합니까?","아래 표는 병원에서 규칙적으로 하는 운동시간표입니다.\n걷기는 언제 합니까?",},
+                {"아래 표는 병원에서 하는 재활운동시간표 입니다.\n월, 수, 금요일에 규칙적으로 하는 재활운동은 무엇인가요? ","아래 표는 병원에서 하는 재활운동시간표 입니다.\n요가는 언제 합니까?","아래 표는 병원에서 하는 재활운동시간표 입니다.\n아쿠아로빅은 언제 합니까?",},};
 
         private final String arrBtn[][][] ={{{"국어","수학",},{"수요일 2교시","금요일 1교시",},{"월, 수 2교시","화, 목 1교시",},},
                 {{"스포츠댄스","영어",},{"월, 수 2교시","화, 목 1교시",},{"월, 수 2교시","화, 목 2교시",},},
@@ -115,12 +116,13 @@ public class ActStep0805 extends StageActivity {
                 {{"체조 ","걷기",},{"오전","오후",},{"평일 오전","평일 오후",},},
                 {{"아쿠아로빅","요가",},{"월,수,금","화,목",},{"월,수,금","화,목",},},};
 
-        private final int arrImg[][] =
-                {{R.drawable.graph_8_5_1,R.drawable.graph_8_5_1,R.drawable.graph_8_5_1, },
-                        {R.drawable.graph_8_5_1,R.drawable.graph_8_5_1,R.drawable.graph_8_5_1,},
-                        {R.drawable.graph_8_5_2,R.drawable.graph_8_5_2,R.drawable.graph_8_5_2,},
-                        {R.drawable.graph_8_4_3,R.drawable.graph_8_5_2,R.drawable.graph_8_5_2,},
-                        {R.drawable.graph_8_5_4,R.drawable.graph_8_5_4,R.drawable.graph_8_5_4,}};
+        private final int arrImg[][] = {
+                {R.drawable.graph_8_5_1,R.drawable.graph_8_5_1,R.drawable.graph_8_5_1,},
+                {R.drawable.graph_8_5_1,R.drawable.graph_8_5_1,R.drawable.graph_8_5_1,},
+                {R.drawable.graph_8_5_2,R.drawable.graph_8_5_2,R.drawable.graph_8_5_2,},
+                {R.drawable.graph_8_5_3,R.drawable.graph_8_5_2,R.drawable.graph_8_5_2,},
+                {R.drawable.graph_8_5_4,R.drawable.graph_8_5_4,R.drawable.graph_8_5_4,}
+        };
 
         private final String ansbtn[][] = {{"수학","금요일 1교시","월, 수 2교시",},
                 {"스포츠댄스","화, 목 1교시","화, 목 2교시",},
