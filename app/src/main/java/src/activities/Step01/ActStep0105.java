@@ -28,7 +28,6 @@ import src.dialogs.DlgResultMark;
 
 public class ActStep0105 extends StageActivity {
 
-    private TextView txtDescription;
     private ImageView img;
     private LinearLayout btnset1;
     private LinearLayout btnset2;
@@ -43,8 +42,6 @@ public class ActStep0105 extends StageActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.act_step_01_5);
-
-        txtDescription = (TextView)findViewById(R.id.txt_description);
 
         img = (ImageView)findViewById(R.id.img_1_5);
 
@@ -80,7 +77,6 @@ public class ActStep0105 extends StageActivity {
 
         dataSet.setData(Seed);
 
-        txtDescription.setText(dataSet.Discription);
         img.setImageResource(dataSet.img);
 
         if(Seed <= 3)
@@ -132,7 +128,6 @@ public class ActStep0105 extends StageActivity {
 
     public class Step0105NumberSet {
         public int img;
-        public String Discription;
         public String btnTxt[];
         public String strAns;
 
@@ -142,14 +137,6 @@ public class ActStep0105 extends StageActivity {
                 {R.drawable.clock_1_5_4_1200,R.drawable.clock_1_5_4_0816,R.drawable.clock_1_5_4_0938},
                 {R.drawable.clock_1_5_4_0538,R.drawable.clock_1_5_4_0429,R.drawable.clock_1_5_4_0727},
                 {R.drawable.clock_1_5_6_0928,R.drawable.clock_1_5_6_1017,R.drawable.clock_1_5_6_0548},
-        };
-
-        private final String DiscriptionList[] = {
-                "몇 시입니까? 아래 단추를 누르세요.",
-                "몇 시입니까? 아래 단추를 누르세요.",
-                "몇 시입니까? 아래 단추를 누르세요.",
-                "몇 시입니까? 아래 단추를 누르세요.",
-                "몇 시입니까? 오른쪽 단추를 누르세요!"
         };
 
         private final String strAnsList[][] = {
@@ -172,7 +159,6 @@ public class ActStep0105 extends StageActivity {
 
             int rand = (int)(Math.random() * 3.0); // 0 ~ 2
 
-            Discription = DiscriptionList[iSeed];
             img = imgList[iSeed][rand];
             btnTxt = txtBtnList[iSeed][rand];
             strAns = strAnsList[iSeed][rand];
