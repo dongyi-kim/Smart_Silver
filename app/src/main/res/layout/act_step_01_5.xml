@@ -16,11 +16,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/txt_description"
-                android:text="몇 시입니까? 아래 단추를 누르세요."
+                android:text="＜시각 알아보기＞\n아래 그림이 나타내는 시각은 몇 시 입니까?"
                 android:gravity="center"
                 android:textColor="#FFFFFFFF"
-                android:textSize="@dimen/wp7"/>
+                android:textSize="@dimen/wp7"
+                />
 
         </LinearLayout>
 

@@ -34,6 +34,7 @@
             <ImageView
                 android:layout_width="@dimen/wp80"
                 android:layout_height="@dimen/wp70"
+                android:src="@drawable/graph_8_4_3"
                 android:id="@+id/img"/>
 
             <LinearLayout

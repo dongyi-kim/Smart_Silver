@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/img_chalkboard_2"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/img_chalkboard_2">
 
     <LinearLayout
         android:layout_width="@dimen/wp150"
@@ -16,53 +16,55 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp20"
             android:gravity="center"
-            android:textColor="#FFFFFF"
             android:text="다음 네모 안에 어떤 그림이 들어가야 할까요?"
-            android:textStyle="bold"
+            android:textColor="#FFFFFF"
             android:textSize="@dimen/wp6"
-            />
+            android:textStyle="bold" />
 
         <LinearLayout
+            android:layout_width="@dimen/wp130"
+            android:layout_height="@dimen/wp70"
             android:layout_marginBottom="@dimen/wp2"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/wp80"
+            android:background="@drawable/frame_cell_white"
             android:gravity="center"
             android:orientation="vertical"
-            android:background="@drawable/frame_cell_white"
             android:weightSum="1">
 
             <ImageView
+                android:id="@+id/img"
                 android:layout_width="@dimen/wp120"
-                android:layout_height="@dimen/wp40"
-                android:id="@+id/img"/>
+                android:layout_height="@dimen/wp47"
+                android:layout_marginTop="@dimen/wp3"
+                android:src="@drawable/graph_8_5_4"/>
 
             <LinearLayout
                 android:layout_width="@dimen/wp120"
-                android:layout_height="@dimen/wp30"
+                android:layout_height="@dimen/wp20"
+                android:layout_marginTop="@dimen/wp3"
                 android:gravity="center">
 
                 <Button
+                    android:id="@+id/btn_1"
                     android:layout_width="@dimen/wp40"
-                    android:textStyle="bold"
-                    android:layout_height="@dimen/wp20"
+                    android:layout_height="@dimen/wp17"
+                    android:background="@drawable/borderline_clickable"
                     android:text="아쿠아로빅"
                     android:textSize="@dimen/wp7"
-                    android:background="@drawable/borderline_clickable"
-                    android:id="@+id/btn_1"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="@dimen/wp20"
-                    android:layout_height="@dimen/wp20"
-                    android:visibility="invisible"/>
+                    android:layout_height="@dimen/wp17"
+                    android:visibility="invisible" />
 
                 <Button
+                    android:id="@+id/btn_2"
                     android:layout_width="@dimen/wp40"
-                    android:textStyle="bold"
-                    android:layout_height="@dimen/wp20"
+                    android:layout_height="@dimen/wp17"
                     android:background="@drawable/borderline_clickable"
                     android:text="요가"
                     android:textSize="@dimen/wp7"
-                    android:id="@+id/btn_2"/>
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
