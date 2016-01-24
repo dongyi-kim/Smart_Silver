@@ -30,13 +30,13 @@
             android:orientation="vertical">
             <TextView
                 android:id="@+id/txt_price_description"
-                android:layout_width="@dimen/wp50"
-                android:layout_height="@dimen/wp10"
+                android:layout_width="@dimen/wp60"
+                android:layout_height="@dimen/wp13"
                 android:gravity="center"
                 android:textColor="#FFFFFFFF"
                 android:layout_margin="@dimen/wp2"
                 android:text="2묶음 1800원"
-                android:textSize="@dimen/wp6"
+                android:textSize="@dimen/wp7"
                 android:background="@drawable/frame_cell_blue"/>
             <include
                 android:id="@+id/drawfield_row_1"

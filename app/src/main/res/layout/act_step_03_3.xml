@@ -65,9 +65,9 @@
                     android:layout_marginRight="@dimen/wp5"
                     android:background="@drawable/my_rounded_corner"
                     android:gravity="center"
-                    android:text="호박전 50장 + 호박전 50장\n + 호박전50장"
+                    android:text="호박전 50장 + 호박전 50장"
                     android:textColor="#FF000000"
-                    android:textSize="@dimen/wp5" />
+                    android:textSize="@dimen/wp6" />
             </LinearLayout>
 
             <TextView
@@ -119,7 +119,7 @@
                     android:gravity="center"
                     android:text="홍시 5개"
                     android:textColor="#FF000000"
-                    android:textSize="@dimen/wp5" />
+                    android:textSize="@dimen/wp6" />
             </LinearLayout>
         </LinearLayout>
 
@@ -136,7 +136,7 @@
                 android:layout_margin="10sp"
                 android:layout_weight="1"
                 android:text="1"
-                android:textSize="@dimen/wp7"
+                android:textSize="@dimen/wp6"
                 android:textStyle="bold" />
 
             <Button
@@ -146,7 +146,7 @@
                 android:layout_margin="10sp"
                 android:layout_weight="1"
                 android:text="2"
-                android:textSize="@dimen/wp7"
+                android:textSize="@dimen/wp6"
                 android:textStyle="bold" />
 
             <Button
@@ -156,7 +156,7 @@
                 android:layout_margin="10sp"
                 android:layout_weight="1"
                 android:text="3"
-                android:textSize="@dimen/wp7"
+                android:textSize="@dimen/wp6"
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>

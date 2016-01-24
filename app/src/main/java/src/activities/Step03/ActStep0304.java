@@ -116,12 +116,11 @@ public class ActStep0304 extends StageActivity {
 
             if(iStage >= NUM_OF_STAGE - 1) {
                 for(int i = 0; i < 2; i++) {
-                    txtFoodDescription2[i].setTextSize(getResources().getDimension(R.dimen.wp5) / 2);
+                    txtFoodDescription2[i].setTextSize(getResources().getDimension(R.dimen.wp5));
                     LinearLayout.LayoutParams txtParam = (LinearLayout.LayoutParams) txtFoodDescription2[i].getLayoutParams();
                     txtParam.leftMargin = 0;
                     txtParam.rightMargin = 0;
 
-                    if(iStage == NUM_OF_STAGE) txtParam.height = (int)getResources().getDimension(R.dimen.wp14);
                     txtFoodDescription2[i].setLayoutParams(txtParam);
                 }
             }
@@ -160,10 +159,10 @@ public class ActStep0304 extends StageActivity {
     }
 
     public class Step0304DataSet{
-        private final int arrSampleCount[][][][] = {{{{10}, {2}, {5}}, {{15}, {2}, {2}}, {{50}, {25}}, {{20, 50}, {5, 15}}, {{20, 30, 30}, {2, 3, 5}}},
-                {{{10}, {3}, {3}}, {{15}, {2}, {3}}, {{40}, {20}}, {{40, 40}, {5, 15}}, {{10, 20, 30}, {2, 3, 5}}},
-                {{{10}, {3}, {5}}, {{15}, {5}, {5}}, {{50}, {20}}, {{20, 40}, {15, 5}}, {{20, 30, 20}, {3, 3, 4}}}};
-        private final String arrFoodKind[][] = {{"송편"}, {"홍시"}, {"밤"}, {"약과", "송편"}, {"녹두전", "호박전", "동태전"}};
+        private final int arrSampleCount[][][][] = {{{{10}, {2}, {5}}, {{15}, {2}, {2}}, {{50}, {25}}, {{20, 50}, {5, 15}}, {{20, 30}, {4, 6}}},
+                {{{10}, {3}, {3}}, {{15}, {2}, {3}}, {{40}, {20}}, {{40, 40}, {5, 15}}, {{10, 20}, {5, 5}}},
+                {{{10}, {3}, {5}}, {{15}, {5}, {5}}, {{50}, {20}}, {{20, 40}, {15, 5}}, {{20, 35}, {5, 10}}}};
+        private final String arrFoodKind[][] = {{"송편"}, {"홍시"}, {"밤"}, {"약과", "송편"}, {"녹두전", "호박전"}};
         private final String arrCountUnit[] = {"개", "개", "개", "개", "장"};
 
         private int arrImageResource[][] = {{R.drawable.icon_set_songpyeon_10, R.drawable.icon_grandma, R.drawable.icon_grandfa},
