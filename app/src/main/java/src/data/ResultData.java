@@ -32,6 +32,9 @@ public class ResultData implements Serializable {
     public final int iStage;
     public final String userId;
 
+    public String timestamp = null;
+
+
     public ResultData(int step, int level, int stage)
     {
         this(step, level, stage, null);

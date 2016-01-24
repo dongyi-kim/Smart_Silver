@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_chalkboard_2">
+
+
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/wp4"
+        android:text="나의 학습 시간"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/wp13"
+        android:textStyle="bold" />
+
+
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wp50"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true">
+
+    </com.github.mikephil.charting.charts.LineChart>
+
+
+
+
+</RelativeLayout>

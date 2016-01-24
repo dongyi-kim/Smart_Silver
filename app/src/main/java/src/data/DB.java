@@ -149,6 +149,7 @@ public class DB extends SQLiteOpenHelper {
                     ResultData data= new ResultData( cursor.getInt(1), cursor.getInt(2), cursor.getInt(3) );
                     data.millisec = cursor.getInt(4);
                     data.isSuccess = ( Integer.parseInt(cursor.getString(5)) == 1 );
+                    data.timestamp = ( cursor.getString(6) );
                     list.add(data);
                     cursor.moveToNext();
                 }
