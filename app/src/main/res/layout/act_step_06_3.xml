@@ -29,7 +29,7 @@
             android:layout_weight=".8"
             android:gravity="center"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="gone"
             android:weightSum="1">
 
             <LinearLayout
@@ -106,7 +106,7 @@
             android:layout_marginTop="@dimen/wp3"
             android:gravity="center"
             android:orientation="horizontal"
-            android:visibility="gone"
+            android:visibility="visible"
             android:layout_marginBottom="@dimen/wp2"
             android:weightSum="1">
 

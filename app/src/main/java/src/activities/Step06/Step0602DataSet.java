@@ -20,9 +20,9 @@ public class Step0602DataSet {
     }
 
     private static final int imgList[][] ={
-            {R.drawable.circle_graph_6_2, R.drawable.circle_graph_6_2, R.drawable.circle_graph_6_2, },
-            {R.drawable.circle_graph_6_2, R.drawable.circle_graph_6_2_3,  R.drawable.circle_graph_6_2_3,  },
-            {R.drawable.circle_graph_6_2,R.drawable.circle_graph_6_2,R.drawable.circle_graph_6_2,},
+            {R.drawable.circle_graph_6_2, R.drawable.circle_graph_6_2_7, R.drawable.circle_graph_6_2_10,},
+            {R.drawable.circle_graph_6_2_7,R.drawable.circle_graph_6_2_8,R.drawable.circle_graph_6_2_11,},
+            {R.drawable.circle_graph_6_2_7,R.drawable.circle_graph_6_2_9,R.drawable.circle_graph_6_2_12,},
             {R.drawable.circle_graph_6_2_4,R.drawable.circle_graph_6_2_6,R.drawable.circle_graph_6_2_6},
             {R.drawable.circle_graph_6_2_5,R.drawable.circle_graph_6_2_6,R.drawable.circle_graph_6_2_6}
     };
@@ -31,8 +31,8 @@ public class Step0602DataSet {
             {"다음 그림에서 김 할머니는 하루에 아침 운동을 시작하는 시간은 몇 시인가요?","다음 그림에서 김 할머니의 점심식사를 시작하는 시간은 몇 시 인가요?","다음 그림에서 김 할머니의 저녁식사를 시작하는 시간은 몇 시 인가요?"},
             {"예쁜이 할머니가 하루 중 가장 많이 하는 일은 무엇인가요?","다음 그림에서 예쁜이 할머니가 하루 중 두 번째로 많은 시간을 보내는 일은 무엇인가요?", "다음 그림에서 예쁜이 할머니가 하루 중 세 번째로 많이 하는 일은 무엇인가요.\n"},
             {"다음 그림에서 예쁜이 할머니가 평생학교에서 보내는 시간은 몇 시간인가요? ","다음 그림에서 예쁜이 할머니는 보통 집안일을 시작하는 시간은 몇 시입니까?","다음 그림에서 예쁜이 할머니의 기상시간은 몇 시 입니까?"},
-            {"다음 그림은 예쁜이 할머니의 하루 일과를 나타낸 것입니다.\n예쁜이 할머니가 하루 중 가장 많은 시간을 보내는 것은 무엇인가요?","다음 그림은 예쁜이 할머니의 하루 일과를 나타낸 것입니다.\n예쁜이 할머니가 하루 중 가장 많은 시간을 보내는 것은 무엇인가요?","다음 그림은 예쁜이 할머니의 하루 일과를 나타낸 것입니다.\n예쁜이 할머니가 하루 중 가장 많은 시간을 보내는 것은 무엇인가요?",},
-            {"다음 그림은 예쁜이 할머니의 하루 일과를 나타낸 것입니다.\n예쁜이 할머니가 하루 중 가장 적은 시간을 보내는 것은 무엇인가요?","다음 그림은 예쁜이 할머니의 하루 일과를 나타낸 것입니다.\n예쁜이 할머니가 하루 중 가장 적은 시간을 보내는 것은 무엇인가요?","다음 그림은 예쁜이 할머니의 하루 일과를 나타낸 것입니다.\n예쁜이 할머니가 하루 중 가장 적은 시간을 보내는 것은 무엇인가요?",},
+            {"다음 그림에서 예쁜이 할머니가 하루 중 가장 많은 시간을 보내는 것은 무엇인가요?","다음 그림에서 예쁜이 할머니가 하루 중 가장 많은 시간을 보내는 것은 무엇인가요?","다음 그림에서 예쁜이 할머니가 하루 중 가장 많은 시간을 보내는 것은 무엇인가요?"},
+            {"다음 그림에서 예쁜이 할머니가 하루 중 가장 적은 시간을 보내는 것은 무엇인가요?","다음 그림에서 예쁜이 할머니가 하루 중 가장 적은 시간을 보내는 것은 무엇인가요?","다음 그림에서 예쁜이 할머니가 하루 중 가장 적은 시간을 보내는 것은 무엇인가요?",},
     };
 
     private static final String strAnsList[][] = {

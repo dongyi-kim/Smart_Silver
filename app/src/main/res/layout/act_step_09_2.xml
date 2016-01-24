@@ -300,6 +300,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/wp50"
                     android:background="@drawable/frame_cell_white"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -380,6 +381,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/wp25"
                         android:gravity="center"
+                        android:id="@+id/layout_erase_9_2"
                         android:orientation="horizontal">
 
                         <LinearLayout

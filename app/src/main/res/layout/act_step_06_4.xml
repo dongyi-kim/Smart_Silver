@@ -34,8 +34,8 @@
                 android:id="@+id/img_6_4"
                 android:layout_marginLeft="@dimen/wp3"
                 android:layout_width="@dimen/wp80"
-                android:layout_height="@dimen/wp80"
-                android:src="@drawable/map_weather_4_1" />
+                android:layout_height="@dimen/wp70"
+                android:src="@drawable/map_weather_4_1_1" />
 
             <LinearLayout
                 android:layout_width="@dimen/wp50"
