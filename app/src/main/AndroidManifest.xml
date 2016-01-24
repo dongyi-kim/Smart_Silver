@@ -338,6 +338,10 @@
             >
         </activity>
 
+        <activity android:name="src.activities.Report.ReportActivity"
+            android:screenOrientation="landscape"
+            ></activity>
+
 
         <activity android:name="src.activities.ActStartLearning"
             android:screenOrientation="landscape"

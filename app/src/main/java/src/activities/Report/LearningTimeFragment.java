@@ -8,12 +8,20 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import cdmst.smartsilver.R;
 import src.data.DB;
 import src.data.ResultData;
 
@@ -30,26 +38,63 @@ public class LearningTimeFragment extends Fragment {
 
     private void initChart()
     {
-        ResultData[] dataAll = DB.getResultData( String.format("SELECT * FROM %s ORDER BY timestamp;", DB.TABLE_RESULT) );
+        ResultData[] dataAll = DB.getResultData(String.format("SELECT * FROM %s ORDER BY timestamp;", DB.TABLE_RESULT));
         if(dataAll == null || dataAll.length == 0)
             return;
 
-        String stampFrist = dataAll[0].timestamp;
-        String stampLast = dataAll[ dataAll.length-1  ].timestamp;
 
-        HashMap<String, Integer> datemap = new HashMap<>();
+        String stampFirst = dataAll[0].timestamp.substring(0,10);
+        String stampLast = dataAll[ dataAll.length-1  ].timestamp.substring(0, 10);
+
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+        Date start, end;
+
+        try{
+            start = sdf.parse(stampFirst);
+            end = sdf.parse(stampLast);
+        }catch (Exception ex) {
+            return;
+        }
+
+        HashMap<String, Long> datemap = new HashMap<>();
+        GregorianCalendar gcal = new GregorianCalendar();
+        for(gcal.setTime(start); !gcal.getTime().after(end); gcal.add(Calendar.DAY_OF_YEAR, 1))
+        {
+            datemap.put( sdf.format(gcal.getTime()) , (long)0);
+        }
 
         for(ResultData data : dataAll)
         {
-            String date = data.timestamp.substring(0,9);
-            if(!datemap.containsKey(date))
-            {
-                datemap.put(date, 0);
-            }
-            int msec = datemap.get(date);
+            String date = data.timestamp.substring(0,10);
+            long msec = datemap.get(date);
             msec += data.millisec;
             datemap.put(date, msec);
         }
+
+        ArrayList<String> xVals = new ArrayList<>();
+        ArrayList<Entry> yVals = new ArrayList<>();
+        int index = 0;
+        for(String timestamp : datemap.keySet())
+        {
+            long msec = datemap.get(timestamp);
+
+            String strDate = timestamp.substring(5,10);
+            xVals.add(strDate);
+
+            float minute = msec / 60000f;
+            yVals.add( new Entry(minute, index ++) );
+        }
+
+        LineDataSet set1 = new LineDataSet(yVals, "학습시간");
+
+        ArrayList<LineDataSet> dataSets = new ArrayList<>();
+        dataSets.add(set1);
+
+        LineData data = new LineData(xVals, dataSets);
+
+        chart.setData(data);
 
 
     }
