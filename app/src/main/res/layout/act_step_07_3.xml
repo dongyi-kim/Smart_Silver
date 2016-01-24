@@ -14,12 +14,11 @@
         <TextView
             android:id="@+id/txt_description"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wp20"
+            android:layout_height="@dimen/wp17"
             android:gravity="center"
-            android:text=" 아래 통장은 어느 은행의 것인지 해당 정보를 찾아 누르세요."
+            android:text="아래 통장에서 계좌번호를 찾아 누르세요."
             android:textColor="#FFFFFF"
             android:textSize="@dimen/wp6"
-            android:layout_marginBottom="@dimen/wp2"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -314,7 +313,7 @@
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
                                             android:gravity="center"
-                                            android:text="20141022"
+                                            android:text="20161022"
                                             android:textSize="@dimen/wp4"
                                             android:visibility="visible" />
 
@@ -326,7 +325,7 @@
                                                 android:layout_width="match_parent"
                                                 android:layout_height="match_parent"
                                                 android:gravity="center"
-                                                android:text="20141022"
+                                                android:text="20161022"
                                                 android:textSize="@dimen/wp4"/>
                                             <Button
                                                 android:id="@+id/btn_3"
@@ -334,7 +333,7 @@
                                                 android:layout_height="match_parent"
                                                 android:background="@drawable/borderline_clickable"
                                                 android:gravity="center"
-                                                android:text="20141022"
+                                                android:text="20161022"
                                                 android:textSize="@dimen/wp4"/>
                                         </FrameLayout>
                                     </FrameLayout>
@@ -348,7 +347,7 @@
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
                                             android:gravity="center"
-                                            android:text="20141024"
+                                            android:text="20161024"
                                             android:textSize="@dimen/wp4" />
                                         <Button
                                             android:id="@+id/btn_4"
@@ -356,7 +355,7 @@
                                             android:layout_height="match_parent"
                                             android:background="@drawable/borderline_clickable"
                                             android:gravity="center"
-                                            android:text="20141024"
+                                            android:text="20161024"
                                             android:textSize="@dimen/wp4" />
                                     </FrameLayout>
 
@@ -371,7 +370,7 @@
                                             android:layout_height="match_parent"
                                             android:background="@drawable/borderline_clickable"
                                             android:gravity="center"
-                                            android:text="20141024"
+                                            android:text="20161024"
                                             android:textSize="@dimen/wp4" />
 
                                         <TextView
@@ -379,7 +378,7 @@
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
                                             android:gravity="center"
-                                            android:text="20141024"
+                                            android:text="20161024"
                                             android:textSize="@dimen/wp4" />
                                     </FrameLayout>
 
@@ -394,7 +393,7 @@
                                             android:layout_height="match_parent"
                                             android:background="@drawable/borderline_clickable"
                                             android:gravity="center"
-                                            android:text="20141026"
+                                            android:text="20161026"
                                             android:textSize="@dimen/wp4" />
 
                                         <TextView
@@ -402,7 +401,7 @@
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
                                             android:gravity="center"
-                                            android:text="20141026"
+                                            android:text="20161026"
                                             android:textSize="@dimen/wp4" />
 
                                     </FrameLayout>
@@ -418,7 +417,7 @@
                                             android:layout_height="match_parent"
                                             android:background="@drawable/borderline_clickable"
                                             android:gravity="center"
-                                            android:text="20141028"
+                                            android:text="20161028"
                                             android:textSize="@dimen/wp4" />
 
                                         <TextView
@@ -426,7 +425,7 @@
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
                                             android:gravity="center"
-                                            android:text="20141028"
+                                            android:text="20161028"
                                             android:textSize="@dimen/wp4" />
                                     </FrameLayout>
 
@@ -441,7 +440,7 @@
                                             android:layout_height="match_parent"
                                             android:background="@drawable/borderline_clickable"
                                             android:gravity="center"
-                                            android:text="20141030"
+                                            android:text="20161030"
                                             android:textSize="@dimen/wp4" />
 
                                         <TextView
@@ -449,7 +448,7 @@
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
                                             android:gravity="center"
-                                            android:text="20141030"
+                                            android:text="20161030"
                                             android:textSize="@dimen/wp4" />
 
                                     </FrameLayout>

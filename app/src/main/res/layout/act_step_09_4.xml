@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp17"
-            android:layout_marginTop="@dimen/wp3"
+            android:layout_marginTop="@dimen/wp5"
             android:gravity="center"
             android:text="아래의 과일과 견과류에서 각각 1종류씩 골라 주스를 만들려 합니다. 선택할 수 있는 종류는 모두 몇 가지인가요?"
             android:textColor="#FFFFFF"

@@ -19,7 +19,7 @@
             android:layout_height="@dimen/wp17"
             android:gravity="center"
             android:text="다음 자료에서 1주일은 며칠입니까?"
-            android:textSize="@dimen/wp6"
+            android:textSize="@dimen/wp5"
             android:textStyle="bold" />
 
         <LinearLayout

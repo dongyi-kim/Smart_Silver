@@ -22,6 +22,8 @@ public class ActStep0902 extends StageActivity {
     private final LinearLayout layout[] = new LinearLayout[2];
     private final LinearLayout rices[] = new LinearLayout[2];
     private final LinearLayout soups[] = new LinearLayout[10];
+    private LinearLayout erase;
+
     public boolean isRight = false;
     public int iAnswer = 0;
     public Step0902DataSet dataSet = new Step0902DataSet();
@@ -49,6 +51,8 @@ public class ActStep0902 extends StageActivity {
         soups[7] = (LinearLayout)findViewById(R.id.soup8);
         soups[8] = (LinearLayout)findViewById(R.id.soup9);
 
+        erase = (LinearLayout)findViewById(R.id.layout_erase_9_2);
+
         btnAnswer[0] = (Button)findViewById(R.id.btn_answer_1);
         btnAnswer[1] = (Button)findViewById(R.id.btn_answer_2);
         btnAnswer[2] = (Button)findViewById(R.id.btn_answer_3);
@@ -72,6 +76,8 @@ public class ActStep0902 extends StageActivity {
         for(int i = 0 ; i < 9 ; i++) soups[i].setVisibility(View.GONE);
         for(int i = 0 ; i < 2 ; i ++) rices[i].setVisibility(View.GONE);
 
+        int erchk = 0;
+
         for(int i = 0 ; i < 2; i++){
             if(dataSet.rice[i] == 2) continue;
             else rices[i].setVisibility(View.VISIBLE);
@@ -79,8 +85,14 @@ public class ActStep0902 extends StageActivity {
 
         for(int i = 0 ; i < 4; i++){
             if(dataSet.soup[i] == 9) continue;
-            else soups[dataSet.soup[i]].setVisibility(View.VISIBLE);
+            else{
+                soups[dataSet.soup[i]].setVisibility(View.VISIBLE);
+                if(dataSet.soup[i] == 3 || dataSet.soup[i] == 4) erchk ++;
+            }
         }
+
+        if(erchk == 2) erase.setVisibility(View.GONE);
+        else erase.setVisibility(View.VISIBLE);
 
         for(int i = 0 ; i < 3 ; i++)
             btnAnswer[i].setText(dataSet.btn[i]);
