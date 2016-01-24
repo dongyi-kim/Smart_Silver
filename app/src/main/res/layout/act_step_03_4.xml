@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/wp20"
             android:gravity="center"
-            android:text="할머니와 할아버지가 손주들이 빚은 송편을 받았습니다. 두 분이 드시고 남은 송편은 몇 개일까요"
+            android:text="할머니와 할아버지는 아래의 전을 만들고,\n먹었습니다. 남은 전은 모두 몇 개일까요?"
             android:textColor="#FFFFFFFF"
             android:textSize="@dimen/wp6" />
 

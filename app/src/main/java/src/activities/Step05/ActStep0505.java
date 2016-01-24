@@ -61,7 +61,7 @@ public class ActStep0505 extends StageActivity {
     public synchronized void setQuestion(boolean isRetry, Object object){
         dataSet.setData(iStage);
 
-        if(iStage == NUM_OF_STAGE) txtDescription.setText("노인학교에서 가을축제 준비를 하기 위해 시장에 갔습니다. 사과 한 개 당 가격이 더 저렴한 것은 어느 것일까요?");
+        if(iStage == NUM_OF_STAGE) txtDescription.setText("노인학교에서 가을축제 준비를 하기 위해 시장에 갔습니다. 한 개 당 가격이 더 저렴한 것은 어느 것일까요?");
         for(int i = 0; i < 2; i++){
             imgPicture[i].setImageResource(dataSet.iImageResource[i]);
             txtAnswer[i].setText(dataSet.sCountDescription[i]);

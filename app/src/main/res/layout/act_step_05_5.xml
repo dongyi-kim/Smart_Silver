@@ -16,9 +16,9 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp20"
             android:gravity="center"
-            android:text="노인학교에서 가을축제 준비를 하기 위해 시장에 갔습니다. 한 접시 당 가격이 더 저렴한 것은 어느 것일까요?"
+            android:text="노인학교에서 가을축제 준비를 하기 위해 시장에\n갔습니다. 한 접시 당 가격이 더 저렴한 것은 어느 것일까요?"
             android:textColor="#FFFFFF"
-            android:textSize="@dimen/wp6"
+            android:textSize="@dimen/wp5"
             android:textStyle="bold" />
 
         <LinearLayout

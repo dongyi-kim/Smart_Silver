@@ -16,10 +16,10 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp20"
             android:gravity="center"
-            android:text=" 노인학교에서 가을축제 준비를 하기 위해 동대문에 갔습니다. 냅킨 한 묶음의 가격은 얼마입니까?"
+            android:text=" 노인학교에서 가을축제 준비를 하기 위해\n시장에 갔습니다. 냅킨 한 묶음의 가격은 얼마입니까?"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            android:textSize="@dimen/wp6" />
+            android:textSize="@dimen/wp5" />
 
         <LinearLayout
             android:layout_width="match_parent"

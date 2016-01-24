@@ -17,7 +17,7 @@
             android:layout_height="@dimen/wp20"
             android:layout_marginBottom="@dimen/wp2"
             android:gravity="center"
-            android:text="더하기 빼기를 이용하여 수 만들기.\n□ 안에 알맞은 수를 찾아 누르세요."
+            android:text="＜덧셈, 뺄셈 이용하여 수 만들기＞\n□ 안에 알맞은 수를 찾아 누르세요."
             android:textColor="#FFFFFF"
             android:textSize="@dimen/wp6"
             android:textStyle="bold" />
@@ -30,16 +30,19 @@
             android:layout_margin="@dimen/wp5"
             android:gravity="center"
             android:orientation="horizontal">
+
             <FrameLayout
                 android:id="@+id/frame_number_1"
                 android:layout_width="@dimen/wp25"
                 android:layout_height="@dimen/wp25">
+
                 <ImageView
                     android:id="@+id/img_operand_field_1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitCenter"
                     android:src="@drawable/frame_cell_pink" />
+
                 <TextView
                     android:id="@+id/txt_operand_1"
                     android:layout_width="match_parent"
@@ -60,7 +63,7 @@
                 android:gravity="center"
                 android:text="+"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/wp10"
+                android:textSize="@dimen/wp12"
                 android:textStyle="bold" />
 
             <FrameLayout
@@ -93,9 +96,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="+"
+                android:text="―"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/wp10"
+                android:textSize="@dimen/wp12"
                 android:textStyle="bold" />
 
             <FrameLayout
@@ -161,8 +164,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp20"
-            android:layout_marginTop="@dimen/wp3"
             android:layout_gravity="center"
+            android:layout_marginTop="@dimen/wp3"
             android:gravity="center"
             android:orientation="horizontal">
 

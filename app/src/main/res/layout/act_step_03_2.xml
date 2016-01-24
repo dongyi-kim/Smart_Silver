@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp20"
             android:gravity="center"
-            android:text="다음 네모 안에 알맞은 수를 찾아 순서대로 누르세요."
+            android:text="다음  □ 안에 알맞은 수를 찾아 누르세요."
             android:textColor="#FFFFFF"
             android:textSize="@dimen/wp6"
             android:textStyle="bold" />

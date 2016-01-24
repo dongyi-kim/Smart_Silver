@@ -16,9 +16,9 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp20"
             android:gravity="center"
-            android:text="아래에 나타난 그림이 총 몇개 일까요?"
+            android:text="그림의 개수가 몇 개인지\n세어보고 알맞은 숫자를 누르세요."
             android:textColor="#FFFFFF"
-            android:textSize="@dimen/wp7"
+            android:textSize="@dimen/wp6"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -28,6 +28,7 @@
             android:background="@drawable/frame_cell_white"
             android:gravity="center"
             android:orientation="vertical">
+
             <include
                 android:id="@+id/drawfield_row_1"
                 layout="@layout/view_horizeontal_image_button_layout"

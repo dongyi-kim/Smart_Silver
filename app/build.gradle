@@ -1,8 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
+<<<<<<< HEAD
     compileSdkVersion 22
     buildToolsVersion "21.1.2"
+=======
+    compileSdkVersion 21
+    buildToolsVersion '20.0.0'
+>>>>>>> origin/Acka
     defaultConfig {
         applicationId "cdmst.smartsilver"
         minSdkVersion 14

@@ -123,14 +123,14 @@ public class ActStep0303 extends StageActivity{
     }
 
     public class Step0303DataSet{
-        private final String arrDescription[] = {"할머니와 할아버지가 곶감 선물을 받았습니다. 받은 곶감울 모두 더하면 몇 개인가요?",
-                "할머니와 할아버지가 추석에 사용할 밤을 까려고 합니다. 모두 몇 개의 밤을 까야 할까요?",
-                "할머니와 할아버지가 송편 선물을 받았습니다. 받은 송편을 모두 더하면 몇 개인가요?",
-                "할머니와 할아버지가 추석에 사용할 전을 만들었습니다. 만든 전은 모두 몇 장입니까?"};
+        private final String arrDescription[] = {"할머니 할아버지가 홍시 선물을\n받았습니다.받은 홍시를 모두 더하면 몇 개일까요?",
+                "할머니와 할아버지가 추석에 사용할\n밤을 까려고 합니다. 모두 몇 개의 밤을 까야 할까요?",
+                "할머니와 할아버지가 손주들에게 받은\n송편의 합은 모두 몇 개인가요?",
+                "할머니와 할아버지가 추석에 사용할\n전을 만들었습니다. 만든 전은 모두 몇 장입니까?"};
         private final int arrSampleCount[][][][] = {{{{5}, {7}}, {{24}, {30}}, {{5, 10}, {5, 10}}, {{20, 40, 30}, {2, 3, 5}}},
                 {{{7}, {8}}, {{25}, {25}}, {{2, 3}, {5, 10}}, {{10, 20, 10}, {2, 3, 5}}},
                 {{{8}, {9}}, {{32}, {40}}, {{2, 3}, {3, 2}}, {{10, 10, 10}, {10, 5, 5}}}};
-        private final String arrFoodKind[][] = {{"곶감"}, {"밤"}, {"깨송편", "콩송편"}, {"녹두전", "호박전", "동태전"}};
+        private final String arrFoodKind[][] = {{"홍시"}, {"밤"}, {"깨송편", "콩송편"}, {"녹두전", "호박전", "동태전"}};
         private final String arrCountUnit[] = {"개", "개", "개", "장"};
 
         private int arrImageResource[][][] = {{{R.drawable.icon_set_dried_persimmon_5, R.drawable.icon_set_dried_persimmon_7}, {R.drawable.icon_set_chestnut_many, R.drawable.icon_set_chestnut_many}, {R.drawable.icon_set_songpyeon_5_and_10, R.drawable.icon_set_songpyeon_5_and_10}, {R.drawable.icon_set_pumpkin_pancake_top_many, R.drawable.icon_set_pumpkin_pancake_top_5}},

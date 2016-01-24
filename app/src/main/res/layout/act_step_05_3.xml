@@ -12,11 +12,10 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/txt_description"
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp20"
             android:gravity="center"
-            android:text="아래 빈 항아리가 있습니다. 빈 항아리를 채우려면 옆의 그릇으로 몇 번 부어야 하는지 알맞은 숫자를 누르세요."
+            android:text="빈 항아리에 물을 채우려면\n몇 번 부어야 할까요."
             android:textColor="#FFFFFF"
             android:textSize="@dimen/wp6"
             android:textStyle="bold" />
