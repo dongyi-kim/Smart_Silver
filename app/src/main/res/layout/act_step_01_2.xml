@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp20"
             android:gravity="center"
-            android:text="그림의 개수가 몇 개인지\n세어보고 알맞은 숫자를 누르세요."
+            android:text="아래에 나타난 그림은 총 몇 개 일까요?"
             android:textColor="#FFFFFF"
             android:textSize="@dimen/wp6"
             android:textStyle="bold" />

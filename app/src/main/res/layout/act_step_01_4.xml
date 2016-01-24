@@ -25,11 +25,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp80"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:background="@drawable/frame_cell_white"
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/drawfield_row_1"
+                android:id="@+id/linear_row_1"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/wp40"
                 android:layout_gravity="center"
@@ -132,7 +134,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/drawfield_row_2"
+                android:id="@+id/linear_row_2"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/wp40"
                 android:layout_gravity="center"

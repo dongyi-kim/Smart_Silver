@@ -29,6 +29,7 @@ public class ActStep0103 extends StageActivity {
     public static final int iRandomRange[] = {5, 9, 30, 90, 200};
 
     private LinearLayout linearGrid[][] = new LinearLayout[MAX_ROW_NUMBER][MAX_COLUMN_NUMBER];
+    private LinearLayout linearRow[] = new LinearLayout[MAX_ROW_NUMBER];
     public ImageButton ibtnNumber[][] = new ImageButton[MAX_ROW_NUMBER][MAX_COLUMN_NUMBER];
     public TextView txtNumber[][] = new TextView[MAX_ROW_NUMBER][MAX_COLUMN_NUMBER];
     private TextView txtDescription;
@@ -63,6 +64,9 @@ public class ActStep0103 extends StageActivity {
         txtNumber[1][0] = (TextView)findViewById(R.id.txt_grid_2_1);
         txtNumber[1][1] = (TextView)findViewById(R.id.txt_grid_2_2);
         txtDescription = (TextView)findViewById(R.id.txt_description);
+
+        linearRow[0] = (LinearLayout)findViewById(R.id.linear_row_1);
+        linearRow[1] = (LinearLayout)findViewById(R.id.linear_row_2);
 
         emptyWidth[0][0] = (View)findViewById(R.id.empty_left_grid_1_1);
         emptyWidth[0][1] = (View)findViewById(R.id.empty_left_grid_1_2);
@@ -104,6 +108,9 @@ public class ActStep0103 extends StageActivity {
 
         int iOddCount = 0, iEvenCount = 0;
         for(int i = 0; i < MAX_ROW_NUMBER; i++){
+            boolean bSelected = rand.nextBoolean();
+
+            linearRow[i].setVisibility(View.VISIBLE);
             for(int j = 0; j < MAX_COLUMN_NUMBER; j++){
                 if(iOddCount + iEvenCount >= iSampleCount[iStage - 1]){
                     linearGrid[i][j].setVisibility(View.GONE);
@@ -111,8 +118,8 @@ public class ActStep0103 extends StageActivity {
                 }
 
                 int iRemainCount = MAX_ROW_NUMBER * MAX_COLUMN_NUMBER - (i * MAX_COLUMN_NUMBER + j);
-                if(iOddCount + iEvenCount + iRemainCount <= iSampleCount[iStage - 1] || rand.nextInt(1) == 1){
-                    boolean bOddPossible = true, bEvenPossible = true;
+                if(iOddCount + iEvenCount + iRemainCount <= iSampleCount[iStage - 1] || ((iSampleCount[iStage - 1] == 2 && bSelected) || rand.nextInt(1) == 1)){
+                    boolean bOddPossible = true, bEvenPossible = true; bSelected = true;
 
                     if(iOddCount + iEvenCount == iSampleCount[iStage - 1] - 1){
                         if(bAnswerIsOdd && iOddCount== 0) bEvenPossible = false;
@@ -138,6 +145,11 @@ public class ActStep0103 extends StageActivity {
                     linearGrid[i][j].setVisibility(View.VISIBLE);
                 }
                 else linearGrid[i][j].setVisibility(View.GONE);
+            }
+
+            if(iSampleCount[iStage - 1] == 2 && bSelected){
+                linearRow[1 - i].setVisibility(View.GONE);
+                break;
             }
         }
 

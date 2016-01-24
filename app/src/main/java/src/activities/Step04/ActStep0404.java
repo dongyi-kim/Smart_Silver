@@ -59,15 +59,7 @@ public class ActStep0404 extends StageActivity{
             btnAnswer[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v){
-                    String sSelect = ((Button)v).getText().toString();
-                    int iSelect = 0;
-
-                    for(int i = 0; '0' <= sSelect.charAt(i) && sSelect.charAt(i) <= '9'; i++){
-                        iSelect *= 10;
-                        iSelect += sSelect.charAt(i) - '0';
-                    }
-
-                    if(iSelect== dataSet.iAnswer) isRight = true;
+                    if(Integer.parseInt(((Button)v).getText().toString()) == dataSet.iAnswer) isRight = true;
                     else isRight = false;
                     checkAnswer();
                 }
@@ -150,8 +142,7 @@ public class ActStep0404 extends StageActivity{
                 {R.drawable.img_display_stand_onion_2, R.drawable.img_display_stand_onion_3, R.drawable.img_display_stand_onion_4}};
         private final String arrUnit[][] = {{"바지", "양말", "티셔츠", "양파", "파"},
                 {"벌씩", "짝", "장씩", "개", "개짜리"},
-                {"단", "줄", "줄", "묶음", "단"},
-                {"개", "짝", "장", "개", "개"}};
+                {"단", "줄", "줄", "묶음", "단"}};
 
         public int iImageResource;
         public String sAnswerDescription;
@@ -172,7 +163,7 @@ public class ActStep0404 extends StageActivity{
             int iPastValue = iLeftValue * (iRightValue - rand.nextInt(3));
             if(iPastValue <= 0) iPastValue = iLeftValue;
             for(int i = 0; i < 3; i++){
-                sAnswerExample[i] = "" + iPastValue + arrUnit[3][iSeed];
+                sAnswerExample[i] = "" + iPastValue;
                 iPastValue += iLeftValue;
             }
         }
