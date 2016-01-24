@@ -16,19 +16,19 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/wp20"
             android:gravity="center"
-            android:text="다음 중 짝수를 찾아서 누르세요."
+            android:text="다음 중 짝수를 찾아 누르세요."
             android:textColor="#FFFFFF"
-            android:textSize="@dimen/wp7"
+            android:textSize="@dimen/wp6"
             android:textStyle="bold" />
 
         <LinearLayout
+            android:id="@+id/drawfield_row_1"
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp80"
-                android:id="@+id/drawfield_row_1"
-                android:background="@drawable/frame_cell_white"
-                android:orientation="vertical">
+            android:background="@drawable/frame_cell_white"
+            android:orientation="vertical">
 
-                <LinearLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/wp40"
                 android:layout_gravity="center"
@@ -235,7 +235,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/wp2"/>
+                android:layout_height="@dimen/wp2" />
         </LinearLayout>
     </LinearLayout>
 

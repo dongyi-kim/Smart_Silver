@@ -120,7 +120,6 @@ public class ActStep0502 extends StageActivity {
 
     public class Step0502DataSet {
         private final int arrFruitCount[] = {16, 12, 15, 30, 32};
-        private final String arrFruitDescription[] = {"감을", "딸기를", "배를", "사과를", "사과를"};
         private final String arrCountDescription[] = {"", "한 개씩", "두 개씩", "세 개씩", "네 개씩", "다섯 개씩", "여섯 개씩", "일곱 개씩", "여덟 개씩", "아홉 개씩"};
         private final int arrImageSource[] = {R.drawable.img_draw_persimmon_16, R.drawable.img_draw_strawberry_12, R.drawable.img_draw_pear_15, R.drawable.img_draw_apple_30, R.drawable.img_draw_apple_32};
 
@@ -130,15 +129,15 @@ public class ActStep0502 extends StageActivity {
         public int iAnswer;
 
         public void setData(int iStage) {
+            int iSeed = iStage - 1;
             int iCount = 0;
             do{
                 iCount = 2 + rand.nextInt(7);
-            } while(arrFruitCount[iStage - 1] % iCount != 0);
+            } while(arrFruitCount[iSeed] % iCount != 0);
 
-            sDescription = "평생학교에서 간식으로 " + arrFruitDescription[iStage - 1] + " 나누어 먹으려 합니다. 한 사람이 " + arrCountDescription[iCount] +
-                    " 먹는다면, 몇 명이 먹을 수 있을까요? 손가락으로 " + arrCountDescription[iCount] + " 묶어 보세요.";
-            iFruitImage = arrImageSource[iStage - 1];
-            iAnswer = arrFruitCount[iStage - 1] / iCount;
+            sDescription = "평생학교에서 간식으로 나누어 먹으려고 합니다.\n한 사람이 " + arrCountDescription[iCount] + " 먹는다면, 몇 명이 먹을 수 있을까요.";
+            iFruitImage = arrImageSource[iSeed];
+            iAnswer = arrFruitCount[iSeed] / iCount;
         }
     }
 }

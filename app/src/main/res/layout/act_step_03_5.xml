@@ -16,9 +16,9 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/wp20"
             android:gravity="center"
-            android:text="할머니와 할아버지가 손주들이 빚은 송편을 받았습니다. 두 분이 드시고 남은 송편은 몇 개일까요"
+            android:text="아래 그림은 할아버지와 할머니가 오늘\n데이트에 쓴 돈 입니다. 오늘 쓴 돈은 모두 얼마입니까?"
             android:textColor="#FFFFFFFF"
-            android:textSize="@dimen/wp6" />
+            android:textSize="@dimen/wp5" />
 
 
         <FrameLayout

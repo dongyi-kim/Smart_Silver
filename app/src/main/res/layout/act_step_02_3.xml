@@ -17,9 +17,9 @@
             android:layout_height="@dimen/wp20"
             android:layout_margin="@dimen/wp5"
             android:gravity="center"
-            android:text=" 다음 중 큰 수를 찾아 누르세요"
+            android:text=" 다음 중 큰 수를 찾아 누르세요."
             android:textColor="#FFFFFF"
-            android:textSize="@dimen/wp8"
+            android:textSize="@dimen/wp6"
             android:textStyle="bold" />
 
         <LinearLayout

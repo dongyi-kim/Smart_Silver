@@ -170,7 +170,6 @@ public class ActStep0504 extends StageActivity {
         private final int arrLineCount[][] = {{}, {}, {2, 0}, {3, 0}, {4, 0}, {3, 2}, {4, 2}, {4, 3}};
         private final int arrIconSource[] = {R.drawable.icon_set_songpyeon_4, R.drawable.icon_signle_napkin_thick, R.drawable.icon_set_songpyeon_5, R.drawable.icon_set_apple_5, R.drawable.icon_set_pumpkin_pancake_4};
         private final String arrCountUnit[] = {"접시", "묶음", "접시", "팩", "소쿠리"};
-        private final String arrPlaceDescription[] = {"시장", "동대문", "시장", "과일 가게", "시장"};
         private final String arrThingDescription[] = {"송편", "냅킨", "송편", "사과", "호박전"};
 
         public String sDescription;
@@ -183,7 +182,7 @@ public class ActStep0504 extends StageActivity {
 
         public void setData(int iStage) {
             int iSeed = iStage - 1;
-            sDescription = "노인학교에서 가을축제 준비를 하기 위해 " + arrPlaceDescription[iSeed] + "에 갔습니다. "
+            sDescription = "노인학교에서 가을축제 준비를 하기 위해\n시장에 갔습니다. "
                     + arrThingDescription[iSeed] + " 한 " + arrCountUnit[iSeed] + "의 가격은 얼마입니까?";
 
             int iCount = 2 + rand.nextInt(6);

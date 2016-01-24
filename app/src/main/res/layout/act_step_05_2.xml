@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp20"
             android:gravity="center"
-            android:text="평생학교 행복반에서 간식으로 딸기를 두 개씩 나누어 먹으려고 합니다. 몇 명이 먹을 수 있습니까? 손가락으로 두 개씩 묶어보세요."
+            android:text="평생학교에서 간식으로 나누어 먹으려고 합니다.\n한 사람이 두 개씩 먹는다면, 몇 명이 먹을 수 있을까요."
             android:textColor="#FFFFFF"
             android:textSize="@dimen/wp5"
             android:textStyle="bold" />

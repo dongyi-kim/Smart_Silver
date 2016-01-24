@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp20"
             android:gravity="center"
-            android:text=" 더하기 빼기 O, X 퀴즈\n다음 더하기 빼기가 맞으면 O, 틀리면 X를 누르세요."
+            android:text="＜O, X 퀴즈＞\n다음 덧셈, 뺄셈이 맞으면 O, 틀리면 X를 누르세요."
             android:textColor="#FFFFFF"
             android:textSize="@dimen/wp6"
             android:textStyle="bold" />

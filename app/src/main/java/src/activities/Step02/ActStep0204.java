@@ -41,7 +41,6 @@ public class ActStep0204 extends StageActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_step_02_4);
 
-        Log.i("tag", "\n\n[!!!!!!] start\n");
         frameNumber[0] = (FrameLayout)findViewById(R.id.frame_number_1);
         frameNumber[1] = (FrameLayout)findViewById(R.id.frame_number_2);
         frameNumber[2] = (FrameLayout)findViewById(R.id.frame_number_3);
@@ -84,7 +83,7 @@ public class ActStep0204 extends StageActivity {
             else {
                 txtOperator[i].setVisibility(View.VISIBLE);
                 frameNumber[i + 1].setVisibility(View.VISIBLE);
-                txtOperator[i].setText((dataSet.iOperator[i] == 1 ? "+" : "-"));
+                txtOperator[i].setText((dataSet.iOperator[i] == 1 ? "+" : "―"));
             }
         }
 

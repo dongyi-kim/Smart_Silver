@@ -17,9 +17,9 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp20"
             android:gravity="center"
-            android:text="다음 중 가장 큰 수를 찾아서 누르세요."
+            android:text="다음 중 가장 큰 수를 찾아 누르세요."
             android:textColor="#FFFFFF"
-            android:textSize="@dimen/wp7"
+            android:textSize="@dimen/wp6"
             android:textStyle="bold" />
 
         <LinearLayout
