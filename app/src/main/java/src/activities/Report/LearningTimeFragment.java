@@ -14,7 +14,6 @@ import java.util.HashMap;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import cdmst.smartsilver.R;
 import src.data.DB;
 import src.data.ResultData;
 
@@ -36,7 +35,7 @@ public class LearningTimeFragment extends Fragment {
             return;
 
         String stampFrist = dataAll[0].timestamp;
-        String stamp
+        String stampLast = dataAll[ dataAll.length-1  ].timestamp;
 
         HashMap<String, Integer> datemap = new HashMap<>();
 
