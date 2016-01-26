@@ -36,7 +36,7 @@ public class ActMain extends FrameActivity {
             startActivity(intent);
             return;
         } else if (vSender == rippleMyResult) {
-            Intent intent = new Intent(this, ReportActivity.class);
+            Intent intent = new Intent(this, StatisticsActivity.class);
             startActivity(intent);
         } else if (vSender == rippleDeveloper) {
             Intent intent = new Intent(this, ActTest.class);

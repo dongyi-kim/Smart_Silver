@@ -22,7 +22,7 @@ public class ReportActivity extends FragmentActivity {
     @Bind(R.id.pager)
     ViewPager viewPager;
 
-    @Bind(R.id.pager_stip)
+    @Bind(R.id.pager_strip)
     PagerTabStrip pagerStrip;
 
 
@@ -35,9 +35,6 @@ public class ReportActivity extends FragmentActivity {
         viewPager.setAdapter(new CustomPagerAdapter(this.getSupportFragmentManager()));
 
     }
-
-
-
 
 
     public class CustomPagerAdapter extends FragmentStatePagerAdapter {
@@ -70,7 +67,21 @@ public class ReportActivity extends FragmentActivity {
 
         @Override
         public int getCount() {
-            return 1;
+            return 3;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            switch (position) {
+                case 0:
+                    return "학습시간";
+                case 1:
+                    return "학습진도";
+                case 2:
+                    return "학습결과";
+                default:
+                    return null;
+            }
         }
     }
 
