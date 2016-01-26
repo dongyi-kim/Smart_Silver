@@ -11,6 +11,14 @@
         <item name="colorAccent">#FF4081</item>
     </style>
 
+    <style name="PagerTabStrip">
+        <item name="android:textSize">20dp</item>
+
+    </style>
+
+
+
+
     <style name="Material"></style>
 
     <style name="Material.Drawable"></style>

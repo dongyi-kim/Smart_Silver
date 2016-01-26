@@ -35,6 +35,8 @@ public class ResultData implements Serializable {
     public String timestamp = null;
 
 
+
+
     public ResultData(int step, int level, int stage)
     {
         this(step, level, stage, null);
@@ -73,9 +75,9 @@ public class ResultData implements Serializable {
     public String toString(){
         // +" ( id INTEGER PRIMARY KEY AUTOINCREMENT, step INTEGER, level INTEGER, stage INTEGER, second INTEGER, success INTEGER, timestamp DATE, user_id TEXT);");
         if(userId != null){
-            return String.format(" (null, '%d', '%d', '%d', '%d', '%d',  DATETIME(CURRENT_TIMESTAMP, 'LOCALTIME'), null ) " , iStep, iLevel, iStage, millisec, (isSuccess ? 1 : 0));
+            return String.format(" (null, '%d', '%d', '%d', '%d', '%d', " + DB.SQL_TIME_NOW + ", null ) " , iStep, iLevel, iStage, millisec, (isSuccess ? 1 : 0));
         }else{
-            return String.format(" (null, '%d', '%d', '%d', '%d', '%d',  DATETIME(CURRENT_TIMESTAMP, 'LOCALTIME'), %s ) ", iStep, iLevel, iStage, millisec, (isSuccess ? 1 : 0), userId);
+            return String.format(" (null, '%d', '%d', '%d', '%d', '%d', " + DB.SQL_TIME_NOW + " , %s ) ", iStep, iLevel, iStage, millisec, (isSuccess ? 1 : 0), userId);
         }
     }
 

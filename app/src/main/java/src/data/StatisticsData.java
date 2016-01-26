@@ -70,9 +70,9 @@ public class StatisticsData {
     @Override
     public String toString(){
         if(userId == null){
-            return String.format(" (null, '%d', '%d', '%d', '%d', DATETIME('NOW'), null) ", step, success, fail, seconds );
+            return String.format(" (null, '%d', '%d', '%d', '%d', " + DB.SQL_TIME_NOW + ", null) ", step, success, fail, seconds );
         }else{
-            return String.format(" (null, '%d', '%d', '%d', '%d', DATETIME('NOW'), '%s') ", step, success, fail, seconds, userId );
+            return String.format(" (null, '%d', '%d', '%d', '%d', " + DB.SQL_TIME_NOW + ", '%s') ", step, success, fail, seconds, userId );
         }
     }
 

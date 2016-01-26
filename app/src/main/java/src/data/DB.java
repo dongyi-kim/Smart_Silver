@@ -21,6 +21,7 @@ public class DB extends SQLiteOpenHelper {
     public static final String TABLE_RESULT = "result";
     public static final String TABLE_STATISTICS = "statistics";
 
+    public static final String SQL_TIME_NOW = " DATETIME(CURRENT_TIMESTAMP, 'LOCALTIME') ";
 
 
 

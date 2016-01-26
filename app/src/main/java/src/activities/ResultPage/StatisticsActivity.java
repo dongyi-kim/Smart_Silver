@@ -33,7 +33,7 @@ public class StatisticsActivity extends FrameActivity {
 
         //set play time
         TextView txtToday =  (TextView)findViewById(R.id.txt_playtime_today);
-        int minuteToday = get_minute(String.format("SELECT * FROM %s WHERE timestamp >= date('now'); ", DB.TABLE_RESULT));
+        int minuteToday = get_minute(String.format("SELECT * FROM %s WHERE timestamp >= " + DB.SQL_TIME_NOW + " ; ", DB.TABLE_RESULT));
         txtToday.setText( minuteToday + "분" );
 
         TextView txtTotal =  (TextView)findViewById(R.id.txt_playtime_total);

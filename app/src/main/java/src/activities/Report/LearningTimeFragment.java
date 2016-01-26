@@ -8,14 +8,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.FillFormatter;
+import com.github.mikephil.charting.formatter.ValueFormatter;
+import com.github.mikephil.charting.formatter.YAxisValueFormatter;
 import com.github.mikephil.charting.interfaces.LineDataProvider;
+import com.github.mikephil.charting.utils.ViewPortHandler;
 
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,46 +47,67 @@ import src.data.ResultData;
 public class LearningTimeFragment extends Fragment {
 
     @Bind(R.id.chart)
-    public LineChart chart;
+    public BarChart chart;
 
 
     private void setChartOption()
     {
-        chart.setBorderColor(Color.WHITE);
+        chart.getLegend().setEnabled(false);
+        chart.setDescription("");
+
+//        chart.setBorderColor(Color.WHITE);
         chart.setGridBackgroundColor(Color.TRANSPARENT);
-        chart.setDescriptionColor(Color.CYAN);
+//        chart.setDescriptionColor(Color.CYAN);
         chart.setBackgroundColor(Color.TRANSPARENT);
+//
+//        chart.getAxisLeft().setGridColor(Color.WHITE);
+//        chart.getAxisLeft().setTextColor(Color.WHITE);
+//        chart.getAxisLeft().setAxisLineColor(Color.WHITE);
+//
+//        chart.getAxisRight().setGridColor(Color.WHITE);
+//        chart.getAxisRight().setTextColor(Color.WHITE);
+//        chart.getAxisRight().setAxisLineColor(Color.WHITE);
+//
+//        chart.getXAxis().setGridColor(Color.WHITE);
+//        chart.getXAxis().setTextColor(Color.WHITE);
+//        chart.getXAxis().setAxisLineColor(Color.WHITE);
+        chart.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM);
+        chart.getXAxis().setTextSize(15);
+        chart.getXAxis().setLabelsToSkip(0);
+        chart.getXAxis().setDrawGridLines(false);
 
-        chart.getAxisLeft().setGridColor(Color.WHITE);
-        chart.getAxisLeft().setTextColor(Color.WHITE);
-        chart.getAxisLeft().setAxisLineColor(Color.WHITE);
 
-        chart.getAxisRight().setGridColor(Color.WHITE);
-        chart.getAxisRight().setTextColor(Color.WHITE);
-        chart.getAxisRight().setAxisLineColor(Color.WHITE);
+        BarDataSet set1 = chart.getData().getDataSetByIndex(0);
+        float maxMinute = Math.max(1.0f, set1.getYMax() ) + 5.0f;
+        int intMinue = (int)maxMinute;
+        maxMinute = (intMinue / 5)*5;
+        set1.setValueFormatter(new ValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
+                int minute = (int)value;
+                int second = (int) ((value - minute) * 60f);
+                return String.format("%d분 %d초",minute, second);
+            }
+        });
 
-        chart.getXAxis().setGridColor(Color.WHITE);
-        chart.getXAxis().setTextColor(Color.WHITE);
-        chart.getXAxis().setAxisLineColor(Color.WHITE);
-        chart.getXAxis().setPosition(XAxis.XAxisPosition.BOTH_SIDED);
-        chart.getXAxis().setTextSize(20);
+        chart.getAxisLeft().setAxisMaxValue(maxMinute);
+        chart.getAxisLeft().setShowOnlyMinMax(true);
 
-        chart.setDescription("단위 : 분");
+        chart.getAxisRight().setAxisMaxValue(maxMinute);
+        chart.getAxisRight().setShowOnlyMinMax(true);
 
-        LineDataSet set1 = chart.getData().getDataSetByIndex(0);
-        set1.setDrawCubic(true);
-        set1.setCubicIntensity(0.2f);
-        set1.setDrawFilled(true);
-        set1.setDrawCircles(false);
-        set1.setLineWidth(1.8f);
-        set1.setCircleColor(Color.WHITE);
-        set1.setHighLightColor(Color.rgb(244, 117, 117));
-        set1.setColor(Color.WHITE);
-        set1.setFillColor(Color.WHITE);
-        set1.setFillAlpha(100);
-        set1.setDrawHorizontalHighlightIndicator(false);
-        set1.setValueTextColor(R.color.chalk_pink);
-        set1.setValueTextSize(20f);
+        YAxisValueFormatter f = new YAxisValueFormatter() {
+
+            @Override
+            public String getFormattedValue(float value, YAxis yAxis) {
+                return String.format("%d분",(int)value);
+            }
+        };
+        chart.getAxisLeft().setValueFormatter(f);
+        chart.getAxisRight().setValueFormatter(f);
+
+
+
     }
 
     private void initChart()
@@ -94,17 +125,21 @@ public class LearningTimeFragment extends Fragment {
 
         Date start, end;
         end = Calendar.getInstance().getTime();
+        GregorianCalendar gcal = new GregorianCalendar();
+        gcal.setTime(end);
+        gcal.add(Calendar.DAY_OF_YEAR, -6);
 
         try{
             start = sdf.parse(stampFirst);
+            if(gcal.getTime().before(start))
+                start = gcal.getTime();
         }catch (Exception ex) {
             return;
         }
 
         HashMap<String, Long> datemap = new HashMap<>();
-        GregorianCalendar gcal = new GregorianCalendar();
 
-        for(gcal.setTime(start), gcal.add(Calendar.DAY_OF_YEAR, -1); !gcal.getTime().after(end); gcal.add(Calendar.DAY_OF_YEAR, 1))
+        for(gcal.setTime(start); !gcal.getTime().after(end); gcal.add(Calendar.DAY_OF_YEAR, 1))
         {
             datemap.put( sdf.format(gcal.getTime()) , (long)0);
         }
@@ -118,7 +153,7 @@ public class LearningTimeFragment extends Fragment {
         }
 
         ArrayList<String> xVals = new ArrayList<>();
-        ArrayList<Entry> yVals = new ArrayList<>();
+        ArrayList<BarEntry> yVals = new ArrayList<>();
         int index = 0;
         Object[] times = datemap.keySet().toArray();
         Arrays.sort(times);
@@ -131,17 +166,16 @@ public class LearningTimeFragment extends Fragment {
             xVals.add(strDate);
 
             float minute = msec / 60000f;
-            yVals.add( new Entry(minute, index ++) );
+            yVals.add( new BarEntry(minute, index ++) );
         }
 
-        LineDataSet set1 = new LineDataSet(yVals, "학습시간");
+        BarDataSet set1 = new BarDataSet(yVals, "학습시간");
 
 
-        ArrayList<LineDataSet> dataSets = new ArrayList<>();
+        ArrayList<BarDataSet> dataSets = new ArrayList<>();
         dataSets.add(set1);
 
-        LineData data = new LineData(xVals, dataSets);
-
+        BarData data = new BarData(xVals, dataSets);
         chart.setData(data);
 
         setChartOption();
