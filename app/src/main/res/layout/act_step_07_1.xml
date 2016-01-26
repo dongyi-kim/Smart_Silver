@@ -11,6 +11,7 @@
         android:orientation="vertical">
 
     <TextView
+            android:layout_marginTop="@dimen/wp6"
             android:layout_height="@dimen/wp20"
             android:layout_width="match_parent"
             android:textStyle="bold"
@@ -21,7 +22,7 @@
             android:gravity="center"/>
 
         <LinearLayout
-            android:layout_height="@dimen/wp80"
+            android:layout_height="@dimen/wp75"
             android:layout_width="match_parent"
             android:orientation="horizontal"
             android:weightSum="1"

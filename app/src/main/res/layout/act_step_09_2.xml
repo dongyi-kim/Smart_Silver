@@ -14,7 +14,7 @@
         <LinearLayout
             android:layout_width="@dimen/wp120"
             android:layout_height="@dimen/wp16"
-            android:layout_marginTop="@dimen/wp3"
+            android:layout_marginTop="@dimen/wp6"
             android:background="@drawable/frame_cell_white">
 
             <TextView
@@ -31,15 +31,16 @@
 
         <LinearLayout
             android:id="@+id/layout2"
+            android:layout_marginTop="@dimen/wp3"
             android:layout_width="@dimen/wp130"
-            android:layout_height="@dimen/wp60"
+            android:layout_height="@dimen/wp56"
             android:background="@drawable/frame_cell_white"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/wp30"
+                android:layout_height="@dimen/wp28"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -148,7 +149,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/wp30"
+                android:layout_height="@dimen/wp28"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -208,7 +209,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="horizontal"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <LinearLayout
                 android:layout_width="@dimen/wp40"
@@ -437,7 +438,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/wp16"
+            android:layout_height="@dimen/wp15"
             android:layout_marginTop="@dimen/wp2"
             android:orientation="horizontal">
 

@@ -15,6 +15,7 @@
             android:id="@+id/txt_description"
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp17"
+            android:layout_marginTop="@dimen/wp5"
             android:gravity="center"
             android:text="아래 통장에서 계좌번호를 찾아 누르세요."
             android:textColor="#FFFFFF"
@@ -22,8 +23,8 @@
             android:textStyle="bold" />
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/wp80"
+            android:layout_width="@dimen/wp130"
+            android:layout_height="@dimen/wp70"
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="horizontal"

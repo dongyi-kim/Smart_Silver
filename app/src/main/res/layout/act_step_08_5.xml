@@ -13,6 +13,7 @@
 
         <TextView
             android:id="@+id/txt_description"
+            android:layout_marginTop="@dimen/wp5"
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp20"
             android:gravity="center"
