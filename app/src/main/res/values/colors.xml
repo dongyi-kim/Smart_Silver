@@ -7,5 +7,8 @@
     <color name="result_fail">#e74c3c</color>
     <color name="result_doing">#f39c12</color>
     <color name="result_done">#f1c40f</color>
+    <color name="chalk_pink">#f2a3bd</color>
+    <color name="chalk_blue">#6fe7db</color>
+
 
 </resources>
