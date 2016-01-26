@@ -113,10 +113,10 @@ public class ActStep0801 extends StageActivity {
         private final int ansbtn[][] = {{1,1,1},{1,1,0},{1,1,1,},{1,1,1},{1,1,0}}; // 답 버튼
         private final int blank[] = {1,5,4,5,1};
         private final int prob[][][] = {{{R.drawable.icon_8_1_3, R.drawable.icon_8_1_3, R.drawable.icon_8_1_3, R.drawable.icon_8_1_2, R.drawable.icon_8_1_3, R.drawable.icon_8_1_2,},
-                {R.drawable.icon_8_1_3, R.drawable.icon_8_1_3, R.drawable.icon_8_1_3, R.drawable.icon_8_1_6, R.drawable.icon_8_1_3, R.drawable.icon_8_1_6},
+                {R.drawable.icon_8_1_3, R.drawable.icon_8_1_3, R.drawable.icon_8_1_3, R.drawable.icon_8_1_4, R.drawable.icon_8_1_3, R.drawable.icon_8_1_4},
                 {R.drawable.icon_8_1_8, R.drawable.icon_8_1_3, R.drawable.icon_8_1_8, R.drawable.icon_8_1_6, R.drawable.icon_8_1_8, R.drawable.icon_8_1_6}},
 
-                {{R.drawable.icon_8_1_3, R.drawable.icon_8_1_2, R.drawable.icon_8_1_3, R.drawable.icon_8_1_2, R.drawable.icon_8_1_3, R.drawable.icon_8_1_3},
+                {{R.drawable.icon_8_1_3, R.drawable.icon_8_1_1, R.drawable.icon_8_1_3, R.drawable.icon_8_1_1, R.drawable.icon_8_1_3, R.drawable.icon_8_1_3},
                         {R.drawable.icon_8_1_3, R.drawable.icon_8_1_6, R.drawable.icon_8_1_3, R.drawable.icon_8_1_6, R.drawable.icon_8_1_3, R.drawable.icon_8_1_3},
                         {R.drawable.icon_8_1_8, R.drawable.icon_8_1_6, R.drawable.icon_8_1_3, R.drawable.icon_8_1_8, R.drawable.icon_8_1_6, R.drawable.icon_8_1_3}},
 
