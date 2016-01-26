@@ -106,7 +106,7 @@ public class ActStep0702 extends StageActivity{
         };
 
         private final String arrAnswer[][] = {
-                {"5 정거장", "3 정거장", "6 정거장"},
+                {"5 정거장", "3 정거장", "4 정거장"},
                 {"8 정거장", "7 정거장", "2 정거장"},
                 {"5 정거장", "7 정거장", "5 정거장"},
                 {"9 정거장", "4 정거장", "10 정거장"},
