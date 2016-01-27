@@ -174,7 +174,7 @@
                         android:layout_weight=".46"
                         android:background="@drawable/button_fit_background_solid_border_transparent"
                         android:gravity="center"
-                        android:text="2004년 01월부터 2004년 04월 30일 까지"
+                        android:text="2016년 01월부터 16년 04월 30일 까지"
                         android:textSize="@dimen/wp3" />
                 </LinearLayout>
 
@@ -220,7 +220,7 @@
                     android:layout_marginLeft="@dimen/wp14"
                     android:layout_weight=".07"
                     android:background="@drawable/button_fit_background_solid_border_transparent"
-                    android:text="12,800"
+                    android:text="18,700"
                     android:textSize="@dimen/wp4" />
             </LinearLayout>
 
