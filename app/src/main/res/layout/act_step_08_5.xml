@@ -18,8 +18,8 @@
             android:layout_height="@dimen/wp20"
             android:gravity="center"
             android:text="다음 네모 안에 어떤 그림이 들어가야 할까요?"
-            android:textColor="#FFFFFF"
             android:textSize="@dimen/wp6"
+            android:textColor="#FFFFFF"
             android:textStyle="bold" />
 
         <LinearLayout
