@@ -98,8 +98,7 @@ public class ActStep0201 extends StageActivity {
             btnSingleCell[i].setText(String.valueOf(iVal - i));
         }
 
-        setCheck(btnSingleCell[0]);
-        setCheck(btnSingleCell[iDistance]);
+
 
         iNextAnswer = 2*iDistance ;
         iLastButton = arrRowCount[iStage-1] * 10 -1;
@@ -111,7 +110,8 @@ public class ActStep0201 extends StageActivity {
             else
                 frameLayout[i].setVisibility(View.GONE);
         }
-
+        setCheck(btnSingleCell[0]);
+        setCheck(btnSingleCell[iDistance]);
         iRetryCount = 0;
         frameLayout[0].setBackgroundColor(Color.GRAY);
         StartRecording();

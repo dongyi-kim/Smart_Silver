@@ -17,6 +17,7 @@
             android:background="#FFF"
             android:id="@+id/pager_strip"
             android:paddingBottom="10dp"
+            android:layoutMode="opticalBounds"
             android:paddingTop="10dp"
             android:textColor="@android:color/holo_green_dark"
             style="@style/PagerTabStrip"/>
