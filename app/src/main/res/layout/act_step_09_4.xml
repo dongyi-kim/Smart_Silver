@@ -12,13 +12,13 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/txt_description"
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp17"
             android:layout_marginTop="@dimen/wp5"
             android:gravity="center"
             android:text="아래의 과일과 견과류에서 각각 1종류씩 골라 주스를 만들려 합니다. 선택할 수 있는 종류는 모두 몇 가지인가요?"
             android:textColor="#FFFFFF"
-            android:id="@+id/txt_description"
             android:textSize="@dimen/wp5"
             android:textStyle="bold" />
 
@@ -26,175 +26,188 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/wp60"
             android:layout_gravity="center"
-            android:visibility="visible"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="visible">
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_height="@dimen/wp30">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/wp6"
-                    android:text="과일"
-                    android:id="@+id/sub1"
-                    android:textColor="#FFFFFF"
-                    android:textSize="@dimen/wp5"
-                    android:gravity="center"/>
+                android:layout_height="@dimen/wp30"
+                android:gravity="center">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/wp24"
-                    android:background="@drawable/frame_cell_white">
+                    android:layout_height="@dimen/wp27"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/wp3"
+                    android:background="@drawable/frame_cell_white"
+                    android:paddingTop="@dimen/wp3">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:layout_marginRight="@dimen/wp7"
                         android:layout_marginLeft="@dimen/wp7"
+                        android:layout_marginRight="@dimen/wp7"
+                        android:gravity="center"
                         android:orientation="vertical">
 
                         <ImageView
+                            android:id="@+id/img_1_1"
                             android:layout_width="@dimen/wp30"
                             android:layout_height="@dimen/wp18"
-                            android:id="@+id/img_1_1"
-                            android:src="@drawable/fruit_9_4_1"/>
+                            android:src="@drawable/fruit_9_4_1" />
+
                         <TextView
+                            android:id="@+id/txt_1_1"
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/wp4"
-                            android:text="딸기"
-                            android:textSize="@dimen/wp4"
-                            android:id="@+id/txt_1_1"
                             android:gravity="center"
-                            android:textColor="#FFFFFF"/>
+                            android:text="딸기"
+                            android:textColor="#FFFFFF"
+                            android:textSize="@dimen/wp4" />
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/layout1"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginRight="@dimen/wp7"
                         android:layout_marginLeft="@dimen/wp7"
-                        android:id="@+id/layout1"
+                        android:layout_marginRight="@dimen/wp7"
                         android:gravity="center"
                         android:orientation="vertical">
 
                         <ImageView
+                            android:id="@+id/img_1_2"
                             android:layout_width="@dimen/wp30"
                             android:layout_height="@dimen/wp18"
-                            android:id="@+id/img_1_2"
-                            android:src="@drawable/fruit_9_4_3"/>
+                            android:src="@drawable/fruit_9_4_3" />
+
                         <TextView
+                            android:id="@+id/txt_1_2"
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/wp4"
-                            android:text="당근"
-                            android:id="@+id/txt_1_2"
-                            android:textSize="@dimen/wp4"
                             android:gravity="center"
-                            android:textColor="#FFFFFF"/>
+                            android:text="당근"
+                            android:textColor="#FFFFFF"
+                            android:textSize="@dimen/wp4" />
                     </LinearLayout>
                 </LinearLayout>
 
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_height="@dimen/wp30">
-
                 <TextView
-                    android:layout_width="match_parent"
+                    android:id="@+id/sub1"
+                    android:layout_width="wrap_content"
                     android:layout_height="@dimen/wp6"
-                    android:text="견과류"
-                    android:id="@+id/sub2"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#40625E"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/wp2"
+                    android:paddingRight="@dimen/wp2"
+                    android:text="과일"
                     android:textColor="#FFFFFF"
-                    android:textSize="@dimen/wp5"
-                    android:gravity="center"/>
+                    android:textSize="@dimen/wp5" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/wp30"
+                android:gravity="center">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/wp24"
-                    android:background="@drawable/frame_cell_white">
+                    android:layout_height="@dimen/wp27"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/wp3"
+                    android:background="@drawable/frame_cell_white"
+                    android:paddingTop="@dimen/wp3">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:visibility="gone"
                         android:layout_marginRight="@dimen/wp7"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:visibility="gone">
 
                         <ImageView
                             android:layout_width="@dimen/wp30"
                             android:layout_height="@dimen/wp19"
-                            android:src="@drawable/fruit_9_4_1"/>
+                            android:src="@drawable/fruit_9_4_1" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/wp4"
+                            android:gravity="center"
                             android:text="딸기"
-                            android:textSize="@dimen/wp4"
-                            android:gravity="center"
-                            android:textColor="#FFFFFF"/>
+                            android:textColor="#FFFFFF"
+                            android:textSize="@dimen/wp4" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:layout_marginRight="@dimen/wp7"
                         android:layout_marginLeft="@dimen/wp7"
+                        android:layout_marginRight="@dimen/wp7"
+                        android:gravity="center"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="@dimen/wp30"
                             android:id="@+id/img_2_1"
+                            android:layout_width="@dimen/wp30"
                             android:layout_height="@dimen/wp18"
-                            android:src="@drawable/fruit_9_4_7"/>
+                            android:src="@drawable/fruit_9_4_7" />
+
                         <TextView
+                            android:id="@+id/txt_2_1"
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/wp4"
-                            android:id="@+id/txt_2_1"
-                            android:text="아몬드"
-                            android:textSize="@dimen/wp4"
                             android:gravity="center"
-                            android:textColor="#FFFFFF"/>
+                            android:text="아몬드"
+                            android:textColor="#FFFFFF"
+                            android:textSize="@dimen/wp4" />
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/layout3"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:id="@+id/layout3"
-                        android:gravity="center"
-                        android:layout_marginRight="@dimen/wp7"
                         android:layout_marginLeft="@dimen/wp7"
+                        android:layout_marginRight="@dimen/wp7"
+                        android:gravity="center"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="@dimen/wp30"
                             android:id="@+id/img_2_2"
+                            android:layout_width="@dimen/wp30"
                             android:layout_height="@dimen/wp18"
-                            android:src="@drawable/fruit_9_4_11"/>
+                            android:src="@drawable/fruit_9_4_11" />
+
                         <TextView
+                            android:id="@+id/txt_2_2"
                             android:layout_width="wrap_content"
                             android:layout_height="@dimen/wp4"
-                            android:id="@+id/txt_2_2"
-                            android:text="호두"
-                            android:textSize="@dimen/wp4"
                             android:gravity="center"
-                            android:textColor="#FFFFFF"/>
+                            android:text="호두"
+                            android:textColor="#FFFFFF"
+                            android:textSize="@dimen/wp4" />
                     </LinearLayout>
 
                 </LinearLayout>
 
+                <TextView
+                    android:id="@+id/sub2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/wp6"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#40625E"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/wp2"
+                    android:paddingRight="@dimen/wp2"
+                    android:text="과일"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/wp5" />
 
-
-            </LinearLayout>
+            </FrameLayout>
 
         </LinearLayout>
 

@@ -72,9 +72,9 @@ public class ActStep0303 extends StageActivity{
             iFirstAnsNumber += iGapMult;
         }
 
-        if(iStage >= NUM_OF_STAGE - 1) {
+        if(iStage == NUM_OF_STAGE - 1) {
             for(int i = 0; i < 2; i++) {
-                txtFoodDescription[i].setTextSize(getResources().getDimension(R.dimen.wp5));
+                txtFoodDescription[i].setTextSize(txtFoodDescription[i].getTextSize() * 0.4f);
                 LinearLayout.LayoutParams txtParam = (LinearLayout.LayoutParams) txtFoodDescription[i].getLayoutParams();
                 txtParam.leftMargin = 0;
                 txtParam.rightMargin = 0;
