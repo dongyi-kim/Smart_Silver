@@ -71,11 +71,12 @@ public class ActStep0701 extends StageActivity {
                                     iButtonRow = r;
                                     iButtonColumn = c;
                                 }
-
-                        if (iButtonRow == dataSet.iAnswerIndex[0] && iButtonColumn == dataSet.iAnswerIndex[1])
-                            isRight = true;
-                        else isRight = false;
-                        checkAnswer();
+                        if(dataSet.box[iButtonRow][iButtonColumn] == 1) {
+                            if (iButtonRow == dataSet.iAnswerIndex[0] && iButtonColumn == dataSet.iAnswerIndex[1])
+                                isRight = true;
+                            else isRight = false;
+                            checkAnswer();
+                        }
                     }
                 });// end of button listener
             }
