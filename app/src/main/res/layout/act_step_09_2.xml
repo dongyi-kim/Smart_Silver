@@ -31,9 +31,9 @@
 
         <LinearLayout
             android:id="@+id/layout2"
-            android:layout_marginTop="@dimen/wp3"
             android:layout_width="@dimen/wp130"
             android:layout_height="@dimen/wp56"
+            android:layout_marginTop="@dimen/wp3"
             android:background="@drawable/frame_cell_white"
             android:orientation="vertical"
             android:visibility="visible">
@@ -211,23 +211,17 @@
             android:orientation="horizontal"
             android:visibility="gone">
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="@dimen/wp40"
-                android:layout_height="@dimen/wp60"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/wp10"
-                    android:gravity="center"
-                    android:text="밥"
-                    android:textColor="#FFFFFF"
-                    android:textSize="@dimen/wp7" />
+                android:layout_height="@dimen/wp60">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/wp50"
-                    android:background="@drawable/frame_cell_white">
+                    android:layout_height="@dimen/wp55"
+                    android:layout_marginTop="@dimen/wp5"
+                    android:background="@drawable/frame_cell_white"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/wp5">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -277,32 +271,37 @@
 
                     </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/wp10"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#40625E"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/wp2"
+                    android:paddingRight="@dimen/wp2"
+                    android:text="밥"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/wp7" />
+            </FrameLayout>
 
 
             <LinearLayout
                 android:layout_width="@dimen/wp5"
                 android:layout_height="match_parent"></LinearLayout>
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="@dimen/wp85"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/wp10"
-                    android:gravity="center"
-                    android:text="찌개"
-                    android:textColor="#FFFFFF"
-                    android:textSize="@dimen/wp7" />
+                android:layout_height="match_parent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/wp50"
+                    android:layout_height="@dimen/wp55"
+                    android:layout_marginTop="@dimen/wp5"
                     android:background="@drawable/frame_cell_white"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/wp5">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -379,10 +378,10 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/layout_erase_9_2"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/wp25"
                         android:gravity="center"
-                        android:id="@+id/layout_erase_9_2"
                         android:orientation="horizontal">
 
                         <LinearLayout
@@ -432,7 +431,19 @@
                     </LinearLayout>
 
                 </LinearLayout>
-            </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/wp10"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#40625E"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/wp2"
+                    android:paddingRight="@dimen/wp2"
+                    android:text="찌개"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/wp7" />
+            </FrameLayout>
 
         </LinearLayout>
 

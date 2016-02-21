@@ -114,9 +114,9 @@ public class ActStep0304 extends StageActivity {
             txtFoodDescription2[0].setText(dataSet.sFoodDescription[0]);
             txtFoodDescription2[1].setText(dataSet.sFoodDescription[1]);
 
-            if(iStage >= NUM_OF_STAGE - 1) {
+            if(iStage == NUM_OF_STAGE - 1) {
                 for(int i = 0; i < 2; i++) {
-                    txtFoodDescription2[i].setTextSize(getResources().getDimension(R.dimen.wp5));
+                    txtFoodDescription2[i].setTextSize(txtFoodDescription2[i].getTextSize() * 0.4f);
                     LinearLayout.LayoutParams txtParam = (LinearLayout.LayoutParams) txtFoodDescription2[i].getLayoutParams();
                     txtParam.leftMargin = 0;
                     txtParam.rightMargin = 0;
