@@ -149,7 +149,11 @@ public class DB extends SQLiteOpenHelper {
                     //int id = cursor.getInt(0);
                     ResultData data= new ResultData( cursor.getInt(1), cursor.getInt(2), cursor.getInt(3) );
                     data.millisec = cursor.getInt(4);
-                    data.isSuccess = ( Integer.parseInt(cursor.getString(5)) == 1 );
+                    data.isSuccess = ( Integer.parseInt(cursor.getString(5)) > 0 );
+                    data.tryCount =  Math.abs(Integer.parseInt(cursor.getString(5)));
+                    if(data.tryCount == 0){
+                        data.tryCount = 1;
+                    }
                     data.timestamp = ( cursor.getString(6) );
                     list.add(data);
                     cursor.moveToNext();

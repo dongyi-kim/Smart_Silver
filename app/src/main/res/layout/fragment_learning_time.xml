@@ -1,70 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="10dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="400dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <!--android:background="@android:color/white"-->
 
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <com.github.mikephil.charting.charts.PieChart
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/piechart_learning_today">
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_alignParentBottom="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/card_shadow"
-                android:padding="10dp"
-                >
+                </com.github.mikephil.charting.charts.PieChart>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="30sp"
-                    android:text="오늘 학습시"/>
-                <com.github.mikephil.charting.charts.BarChart
-                    android:id="@+id/chart2"
-                    android:layout_marginTop="10dp"
+                    android:textSize="20dp"
+                    android:layout_margin="10dp"
+                    android:text="오늘의 학습시간"
+
+                    android:textStyle="bold"/>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <com.github.mikephil.charting.charts.PieChart
+                    android:paddingTop="10dp"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_alignParentBottom="true">
+                    android:layout_height="match_parent"
+                    android:id="@+id/piechart_learning_total">
 
-                </com.github.mikephil.charting.charts.BarChart>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginTop="10dp"
-                android:orientation="vertical"
-                android:layout_alignParentBottom="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/card_shadow"
-                android:padding="10dp"
-                >
+                </com.github.mikephil.charting.charts.PieChart>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="30sp"
-                    android:text="최근 학습시간"/>
-                <com.github.mikephil.charting.charts.BarChart
-                    android:id="@+id/chart"
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_alignParentBottom="true">
+                    android:textSize="20dp"
+                    android:layout_margin="10dp"
+                    android:text="총 학습시간"
+                    android:textStyle="bold"
 
-                </com.github.mikephil.charting.charts.BarChart>
-            </LinearLayout>
-
+                    />
+            </FrameLayout>
         </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:text="학습시간 통계"
+            android:textStyle="bold"
 
-    </ScrollView>
+            />
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginBottom="20dp"
+            >
+
+        </com.github.mikephil.charting.charts.BarChart>
+
+    </LinearLayout>
 
 
 
@@ -72,6 +82,4 @@
 
 
 
-
-
-</RelativeLayout>
+</ScrollView>

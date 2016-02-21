@@ -33,7 +33,7 @@ public class ReportActivity extends FragmentActivity {
         ButterKnife.bind(this);
 
         viewPager.setAdapter(new CustomPagerAdapter(this.getSupportFragmentManager()));
-
+        viewPager.setOffscreenPageLimit(3);
     }
 
 

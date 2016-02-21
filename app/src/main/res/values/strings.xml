@@ -6,5 +6,21 @@
     <string name="action_settings">Settings</string>
     <string name="title_item_list">Items</string>
     <string name="title_item_detail">Item Detail</string>
-
+    <string-array name="step_array">
+        <item>전체</item>
+        <item>스탭1</item>
+        <item>스탭2</item>
+        <item>스탭3</item>
+        <item>스탭4</item>
+        <item>스탭5</item>
+        <item>스탭6</item>
+        <item>스탭7</item>
+        <item>스탭8</item>
+        <item>스탭9</item>
+        <item>스탭10</item>
+    </string-array>
+    <string-array name="duration_option_array">
+        <item>전체</item>
+        <item>오늘</item>
+    </string-array>
 </resources>

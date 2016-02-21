@@ -2,7 +2,6 @@ package src.activities.Step05;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -13,7 +12,6 @@ import android.widget.Button;
 import java.util.Random;
 
 import cdmst.smartsilver.R;
-import src.activities.ActMain;
 import src.activities.StageActivity;
 import src.dialogs.DlgResultMark;
 import src.viewes.DrawView;
@@ -89,13 +87,14 @@ public class ActStep0502 extends StageActivity {
         for (int i = 0; i < 3; i++)
             btnAnswer[i].setText("" + (iNextExample + i));
 
-        StartRecording();
+        startRecording();
     }
 
     public synchronized void checkAnswer(Object o) {
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
-        if (isRight || iRetryCount > 1) StopRecording(isRight);
+        countUpTry();
+        if (isRight || iRetryCount > 1) stopRecording(isRight);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override

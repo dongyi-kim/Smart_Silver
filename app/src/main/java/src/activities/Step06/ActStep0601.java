@@ -69,7 +69,7 @@ public class ActStep0601 extends StageActivity {
         btnAnswer[0].setText(dataSet.txtBtn1);
         btnAnswer[1].setText(dataSet.txtBtn2);
 
-        StartRecording();
+        startRecording();
     }
 
     @Override
@@ -77,7 +77,9 @@ public class ActStep0601 extends StageActivity {
         DlgResultMark dlg = new DlgResultMark(this, ans);
         dlg.show();
 
-        if(ans || Count > 1) StopRecording(ans);
+        countUpTry();
+
+        if(ans || Count > 1) stopRecording(ans);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override

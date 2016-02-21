@@ -14,12 +14,12 @@
         <android.support.v4.view.PagerTabStrip
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FFF"
+            android:background="@android:color/background_dark"
             android:id="@+id/pager_strip"
             android:paddingBottom="10dp"
             android:layoutMode="opticalBounds"
             android:paddingTop="10dp"
-            android:textColor="@android:color/holo_green_dark"
+            android:textColor="@android:color/white"
             style="@style/PagerTabStrip"/>
 
     </android.support.v4.view.ViewPager>

@@ -73,13 +73,14 @@ public class ActStep0805 extends StageActivity {
         description.setText(dataSet.des);
         mainimg.setImageResource(dataSet.img);
 
-        StartRecording();
+        startRecording();
     }
 
     public synchronized void checkAnswer(Object o) {
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
-        if (isRight || iRetryCount > 1) StopRecording(isRight);
+        countUpTry();
+        if (isRight || iRetryCount > 1) stopRecording(isRight);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override

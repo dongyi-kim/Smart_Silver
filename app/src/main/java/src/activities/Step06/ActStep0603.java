@@ -2,8 +2,6 @@ package src.activities.Step06;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.LabeledIntent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -219,14 +217,15 @@ public class ActStep0603 extends StageActivity {
         for(int i = 0 ; i < 4 ; i ++)
             btnAnswer[i].setText(dataSet.btnTxt[i]);
 
-        StartRecording();
+        startRecording();
     }
 
     @Override
     public synchronized void checkAnswer(Object object) {
         DlgResultMark dlg = new DlgResultMark(this, ans);
         dlg.show();
-        if(ans || Count > 1) StopRecording(ans);
+        countUpTry();
+        if(ans || Count > 1) stopRecording(ans);
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface dialog) {

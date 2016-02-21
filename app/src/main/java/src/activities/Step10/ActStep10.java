@@ -97,13 +97,14 @@ public class ActStep10 extends StageActivity {
         txtFomula.setText(dataSet.sFomula);
         txtInputAnswer.setText("");
 
-        StartRecording();
+        startRecording();
     }
 
     public void checkAnswer(Object o) {
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
-        if (isRight || iRetryCount > 1) StopRecording(isRight);
+        countUpTry();
+        if (isRight || iRetryCount > 1) stopRecording(isRight);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override

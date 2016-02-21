@@ -5,15 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.util.Random;
 
 import cdmst.smartsilver.R;
 import src.activities.StageActivity;
-import src.activities.Step04.ActStep0403;
 import src.dialogs.DlgResultMark;
 
 /**
@@ -96,13 +91,14 @@ public class ActStep0803 extends StageActivity {
             box[i].setText(dataSet.prob[i]);
         }
 
-        StartRecording();
+        startRecording();
     }
 
     public synchronized void checkAnswer(Object o) {
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
-        if (isRight || iRetryCount > 1) StopRecording(isRight);
+        countUpTry();
+        if (isRight || iRetryCount > 1) stopRecording(isRight);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override

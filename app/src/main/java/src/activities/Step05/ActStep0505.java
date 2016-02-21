@@ -11,7 +11,6 @@ import android.widget.TextView;
 import java.util.Random;
 
 import cdmst.smartsilver.R;
-import src.activities.ActMain;
 import src.activities.StageActivity;
 import src.activities.Step06.ActStep0601;
 import src.dialogs.DlgResultMark;
@@ -67,13 +66,14 @@ public class ActStep0505 extends StageActivity {
             txtAnswer[i].setText(dataSet.sCountDescription[i]);
         }
 
-        StartRecording();
+        startRecording();
     }
 
     public synchronized void checkAnswer(Object o){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
-        if(isRight || iRetryCount > 1) StopRecording(isRight);
+        countUpTry();
+        if(isRight || iRetryCount > 1) stopRecording(isRight);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override

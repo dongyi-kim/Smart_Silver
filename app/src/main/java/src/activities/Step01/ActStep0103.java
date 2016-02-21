@@ -3,9 +3,7 @@ package src.activities.Step01;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -167,14 +165,15 @@ public class ActStep0103 extends StageActivity {
             }
         }
 
-        StartRecording();
+        startRecording();
     }
 
 
     public synchronized void checkAnswer(Object object){
+        countUpTry();
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
-        if(isRight || iRetryCount > 1) StopRecording(isRight);
+        if(isRight || iRetryCount > 1) stopRecording(isRight);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override

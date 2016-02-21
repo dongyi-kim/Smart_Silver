@@ -1,21 +1,15 @@
 package src.activities.Step02;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.GridLayout;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.HashMap;
-import java.util.Random;
 
 import cdmst.smartsilver.R;
 import src.activities.StageActivity;
@@ -114,7 +108,7 @@ public class ActStep0201 extends StageActivity {
         setCheck(btnSingleCell[iDistance]);
         iRetryCount = 0;
         frameLayout[0].setBackgroundColor(Color.GRAY);
-        StartRecording();
+        startRecording();
     }
 
     //123123
@@ -135,9 +129,9 @@ public class ActStep0201 extends StageActivity {
             isRight = false;
             iRetryCount ++;
         }
-
+        countUpTry();
         if(iRetryCount >= 3 || iNextAnswer > iLastButton) {
-            StopRecording(isRight);
+            stopRecording(isRight);
             if(++iStage <= 5)
                 setQuestion(false);
             else

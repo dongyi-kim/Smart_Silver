@@ -3,25 +3,16 @@ package src.activities.Step04;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import junit.framework.Test;
-
-import org.w3c.dom.Text;
 
 import java.util.Random;
 
 import cdmst.smartsilver.R;
-import src.activities.ActMain;
 import src.activities.StageActivity;
 import src.activities.Step05.ActStep0501;
-import src.activities.Step05.ActStep0502;
 import src.dialogs.DlgResultMark;
 
 /**
@@ -75,13 +66,14 @@ public class ActStep0405 extends StageActivity {
             txtAnswer[i].setText(dataSet.sCountDescription[i]);
         }
 
-        StartRecording();
+        startRecording();
     }
 
     public synchronized void checkAnswer(Object o){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
-        if(isRight || iRetryCount > 1) StopRecording(isRight);
+        countUpTry();
+        if(isRight || iRetryCount > 1) stopRecording(isRight);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override

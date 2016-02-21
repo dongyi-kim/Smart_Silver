@@ -2,23 +2,16 @@ package src.activities.Step03;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
-import android.text.Html;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.Random;
 
 import cdmst.smartsilver.R;
-import src.activities.ActMain;
 import src.activities.StageActivity;
 import src.dialogs.DlgResultMark;
 
@@ -126,14 +119,15 @@ public class ActStep0304 extends StageActivity {
             }
         }
 
-        StartRecording();
+        startRecording();
     }
 
 
     public synchronized void checkAnswer(Object object){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
-        if(isRight || iRetryCount > 1) StopRecording(isRight);
+        countUpTry();
+        if(isRight || iRetryCount > 1) stopRecording(isRight);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override

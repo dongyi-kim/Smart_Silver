@@ -2,7 +2,6 @@ package src.activities.Step06;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import cdmst.smartsilver.R;
-import src.activities.ActMain;
 import src.activities.StageActivity;
 import src.dialogs.DlgResultMark;
 
@@ -117,15 +115,15 @@ public class ActStep0604 extends StageActivity {
             btnAnswer[1].setVisibility(View.GONE);
         }
 
-        StartRecording();
+        startRecording();
     }
 
     @Override
     public synchronized void checkAnswer(Object object) {
         DlgResultMark dlg = new DlgResultMark(this, ans);
         dlg.show();
-
-        if(ans || Count > 1) StopRecording(ans);
+        countUpTry();
+        if(ans || Count > 1) stopRecording(ans);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override

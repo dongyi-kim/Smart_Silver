@@ -68,7 +68,7 @@ public class ActStep0302 extends StageActivity{
 
         if(!isRetry) {
             processSet.setData(iStage);
-            StartRecording();
+            startRecording();
         }
 
         //delete last process
@@ -106,6 +106,7 @@ public class ActStep0302 extends StageActivity{
 
 
     public synchronized void checkAnswer(Object object){
+        countUpTry();
         if(isRight){
             iProcess++;
             setNextProcess();
@@ -114,7 +115,7 @@ public class ActStep0302 extends StageActivity{
                 txtAnswer[iProcess].setText("" + iNextResult);
                 DlgResultMark dlg = new DlgResultMark(this, isRight);
                 dlg.show();
-                StopRecording(isRight);
+                stopRecording(isRight);
 
                 dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
                     @Override
@@ -133,7 +134,7 @@ public class ActStep0302 extends StageActivity{
         else{
             DlgResultMark dlg = new DlgResultMark(this, isRight);
             dlg.show();
-            if(iRetryCount > 1) StopRecording(isRight);
+            if(iRetryCount > 1) stopRecording(isRight);
 
             dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
                 @Override

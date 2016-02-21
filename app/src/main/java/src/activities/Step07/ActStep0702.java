@@ -11,7 +11,6 @@ import java.util.Random;
 
 import cdmst.smartsilver.R;
 import src.activities.StageActivity;
-import src.activities.Step04.ActStep0402;
 import src.dialogs.DlgResultMark;
 
 /**
@@ -59,13 +58,14 @@ public class ActStep0702 extends StageActivity{
         btnAnswer[0].setText(dataSet.iAnswerSet[0]);
         btnAnswer[1].setText(dataSet.iAnswerSet[1]);
 
-        StartRecording();
+        startRecording();
     }
 
     public synchronized void checkAnswer(Object o){
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
-        if(isRight || iRetryCount > 1) StopRecording(isRight);
+        countUpTry();
+        if(isRight || iRetryCount > 1) stopRecording(isRight);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override

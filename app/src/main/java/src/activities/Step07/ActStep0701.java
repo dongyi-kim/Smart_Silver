@@ -2,7 +2,6 @@ package src.activities.Step07;
 
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -12,7 +11,6 @@ import android.widget.Button;
 import java.util.Random;
 
 import cdmst.smartsilver.R;
-import src.activities.ActMain;
 import src.activities.StageActivity;
 import src.dialogs.DlgResultMark;
 
@@ -107,13 +105,14 @@ public class ActStep0701 extends StageActivity {
             } else linearLineCell[i].setVisibility(View.GONE);
         }
 
-        StartRecording();
+        startRecording();
     }
 
     public synchronized void checkAnswer(Object o) {
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
-        if (isRight || iRetryCount > 1) StopRecording(isRight);
+        countUpTry();
+        if (isRight || iRetryCount > 1) stopRecording(isRight);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override

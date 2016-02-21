@@ -74,15 +74,15 @@ public class ActStep0602 extends StageActivity {
         else
             btnAnswer[2].setVisibility(View.GONE);
 
-        StartRecording();
+        startRecording();
     }
 
     @Override
     public synchronized void checkAnswer(Object object) {
         DlgResultMark dlg = new DlgResultMark(this, ans);
         dlg.show();
-
-        if(ans || Count > 1) StopRecording(ans);
+        countUpTry();
+        if(ans || Count > 1) stopRecording(ans);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override

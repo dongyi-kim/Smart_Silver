@@ -83,11 +83,12 @@ public class ActStep0101 extends StageActivity implements View.OnClickListener {
         txtAnswer.setText("");
         buffAnswer = new StringBuffer("");
         if(!isRetry)
-            super.StartRecording();
+            super.startRecording();
     }
 
     public synchronized void checkAnswer(Object object)
     {
+        countUpTry();
         boolean isAnswer = txtAnswer.getText().equals(txtQuestion.getText());
 
         DlgResultMark dlg = new DlgResultMark(this, isAnswer);
@@ -98,7 +99,7 @@ public class ActStep0101 extends StageActivity implements View.OnClickListener {
         if(isAnswer || iRetry >= 3 )
         {
             iStage ++;
-            super.StopRecording(isAnswer);
+            super.stopRecording(isAnswer);
             if(iStage > NUM_OF_STAGE)
             {   // next level
                 goNext();

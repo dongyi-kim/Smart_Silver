@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:text="학습 진도표"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="800dp"
+            android:orientation="vertical"
+            android:background="@android:color/darker_gray"
+            android:id="@+id/linear_table"
+            android:weightSum="11">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="6">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:textStyle="bold"
+                    android:text="1단계" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:textStyle="bold"
+                    android:background="@android:color/white"
+                    android:text="2단계" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:textStyle="bold"
+                    android:background="@android:color/white"
+                    android:text="3단계" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:textStyle="bold"
+                    android:background="@android:color/white"
+                    android:text="4단계" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:textStyle="bold"
+                    android:background="@android:color/white"
+                    android:text="5단계" android:gravity="center"  android:textSize="20dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="6">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:textStyle="bold"
+                    android:background="@android:color/white"
+                    android:text="챕터 1" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="숫자누르기" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="수 세기" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="짝수홀수" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="큰 수 찾기" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="시각 알아보기" android:gravity="center"  android:textSize="20dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="6">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:textStyle="bold"
+                    android:background="@android:color/white"
+                    android:text="챕터 2" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="빼기" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="OX 퀴즈" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="큰 수 찾기" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="□ 넣기" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="□ 넣기" android:gravity="center"  android:textSize="20dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="6">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:textStyle="bold"
+                    android:background="@android:color/white"
+                    android:text="챕터 3" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="일정한 수 더하기" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="일정한 수 빼기" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="덧셈 활용" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="뺄셈 활용" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="덧셈 뺄셈 활용" android:gravity="center"  android:textSize="20dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="6">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:textStyle="bold"
+                    android:background="@android:color/white"
+                    android:text="챕터 4" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="묶음 알아보기" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="곱셈의 의미" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="곱하기" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="곱셈 활용1" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="곱셈 활용2" android:gravity="center"  android:textSize="20dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="6">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:textStyle="bold"
+                    android:background="@android:color/white"
+                    android:text="챕터 5" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="등분하기1" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="등분하기2" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="나눗셈 활용1" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="나눗셈 활용2" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="나눗셈 활용3" android:gravity="center"  android:textSize="20dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="6">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:textStyle="bold"
+                    android:background="@android:color/white"
+                    android:text="챕터 6" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="규칙찾기1\n(그림)" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="규칙찾기2\n(수1)" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="규칙찾기3\n(수2)" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="표 읽기" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="도표" android:gravity="center"  android:textSize="20dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:textStyle="bold"
+                    android:background="@android:color/white"
+                    android:text="챕터 7" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="실생활\n(버스)" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="실생활\n(지하철)" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="실생활\n(은행)" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="실생활\n(병원)" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="실생활\n(고지서)" android:gravity="center"  android:textSize="20dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:weightSum="6">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:textStyle="bold"
+                    android:background="@android:color/white"
+                    android:text="챕터 8" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="원그래프" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="막대그래프" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="날씨정보1" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="날씨정보2" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="줄기잎그림" android:gravity="center"  android:textSize="20dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:textStyle="bold"
+                    android:background="@android:color/white"
+                    android:text="챕터 9" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="경우의 수1\n(분리수거)" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="경우의 수2\n(상차림)" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="경우의 수3\n(옷입히기)" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="경우의 수4\n(주스만들기)" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="경우의 수5\n(길찾기)" android:gravity="center"  android:textSize="20dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:textStyle="bold"
+                    android:background="@android:color/white"
+                    android:text="챕터 10" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="계산연습" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="" android:gravity="center"  android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1px"
+                    android:background="@android:color/white"
+                    android:text="" android:gravity="center"  android:textSize="20dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

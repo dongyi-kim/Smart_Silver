@@ -19,8 +19,11 @@ public abstract class StageActivity extends FrameActivity {
     public int iStage = 1;
     public ResultData dataNow = null;
 
+    private int countTry = 0;
+
     public static Toast nowToast = null;
 
+    private boolean onShow = false;
     @Override
     public void onCreate(Bundle bundle)
     {
@@ -35,23 +38,24 @@ public abstract class StageActivity extends FrameActivity {
         }
     }
 
-    public final synchronized void StartRecording()
+    public final synchronized void startRecording()
     {
         if(dataNow!=null){
             Log.d("Start Recoding","but not null");
             return;
         }
-        dataNow = new ResultData( iStep, iLevel,iStage);
+        dataNow = new ResultData( iStep, iLevel, iStage);
         dataNow.Start();
     }
 
-    public final synchronized void StopRecording(boolean bResult)
+    public final synchronized void stopRecording(boolean bResult)
     {
         if(dataNow == null){
             Log.d("Stop Recoding","but null");
             return;
         }
         dataNow.Stop(bResult);
+        dataNow.setTryCount(countTry);
 
 
         //toast text
@@ -91,6 +95,13 @@ public abstract class StageActivity extends FrameActivity {
         }
 
         dataNow = null;
+        countTry = 0;
+    }
+
+
+
+    protected void countUpTry(){
+        this.countTry++;
     }
 
     @Override
@@ -100,6 +111,16 @@ public abstract class StageActivity extends FrameActivity {
         {
             dataNow.Stop(false);
         }
+        onShow = false;
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+//        if(dataNow!=null){
+//        }
+//        StatisticsData.saveStatistics();
     }
 
     @Override
@@ -109,6 +130,7 @@ public abstract class StageActivity extends FrameActivity {
         {
             dataNow.Start();
         }
+        onShow = true;
     }
 
     @Override

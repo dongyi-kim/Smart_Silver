@@ -5,20 +5,17 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.*;
 import android.os.Bundle;
-import android.support.v4.graphics.*;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.ByteArrayOutputStream;
 import java.util.Random;
 
 import cdmst.smartsilver.R;
 import src.activities.StageActivity;
 import src.dialogs.DlgResultMark;
-import src.viewes.DrawView;
 
 /**
  * Created by Acka on 2015-05-19.
@@ -109,13 +106,14 @@ public class ActStep0503 extends StageActivity {
         for (int i = 0; i < 3; i++)
             btnAnswer[i].setText("" + (iNextExample + i));
 
-        StartRecording();
+        startRecording();
     }
 
     public synchronized void checkAnswer(Object o) {
         DlgResultMark dlg = new DlgResultMark(this, isRight);
         dlg.show();
-        if (isRight || iRetryCount > 1) StopRecording(isRight);
+        countUpTry();
+        if (isRight || iRetryCount > 1) stopRecording(isRight);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override
