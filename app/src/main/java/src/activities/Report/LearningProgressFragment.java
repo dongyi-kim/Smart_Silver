@@ -41,6 +41,14 @@ public class LearningProgressFragment extends Fragment {
         dataToday = DB.getResultData(String.format("SELECT * FROM %s WHERE timestamp >= \""+strToday+"\" ORDER BY timestamp;", DB.TABLE_RESULT));
 
 
+        drawTable();
+
+        return view;
+    }
+
+    private void drawTable(){
+
+
         int[][] successed = new int[11][];
         int[][] failed = new int[11][];
         for(int i = 1 ; i <= 10 ; i++){
@@ -48,21 +56,28 @@ public class LearningProgressFragment extends Fragment {
             failed[i] = new int[Utility.getNumberOfLevel(i)+1];
         }
 
-        for(ResultData data : dataAll){
-            LinearLayout row = (LinearLayout)linearTable.getChildAt(data.iStep);
-            TextView textView = (TextView)row.getChildAt(data.iLevel);
-            textView.setBackgroundColor(Color.rgb(250,248,132));
-            if(data.isSuccess)
-                successed[data.iStep][data.iLevel] ++;
-            else
-                failed[data.iStage][data.iLevel]++;
+        if (dataAll != null) {
+            for(ResultData data : dataAll){
+                LinearLayout row = (LinearLayout)linearTable.getChildAt(data.iStep);
+                TextView textView = (TextView)row.getChildAt(data.iLevel);
+                textView.setBackgroundColor(Color.rgb(250,248,132));
+                if(data.isSuccess)
+                    successed[data.iStep][data.iLevel] ++;
+                else
+                    failed[data.iStage][data.iLevel]++;
+            }
         }
 
-        for(ResultData data : dataToday){
-            LinearLayout row = (LinearLayout)linearTable.getChildAt(data.iStep);
-            TextView textView = (TextView)row.getChildAt(data.iLevel);
-            textView.setBackgroundColor(Color.rgb(186,237,145));
+
+        if(dataToday != null)
+        {
+            for(ResultData data : dataToday){
+                LinearLayout row = (LinearLayout)linearTable.getChildAt(data.iStep);
+                TextView textView = (TextView)row.getChildAt(data.iLevel);
+                textView.setBackgroundColor(Color.rgb(186,237,145));
+            }
         }
+
 
         for(int step = 1; step <= 10; step ++)
         {
@@ -74,8 +89,5 @@ public class LearningProgressFragment extends Fragment {
             }
         }
 
-
-
-        return view;
     }
 }
