@@ -8,8 +8,8 @@ android {
         applicationId "cdmst.smartsilver"
         minSdkVersion 17
         targetSdkVersion 22
-        versionCode 17
-        versionName "1.60"
+        versionCode 19
+        versionName "1.62"
     }
     buildTypes {
         release {
