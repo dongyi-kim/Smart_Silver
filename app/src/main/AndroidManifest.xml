@@ -13,7 +13,7 @@
         android:largeHeap="true"
         android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
         <activity
-            android:name="src.activities.ActMain"
+            android:name="src.activities.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="landscape">
             <intent-filter>
@@ -226,6 +226,8 @@
             android:noHistory="true"
             android:screenOrientation="landscape" />
         <activity android:name="src.activities.ActTest" />
+        <activity android:name="src.activities.SettingActivity"
+            android:screenOrientation="landscape"></activity>
         <activity
             android:name="src.activities.Report.ReportActivity"
             android:screenOrientation="landscape" />

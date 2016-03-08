@@ -3,6 +3,7 @@ package src.dialogs;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -11,6 +12,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import cdmst.smartsilver.R;
+import src.MyApplication;
 
 /**
  * Created by waps12b on 15. 3. 18..
@@ -56,6 +58,15 @@ public class DlgResultMark extends FrameDialog {
                 t.cancel();
             }
         },2000);
+
+        if(MyApplication.getInstance().isSoundEffectEnabled())
+        {
+            if(isOkay){
+                MyApplication.getInstance().playSound(MyApplication.SOUND_ID_RESULT_SUCCESS);
+            }else{
+                MyApplication.getInstance().playSound(MyApplication.SOUND_ID_RESULT_FAIL);
+            }
+        }
     }
 
 

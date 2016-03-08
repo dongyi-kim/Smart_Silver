@@ -9,7 +9,7 @@ import android.widget.TextView;
 import cdmst.smartsilver.R;
 import src.data.DB;
 import src.data.ResultData;
-import src.activities.ActMain;
+import src.activities.MainActivity;
 import src.activities.FrameActivity;
 
 /**
@@ -78,7 +78,7 @@ public class ActAskContinue extends FrameActivity {
         public void onClick(View v) {
             Intent intent;
             if(v == btnRetry) intent = new Intent(v.getContext(), ActStep10.class);
-            else intent = new Intent(v.getContext(), ActMain.class);
+            else intent = new Intent(v.getContext(), MainActivity.class);
             startActivity(intent);
         }
     };

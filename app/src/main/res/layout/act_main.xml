@@ -116,7 +116,8 @@
             <ui.RippleView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/wp18"
-                android:id="@+id/ripple_developer"
+                android:id="@+id/ripple_setting"
+                android:layout_marginBottom="@dimen/wp3"
                 >
                 <ui.MemoFrameLayout
                     android:layout_width="match_parent"
@@ -133,8 +134,9 @@
                             android:textStyle="bold"
                             android:gravity="center"
                             android:textSize="@dimen/wp7"
-                            android:text="개 발 자  "/>
+                            android:text="환경설정 "/>
                         <ImageView
+                            android:layout_alignParentRight="true"
                             android:layout_height="match_parent"
                             android:layout_width="@dimen/wp7"
                             android:src="@drawable/icon_setting_black"/>
@@ -143,6 +145,37 @@
                 </ui.MemoFrameLayout>
 
             </ui.RippleView>
+
+            <!--<ui.RippleView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/wp18"-->
+                <!--android:id="@+id/ripple_developer"-->
+                <!-->-->
+                <!--<ui.MemoFrameLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:gravity="center"-->
+                        <!--android:padding="@dimen/wp1">-->
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:textStyle="bold"-->
+                            <!--android:gravity="center"-->
+                            <!--android:textSize="@dimen/wp7"-->
+                            <!--android:text="개 발 자  "/>-->
+                        <!--<ImageView-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_width="@dimen/wp7"-->
+                            <!--android:src="@drawable/icon_setting_black"/>-->
+                    <!--</LinearLayout>-->
+
+                <!--</ui.MemoFrameLayout>-->
+
+            <!--</ui.RippleView>-->
 
 
         </LinearLayout>

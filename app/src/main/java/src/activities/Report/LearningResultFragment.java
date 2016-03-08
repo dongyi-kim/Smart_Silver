@@ -136,6 +136,8 @@ public class LearningResultFragment extends Fragment implements AdapterView.OnIt
         HashMap<String, Integer> mapTry = new HashMap<>();
 
 
+        if(datas == null || datas.length==0)
+            return;
 
         for(ResultData data: datas )
         {
