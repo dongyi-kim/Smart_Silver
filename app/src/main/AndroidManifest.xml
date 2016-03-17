@@ -8,7 +8,7 @@
     <application
         android:name="src.MyApplication"
         android:allowBackup="true"
-        android:icon="@drawable/icon_application"
+        android:icon="@drawable/icon_new"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
@@ -18,8 +18,7 @@
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+             <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
@@ -123,23 +122,23 @@
             android:noHistory="true"
             android:screenOrientation="landscape" />
         <activity
-            android:name="src.activities.Step06.ActStep0601"
+            android:name="src.activities.Step06.Step0605Activity"
             android:noHistory="true"
             android:screenOrientation="landscape" />
         <activity
-            android:name="src.activities.Step06.ActStep0602"
+            android:name="src.activities.Step08.Step0801Activity"
             android:noHistory="true"
             android:screenOrientation="landscape" />
         <activity
-            android:name="src.activities.Step06.ActStep0603"
+            android:name="src.activities.Step08.Step0802Activity"
             android:noHistory="true"
             android:screenOrientation="landscape" />
         <activity
-            android:name="src.activities.Step06.ActStep0604"
+            android:name="src.activities.Step08.Step0803Activity"
             android:noHistory="true"
             android:screenOrientation="landscape" />
         <activity
-            android:name="src.activities.Step06.ActStep0605"
+            android:name="src.activities.Step08.Step0804Activity"
             android:noHistory="true"
             android:screenOrientation="landscape" />
         <activity
@@ -178,23 +177,23 @@
             android:noHistory="true"
             android:screenOrientation="landscape" />
         <activity
-            android:name="src.activities.Step08.ActStep0801"
+            android:name="src.activities.Step06.Step0601Activity"
             android:noHistory="true"
             android:screenOrientation="landscape" />
         <activity
-            android:name="src.activities.Step08.ActStep0802"
+            android:name="src.activities.Step06.Step0602Activity"
             android:noHistory="true"
             android:screenOrientation="landscape" />
         <activity
-            android:name="src.activities.Step08.ActStep0803"
+            android:name="src.activities.Step06.Step0603Activity"
             android:noHistory="true"
             android:screenOrientation="landscape" />
         <activity
-            android:name="src.activities.Step08.ActStep0804"
+            android:name="src.activities.Step08.Step0805Activity"
             android:noHistory="true"
             android:screenOrientation="landscape" />
         <activity
-            android:name="src.activities.Step08.ActStep0805"
+            android:name="src.activities.Step06.Step0604Activity"
             android:noHistory="true"
             android:screenOrientation="landscape" />
         <activity

@@ -1,11 +1,11 @@
-package src.activities.Step06;
+package src.activities.Step08;
 
 import cdmst.smartsilver.R;
 
 /**
  * Created by jhobo_000 on 2015-06-24.
  */
-public class Step0603DataSet {
+public class Step0802DataSet {
     public int[] img;
     public int[] imgGraph;
     public String Discription;

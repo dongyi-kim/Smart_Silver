@@ -9,32 +9,29 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import cdmst.smartsilver.R;
-import src.activities.ActStartLearning;
 import src.activities.StageActivity;
+import src.activities.Step08.Step0801Activity;
 import src.dialogs.DlgResultMark;
 
 /**
- * Created by jhobo_000 on 2015-07-05.
+ * Created by jhobo_000 on 2015-05-06.
  */
+public class Step0605Activity extends StageActivity {
 
-public class ActStep0605 extends StageActivity {
-
-    private TextView txtDiscription;
+    private TextView txtDescription;
     private ImageView img;
-    private Button btnAnswer[] = new Button[3];
-
+    private Button btnAnswer[] = new Button[2];
     private boolean ans;
     private static int Count = 0;
-
     public Step0605DataSet dataSet = new Step0605DataSet();
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_step_06_5);
+        setContentView(R.layout.act_step_06_05);
 
-        txtDiscription = (TextView)findViewById(R.id.txt_discription);
+        txtDescription = (TextView)findViewById(R.id.txt_description);
 
-        img = (ImageView)findViewById(R.id.img_6_5);
+        img = (ImageView)findViewById(R.id.img_6_1);
 
         btnAnswer[0] = (Button)findViewById(R.id.btn_ans_1);
         btnAnswer[1] = (Button)findViewById(R.id.btn_ans_2);
@@ -42,16 +39,16 @@ public class ActStep0605 extends StageActivity {
         for(int i = 0; i < 2; i++){
             btnAnswer[i].setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-                    Button btnCurrentButton = (Button) v;
-
+                public void onClick(View v)
+                {
+                    Button btnCurrentButton = (Button)v;
                     String iSelectAnswer = btnCurrentButton.getText().toString();
 
-                    if (iSelectAnswer.equals(dataSet.strAns)) ans = true;
+                    if(iSelectAnswer.equals(dataSet.strAns)) ans = true;
                     else ans = false;
 
                     checkAnswer();
-                    }
+                }
             });
         } // end of button listener
 
@@ -65,13 +62,13 @@ public class ActStep0605 extends StageActivity {
 
         dataSet.setData(Seed);
 
-        txtDiscription.setText(dataSet.Discription);
+        txtDescription.setText(dataSet.Description);
         img.setImageResource(dataSet.img);
 
         // btn set
 
-        btnAnswer[0].setText(dataSet.btnTxt[0]);
-        btnAnswer[1].setText(dataSet.btnTxt[1]);
+        btnAnswer[0].setText(dataSet.txtBtn1);
+        btnAnswer[1].setText(dataSet.txtBtn2);
 
         startRecording();
     }
@@ -80,7 +77,9 @@ public class ActStep0605 extends StageActivity {
     public synchronized void checkAnswer(Object object) {
         DlgResultMark dlg = new DlgResultMark(this, ans);
         dlg.show();
+
         countUpTry();
+
         if(ans || Count > 1) stopRecording(ans);
 
         dlg.setOnDismissListener(new DialogInterface.OnDismissListener() {
@@ -103,7 +102,7 @@ public class ActStep0605 extends StageActivity {
 
     @Override
     public synchronized void goNext(Object object) {
-        Intent intent = new Intent(this, ActStartLearning.class);
+        Intent intent = new Intent(this, Step0801Activity.class);
         startActivity(intent);
     }
-}
+ }

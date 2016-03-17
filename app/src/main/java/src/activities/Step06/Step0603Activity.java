@@ -1,4 +1,4 @@
-package src.activities.Step08;
+package src.activities.Step06;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -9,12 +9,13 @@ import android.widget.TextView;
 
 import cdmst.smartsilver.R;
 import src.activities.StageActivity;
+import src.activities.Step08.Step0805Activity;
 import src.dialogs.DlgResultMark;
 
 /**
  * Created by jhobo_000 on 2015-09-07.
  */
-public class ActStep0803 extends StageActivity {
+public class Step0603Activity extends StageActivity {
 
     private int iRetryCount = 0;
     public boolean isRight = false;
@@ -22,12 +23,12 @@ public class ActStep0803 extends StageActivity {
 
     private TextView box[] = new TextView[10];
 
-    public Step0803DataSet dataSet = new Step0803DataSet();
+    public Step0603DataSet dataSet = new Step0603DataSet();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_step_08_3);
+        setContentView(R.layout.act_step_06_03);
 
         btn1 = (Button)findViewById(R.id.btn_answer_1);
         btn2 = (Button)findViewById(R.id.btn_answer_2);
@@ -116,11 +117,11 @@ public class ActStep0803 extends StageActivity {
     }
 
     public synchronized void goNext(Object object) {
-        Intent intent = new Intent(this, ActStep0804.class);
+        Intent intent = new Intent(this, Step0805Activity.class);
         startActivity(intent);
     }
 
-    public class Step0803DataSet {
+    public class Step0603DataSet {
 
         private  final String problist[][][] = {
                 {{"2","4","6","8","10"}, {"3","6","9","12","15"},{"1","3","5","7","9"}},

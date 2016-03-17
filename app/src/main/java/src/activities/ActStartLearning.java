@@ -16,12 +16,10 @@ public class ActStartLearning extends FrameActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.act_start_learning);
-
-
     }
 
     @Override

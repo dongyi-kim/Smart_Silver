@@ -17,7 +17,7 @@
             android:layout_height="@dimen/wp20"
             android:layout_marginBottom="@dimen/wp2"
             android:gravity="center"
-            android:text="다음 빈 칸에 어떤 수가 들어가야 할까요? "
+            android:text="다음 빈 칸에 어떤 수가 들어가야 할까요?"
             android:textColor="#FFFFFF"
             android:textSize="@dimen/wp6"
             android:textStyle="bold" />
@@ -32,14 +32,12 @@
             android:orientation="horizontal">
 
             <FrameLayout
-                android:id="@+id/box1"
                 android:layout_width="@dimen/wp13"
                 android:layout_height="@dimen/wp13">
                 <ImageView
-                    android:id="@+id/pink1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/frame_cell_pink" />
                 <TextView
                     android:id="@+id/bx1"
@@ -63,14 +61,12 @@
                 android:textSize="@dimen/wp10"
                 android:textStyle="bold" />
             <FrameLayout
-                android:id="@+id/box2"
                 android:layout_width="@dimen/wp13"
                 android:layout_height="@dimen/wp13">
                 <ImageView
-                    android:id="@+id/pink2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/frame_cell_pink" />
                 <TextView
                     android:id="@+id/bx2"
@@ -94,14 +90,12 @@
                 android:textSize="@dimen/wp10"
                 android:textStyle="bold" />
             <FrameLayout
-                android:id="@+id/box3"
                 android:layout_width="@dimen/wp13"
                 android:layout_height="@dimen/wp13">
                 <ImageView
-                    android:id="@+id/pink3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/frame_cell_pink" />
                 <TextView
                     android:id="@+id/bx3"
@@ -125,14 +119,12 @@
                 android:textSize="@dimen/wp10"
                 android:textStyle="bold" />
             <FrameLayout
-                android:id="@+id/box4"
                 android:layout_width="@dimen/wp13"
                 android:layout_height="@dimen/wp13">
                 <ImageView
-                    android:id="@+id/pink4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/frame_cell_pink" />
                 <TextView
                     android:id="@+id/bx4"
@@ -155,14 +147,12 @@
                 android:textSize="@dimen/wp10"
                 android:textStyle="bold" />
             <FrameLayout
-                android:id="@+id/box5"
                 android:layout_width="@dimen/wp13"
                 android:layout_height="@dimen/wp13">
                 <ImageView
-                    android:id="@+id/pink5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="fitXY"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/frame_cell_pink" />
                 <TextView
                     android:id="@+id/bx5"
@@ -176,37 +166,6 @@
                     android:textStyle="bold" />
             </FrameLayout>
 
-            <TextView
-                android:id="@+id/gone_1"
-                android:layout_width="@dimen/wp10"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="▶"
-                android:textColor="#FFFFFF"
-                android:textSize="@dimen/wp10"
-                android:textStyle="bold" />
-            <FrameLayout
-                android:id="@+id/gone_2"
-                android:layout_width="@dimen/wp13"
-                android:layout_height="@dimen/wp13">
-                <ImageView
-                    android:id="@+id/pink6"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/frame_cell_pink" />
-                <TextView
-                    android:id="@+id/bx6"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="2"
-                    android:textColor="#FFFFFF"
-                    android:textSize="@dimen/wp10"
-                    android:textStyle="bold" />
-            </FrameLayout>
 
         </LinearLayout>
 
@@ -263,6 +222,6 @@
         android:layout_gravity="center"
         android:background="@drawable/img_memo_sticker"
         android:gravity="center"
-        android:text="8 - 2"
+        android:text="6 - 3"
         android:textSize="@dimen/wp4" />
 </RelativeLayout>

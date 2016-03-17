@@ -1,4 +1,4 @@
-package src.activities.Step06;
+package src.activities.Step08;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -18,7 +18,7 @@ import src.dialogs.DlgResultMark;
  * Created by jhobo_000 on 2015-07-05.
  */
 
-public class ActStep0603 extends StageActivity {
+public class Step0802Activity extends StageActivity {
 
     private TextView txtDiscription;
     private ImageView[]img1 = new ImageView[2]; // 처음 2개그림..
@@ -43,14 +43,14 @@ public class ActStep0603 extends StageActivity {
 
     private LinearLayout layout1, layout2, layout3, layout4;
 
-    public Step0603DataSet dataSet = new Step0603DataSet();
+    public Step0802DataSet dataSet = new Step0802DataSet();
 
     private static int leftCount, rightCount;
     private static int lineMax[]={8,8,8,0,0};
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_step_06_3);
+        setContentView(R.layout.act_step_08_02);
 
         layout1 = (LinearLayout)findViewById(R.id.layout_6_1);
         layout2 = (LinearLayout)findViewById(R.id.layout_6_2);
@@ -246,7 +246,7 @@ public class ActStep0603 extends StageActivity {
 
     @Override
     public synchronized void goNext(Object object) {
-        Intent intent = new Intent(this, ActStep0604.class);
+        Intent intent = new Intent(this, Step0803Activity.class);
         startActivity(intent);
     }
 }

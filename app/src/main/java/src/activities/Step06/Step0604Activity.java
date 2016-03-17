@@ -1,4 +1,4 @@
-package src.activities.Step08;
+package src.activities.Step06;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,7 +16,7 @@ import src.dialogs.DlgResultMark;
 /**
  * Created by jhobo_000 on 2015-09-25.
  */
-public class ActStep0805 extends StageActivity {
+public class Step0604Activity extends StageActivity {
 
     private int iRetryCount = 0;
     public boolean isRight = false;
@@ -25,12 +25,12 @@ public class ActStep0805 extends StageActivity {
 
     private ImageView mainimg;
 
-    public Step0805DataSet dataSet = new Step0805DataSet();
+    public Step0604DataSet dataSet = new Step0604DataSet();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_step_08_5);
+        setContentView(R.layout.act_step_06_04);
 
         description = (TextView)findViewById(R.id.txt_description);
 
@@ -103,7 +103,7 @@ public class ActStep0805 extends StageActivity {
         startActivity(intent);
     }
 
-    public class Step0805DataSet {
+    public class Step0604DataSet {
 
         private final String deslist[][] = {{"다음은 어느 평생학교 시간표입니다.\n매주 화요일 2교시에는 평생학교에서 무엇을 하나요?","다음은 평생학교 시간표입니다.\n스포츠댄스는 언제 배우나요?","다음은 평생학교 시간표입니다.\n국어는 언제 배우나요?",},
                 {"다음은 어느 평생학교 시간표입니다.\n매주 금요일 1교시에는 평생학교에서 무엇을 하나요?","다음은 평생학교 시간표입니다.\n수영은 언제 배우나요? ","다음은 평생학교 시간표입니다.\n수학은 언제 배우나요? ",},

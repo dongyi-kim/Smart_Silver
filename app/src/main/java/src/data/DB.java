@@ -5,7 +5,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase.*;
 import android.database.sqlite.*;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 /**
  * Created by waps12b on 15. 5. 19..
@@ -178,10 +180,15 @@ public class DB extends SQLiteOpenHelper {
         }
     }
 
+    public static ResultData[] getResultDataToday()
+    {
+        String strToday = new SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime());
+        return getResultData(String.format("SELECT * FROM %s WHERE timestamp >= \""+strToday+"\" ORDER BY timestamp;", DB.TABLE_RESULT));
+    }
 
 
     // just execute query to DB
-    private static synchronized void execSQL(String query){
+    public static synchronized void execSQL(String query){
         synchronized (obj){
             SQLiteDatabase db = null;
             try{

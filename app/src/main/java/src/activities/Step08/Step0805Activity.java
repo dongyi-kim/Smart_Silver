@@ -10,12 +10,13 @@ import android.widget.TextView;
 
 import cdmst.smartsilver.R;
 import src.activities.StageActivity;
+import src.activities.Step06.Step0604Activity;
 import src.dialogs.DlgResultMark;
 
 /**
  * Created by jhobo_000 on 2015-09-25.
  */
-public class ActStep0804 extends StageActivity {
+public class Step0805Activity extends StageActivity {
 
     private int iRetryCount = 0;
     public boolean isRight = false;
@@ -24,12 +25,12 @@ public class ActStep0804 extends StageActivity {
 
     private ImageView mainimg;
 
-    public Step0804DataSet dataSet = new Step0804DataSet();
+    public Step0805DataSet dataSet = new Step0805DataSet();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_step_08_4);
+        setContentView(R.layout.act_step_08_05);
 
         description = (TextView)findViewById(R.id.txt_description);
 
@@ -98,11 +99,11 @@ public class ActStep0804 extends StageActivity {
 
     public synchronized void goNext(Object object) {
         // check
-        Intent intent = new Intent(this, ActStep0805.class);
+        Intent intent = new Intent(this, Step0604Activity.class);
         startActivity(intent);
     }
 
-    public class Step0804DataSet {
+    public class Step0805DataSet {
 
         private final String deslist[][] = {
                 {"다음은 9호선 열차 시간표입니다.\n가장 많은 기차가 배치된 시간대는 언제인가요?",

@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import cdmst.smartsilver.R;
 import src.activities.StageActivity;
-import src.activities.Step08.ActStep0801;
+import src.activities.Step06.Step0601Activity;
 import src.dialogs.DlgResultMark;
 
 /**
@@ -144,7 +144,7 @@ public class ActStep0705 extends StageActivity {
     }
 
     public synchronized void goNext(Object object){
-        Intent intent = new Intent(this, ActStep0801.class);
+        Intent intent = new Intent(this, Step0601Activity.class);
         startActivity(intent);
     }
 

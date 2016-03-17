@@ -1,4 +1,4 @@
-package src.activities.Step06;
+package src.activities.Step08;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -15,18 +15,18 @@ import src.dialogs.DlgResultMark;
 /**
  * Created by jhobo_000 on 2015-06-22.
  */
-public class ActStep0602 extends StageActivity {
+public class Step0801Activity extends StageActivity {
 
     private TextView txtDescription;
     private ImageView img;
     private Button btnAnswer[] = new Button[3];
     private boolean ans;
     private static int Count = 0;
-    public Step0602DataSet dataSet = new Step0602DataSet();
+    public Step0801DataSet dataSet = new Step0801DataSet();
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_step_06_2);
+        setContentView(R.layout.act_step_08_01);
 
         txtDescription = (TextView)findViewById(R.id.txt_description);
 
@@ -104,7 +104,7 @@ public class ActStep0602 extends StageActivity {
 
     @Override
     public synchronized void goNext(Object object) {
-        Intent intent = new Intent(this, ActStep0603.class);
+        Intent intent = new Intent(this, Step0802Activity.class);
         startActivity(intent);
     }
 }

@@ -1,4 +1,4 @@
-package src.activities.Step08;
+package src.activities.Step06;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,7 +14,7 @@ import src.dialogs.DlgResultMark;
 /**
  * Created by jhobo_000 on 2015-09-06.
  */
-public class ActStep0801 extends StageActivity {
+public class Step0601Activity extends StageActivity {
 
     private int iRetryCount = 0;
     public boolean isRight = false;
@@ -22,12 +22,12 @@ public class ActStep0801 extends StageActivity {
     private ImageButton btn1, btn2;
     private ImageView[] box = new ImageView[10];
 
-    public Step0801DataSet dataSet = new Step0801DataSet();
+    public Step0601DataSet dataSet = new Step0601DataSet();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_step_08_1);
+        setContentView(R.layout.act_step_06_01);
 
         btn1 = (ImageButton)findViewById(R.id.btn_answer_1);
         btn2 = (ImageButton)findViewById(R.id.btn_answer_2);
@@ -100,11 +100,11 @@ public class ActStep0801 extends StageActivity {
     }
 
     public synchronized void goNext(Object object) {
-        Intent intent = new Intent(this, ActStep0802.class);
+        Intent intent = new Intent(this, Step0602Activity.class);
         startActivity(intent);
     }
 
-    public class Step0801DataSet {
+    public class Step0601DataSet {
         private final int ansbtn[][] = {{1,1,1},{1,1,0},{1,1,1,},{1,1,1},{1,1,0}}; // 답 버튼
         private final int blank[] = {1,5,4,5,1};
         private final int prob[][][] = {{{R.drawable.icon_8_1_3, R.drawable.icon_8_1_3, R.drawable.icon_8_1_3, R.drawable.icon_8_1_2, R.drawable.icon_8_1_3, R.drawable.icon_8_1_2,},

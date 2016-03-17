@@ -1,4 +1,4 @@
-package src.activities.Step08;
+package src.activities.Step06;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -18,7 +18,7 @@ import src.dialogs.DlgResultMark;
  * Created by jhobo_000 on 2015-09-06.
  */
 
-public class ActStep0802 extends StageActivity
+public class Step0602Activity extends StageActivity
 {
     private int iRetryCount = 0;
     public boolean isRight = false;
@@ -29,12 +29,12 @@ public class ActStep0802 extends StageActivity
     private FrameLayout boxes[] = new FrameLayout[10];
     private ImageView pinks[] = new ImageView[10];
 
-    public Step0802DataSet dataSet = new Step0802DataSet();
+    public Step0602DataSet dataSet = new Step0602DataSet();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_step_08_2);
+        setContentView(R.layout.act_step_06_02);
 
         x1 = (TextView)findViewById(R.id.gone_1);
         x2 = (FrameLayout)findViewById(R.id.gone_2);
@@ -179,11 +179,11 @@ public class ActStep0802 extends StageActivity
     }
 
     public synchronized void goNext(Object object) {
-        Intent intent = new Intent(this, ActStep0803.class);
+        Intent intent = new Intent(this, Step0603Activity.class);
         startActivity(intent);
     }
 
-    public class Step0802DataSet {
+    public class Step0602DataSet {
 
         private final String pb[][][]={
                 {{"1","2","1","2","1","2"}, {"8","9","8","9","8","9"},{"4","5","4","5","4","5",}},
