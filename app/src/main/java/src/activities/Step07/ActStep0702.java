@@ -12,6 +12,7 @@ import java.util.Random;
 import cdmst.smartsilver.R;
 import src.activities.StageActivity;
 import src.dialogs.DlgResultMark;
+import uk.co.senab.photoview.PhotoViewAttacher;
 
 /**
  * Created by Acka on 2015-07-29.
@@ -19,6 +20,7 @@ import src.dialogs.DlgResultMark;
 public class ActStep0702 extends StageActivity{
     private TextView txtDescription;
     private ImageView imgSubway;
+    private PhotoViewAttacher mAttacher;
     public final Button btnAnswer[] = new Button[2];
 
     private int iRetryCount = 0;
@@ -35,6 +37,9 @@ public class ActStep0702 extends StageActivity{
         imgSubway = (ImageView)findViewById(R.id.img_subway);
         btnAnswer[0] = (Button)findViewById(R.id.btn_ans_1);
         btnAnswer[1] = (Button)findViewById(R.id.btn_ans_2);
+
+        mAttacher = new PhotoViewAttacher(imgSubway);
+        mAttacher.setScaleType(ImageView.ScaleType.FIT_XY);
 
         for(int i = 0; i < 2; i++)
             btnAnswer[i].setOnClickListener(new View.OnClickListener(){

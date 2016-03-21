@@ -12,6 +12,7 @@ import android.widget.TextView;
 import cdmst.smartsilver.R;
 import src.activities.StageActivity;
 import src.dialogs.DlgResultMark;
+import uk.co.senab.photoview.PhotoViewAttacher;
 
 /**
  * Created by jhobo_000 on 2015-06-24.
@@ -21,6 +22,7 @@ public class Step0803Activity extends StageActivity {
     private TextView txtDiscription;
     private ImageView img;
     private Button btnAnswer[] = new Button[3];
+    private PhotoViewAttacher mAttacher;
     private ImageButton IbtnAnswer[] = new ImageButton[4];
 
     private boolean ans;
@@ -40,6 +42,9 @@ public class Step0803Activity extends StageActivity {
         IbtnAnswer[2] = (ImageButton)findViewById(R.id.btn_ans_3);
         btnAnswer[0] = (Button)findViewById(R.id.btn_ans_4);
         btnAnswer[1] = (Button)findViewById(R.id.btn_ans_5);
+
+        mAttacher = new PhotoViewAttacher(img);
+        mAttacher.setScaleType(ImageView.ScaleType.FIT_XY);
 
         for(int i = 0; i < 3; i++){
             IbtnAnswer[i].setOnClickListener(new View.OnClickListener() {
