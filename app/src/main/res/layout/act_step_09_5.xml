@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="@dimen/wp130"
             android:layout_height="@dimen/wp20"
             android:gravity="center"
             android:text="아래 그림의 출발지부터 도착지까지\n갈 수 있는 방법은 모두 몇 가지인가요?"
@@ -21,7 +21,7 @@
             android:textStyle="bold" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="@dimen/wp100"
             android:layout_height="@dimen/wp55"
             android:layout_gravity="center"
             android:background="@drawable/frame_cell_white"
@@ -31,9 +31,8 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
                 android:id="@+id/img"
-                android:src="@drawable/map_9_5_1"/>
+                android:src="@drawable/map_9_5_7"/>
         </LinearLayout>
 
         <LinearLayout
