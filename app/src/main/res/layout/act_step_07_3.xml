@@ -28,6 +28,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="horizontal"
+            android:id="@+id/zoom"
             android:weightSum="1">
 
             <FrameLayout

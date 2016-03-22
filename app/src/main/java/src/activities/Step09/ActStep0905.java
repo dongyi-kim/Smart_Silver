@@ -11,6 +11,7 @@ import cdmst.smartsilver.R;
 import src.activities.ActStartLearning;
 import src.activities.StageActivity;
 import src.dialogs.DlgResultMark;
+import uk.co.senab.photoview.PhotoViewAttacher;
 
 /**
  * Created by jhobo_000 on 2015-10-30.
@@ -24,6 +25,7 @@ public class ActStep0905 extends StageActivity {
     public Step0905DataSet dataSet = new Step0905DataSet();
 
     private Button btnAnswer[] = new Button[3];
+    private PhotoViewAttacher mAttacher;
     private ImageView img;
 
     @Override
@@ -36,6 +38,9 @@ public class ActStep0905 extends StageActivity {
         btnAnswer[2] = (Button)findViewById(R.id.btn_answer_3);
 
         img = (ImageView)findViewById(R.id.img);
+
+        mAttacher = new PhotoViewAttacher(img);
+        mAttacher.setScaleType(ImageView.ScaleType.FIT_XY);
 
         for(int i = 0; i < 3; i++)
             btnAnswer[i].setOnClickListener(new View.OnClickListener() {

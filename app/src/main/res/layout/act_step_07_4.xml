@@ -35,7 +35,7 @@
                 android:layout_height="@dimen/wp70"
                 android:background="@drawable/receipt_7_4_4_1"
                 android:orientation="vertical"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:weightSum="1">
 
                 <LinearLayout
@@ -132,7 +132,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/receipt_7_4_1"
                 android:orientation="vertical"
-                android:visibility="visible"
+                android:visibility="gone"
                 android:weightSum="1">
 
                 <LinearLayout
