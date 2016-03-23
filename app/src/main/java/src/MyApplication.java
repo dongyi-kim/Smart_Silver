@@ -2,8 +2,10 @@ package src;
 
 import android.app.Application;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.util.TypedValue;
 
 import cdmst.smartsilver.R;
 
@@ -71,6 +73,12 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
+        //
+        /// Converts 14 dip into its equivalent px
+
+
+
+        //preference
         SharedPreferences pref = getSharedPreferences(NAME_PREFERENCE, MODE_PRIVATE);
 
         soundEffectEnabled      = pref.getBoolean(KEY_SOUND_EFFECT, true);

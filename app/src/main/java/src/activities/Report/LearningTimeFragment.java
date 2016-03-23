@@ -1,9 +1,11 @@
 package src.activities.Report;
 
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,6 +47,10 @@ public class LearningTimeFragment extends Fragment {
     @Bind(R.id.chart) BarChart chart;
     @Bind(R.id.piechart_learning_today) PieChart pieToday;
     @Bind(R.id.piechart_learning_total) PieChart pieTotal;
+
+    private float sizeSmall;
+    private float sizeMedium;
+    private float sizeBig;
 
     public static final int[] WEEKLY_COLORS = new int[]{
             Color.rgb(250,205,205),
@@ -288,10 +294,13 @@ public class LearningTimeFragment extends Fragment {
 
         PieData pieData = new PieData(xVals);
         pieData.setDataSet(dataSet);
+
+        pieData.setValueTextSize(sizeMedium);
         pieToday.setData(pieData);
         pieToday.setCenterText(String.format("%d분 %d초", (int) totalSeconds / 60, ((int) totalSeconds) % 60));
         pieToday.invalidate();
-        pieToday.setCenterTextSize(30);
+
+        pieToday.setCenterTextSize(sizeBig);
 
         pieToday.setDescription("");
         pieToday.getLegend().setEnabled(false);
@@ -339,12 +348,14 @@ public class LearningTimeFragment extends Fragment {
 
         PieData pieData = new PieData(xVals);
         pieData.setDataSet(dataSet);
+        pieData.setValueTextSize(sizeMedium);
         pieTotal.setData(pieData);
-        pieTotal.setCenterText(String.format("%d분 %d초",(int)totalSeconds/60, ((int) totalSeconds)%60));
+        pieTotal.setCenterText(String.format("%d분 %d초", (int)totalSeconds/60, ((int) totalSeconds)%60));
         pieTotal.invalidate();
         pieTotal.setDescription("");
         pieTotal.getLegend().setEnabled(false);
-        pieTotal.setCenterTextSize(30);
+        pieTotal.setCenterTextSize(sizeBig);
+
     }
 
 
@@ -352,6 +363,14 @@ public class LearningTimeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_learning_time, container, false);
+
+        Resources r = getResources();
+        sizeSmall = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, r.getDisplayMetrics());
+
+        sizeMedium = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 15, r.getDisplayMetrics());
+
+        sizeBig = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 20, r.getDisplayMetrics());
+
 
 
         ButterKnife.bind(this, view);

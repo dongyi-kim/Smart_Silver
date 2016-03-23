@@ -2,6 +2,8 @@ package src.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import cdmst.smartsilver.R;
 import src.data.DB;
@@ -14,13 +16,29 @@ import src.Utility;
  */
 public class ActStartLearning extends FrameActivity {
 
+    Button btnStepSelector;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_start_learning);
+
+        btnStepSelector = (Button) findViewById( R.id.btn_step_selector );
+        btnStepSelector.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dodo();
+            }
+        });
     }
+
+    public void dodo(){
+        Intent intent = new Intent(this, ActTest.class);
+        startActivity(intent);
+    }
+
 
     @Override
     public void onGetEvent(Object vSender, Object obj) {

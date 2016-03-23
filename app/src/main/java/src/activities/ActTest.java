@@ -395,31 +395,31 @@ public class ActTest extends FrameActivity {
             }
             else if(v == btnStep6_1) {
 
-                Intent intent = new Intent(v.getContext(), Step0605Activity.class);
+                Intent intent = new Intent(v.getContext(), Step0601Activity.class);
                 startActivity(intent);
             }
             else if(v == btnStep6_2)
             {
 
-                Intent intent = new Intent(v.getContext(), Step0801Activity.class);
+                Intent intent = new Intent(v.getContext(), Step0602Activity.class);
                 startActivity(intent);
             }
             else if(v == btnStep6_3)
             {
 
-                Intent intent = new Intent(v.getContext(), Step0802Activity.class);
+                Intent intent = new Intent(v.getContext(), Step0603Activity.class);
                 startActivity(intent);
             }
             else if(v == btnStep6_4)
             {
 
-                Intent intent = new Intent(v.getContext(), Step0803Activity.class);
+                Intent intent = new Intent(v.getContext(), Step0604Activity.class);
                 startActivity(intent);
             }
 
             else if(v == btnStep6_5)
             {
-                Intent intent = new Intent(v.getContext(), Step0804Activity.class);
+                Intent intent = new Intent(v.getContext(), Step0605Activity.class);
                 startActivity(intent);
             }
 
@@ -456,31 +456,31 @@ public class ActTest extends FrameActivity {
             else if(v == btnStep8_1)
             {
 
-                Intent intent = new Intent(v.getContext(), Step0601Activity.class);
+                Intent intent = new Intent(v.getContext(), Step0801Activity.class);
                 startActivity(intent);
             }
             else if(v == btnStep8_2)
             {
 
-                Intent intent = new Intent(v.getContext(), Step0602Activity.class);
+                Intent intent = new Intent(v.getContext(), Step0802Activity.class);
                 startActivity(intent);
             }
             else if(v == btnStep8_3)
             {
 
-                Intent intent = new Intent(v.getContext(), Step0603Activity.class);
+                Intent intent = new Intent(v.getContext(), Step0803Activity.class);
                 startActivity(intent);
             }
             else if(v == btnStep8_4)
             {
 
-                Intent intent = new Intent(v.getContext(), Step0805Activity.class);
+                Intent intent = new Intent(v.getContext(), Step0804Activity.class);
                 startActivity(intent);
             }
             else if(v == btnStep8_5)
             {
 
-                Intent intent = new Intent(v.getContext(), Step0604Activity.class);
+                Intent intent = new Intent(v.getContext(), Step0805Activity.class);
                 startActivity(intent);
             }
             else if(v == btnStep9_1)

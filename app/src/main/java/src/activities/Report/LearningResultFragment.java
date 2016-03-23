@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.PopupMenu;
 import android.widget.Spinner;
 
 import com.github.mikephil.charting.charts.CombinedChart;
@@ -30,9 +29,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
-import java.util.Collection;
-import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.HashMap;
 
 import butterknife.Bind;
@@ -40,22 +36,25 @@ import butterknife.ButterKnife;
 import cdmst.smartsilver.R;
 import src.data.DB;
 import src.data.ResultData;
-import src.data.StatisticsData;
 
 /**
  * Created by waps12b on 16. 1. 24..
  */
 public class LearningResultFragment extends Fragment implements AdapterView.OnItemSelectedListener{
 
-    public static final String[] SPINNER_ITEM = {"전체", "스탭1","스탭2","스탭3","스탭4","스탭5","스탭6","스탭7","스탭8","스탭9","스탭10"};
+    public static final String[] SPINNER_STEP_ITEM = {"전체", "스탭1","스탭2","스탭3","스탭4","스탭5","스탭6","스탭7","스탭8","스탭9","스탭10"};
+    public static final String[] SPINNER_DURATION_ITEM = {"전체", "오늘"};
+
     public static final int ITEM_ALL_STEP = 0;
 
     private ResultData[] dataAll = null;
     private ResultData[] dataToday = null;
+    private ResultData[] dataSelected = null;
 
     @Bind(R.id.spinner_step) Spinner spinnerStep;
     @Bind(R.id.combined_chart) CombinedChart resultCombinedChart;
     @Bind(R.id.chart_radar) RadarChart resultRadarChart;
+    @Bind(R.id.spinner_range) Spinner spinnerRange;
 
     @Nullable
     @Override
@@ -65,15 +64,23 @@ public class LearningResultFragment extends Fragment implements AdapterView.OnIt
         String strToday = new SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime());
         dataAll = DB.getResultData(String.format("SELECT * FROM %s ORDER BY timestamp;", DB.TABLE_RESULT));
         dataToday = DB.getResultData(String.format("SELECT * FROM %s WHERE timestamp >= \""+strToday+"\" ORDER BY timestamp;", DB.TABLE_RESULT));
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),R.layout.spinner_simple_item,SPINNER_ITEM);
-        spinnerStep.setAdapter(adapter);
+
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(getActivity(),R.layout.spinner_simple_item, SPINNER_STEP_ITEM);
+        spinnerStep.setAdapter(adapter1);
         spinnerStep.setOnItemSelectedListener(this);
+
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(getActivity(),R.layout.spinner_simple_item, SPINNER_DURATION_ITEM);
+        spinnerRange.setAdapter(adapter2);
+        spinnerRange.setOnItemSelectedListener(this);
+
+
         initRadarChartOption();
         initCombinedChartOption();
 
 
 
         spinnerStep.setSelection(0);
+        spinnerRange.setSelection(0);
         return view;
 
     }
@@ -292,11 +299,25 @@ public class LearningResultFragment extends Fragment implements AdapterView.OnIt
         resultRadarChart.invalidate();
     }
 
-
-
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        ResultData[] resultDatas = dataAll;
+        int idxStep = spinnerStep.getSelectedItemPosition();
+        int idxDuration = spinnerRange.getSelectedItemPosition();
+        if( idxStep < 0 || idxDuration < 0 ) {
+            return;
+        }
+        ResultData[] resultDatas = null;
+
+        if(idxDuration == 0){
+            resultDatas = dataAll;
+        }else if(idxDuration == 1){
+            resultDatas = dataToday;
+        }
+
+        if(resultDatas == null){
+            return;
+        }
+
         if(position!=ITEM_ALL_STEP){
             ArrayList<ResultData> arrayList =new ArrayList<>();
             for(ResultData data : resultDatas){
@@ -309,14 +330,8 @@ public class LearningResultFragment extends Fragment implements AdapterView.OnIt
                 resultDatas[i] = arrayList.get(i);
             }
         }
-
-
-
-
         drawCombinedChart(resultDatas);
         drawRadarChart(resultDatas);
-
-
     }
 
     @Override

@@ -13,8 +13,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -35,6 +34,12 @@
                     android:layout_gravity="right"
                     />
 
+                <Spinner
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/spinner_range"
+                    android:layout_gravity="right"
+                    />
             </LinearLayout>
 
 

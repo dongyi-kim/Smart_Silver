@@ -61,14 +61,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:textSize="20dp"
-                    android:text="오늘 삭제"
+                    android:text="오늘 데이터 삭제"
                     android:id="@+id/btn_remove_data_today"/>
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:textSize="20dp"
-                    android:text="전체 삭제"
+                    android:text="전체 데이터 삭제"
                     android:id="@+id/btn_remove_data_all"/>
 
             </LinearLayout>
